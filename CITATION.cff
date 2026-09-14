@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the RLVRAMBench evidence release and associated paper."
+type: software
+title: "RLVRAMBench: CPU-only reproduction code"
+version: "2026.09.14"
+date-released: "2026-09-14"
+authors:
+  - family-names: Kobza
+    given-names: Ondřej
+    orcid: "https://orcid.org/0000-0002-0529-9860"
+  - family-names: Šedivý
+    given-names: Jan
+    orcid: "https://orcid.org/0000-0003-0626-2303"
+repository-code: "https://github.com/kobzaond/RLVRAMBench-reproduce"

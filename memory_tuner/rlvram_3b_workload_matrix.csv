@@ -1,0 +1,13 @@
+experiment_id,dataset,data_dir,model,model_tag,actor_micro_batch,vllm_gpu_memory_utilization
+bench-3b-gsm8k-a4-u50,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,4,0.50
+bench-3b-gsm8k-a16-u50,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,16,0.50
+bench-3b-gsm8k-a4-u65,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,4,0.65
+bench-3b-gsm8k-a16-u65,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,16,0.65
+bench-3b-gsm8k-a4-u80,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,4,0.80
+bench-3b-gsm8k-a16-u80,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,16,0.80
+bench-3b-math-a4-u50,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,4,0.50
+bench-3b-math-a16-u50,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,16,0.50
+bench-3b-math-a4-u65,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,4,0.65
+bench-3b-math-a16-u65,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,16,0.65
+bench-3b-math-a4-u80,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,4,0.80
+bench-3b-math-a16-u80,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-3B-Instruct,qwen25_3b,16,0.80

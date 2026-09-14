@@ -1,0 +1,13 @@
+experiment_id,model,model_tag,actor_micro_batch,vllm_gpu_memory_utilization
+screen-phase-1p5b-a4-u50,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,4,0.50
+screen-phase-1p5b-a16-u50,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,16,0.50
+screen-phase-1p5b-a4-u65,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,4,0.65
+screen-phase-1p5b-a16-u65,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,16,0.65
+screen-phase-1p5b-a4-u80,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,4,0.80
+screen-phase-1p5b-a16-u80,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,16,0.80
+screen-phase-7b-a4-u50,Qwen/Qwen2.5-7B-Instruct,qwen25_7b,4,0.50
+screen-phase-7b-a16-u50,Qwen/Qwen2.5-7B-Instruct,qwen25_7b,16,0.50
+screen-phase-7b-a4-u65,Qwen/Qwen2.5-7B-Instruct,qwen25_7b,4,0.65
+screen-phase-7b-a16-u65,Qwen/Qwen2.5-7B-Instruct,qwen25_7b,16,0.65
+screen-phase-7b-a4-u80,Qwen/Qwen2.5-7B-Instruct,qwen25_7b,4,0.80
+screen-phase-7b-a16-u80,Qwen/Qwen2.5-7B-Instruct,qwen25_7b,16,0.80

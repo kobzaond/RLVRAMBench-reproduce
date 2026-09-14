@@ -1,0 +1,13 @@
+experiment_id,actor_micro_batch,vllm_gpu_memory_utilization
+phase-a2-u50,2,0.50
+phase-a2-u65,2,0.65
+phase-a2-u80,2,0.80
+phase-a4-u50,4,0.50
+phase-a4-u65,4,0.65
+phase-a4-u80,4,0.80
+phase-a8-u50,8,0.50
+phase-a8-u65,8,0.65
+phase-a8-u80,8,0.80
+phase-a16-u50,16,0.50
+phase-a16-u65,16,0.65
+phase-a16-u80,16,0.80

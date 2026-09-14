@@ -1,0 +1,9 @@
+experiment_id,algorithm,dataset,data_dir,model,rollout_tp_size,actor_micro_batch,rollout_logprob_micro_batch,ref_logprob_micro_batch,vllm_gpu_memory_utilization,parameter_offload,optimizer_offload,free_cache_engine,max_prompt_length,max_response_length,max_model_len,max_num_seqs,rollout_n,train_batch_size,train_max_samples,val_max_samples
+expand3-grpo-1p5b-math-short-a2-u35,grpo,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-1.5B-Instruct,1,2,8,8,0.35,False,False,True,512,512,1024,128,2,64,64,64
+expand3-grpo-1p5b-math-short-a4-u45,grpo,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-1.5B-Instruct,1,4,8,8,0.45,False,False,True,512,512,1024,128,2,64,64,64
+expand3-grpo-1p5b-math-short-a8-u55,grpo,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-1.5B-Instruct,1,8,8,8,0.55,False,False,True,512,512,1024,128,2,64,64,64
+expand3-grpo-1p5b-math-short-a16-u70,grpo,math,/mnt/proj3/open-35-44/verl/rl/data/math,Qwen/Qwen2.5-1.5B-Instruct,1,16,8,8,0.70,False,False,True,512,512,1024,128,2,64,64,64
+expand3-grpo-3b-gsm-long-a1-u30-po,grpo,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,1,1,4,4,0.30,True,False,True,1024,2048,3072,64,2,32,32,32
+expand3-grpo-3b-gsm-long-a2-u40-po,grpo,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,1,2,4,4,0.40,True,False,True,1024,2048,3072,64,2,32,32,32
+expand3-grpo-3b-gsm-long-a4-u50-po,grpo,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,1,4,4,4,0.50,True,False,True,1024,2048,3072,64,2,32,32,32
+expand3-grpo-3b-gsm-long-a8-u60,grpo,gsm8k,/mnt/proj3/open-35-44/verl/rl/data/gsm8k,Qwen/Qwen2.5-3B-Instruct,1,8,4,4,0.60,False,False,True,1024,2048,3072,64,2,32,32,32

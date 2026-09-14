@@ -1,0 +1,7 @@
+experiment_id,actor_micro_batch,vllm_gpu_memory_utilization
+a4-u50,4,0.50
+a16-u50,16,0.50
+a4-u65,4,0.65
+a16-u65,16,0.65
+a4-u80,4,0.80
+a16-u80,16,0.80

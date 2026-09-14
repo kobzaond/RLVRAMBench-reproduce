@@ -1,0 +1,2 @@
+# Optional download helper; not needed when an archive is supplied locally.
+huggingface_hub==1.31.0

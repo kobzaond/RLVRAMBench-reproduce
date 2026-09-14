@@ -1,0 +1,5 @@
+experiment_id,model,gpu_memory_utilization,max_num_seqs,max_model_len,input_len,output_len,num_prompts,request_rate,seed
+online-1p5b-short-u50-c128-r80,Qwen/Qwen2.5-1.5B-Instruct,0.50,128,1024,512,128,256,80,0
+online-1p5b-short-u80-c128-r80,Qwen/Qwen2.5-1.5B-Instruct,0.80,128,1024,512,128,256,80,0
+online-7b-long-u50-c128-r5,Qwen/Qwen2.5-7B-Instruct,0.50,128,3072,2048,512,64,5,0
+online-7b-long-u80-c128-r5,Qwen/Qwen2.5-7B-Instruct,0.80,128,3072,2048,512,64,5,0

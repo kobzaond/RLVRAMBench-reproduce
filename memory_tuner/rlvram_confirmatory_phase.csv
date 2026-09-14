@@ -1,0 +1,7 @@
+experiment_id,model,model_tag,actor_micro_batch,vllm_gpu_memory_utilization
+confirm-qwen25_1p5b-oracle-r1,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,16,0.5
+confirm-qwen25_1p5b-oracle-r2,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,16,0.5
+confirm-qwen25_1p5b-conservative-r1,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,4,0.5
+confirm-qwen25_1p5b-conservative-r2,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,4,0.5
+confirm-qwen25_1p5b-boundary-r1,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,16,0.8
+confirm-qwen25_1p5b-boundary-r2,Qwen/Qwen2.5-1.5B-Instruct,qwen25_1p5b,16,0.8

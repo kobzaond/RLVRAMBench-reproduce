@@ -1,0 +1,5 @@
+experiment_id,actor_micro_batch,vllm_gpu_memory_utilization,parameter_offload
+bench-7b-4gpu-a2-u40-tp4,2,0.40,False
+bench-7b-4gpu-a8-u40-tp4,8,0.40,False
+bench-7b-4gpu-a2-u50-tp4,2,0.50,False
+bench-7b-4gpu-a8-u50-tp4,8,0.50,False

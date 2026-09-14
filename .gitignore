@@ -1,0 +1,12 @@
+.venv/
+.venv-reproduce/
+.venv-download/
+__pycache__/
+.pytest_cache/
+.cache/
+.reproduction-cache/
+downloads/
+reproduced/
+*.pyc
+.env
+.env.*

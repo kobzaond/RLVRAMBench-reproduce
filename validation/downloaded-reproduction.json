@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "archive_sha256": "4a735cdc33b709d330b9894cb3b923542da2c29c29d366eccdae19c781096cfd",
+  "archive_members": 19228,
+  "manifest_entries_verified": 19226,
+  "principal_processes": 588,
+  "supporting_source_processes": 16,
+  "derived_csv_json_files_matched": 40,
+  "figures_regenerated": 4,
+  "reference_profiles_removed_from_analysis_root": true,
+  "original_project_and_reference_tables_hidden": true,
+  "network_namespace_isolation_claimed": false
+}

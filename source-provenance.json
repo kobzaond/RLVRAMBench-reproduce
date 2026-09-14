@@ -1,0 +1,387 @@
+{
+  "source_repository": "https://github.com/kobzaond/rl",
+  "source_commit": "289747694f1a71052acc7977e742bfc0a45286a2",
+  "selection": "AST import closure of reproduction entry points and selected CPU tests; frozen matrices",
+  "files": {
+    "memory_tuner/__init__.py": {
+      "sha256": "027aba95d634d9ead178819412a859239c7ddd5418a0e5eaf8e3d429fe8e6629",
+      "size_bytes": 191
+    },
+    "memory_tuner/aggregate_online.py": {
+      "sha256": "f39c9faf6d3b243365d6fc36266144189e681d597e0814bc2e2f5e15726abd00",
+      "size_bytes": 6398
+    },
+    "memory_tuner/artifact_manifest.py": {
+      "sha256": "e9b3b8aa55e556b012d647fcafd20ce60d6fd852c791d222ee783b0935b7a2fc",
+      "size_bytes": 27901
+    },
+    "memory_tuner/artifact_paths.py": {
+      "sha256": "8b89a2f8956c7b1fe40563e2b0b776414ebc583d3801fab6d83fc125861beb91",
+      "size_bytes": 1946
+    },
+    "memory_tuner/attempt_exclusions.csv": {
+      "sha256": "b83908705675c02452581e11495fc6aecbac5fc2171f15d92d4b38c51249b216",
+      "size_bytes": 27496
+    },
+    "memory_tuner/benchmark_characterization.py": {
+      "sha256": "5a3f8ce0ae47d12e73435ef4fd0b121c9e0d9eeaa46aaee98484ef8c6af334de",
+      "size_bytes": 10955
+    },
+    "memory_tuner/benchmark_v2_cross_family_analysis.py": {
+      "sha256": "623c4dbf729a3f3076a915579ab3f31ee0efb5e805635ddb8e7211e0dd6490bb",
+      "size_bytes": 11877
+    },
+    "memory_tuner/benchmark_v2_family_transfer.py": {
+      "sha256": "510b508e9d523c5f6f68142e0cde9d4c25f8433ff16f25fdbd7279d40266f5aa",
+      "size_bytes": 10370
+    },
+    "memory_tuner/benchmark_v2_inference.py": {
+      "sha256": "540c2fd7538b6b1fe5d453804769fde9c2a9a68b1fb8ba1935fea5d2c6962397",
+      "size_bytes": 17905
+    },
+    "memory_tuner/benchmark_v2_sleep_analysis.py": {
+      "sha256": "f13c091e77dd010c256b56c26f1d14921688c7d8e3e730746c541a1a3e65abab",
+      "size_bytes": 8514
+    },
+    "memory_tuner/benchmark_v2_telemetry_analysis.py": {
+      "sha256": "a2ed1f50b3e22f55e5a447a0d21fd21cb571ce398c0977394f01f4d4c44cacb9",
+      "size_bytes": 10197
+    },
+    "memory_tuner/benchmark_v2_temporal_analysis.py": {
+      "sha256": "e926ab06b6d6917ac4a5337e7d686260d347a2f8f4461bcfe25ed4325c9f12d3",
+      "size_bytes": 7185
+    },
+    "memory_tuner/benchmark_v2_temporal_safety_audit.py": {
+      "sha256": "058704c64a83d25ece73710df664e872c32a9b6cbdbc0c29ca74788f54f3ed0d",
+      "size_bytes": 6793
+    },
+    "memory_tuner/bootstrap_publication.sh": {
+      "sha256": "055ed9ac0bc4385af88c713e40a3db77538b4cf71ffd2cf9b062f0e3617704c1",
+      "size_bytes": 687
+    },
+    "memory_tuner/build_benchmark_corpus.py": {
+      "sha256": "9dd7611ec66fff47ab797fb24f91698b4e6874f65d7f52e514350e975a151444",
+      "size_bytes": 21439
+    },
+    "memory_tuner/core.py": {
+      "sha256": "08aadf36744a1fe82b95acd86f69b63ab33da520b1b2769239f84313f6df8f71",
+      "size_bytes": 7166
+    },
+    "memory_tuner/failure_annotations.csv": {
+      "sha256": "c4512e1c7108f7206a5bd1df4627b368987b87c50782b88b6d8ba4b02bb26c62",
+      "size_bytes": 2274
+    },
+    "memory_tuner/failure_taxonomy.py": {
+      "sha256": "978a039ace01d3da30faca49f10829bd187bea44f248614112fa7da30108e526",
+      "size_bytes": 8046
+    },
+    "memory_tuner/grpo_phase_sensitivity.py": {
+      "sha256": "90311132865b5968d806220772f1eed579af03aedbfc441111032c4138e0d65d",
+      "size_bytes": 5924
+    },
+    "memory_tuner/grpo_raw_evidence.py": {
+      "sha256": "57f6a7d9f8df0806083b8622ff32adf5378563fdd8bae92dd5a30923ab8c0f8e",
+      "size_bytes": 15138
+    },
+    "memory_tuner/log_parser.py": {
+      "sha256": "8f4e60996953f67362dcdb30de0a0d2952fba1ea12bb4b173acbbaca99259cdb",
+      "size_bytes": 5642
+    },
+    "memory_tuner/major_revision_cross_model_analysis.py": {
+      "sha256": "6c57ea847e21400ecbd027de0fc01e7aa9de1fb298bdf2bc0b2969bf71ef9e2b",
+      "size_bytes": 12777
+    },
+    "memory_tuner/major_revision_residency_analysis.py": {
+      "sha256": "1a79311b7a970b8e94de046963b8b8e4274ef0641ddda32e30431dac01bc86ff",
+      "size_bytes": 20701
+    },
+    "memory_tuner/major_revision_transfer_analysis.py": {
+      "sha256": "d12c1b19be6abe74e05005ff927613b2cbfa4b98f31e5e1178d42e811d16fb3e",
+      "size_bytes": 17984
+    },
+    "memory_tuner/make_standard_grpo_figures.py": {
+      "sha256": "91a517d75b8a4418b9e5692b16579c8ec2d5efa309730239d771b92f0dc04918",
+      "size_bytes": 20266
+    },
+    "memory_tuner/phaseguard.py": {
+      "sha256": "77a0f7120d118f6f05e36c3e2f76c4797ca75c536ab2230fbe26ee119d86106e",
+      "size_bytes": 12107
+    },
+    "memory_tuner/phaseguard_evaluation.py": {
+      "sha256": "aa3f5a8db1fdcf3fb3da62d463b05dd484c29d71a2d921217bd45897fafd0298",
+      "size_bytes": 16230
+    },
+    "memory_tuner/plan_benchmark_v2_cross_family.py": {
+      "sha256": "d6a6efd2b26267700556dbbccb97f017b45cbd47823a0e469ee05e3a0f5dde90",
+      "size_bytes": 5816
+    },
+    "memory_tuner/plan_scientific_revision.py": {
+      "sha256": "e66098950b73af706237adcafe3e6b3a200ca0724c4b85105cd5391d557c6771",
+      "size_bytes": 5663
+    },
+    "memory_tuner/publication_plot_style.py": {
+      "sha256": "2fa16ee763aa0bf5ec5d508ef8c0a0099b910d28c5ae7adc08bbb4683458c634",
+      "size_bytes": 367
+    },
+    "memory_tuner/rl_trial_attempts.py": {
+      "sha256": "30e19c082ddeca670f1cd74cd6c746188390e6008d9f46cf57272a26294446f0",
+      "size_bytes": 1530
+    },
+    "memory_tuner/rlvram_3b_math_corrected.csv": {
+      "sha256": "361e73dab6e78404f945ab7c2d54ee356a6a1732f8510c305b2a262bae888a0b",
+      "size_bytes": 234
+    },
+    "memory_tuner/rlvram_3b_workload_matrix.csv": {
+      "sha256": "baa92e6ed2b635e45835d26f9154adb6c540f34474a9fcf9ba72ad3000783810",
+      "size_bytes": 1419
+    },
+    "memory_tuner/rlvram_7b_4gpu_matrix.csv": {
+      "sha256": "c9aca9cbe2ff1029dedd6b7b3668b53cf4d5984af2bd534f0620d4f51942e1c7",
+      "size_bytes": 230
+    },
+    "memory_tuner/rlvram_7b_mitigation.csv": {
+      "sha256": "d5f914bffc444049660419d5d2dedd07ee0618cb826a00ee109dcbde572d8b1d",
+      "size_bytes": 564
+    },
+    "memory_tuner/rlvram_calibration_wave2_grpo_2gpu.csv": {
+      "sha256": "1945ba9b6e253386c0cf256e62c1d2f9104c321b4df16a12aa566ea18b828776",
+      "size_bytes": 1677
+    },
+    "memory_tuner/rlvram_calibration_wave2_oracle_2gpu.csv": {
+      "sha256": "52b0efde737d442e5f53fa44c23f100d574c3f0b015872c5bb972d71433b6078",
+      "size_bytes": 3226
+    },
+    "memory_tuner/rlvram_calibration_wave2_oracle_4gpu.csv": {
+      "sha256": "e37c027ee1bfd0e3ab44e84e4054dfd090c1d7a3fdf8808a47f6aaa0968a53c1",
+      "size_bytes": 1671
+    },
+    "memory_tuner/rlvram_case_expansion_v3_grpo_2gpu.csv": {
+      "sha256": "5dce7c417894f2f8787f8f2664c211f3336c58caa1a751bd7a359ab1b19950e0",
+      "size_bytes": 1705
+    },
+    "memory_tuner/rlvram_confirmatory_phase.csv": {
+      "sha256": "b17d1d06598ef52f28ead30df26ff79ca53c0ddbee9a8afb35a76d9e443a0393",
+      "size_bytes": 546
+    },
+    "memory_tuner/rlvram_cross_family_phi4_2gpu.csv": {
+      "sha256": "4e61d1e3b1c213d3fc183de623add52fa4f99738a31fabb1d44304d2e097c64c",
+      "size_bytes": 1791
+    },
+    "memory_tuner/rlvram_exact_transfer_online.csv": {
+      "sha256": "559b074bfceeb0887250f3a5dbd5852c650fe37ad859a9d7bf2538c995030b2e",
+      "size_bytes": 1615
+    },
+    "memory_tuner/rlvram_exact_transfer_vllm.csv": {
+      "sha256": "e95d1a7a36aede547bd097c3c7a4cd180f39f8e4a8e07876b54e37eee5514846",
+      "size_bytes": 546
+    },
+    "memory_tuner/rlvram_exact_transfer_vllm_repeats.csv": {
+      "sha256": "bd38cdf8467ef504ca819ebc906543ec5ba858d8d5e46c8308c5a1cb67905860",
+      "size_bytes": 1020
+    },
+    "memory_tuner/rlvram_major_revision_cross_model_confirmatory.csv": {
+      "sha256": "ed274c590ddbc8ebbe5d588970c8383860602fc693a6f91082cebf47a5d9f560",
+      "size_bytes": 56911
+    },
+    "memory_tuner/rlvram_major_revision_cross_model_smoke.csv": {
+      "sha256": "6c2546f30639b5fe198893f345098590bf82d17e1e97019ba90ed0028260cf1b",
+      "size_bytes": 3663
+    },
+    "memory_tuner/rlvram_major_revision_residency_period1.csv": {
+      "sha256": "2acb60aa820320fbf0697031177b3b4cdcc5ec5549011de44abcf899e539ec68",
+      "size_bytes": 18295
+    },
+    "memory_tuner/rlvram_major_revision_residency_period2.csv": {
+      "sha256": "f74d8a27078454fae482b7abd8401fc4686c157b7a3033b5e0e8e6f22d5ab365",
+      "size_bytes": 18295
+    },
+    "memory_tuner/rlvram_major_revision_transfer_colocated.csv": {
+      "sha256": "5f47da736e516ac70925046b9e0a0138a78fd5b61681ec54c98d9a19ca4a71d1",
+      "size_bytes": 13050
+    },
+    "memory_tuner/rlvram_major_revision_transfer_offline.csv": {
+      "sha256": "f9c4550bc2e3ce0c468a8cbc04ac859a299355aa817360024e2572a3d6749173",
+      "size_bytes": 4905
+    },
+    "memory_tuner/rlvram_major_revision_transfer_online.csv": {
+      "sha256": "d2f4866d660a3de0e9e5ab54f8322e81b05eb11f57039af17950cbbfb023e980",
+      "size_bytes": 15688
+    },
+    "memory_tuner/rlvram_online_repeats.csv": {
+      "sha256": "cd0019fe917150e6f802796572b74e0198d59c68ab7d4aadc6c6c6c93d19427d",
+      "size_bytes": 829
+    },
+    "memory_tuner/rlvram_online_screening.csv": {
+      "sha256": "8cbec37db96395cb9257fe666ef03eb5a9ba4f64122fa4cc92440f69026a1a12",
+      "size_bytes": 463
+    },
+    "memory_tuner/rlvram_revision_instrumentation.csv": {
+      "sha256": "447f127357cc5fc1e2f077d0ee30994364f1bfdfc904e2d83d16db952e8b434d",
+      "size_bytes": 25808
+    },
+    "memory_tuner/rlvram_revision_temporal.csv": {
+      "sha256": "648fa65cbebe522fa20db1c627214835881db78c61b49dcca0c11611695f52b9",
+      "size_bytes": 9596
+    },
+    "memory_tuner/rlvram_revision_topology.csv": {
+      "sha256": "f678434c19ed7de6787cb314165e8042de2c135783e1c8d0c905e2b07e1c8c30",
+      "size_bytes": 18575
+    },
+    "memory_tuner/rlvram_screening_phase.csv": {
+      "sha256": "7b27af62076dbb486d7a11add5c4849945a7021c35eb3bf14fbbd4abc48c3114",
+      "size_bytes": 904
+    },
+    "memory_tuner/rlvram_screening_vllm.csv": {
+      "sha256": "343e024b1c3fe41898d7daedf903a9c03efa6c3b5b3a24c05f7dff622c196aa6",
+      "size_bytes": 1050
+    },
+    "memory_tuner/rlvram_six_cell.csv": {
+      "sha256": "fc3fb666391a6edd56ed01a275ad7123ba0d41a83aaaf5302a6f27554641b83c",
+      "size_bytes": 150
+    },
+    "memory_tuner/rlvram_sleep_ablation.csv": {
+      "sha256": "017dbe46b4f4d5c32572e8dd300f694c232993f99e13821e124a70c03314e77a",
+      "size_bytes": 842
+    },
+    "memory_tuner/rlvram_strengthening_factorial.csv": {
+      "sha256": "38a0645fe56b1a894bde2c9d183f7355c1ad358f7f14edc75fffa50775c9aebf",
+      "size_bytes": 99463
+    },
+    "memory_tuner/rlvram_strengthening_granite_confirmatory.csv": {
+      "sha256": "c664d23ec999cd64512d2617ad6fbbb330d76fd3d0621b58571bcef291e5d061",
+      "size_bytes": 50575
+    },
+    "memory_tuner/rlvram_strengthening_granite_smoke.csv": {
+      "sha256": "7a7d2e5883a48de74fd0c9f6b2767c9e65270294ab30f044e2674a2630ab51ce",
+      "size_bytes": 3335
+    },
+    "memory_tuner/rlvram_strengthening_matched_colocated.csv": {
+      "sha256": "d891dce5edeb086b6c4209e2004e1d7f295a7dd281e774ebe362aa02537bb12d",
+      "size_bytes": 13843
+    },
+    "memory_tuner/rlvram_strengthening_matched_serving.csv": {
+      "sha256": "94591fb4663d1e961d970758a6c9a78058e1941175c27f5a9652787c4dade88e",
+      "size_bytes": 42869
+    },
+    "memory_tuner/rlvram_strengthening_same_node_period1.csv": {
+      "sha256": "a5bf4cb2ced7c45ab9de05271be682979730263351b6682209634e6ced5211c5",
+      "size_bytes": 18475
+    },
+    "memory_tuner/rlvram_strengthening_same_node_period2.csv": {
+      "sha256": "5b0b95c4572c68899bc573e308248a8c25b77c488eb7a27ce4b77cd6ce5f228e",
+      "size_bytes": 18475
+    },
+    "memory_tuner/rlvram_strengthening_temporal.csv": {
+      "sha256": "74688e15ed17e7300ff6fcf6ca44e6ba4c6c84a94ba09e8b165c83e4bc269f55",
+      "size_bytes": 11067
+    },
+    "memory_tuner/rlvram_v2_cross_family_confirmatory.csv": {
+      "sha256": "0beb7ae7384490b1f15e0a7b5f933e644111bcede84999a508a34f1371771a45",
+      "size_bytes": 38697
+    },
+    "memory_tuner/rlvram_v2_cross_family_development.csv": {
+      "sha256": "d05807ff929184e06b8fe98580e01de1d11e6306b114f944631bf0caff1534b3",
+      "size_bytes": 11009
+    },
+    "memory_tuner/rlvram_v2_cross_family_smoke.csv": {
+      "sha256": "b3f375789490d84034f9bd6fb48fb0ff864570ce8dc38768c0aef10668185a76",
+      "size_bytes": 2425
+    },
+    "memory_tuner/rlvram_v2_sleep_expansion.csv": {
+      "sha256": "90277c284955dd0a2900403395fa77516d31955aa8477dff50508b9d5e81f649",
+      "size_bytes": 33276
+    },
+    "memory_tuner/rlvram_v2_telemetry_calibration.csv": {
+      "sha256": "19b07376ff33dad801404bcfcb44e6d042734f16e933e4a3e5ef066c122692f6",
+      "size_bytes": 11480
+    },
+    "memory_tuner/rlvram_v2_temporal_confirmatory.csv": {
+      "sha256": "4cf7a286b3c1f8ee62d0cf9a3dbe95ec68a4a848db47d00f2193c0aefa79c2f3",
+      "size_bytes": 16079
+    },
+    "memory_tuner/rlvram_v2_temporal_pilot.csv": {
+      "sha256": "56ff2c0241198f58eb9a4176214bf7a6021378734fc7d0ce135593bb73140f20",
+      "size_bytes": 2156
+    },
+    "memory_tuner/scientific_revision_analysis.py": {
+      "sha256": "9ff717ca762cbccb2404e6ac891c4b7026dff1fc5e8a25845425ba4e8bf7aca8",
+      "size_bytes": 19976
+    },
+    "memory_tuner/scientific_revision_results.py": {
+      "sha256": "37165ad575499e35ddc0943e3d5535b1b9dab6a01d72d172e03839eb3299c350",
+      "size_bytes": 10963
+    },
+    "memory_tuner/screening_analysis.py": {
+      "sha256": "c05d534df2e3558720756be5975a52abf1e0b11432afa860458504618b87850c",
+      "size_bytes": 11715
+    },
+    "memory_tuner/standard_grpo_paper_analysis.py": {
+      "sha256": "878759b612857113429b136b6c35be5da6cdaae6e7a5675d0a5e4eb44d66cd44",
+      "size_bytes": 23351
+    },
+    "memory_tuner/strengthening_factorial_analysis.py": {
+      "sha256": "e458142d648d3941d59a6cef0b5a0ac62677b105bb2335c8881bc56b182c1092",
+      "size_bytes": 17809
+    },
+    "memory_tuner/strengthening_granite_analysis.py": {
+      "sha256": "570bbdbf92ddd5e69dabff35008b22d9c45b96680e5ed4827b00cdd1380e8cd1",
+      "size_bytes": 13379
+    },
+    "memory_tuner/strengthening_temporal_analysis.py": {
+      "sha256": "4fed0d308294b74785bbf86d6ccde900f22b0c3175011d5a3b50851cc2a1a135",
+      "size_bytes": 14386
+    },
+    "memory_tuner/test_artifact_paths.py": {
+      "sha256": "677e881884210a3089f86744d2db65a13e0f055ecd24ddd510b60880ab93e7c7",
+      "size_bytes": 1292
+    },
+    "memory_tuner/test_grpo_phase_sensitivity.py": {
+      "sha256": "8759b29c2a180453e500c1d19c7144a2801d105a1ddb288f67ae954736c1fd6b",
+      "size_bytes": 1468
+    },
+    "memory_tuner/test_grpo_raw_evidence.py": {
+      "sha256": "66f03e58b9a01543fa4458f83a3df863b4798cfd30e0865b0be9f1e3766e6e55",
+      "size_bytes": 2125
+    },
+    "memory_tuner/test_scientific_revision_analysis.py": {
+      "sha256": "5885eb4bf730f606bd9b745ed2c15f252cb7ee3b08567e2a869b8e36aeb2a41d",
+      "size_bytes": 5412
+    },
+    "memory_tuner/test_scientific_revision_plan.py": {
+      "sha256": "68ed80fb6bcccee4dcb5ff5a1eb3348cd2f17700d9775d443ad50388b8c2dfac",
+      "size_bytes": 2064
+    },
+    "memory_tuner/test_scientific_revision_results.py": {
+      "sha256": "8d4a8178e1f3ad88a227b04411e4ce58582b5f4fcbe0c2b58bf37a28499d6a7e",
+      "size_bytes": 706
+    },
+    "memory_tuner/trial_attempts.py": {
+      "sha256": "024db44e547a436cc3e4a75996db731d61291d4dacbde1f85542c53c49873a39",
+      "size_bytes": 2317
+    },
+    "memory_tuner/validate_trial_matrix.py": {
+      "sha256": "8746082d2b12b98eaad20248e638fee60d4202d44bd95656a45cd597f4f33320",
+      "size_bytes": 11686
+    },
+    "memory_tuner/verl_phase_matrix.csv": {
+      "sha256": "6836744743d35c3b36a1a26c4fb1cd39a991d42447b650aa4f92f70dea31f23e",
+      "size_bytes": 306
+    },
+    "memory_tuner/vllm_matrix.csv": {
+      "sha256": "2895a686c4ff18fc43e5e0640e2abdbf4cbd17440aaa03d54818ad626e06d6e9",
+      "size_bytes": 831
+    },
+    "memory_tuner/vllm_online_smoke.csv": {
+      "sha256": "fb26a257e7ca9366468bd62ed7aa55bf02bac5fca22ff5eea922d2e229801963",
+      "size_bytes": 229
+    },
+    "memory_tuner/vllm_repeats_3b.csv": {
+      "sha256": "c11595fc3e8ebfb6f49f1f0c696bd349b78ba7347380d5a754d7bcfb931e66d3",
+      "size_bytes": 1668
+    },
+    "publication-requirements.txt": {
+      "sha256": "3c86c539ab6f053981c6c58c93135f6e085434cfd4ea112424469b25f16b6a5b",
+      "size_bytes": 458
+    }
+  }
+}

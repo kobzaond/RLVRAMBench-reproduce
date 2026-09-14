@@ -1,0 +1,13 @@
+experiment_id,model,gpu_memory_utilization,max_num_seqs,max_model_len,input_len,output_len,num_prompts,seed
+screen-1p5b-short-u50-c16,Qwen/Qwen2.5-1.5B-Instruct,0.50,16,1024,512,128,256,0
+screen-1p5b-short-u50-c128,Qwen/Qwen2.5-1.5B-Instruct,0.50,128,1024,512,128,256,0
+screen-1p5b-short-u65-c16,Qwen/Qwen2.5-1.5B-Instruct,0.65,16,1024,512,128,256,0
+screen-1p5b-short-u65-c128,Qwen/Qwen2.5-1.5B-Instruct,0.65,128,1024,512,128,256,0
+screen-1p5b-short-u80-c16,Qwen/Qwen2.5-1.5B-Instruct,0.80,16,1024,512,128,256,0
+screen-1p5b-short-u80-c128,Qwen/Qwen2.5-1.5B-Instruct,0.80,128,1024,512,128,256,0
+screen-7b-long-u50-c16,Qwen/Qwen2.5-7B-Instruct,0.50,16,3072,2048,512,64,0
+screen-7b-long-u50-c128,Qwen/Qwen2.5-7B-Instruct,0.50,128,3072,2048,512,64,0
+screen-7b-long-u65-c16,Qwen/Qwen2.5-7B-Instruct,0.65,16,3072,2048,512,64,0
+screen-7b-long-u65-c128,Qwen/Qwen2.5-7B-Instruct,0.65,128,3072,2048,512,64,0
+screen-7b-long-u80-c16,Qwen/Qwen2.5-7B-Instruct,0.80,16,3072,2048,512,64,0
+screen-7b-long-u80-c128,Qwen/Qwen2.5-7B-Instruct,0.80,128,3072,2048,512,64,0

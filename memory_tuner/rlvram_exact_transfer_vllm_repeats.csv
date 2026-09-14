@@ -1,0 +1,13 @@
+experiment_id,model,gpu_memory_utilization,max_num_seqs,max_model_len,input_len,output_len,num_prompts,seed
+exact-1p5b-gsm-u50-s1,Qwen/Qwen2.5-1.5B-Instruct,0.50,256,1536,512,1024,128,1
+exact-1p5b-gsm-u50-s2,Qwen/Qwen2.5-1.5B-Instruct,0.50,256,1536,512,1024,128,2
+exact-1p5b-gsm-u65-s1,Qwen/Qwen2.5-1.5B-Instruct,0.65,256,1536,512,1024,128,1
+exact-1p5b-gsm-u65-s2,Qwen/Qwen2.5-1.5B-Instruct,0.65,256,1536,512,1024,128,2
+exact-1p5b-gsm-u80-s1,Qwen/Qwen2.5-1.5B-Instruct,0.80,256,1536,512,1024,128,1
+exact-1p5b-gsm-u80-s2,Qwen/Qwen2.5-1.5B-Instruct,0.80,256,1536,512,1024,128,2
+exact-7b-gsm-u50-s1,Qwen/Qwen2.5-7B-Instruct,0.50,256,1536,512,1024,128,1
+exact-7b-gsm-u50-s2,Qwen/Qwen2.5-7B-Instruct,0.50,256,1536,512,1024,128,2
+exact-7b-gsm-u65-s1,Qwen/Qwen2.5-7B-Instruct,0.65,256,1536,512,1024,128,1
+exact-7b-gsm-u65-s2,Qwen/Qwen2.5-7B-Instruct,0.65,256,1536,512,1024,128,2
+exact-7b-gsm-u80-s1,Qwen/Qwen2.5-7B-Instruct,0.80,256,1536,512,1024,128,1
+exact-7b-gsm-u80-s2,Qwen/Qwen2.5-7B-Instruct,0.80,256,1536,512,1024,128,2

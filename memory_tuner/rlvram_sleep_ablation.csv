@@ -1,0 +1,9 @@
+experiment_id,model,data_subdir,actor_micro_batch,vllm_gpu_memory_utilization,free_cache_engine,max_prompt_length,max_response_length,max_model_len,rollout_n
+sleep-1p5b-gsm-a4-u65-on,Qwen/Qwen2.5-1.5B-Instruct,gsm8k,4,0.65,True,256,512,768,5
+sleep-1p5b-gsm-a4-u65-off,Qwen/Qwen2.5-1.5B-Instruct,gsm8k,4,0.65,False,256,512,768,5
+sleep-1p5b-gsm-a16-u65-on,Qwen/Qwen2.5-1.5B-Instruct,gsm8k,16,0.65,True,256,512,768,5
+sleep-1p5b-gsm-a16-u65-off,Qwen/Qwen2.5-1.5B-Instruct,gsm8k,16,0.65,False,256,512,768,5
+sleep-3b-math-a4-u65-on,Qwen/Qwen2.5-3B-Instruct,math,4,0.65,True,1792,1024,2816,5
+sleep-3b-math-a4-u65-off,Qwen/Qwen2.5-3B-Instruct,math,4,0.65,False,1792,1024,2816,5
+sleep-3b-math-a16-u65-on,Qwen/Qwen2.5-3B-Instruct,math,16,0.65,True,1792,1024,2816,5
+sleep-3b-math-a16-u65-off,Qwen/Qwen2.5-3B-Instruct,math,16,0.65,False,1792,1024,2816,5

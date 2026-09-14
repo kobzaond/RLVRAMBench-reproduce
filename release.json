@@ -1,0 +1,21 @@
+{
+  "release": "ieee-access-20260914-2897476",
+  "source_commit": "289747694f1a71052acc7977e742bfc0a45286a2",
+  "huggingface_repository": "kobzaond/RLVRAMBench",
+  "huggingface_revision": "68aa8e041b3248c2898ba8062c912e84a64b2c64",
+  "code_repository": "kobzaond/RLVRAMBench-reproduce",
+  "archive": {
+    "path": "releases/RLVRAMBench-review-artifact-ieee-access-20260914-2897476.tar.zst",
+    "sha256": "4a735cdc33b709d330b9894cb3b923542da2c29c29d366eccdae19c781096cfd",
+    "size_bytes": 171120507
+  },
+  "manifest_entries": 19226,
+  "archive_members": 19228,
+  "expected_derived_files": 40,
+  "principal_processes": 588,
+  "supporting_source_processes": 16,
+  "model_checkpoint_payloads_included": false,
+  "doi": null,
+  "visibility_at_initial_deposit": "private",
+  "original_material_license": null
+}

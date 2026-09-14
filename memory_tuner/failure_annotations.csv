@@ -1,0 +1,15 @@
+experiment_id,failure_kind,evidence_path,evidence_note
+screen-phase-7b-a4-u50,weight_sync_oom,profiles/screening/phase-screening.csv,Raw array log 4829116_6 and screening analysis identify weight synchronization OOM
+screen-phase-7b-a16-u50,weight_sync_oom,profiles/screening/phase-screening.csv,Raw array log 4829116_7 and screening analysis identify weight synchronization OOM
+screen-phase-7b-a4-u65,rollout_init_memory,profiles/screening/phase-screening.csv,Raw array log 4829116_8 reports insufficient free memory for requested vLLM utilization
+screen-phase-7b-a16-u65,rollout_init_memory,profiles/screening/phase-screening.csv,Raw array log 4829116_9 reports insufficient free memory for requested vLLM utilization
+screen-phase-7b-a4-u80,rollout_init_memory,profiles/screening/phase-screening.csv,Raw array log 4829116_10 reports insufficient free memory for requested vLLM utilization
+screen-phase-7b-a16-u80,rollout_init_memory,profiles/screening/phase-screening.csv,Raw array log 4829116_11 reports insufficient free memory for requested vLLM utilization
+mitigate-7b-a4-u40,rollout_init_memory,logs/verl-7b-mitigate-4829886_0.out,Raw array log reports vLLM KV or reservation initialization failure
+mitigate-7b-a16-u40,rollout_init_memory,logs/verl-7b-mitigate-4829886_1.out,Raw array log reports vLLM KV or reservation initialization failure
+mitigate-7b-a4-u40-po,rollout_init_memory,logs/verl-7b-mitigate-4829886_2.out,Raw array log reports vLLM KV or reservation initialization failure
+mitigate-7b-a16-u40-po,rollout_init_memory,logs/verl-7b-mitigate-4829886_3.out,Raw array log reports vLLM KV or reservation initialization failure
+mitigate-7b-a4-u50-po,weight_sync_oom,logs/verl-7b-mitigate-4829886_4.err,Raw array log reports torch OOM while materializing FSDP parameters during update_weights
+mitigate-7b-a16-u50-po,weight_sync_oom,logs/verl-7b-mitigate-4829886_5.err,Raw array log reports torch OOM while materializing FSDP parameters during update_weights
+bench-3b-gsm8k-a4-u80,weight_sync_oom,logs/verl-3b-bench-4835537_4.out,Raw array log reports CUDA OOM in vLLM worker during synchronized weight update
+bench-3b-gsm8k-a16-u80,weight_sync_oom,logs/verl-3b-bench-4835537_5.out,Raw array log reports CUDA OOM in vLLM worker during synchronized weight update
