@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the frozen RLVRAMBench results from an authenticated evidence archive."""
+"""Rebuild frozen RLVRAMBench results from an integrity-checked public archive."""
 from __future__ import annotations
 
 import argparse
@@ -83,9 +83,14 @@ def run_child(arguments, work: Path, hidden: list[Path]) -> None:
             "bwrap", "--die-with-parent", "--ro-bind", "/", "/",
             "--bind", str(work), str(work),
         ]
+        # Keep a project-local environment usable even when its project is hidden.
+        # This read-only mount exposes only the interpreter and dependencies.
+        isolated_python = "/run/rlvrambench-python"
+        wrapper += ["--tmpfs", "/run", "--ro-bind", sys.prefix, isolated_python]
         for path in hidden:
             if path.exists():
                 wrapper += ["--tmpfs", str(path)]
+        command[0] = isolated_python + "/bin/python"
         command = wrapper + ["--", *command]
     subprocess.run(command, cwd=ROOT, env=env, check=True)
 
@@ -99,7 +104,7 @@ def main() -> None:
                         help="Hide reference tables and the original project during analysis")
     args = parser.parse_args()
     if sys.version_info[:2] != (3, 11):
-        raise SystemExit("Use CPython 3.11 with the pinned requirements.txt")
+        raise SystemExit("Use CPython 3.11 with publication-requirements.txt")
     release = json.loads((ROOT / "release.json").read_text())
     if sha256(args.archive) != release["archive"]["sha256"]:
         raise SystemExit("Evidence archive SHA-256 does not match release.json")
@@ -152,14 +157,53 @@ def main() -> None:
         raise ValueError("The complete 588-process corpus was not reconstructed")
     if summary["scope"]["supporting_historical_source_processes"] != 16:
         raise ValueError("Historical source-screen count differs")
-    run_child([
-        "-m", "memory_tuner.make_standard_grpo_figures",
-        "--data", str(tables), "--output", str(work / "figures"),
-    ], work, hidden)
-    figure_names = (
-        "standard_grpo_boundary", "standard_grpo_mechanisms",
-        "standard_grpo_temporal", "standard_grpo_phase_effects",
-    )
+    review_count = int(release.get("expected_review_derived_files", 0))
+    if review_count:
+        # These inputs are our regenerated tables, not the hidden references.
+        shutil.copytree(tables, artifact / "profiles/standard_grpo")
+        review_tables = work / "review-results"
+        for module in (
+            "review_evidence_analysis", "review_attempt_workload_audit",
+            "review_control_analysis",
+        ):
+            run_child([
+                "-m", f"memory_tuner.{module}", "--root", str(artifact),
+                "--output", str(review_tables),
+            ], work, hidden)
+        expected_review = sorted((reference / "review_revision").glob("*"))
+        expected_review = [p for p in expected_review if p.suffix in (".csv", ".json")]
+        if len(expected_review) != review_count:
+            raise ValueError("Unexpected revised reference-table count")
+        if {p.name for p in review_tables.iterdir()} != {p.name for p in expected_review}:
+            raise ValueError("Revised result file set differs from its frozen release")
+        for expected in expected_review:
+            old = normalize_paths(expected.read_text(), [ORIGINAL_ROOT, artifact])
+            new = normalize_paths((review_tables / expected.name).read_text(),
+                                  [ORIGINAL_ROOT, artifact])
+            if old != new:
+                raise ValueError(f"Revised reconstruction differs: {expected.name}")
+        control = json.loads((review_tables / "control-summary.json").read_text())
+        if (control["completed"], control["attempts"]) != (
+                release["review_control_completed_processes"],
+                release["review_control_attempted_processes"]):
+            raise ValueError("Revised control attempt/completion accounting differs")
+        run_child([
+            "-m", "memory_tuner.make_review_figures", "--root", str(artifact),
+            "--review-results", str(review_tables), "--output", str(work / "figures"),
+        ], work, hidden)
+        figure_names = (
+            "standard_grpo_boundary", "standard_grpo_mechanisms",
+            "standard_grpo_temporal", "review_instrumentation_batch",
+        )
+    else:
+        run_child([
+            "-m", "memory_tuner.make_standard_grpo_figures",
+            "--data", str(tables), "--output", str(work / "figures"),
+        ], work, hidden)
+        figure_names = (
+            "standard_grpo_boundary", "standard_grpo_mechanisms",
+            "standard_grpo_temporal", "standard_grpo_phase_effects",
+        )
     for name in figure_names:
         for extension in (".pdf", ".png"):
             if (work / "figures" / (name + extension)).stat().st_size == 0:
@@ -169,6 +213,9 @@ def main() -> None:
         "archive_members": members, "manifest_entries_verified": manifest_entries,
         "principal_processes": 588, "supporting_source_processes": 16,
         "derived_csv_json_files_matched": len(originals), "figures_regenerated": 4,
+        "revised_csv_json_files_matched": review_count,
+        "review_control_completed_processes": release.get("review_control_completed_processes", 0),
+        "review_control_attempted_processes": release.get("review_control_attempted_processes", 0),
         "reference_profiles_removed_from_analysis_root": True,
         "original_project_and_reference_tables_hidden": args.isolate_analysis,
         "network_namespace_isolation_claimed": False,

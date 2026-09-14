@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the RLVRAMBench evidence release and associated paper."
 type: software
 title: "RLVRAMBench: CPU-only reproduction code"
-version: "2026.09.14"
+version: "2026.09.14-r2"
 date-released: "2026-09-14"
 authors:
   - family-names: Kobza

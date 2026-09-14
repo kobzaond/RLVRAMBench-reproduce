@@ -149,10 +149,10 @@ def make_boundary(
     short_labels = [
         label.replace("Qwen2.5-3B", "Qwen3B").replace("Phi-4-mini", "Phi-mini")
         .replace("Granite-3.3-2B", "Granite2B").replace("Code standard", "Code")
-        .replace("Code heavy-tail", "Code-tail") for label in labels
+        .replace("Code heavy-tail", "Heavy-tail code") for label in labels
     ]
     axes[0].set_yticklabels(short_labels, fontsize=8.5)
-    axes[0].set_xlabel("Ordered stress-lattice level")
+    axes[0].set_xlabel("Configuration level")
     axes[0].set_title("(a) Three-repetition labels")
     for row_index, row in enumerate(values):
         for column_index, value in enumerate(row):
@@ -303,7 +303,7 @@ def make_mechanisms(
     axes[0].set_xticklabels([label.replace(" ", "\n") for label in labels])
     axes[0].set_ylim(0, 10)
     axes[0].set_ylabel("Matched pairs")
-    axes[0].set_title("(a) Same-allocation outcomes")
+    axes[0].set_title("(a) Paired completion")
     axes[0].legend(frameon=False, fontsize=8.5)
     axes[0].grid(axis="y", alpha=0.25)
 
@@ -563,9 +563,9 @@ def make_temporal(
     axes[2].set_yticks(y)
     axes[2].set_yticklabels([label for _, label in effect_fields])
     axes[2].set_xlabel("Memory contrast (MiB)")
-    axes[2].set_title("(c) Hundred-step phase contrasts")
+    axes[2].set_title("(c) Hundred-step memory contrasts")
     axes[2].grid(axis="x", alpha=0.25)
-    fig.suptitle("Historical temporal validation: two Qwen cases")
+    fig.suptitle("Original longer-run tests: two Qwen cases")
     fig.tight_layout(rect=(0, 0.13, 1, 1))
     save(fig, output, "standard_grpo_temporal")
     plt.close(fig)
@@ -601,7 +601,7 @@ def make_phase_effects(intervals: Sequence[Mapping], output: Path) -> None:
     axis.axvline(0, color="#777777", linewidth=0.8)
     axis.grid(axis="x", alpha=0.2)
     axis.set_xlabel("Peak-memory main effect (MiB)")
-    fig.suptitle("Phase-local effects versus the whole-run maximum")
+    fig.suptitle("Stage-specific effects versus the overall maximum")
     fig.tight_layout()
     save(fig, output, "standard_grpo_phase_effects")
     plt.close(fig)

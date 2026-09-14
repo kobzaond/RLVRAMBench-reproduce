@@ -1,7 +1,7 @@
 {
   "source_repository": "https://github.com/kobzaond/rl",
-  "source_commit": "289747694f1a71052acc7977e742bfc0a45286a2",
-  "selection": "AST import closure of reproduction entry points and selected CPU tests; frozen matrices",
+  "source_commit": "328c1c33a8b4353429be8e892ee6f8b3eb57c1c2",
+  "selection": "Original CPU reproduction import closure plus revised audit/control modules, tests and frozen matrix",
   "files": {
     "memory_tuner/__init__.py": {
       "sha256": "027aba95d634d9ead178819412a859239c7ddd5418a0e5eaf8e3d429fe8e6629",
@@ -12,8 +12,8 @@
       "size_bytes": 6398
     },
     "memory_tuner/artifact_manifest.py": {
-      "sha256": "e9b3b8aa55e556b012d647fcafd20ce60d6fd852c791d222ee783b0935b7a2fc",
-      "size_bytes": 27901
+      "sha256": "bbdaaec1eeacb484b8612187b25604eb7b200d53b0dfdee08a153002efca6c17",
+      "size_bytes": 28759
     },
     "memory_tuner/artifact_paths.py": {
       "sha256": "8b89a2f8956c7b1fe40563e2b0b776414ebc583d3801fab6d83fc125861beb91",
@@ -99,9 +99,13 @@
       "sha256": "d12c1b19be6abe74e05005ff927613b2cbfa4b98f31e5e1178d42e811d16fb3e",
       "size_bytes": 17984
     },
+    "memory_tuner/make_review_figures.py": {
+      "sha256": "4d4a845be53ef26299d8493c8009c3dba40abd1afc128078db0f0c55eee80333",
+      "size_bytes": 6408
+    },
     "memory_tuner/make_standard_grpo_figures.py": {
-      "sha256": "91a517d75b8a4418b9e5692b16579c8ec2d5efa309730239d771b92f0dc04918",
-      "size_bytes": 20266
+      "sha256": "f3de9c409ca271141ac72d3a41293b8702f689b151fec63046cf6a5e0a2f1ec9",
+      "size_bytes": 20253
     },
     "memory_tuner/phaseguard.py": {
       "sha256": "77a0f7120d118f6f05e36c3e2f76c4797ca75c536ab2230fbe26ee119d86106e",
@@ -122,6 +126,18 @@
     "memory_tuner/publication_plot_style.py": {
       "sha256": "2fa16ee763aa0bf5ec5d508ef8c0a0099b910d28c5ae7adc08bbb4683458c634",
       "size_bytes": 367
+    },
+    "memory_tuner/review_attempt_workload_audit.py": {
+      "sha256": "b6f97703890c798075ab8ecf8e5f825132b8dbda8c5e16a184d89a619d49781d",
+      "size_bytes": 21280
+    },
+    "memory_tuner/review_control_analysis.py": {
+      "sha256": "1c36fcc247f0517e6317c9eb7454541183bbfedaa41109c54c91514526e00c57",
+      "size_bytes": 11026
+    },
+    "memory_tuner/review_evidence_analysis.py": {
+      "sha256": "e7106b37f5a6cda8ec05c6a33b7af05b3c5ddc6658debee2c692e196c3288d6d",
+      "size_bytes": 17881
     },
     "memory_tuner/rl_trial_attempts.py": {
       "sha256": "30e19c082ddeca670f1cd74cd6c746188390e6008d9f46cf57272a26294446f0",
@@ -214,6 +230,10 @@
     "memory_tuner/rlvram_online_screening.csv": {
       "sha256": "8cbec37db96395cb9257fe666ef03eb5a9ba4f64122fa4cc92440f69026a1a12",
       "size_bytes": 463
+    },
+    "memory_tuner/rlvram_review_instrumentation_batch.csv": {
+      "sha256": "21ab989275d4ecfd1279ee10545b70e9c00c172c7e13f00f426ab39d4e1ef7f6",
+      "size_bytes": 11192
     },
     "memory_tuner/rlvram_revision_instrumentation.csv": {
       "sha256": "447f127357cc5fc1e2f077d0ee30994364f1bfdfc904e2d83d16db952e8b434d",
@@ -308,8 +328,8 @@
       "size_bytes": 19976
     },
     "memory_tuner/scientific_revision_results.py": {
-      "sha256": "37165ad575499e35ddc0943e3d5535b1b9dab6a01d72d172e03839eb3299c350",
-      "size_bytes": 10963
+      "sha256": "f7aea1cb9118beea4668a02a9dd2005af9db6ec429497f64ab538b7233142f32",
+      "size_bytes": 10053
     },
     "memory_tuner/screening_analysis.py": {
       "sha256": "c05d534df2e3558720756be5975a52abf1e0b11432afa860458504618b87850c",
@@ -342,6 +362,18 @@
     "memory_tuner/test_grpo_raw_evidence.py": {
       "sha256": "66f03e58b9a01543fa4458f83a3df863b4798cfd30e0865b0be9f1e3766e6e55",
       "size_bytes": 2125
+    },
+    "memory_tuner/test_review_attempt_workload_audit.py": {
+      "sha256": "d1edff78641b0485ace58106f8e35e83b3b2fc990808ad3cd2e0899c4ead2e66",
+      "size_bytes": 4240
+    },
+    "memory_tuner/test_review_control_analysis.py": {
+      "sha256": "9801c826b48ca6f6e0b056926019a12ada18f20a05d257f3dcb6400354715154",
+      "size_bytes": 1684
+    },
+    "memory_tuner/test_review_evidence_analysis.py": {
+      "sha256": "062421e1b0ecd6b95877d4e718512d480fac087e5e3ffb730bf9215cd35a6de6",
+      "size_bytes": 4229
     },
     "memory_tuner/test_scientific_revision_analysis.py": {
       "sha256": "5885eb4bf730f606bd9b745ed2c15f252cb7ee3b08567e2a869b8e36aeb2a41d",

@@ -1,16 +1,15 @@
 {
-  "release": "ieee-access-20260914-2897476",
-  "source_commit": "289747694f1a71052acc7977e742bfc0a45286a2",
+  "release": "critical-revision-20260914-328c1c3",
+  "source_commit": "328c1c33a8b4353429be8e892ee6f8b3eb57c1c2",
   "huggingface_repository": "kobzaond/RLVRAMBench",
-  "huggingface_revision": "c9bd99f6c57676fca0f2829cd95d34599ef8a305",
   "code_repository": "kobzaond/RLVRAMBench-reproduce",
   "archive": {
-    "path": "releases/RLVRAMBench-review-artifact-ieee-access-20260914-2897476.tar.zst",
-    "sha256": "4a735cdc33b709d330b9894cb3b923542da2c29c29d366eccdae19c781096cfd",
-    "size_bytes": 171120507
+    "path": "releases/RLVRAMBench-review-artifact-critical-revision-20260914-328c1c3.tar.zst",
+    "sha256": "81f9703da21b1fda72627960e477acdca5d196995787272d093788d46e6b9e4d",
+    "size_bytes": 174064706
   },
-  "manifest_entries": 19226,
-  "archive_members": 19228,
+  "manifest_entries": 19509,
+  "archive_members": 19511,
   "expected_derived_files": 40,
   "principal_processes": 588,
   "supporting_source_processes": 16,
@@ -19,5 +18,13 @@
   "visibility_at_initial_deposit": "private",
   "visibility": "public",
   "public_release_date": "2026-09-14",
-  "original_material_license": null
+  "original_material_license": null,
+  "expected_review_derived_files": 27,
+  "review_control_completed_processes": 24,
+  "review_control_attempted_processes": 26,
+  "review_control_usable_blocks": 6,
+  "original_recorded_attempts": 657,
+  "prior_immutable_release_preserved": "ieee-access-20260914-2897476",
+  "manuscript_editing_authority": "direct_tex",
+  "huggingface_revision": "7bae491e9bb9e34160bf90464bfbafce47f48a42"
 }

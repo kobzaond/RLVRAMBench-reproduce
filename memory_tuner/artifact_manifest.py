@@ -521,12 +521,17 @@ def collect_files(
     for study in ("instrumentation", "temporal", "topology"):
         add_trial_tree(files, repo_root / "output" / f"revision_{study}",
                        f"scientific_revision_{study}")
+    add_trial_tree(files, repo_root / "output/review_instrumentation_batch",
+                   "review_instrumentation_control")
 
     static_globs = (
         ("README.md", "review_entry_point"),
         ("memory_tuner/README.md", "review_entry_point"),
         ("logs/revision-*.out", "scientific_revision_scheduler_log"),
         ("logs/revision-*.err", "scientific_revision_scheduler_log"),
+        ("logs/review-control-*.out", "review_control_scheduler_log"),
+        ("logs/review-control-*.err", "review_control_scheduler_log"),
+        ("logs/v2-2g-4998773_14.out", "excluded_memory_failure_scheduler_evidence"),
         ("memory_tuner/*.py", "analysis_code"),
         ("memory_tuner/*.sh", "analysis_code"),
         ("memory_tuner/*.csv", "experiment_matrix"),
@@ -543,11 +548,17 @@ def collect_files(
         ("paper/tables/*", "paper_table"),
         ("paper/figures/*", "paper_figure"),
         ("paper/submission/*", "submission_package"),
+        ("paper/submission/ieee_access_submission/*.tex", "direct_submission_manuscript"),
+        ("paper/submission/ieee_access_submission/*.pdf", "compiled_submission_manuscript"),
+        ("paper/submission/ieee_access_submission/*.bib", "submission_bibliography"),
+        ("paper/submission/ieee_access_submission/figures/*.pdf", "submission_figure"),
         ("profiles/benchmark/*.csv", "derived_benchmark"),
         ("profiles/benchmark/*.sha256", "provenance_digest"),
         ("profiles/benchmark_v2/*.csv", "derived_benchmark_v2"),
         ("profiles/standard_grpo/*.csv", "derived_standard_grpo"),
         ("profiles/standard_grpo/*.json", "derived_standard_grpo"),
+        ("profiles/review_revision/*.csv", "derived_review_revision"),
+        ("profiles/review_revision/*.json", "derived_review_revision"),
         ("profiles/major_revision/*.txt", "derived_major_revision"),
         ("profiles/strengthening/*.csv", "derived_strengthening"),
         ("profiles/strengthening/same_node/**/*", "same_allocation_provenance"),

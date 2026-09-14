@@ -1,8 +1,8 @@
 # RLVRAMBench reproduction code
 
 CPU-only reconstruction of the measurements, statistical tables, and four
-figures supporting **RLVRAMBench: A Failure-Inclusive Benchmark for
-GPU-Memory Feasibility in Colocated LoRA GRPO**.
+figures supporting **RLVRAMBench: A Benchmark for Memory Feasibility in
+Colocated Language-Model Reinforcement Learning**.
 
 Authors: Ondřej Kobza and Jan Šedivý, CIIRC, Czech Technical University in
 Prague.
@@ -19,6 +19,11 @@ authentication nor access approval. No DOI has been generated.
 - 16 additional historical source-screen processes, counted separately.
 - All 40 published CSV/JSON result files, with only artifact-root path
   prefixes normalized for comparison.
+- 27 additional audit/control CSV/JSON files, including all 657 recorded
+  attempts underlying the original 588 retained outcomes.
+- The review-requested control: 26 started processes, 24 within-margin
+  completions, and six usable four-condition blocks. Initial noncompletions
+  remain distinct from the two additional allocations.
 - Four publication figures, regenerated as PDF and PNG.
 
 The procedure verifies the archive and every evidence-manifest entry,
@@ -43,6 +48,8 @@ bash memory_tuner/bootstrap_publication.sh
 ```
 
 This creates `.venv-reproduce` using `publication-requirements.txt`.
+Run environment-creation commands from the project directory; keep every
+virtual environment inside the project, not in your home directory.
 The scientific dependency versions are unchanged from the original paper
 release. The copied analysis modules and matrices are recorded, with their
 SHA-256 digests, in `source-provenance.json`.
@@ -80,7 +87,8 @@ Omit `--isolate-analysis` if bubblewrap is unavailable. The same raw
 reconstruction and numerical comparisons are still performed, but filesystem
 isolation is then explicitly not claimed.
 
-Results appear in `reproduced/results/`, figures in `reproduced/figures/`,
+Original results appear in `reproduced/results/`, revised audits and controls
+in `reproduced/review-results/`, figures in `reproduced/figures/`,
 and the machine-readable acceptance report in `reproduced/verification.json`.
 The reference profiles are retained separately under
 `reproduced/reference-profiles/`; they are never placed back into the
@@ -98,12 +106,17 @@ reconstruction above is a separate integration check.
 
 ## Source and citation
 
-The original scientific source snapshot is commit
-`289747694f1a71052acc7977e742bfc0a45286a2` of
-<https://github.com/kobzaond/rl>. The selected modules and frozen matrices are
-copied unchanged. The download/extraction/comparison wrapper is new packaging
+The current scientific source snapshot of <https://github.com/kobzaond/rl>
+is pinned in `source-provenance.json`. The selected modules and frozen
+matrices are copied unchanged. The download/extraction/comparison wrapper is packaging
 code and is tested separately. Some modules retain historical internal names;
 these are implementation dependencies, not additional claims of this paper.
+
+The new control supports positive observed actor-stage batch contrasts
+without allocator logging. Generated responses vary between conditions,
+so the measurements do not establish pure tracing overhead on identical
+tensors, logging equivalence, or a universal correction factor. Earlier
+immutable evidence releases remain available in the dataset repository.
 
 See `CITATION.cff` and `RIGHTS.md`. The original-material license choices,
 final journal declarations, and DOI remain author-controlled. Public access
