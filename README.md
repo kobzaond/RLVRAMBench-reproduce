@@ -10,8 +10,8 @@ Prague.
 This repository separates the reproduction code from the larger research
 workspace. The benchmark evidence is hosted at
 <https://huggingface.co/datasets/kobzaond/RLVRAMBench>.
-Both repositories are initially private. The submitting owner must grant
-reviewer access or approve public release. No DOI has been generated.
+Both repositories are public as of 2026-09-14. Downloads require neither
+authentication nor access approval. No DOI has been generated.
 
 ## What is reproduced
 
@@ -53,18 +53,16 @@ The exact dataset commit, archive filename, and SHA-256 are pinned in
 `release.json`. You can download that archive manually from the Hugging Face
 dataset repository. Do not substitute an older review archive.
 
-For an authenticated download helper, use a separate environment:
+For the download helper, use a separate environment:
 
 ```bash
 python3.11 -m venv .venv-download
 .venv-download/bin/python -m pip install -r download-requirements.txt
-.venv-download/bin/hf auth login
 .venv-download/bin/python download.py --output-dir downloads
 ```
 
-Private access requires an authorized Hugging Face account. Credentials must
-not be placed in source files, Git URLs, or `release.json`. The helper also
-supports the standard securely configured `HF_TOKEN` environment variable.
+No Hugging Face account or token is required for this public benchmark.
+Credentials must not be placed in source files, Git URLs, or `release.json`.
 
 ## Reproduce
 
@@ -108,4 +106,5 @@ code and is tested separately. Some modules retain historical internal names;
 these are implementation dependencies, not additional claims of this paper.
 
 See `CITATION.cff` and `RIGHTS.md`. The original-material license choices,
-public visibility, final journal declarations, and DOI remain author-controlled.
+final journal declarations, and DOI remain author-controlled. Public access
+does not itself grant a software or data reuse license.

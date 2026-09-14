@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-14",
+  "repository": "kobzaond/RLVRAMBench",
+  "repository_type": "dataset",
+  "private": false,
+  "gated": false,
+  "revision": "c9bd99f6c57676fca0f2829cd95d34599ef8a305",
+  "anonymous_payload_files_downloaded_and_sha256_verified": 52,
+  "server_generated_gitattributes_excluded_from_payload_count": true,
+  "archive_sha256": "4a735cdc33b709d330b9894cb3b923542da2c29c29d366eccdae19c781096cfd",
+  "archive_identical_to_previously_reproduced_deposit": true,
+  "doi_created": false,
+  "licenses_changed": false,
+  "checkpoint_payloads_uploaded": false
+}
