@@ -1,0 +1,15 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "allocations.csv": "148022cc369805ef62aa260078f2ce61b6a6adc27454ba7ee1424ae72c3c203d",
+    "attempts.csv": "2201d6bd23710a09468c9c04e1ab1247d0ba3e8444b08b623e9325b8e4bb93d7",
+    "attempts.json": "983aa59260328869d57efc8c0440fe934988df6daa7d672c266d2908e623fd4d",
+    "candidate_results.csv": "19d0b365eda7e19385b423c21c4336b1ee7a37a48b1ce9ac2546107b5010a1d3",
+    "collection_summary.json": "0ac49fc2a321afee02840764a8cca557f9e272ca89ed98cf8e5d07c21416364b",
+    "realized_work.csv": "1729d8f394556faebb0e3e9a171d73d016612cf1dfebf72f41e23ca00a74fcbf",
+    "scores.json": "0b302e7229dcf27468a0fa3afaa710756a3037e4d6bb6499bc283536af0cdc64",
+    "stage_measurements.csv": "84e737b3c117da141eac46eda5dbfb80d7f923fd37ea252df8e574b21a21d5d1",
+    "summary.csv": "cd2057623915114cf7671b750eab30a664e6836b3ea7bfdaba743e464aeb4013",
+    "validated_runs.csv": "388674ede4438b95272659318e30cb1cd87ee602a17e8e209825f6970ec9ea10"
+  }
+}

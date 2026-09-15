@@ -1,0 +1,3446 @@
+{
+  "protocol_version": "decision-1.0",
+  "scope": "Prospectively specified offline replay; independent evaluation seeds.",
+  "cost_warning": "Attempt counts are not GPU-hours. Donor cost is sunk only in the existing-donor scenario.",
+  "evidence_flags_warning": "Known memory-failure and above-margin flags overlap unresolved and complete labels; do not add them as disjoint categories.",
+  "physical_collection": {
+    "recorded_screen_attempts": 12,
+    "recorded_evaluation_attempts": 36
+  },
+  "candidate_evaluation": {
+    "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": {
+      "state": "within_margin",
+      "known_memory_failure": false,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s142-job5052365",
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s143-job5052668",
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s144-job5052330"
+      ]
+    },
+    "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": {
+      "state": "within_margin",
+      "known_memory_failure": false,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s142-job5052363",
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s143-job5052564",
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s144-job5052332"
+      ]
+    },
+    "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": {
+      "state": "memory_failure",
+      "known_memory_failure": true,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s142-job5052357",
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s143-job5052597",
+        "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s144-job5052415"
+      ]
+    },
+    "qwen25_3b-math-shape1024-n4-steps5-c2": {
+      "state": "within_margin",
+      "known_memory_failure": false,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s142-job5052409",
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s143-job5052382",
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s144-job5052519"
+      ]
+    },
+    "qwen25_3b-math-shape1024-n4-steps5-c3": {
+      "state": "within_margin",
+      "known_memory_failure": false,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s142-job5052407",
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s143-job5052358",
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s144-job5052350"
+      ]
+    },
+    "qwen25_3b-math-shape1024-n4-steps5-c4": {
+      "state": "memory_failure",
+      "known_memory_failure": true,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s142-job5052311",
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s143-job5052308",
+        "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s144-job5052522"
+      ]
+    },
+    "phi4_mini-gsm8k-shape1024-n4-steps5-c2": {
+      "state": "within_margin",
+      "known_memory_failure": false,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s142-job5052381",
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s143-job5052309",
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s144-job5052375"
+      ]
+    },
+    "phi4_mini-gsm8k-shape1024-n4-steps5-c3": {
+      "state": "above_margin",
+      "known_memory_failure": false,
+      "known_above_margin": true,
+      "evaluation_attempt_ids": [
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s142-job5052335",
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s143-job5052376",
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s144-job5052318"
+      ]
+    },
+    "phi4_mini-gsm8k-shape1024-n4-steps5-c4": {
+      "state": "memory_failure",
+      "known_memory_failure": true,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s142-job5052431",
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s143-job5052458",
+        "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s144-job5052366"
+      ]
+    },
+    "phi4_mini-math-shape1024-n4-steps5-c2": {
+      "state": "within_margin",
+      "known_memory_failure": false,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-phi4_mini-math-shape1024-n4-steps5-c2-s142-job5052470",
+        "decision-phi4_mini-math-shape1024-n4-steps5-c2-s143-job5052452",
+        "decision-phi4_mini-math-shape1024-n4-steps5-c2-s144-job5052460"
+      ]
+    },
+    "phi4_mini-math-shape1024-n4-steps5-c3": {
+      "state": "above_margin",
+      "known_memory_failure": false,
+      "known_above_margin": true,
+      "evaluation_attempt_ids": [
+        "decision-phi4_mini-math-shape1024-n4-steps5-c3-s142-job5052595",
+        "decision-phi4_mini-math-shape1024-n4-steps5-c3-s143-job5052307",
+        "decision-phi4_mini-math-shape1024-n4-steps5-c3-s144-job5052664"
+      ]
+    },
+    "phi4_mini-math-shape1024-n4-steps5-c4": {
+      "state": "memory_failure",
+      "known_memory_failure": true,
+      "known_above_margin": false,
+      "evaluation_attempt_ids": [
+        "decision-phi4_mini-math-shape1024-n4-steps5-c4-s142-job5052338",
+        "decision-phi4_mini-math-shape1024-n4-steps5-c4-s143-job5052316",
+        "decision-phi4_mini-math-shape1024-n4-steps5-c4-s144-job5052315"
+      ]
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141-job5052326",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33258.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141-job5052326",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33258.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s141-job5052408",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 0.5,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 1,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.5,
+          "within_margin_recall_max": 0.5,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141-job5052326",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33258.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141-job5052326",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33258.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s141-job5052408",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 0,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "abstain",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "abstain",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 2,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 1,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "abstain",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 0.5,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 2,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.5,
+          "within_margin_recall_max": 0.5,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 2,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141-job5052326",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33258.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 1,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 3,
+      "decisions": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141-job5052371",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37300.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141-job5052326",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33258.0
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s141-job5052408",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141-job5052372",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33984.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141-job5052372",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33984.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s141-job5052385",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "reject",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 0.5,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 1,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.5,
+          "within_margin_recall_max": 0.5,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141-job5052372",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33984.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141-job5052372",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33984.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s141-job5052385",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 0,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "abstain",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "abstain",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 2,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 1,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "abstain",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 0.5,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 2,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.5,
+          "within_margin_recall_max": 0.5,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 2,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141-job5052372",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33984.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 1,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 3,
+      "decisions": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c3": "approve",
+        "qwen25_3b-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141-job5052373",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 38176.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141-job5052372",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 33984.0
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s141-job5052385",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 2,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141-job5052468",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40064.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141-job5052468",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40064.0
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s141-job5052656",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 35972.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141-job5052468",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40064.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141-job5052468",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40064.0
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s141-job5052656",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 35972.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 0,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "abstain",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "abstain",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 1,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "abstain",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "abstain",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 2,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 2,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "abstain",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141-job5052468",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40064.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 1,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 3,
+      "decisions": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141-job5052520",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141-job5052468",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40064.0
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s141-job5052656",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 35972.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141-job5052319",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37252.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "source_copy",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141-job5052319",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37252.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c4-s141-job5052374",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 9,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 10,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 11,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141-job5052319",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37252.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "headroom_guard",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 9,
+      "cold_start_attributed_attempts": 12,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141-job5052319",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37252.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c4-s141-job5052374",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 0,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "abstain",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "abstain",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 1,
+      "spent_target_attempts": 1,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 1,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "abstain",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 2,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 2,
+      "spent_target_attempts": 2,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 2,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "abstain"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141-job5052319",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37252.0
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 1,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "direct_screen",
+      "budget_target_attempts": 3,
+      "spent_target_attempts": 3,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 3,
+      "decisions": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": "approve",
+        "phi4_mini-math-shape1024-n4-steps5-c3": "reject",
+        "phi4_mini-math-shape1024-n4-steps5-c4": "reject"
+      },
+      "transcript": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141-job5052310",
+          "charged_attempts": 1,
+          "cumulative_attempts": 1,
+          "observed_state": "above_margin",
+          "decision": "reject",
+          "peak_mib": 40900.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c2",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141-job5052319",
+          "charged_attempts": 1,
+          "cumulative_attempts": 2,
+          "observed_state": "within_margin",
+          "decision": "approve",
+          "peak_mib": 37252.0
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c4",
+          "attempt_id": "decision-phi4_mini-math-shape1024-n4-steps5-c4-s141-job5052374",
+          "charged_attempts": 1,
+          "cumulative_attempts": 3,
+          "observed_state": "memory_failure",
+          "decision": "reject",
+          "peak_mib": null
+        }
+      ],
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 1,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 1.0,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": 0.0,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    }
+  ],
+  "summary": [
+    {
+      "rule": "source_copy",
+      "budget_target_attempts_per_case": 0,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 36
+    },
+    {
+      "rule": "source_copy",
+      "budget_target_attempts_per_case": 1,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 4,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 40
+    },
+    {
+      "rule": "source_copy",
+      "budget_target_attempts_per_case": 2,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 8,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 44
+    },
+    {
+      "rule": "source_copy",
+      "budget_target_attempts_per_case": 3,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 12,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 48
+    },
+    {
+      "rule": "headroom_guard",
+      "budget_target_attempts_per_case": 0,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 0.75,
+      "approved": 4,
+      "approved_within_margin": 4,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 36
+    },
+    {
+      "rule": "headroom_guard",
+      "budget_target_attempts_per_case": 1,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 4,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 40
+    },
+    {
+      "rule": "headroom_guard",
+      "budget_target_attempts_per_case": 2,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 8,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 44
+    },
+    {
+      "rule": "headroom_guard",
+      "budget_target_attempts_per_case": 3,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 12,
+      "donor_attempts": 36,
+      "cold_start_attributed_attempts": 48
+    },
+    {
+      "rule": "direct_screen",
+      "budget_target_attempts_per_case": 0,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 0.0,
+      "approved": 0,
+      "approved_within_margin": 0,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 12,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 0,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 0
+    },
+    {
+      "rule": "direct_screen",
+      "budget_target_attempts_per_case": 1,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 0.25,
+      "approved": 2,
+      "approved_within_margin": 2,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 8,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 4,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 4
+    },
+    {
+      "rule": "direct_screen",
+      "budget_target_attempts_per_case": 2,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 0.75,
+      "approved": 5,
+      "approved_within_margin": 5,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 4,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 8,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 8
+    },
+    {
+      "rule": "direct_screen",
+      "budget_target_attempts_per_case": 3,
+      "cases": 4,
+      "cases_with_defined_recall": 4,
+      "macro_case_within_margin_recall": 1.0,
+      "approved": 6,
+      "approved_within_margin": 6,
+      "within_margin_targets": 6,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "approved_unresolved": 0,
+      "unresolved_targets": 0,
+      "abstentions": 0,
+      "approved_known_memory_failure": 0,
+      "approved_known_above_margin": 0,
+      "spent_target_attempts": 12,
+      "donor_attempts": 0,
+      "cold_start_attributed_attempts": 12
+    }
+  ],
+  "zero_cost_references": [
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "approve_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 3,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 0.6666666666666666,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 1,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 1,
+        "memory_failure_among_approved": 0.3333333333333333,
+        "approval_rate_on_memory_failure_targets": 1.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 1,
+          "unsuitable_approvals_max": 1
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "rule": "abstain_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 2,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "approve_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 3,
+        "approved_within_margin": 2,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 0.6666666666666666,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 1,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": 0.0,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 1,
+        "memory_failure_among_approved": 0.3333333333333333,
+        "approval_rate_on_memory_failure_targets": 1.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 1,
+          "unsuitable_approvals_max": 1
+        }
+      }
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "rule": "abstain_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 2,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 2,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 0,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": null,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "approve_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 3,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 0.3333333333333333,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 1,
+        "approved_known_above_margin": 1,
+        "above_margin_targets": 1,
+        "approved_above_margin": 1,
+        "above_margin_among_approved": 0.3333333333333333,
+        "approval_rate_on_above_margin_targets": 1.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 1,
+        "memory_failure_among_approved": 0.3333333333333333,
+        "approval_rate_on_memory_failure_targets": 1.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 2,
+          "unsuitable_approvals_max": 2
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "rule": "abstain_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "approve_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 3,
+        "approved_within_margin": 1,
+        "within_margin_recall": 1.0,
+        "within_margin_approval_precision": 0.3333333333333333,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 0,
+        "abstentions": 0,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 1,
+        "approved_known_above_margin": 1,
+        "above_margin_targets": 1,
+        "approved_above_margin": 1,
+        "above_margin_among_approved": 0.3333333333333333,
+        "approval_rate_on_above_margin_targets": 1.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 1,
+        "memory_failure_among_approved": 0.3333333333333333,
+        "approval_rate_on_memory_failure_targets": 1.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 1.0,
+          "within_margin_recall_max": 1.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 2,
+          "unsuitable_approvals_max": 2
+        }
+      }
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "rule": "abstain_all",
+      "metrics": {
+        "target_configurations": 3,
+        "within_margin_targets": 1,
+        "approved": 0,
+        "approved_within_margin": 0,
+        "within_margin_recall": 0.0,
+        "within_margin_approval_precision": null,
+        "rejected_within_margin": 0,
+        "abstained_within_margin": 1,
+        "abstentions": 3,
+        "unresolved_targets": 0,
+        "approved_unresolved": 0,
+        "approved_known_memory_failure": 0,
+        "approved_known_above_margin": 0,
+        "above_margin_targets": 1,
+        "approved_above_margin": 0,
+        "above_margin_among_approved": null,
+        "approval_rate_on_above_margin_targets": 0.0,
+        "memory_failure_targets": 1,
+        "approved_memory_failure": 0,
+        "memory_failure_among_approved": null,
+        "approval_rate_on_memory_failure_targets": 0.0,
+        "missing_outcome_sensitivity": {
+          "within_margin_recall_min": 0.0,
+          "within_margin_recall_max": 0.0,
+          "assignments_with_undefined_recall": 0,
+          "unsuitable_approvals_min": 0,
+          "unsuitable_approvals_max": 0
+        }
+      }
+    }
+  ]
+}

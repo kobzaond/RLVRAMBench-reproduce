@@ -523,6 +523,8 @@ def collect_files(
                        f"scientific_revision_{study}")
     add_trial_tree(files, repo_root / "output/review_instrumentation_batch",
                    "review_instrumentation_control")
+    add_trial_tree(files, repo_root / "output/prospective_decision",
+                   "prospective_decision_evidence")
 
     static_globs = (
         ("README.md", "review_entry_point"),
@@ -533,8 +535,12 @@ def collect_files(
         ("benchmark.py", "benchmark_evaluator"),
         ("export_benchmark.py", "benchmark_curator"),
         ("test_benchmark.py", "benchmark_tests"),
+        ("decision_benchmark.py", "decision_benchmark_evaluator"),
+        ("test_decision_benchmark.py", "decision_benchmark_tests"),
         ("benchmark/*.csv", "curated_benchmark"),
         ("benchmark/*.json", "curated_benchmark"),
+        ("benchmark/decision/**/*.csv", "decision_benchmark"),
+        ("benchmark/decision/**/*.json", "decision_benchmark"),
         ("memory_tuner/README.md", "review_entry_point"),
         ("logs/revision-*.out", "scientific_revision_scheduler_log"),
         ("logs/revision-*.err", "scientific_revision_scheduler_log"),
@@ -560,6 +566,7 @@ def collect_files(
         ("paper/submission/ieee_access_submission/*.tex", "direct_submission_manuscript"),
         ("paper/submission/ieee_access_submission/*.pdf", "compiled_submission_manuscript"),
         ("paper/submission/ieee_access_submission/*.bib", "submission_bibliography"),
+        ("paper/submission/ieee_access_submission/*.json", "submission_verification"),
         ("paper/submission/ieee_access_submission/figures/*.pdf", "submission_figure"),
         ("profiles/benchmark/*.csv", "derived_benchmark"),
         ("profiles/benchmark/*.sha256", "provenance_digest"),

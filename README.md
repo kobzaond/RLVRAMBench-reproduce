@@ -36,6 +36,31 @@ are public for inspection, but are not permitted prediction inputs.
 Within-model workload transfer is already solved by lookup on this grid;
 this release is not a hidden leaderboard for sophisticated predictors.
 
+For a resource decision, read within-margin recall together with approval
+precision and separate approvals of memory failures and above-margin
+completions. Pooled label accuracy is not an adequate deployment ranking:
+on GPU-count transfer, always approving has higher accuracy than copying
+the source labels but approves more memory failures. Transparent reference
+scores are in `benchmark/reference_scores.json`.
+
+The separate admission panel measures decisions as target tests become
+available. It fixes four model–workload cases and twelve candidates, with
+one screening seed and three **different** evaluation seeds per candidate.
+A deterministic replay requests screens under a budget; it never uses
+those screens as their own repeated evaluation outcome.
+
+```bash
+python3 decision_benchmark.py replay \
+  --protocol benchmark/decision/protocol.json \
+  --attempts benchmark/decision/results/attempts.json \
+  --output admission-scores.json
+```
+
+Compare usable configurations recovered at each target-attempt budget,
+keeping failure/margin approvals and donor investment visible. Twelve
+screening runs and 36 hidden evaluation runs form the physical 48-slot
+panel; they are not 48 independent cases or 48 free policy observations.
+
 The following sections describe the separate, heavier reconstruction of
 the paper's results from raw evidence.
 
@@ -53,17 +78,31 @@ the paper's results from raw evidence.
 - Four publication figures, regenerated as PDF and PNG.
 - The curated benchmark tables, task definitions, baseline predictions,
   and scores, compared byte-for-byte after regeneration.
+- Eleven admission-panel outputs, including every recorded attempt,
+  independent repeated labels, per-case acquisition transcripts, and
+  three admission rules at four measurement budgets. Reference target
+  outcomes are hidden from their own reconstruction.
 
 The procedure verifies the archive and every evidence-manifest entry,
 removes precomputed profiles from the analysis root, restores only the raw
 paired-allocation provenance, and reconstructs the results from retained raw
-executions and frozen matrices. Optional filesystem isolation hides both
-the original project, reference tables, and precomputed curated views during analysis.
+executions and frozen matrices. Optional filesystem isolation hides
+the original project, reference tables, and the code checkout's precomputed
+curated views during analysis. Each child checks that the hidden directories
+are inaccessible as evidence. Use repeatable `--hide-path DIRECTORY`
+arguments for other known copies of the project or reference evidence;
+the reconstruction output must be outside those directories.
 
 This is reproduction of completed measurements, not a rerun of GPU training.
 It does not require model weights, CUDA, an A100 allocation, or Slurm.
 It does not establish learning-quality improvements or generalization beyond
 the reported compact-LoRA/A100 configurations.
+
+Some historical source records identify modified working trees without
+preserving their per-run changes as patches. The saved measurements can
+be reanalyzed, but a commit ID alone does not recover those modifications
+for an exact GPU rerun. Later controls and the admission panel use
+immutable execution sources.
 
 ## Requirements
 
@@ -118,6 +157,7 @@ isolation is then explicitly not claimed.
 Original results appear in `reproduced/results/`, revised audits and controls
 in `reproduced/review-results/`, figures in `reproduced/figures/`,
 curated data in `reproduced/benchmark/`,
+admission results in `reproduced/decision-results/`,
 and the machine-readable acceptance report in `reproduced/verification.json`.
 The reference profiles are retained separately under
 `reproduced/reference-profiles/`; they are never placed back into the
@@ -130,7 +170,8 @@ analysis input tree, apart from the required raw paired-allocation records.
 ```
 
 Tests cover path confinement, archive link validation, statistical utilities,
-raw lifecycle checks, and prospective-matrix invariants. The full archive
+raw lifecycle checks, prospective-matrix invariants, independent evaluation
+seeds, acquisition budgets, and unresolved-outcome accounting. The full archive
 reconstruction above is a separate integration check.
 
 ## Source and citation

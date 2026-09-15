@@ -1,0 +1,312 @@
+{
+  "planned_slots": 48,
+  "recorded_attempts": 48,
+  "validated_memory_outcomes": 48,
+  "attempt_states": {
+    "memory_failure": 16,
+    "within_margin": 24,
+    "above_margin": 8
+  },
+  "hidden_evaluation_states": {
+    "within_margin": 6,
+    "memory_failure": 4,
+    "above_margin": 2
+  },
+  "source_heads": [
+    "1271267d837e1af800de79972bc3879f90e3bc6b"
+  ],
+  "physical_recorded_gpu_seconds": 34344.285054683685,
+  "gpu_seconds_scope": "Runner invocation elapsed times times allocated GPUs; not queue time or total allocation wall time.",
+  "matrix_sha256": "0c14400d24b03d89225b1f03bcdc68339f5080abb6168c1db1543db5a522bae6",
+  "protocol_sha256": "d30b5b835727b80d81562a8c51e1a64c921a462273b2688aa28f1273d15984eb",
+  "slot_inventory": [
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c4-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c4-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c4-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c4-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c2-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s142",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s141",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s144",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    },
+    {
+      "slot_id": "decision-phi4_mini-math-shape1024-n4-steps5-c3-s143",
+      "recorded_attempts": 1,
+      "allocation_records": 1,
+      "status": "has_invocations"
+    }
+  ]
+}

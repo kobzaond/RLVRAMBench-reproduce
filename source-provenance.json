@@ -1,27 +1,31 @@
 {
   "source_repository": "https://github.com/kobzaond/rl",
-  "source_commit": "478b6574fd48b802ca949dd3ac6c2aa13d84230e",
-  "selection": "CPU reconstruction closure plus curated resource-transfer benchmark, evaluator, tests and documentation",
+  "source_commit": "7b534ef1d1e902ba490677acdccd8294e59e8bf5",
+  "selection": "CPU reconstruction closure, static transfer suite and independently evaluated admission panel",
   "files": {
     "BENCHMARK.md": {
-      "sha256": "a5591c1c79e7b6e7ce623ac3782e7803dd24063f6a16cd1b6f616ec941a40812",
-      "size_bytes": 6119
+      "sha256": "09ed7d80bd70e9b548b1cb0f012501f8f66b78acf07d9e6113981d89ab893e4c",
+      "size_bytes": 12129
     },
     "DATA_DICTIONARY.md": {
-      "sha256": "58f046aaf84812c303736829f6bf9d2884148e7773da9dfe8913b8959c25f107",
-      "size_bytes": 12787
+      "sha256": "f7e2da6e55ef188650b4cef0428c6cdcc9a4986063dca19e4278fe9bbe9b0237",
+      "size_bytes": 16703
     },
     "RIGHTS.md": {
       "sha256": "7c1f948ecd8082ad2d0cbe334e576566d6e26a5ccfdb5ac19b69611044fafe96",
       "size_bytes": 1669
     },
     "benchmark.py": {
-      "sha256": "3abc9bb54f0459c1e9ff679760ee2d3b28768542d79fdb0e3624c3ee8a754054",
-      "size_bytes": 10074
+      "sha256": "35e36caad46d2814b0ac9f8180961de5564746347cf668d5c3fc1e643fd477e8",
+      "size_bytes": 10897
+    },
+    "decision_benchmark.py": {
+      "sha256": "b2f6173102c75077b818977db1773eca5deea1408b7dcfef5f0c71867905a9e1",
+      "size_bytes": 15586
     },
     "export_benchmark.py": {
-      "sha256": "6f201cb506979b4b24b6a4559a54b46ac46394f3f4171fb339e27d8aeac09518",
-      "size_bytes": 18194
+      "sha256": "0db5a7f9ce24f0ba1432573b19a9ca25b16894f50e1fd36e5c2d7b3d40f26511",
+      "size_bytes": 18373
     },
     "memory_tuner/__init__.py": {
       "sha256": "027aba95d634d9ead178819412a859239c7ddd5418a0e5eaf8e3d429fe8e6629",
@@ -32,8 +36,8 @@
       "size_bytes": 6398
     },
     "memory_tuner/artifact_manifest.py": {
-      "sha256": "689fd40ef620c026cf7d1879b72df1e763335ba396a08ac0208b54bb7eb3b1eb",
-      "size_bytes": 29215
+      "sha256": "1075fbbd3e0bcec9c429c8cf97c03b143822dacaf1da7bf78323992ccd6e0d20",
+      "size_bytes": 29685
     },
     "memory_tuner/artifact_paths.py": {
       "sha256": "8b89a2f8956c7b1fe40563e2b0b776414ebc583d3801fab6d83fc125861beb91",
@@ -80,8 +84,12 @@
       "size_bytes": 687
     },
     "memory_tuner/build_benchmark_corpus.py": {
-      "sha256": "9dd7611ec66fff47ab797fb24f91698b4e6874f65d7f52e514350e975a151444",
-      "size_bytes": 21439
+      "sha256": "aa58fdc828f7f8daa393e8081987540c0f23ff89c24688ddb8cb8928a5be4c5e",
+      "size_bytes": 21482
+    },
+    "memory_tuner/collect_decision_benchmark.py": {
+      "sha256": "142ac0904c7f22d5e7c21955c26ff69426a45350676181df15b764cf221a3f76",
+      "size_bytes": 16002
     },
     "memory_tuner/core.py": {
       "sha256": "08aadf36744a1fe82b95acd86f69b63ab33da520b1b2769239f84313f6df8f71",
@@ -100,8 +108,8 @@
       "size_bytes": 5924
     },
     "memory_tuner/grpo_raw_evidence.py": {
-      "sha256": "57f6a7d9f8df0806083b8622ff32adf5378563fdd8bae92dd5a30923ab8c0f8e",
-      "size_bytes": 15138
+      "sha256": "8ddea3c0dec26818502c52c29c1f153eda6a16e4b8a14cc455bd987d1b0e3079",
+      "size_bytes": 15946
     },
     "memory_tuner/log_parser.py": {
       "sha256": "8f4e60996953f67362dcdb30de0a0d2952fba1ea12bb4b173acbbaca99259cdb",
@@ -124,8 +132,8 @@
       "size_bytes": 6408
     },
     "memory_tuner/make_standard_grpo_figures.py": {
-      "sha256": "f3de9c409ca271141ac72d3a41293b8702f689b151fec63046cf6a5e0a2f1ec9",
-      "size_bytes": 20253
+      "sha256": "555ef8ad0ef8653500d3616cb5473a4d2822145781c66bc2685527516513a23b",
+      "size_bytes": 20429
     },
     "memory_tuner/phaseguard.py": {
       "sha256": "77a0f7120d118f6f05e36c3e2f76c4797ca75c536ab2230fbe26ee119d86106e",
@@ -138,6 +146,10 @@
     "memory_tuner/plan_benchmark_v2_cross_family.py": {
       "sha256": "d6a6efd2b26267700556dbbccb97f017b45cbd47823a0e469ee05e3a0f5dde90",
       "size_bytes": 5816
+    },
+    "memory_tuner/plan_decision_benchmark.py": {
+      "sha256": "03633652f4005004ff79cca74cfa8b661b6a5800b5da17b5e683fd8edd014ade",
+      "size_bytes": 10730
     },
     "memory_tuner/plan_scientific_revision.py": {
       "sha256": "e66098950b73af706237adcafe3e6b3a200ca0724c4b85105cd5391d557c6771",
@@ -344,8 +356,8 @@
       "size_bytes": 2156
     },
     "memory_tuner/scientific_revision_analysis.py": {
-      "sha256": "9ff717ca762cbccb2404e6ac891c4b7026dff1fc5e8a25845425ba4e8bf7aca8",
-      "size_bytes": 19976
+      "sha256": "de24e321676838a5d9f7467f95d563465bbf979ed8c23225915035667a936b4d",
+      "size_bytes": 20352
     },
     "memory_tuner/scientific_revision_results.py": {
       "sha256": "f7aea1cb9118beea4668a02a9dd2005af9db6ec429497f64ab538b7233142f32",
@@ -371,17 +383,25 @@
       "sha256": "4fed0d308294b74785bbf86d6ccde900f22b0c3175011d5a3b50851cc2a1a135",
       "size_bytes": 14386
     },
+    "memory_tuner/test_artifact_manifest.py": {
+      "sha256": "d7f72a2bd3dd68672961a26c1d0392e1b788e10abfb4eac533cef831feb2ed57",
+      "size_bytes": 9830
+    },
     "memory_tuner/test_artifact_paths.py": {
       "sha256": "677e881884210a3089f86744d2db65a13e0f055ecd24ddd510b60880ab93e7c7",
       "size_bytes": 1292
+    },
+    "memory_tuner/test_collect_decision_benchmark.py": {
+      "sha256": "0098e0f9565b1b87de71666678c5ac0d54b6b5465be8a19e465affaf4ce70cba",
+      "size_bytes": 10968
     },
     "memory_tuner/test_grpo_phase_sensitivity.py": {
       "sha256": "8759b29c2a180453e500c1d19c7144a2801d105a1ddb288f67ae954736c1fd6b",
       "size_bytes": 1468
     },
     "memory_tuner/test_grpo_raw_evidence.py": {
-      "sha256": "66f03e58b9a01543fa4458f83a3df863b4798cfd30e0865b0be9f1e3766e6e55",
-      "size_bytes": 2125
+      "sha256": "17c80c0546f7c0056f5029bda157087f88207cd4a6c910188f4a8f6dae2f7372",
+      "size_bytes": 3041
     },
     "memory_tuner/test_review_attempt_workload_audit.py": {
       "sha256": "d1edff78641b0485ace58106f8e35e83b3b2fc990808ad3cd2e0899c4ead2e66",
@@ -436,8 +456,12 @@
       "size_bytes": 458
     },
     "test_benchmark.py": {
-      "sha256": "b12540f1c76a87dffcae1ef9415f35644ac32ef70c537f17a69071d661bbcb2e",
-      "size_bytes": 6381
+      "sha256": "f1bde2313834d3a9eaa3d2b4ae0ca389a6977d5a662494100cd16a83c29c3b4c",
+      "size_bytes": 7660
+    },
+    "test_decision_benchmark.py": {
+      "sha256": "242065ace28800569237fe12d2df98a69a232e348dfd09e19ae892c1799a6c6d",
+      "size_bytes": 8462
     }
   }
 }

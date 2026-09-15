@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-15",
+  "study": "prospective_decision",
+  "array_job": "5052307",
+  "array_indices": "0-47",
+  "maximum_concurrent_allocations": 4,
+  "gpus_per_allocation": 2,
+  "wall_limit_per_allocation": "00:40:00",
+  "process_timeout_seconds": 1800,
+  "account": "OPEN-35-44",
+  "partition": "qgpu_exp",
+  "execution_source_commit": "1271267",
+  "evaluation_amendment_commit": "36fcdfc",
+  "source_checkout": "job_sources/decision-study-1271267",
+  "matrix": "benchmark/decision/matrix.csv",
+  "matrix_sha256": "0c14400d24b03d89225b1f03bcdc68339f5080abb6168c1db1543db5a522bae6",
+  "protocol_sha256": "d30b5b835727b80d81562a8c51e1a64c921a462273b2688aa28f1273d15984eb",
+  "pinned_dependency": "5cb184efd99addd4b40ff25a700aa260ed2e9eed",
+  "preflight": "48 unique rows validated; 12 designated screens and 36 hidden evaluations; batch divisibility and source data verified; both model snapshots available locally; immutable execution worktree clean; 32 evaluator tests pass.",
+  "status_at_recording": "submitted",
+  "scientific_rows_changed_after_launch": false,
+  "repairs_submitted": []
+}

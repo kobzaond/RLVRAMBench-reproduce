@@ -290,9 +290,11 @@ def prompt_profile(metadata: dict, trial: dict) -> dict:
 def trial_row(
     trial_path: Path,
     failure_annotations: dict[str, dict[str, str]] | None = None,
+    *,
+    root: Path | None = None,
 ) -> dict:
     from memory_tuner.artifact_paths import load_trial_record
-    trial = load_trial_record(trial_path)
+    trial = load_trial_record(trial_path, root)
     experiment_id = trial_path.parent.name
     metadata = infer_metadata(experiment_id, trial)
     row = {

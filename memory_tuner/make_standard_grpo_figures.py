@@ -304,7 +304,9 @@ def make_mechanisms(
     axes[0].set_ylim(0, 10)
     axes[0].set_ylabel("Matched pairs")
     axes[0].set_title("(a) Paired completion")
-    axes[0].legend(frameon=False, fontsize=8.5)
+    handles, legend_labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, legend_labels, loc="lower center", ncol=3,
+               frameon=False, fontsize=8.5, bbox_to_anchor=(0.5, 0.0))
     axes[0].grid(axis="y", alpha=0.25)
 
     safety_fields = (
@@ -368,7 +370,7 @@ def make_mechanisms(
     axes[2].set_title("(c) Factorial whole-run peaks")
     axes[2].grid(axis="x", alpha=0.25)
     fig.suptitle("Mechanism controls for colocated LoRA GRPO")
-    fig.tight_layout()
+    fig.tight_layout(rect=(0, 0.065, 1, 1))
     save(fig, output, "standard_grpo_mechanisms")
     plt.close(fig)
 

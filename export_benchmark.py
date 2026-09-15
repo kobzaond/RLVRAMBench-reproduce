@@ -325,6 +325,9 @@ def export(root, destination):
     predictions = api.baseline(destination)
     api.write_csv(destination / "baseline_predictions.csv", predictions)
     api.save_json(destination / "baseline_scores.json", api.evaluate(destination, predictions))
+    api.save_json(destination / "reference_scores.json", {
+        name: api.evaluate(destination, api.baseline(destination, rule=name))
+        for name in api.REFERENCE_RULES})
     return summary
 
 

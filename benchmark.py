@@ -12,6 +12,7 @@ from statistics import mean
 
 STATES = ("within_margin", "above_margin", "memory_failure")
 TRACKS = ("model_transfer", "workload_transfer", "gpu_count_transfer", "horizon_transfer")
+REFERENCE_RULES = ("source_label", "always_approve", "always_reject")
 
 
 def read_csv(path):
@@ -105,13 +106,17 @@ def task_inputs(directory, track="all"):
     ]
 
 
-def baseline(directory, track="all"):
+def baseline(directory, track="all", rule="source_label"):
+    if rule not in REFERENCE_RULES:
+        raise ValueError("Unknown reference rule")
     predictions = []
     for task in task_inputs(directory, track):
         allowed = {r["settings"]["configuration_id"]: r["measurements"]["observed_state"]
                    for r in task["source"]}
         for target in task["targets"]:
-            prediction = allowed[target["matched_source_configuration_id"]]
+            prediction = (STATES[0] if rule == "always_approve" else
+                          STATES[2] if rule == "always_reject" else
+                          allowed[target["matched_source_configuration_id"]])
             if prediction not in STATES:
                 raise ValueError("Source does not have a repeated three-state label")
             predictions.append({"query_id": target["query_id"], "predicted_state": prediction})
@@ -131,12 +136,16 @@ def metrics(rows):
     rejected = sum(r["predicted_state"] != STATES[0] and r["observed_state"] == STATES[0]
                    for r in rows)
     correct = sum(r["predicted_state"] == r["observed_state"] for r in rows)
+    usable_approvals = counts[STATES[0], STATES[0]]
     return {
         "queries": len(rows),
         "distinct_target_configurations": len({r["target_configuration_id"] for r in rows}),
         "correct_three_state": correct,
         "three_state_accuracy": rate(correct, len(rows)),
         "approved": approved,
+        "approved_within_margin": usable_approvals,
+        "within_margin_recall": rate(usable_approvals, target_counts[STATES[0]]),
+        "within_margin_approval_precision": rate(usable_approvals, approved),
         "approved_memory_failure": oom,
         "approved_above_margin": above,
         "rejected_within_margin": rejected,
@@ -187,11 +196,11 @@ def evaluate(directory, predictions, track="all"):
                 per_task[t]["three_state_accuracy"] for t in task_ids),
         }
     return {
-        "protocol_version": "1.0",
+        "protocol_version": "1.1",
         "selected_track": track,
         "rate_with_zero_denominator": None,
         "cost_scope": "provided donor measurements, deduplicated within each reported scope",
-        "cost_warning": "Track and task costs overlap; do not add them. Extra measurements must be disclosed.",
+        "cost_warning": "Provided evidence is not measured method usage or saved computation. Track/task costs overlap; do not add them. Extra measurements must be disclosed.",
         "evaluation_warning": "Open descriptive tasks, not a blind leaderboard or independent query samples.",
         "overall": {**metrics(scored), **source_cost(scored, outcomes)},
         "per_track": per_track,
@@ -204,6 +213,8 @@ def main():
     parser.add_argument("command", choices=("inputs", "baseline", "evaluate", "verify"))
     parser.add_argument("--data", type=Path, default=Path("benchmark"))
     parser.add_argument("--track", choices=("all", *TRACKS), default="all")
+    parser.add_argument("--rule", choices=REFERENCE_RULES, default="source_label",
+                        help="reference prediction rule for the baseline command")
     parser.add_argument("--predictions", type=Path)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
@@ -217,7 +228,7 @@ def main():
     if args.command == "inputs":
         save_json(args.output, task_inputs(args.data, args.track))
     elif args.command == "baseline":
-        write_csv(args.output, baseline(args.data, args.track))
+        write_csv(args.output, baseline(args.data, args.track, args.rule))
     else:
         if args.predictions is None:
             parser.error("--predictions is required for evaluate")

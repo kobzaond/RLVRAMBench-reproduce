@@ -100,6 +100,33 @@ def test_no_approval_has_null_not_zero_error_rate():
     assert result["memory_failure_among_approved"] is None
     assert result["above_margin_among_approved"] is None
     assert result["rejection_rate_on_within_margin_targets"] == 1
+    assert result["within_margin_approval_precision"] is None
+    assert result["within_margin_recall"] == 0
+
+
+def test_no_usable_targets_has_undefined_recall():
+    rows = [{"target_configuration_id": "test", "predicted_state": "memory_failure",
+             "observed_state": "memory_failure"}]
+    assert benchmark.metrics(rows)["within_margin_recall"] is None
+
+
+def test_higher_accuracy_can_have_more_harmful_approvals():
+    copy = benchmark.evaluate(DATA, benchmark.baseline(DATA, "gpu_count_transfer"),
+                              "gpu_count_transfer")["overall"]
+    approve = benchmark.evaluate(DATA, benchmark.baseline(
+        DATA, "gpu_count_transfer", "always_approve"), "gpu_count_transfer")["overall"]
+    assert copy["correct_three_state"] == 20
+    assert approve["correct_three_state"] == 26
+    assert (copy["approved_memory_failure"], approve["approved_memory_failure"]) == (2, 4)
+    assert copy["within_margin_recall"] == 20 / 26
+    assert approve["within_margin_recall"] == 1
+    assert copy["within_margin_approval_precision"] == 20 / 26
+    assert approve["within_margin_approval_precision"] == 26 / 36
+
+
+def test_reference_rule_names_are_checked():
+    with pytest.raises(ValueError, match="rule"):
+        benchmark.baseline(DATA, rule="invented")
 
 
 @pytest.mark.parametrize("corruption", ("missing", "duplicate", "extra", "bad_label"))

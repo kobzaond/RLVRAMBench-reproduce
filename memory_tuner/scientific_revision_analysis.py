@@ -15,7 +15,7 @@ from pathlib import Path
 from statistics import mean
 
 from memory_tuner.benchmark_v2_inference import inference_row, mean_value
-from memory_tuner.grpo_raw_evidence import load_matrix, read_csv
+from memory_tuner.grpo_raw_evidence import EvidenceValidationError, load_matrix, read_csv
 from memory_tuner.build_benchmark_corpus import load_attempt_exclusions
 from memory_tuner.major_revision_transfer_analysis import zero_event_two_sided_upper95
 
@@ -31,13 +31,13 @@ RUNTIME_PACKAGES = {
 def validate_fixed_stack(environment):
     """Check measured software provenance against the frozen revision stack."""
     if environment["container"]["sha256"] != CONTAINER_SHA256:
-        raise ValueError("revision container differs from the frozen stack")
+        raise EvidenceValidationError("revision container differs from the frozen stack")
     software = environment["software"]
     if software["python"] != "3.12.3" or software["torch_cuda"] != "12.9":
-        raise ValueError("revision Python/CUDA differs from the frozen stack")
+        raise EvidenceValidationError("revision Python/CUDA differs from the frozen stack")
     for package, version in RUNTIME_PACKAGES.items():
         if software["packages"].get(package) != version:
-            raise ValueError(f"revision {package} differs from the frozen stack")
+            raise EvidenceValidationError(f"revision {package} differs from the frozen stack")
 
 
 def case_key(row):
@@ -59,59 +59,59 @@ def validate_allocation(root, rows):
     """Validate both periods together, never splice different attempts."""
     job_ids = {str(row["job_id"]) for row in rows}
     if len(job_ids) != 1:
-        raise ValueError(f"{rows[0]['pair_id']}: periods belong to different jobs")
+        raise EvidenceValidationError(f"{rows[0]['pair_id']}: periods belong to different jobs")
     job = next(iter(job_ids))
     first = rows[0]
     relative = Path("output") / first["run_group"] / "pairs" / first["pair_id"] / f"pair-{job}.json"
     manifest = json.loads((root / relative).read_text())
     if manifest["pair_status"] != "complete":
-        raise ValueError(f"{relative}: allocation not complete")
+        raise EvidenceValidationError(f"{relative}: allocation not complete")
     if manifest["pair_id"] != first["pair_id"] or str(manifest["job_id"]) != job:
-        raise ValueError(f"{relative}: allocation identity mismatch")
+        raise EvidenceValidationError(f"{relative}: allocation identity mismatch")
     count = int(first["gpu_count"])
     gpu_ids = {gpu[1] for gpu in manifest["gpus"]}
     if len(gpu_ids) != count:
-        raise ValueError(f"{relative}: incorrect GPU inventory")
+        raise EvidenceValidationError(f"{relative}: incorrect GPU inventory")
     if any(gpu[2] != "NVIDIA A100-SXM4-40GB" or float(gpu[3]) != 40960
            for gpu in manifest["gpus"]):
-        raise ValueError(f"{relative}: hardware differs from the frozen design")
+        raise EvidenceValidationError(f"{relative}: hardware differs from the frozen design")
     periods = {period["experiment_id"]: period for period in manifest["periods"]}
     if len(periods) != len(rows) or set(periods) != {row["experiment_id"] for row in rows}:
-        raise ValueError(f"{relative}: incomplete/duplicated periods")
+        raise EvidenceValidationError(f"{relative}: incomplete/duplicated periods")
     for row in rows:
         period = periods[row["experiment_id"]]
         if period["condition"] != row["condition"] or int(period["period"]) != int(row["period"]):
-            raise ValueError(f"{relative}: period differs from frozen matrix")
+            raise EvidenceValidationError(f"{relative}: period differs from frozen matrix")
         if (root / period["trial"]).resolve() != Path(row["artifact_path"]).resolve():
-            raise ValueError(f"{relative}: wrong trial record")
+            raise EvidenceValidationError(f"{relative}: wrong trial record")
         if {gpu[1] for gpu in period["baseline_gpus"]} != gpu_ids:
-            raise ValueError(f"{relative}: GPU identities changed between periods")
+            raise EvidenceValidationError(f"{relative}: GPU identities changed between periods")
         if any(float(gpu[-1]) >= 1024 for gpu in period["baseline_gpus"]):
-            raise ValueError(f"{relative}: baseline was not idle")
+            raise EvidenceValidationError(f"{relative}: baseline was not idle")
         environment = json.loads(Path(row["environment_json"]).read_text())
         validate_fixed_stack(environment)
         repository = environment["repository"]
         if repository["dirty"] or repository["head"] != manifest["source_head"]:
-            raise ValueError(f"{relative}: source checkout was mutable or mismatched")
+            raise EvidenceValidationError(f"{relative}: source checkout was mutable or mismatched")
         payload_gpus = list(csv.reader(environment["gpus_csv"].splitlines(),
                                        skipinitialspace=True))
         if {gpu[2] for gpu in payload_gpus} != gpu_ids:
-            raise ValueError(f"{relative}: payload GPU identity mismatch")
+            raise EvidenceValidationError(f"{relative}: payload GPU identity mismatch")
         if environment["host"]["hostname"] != manifest["hostname"]:
-            raise ValueError(f"{relative}: payload hostname mismatch")
+            raise EvidenceValidationError(f"{relative}: payload hostname mismatch")
         if any(gpu[3] != "610.43.02" or gpu[4] != "40960 MiB"
                for gpu in payload_gpus):
-            raise ValueError(f"{relative}: payload driver/capacity mismatch")
+            raise EvidenceValidationError(f"{relative}: payload driver/capacity mismatch")
         if str(environment["slurm"]["SLURM_JOB_ID"]) != job:
-            raise ValueError(f"{relative}: payload job identity mismatch")
+            raise EvidenceValidationError(f"{relative}: payload job identity mismatch")
         tracing = str(row["allocator_trace_enabled"]).lower() == "true"
         if period["allocator_trace_enabled"] != row["allocator_trace_enabled"]:
-            raise ValueError(f"{relative}: allocator setting mismatch")
+            raise EvidenceValidationError(f"{relative}: allocator setting mismatch")
         traces = list(Path(row["allocator_trace_dir"]).glob("*.jsonl"))
         if not tracing and traces:
-            raise ValueError(f"{relative}: disabled allocator tracing produced events")
+            raise EvidenceValidationError(f"{relative}: disabled allocator tracing produced events")
         if tracing and int(row["success"]) and not traces:
-            raise ValueError(f"{relative}: completed instrumented run lacks allocator events")
+            raise EvidenceValidationError(f"{relative}: completed instrumented run lacks allocator events")
         row["source_head"] = manifest["source_head"]
         row["allocation_manifest"] = str(relative)
         row["allocation_hostname"] = manifest["hostname"]
@@ -126,7 +126,7 @@ def repeated_cells(rows):
     output = []
     for key, values in sorted(group_by(rows, cell_key).items()):
         if len(values) != 3 or len({r["training_seed"] for r in values}) != 3:
-            raise ValueError(f"{key}: exactly three distinct repetitions required")
+            raise EvidenceValidationError(f"{key}: exactly three distinct repetitions required")
         first = values[0]
         output.append({
             "model_family": first["model_family"], "dataset": first["dataset"],
@@ -145,7 +145,7 @@ def paired_rows(rows, left, right):
     for key, values in sorted(group_by(rows, lambda r: r["pair_id"]).items()):
         conditions = {r["condition"]: r for r in values}
         if len(values) != 2 or set(conditions) != {left, right}:
-            raise ValueError(f"{key}: incorrect paired conditions")
+            raise EvidenceValidationError(f"{key}: incorrect paired conditions")
         a, b = conditions[left], conditions[right]
         joint = int(a["success"]) and int(b["success"])
         output.append({
@@ -234,7 +234,7 @@ def temporal_analysis(rows):
                                     ("validation", {0, 20, 40, 60, 80, 100})):
                 observed = {int(s) for s in long.get(f"phase_steps_{phase}", "").split(",") if s}
                 if not required.issubset(observed):
-                    raise ValueError(f"{long['experiment_id']}: missing {phase} cycles: "
+                    raise EvidenceValidationError(f"{long['experiment_id']}: missing {phase} cycles: "
                                      f"{sorted(required - observed)}")
         pair.update({
             "source_safe_to_long_unsafe": int(pair["source_safe"] and not pair["long_safe"]),
@@ -320,7 +320,7 @@ def excluded_allocations(root, study):
             continue
         job = str(manifest["job_id"])
         if manifest["pair_status"] != "infrastructure_invalid" or job not in exclusions:
-            raise ValueError(f"{path}: unfinished or undocumented excluded allocation")
+            raise EvidenceValidationError(f"{path}: unfinished or undocumented excluded allocation")
         periods = manifest["periods"]
         output.append({
             "study": study, "pair_id": manifest["pair_id"], "job_id": job,
@@ -340,10 +340,10 @@ def collect(root, historical_boundary):
         name = f"rlvram_revision_{study}.csv"
         relative = f"memory_tuner/{name}"
         if hashlib.sha256((root / relative).read_bytes()).hexdigest() != locks[relative]["sha256"]:
-            raise ValueError(f"{relative}: frozen matrix hash mismatch")
+            raise EvidenceValidationError(f"{relative}: frozen matrix hash mismatch")
         rows = load_matrix(root, name)
         if len(rows) != expected:
-            raise ValueError(f"{study}: expected {expected} processes, found {len(rows)}")
+            raise EvidenceValidationError(f"{study}: expected {expected} processes, found {len(rows)}")
         for pair in group_by(rows, lambda r: r["pair_id"]).values():
             provenance.append(validate_allocation(root, pair))
         studies[study] = rows

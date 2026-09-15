@@ -1,6 +1,8 @@
 # RLVRAMBench data dictionary
 
-Protocol 1.0. CSV files use UTF-8, a header row, and a blank cell for missing
+Static data protocol 1.0, evaluator 1.1. The separate admission protocol is
+specified in `benchmark/decision/protocol.json`.
+CSV files use UTF-8, a header row, and a blank cell for missing
 or unavailable information. Blank is **not zero**, success, or a memory
 failure. Measurements in MiB use 1 MiB = 1,048,576 bytes. Identifiers are
 opaque stable keys, not numerical features. All listed paths are relative
@@ -72,7 +74,7 @@ separate provenance limitation.
 | `margin_limit_mib` | Chosen per-device limit, 38,912 MiB, inclusive |
 | `peak_measurement` | Measurement convention, maximum externally sampled per-device memory |
 | `rollout_tp_size` | Number of devices sharing each generation model by tensor parallelism |
-| `actor_micro_batch` | Training examples processed together per actor micro-batch |
+| `actor_micro_batch` | Prompt–response sequences processed together per GPU during actor update |
 | `rollout_logprob_micro_batch` | Generation-policy log-probability micro-batch size |
 | `ref_logprob_micro_batch` | Fixed-reference-policy log-probability micro-batch size |
 | `vllm_gpu_memory_utilization` | Fraction reserved by the vLLM generation engine; not measured utilization |
@@ -204,6 +206,65 @@ zero error. Per-task and per-track results accompany descriptive pooled
 counts. Macro task accuracy weights tasks equally within a track.
 
 Source costs count distinct source configurations, eligible processes,
-and recorded attempts within each reported scope. They are not GPU-hours
-or the cost of acquiring any extra measurements. Shared donors mean that
+and recorded attempts supplied within each reported scope. They describe
+available evidence, not measured use by a rule or the cost of acquiring
+extra measurements. Shared donors mean that
 task costs must not be summed to estimate the whole release's cost.
+
+`within_margin_recall` divides approved within-margin targets by all
+within-margin targets. `within_margin_approval_precision` divides those
+correct approvals by all approvals. Both retain repeated query weighting
+within the static task being scored. Neither is a probability of success
+on future jobs. Read them together with memory-failure and margin-violation
+approvals, not as interchangeable single-number rankings.
+`reference_scores.json` contains source-copy, always-approve and
+always-reject results.
+
+## Budgeted admission panel
+
+This is a separate experiment, not another set of rows counted in the
+612-run static tables. `decision/protocol.json` defines four cases and
+twelve candidates; `decision/matrix.csv` fixes 48 planned process slots.
+Each candidate has one queryable screening seed and three independent
+evaluation seeds. All four processes request the same five-step schedule.
+The three evaluation outcomes alone determine its repeated label.
+
+| File in `benchmark/decision/` | Meaning |
+|---|---|
+| `protocol.json` | Frozen rules, budgets, source evidence, cases and seed roles |
+| `matrix.csv` | Complete execution settings for the 48 slots |
+| `amendment-01.json` | Prelaunch evaluator-audit correction; original freeze retained |
+| `submission.json` | Execution-source version and scheduler submission record |
+| `results/candidate_results.csv` | Human-readable settings, source/screen/evaluation states, peaks and costs for each candidate |
+| `results/attempts.csv`, `results/attempts.json` | Every started invocation, including unresolved outcomes |
+| `results/allocations.csv` | Finalized scheduler allocations, including any without a started process |
+| `results/validated_runs.csv` | Processes passing raw-evidence and provenance validation |
+| `results/stage_measurements.csv` | Observed external stage peaks and sampled durations |
+| `results/realized_work.csv` | Logged work and response-length summaries |
+| `results/scores.json` | Per-case and pooled replay, acquisition transcripts, independent evaluation labels and sensitivity bounds |
+| `results/summary.csv` | One rule–budget row; recall averages the four case-level recalls, while counts sum across cases |
+| `results/collection_summary.json` | Slot, attempt, outcome and physical collection accounting |
+| `results/manifest.json` | SHA-256 digests of the reconstructed result files |
+
+Attempt `state` is `within_margin`, `above_margin`, `memory_failure`, or
+`unresolved`. Unresolved is missing resource information, not a fourth
+successful prediction label. `known_memory_failure` preserves a diagnosed
+failure even if another validation check prevents an eligible label.
+`completed_final_operations` certifies the full requested schedule only
+for validated completions. `validation_error` explains any failed check;
+it must not be silently discarded.
+
+Candidate `screen_state` uses seed 141. `evaluation_state` requires the
+three separate seeds 142–144. If any evaluation slot is unavailable, the
+aggregate remains unresolved, with known failure/above-margin evidence
+constraining its admissible outcomes. `evaluation_known_memory_failure`
+and `evaluation_known_above_margin` can both be true; these are overlapping
+evidence flags, not disjoint state counts.
+
+The replay's `approve`, `reject`, and `abstain` are decisions, not the
+three resource labels. Requested screens are charged before revelation.
+Acquisition records never contain unrequested target outcomes. Supplied
+donor attempts, actually requested target attempts, and full physical
+collection costs have separate ledgers. Physical GPU-seconds multiply
+each recorded runner invocation's elapsed seconds by its two allocated
+GPUs; this excludes queue time and other allocation overhead.

@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-09-15T10:36:49Z",
+  "status": "before_any_new_target_execution_or_outcome",
+  "original_freeze_commit": "1271267",
+  "original_protocol_sha256": "d30b5b835727b80d81562a8c51e1a64c921a462273b2688aa28f1273d15984eb",
+  "matrix_sha256_unchanged": "0c14400d24b03d89225b1f03bcdc68339f5080abb6168c1db1543db5a522bae6",
+  "reason": "Independent prelaunch code audit identified three missing-evidence edge cases in implementing the already frozen policy.",
+  "corrections": [
+    "Known memory-failure evidence prohibits a repair even if artifact writing is incomplete.",
+    "Observed above-margin evaluation evidence excludes within-margin completion from missing-outcome sensitivity assignments.",
+    "Aggregate summaries retain known memory-failure and above-margin evidence flags, explicitly overlapping rather than disjoint outcome categories."
+  ],
+  "unchanged": [
+    "Cases, settings, seeds and their screen/evaluation roles",
+    "Query and physical execution order",
+    "Donor data, guard threshold, budgets and admission rules",
+    "Stopping rule, process timeout and maximum resource/repair counts"
+  ],
+  "implementation_sha256": {
+    "decision_benchmark.py": "b2f6173102c75077b818977db1773eca5deea1408b7dcfef5f0c71867905a9e1",
+    "test_decision_benchmark.py": "242065ace28800569237fe12d2df98a69a232e348dfd09e19ae892c1799a6c6d"
+  },
+  "verification": "All 16 decision-replay tests and 16 static-benchmark tests pass. New synthetic tests cover all three audit findings.",
+  "original_freeze_overwritten": false
+}

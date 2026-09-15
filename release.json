@@ -1,15 +1,15 @@
 {
-  "release": "benchmark-20260915-478b657",
-  "source_commit": "478b6574fd48b802ca949dd3ac6c2aa13d84230e",
+  "release": "admission-20260915-7b534ef",
+  "source_commit": "7b534ef1d1e902ba490677acdccd8294e59e8bf5",
   "huggingface_repository": "kobzaond/RLVRAMBench",
   "code_repository": "kobzaond/RLVRAMBench-reproduce",
   "archive": {
-    "path": "releases/RLVRAMBench-review-artifact-benchmark-20260915-478b657.tar.zst",
-    "sha256": "d97cf83fcc4684cd7c54938c3f5ba40ce553edc63afb806561856fddc3a6ed48",
-    "size_bytes": 173759440
+    "path": "releases/RLVRAMBench-review-artifact-admission-20260915-7b534ef.tar.zst",
+    "sha256": "a457d7169afbfb1980ec70a4af215035041d2e05eec9eb090e2c0b7c69e935b2",
+    "size_bytes": 177940429
   },
-  "manifest_entries": 19530,
-  "archive_members": 19532,
+  "manifest_entries": 20145,
+  "archive_members": 20147,
   "expected_derived_files": 40,
   "principal_processes": 588,
   "supporting_source_processes": 16,
@@ -24,7 +24,7 @@
   "review_control_attempted_processes": 26,
   "review_control_usable_blocks": 6,
   "original_recorded_attempts": 657,
-  "prior_immutable_release_preserved": "critical-revision-20260914-328c1c3",
+  "prior_immutable_release_preserved": "benchmark-20260915-478b657",
   "manuscript_editing_authority": "direct_tex",
   "benchmark_protocol_version": "1.0",
   "benchmark_tasks": 52,
@@ -33,5 +33,14 @@
   "curated_eligible_processes": 612,
   "curated_recorded_attempts": 683,
   "license_selection_date": "2026-09-15",
-  "huggingface_revision": "5e443bca9b969197a2b2f8d0c96d8bf219ea51c0"
+  "benchmark_evaluator_version": "1.1",
+  "decision_protocol_version": "1.0",
+  "decision_cases": 4,
+  "decision_candidates": 12,
+  "decision_planned_slots": 48,
+  "decision_recorded_attempts": 48,
+  "decision_validated_memory_outcomes": 48,
+  "expected_decision_derived_files": 11,
+  "expected_curated_benchmark_files": 14,
+  "huggingface_revision": "f1172f166343c00b8397d5124d2b180f160a8d08"
 }

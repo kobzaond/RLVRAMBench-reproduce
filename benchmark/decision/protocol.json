@@ -1,0 +1,437 @@
+{
+  "protocol_version": "decision-1.0",
+  "frozen_at_utc": "2026-09-15T10:29:45.559138+00:00",
+  "status": "frozen_before_any_new_target_outcome",
+  "objective": "Within-margin coverage and approval errors using existing donor evidence and bounded target screens.",
+  "cases": [
+    {
+      "case_id": "qwen25_3b-gsm8k-shape1024-n4-steps5",
+      "model_family": "qwen25_3b",
+      "dataset": "gsm8k",
+      "candidates": [
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+          "configuration_level": "c2",
+          "actor_micro_batch": 8,
+          "reservation": 0.6,
+          "slot_ids": {
+            "screen": [
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s141"
+            ],
+            "evaluation": [
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s142",
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s143",
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c2-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+          "configuration_level": "c3",
+          "actor_micro_batch": 16,
+          "reservation": 0.7,
+          "slot_ids": {
+            "screen": [
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s141"
+            ],
+            "evaluation": [
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s142",
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s143",
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c3-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "qwen25_3b-gsm8k-shape1024-n4-steps5-c4",
+          "configuration_level": "c4",
+          "actor_micro_batch": 16,
+          "reservation": 0.8,
+          "slot_ids": {
+            "screen": [
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s141"
+            ],
+            "evaluation": [
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s142",
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s143",
+              "decision-qwen25_3b-gsm8k-shape1024-n4-steps5-c4-s144"
+            ]
+          }
+        }
+      ],
+      "donors": {
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2": {
+          "configuration_id": "cfg-338d9224eb9d2f3a",
+          "observed_state": "within_margin",
+          "max_completed_run_peak_mib": "33108.0",
+          "recorded_attempt_ids": [
+            "attempt-02cd07da6caa1a64",
+            "attempt-a1aa42155011745d",
+            "attempt-c41a226bcf33a96f"
+          ]
+        },
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3": {
+          "configuration_id": "cfg-7a9a974958c57abc",
+          "observed_state": "within_margin",
+          "max_completed_run_peak_mib": "37140.0",
+          "recorded_attempt_ids": [
+            "attempt-76d15668ac349594",
+            "attempt-b331a17a3965b10a",
+            "attempt-fdb175c88623ad37"
+          ]
+        },
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4": {
+          "configuration_id": "cfg-5839ccf95c2c1722",
+          "observed_state": "memory_failure",
+          "max_completed_run_peak_mib": "",
+          "recorded_attempt_ids": [
+            "attempt-6c9a88c2bd045250",
+            "attempt-6cb813204d3d1097",
+            "attempt-98ad4dd59aec2477"
+          ]
+        }
+      },
+      "query_order": [
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c3",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c2",
+        "qwen25_3b-gsm8k-shape1024-n4-steps5-c4"
+      ]
+    },
+    {
+      "case_id": "qwen25_3b-math-shape1024-n4-steps5",
+      "model_family": "qwen25_3b",
+      "dataset": "math",
+      "candidates": [
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c2",
+          "configuration_level": "c2",
+          "actor_micro_batch": 8,
+          "reservation": 0.6,
+          "slot_ids": {
+            "screen": [
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s141"
+            ],
+            "evaluation": [
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s142",
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s143",
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c2-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c3",
+          "configuration_level": "c3",
+          "actor_micro_batch": 16,
+          "reservation": 0.7,
+          "slot_ids": {
+            "screen": [
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s141"
+            ],
+            "evaluation": [
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s142",
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s143",
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c3-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "qwen25_3b-math-shape1024-n4-steps5-c4",
+          "configuration_level": "c4",
+          "actor_micro_batch": 16,
+          "reservation": 0.8,
+          "slot_ids": {
+            "screen": [
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s141"
+            ],
+            "evaluation": [
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s142",
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s143",
+              "decision-qwen25_3b-math-shape1024-n4-steps5-c4-s144"
+            ]
+          }
+        }
+      ],
+      "donors": {
+        "qwen25_3b-math-shape1024-n4-steps5-c2": {
+          "configuration_id": "cfg-30f98456fdb322c1",
+          "observed_state": "within_margin",
+          "max_completed_run_peak_mib": "33446.0",
+          "recorded_attempt_ids": [
+            "attempt-09c61cb7b6e86735",
+            "attempt-8348bfb351c397b5",
+            "attempt-f88dcbf2482f36ce"
+          ]
+        },
+        "qwen25_3b-math-shape1024-n4-steps5-c3": {
+          "configuration_id": "cfg-f009e9e3891c06f4",
+          "observed_state": "within_margin",
+          "max_completed_run_peak_mib": "37478.0",
+          "recorded_attempt_ids": [
+            "attempt-96b1e14cfb255ab4",
+            "attempt-d94adccd6e5a8a40",
+            "attempt-e57665a8a80a80da"
+          ]
+        },
+        "qwen25_3b-math-shape1024-n4-steps5-c4": {
+          "configuration_id": "cfg-55811d23c5144bb7",
+          "observed_state": "memory_failure",
+          "max_completed_run_peak_mib": "",
+          "recorded_attempt_ids": [
+            "attempt-1841e2c0d781c74b",
+            "attempt-c1fed50785307d75",
+            "attempt-f323ddf716602d2e"
+          ]
+        }
+      },
+      "query_order": [
+        "qwen25_3b-math-shape1024-n4-steps5-c3",
+        "qwen25_3b-math-shape1024-n4-steps5-c2",
+        "qwen25_3b-math-shape1024-n4-steps5-c4"
+      ]
+    },
+    {
+      "case_id": "phi4_mini-gsm8k-shape1024-n4-steps5",
+      "model_family": "phi4_mini",
+      "dataset": "gsm8k",
+      "candidates": [
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c2",
+          "configuration_level": "c2",
+          "actor_micro_batch": 8,
+          "reservation": 0.6,
+          "slot_ids": {
+            "screen": [
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s141"
+            ],
+            "evaluation": [
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s142",
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s143",
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c2-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+          "configuration_level": "c3",
+          "actor_micro_batch": 16,
+          "reservation": 0.7,
+          "slot_ids": {
+            "screen": [
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s141"
+            ],
+            "evaluation": [
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s142",
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s143",
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c3-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+          "configuration_level": "c4",
+          "actor_micro_batch": 16,
+          "reservation": 0.8,
+          "slot_ids": {
+            "screen": [
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s141"
+            ],
+            "evaluation": [
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s142",
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s143",
+              "decision-phi4_mini-gsm8k-shape1024-n4-steps5-c4-s144"
+            ]
+          }
+        }
+      ],
+      "donors": {
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2": {
+          "configuration_id": "cfg-96ccf395b84393f7",
+          "observed_state": "within_margin",
+          "max_completed_run_peak_mib": "35538.0",
+          "recorded_attempt_ids": [
+            "attempt-363da2ea8680c36d",
+            "attempt-c05f93a718bc11c4",
+            "attempt-c601b173501df212"
+          ]
+        },
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3": {
+          "configuration_id": "cfg-c0605c1607caa079",
+          "observed_state": "above_margin",
+          "max_completed_run_peak_mib": "39570.0",
+          "recorded_attempt_ids": [
+            "attempt-0878641754683d89",
+            "attempt-e0a0fa7d046edb49",
+            "attempt-e94a9b80aec54873"
+          ]
+        },
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4": {
+          "configuration_id": "cfg-966f5804dc918967",
+          "observed_state": "memory_failure",
+          "max_completed_run_peak_mib": "",
+          "recorded_attempt_ids": [
+            "attempt-0642d5dc18f1ac77",
+            "attempt-562f2a83100f5603",
+            "attempt-ae2baefbf5ad9baa"
+          ]
+        }
+      },
+      "query_order": [
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c4",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c3",
+        "phi4_mini-gsm8k-shape1024-n4-steps5-c2"
+      ]
+    },
+    {
+      "case_id": "phi4_mini-math-shape1024-n4-steps5",
+      "model_family": "phi4_mini",
+      "dataset": "math",
+      "candidates": [
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c2",
+          "configuration_level": "c2",
+          "actor_micro_batch": 8,
+          "reservation": 0.6,
+          "slot_ids": {
+            "screen": [
+              "decision-phi4_mini-math-shape1024-n4-steps5-c2-s141"
+            ],
+            "evaluation": [
+              "decision-phi4_mini-math-shape1024-n4-steps5-c2-s142",
+              "decision-phi4_mini-math-shape1024-n4-steps5-c2-s143",
+              "decision-phi4_mini-math-shape1024-n4-steps5-c2-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c3",
+          "configuration_level": "c3",
+          "actor_micro_batch": 16,
+          "reservation": 0.7,
+          "slot_ids": {
+            "screen": [
+              "decision-phi4_mini-math-shape1024-n4-steps5-c3-s141"
+            ],
+            "evaluation": [
+              "decision-phi4_mini-math-shape1024-n4-steps5-c3-s142",
+              "decision-phi4_mini-math-shape1024-n4-steps5-c3-s143",
+              "decision-phi4_mini-math-shape1024-n4-steps5-c3-s144"
+            ]
+          }
+        },
+        {
+          "candidate_id": "phi4_mini-math-shape1024-n4-steps5-c4",
+          "configuration_level": "c4",
+          "actor_micro_batch": 16,
+          "reservation": 0.8,
+          "slot_ids": {
+            "screen": [
+              "decision-phi4_mini-math-shape1024-n4-steps5-c4-s141"
+            ],
+            "evaluation": [
+              "decision-phi4_mini-math-shape1024-n4-steps5-c4-s142",
+              "decision-phi4_mini-math-shape1024-n4-steps5-c4-s143",
+              "decision-phi4_mini-math-shape1024-n4-steps5-c4-s144"
+            ]
+          }
+        }
+      ],
+      "donors": {
+        "phi4_mini-math-shape1024-n4-steps5-c2": {
+          "configuration_id": "cfg-0f540d3f6fe4661b",
+          "observed_state": "within_margin",
+          "max_completed_run_peak_mib": "35920.0",
+          "recorded_attempt_ids": [
+            "attempt-33c58cd83cf8f1d9",
+            "attempt-6a7c2df6c8c4944b",
+            "attempt-9084e20c27f93319"
+          ]
+        },
+        "phi4_mini-math-shape1024-n4-steps5-c3": {
+          "configuration_id": "cfg-a3987314cb2f9f12",
+          "observed_state": "above_margin",
+          "max_completed_run_peak_mib": "40080.0",
+          "recorded_attempt_ids": [
+            "attempt-45cf40daf74bfe5b",
+            "attempt-53377d86e2b44eb1",
+            "attempt-cdb185f1541bbf3d"
+          ]
+        },
+        "phi4_mini-math-shape1024-n4-steps5-c4": {
+          "configuration_id": "cfg-d138048feeb8fe5d",
+          "observed_state": "memory_failure",
+          "max_completed_run_peak_mib": "",
+          "recorded_attempt_ids": [
+            "attempt-98f95b46d6eea118",
+            "attempt-b81c24dd1ee30d1b",
+            "attempt-d93be60895b5579e"
+          ]
+        }
+      },
+      "query_order": [
+        "phi4_mini-math-shape1024-n4-steps5-c3",
+        "phi4_mini-math-shape1024-n4-steps5-c2",
+        "phi4_mini-math-shape1024-n4-steps5-c4"
+      ]
+    }
+  ],
+  "screen_seed": 141,
+  "evaluation_seeds": [
+    142,
+    143,
+    144
+  ],
+  "planned_processes": 48,
+  "target_configurations": 12,
+  "screen_processes": 12,
+  "hidden_evaluation_processes": 36,
+  "memory_limit_mib": 38912,
+  "additional_donor_guard_mib": 2048,
+  "budgets_per_case": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "rules": [
+    "source_copy",
+    "headroom_guard",
+    "direct_screen"
+  ],
+  "decision_rule": "Copy approves within-margin donor labels. Guard additionally requires donor maximum <=36864MiB. Direct starts abstaining. All use the same frozen query order. A charged designated screen replaces the prior: within-margin =>approve; above-margin or diagnosed memory failure =>reject; unresolved =>abstain. Only designated screens are queryable. If a designated screen never started, report unavailable, abstain, charge zero actual attempts and stop acquisition for that replay.",
+  "target_truth": "Only the three evaluation seeds form the repeated label. All must have eligible outcomes. Any missing/unresolved evaluation seed leaves the label unresolved, with known memory failures separately recorded.",
+  "cost_scope": "Charge every requested screen invocation before revelation, including failed setup or unresolved outcomes and any permitted replacement. Donor attempts are separate sunk cost in existing-donor use, added in cold-start reporting. Hidden evaluation collection is research cost, never policy information. Attempts are not equal GPU-time units.",
+  "interpretation": "Prospectively specified offline replay on four changed configured cases in known model/task families, not an online deployment trial. Changes include caps, rollout count, duration and final operations. Do not infer an isolated factor effect, unseen-model generalization, population safety, throughput optimality or cold-start superiority over an equally funded broader direct-testing action space.",
+  "missing_outcomes": "Retain every candidate; report unresolved approvals and known failures. Report recall/error bounds over admissible unknown truth states. Never silently drop incomplete or unfavorable cases.",
+  "failure_policy": "No retries for diagnosed memory failures or unresolved runtime failures. At most one unchanged replacement per slot, at most eight in total, only for documented missing dependency/data, incorrect GPU visibility, port binding collision, or corrupted artifact writing. The decision to repair is recorded before replacement and every attempt is charged. No automatic retry. Queued-but-unstarted work is not an invocation.",
+  "stopping_rule": "48 planned processes plus at most 8 predefined setup repairs; no outcome-driven panel extension.",
+  "resource_cap": {
+    "gpus_per_allocation": 2,
+    "concurrent_allocations": 4,
+    "initial_allocations": 48,
+    "max_repair_allocations": 8,
+    "wall_minutes_per_allocation": 40,
+    "process_timeout_seconds": 1800
+  },
+  "collection_order_seed": 20260916,
+  "query_order_seed": 20260915,
+  "instrumentation": "100ms external sampling, host markers, full allocator logging",
+  "data_selection": "Full existing training split after model-specific prompt filtering, fixed order, incomplete final batches dropped. Five global batches; global prompt batches32/64 and maxseq64/128 for GSM8K/MATH. Donor examples may overlap. Validation uses the first32/64 eligible test examples. No initial validation; validation/checkpoint at final step5.",
+  "source_files_sha256": {
+    "benchmark/configuration_results.csv": "cc88941ce02ad4997fe872fd523ff0cfc41c7e70b0112c3ef02c4815293227d0",
+    "benchmark/attempts.csv": "397c8caaf0d3abe06587fd649c181fe71d5b8b5f5e24e0591cc7e56d38e275c1",
+    "memory_tuner/rlvram_strengthening_factorial.csv": "38a0645fe56b1a894bde2c9d183f7355c1ad358f7f14edc75fffa50775c9aebf"
+  },
+  "data_files_sha256": {
+    "data/gsm8k/train.parquet": "8fb13a0cd8621e5fcacdee3ffe28b3a369975478ea7ab514781f3f190cba2488",
+    "data/gsm8k/test.parquet": "0dcd50ed32caa9d8f434d4e3ef8031bc3e49b0f823655a53be5c002e727f17dd",
+    "data/math/train.parquet": "4aa303577e968be6f810600730c970b14be659a9ae9072cc2afefd04d67e7cb8",
+    "data/math/test.parquet": "e0cb48b1e49874c71f4a02dff944eba08844067d98dc5bdc89c004644e6b597d"
+  },
+  "matrix_sha256": "0c14400d24b03d89225b1f03bcdc68339f5080abb6168c1db1543db5a522bae6",
+  "implementation_sha256": {
+    "decision_benchmark.py": "5ace35ce546011e4ebc942110a6dea25a7888a1291b996b73a2891b6845ece8c",
+    "memory_tuner/plan_decision_benchmark.py": "03633652f4005004ff79cca74cfa8b661b6a5800b5da17b5e683fd8edd014ade",
+    "memory_tuner/run_scientific_revision.py": "d69a68dd29a29f1a66cd6a75cade172750715dd4d771563925b8d4f6851ca1c0",
+    "memory_tuner/benchmark_v2_env.py": "f4ac4bb91ff7789a422fa6731b842a4dd0f44bf14fe46bfad89f7e5a0b229aa0",
+    "run_grpo_instrumented.slurm": "17bc88ee7bf2c7f540f8c3f65956decd573cd2633c3eb3503c1f6ff5d85f13c5"
+  }
+}

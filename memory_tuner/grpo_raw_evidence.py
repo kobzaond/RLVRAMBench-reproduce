@@ -25,6 +25,12 @@ from memory_tuner.major_revision_residency_analysis import validate_same_node_pr
 
 
 LIMIT = 38_912.0
+
+
+class EvidenceValidationError(ValueError):
+    """A specified evidence check failed, distinct from a parser defect."""
+
+
 MATRICES = {
     "boundary": (
         "rlvram_v2_cross_family_confirmatory.csv",
@@ -90,7 +96,7 @@ def validate_lifecycle_events(spec, events):
             required.add(0)
         missing = required - events.get(phase, set())
         if missing:
-            raise ValueError(
+            raise EvidenceValidationError(
                 f"{spec['experiment_id']}: missing scheduled/terminal "
                 f"{phase} events: {sorted(missing)}")
 
@@ -100,15 +106,15 @@ def validate_historical_source_horizon(log, phase_steps, success):
         r"""['"]total_training_steps['"]:\s*(\d+)""", log)}
     logged = {int(value) for value in re.findall(r"training/global_step:(\d+)", log)}
     if planned != {1} or not logged.issubset({1}) or (success and logged != {1}):
-        raise ValueError("historical source lacks an explicit one-step log contract")
+        raise EvidenceValidationError("historical source lacks an explicit one-step log contract")
     if phase_steps and set(phase_steps) != {1}:
-        raise ValueError("historical source phase counter indicates multiple steps")
+        raise EvidenceValidationError("historical source phase counter indicates multiple steps")
     # These earlier screening traces predate global-step-aware phase markers.
     # A constant zero phase counter is disclosed, not relabeled as step 1.
     return "training_log_and_phase" if phase_steps else "training_log_legacy_zero_phase_counter"
 
 
-def select_attempt(root, spec, *, exclusions=None, annotations=None):
+def select_attempt(root, spec, *, exclusions=None, annotations=None, trial_path=None):
     exclusions = exclusions if exclusions is not None else load_attempt_exclusions(
         root / "memory_tuner/attempt_exclusions.csv")
     annotations = annotations if annotations is not None else load_failure_annotations(
@@ -116,8 +122,16 @@ def select_attempt(root, spec, *, exclusions=None, annotations=None):
     directory = root / "output" / spec["run_group"] / spec["experiment_id"]
     valid = []
     excluded = []
-    for path in sorted(directory.glob("trial-*.json")):
-        record = trial_row(path, annotations)
+    paths = sorted(directory.glob("trial-*.json"))
+    if trial_path is not None:
+        trial_path = Path(trial_path)
+        if not trial_path.is_file():
+            raise EvidenceValidationError(f"{spec['experiment_id']}: missing designated trial")
+        if not trial_path.resolve().is_relative_to(directory.resolve()):
+            raise EvidenceValidationError(f"{spec['experiment_id']}: designated trial outside slot")
+        paths = [trial_path]
+    for path in paths:
+        record = trial_row(path, annotations, root=root)
         if str(record["job_id"]) in exclusions:
             excluded.append(str(record["job_id"]))
             continue
@@ -127,34 +141,34 @@ def select_attempt(root, spec, *, exclusions=None, annotations=None):
         else:
             excluded.append(f"{record['job_id']}:{reason}")
     if len(valid) != 1:
-        raise ValueError(
+        raise EvidenceValidationError(
             f"{spec['experiment_id']}: expected one admissible attempt, "
             f"found {len(valid)}; exclusions={excluded}")
     path, record = valid[0]
     for field in MATCH_FIELDS:
         if normalized(record.get(field)) != normalized(spec.get(field)):
-            raise ValueError(f"{spec['experiment_id']}: {field} differs from matrix: "
+            raise EvidenceValidationError(f"{spec['experiment_id']}: {field} differs from matrix: "
                              f"{record.get(field)!r} != {spec.get(field)!r}")
     for field in ("run_log", "phase_memory_csv", "gpu_telemetry_csv", "environment_json"):
         if not record.get(field) or not Path(record[field]).is_file():
-            raise ValueError(f"{spec['experiment_id']}: missing {field}")
+            raise EvidenceValidationError(f"{spec['experiment_id']}: missing {field}")
     log = Path(record["run_log"]).read_text(errors="replace")
     requested = int(spec["total_training_steps"])
     logged_steps = {int(s) for s in re.findall(r"training/global_step:(\d+)", log)}
     if int(record["success"]) and requested not in logged_steps:
-        raise ValueError(f"{spec['experiment_id']}: requested final step not in log")
+        raise EvidenceValidationError(f"{spec['experiment_id']}: requested final step not in log")
     phases, steps, events = phase_measurements(record["phase_memory_csv"])
     with Path(record["gpu_telemetry_csv"]).open(newline="") as handle:
         external = list(csv.DictReader(handle))
     observed_peak = max((float(r["memory_used_mib"]) for r in external), default=math.nan)
     if not math.isfinite(observed_peak):
-        raise ValueError(f"{spec['experiment_id']}: no finite external peak")
+        raise EvidenceValidationError(f"{spec['experiment_id']}: no finite external peak")
     if observed_peak != float(record["peak_gpu_memory_mib"]):
-        raise ValueError(f"{spec['experiment_id']}: raw JSON/telemetry peak mismatch: "
+        raise EvidenceValidationError(f"{spec['experiment_id']}: raw JSON/telemetry peak mismatch: "
                          f"{record['peak_gpu_memory_mib']} != {observed_peak}")
     if int(record["success"]) and requested > 1:
         if set(steps) != set(range(1, requested + 1)):
-            raise ValueError(f"{spec['experiment_id']}: missing/extra training steps")
+            raise EvidenceValidationError(f"{spec['experiment_id']}: missing/extra training steps")
     if int(record["success"]):
         validate_lifecycle_events(spec, events)
     terminal = last_observed_phase(record["phase_memory_csv"])
@@ -203,7 +217,7 @@ def select_attempt(root, spec, *, exclusions=None, annotations=None):
     if requested == 100 and int(record["success"]):
         for phase in ("validation", "checkpoint"):
             if phase not in phases:
-                raise ValueError(f"{spec['experiment_id']}: missing {phase} phase")
+                raise EvidenceValidationError(f"{spec['experiment_id']}: missing {phase} phase")
     return row
 
 
@@ -238,7 +252,7 @@ def historical_temporal_sources(root):
             peak = max(float(sample["memory_used_mib"])
                        for sample in read_csv(row["gpu_telemetry_csv"]))
             if peak != float(row["peak_gpu_memory_mib"]):
-                raise ValueError(f"{path}: historical source telemetry mismatch")
+                raise EvidenceValidationError(f"{path}: historical source telemetry mismatch")
             _, steps, _ = phase_measurements(row["phase_memory_csv"])
             log = Path(row["run_log"]).read_text(errors="replace")
             row["source_horizon_evidence"] = validate_historical_source_horizon(
@@ -247,7 +261,7 @@ def historical_temporal_sources(root):
             rows.append(row)
     grouped = aggregate_configurations(rows, LIMIT)
     if {configuration_id(row) for row in grouped} != wanted:
-        raise ValueError("missing historical temporal source configurations")
+        raise EvidenceValidationError("missing historical temporal source configurations")
     audit = []
     for row in grouped:
         config = configuration_id(row)
@@ -258,7 +272,7 @@ def historical_temporal_sources(root):
                      int(spec["source_one_step_safe"]),
                      float(spec["source_one_step_peak_mib"])) for spec in matching}
         if expected != {observed}:
-            raise ValueError(f"{config}: frozen historical source labels/peak mismatch")
+            raise EvidenceValidationError(f"{config}: frozen historical source labels/peak mismatch")
         audit.append({
             "source_config_id": config, "source_processes": row["replicate_count"],
             "source_success": observed[0], "source_safe": observed[1],
@@ -279,21 +293,21 @@ def collect(root):
     provenance = validate_same_node_provenance(
         trials, root / "profiles/strengthening/same_node")
     if len(provenance) != 18:
-        raise ValueError("incomplete GRPO same-allocation provenance")
+        raise EvidenceValidationError("incomplete GRPO same-allocation provenance")
     # Independently check payload records, not only the wrapper's booleans.
     identities = defaultdict(set)
     for row in trials:
         environment = json.loads(Path(row["environment_json"]).read_text())
         if str(environment["slurm"]["SLURM_JOB_ID"]) != str(row["job_id"]):
-            raise ValueError(f"{row['pair_id']}: payload job identity mismatch")
+            raise EvidenceValidationError(f"{row['pair_id']}: payload job identity mismatch")
         gpu_ids = tuple(sorted(re.findall(r"GPU-[a-f0-9-]+", environment["gpus_csv"])))
         if len(gpu_ids) != int(row["gpu_count"]):
-            raise ValueError(f"{row['pair_id']}: payload GPU inventory mismatch")
+            raise EvidenceValidationError(f"{row['pair_id']}: payload GPU inventory mismatch")
         identities[row["pair_id"]].add((environment["host"]["hostname"], gpu_ids))
     for row in provenance:
         observed = identities[row["pair_id"]]
         if len(observed) != 1:
-            raise ValueError(f"{row['pair_id']}: payload node/GPU identities differ")
+            raise EvidenceValidationError(f"{row['pair_id']}: payload node/GPU identities differ")
         hostname, gpu_ids = next(iter(observed))
         row.update(payload_hostname=hostname, payload_gpu_uuids=";".join(gpu_ids),
                    payload_identity_validated=1)

@@ -57,6 +57,40 @@ model_transfer` (or another listed track) on both commands to score only
 that track. `benchmark/baseline_predictions.csv` and
 `benchmark/baseline_scores.json` contain the expected results.
 
+For transparent comparison, `--rule always_approve` predicts within-margin
+completion for every target, while `--rule always_reject` predicts memory
+failure for every target. The latter is a deliberately crude diagnostic,
+not evidence that every rejected setting actually fails.
+`benchmark/reference_scores.json` records all three reference rules.
+
+## What does the score mean?
+
+The primary question is whether a method identifies usable configurations
+without approving unsuitable ones. The evaluator therefore reports:
+
+- `within_margin_recall`: usable targets approved / all usable targets.
+- `within_margin_approval_precision`: usable targets approved / all approvals.
+- Separate approvals of memory-failing and above-margin targets, with counts
+  and denominators.
+- `three_state_accuracy`, for exact prediction of all three outcome categories.
+
+An empty denominator is `null`, not zero error or perfect performance.
+Always rejecting everything gives no approval errors but recovers no usable
+targets. Always approving everything recovers every usable target while also
+approving every failure. Neither is a successful resource-selection method.
+
+The source-copy baseline has 88% pooled exact accuracy, but more than half
+the queries are the already-solved workload transfer. On GPU-count transfer,
+copying labels scores 55.6% accuracy and approves two memory-failing targets;
+always approving scores 72.2% and approves four. Higher accuracy can therefore
+give worse admission decisions. Report each track and its error types,
+not the pooled accuracy as a standalone benchmark ranking.
+
+The static evaluator's donor-cost fields describe the evidence supplied by
+the task. They do not meter a method's actual information use, adaptive
+requests, or GPU-hours saved. These counts are consequently the same for
+constant and source-copy rules supplied with the same task.
+
 ## Evaluate your method
 
 ```bash
@@ -106,6 +140,87 @@ state-release controls support interpretation of these bounded results.
 The benchmark does not measure throughput optimality, output correctness,
 training convergence, or unseen-model/general-hardware performance.
 The c0–c5 indices are not a ranking of configuration usefulness.
+
+## Budgeted decisions with independent evaluation runs
+
+The separate `benchmark/decision/` protocol asks a more practical question:
+**how many usable settings can existing donor measurements identify before
+new target screens are available, and what approval errors remain?**
+
+A prospectively specified panel changes the workload shape and scheduled
+operations in four known model/task combinations. Each of twelve candidate
+configurations has one designated five-step screen and three different-seed
+evaluation runs. The screen is never part of its own evaluation label.
+The frozen protocol, matrix, prelaunch amendment, and collection records
+preserve that separation.
+
+`decision_benchmark.py` compares source-label copying, a fixed additional
+donor-headroom guard, and direct screening without donors. They all query
+the same preassigned candidate order, under zero through three recorded
+target attempts per case. A charged screen replaces the initial decision;
+an unresolved screen causes abstention. Evaluation runs remain hidden from
+the policy even though their records are public for inspection.
+
+```bash
+python3 decision_benchmark.py inputs \
+  --protocol benchmark/decision/protocol.json \
+  --rule source_copy --output decision_inputs.json
+python3 decision_benchmark.py replay \
+  --protocol benchmark/decision/protocol.json \
+  --attempts benchmark/decision/results/attempts.json \
+  --output decision_scores.json
+```
+
+Interpret within-margin recall jointly with both approval-error counts and
+the actual spent budget. The output preserves per-case decisions and every
+charged observation. Unresolved evaluation labels remain explicit; the
+sensitivity ranges exclude states contradicted by known failure or margin
+evidence. Overlapping known-evidence flags must not be added as disjoint
+outcome categories.
+
+The cost ledgers distinguish:
+
+1. Requested target attempts, including failed setup and any permitted
+   replacement: incremental effort when a donor profile already exists.
+2. Donor acquisition: nine historical recorded attempts per case for the
+   specified transfer rules; zero for direct screening.
+3. Hidden evaluation collection: research cost, never policy input.
+
+Cold-start accounting adds donor acquisition. It does not compare against
+every possible direct-testing strategy with that larger budget. Attempts
+are not equal amounts of computation, and this is offline replay of frozen
+rules, not an online deployment trial or a claimed throughput optimizer.
+The four cases remain four cases regardless of the number of seeds,
+budgets, or methods displayed.
+
+### Results of the frozen admission panel
+
+All 48 slots have validated outcomes, without retries or unresolved
+attempts: 24 processes complete within margin, eight complete above it,
+and sixteen fail for memory. The twelve candidate evaluation labels
+are six within margin, two above margin, and four memory failures.
+
+With source measurements already available, source copying recovers all
+six usable candidates with no new test. The guard rejects the two usable
+Qwen c3 candidates, giving 75% case-averaged recall before testing and
+100% after one target attempt per case. Those two candidates are queried
+first, so copy and guard decisions are structurally identical at every
+positive budget. Their agreement is not independent method evidence.
+
+Direct screening reaches case-averaged recall of 0%, 25%, 75%, and 100%
+at budgets of zero through three attempts per case. It makes no approval
+error in this panel. Nor do the transfer rules. The fixed query order
+determines when usable settings are discovered; no better-order claim
+follows from these results.
+
+At the first tested common per-case budget attaining full recovery,
+the incremental target-attempt totals are zero, four, and twelve for
+copy, guard, and direct screening. These are not optimal-acquisition
+lower bounds. Adding prior donor
+investment gives 36, 40, and 12 attributed attempts, respectively.
+The former comparison is useful for reuse of an existing profile; the
+latter prevents that profile being presented as free in a cold start.
+Neither is a GPU-time saving estimate.
 
 ## Inspect or reconstruct the evidence
 
