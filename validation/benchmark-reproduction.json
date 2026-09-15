@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "archive_sha256": "d97cf83fcc4684cd7c54938c3f5ba40ce553edc63afb806561856fddc3a6ed48",
+  "archive_members": 19532,
+  "manifest_entries_verified": 19530,
+  "principal_processes": 588,
+  "supporting_source_processes": 16,
+  "derived_csv_json_files_matched": 40,
+  "figures_regenerated": 4,
+  "revised_csv_json_files_matched": 27,
+  "curated_benchmark_files_matched": 13,
+  "curated_references_hidden_during_analysis": true,
+  "review_control_completed_processes": 24,
+  "review_control_attempted_processes": 26,
+  "reference_profiles_removed_from_analysis_root": true,
+  "original_project_and_reference_tables_hidden": true,
+  "network_namespace_isolation_claimed": false
+}

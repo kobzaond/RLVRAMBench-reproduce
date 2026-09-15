@@ -1,4 +1,4 @@
-# RLVRAMBench reproduction code
+# RLVRAMBench: evaluate resource decisions and reproduce the evidence
 
 CPU-only reconstruction of the measurements, statistical tables, and four
 figures supporting **RLVRAMBench: A Benchmark for Memory Feasibility in
@@ -13,6 +13,32 @@ workspace. The benchmark evidence is hosted at
 Both repositories are public as of 2026-09-14. Downloads require neither
 authentication nor access approval. No DOI has been generated.
 
+## Start with the benchmark
+
+Predict whether a target configuration completes within the device-memory
+margin, completes above it, or has a diagnosed memory failure. The curated
+data directory supplies explicit settings, repeated outcomes, linked attempts,
+and four transfer tracks. It contains 52 tasks with 400 queries reusing
+94 distinct target configurations, not 400 independent experiments.
+
+The lightweight evaluator needs only Python 3.11 or newer:
+
+```bash
+python3 benchmark.py verify
+python3 benchmark.py baseline --output predictions.csv
+python3 benchmark.py evaluate --predictions predictions.csv --output scores.json
+```
+
+For your method, export permitted inputs with `benchmark.py inputs`,
+then provide a prediction CSV. Read `BENCHMARK.md` for the information
+boundary and `DATA_DICTIONARY.md` for all fields and units. Target outcomes
+are public for inspection, but are not permitted prediction inputs.
+Within-model workload transfer is already solved by lookup on this grid;
+this release is not a hidden leaderboard for sophisticated predictors.
+
+The following sections describe the separate, heavier reconstruction of
+the paper's results from raw evidence.
+
 ## What is reproduced
 
 - 588 principal processes: 438 historical and 150 prospective revision runs.
@@ -25,12 +51,14 @@ authentication nor access approval. No DOI has been generated.
   completions, and six usable four-condition blocks. Initial noncompletions
   remain distinct from the two additional allocations.
 - Four publication figures, regenerated as PDF and PNG.
+- The curated benchmark tables, task definitions, baseline predictions,
+  and scores, compared byte-for-byte after regeneration.
 
 The procedure verifies the archive and every evidence-manifest entry,
 removes precomputed profiles from the analysis root, restores only the raw
 paired-allocation provenance, and reconstructs the results from retained raw
 executions and frozen matrices. Optional filesystem isolation hides both
-the original project and reference tables during analysis.
+the original project, reference tables, and precomputed curated views during analysis.
 
 This is reproduction of completed measurements, not a rerun of GPU training.
 It does not require model weights, CUDA, an A100 allocation, or Slurm.
@@ -89,6 +117,7 @@ isolation is then explicitly not claimed.
 
 Original results appear in `reproduced/results/`, revised audits and controls
 in `reproduced/review-results/`, figures in `reproduced/figures/`,
+curated data in `reproduced/benchmark/`,
 and the machine-readable acceptance report in `reproduced/verification.json`.
 The reference profiles are retained separately under
 `reproduced/reference-profiles/`; they are never placed back into the
@@ -118,6 +147,7 @@ so the measurements do not establish pure tracing overhead on identical
 tensors, logging equivalence, or a universal correction factor. Earlier
 immutable evidence releases remain available in the dataset repository.
 
-See `CITATION.cff` and `RIGHTS.md`. The original-material license choices,
-final journal declarations, and DOI remain author-controlled. Public access
-does not itself grant a software or data reuse license.
+Original benchmark data and reproduction code are MIT licensed; see
+`LICENSE`, `RIGHTS.md`, and `CITATION.cff`. Third-party terms remain separate.
+Final journal declarations, submission approval, and DOI creation remain
+author actions.

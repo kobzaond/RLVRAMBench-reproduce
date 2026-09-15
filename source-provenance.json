@@ -1,8 +1,28 @@
 {
   "source_repository": "https://github.com/kobzaond/rl",
-  "source_commit": "328c1c33a8b4353429be8e892ee6f8b3eb57c1c2",
-  "selection": "Original CPU reproduction import closure plus revised audit/control modules, tests and frozen matrix",
+  "source_commit": "478b6574fd48b802ca949dd3ac6c2aa13d84230e",
+  "selection": "CPU reconstruction closure plus curated resource-transfer benchmark, evaluator, tests and documentation",
   "files": {
+    "BENCHMARK.md": {
+      "sha256": "a5591c1c79e7b6e7ce623ac3782e7803dd24063f6a16cd1b6f616ec941a40812",
+      "size_bytes": 6119
+    },
+    "DATA_DICTIONARY.md": {
+      "sha256": "58f046aaf84812c303736829f6bf9d2884148e7773da9dfe8913b8959c25f107",
+      "size_bytes": 12787
+    },
+    "RIGHTS.md": {
+      "sha256": "7c1f948ecd8082ad2d0cbe334e576566d6e26a5ccfdb5ac19b69611044fafe96",
+      "size_bytes": 1669
+    },
+    "benchmark.py": {
+      "sha256": "3abc9bb54f0459c1e9ff679760ee2d3b28768542d79fdb0e3624c3ee8a754054",
+      "size_bytes": 10074
+    },
+    "export_benchmark.py": {
+      "sha256": "6f201cb506979b4b24b6a4559a54b46ac46394f3f4171fb339e27d8aeac09518",
+      "size_bytes": 18194
+    },
     "memory_tuner/__init__.py": {
       "sha256": "027aba95d634d9ead178819412a859239c7ddd5418a0e5eaf8e3d429fe8e6629",
       "size_bytes": 191
@@ -12,8 +32,8 @@
       "size_bytes": 6398
     },
     "memory_tuner/artifact_manifest.py": {
-      "sha256": "bbdaaec1eeacb484b8612187b25604eb7b200d53b0dfdee08a153002efca6c17",
-      "size_bytes": 28759
+      "sha256": "689fd40ef620c026cf7d1879b72df1e763335ba396a08ac0208b54bb7eb3b1eb",
+      "size_bytes": 29215
     },
     "memory_tuner/artifact_paths.py": {
       "sha256": "8b89a2f8956c7b1fe40563e2b0b776414ebc583d3801fab6d83fc125861beb91",
@@ -414,6 +434,10 @@
     "publication-requirements.txt": {
       "sha256": "3c86c539ab6f053981c6c58c93135f6e085434cfd4ea112424469b25f16b6a5b",
       "size_bytes": 458
+    },
+    "test_benchmark.py": {
+      "sha256": "b12540f1c76a87dffcae1ef9415f35644ac32ef70c537f17a69071d661bbcb2e",
+      "size_bytes": 6381
     }
   }
 }

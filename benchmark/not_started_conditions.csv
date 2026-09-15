@@ -1,0 +1,7 @@
+experiment_id,pair_id,condition,period,model_family,dataset,training_seed,job_id,initial_allocation,attempted,outcome,observed_peak_mib,actor_update_peak_mib,terminal_sampled_phase
+review-control-phi4_mini-gsm8k-s122-external_b8,phi4_mini-gsm8k-s122,external_b8,2,phi4_mini,gsm8k,122,5048503,1,0,not_attempted,nan,nan,
+review-control-phi4_mini-gsm8k-s122-external_b16,phi4_mini-gsm8k-s122,external_b16,3,phi4_mini,gsm8k,122,5048503,1,0,not_attempted,nan,nan,
+review-control-phi4_mini-gsm8k-s122-full_b8,phi4_mini-gsm8k-s122,full_b8,4,phi4_mini,gsm8k,122,5048503,1,0,not_attempted,nan,nan,
+review-control-phi4_mini-gsm8k-s123-external_b16,phi4_mini-gsm8k-s123,external_b16,2,phi4_mini,gsm8k,123,5048508,1,0,not_attempted,nan,nan,
+review-control-phi4_mini-gsm8k-s123-external_b8,phi4_mini-gsm8k-s123,external_b8,3,phi4_mini,gsm8k,123,5048508,1,0,not_attempted,nan,nan,
+review-control-phi4_mini-gsm8k-s123-full_b16,phi4_mini-gsm8k-s123,full_b16,4,phi4_mini,gsm8k,123,5048508,1,0,not_attempted,nan,nan,

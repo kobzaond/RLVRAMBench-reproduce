@@ -1,0 +1,479 @@
+{
+  "date": "2026-09-15",
+  "repository": "kobzaond/RLVRAMBench",
+  "previous_revision": "7bae491e9bb9e34160bf90464bfbafce47f48a42",
+  "revision": "5e443bca9b969197a2b2f8d0c96d8bf219ea51c0",
+  "private": false,
+  "gated": false,
+  "anonymous_files_sha256_verified": 116,
+  "prior_release_files_preserved": true,
+  "doi_created": false,
+  "licenses_changed": true,
+  "original_material_license": "MIT",
+  "downloaded": [
+    {
+      "path": "BENCHMARK.md",
+      "sha256": "a5591c1c79e7b6e7ce623ac3782e7803dd24063f6a16cd1b6f616ec941a40812"
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "b1501b2087d25512bc805ca8da45d09f0c19f5163a0a8066c4570eca8dbf58d8"
+    },
+    {
+      "path": "DATA_DICTIONARY.md",
+      "sha256": "58f046aaf84812c303736829f6bf9d2884148e7773da9dfe8913b8959c25f107"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "7518af731dc7cf4f069effaabb5bef12dfb0142becaddbf7adf4ac873adec98f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e7237953f2356a482e4982d3b55c8510192ca47a4aa9e6c4827d624bed29802d"
+    },
+    {
+      "path": "RIGHTS.md",
+      "sha256": "7c1f948ecd8082ad2d0cbe334e576566d6e26a5ccfdb5ac19b69611044fafe96"
+    },
+    {
+      "path": "benchmark/attempts.csv",
+      "sha256": "397c8caaf0d3abe06587fd649c181fe71d5b8b5f5e24e0591cc7e56d38e275c1"
+    },
+    {
+      "path": "benchmark/baseline_predictions.csv",
+      "sha256": "0c099b96f7ab71c03e02f7fcfca4dd581e5a5997bca9ea473b75d6c616848078"
+    },
+    {
+      "path": "benchmark/baseline_scores.json",
+      "sha256": "a481f8bef2ed78b8a6f91f8fd550391f87359cb8a11874e90c160992a0a72a28"
+    },
+    {
+      "path": "benchmark/configuration_results.csv",
+      "sha256": "cc88941ce02ad4997fe872fd523ff0cfc41c7e70b0112c3ef02c4815293227d0"
+    },
+    {
+      "path": "benchmark/configurations.csv",
+      "sha256": "3a77c96a67b82e01d23fb6f7a440cba23041bed1dae2749072cb9abb5b5d239d"
+    },
+    {
+      "path": "benchmark/manifest.json",
+      "sha256": "d776ada072ca1e0357bc453f337ff0fc740ff825748b59cf8a77062b43ce6441"
+    },
+    {
+      "path": "benchmark/not_started_conditions.csv",
+      "sha256": "bde7386b464b21c769acc6c718b81a5c96c94318846869d9e814402db22fecb2"
+    },
+    {
+      "path": "benchmark/outcomes.csv",
+      "sha256": "af05cd91ed1de843735cc188e5e54dbd1645b3ed91c97f503ac3de67bc5f61c9"
+    },
+    {
+      "path": "benchmark/queries.csv",
+      "sha256": "0f0cac66cb22681a2dc90145a7c34da1d08cbb865427fe4f4e3f08e2255917b8"
+    },
+    {
+      "path": "benchmark/runs.csv",
+      "sha256": "8e00ac4969709f71a6e780396085c9a259a71986dd45825cf52d42c061c53d5c"
+    },
+    {
+      "path": "benchmark/stage_measurements.csv",
+      "sha256": "c6e42d81e3da672faad298bb721b0d22f14dec99670a32149633aa6b6e5f478d"
+    },
+    {
+      "path": "benchmark/summary.json",
+      "sha256": "3378dbd45be90928ab839f9a4f16cc807b03168665ab169a8fcd98f1c9012c80"
+    },
+    {
+      "path": "benchmark/transfer_configurations.csv",
+      "sha256": "57cc5bff368eb5a981faaea300a097d11c9b7734031a8bf4a3a40cfef408686d"
+    },
+    {
+      "path": "paper/RLVRAMBench_IEEE_Access_source.zip",
+      "sha256": "3e9a6fa02cab042be7ac52d6075652f29207ac47c6935d1287ecc9bfe0c36ee7"
+    },
+    {
+      "path": "paper/RLVRAMBench_IEEE_Access_submission.pdf",
+      "sha256": "2fd26b797744c537001b85b18cda575b37fc48237aac4ea64a325597c7e6d778"
+    },
+    {
+      "path": "paper/RLVRAMBench_IEEE_Access_submission.tex",
+      "sha256": "368c2f1a8445627d5e69bb5a34fe9b7f791428fa5a7f32bc197173a9acc5669b"
+    },
+    {
+      "path": "paper/RLVRAMBench_supplement.pdf",
+      "sha256": "cab9a30ced62a56a9507ccd76d0412546600d80616428729e79245a6a0d9ee86"
+    },
+    {
+      "path": "paper/RLVRAMBench_supplement.tex",
+      "sha256": "82cdc48fafe036d5b23411dfc1857d1737f3ba6b4e183c36ecbbe2186aeb8fd3"
+    },
+    {
+      "path": "paper/figures/review_instrumentation_batch.pdf",
+      "sha256": "c80b1e6cd4bf5fcac419a883c46c4c01d765e15a31d1fc9f65d0964356074f60"
+    },
+    {
+      "path": "paper/figures/review_instrumentation_batch.png",
+      "sha256": "23b742462ff86cf810dda6413d35e5d4678bc9f6c7412dbf893f6a70e2732771"
+    },
+    {
+      "path": "paper/figures/standard_grpo_boundary.pdf",
+      "sha256": "f91ca1c1596c35481c36217c02e782d7f65ccba9663d2cebab863a8dbcc31613"
+    },
+    {
+      "path": "paper/figures/standard_grpo_boundary.png",
+      "sha256": "7b2d35dd05bad3848d8dd60fa8b2d6e07f3f42d131767def46401510f23eeeee"
+    },
+    {
+      "path": "paper/figures/standard_grpo_mechanisms.pdf",
+      "sha256": "f4e7a6ec6ed54813960b9d6a7673a57182e72d660ed9425d6e2a0a394d230f03"
+    },
+    {
+      "path": "paper/figures/standard_grpo_mechanisms.png",
+      "sha256": "f3ee3f83a769c300e9527381ed90d8bb605debed14333ac8a6e024322a59f66a"
+    },
+    {
+      "path": "paper/figures/standard_grpo_temporal.pdf",
+      "sha256": "183b4bc1fc0c2dfa2b9d11b76a929202449246090f4a5a73b860de2287aaacd3"
+    },
+    {
+      "path": "paper/figures/standard_grpo_temporal.png",
+      "sha256": "5760e69dcf7d59885376fe734c8f642ba448a29074805d6924c175f85a1b5d3f"
+    },
+    {
+      "path": "publication-requirements.txt",
+      "sha256": "3c86c539ab6f053981c6c58c93135f6e085434cfd4ea112424469b25f16b6a5b"
+    },
+    {
+      "path": "release.json",
+      "sha256": "d8068b6edfc4edd3e480a84f775bf0d11e55de73fc6ed1ea8f2b6246ad7f33ab"
+    },
+    {
+      "path": "releases/RLVRAMBench-release-benchmark-20260915-478b657.json",
+      "sha256": "488013fa38db0f35d6302165382d5c16ca97f8f55c7fd6fef5a38d1becb43fa7"
+    },
+    {
+      "path": "releases/RLVRAMBench-release-critical-revision-20260914-328c1c3.json",
+      "sha256": "dadcec5f1795e9c619e0bb9febe9dd97862bff1d25bb30f4f6a8714e631290f5"
+    },
+    {
+      "path": "releases/RLVRAMBench-review-artifact-benchmark-20260915-478b657.tar.zst",
+      "sha256": "d97cf83fcc4684cd7c54938c3f5ba40ce553edc63afb806561856fddc3a6ed48"
+    },
+    {
+      "path": "releases/RLVRAMBench-review-artifact-critical-revision-20260914-328c1c3.tar.zst",
+      "sha256": "81f9703da21b1fda72627960e477acdca5d196995787272d093788d46e6b9e4d"
+    },
+    {
+      "path": "releases/RLVRAMBench-review-artifact-ieee-access-20260914-2897476.tar.zst",
+      "sha256": "4a735cdc33b709d330b9894cb3b923542da2c29c29d366eccdae19c781096cfd"
+    },
+    {
+      "path": "releases/RLVRAMBench-submission-scientific-package-benchmark-20260915-478b657.zip",
+      "sha256": "d162d09bca086be9d3031091cd4bfbf53406058e069dc1595b3edbacfa3d56dc"
+    },
+    {
+      "path": "releases/RLVRAMBench-submission-scientific-package-critical-revision-20260914-328c1c3.zip",
+      "sha256": "89b5c3068d9e0c9f6fc2cc1faebfa25b628896e3113696688bcbe254c1e16ad2"
+    },
+    {
+      "path": "tables/boundary-trials.csv",
+      "sha256": "6b0bda9727e04be13242e8b3eca63aa8f01a4ff9122899b59d59dd2d03d0df7a"
+    },
+    {
+      "path": "tables/factorial-cells.csv",
+      "sha256": "8b6bf295d6fed3c98ce1ff23abcce9239a6281704d3e781b4dfecda36d8c8a37"
+    },
+    {
+      "path": "tables/factorial-inference.csv",
+      "sha256": "d9d959d8565e897bcd0f215f73a5a0dfa7bf2c9900ed0b3be0e92d67c8faeae7"
+    },
+    {
+      "path": "tables/factorial-pairs.csv",
+      "sha256": "08e05c8386411248d76b8754df7bce82c7227aa5873d702f5b61217d8838b4ce"
+    },
+    {
+      "path": "tables/factorial-phase-blocks.csv",
+      "sha256": "467e531d7f04f0984e5af4d550790838366acf3f3c4506ef620654399f896f91"
+    },
+    {
+      "path": "tables/factorial-phase-inference.csv",
+      "sha256": "9a9df549bf2c24a378a4d0ebd97d2abdb972bdf5955d080b5453c02bf1c991c7"
+    },
+    {
+      "path": "tables/factorial-phase-trials.csv",
+      "sha256": "fff0c037884ce50819961a6d3dd1104d117b7509cbeee44466cc4d3254e1a519"
+    },
+    {
+      "path": "tables/factorial-trials.csv",
+      "sha256": "29ab20c502ef3ab0dfd301d01b9d3f53ec7083154629a8838f5720e4e0e70ef0"
+    },
+    {
+      "path": "tables/historical-temporal-source-audit.csv",
+      "sha256": "11c60149f856671068831358f3ec894d958aba1ff5f5443ed5c755f7d4e128a8"
+    },
+    {
+      "path": "tables/historical-temporal-source-trials.csv",
+      "sha256": "c431f178b19ca2ade3e8eb04ac5644bc5cbc195ed910749ba32289524d431ce6"
+    },
+    {
+      "path": "tables/review_revision/attempt-flow.csv",
+      "sha256": "cd7b37adb851933b58162c84f4c9f28c5cf1e9a8e798ece3a4f15ba89ec0c40b"
+    },
+    {
+      "path": "tables/review_revision/attempt-workload-summary.json",
+      "sha256": "3444515799ccb50b74e406c0b13120ab2fed087dbfc06fef909ad6bb824038ee"
+    },
+    {
+      "path": "tables/review_revision/control-allocation-attempts.csv",
+      "sha256": "e03ffa482718694731ea40815cea98bdcb7418db96421b02145ac52ca442f5a8"
+    },
+    {
+      "path": "tables/review_revision/control-blocks.csv",
+      "sha256": "e2ae759c4da46ad49e81deb071e875333ee04349a6b3a4576566656b793d3e2d"
+    },
+    {
+      "path": "tables/review_revision/control-cases.csv",
+      "sha256": "b06d01bcfca5f8ebdd816f600c55062c53580edf867e2e4010d0ab7e15730695"
+    },
+    {
+      "path": "tables/review_revision/control-process-attempts.csv",
+      "sha256": "cec0864418ae7a170febb26a114c8ae2312185e18171c34a6cf26cadbb4c5a3c"
+    },
+    {
+      "path": "tables/review_revision/control-provenance.csv",
+      "sha256": "d0c06b95638a35e664cefddbcad69acfbb8357ff243dd9bfae7c6d6235c2c131"
+    },
+    {
+      "path": "tables/review_revision/control-realized-work.csv",
+      "sha256": "ee23d5167813bfa836174fb2df8d13fcc1052fb32cad7c02fe39dd554cc6f35a"
+    },
+    {
+      "path": "tables/review_revision/control-summary.json",
+      "sha256": "efc58a673e0c4123b29144d1ca20be026eda0411061a940f4077f1fc723ec909"
+    },
+    {
+      "path": "tables/review_revision/control-trials.csv",
+      "sha256": "2f22d1bb91ac2d942c14acc3b0be8d2156b4586c37fbecf7466dfbdc33157c09"
+    },
+    {
+      "path": "tables/review_revision/corpus-weighting-sensitivity.csv",
+      "sha256": "3f3599f0a9e0c67d55c1f09d0c1588a21f48633a29ea1619807fa216c0601b11"
+    },
+    {
+      "path": "tables/review_revision/decision-records.csv",
+      "sha256": "732553a82fb9f5c7fc196c61abb57660ed08e9603f00262521cf34d61335aa95"
+    },
+    {
+      "path": "tables/review_revision/decision-summaries.csv",
+      "sha256": "23cf65e4c35692739e8c4b6c87bc46029f83e915ff86b450662a91ae12b49a80"
+    },
+    {
+      "path": "tables/review_revision/factorial-allocation-history.csv",
+      "sha256": "8223d9eb6e1d56850ca762e3ba2bb47f9b8bddd73426f56e245cb0991df42527"
+    },
+    {
+      "path": "tables/review_revision/factorial-peak-stages.csv",
+      "sha256": "2f415781be310abf84fb832b7d5c8f49fa8f3a80b8aa0bfd13fca5c8a3b669c9"
+    },
+    {
+      "path": "tables/review_revision/factorial-workload-effects.csv",
+      "sha256": "c638f10314a073297d214fdd556caae2a56d589642561938135fe43bf1bc4a39"
+    },
+    {
+      "path": "tables/review_revision/instrumentation-stage-cells.csv",
+      "sha256": "5d35d0c4e89d593921fc05eaa4281d7c8cbd6466eaf0656e47d978dbd22cc4b4"
+    },
+    {
+      "path": "tables/review_revision/instrumentation-stage-pairs.csv",
+      "sha256": "05c6281ec6b357423627cd118d299ef694aa7ee882f93260d08fea88ef2915c1"
+    },
+    {
+      "path": "tables/review_revision/instrumentation-stage-trials.csv",
+      "sha256": "326214f1596f44b2ca2e9d3f3e02ab0919212a235b4e64f4f617b6e7caabbf46"
+    },
+    {
+      "path": "tables/review_revision/long-run-exposure.csv",
+      "sha256": "c20a9a9cddb6d626d1afa439b76faaac768df4d4472f17bc1f8da7c7e50d7bce"
+    },
+    {
+      "path": "tables/review_revision/original-temporal-case-effects.csv",
+      "sha256": "29a90be89d998fe68ef2a78625de3d035f98da75c89eee8b46011a60fcd80d74"
+    },
+    {
+      "path": "tables/review_revision/realized-workload-cases.csv",
+      "sha256": "0a97273df30f7d0fbb1b0af36d52f669ff9b52b1db90827af8c1bdb4c72da40a"
+    },
+    {
+      "path": "tables/review_revision/realized-workload-trials.csv",
+      "sha256": "63a9e3de8adf81bf9b9ab84c030e45fc0abc385ee824f41fa0957ab3e4de7e64"
+    },
+    {
+      "path": "tables/review_revision/recorded-attempts.csv",
+      "sha256": "9c772dc5b4b41d9ad0c6073d7bfa31d1cfa6c4fcc446092bdc4ef7f649559dfb"
+    },
+    {
+      "path": "tables/review_revision/release-idle-baselines.csv",
+      "sha256": "2be7bb95796f350f5fc100a921cdc27be1f3beda7312efe1b7781393e2352d5b"
+    },
+    {
+      "path": "tables/review_revision/state-release-design.csv",
+      "sha256": "83a3b99a3d0d71303dba6edfde15d62e4a928b70e9ae9504d33bccfdb1512474"
+    },
+    {
+      "path": "tables/review_revision/summary.json",
+      "sha256": "429331b6129a430f9de2b2534dc53e90f9e1fd79aaae6ed5697209f0292dd7bd"
+    },
+    {
+      "path": "tables/revision-allocation-provenance.csv",
+      "sha256": "e31a0801f41a62906a5066667d694ba544e7ed8309c3a45a29de01e71699dd14"
+    },
+    {
+      "path": "tables/revision-excluded-allocation-attempts.csv",
+      "sha256": "a42c04d96ac30471a60efd218e01e09afb7fd20fd6859ec2f1ca81892462d08d"
+    },
+    {
+      "path": "tables/revision-instrumentation-cells.csv",
+      "sha256": "cc8ba9511ef4733710082090bd03d0c5b477117fc9b69d54306313dbb79691c0"
+    },
+    {
+      "path": "tables/revision-instrumentation-inference.csv",
+      "sha256": "a51494036052ae1ea088758822ef0e0e1c1d23c6f1412e3f00cd87f3b22871cc"
+    },
+    {
+      "path": "tables/revision-instrumentation-pairs.csv",
+      "sha256": "ea852b4e35460a5e62840bcbc804c44c7fe739892a6f116e5351684ae872b08e"
+    },
+    {
+      "path": "tables/revision-instrumentation-trials.csv",
+      "sha256": "1381edf189a026946710b3d6469430d1b0316ac63f1c98e582ad51c1df98d36e"
+    },
+    {
+      "path": "tables/revision-temporal-cases.csv",
+      "sha256": "9418c5e274878d3b2d35bf0d514b86145f1d72528cc28b62fbc31fa7c4caa171"
+    },
+    {
+      "path": "tables/revision-temporal-pairs.csv",
+      "sha256": "8684dd8a13b0ce6d6bf3aed04ec2de51c0d5eb5aa71c5d834ab499910de349f9"
+    },
+    {
+      "path": "tables/revision-temporal-trials.csv",
+      "sha256": "dded1e9e511056d93b73bfa9a11ed8dd63a3d95ed9f2b2cc6f92e54500b911b2"
+    },
+    {
+      "path": "tables/revision-topology-cells.csv",
+      "sha256": "bbe2416d3aebf50bc76923fd474f03dc98c02768b5638ecf42adff5a720a769b"
+    },
+    {
+      "path": "tables/revision-topology-trials.csv",
+      "sha256": "f3740c89cfc150e8648538ea18aa1bd647be95457c4a4a38c2c375f3126d66ba"
+    },
+    {
+      "path": "tables/same-node-inference.csv",
+      "sha256": "c31f1abd38ad455ce4f06e1a8063a4e34b338206051fda3d82508dd448022988"
+    },
+    {
+      "path": "tables/same-node-pairs.csv",
+      "sha256": "bc4ffac15897b230f73565ceff22fb8ed546ff5cb5a350dd827d6729de9e2235"
+    },
+    {
+      "path": "tables/same-node-provenance.csv",
+      "sha256": "6ec5d81339e1909f914a1e541d9d9e3a13c97625228d671c7fad428d14bcbb46"
+    },
+    {
+      "path": "tables/same-node-trials.csv",
+      "sha256": "6a4bf28758f88758e09c34e8465d0c16e5142b4f757a24ab09939d9381ed797b"
+    },
+    {
+      "path": "tables/summary.json",
+      "sha256": "2aad62e93a2a49117ad3f3f013a103bfaa599a201383ac4ce7cb38c5623ab707"
+    },
+    {
+      "path": "tables/telemetry-downsampling.csv",
+      "sha256": "f32803911e3702b811cc2f6050075f30b2d7fe7c7fddb90f06904933b3537461"
+    },
+    {
+      "path": "tables/telemetry-overhead.csv",
+      "sha256": "eed6580e9a0fe06e639c531b2994a1e3813cd3e70e4b8430cfcf1707e5e01e8b"
+    },
+    {
+      "path": "tables/telemetry-trials.csv",
+      "sha256": "70e6ae040545fa53f51011a7e1bf2b97a5af3585c7bef78e6cdb93b27e5a9bab"
+    },
+    {
+      "path": "tables/temporal-100-inference.csv",
+      "sha256": "14ba9ecc8af5cf268bd26140adde6c0234a7f67ff61e0e8facef9832fd71cc0b"
+    },
+    {
+      "path": "tables/temporal-100-matrix.csv",
+      "sha256": "2ebf3b05a5dfd85936c4dc65c5e51c7ffffed89ee14b00f69a9eb8f9023f7b63"
+    },
+    {
+      "path": "tables/temporal-100-trials.csv",
+      "sha256": "b9066ba5fab0139a3ec03d02dbae944b91fa37e5a8014c0ec585153256ef261b"
+    },
+    {
+      "path": "tables/temporal-40-audit.csv",
+      "sha256": "02450359827e28a0edf9fd96f796a403e2e1f1c8e770bf88aeb9c40eeb02f4b6"
+    },
+    {
+      "path": "tables/temporal-40-summary.csv",
+      "sha256": "19ab950c596d3f48235ac215b53d0f4577797d5b4538fceffa7a2d51860653ea"
+    },
+    {
+      "path": "tables/temporal-40-trials.csv",
+      "sha256": "4b2c127deebbaf3ee3b73081f491b5a632d873e83b7c72183f7e15249175e49e"
+    },
+    {
+      "path": "tables/three-model-cases.csv",
+      "sha256": "8c4ddf18c4e4734f3db05838815808ff2500115ad129a00afd584b459425b009"
+    },
+    {
+      "path": "tables/three-model-configurations.csv",
+      "sha256": "b5f4b25f358fcbc131e754b720ed2691d40cab46f9923de40fd0bf56e35fc49a"
+    },
+    {
+      "path": "tables/three-model-transfer.csv",
+      "sha256": "5546f337cb18290c485e8412bf2e77e98d7308a677011880d7b4eef9e36c4de9"
+    },
+    {
+      "path": "tables/threshold-cases.csv",
+      "sha256": "29d2614b3317e8f635cefd7d4edca2b47b7449964be352f4c6fb57bcefed577c"
+    },
+    {
+      "path": "tables/threshold-transfers.csv",
+      "sha256": "85b1d0f0006e1dcf9489c9bdd4d1992c7f9102bd8b92d98a1ef18efb09fa089e"
+    },
+    {
+      "path": "verification/VALIDATION.md",
+      "sha256": "4f0b6b04444e7fd843bd9e09e8cad07a2e4fe934af521df0c6afacf884ffea5d"
+    },
+    {
+      "path": "verification/benchmark-reproduction.json",
+      "sha256": "c01897b1beea5bead4d632fd8cf5293882aef1d18572fa4c3f30a75cea69646f"
+    },
+    {
+      "path": "verification/benchmark-source-package.json",
+      "sha256": "8dade08ed047b303f61334fabecc0e858249dfa4ac01dd9a4772d2d0b53de44c"
+    },
+    {
+      "path": "verification/local-reproduction.json",
+      "sha256": "1fd391dfb571acb3d50133433605d35ea2c63e2281028092de2c114c1f69f72f"
+    },
+    {
+      "path": "verification/package-preparation.json",
+      "sha256": "bc21f03a41e9a989520260f705fa0a46abe6671630ec7ff568cbda63d83b2692"
+    },
+    {
+      "path": "verification/revised-reproduction.json",
+      "sha256": "a367674ae14f0bbab157f8c9e6fede2a8e5fa7d88d2c30ad9c596e48a923be4e"
+    },
+    {
+      "path": "verification/revised-source-package.json",
+      "sha256": "a066598a8b5565f94d6f0dcb08bb14149d0c31b7da274e6d3bf47a0768be444b"
+    },
+    {
+      "path": "upload-manifest.json",
+      "sha256": "97d40be09e4ef01c66f83e493159042062c5c359c5baa724bbbbb152ba0be1b3"
+    }
+  ]
+}

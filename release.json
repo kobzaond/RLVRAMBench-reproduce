@@ -1,15 +1,15 @@
 {
-  "release": "critical-revision-20260914-328c1c3",
-  "source_commit": "328c1c33a8b4353429be8e892ee6f8b3eb57c1c2",
+  "release": "benchmark-20260915-478b657",
+  "source_commit": "478b6574fd48b802ca949dd3ac6c2aa13d84230e",
   "huggingface_repository": "kobzaond/RLVRAMBench",
   "code_repository": "kobzaond/RLVRAMBench-reproduce",
   "archive": {
-    "path": "releases/RLVRAMBench-review-artifact-critical-revision-20260914-328c1c3.tar.zst",
-    "sha256": "81f9703da21b1fda72627960e477acdca5d196995787272d093788d46e6b9e4d",
-    "size_bytes": 174064706
+    "path": "releases/RLVRAMBench-review-artifact-benchmark-20260915-478b657.tar.zst",
+    "sha256": "d97cf83fcc4684cd7c54938c3f5ba40ce553edc63afb806561856fddc3a6ed48",
+    "size_bytes": 173759440
   },
-  "manifest_entries": 19509,
-  "archive_members": 19511,
+  "manifest_entries": 19530,
+  "archive_members": 19532,
   "expected_derived_files": 40,
   "principal_processes": 588,
   "supporting_source_processes": 16,
@@ -18,13 +18,20 @@
   "visibility_at_initial_deposit": "private",
   "visibility": "public",
   "public_release_date": "2026-09-14",
-  "original_material_license": null,
+  "original_material_license": "MIT",
   "expected_review_derived_files": 27,
   "review_control_completed_processes": 24,
   "review_control_attempted_processes": 26,
   "review_control_usable_blocks": 6,
   "original_recorded_attempts": 657,
-  "prior_immutable_release_preserved": "ieee-access-20260914-2897476",
+  "prior_immutable_release_preserved": "critical-revision-20260914-328c1c3",
   "manuscript_editing_authority": "direct_tex",
-  "huggingface_revision": "7bae491e9bb9e34160bf90464bfbafce47f48a42"
+  "benchmark_protocol_version": "1.0",
+  "benchmark_tasks": 52,
+  "benchmark_queries": 400,
+  "distinct_benchmark_target_configurations": 94,
+  "curated_eligible_processes": 612,
+  "curated_recorded_attempts": 683,
+  "license_selection_date": "2026-09-15",
+  "huggingface_revision": "5e443bca9b969197a2b2f8d0c96d8bf219ea51c0"
 }

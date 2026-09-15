@@ -1,19 +1,31 @@
-# Rights and release status
+# Rights and reuse
 
-This repository is public as of 2026-09-14 at the repository owner's request.
-The authors have not yet selected a license for their original research
-software or original research outputs. Public availability does not itself
-grant a software or data reuse license. No new license is asserted by this
-publication step.
+The repository owner selected **MIT** on 15 September 2026 for the authors'
+original RLVRAMBench research data and reproduction software.
+The accompanying MIT license covers the authors' original benchmark
+measurements, curated tables, analysis/evaluation code, and benchmark
+documentation to the extent the authors hold the relevant rights.
 
-The evidence archive retains the original provenance and applicable
-third-party notices. Upstream datasets, model descriptions, vendor software,
-and the IEEE manuscript template remain separate third-party materials.
-Their inclusion does not change their applicable terms.
+This is not a blanket relicensing of the evidence archive or upstream
+material. In the larger research repository the applicable license text is
+`LICENSE-RLVRAMBench`; in the standalone code and dataset repositories it
+is `LICENSE`. The original paper remains an authored manuscript;
+this notice does not select a journal publication license on the authors'
+behalf.
 
-No upstream model weights, trained checkpoint shards, or optimizer states
-are included in this reproduction-code repository or benchmark evidence
-release. Exact model identities and revisions are recorded in the evidence.
+Third-party source code, prepared or quoted upstream dataset content,
+model descriptions, and the IEEE manuscript template retain their own
+terms and notices. In particular, the instrumented VERL runtime and the
+TransferQueue dependency retain the license files in their respective
+directories. Dataset attribution and recorded upstream terms accompany
+the archived evidence. Users must follow those terms for the corresponding
+material, including prepared workload examples.
 
-Original-material license choices and DOI creation remain author actions.
-Applicable third-party terms continue to govern the corresponding materials.
+No upstream model weights, trained checkpoint shards, or optimizer-state
+payloads are redistributed in this release. Their exact identities and
+versions are recorded for users to obtain under the upstream terms.
+
+The benchmark and reproduction-code repositories are public and ungated.
+No DOI is asserted until the authors create one. License selection is
+separate from author submission approval, funding/conflict declarations,
+and any final journal paperwork.

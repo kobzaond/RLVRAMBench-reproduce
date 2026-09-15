@@ -126,11 +126,14 @@ def main() -> None:
     # Keep the authenticated reference tables for comparison, never as analysis inputs.
     reference = work / "reference-profiles"
     (artifact / "profiles").rename(reference)
+    curated_reference = work / "reference-benchmark"
+    if release.get("benchmark_protocol_version"):
+        (artifact / "benchmark").rename(curated_reference)
     shutil.copytree(
         reference / "strengthening/same_node",
         artifact / "profiles/strengthening/same_node",
     )
-    hidden = [reference, ORIGINAL_ROOT] if args.isolate_analysis else []
+    hidden = [reference, curated_reference, ORIGINAL_ROOT] if args.isolate_analysis else []
     tables = work / "results"
     report = work / "reports/evidence.md"
     run_child([
@@ -208,12 +211,30 @@ def main() -> None:
         for extension in (".pdf", ".png"):
             if (work / "figures" / (name + extension)).stat().st_size == 0:
                 raise ValueError(f"Empty generated figure: {name}{extension}")
+    curated_count = 0
+    if release.get("benchmark_protocol_version"):
+        shutil.copytree(review_tables, artifact / "profiles/review_revision")
+        curated = work / "benchmark"
+        run_child([
+            str(ROOT / "export_benchmark.py"), "--root", str(artifact),
+            "--output", str(curated),
+        ], work, hidden)
+        expected_names = {p.name for p in curated_reference.iterdir() if p.is_file()}
+        actual_names = {p.name for p in curated.iterdir() if p.is_file()}
+        if actual_names != expected_names:
+            raise ValueError("Curated benchmark file set differs")
+        for name in sorted(expected_names):
+            if (curated / name).read_bytes() != (curated_reference / name).read_bytes():
+                raise ValueError(f"Reconstructed curated benchmark differs: {name}")
+        curated_count = len(expected_names)
     result = {
         "status": "passed", "archive_sha256": sha256(args.archive),
         "archive_members": members, "manifest_entries_verified": manifest_entries,
         "principal_processes": 588, "supporting_source_processes": 16,
         "derived_csv_json_files_matched": len(originals), "figures_regenerated": 4,
         "revised_csv_json_files_matched": review_count,
+        "curated_benchmark_files_matched": curated_count,
+        "curated_references_hidden_during_analysis": bool(curated_count and args.isolate_analysis),
         "review_control_completed_processes": release.get("review_control_completed_processes", 0),
         "review_control_attempted_processes": release.get("review_control_attempted_processes", 0),
         "reference_profiles_removed_from_analysis_root": True,

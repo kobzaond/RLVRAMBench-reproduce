@@ -1,9 +1,10 @@
 cff-version: 1.2.0
 message: "Please cite the RLVRAMBench evidence release and associated paper."
 type: software
-title: "RLVRAMBench: CPU-only reproduction code"
-version: "2026.09.14-r2"
-date-released: "2026-09-14"
+title: "RLVRAMBench: resource transfer benchmark and reproduction code"
+version: "2026.09.15"
+date-released: "2026-09-15"
+license: MIT
 authors:
   - family-names: Kobza
     given-names: Ondřej

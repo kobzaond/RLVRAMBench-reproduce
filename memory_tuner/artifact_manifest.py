@@ -526,6 +526,15 @@ def collect_files(
 
     static_globs = (
         ("README.md", "review_entry_point"),
+        ("LICENSE-RLVRAMBench", "original_material_license"),
+        ("RIGHTS.md", "rights_notice"),
+        ("BENCHMARK.md", "benchmark_protocol"),
+        ("DATA_DICTIONARY.md", "benchmark_schema"),
+        ("benchmark.py", "benchmark_evaluator"),
+        ("export_benchmark.py", "benchmark_curator"),
+        ("test_benchmark.py", "benchmark_tests"),
+        ("benchmark/*.csv", "curated_benchmark"),
+        ("benchmark/*.json", "curated_benchmark"),
         ("memory_tuner/README.md", "review_entry_point"),
         ("logs/revision-*.out", "scientific_revision_scheduler_log"),
         ("logs/revision-*.err", "scientific_revision_scheduler_log"),

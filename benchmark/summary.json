@@ -1,0 +1,77 @@
+{
+  "protocol_version": "1.0",
+  "configurations": 212,
+  "eligible_processes": 612,
+  "recorded_attempts": 683,
+  "never_started_conditions": 6,
+  "stage_measurements": 3434,
+  "historical_source_screens_counted_separately": 16,
+  "transfer_configurations": 98,
+  "distinct_target_configurations": 94,
+  "queries": 400,
+  "tasks": 52,
+  "per_track": {
+    "model_transfer": {
+      "queries": 144,
+      "tasks": 24
+    },
+    "workload_transfer": {
+      "queries": 216,
+      "tasks": 12
+    },
+    "gpu_count_transfer": {
+      "queries": 36,
+      "tasks": 12
+    },
+    "horizon_transfer": {
+      "queries": 4,
+      "tasks": 4
+    }
+  },
+  "eligible_processes_by_study": {
+    "batch_logging_control": 24,
+    "batch_reservation": 144,
+    "boundary": 216,
+    "four_gpu": 54,
+    "horizon_followup": 24,
+    "instrumentation": 72,
+    "sampling_calibration": 12,
+    "state_release": 36,
+    "temporal_100": 12,
+    "temporal_40": 18
+  },
+  "original_100_step_attempts": [
+    {
+      "attempt_id": "attempt-8e124d3b9f944cfd",
+      "configuration_id": "cfg-331bb196cd92fe75",
+      "run_id": "",
+      "study": "temporal_100",
+      "experiment_id": "strong-time-grpo-gsm8k-qwen25_3b-safe_margin-s92",
+      "job_id": "5032255",
+      "eligible": 0,
+      "recorded_outcome": "no_trial_record",
+      "documented_completion": 0,
+      "failure_kind": "",
+      "exclusion_reason": "temporal_cuda_ipc_weight_sync_failure",
+      "last_completed_step_if_documented": 63,
+      "evidence_files": "output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-safe_margin-s92/environment-5032255.json;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-safe_margin-s92/gpu-memory-5032255.csv;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-safe_margin-s92/gpu-telemetry-5032255.csv;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-safe_margin-s92/phase-memory-5032255.csv;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-safe_margin-s92/training-5032255.log",
+      "scheduler_evidence": ""
+    },
+    {
+      "attempt_id": "attempt-1677fa3ecaffcc0b",
+      "configuration_id": "cfg-c52a49b3491283c7",
+      "run_id": "",
+      "study": "temporal_100",
+      "experiment_id": "strong-time-grpo-gsm8k-qwen25_3b-near_boundary-s91",
+      "job_id": "5032257",
+      "eligible": 0,
+      "recorded_outcome": "no_trial_record",
+      "documented_completion": 0,
+      "failure_kind": "",
+      "exclusion_reason": "temporal_weight_sync_no_progress",
+      "last_completed_step_if_documented": 77,
+      "evidence_files": "output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-near_boundary-s91/environment-5032257.json;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-near_boundary-s91/gpu-memory-5032257.csv;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-near_boundary-s91/gpu-telemetry-5032257.csv;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-near_boundary-s91/phase-memory-5032257.csv;output/strengthening_temporal_phases/strong-time-grpo-gsm8k-qwen25_3b-near_boundary-s91/training-5032257.log",
+      "scheduler_evidence": ""
+    }
+  ]
+}

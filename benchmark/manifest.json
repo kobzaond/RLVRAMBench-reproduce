@@ -1,0 +1,46 @@
+{
+  "protocol_version": "1.0",
+  "algorithm": "sha256",
+  "files": {
+    "attempts.csv": {
+      "sha256": "397c8caaf0d3abe06587fd649c181fe71d5b8b5f5e24e0591cc7e56d38e275c1",
+      "size_bytes": 588698
+    },
+    "configuration_results.csv": {
+      "sha256": "cc88941ce02ad4997fe872fd523ff0cfc41c7e70b0112c3ef02c4815293227d0",
+      "size_bytes": 88546
+    },
+    "configurations.csv": {
+      "sha256": "3a77c96a67b82e01d23fb6f7a440cba23041bed1dae2749072cb9abb5b5d239d",
+      "size_bytes": 71349
+    },
+    "not_started_conditions.csv": {
+      "sha256": "bde7386b464b21c769acc6c718b81a5c96c94318846869d9e814402db22fecb2",
+      "size_bytes": 999
+    },
+    "outcomes.csv": {
+      "sha256": "af05cd91ed1de843735cc188e5e54dbd1645b3ed91c97f503ac3de67bc5f61c9",
+      "size_bytes": 21219
+    },
+    "queries.csv": {
+      "sha256": "0f0cac66cb22681a2dc90145a7c34da1d08cbb865427fe4f4e3f08e2255917b8",
+      "size_bytes": 59301
+    },
+    "runs.csv": {
+      "sha256": "8e00ac4969709f71a6e780396085c9a259a71986dd45825cf52d42c061c53d5c",
+      "size_bytes": 517086
+    },
+    "stage_measurements.csv": {
+      "sha256": "c6e42d81e3da672faad298bb721b0d22f14dec99670a32149633aa6b6e5f478d",
+      "size_bytes": 667734
+    },
+    "summary.json": {
+      "sha256": "3378dbd45be90928ab839f9a4f16cc807b03168665ab169a8fcd98f1c9012c80",
+      "size_bytes": 3218
+    },
+    "transfer_configurations.csv": {
+      "sha256": "57cc5bff368eb5a981faaea300a097d11c9b7734031a8bf4a3a40cfef408686d",
+      "size_bytes": 40770
+    }
+  }
+}
