@@ -1,0 +1,1741 @@
+{
+  "accounting_validation_implementation_sha256": "9b00de319d8ac76d32897322bfbdfde47248737436854111f1e1808f156d4d08",
+  "allocation_accounting_sha256": "8df8040c1cd1608abd10759dd42448d734aa1b501733c926978247d2177f12ee",
+  "amendments_sha256": {},
+  "analysis_implementation_sha256": "8326859efb69b0c0f7003932d1b491efb80618671437e87d77edbb3ec5f484ba",
+  "contamination_scope": "All-four allocation samples, excluded-device process membership, and recorded live-child ownership annotations. This is not continuous monitoring or an independent offline reconstruction of PID ancestry.",
+  "data_verification_scope": "Environment-captured dataset file hashes compared with frozen protocol; no external dataset/cache paths are opened.",
+  "evaluation_seeds": [
+    161,
+    162,
+    163
+  ],
+  "execution_commits_expected": {
+    "host-qwen25-7b-code_heavy_tail-c2-s161": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-code_heavy_tail-c2-s162": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-code_heavy_tail-c2-s163": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-gsm8k-c2-s161": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-gsm8k-c2-s162": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-gsm8k-c2-s163": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-math-c2-s161": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-math-c2-s162": "120e29a146294722a6668f55a1e7fed2878eb62a",
+    "host-qwen25-7b-math-c2-s163": "120e29a146294722a6668f55a1e7fed2878eb62a"
+  },
+  "execution_commits_file_sha256": "117b2449b2365db03f5af05aeae2c2943421ab739e5fd3c0ae16e3ce67ac5fcc",
+  "followup_execution_implementation_sha256": {
+    "memory_tuner/host_capacity_protocol.py": "9bf811457f04e02e67e31d3c9289d1155f73ee1364a233b6b77d08d86becf44b",
+    "memory_tuner/run_host_capacity.py": "23f1eaf462f1825a77e91d2c8d8a4ab073f4debe0fbab134ff1863e096345d37",
+    "memory_tuner/run_matched_gpu.py": "f340fb7eec5297cb675a48e267618c15d7787a42891d4a2ae4a670ec24a0cc47",
+    "run_host_capacity.slurm": "59d3daa9499d1fc76d0b856be6c0a813472f488eb49f990e6ffa57ccf819b919"
+  },
+  "input_evidence": {
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/device-evidence/probe-exit-idle.json": {
+      "sha256": "317a8229f1b7a033ae6cea9ff8b03ca210281693e19f65878528da02f52f356b",
+      "size_bytes": 3698
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/device-evidence/ray-resources.json": {
+      "sha256": "610908fab2f887705d78ce4cfed5bb2ecb3038871ff5bfde8f12bb315939ce99",
+      "size_bytes": 1562
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/device-evidence/trainer-cuda.json": {
+      "sha256": "8e2e176c981d952af70e0964bd3eb8ac8a48a5a75b98a93e1cf3d3f9d1636079",
+      "size_bytes": 583
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/device-evidence/trainer-exec.json": {
+      "sha256": "f9290c8a8267e4ccd99dcc3338e9fdca20de37469a768ac6c0aa4c362f7a4c8f",
+      "size_bytes": 376
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/device-evidence/trainer-terminal.json": {
+      "sha256": "67e1f2dd748e16079c5e284434b3ffbdc1ea75bf2c0f047c6a6cd8c629d5e7f0",
+      "size_bytes": 174
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/device-evidence/worker-actor_rollout-0-785045.json": {
+      "sha256": "48198fb0e30f9fc06f6cb14f97dccc5ccdcb5470d1149e2e836b6cc970ff6e9a",
+      "size_bytes": 666
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/device-evidence/worker-actor_rollout-1-785046.json": {
+      "sha256": "c48dea5650a9eda288922dffb3f31a0ee01649668835ce43bc48e948b1aee86f",
+      "size_bytes": 666
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/dispatch.json": {
+      "sha256": "0b5219038e55e417a00cfbfc8a84e45472b382d994c2eb0d2474b3202749859f",
+      "size_bytes": 4630
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/environment-5055846.json": {
+      "sha256": "ad77dda0d199c07c339f028e57459e8bc8c4079923fcaa0bd120d01a37945df4",
+      "size_bytes": 4480
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/gpu-device-map.json": {
+      "sha256": "48fc347cb1f7442021896590ef2acf5c73cece9137f96512ae24160e52162e25",
+      "size_bytes": 481
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/gpu-memory-5055846.csv": {
+      "sha256": "00fc8fc99defa900cc3b0488493cba4ee717574cb93aa1dcb35a1867d976395f",
+      "size_bytes": 36538
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/gpu-telemetry-5055846.csv": {
+      "sha256": "56227a8a9acaf2cc1da6c1ecc40d55276b2c6ccf892f1eb4a217d0a0553b1fd2",
+      "size_bytes": 108682
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/launcher.log": {
+      "sha256": "6e5443e8139eee4e8446fa0cd7be23b99102dc86d565b9712a7f9bb030a2b4f7",
+      "size_bytes": 150634
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/phase-memory-5055846.csv": {
+      "sha256": "04069b47f97de2910f17ff8144e18d3a116fb7e582e60b69645bb7594fccc92e",
+      "size_bytes": 55153
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/training-5055846.log": {
+      "sha256": "b5d9d111a6048ed6842d1fcb68ef5b659e91a000757cc5ddda980044a9e36c48",
+      "size_bytes": 150457
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-2gpu/attempt-5055846/trial-5055846.json": {
+      "sha256": "d0d275cde371f33712b8417412596f2473a6f2ff7764dfbc470ab23b5922028b",
+      "size_bytes": 1499
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/allocator-traces/allocator-758712.jsonl": {
+      "sha256": "237f3db3f4ee0502092e87504b3e3ab952c06c68ebf075635123e24b623e7962",
+      "size_bytes": 1393
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/allocator-traces/allocator-758713.jsonl": {
+      "sha256": "6cc10bc0d3dc002353835670fbd48b71c88e4aaf2267ff986c8f3238d63a4bdf",
+      "size_bytes": 1407
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/allocator-traces/allocator-758714.jsonl": {
+      "sha256": "8fc219edfad6eca5ef1694f266a3f19ca3ee0a9ee8207c2774b3db1222ba0bab",
+      "size_bytes": 1407
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/allocator-traces/allocator-758715.jsonl": {
+      "sha256": "0508ff371ee5318190ca65dcf287d1f94d327c08c1c5e01c6981131e3f100738",
+      "size_bytes": 1406
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/probe-exit-idle.json": {
+      "sha256": "6a6e35af2ea340a856e18be694168e8587f9d3d3575bd64400ab88b471d5fc0b",
+      "size_bytes": 3698
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/ray-resources.json": {
+      "sha256": "89b0eef9f11bf2410e16adf138881e9279b8180c8e088e408da7be4cad6cf1ff",
+      "size_bytes": 1562
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/trainer-cuda.json": {
+      "sha256": "5820a2e0f3ba51e642931c885f3f43502ef56b351f7670290646bccad896ad64",
+      "size_bytes": 865
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/trainer-exec.json": {
+      "sha256": "3a1ad878499715670aa9ece0872393e108b3393bc0166b43aaedb4bce24bc005",
+      "size_bytes": 458
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/trainer-terminal.json": {
+      "sha256": "0942a52ac8957c497268d618d7bf358d8b99b6b9c02da9e9e9b1d0892fa4491c",
+      "size_bytes": 174
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/worker-actor_rollout-0-758712.json": {
+      "sha256": "cc22deb10c6cc59eb6172d5f2d697f2d3de0bcd0fbf920a38daf332badc2867a",
+      "size_bytes": 666
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/worker-actor_rollout-1-758713.json": {
+      "sha256": "c01d7f8a2dc010a749c3540d00d98bf1ccf23d2bbc7c36f01f8609d92e382cf8",
+      "size_bytes": 666
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/worker-actor_rollout-2-758714.json": {
+      "sha256": "6248256328c9a8a8d1b17776164bb09e98166448d0020db151013315df63253a",
+      "size_bytes": 666
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/device-evidence/worker-actor_rollout-3-758715.json": {
+      "sha256": "aceeffd2a6ee21ab2fa57b9cd44f1835f7fe94bdc32e87dd8822ecfac355216b",
+      "size_bytes": 666
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/dispatch.json": {
+      "sha256": "2c8d944f9c5385b576c03f6f1f550a313abac8472239f8112e31d0afb33da359",
+      "size_bytes": 4812
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/environment-5055846.json": {
+      "sha256": "d2fd4cb853a77d21cd58983c2063cf4462cd38f1c5ac3c350f31d9ca5d03cbf6",
+      "size_bytes": 4962
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/gpu-device-map.json": {
+      "sha256": "bf42e34a2974029d72c2b7863dae610e3ab7d616434773fd5b16797fea263dd0",
+      "size_bytes": 821
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/gpu-memory-5055846.csv": {
+      "sha256": "b947238f0b063509a2d3848b9c15fbee8ccc080a02e28a1594c5ac1c0f943dfb",
+      "size_bytes": 149624
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/gpu-telemetry-5055846.csv": {
+      "sha256": "e14a9d5bd790a955a984a61fd0f8e818f0040c9bed52327b26eb97287fd1e410",
+      "size_bytes": 627123
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/launcher.log": {
+      "sha256": "99e909eabae1325c5bca0c58a2b35ee1910aed49ef393e80aba79ec187ce63e6",
+      "size_bytes": 139859
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/phase-memory-5055846.csv": {
+      "sha256": "184c366e1cbb8b477d4186ac608cc3b686d934c99f9760083fdebe7f50ae9bba",
+      "size_bytes": 199718
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/training-5055846.log": {
+      "sha256": "c0a06ee1b70eb401ba453451faff7ab6910a9edc73f2db1f8b65191c9f0663e7",
+      "size_bytes": 139682
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s161-4gpu/attempt-5055846/trial-5055846.json": {
+      "sha256": "15b9753bd1175cf3f27daf5d24eee202065c409aa189dde3d3c3bb0633fc572a",
+      "size_bytes": 1499
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/device-evidence/probe-exit-idle.json": {
+      "sha256": "ccf86c42e2729d8819e2f489db8c46c4e8dc0e576287c72d240eaa7dd85e9335",
+      "size_bytes": 3700
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/device-evidence/ray-resources.json": {
+      "sha256": "8c5031bb537472738d9d1b2b71d112a5ae91e4998fc59fdfc2f86b40383e2d6b",
+      "size_bytes": 1569
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/device-evidence/trainer-cuda.json": {
+      "sha256": "fd3d3912570b8136ac41be1fcab01e7364cb159775cfe59e82e550900d1fa9fc",
+      "size_bytes": 585
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/device-evidence/trainer-exec.json": {
+      "sha256": "cdef3e6e9d334a02ce252d012e9923a9da930b3c3a45de85da6c6ebe9de64d82",
+      "size_bytes": 377
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/device-evidence/trainer-terminal.json": {
+      "sha256": "b0216e4334a15b5abcf32e4af453caf9f2fd46dfdecb0b767e58bf9e3147c47f",
+      "size_bytes": 175
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/device-evidence/worker-actor_rollout-0-3478886.json": {
+      "sha256": "708edf03ab020a3363dddc33ac3d5282c089be892f034ea0df819674a80c832c",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/device-evidence/worker-actor_rollout-1-3478887.json": {
+      "sha256": "ce6f403dbb4e71b91278fa3bf5cba8423c1b10e1f5bea1f64d06f379f887ddf9",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/dispatch.json": {
+      "sha256": "fe5c73ba28b4f32167071aa50e54e73a87642ebec6871e26d93222fe0c5c70c9",
+      "size_bytes": 4630
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/environment-5055848.json": {
+      "sha256": "9924d3cc2a3eb8d5e6fc4c194bf9cb1ba898b84c84e31aa07546adfd4e59a8e3",
+      "size_bytes": 4480
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/gpu-device-map.json": {
+      "sha256": "417db269bf5669e7758705ec1fe0e4aa7fcc5007e50b6c888710040ceb680a25",
+      "size_bytes": 481
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/gpu-memory-5055848.csv": {
+      "sha256": "fa0f3a4c885dab4b89e360a20e48698ba7f71d8d820201ab9fccafef3829ce84",
+      "size_bytes": 47315
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/gpu-telemetry-5055848.csv": {
+      "sha256": "521a962b610439a1ec06f91f32d43b796c0cf4175f1efc2fc7b24cc139952f69",
+      "size_bytes": 141810
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/launcher.log": {
+      "sha256": "0f1caf14cff11a808f3a6aa0c9a631ebf4c1790409b599f5ed42315c35d17e17",
+      "size_bytes": 153606
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/phase-memory-5055848.csv": {
+      "sha256": "0320c4bc9b1f30f162c484ac4af8ba2585a0d2f3f79bea50d0a1daa12b65ecbb",
+      "size_bytes": 71705
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/training-5055848.log": {
+      "sha256": "1909dd87471aed1c70fe69af46d054cca0d240cc7bb9cb0031df948d2ab633e1",
+      "size_bytes": 153429
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-2gpu/attempt-5055848/trial-5055848.json": {
+      "sha256": "0945a4ede73353e833330875e9251560a1626701fb3de1ff22edcf08921eec27",
+      "size_bytes": 1499
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/allocator-traces/allocator-3495668.jsonl": {
+      "sha256": "b64368980849bbc3b593e271bcea4cb533a8be5ec4aaa4694a7456a08245e354",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/allocator-traces/allocator-3495669.jsonl": {
+      "sha256": "0924639d3c389620652ced866db7eeef372c60fa15e7a105feb445e172477000",
+      "size_bytes": 1412
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/allocator-traces/allocator-3495670.jsonl": {
+      "sha256": "91600e16dbfa0a040a38bd69a9d9629d0a0b2c2c4ace62e66c10b8617c3a8f8b",
+      "size_bytes": 1412
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/allocator-traces/allocator-3495671.jsonl": {
+      "sha256": "5652d1290211e5d919dfe0dc39aeb52de38bb3e23ac047579ec46cf00d62f578",
+      "size_bytes": 1410
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/probe-exit-idle.json": {
+      "sha256": "2a403f722123549ece86ba038d2b641f3762ba8935309a58cf87c4ab11b0bb78",
+      "size_bytes": 3700
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/ray-resources.json": {
+      "sha256": "89426c7f8c5a133bc86254e7a19e30999e2a804fcd9f38e0ebc090f903f8c4d8",
+      "size_bytes": 1569
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/trainer-cuda.json": {
+      "sha256": "96f974c3689f7b68d8462fef004bc52552b944f79029b976ef99cf449346430c",
+      "size_bytes": 867
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/trainer-exec.json": {
+      "sha256": "60d32be87f137fcd38bdb66a3e0d7f771913ca5368b67c8b00b49f40515131ac",
+      "size_bytes": 459
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/trainer-terminal.json": {
+      "sha256": "836d138bc0b2c4873fdd171d83c554745fd3c4e8d119e92ae3579c2b661dbd02",
+      "size_bytes": 175
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/worker-actor_rollout-0-3495668.json": {
+      "sha256": "e3340f3e79ee58d06d3c02aa2eaeeb6f141f600f94efe674543c6be25d00d7a9",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/worker-actor_rollout-1-3495669.json": {
+      "sha256": "a122b6b0ecea422ebbe985070f714ef261f7901c5e66e0f4e485d47fbac806cd",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/worker-actor_rollout-2-3495670.json": {
+      "sha256": "ec98aaa1fe011e54210ba5399f40aba9e5c349cd4b0aa31ca8c9dee71e100e28",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/device-evidence/worker-actor_rollout-3-3495671.json": {
+      "sha256": "24fb3a972eb96e8fd6c860ff7ef8f321db13c45ebc20b3cecc9c6f811685e7ac",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/dispatch.json": {
+      "sha256": "2264033450431d19eb64390c965c3eaef0f685a1137df6d6cf01235f05d413c3",
+      "size_bytes": 4812
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/environment-5055848.json": {
+      "sha256": "5ab3cd1a603438812d4bd3aa841214fae60a542bfe04f71b277732424dfb299c",
+      "size_bytes": 4962
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/gpu-device-map.json": {
+      "sha256": "440b3a97cb0f3055d6048204ee645ce35c1087c4289b5c0a62bb1dc3a880425d",
+      "size_bytes": 821
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/gpu-memory-5055848.csv": {
+      "sha256": "fcc04ca1930bf1af4dcdfaf07036ac3fe4a33df306c8d04771e5e692e1307667",
+      "size_bytes": 170153
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/gpu-telemetry-5055848.csv": {
+      "sha256": "bf689d971bfacb96d1ce1fe032f4d765b9769850c37299a85baf707a69beb987",
+      "size_bytes": 719404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/launcher.log": {
+      "sha256": "bbd29c44f2be99a05214921e90ad01ed109fe44cc53099d489a84323e085c757",
+      "size_bytes": 140056
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/phase-memory-5055848.csv": {
+      "sha256": "bdc9512bdc1effe37cdd9123f1abd3f232ff84078f29100358ca833a31639593",
+      "size_bytes": 227809
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/training-5055848.log": {
+      "sha256": "35b26697a53089c099ae97bebccfb9423f8b8e11c309024871493c2b6a498e40",
+      "size_bytes": 139879
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s162-4gpu/attempt-5055848/trial-5055848.json": {
+      "sha256": "a2e91ca58a8b45720caad32975802df6cda872d7c2a9dc32cd7b6da923c33652",
+      "size_bytes": 1499
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/device-evidence/probe-exit-idle.json": {
+      "sha256": "5935d8a811f889bfbd1b26d7a7feabe261eec09fefe9cd13f94c3cc6f9462b4b",
+      "size_bytes": 3700
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/device-evidence/ray-resources.json": {
+      "sha256": "e618a8d7fb43bbc293e2676ac6cf879820c7e77b9fec44a4ee785eda9ed19202",
+      "size_bytes": 1569
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/device-evidence/trainer-cuda.json": {
+      "sha256": "804d1d056d7be6be3ceaa92146e7c1d1f40e1069ff60d9f5b3f185908a312581",
+      "size_bytes": 585
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/device-evidence/trainer-exec.json": {
+      "sha256": "375478d43cc8c8ee0901cc31c39d6940b9b622bd41503ef35e32fc759c9e6a56",
+      "size_bytes": 377
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/device-evidence/trainer-terminal.json": {
+      "sha256": "16ad8b9df50bd9a21e57fec73cef32ba3c761bc03f86eccf80ebacd419fae906",
+      "size_bytes": 175
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/device-evidence/worker-actor_rollout-0-3597430.json": {
+      "sha256": "c71c45b092acfaaa2723dba1e03a1b1104eb7d9029ff9ad62b1ac1dfd0d1c63c",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/device-evidence/worker-actor_rollout-1-3597431.json": {
+      "sha256": "9f8513b16ffaa1c78e6784dc218e32915f64073e4ec67e664680941139d66d77",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/dispatch.json": {
+      "sha256": "a4ba020d9271c4d43a7c48eb8550fd30f62b25ac90bb1fc196adb9f91a0a03ed",
+      "size_bytes": 4630
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/environment-5055860.json": {
+      "sha256": "32683146c80c4906929ef7fb7ec24a7997a42e276135f6b2ebf47bdee96a1635",
+      "size_bytes": 4480
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/gpu-device-map.json": {
+      "sha256": "89c13a77db7deed706ff42ee258f71d338a71ee4e833e3eb26e23bca8e4f1ce0",
+      "size_bytes": 481
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/gpu-memory-5055860.csv": {
+      "sha256": "feafac6e66d0ef3c280f9ebbeffdb9632b5a6209866659342bf7b341cc146a6b",
+      "size_bytes": 40276
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/gpu-telemetry-5055860.csv": {
+      "sha256": "72c5d3af90ea3fe71d14ee447aaadb23f74e453ca127d6d2cd3e4d4ee5415aa0",
+      "size_bytes": 120104
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/launcher.log": {
+      "sha256": "f7b4b982280434e461b137f779bd9d0a35c86478722397b9d74949984b5ead17",
+      "size_bytes": 145318
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/phase-memory-5055860.csv": {
+      "sha256": "667c1431ddf1898711cdac4b831dad0a16c12a6c19e94f3c9d6016096dfa492f",
+      "size_bytes": 60871
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/training-5055860.log": {
+      "sha256": "895a58c05190eba784ce5c123d9db6157cfd55f6e6cfdafb053273f3de646f33",
+      "size_bytes": 145141
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-2gpu/attempt-5055860/trial-5055860.json": {
+      "sha256": "13eaa77fd572f4f7e44c785e6b6d825e0403c341c955301c3d3c63f8ba5f4d76",
+      "size_bytes": 1499
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/allocator-traces/allocator-3613579.jsonl": {
+      "sha256": "e34a2d8cf67428ab9502a4779a60a631d6e15e1bf8415221c950079ac61b94ce",
+      "size_bytes": 1399
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/allocator-traces/allocator-3613580.jsonl": {
+      "sha256": "c4adc669de08f5f8f0e1d0b7c51215743f08c9ee1227ee2321b952dcb5a51da9",
+      "size_bytes": 1412
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/allocator-traces/allocator-3613582.jsonl": {
+      "sha256": "64b58235b0429004b028bcb568cdfeba6880e0b398c9c3fa8ceafbcb28b4e521",
+      "size_bytes": 1411
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/allocator-traces/allocator-3613583.jsonl": {
+      "sha256": "142ca5ca266f061fac4393828f4e685c3ff4c900b65450a918757c94cdadfc4a",
+      "size_bytes": 1410
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/probe-exit-idle.json": {
+      "sha256": "9c2a06024e063e250922387d554b699c05c531ce02383334e78a25707701de3d",
+      "size_bytes": 3700
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/ray-resources.json": {
+      "sha256": "7c354cd31a471afb64c854910f78188c4e7f335286f16223a429887bd689e68b",
+      "size_bytes": 1569
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/trainer-cuda.json": {
+      "sha256": "83cba14c3f5e8b25580ebd1de2163d36209210666b9bedcd593507257dbb036b",
+      "size_bytes": 867
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/trainer-exec.json": {
+      "sha256": "460457015084960e6062416a95b3b22e85173c73c22e7595364389968f0aba47",
+      "size_bytes": 459
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/trainer-terminal.json": {
+      "sha256": "301f324b55a15de2ff50e14906c4b217e027e0e9fe5abd2ec77c068d5e92143c",
+      "size_bytes": 175
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/worker-actor_rollout-0-3613579.json": {
+      "sha256": "6d30ce79da2c60a1144f105f00ada4263a00165bc9cc95d1233383ec34bbd56f",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/worker-actor_rollout-1-3613580.json": {
+      "sha256": "b738a4d93f6791a05bced4f7ed5a068d101fd6a238fef3c0d7944c8bee0a6b9d",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/worker-actor_rollout-2-3613582.json": {
+      "sha256": "928f5a1569f9e4cb6cbd8bba290091aff2730627d21ab144cfaf73d332692577",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/device-evidence/worker-actor_rollout-3-3613583.json": {
+      "sha256": "4b0dd9ce9a027a121768cc1debb550915007d0dfb7e6df59d94c2ed460fdb7d2",
+      "size_bytes": 667
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/dispatch.json": {
+      "sha256": "b068e897364aa48576d7ea3df3d5026ee6f9fa3991be8cea01af6067df2bd05c",
+      "size_bytes": 4812
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/environment-5055860.json": {
+      "sha256": "eacf127f7427362427f574e136c9723f53d1d64a0d359fa8e00cdd1badbc699e",
+      "size_bytes": 4962
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/gpu-device-map.json": {
+      "sha256": "bbb64b1c5850fb05aad5f82ff05f75460d575c41ba7117b1a7725a957a777f5f",
+      "size_bytes": 821
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/gpu-memory-5055860.csv": {
+      "sha256": "5d529432ba8ccec094d1573677cc486f25c4ac8e62056605f4a6443d921453de",
+      "size_bytes": 164699
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/gpu-telemetry-5055860.csv": {
+      "sha256": "57283f2d1e6b11a13b5f492e83e527b02035d138a4af3585e09ca16b2575451a",
+      "size_bytes": 693899
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/launcher.log": {
+      "sha256": "bf556f67fd0ceec92ee6b57e4513b2231de377f2bcba262949c1b9974bb88263",
+      "size_bytes": 140721
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/phase-memory-5055860.csv": {
+      "sha256": "6e566f59f552b71135edbefd96d5ef01659bea3ca67cd4c9eb5905cee4a9b9c5",
+      "size_bytes": 220077
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/training-5055860.log": {
+      "sha256": "fe75b20444c02557e12dca7f32c471b373c3956008c30024ccf9c71cddee8b24",
+      "size_bytes": 140544
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-code_heavy_tail-c2-s163-4gpu/attempt-5055860/trial-5055860.json": {
+      "sha256": "90e351c33f99b8a588cd62e7ea4ae13bd305e461cdced4ffeee4e902e0037181",
+      "size_bytes": 1499
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/device-evidence/probe-exit-idle.json": {
+      "sha256": "b777aa76bec88b8be516c9ee3075027f11a74df773673d1ad11f2b833227ab48",
+      "size_bytes": 3690
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/device-evidence/ray-resources.json": {
+      "sha256": "8c9b1d208ed79b24efa930019ed26ad8f52d4eb4f336966f282ebe90c3f9d444",
+      "size_bytes": 1559
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/device-evidence/trainer-cuda.json": {
+      "sha256": "2df904fc2102b1d25f7a00c8bc43e94492e004db5c7005848d88ecc04a96e683",
+      "size_bytes": 575
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/device-evidence/trainer-exec.json": {
+      "sha256": "c3dc088929144a56e4bd35142c40dc42b438a9b2117904a0ed37f35f045ae6f3",
+      "size_bytes": 367
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/device-evidence/trainer-terminal.json": {
+      "sha256": "428879eb9634dcbb7b5db27b597be7554460792cfd8705ca95c0e0b247bf1c9f",
+      "size_bytes": 165
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/device-evidence/worker-actor_rollout-0-3641588.json": {
+      "sha256": "44cfbe719dc0d8fbdfaec152fe7815fccf976031ed87963aa12b1f03d3960559",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/device-evidence/worker-actor_rollout-1-3641589.json": {
+      "sha256": "04ec45b04a2163ebb1dd4458d7a4193b836b1507437e7ef101e97aac5640649a",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/dispatch.json": {
+      "sha256": "7eaf33acef90af6767f8ac2e19d76ae5b231da5e209f220f8e9f0716f302d65b",
+      "size_bytes": 4330
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/environment-5055845.json": {
+      "sha256": "80525e90b0e1f649dab1e900e8c9145b72f9db50dc9020d4ec77fb7328dcf17e",
+      "size_bytes": 4418
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/gpu-device-map.json": {
+      "sha256": "4df7c4857a0b18f9e095731bb78d732602c0ae8f99dbd5dc1d1c007a500f1182",
+      "size_bytes": 471
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/gpu-memory-5055845.csv": {
+      "sha256": "d1f5bedf4ee67d9187d15ead047a69ef08a0c948f3363ee0b5b6d61d67ab4d52",
+      "size_bytes": 35477
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/gpu-telemetry-5055845.csv": {
+      "sha256": "b0830bd5d7380bb2e45152ed8ef0ebace01554f332df6e6eada802b1417691a9",
+      "size_bytes": 105547
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/launcher.log": {
+      "sha256": "ff20b241eeb9e8d1f93336d7795227f06cf8d749656c890dd441dedc9daac285",
+      "size_bytes": 152006
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/phase-memory-5055845.csv": {
+      "sha256": "879e91221dd0e3e94f57fba6f9e7052ef57ad7584dfc3fddc9451230660c4290",
+      "size_bytes": 53552
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/training-5055845.log": {
+      "sha256": "6ce908d1cc572e4527c6b03a03c677fe01dced3282eea870ddf5cab610ed0594",
+      "size_bytes": 151839
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-2gpu/attempt-5055845/trial-5055845.json": {
+      "sha256": "b0f9305d41f55be4970dac896c4f79fc857c6aaf5b4a561cfb21e72ef4f3ebfa",
+      "size_bytes": 1431
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/allocator-traces/allocator-3657525.jsonl": {
+      "sha256": "5f720a58f4c5aeb0be7c5d8df8b7f58dd073512c4265381d7c7637264d55f4f8",
+      "size_bytes": 1406
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/allocator-traces/allocator-3657526.jsonl": {
+      "sha256": "d9f4e9e74c0e54d084ea865c3591305105762a7ea11ad8636cee5da9d8e0bf36",
+      "size_bytes": 1397
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/allocator-traces/allocator-3657527.jsonl": {
+      "sha256": "74e6dee466e2190aa9e4cdf94fc215eca3341434bc880bc1ee6f4fedc4cef4cb",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/allocator-traces/allocator-3657528.jsonl": {
+      "sha256": "7eae2e4ac22b1670c758a27db650636dbb70f95285a3ea2276c42f38a2f9c2f2",
+      "size_bytes": 1409
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/probe-exit-idle.json": {
+      "sha256": "21a65252000a7efe1b2a3148f273f0a21c22ddde8e238118407ca3f182922c9a",
+      "size_bytes": 3690
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/ray-resources.json": {
+      "sha256": "854a95b6416672e6064f0e400a7d80221351e08b020e3339edf08a61f42d6abb",
+      "size_bytes": 1559
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/trainer-cuda.json": {
+      "sha256": "31c9aa6cda5d406866faeb7df88bc89cf0d5dd51a7a336b42603bdf144507a01",
+      "size_bytes": 857
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/trainer-exec.json": {
+      "sha256": "afbced505a2027444a52dd02d87ba99a42f1a0c06ed7409b9b17e07ca76bb274",
+      "size_bytes": 449
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/trainer-terminal.json": {
+      "sha256": "7367a540c02e6f0e4434e0c6cb80e0f5323eec893470d2b76a4256a4ed0bf0b0",
+      "size_bytes": 165
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/worker-actor_rollout-0-3657525.json": {
+      "sha256": "c75c55ad82f61af078822825c919fa5bfb1f8bcd92a567cba268e98087379bcc",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/worker-actor_rollout-1-3657526.json": {
+      "sha256": "4febd2f4e518cbd006b32db932ca3eec7f49ce1c21679939e39d4d2b9dfe9b9e",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/worker-actor_rollout-2-3657527.json": {
+      "sha256": "c87b0c9f3993ac0410fd3e21f42e62a4e2d0d730fb27024974f80089eef1b2ee",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/device-evidence/worker-actor_rollout-3-3657528.json": {
+      "sha256": "54ce75a2b95c43338bf43d395386b6531340e7960a14c07b1a4cf24da016bbbc",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/dispatch.json": {
+      "sha256": "fe1cc5a4f214e0b9dea73b9981f85f347e9547ac335f206e56d01525fcabad6b",
+      "size_bytes": 4512
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/environment-5055845.json": {
+      "sha256": "8805e099802d7ca91e054aaf89e60ddbd6b1d86c503e22f912316c679859a34c",
+      "size_bytes": 4900
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/gpu-device-map.json": {
+      "sha256": "bc42ded93e9417f9128d5a4af520f71b6e5f21f122321aa9cb4217860b317f9f",
+      "size_bytes": 811
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/gpu-memory-5055845.csv": {
+      "sha256": "85d9151174af04a750b998c837255ef53bacf34cbf0fb1b6a2d4a794b49d8b92",
+      "size_bytes": 182114
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/gpu-telemetry-5055845.csv": {
+      "sha256": "de50f4cdb6122f4fe399a8a5aa5cbb7883471dc9c79795ebd87f5ee8f65b735a",
+      "size_bytes": 766634
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/launcher.log": {
+      "sha256": "c4fe24195da0af548b6059745ed893366918275c0fa865ac54c6f79faea193fd",
+      "size_bytes": 140327
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/phase-memory-5055845.csv": {
+      "sha256": "0290361e6a2cb16cd0f959ab2c2c1dfca819f6a53f94a1e0151494a5bbaceca3",
+      "size_bytes": 242905
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/training-5055845.log": {
+      "sha256": "b2cb503abf3e0d17245ddeda9c1cec45ffae1179113362f6137376c36638862a",
+      "size_bytes": 140160
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s161-4gpu/attempt-5055845/trial-5055845.json": {
+      "sha256": "37849cf5979192992d63ed3fce8f8f9bb5855810a530b1034955caaf1a1e9315",
+      "size_bytes": 1431
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/device-evidence/probe-exit-idle.json": {
+      "sha256": "e802ca892d4dfc28d9bae6008e38fc731b2042c4bbbf5facf949ecd8d01a0f57",
+      "size_bytes": 3688
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/device-evidence/ray-resources.json": {
+      "sha256": "e4b3dc8fc8cf84958f6f2f14ced8c61fff40d8d3e10c3233372e5352a23d15b8",
+      "size_bytes": 1552
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/device-evidence/trainer-cuda.json": {
+      "sha256": "05f7055153eb05c2e119c135040d10e310afe80b23be322cb2574496e1bc9266",
+      "size_bytes": 573
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/device-evidence/trainer-exec.json": {
+      "sha256": "ad0535cfee8cfde17b052696331ee58c6e033aca38946cd72949be2dfbf4f418",
+      "size_bytes": 366
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/device-evidence/trainer-terminal.json": {
+      "sha256": "9bf35637417621fbe8fb9af4c54df54c534991c428fe70d0ff4d46ea1f845e71",
+      "size_bytes": 164
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/device-evidence/worker-actor_rollout-0-827887.json": {
+      "sha256": "9dfc40055ea34958345a55afe90660aa1a325d6b941a71bf720351fb8fcf074a",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/device-evidence/worker-actor_rollout-1-827894.json": {
+      "sha256": "2c5fbf758d4c422c92188fbf613d5ba18f3671ab827cb1016ad30e9502ba01e7",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/dispatch.json": {
+      "sha256": "1269d5a582067af091b32cc2af4d36db9c36791a06836fecc78f5891b91dc807",
+      "size_bytes": 4330
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/environment-5055858.json": {
+      "sha256": "6cffbbed13a57719bd8495bcc3cb66c9519227682e2e4bf0a2488497dcd60e44",
+      "size_bytes": 4418
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/gpu-device-map.json": {
+      "sha256": "00546dc5355adfee836479837ad15809afda43feee21f4d13d633fb037f80541",
+      "size_bytes": 471
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/gpu-memory-5055858.csv": {
+      "sha256": "60c0aaab71a9802d32b7a0e3532b4fa65e448129bcd3f4e8c48c6cf68e20ec13",
+      "size_bytes": 41747
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/gpu-telemetry-5055858.csv": {
+      "sha256": "cba80250d271a8153249b8a3a458613eed44adc3403a93b3c334648767802d05",
+      "size_bytes": 124693
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/launcher.log": {
+      "sha256": "b97b985f1fb19852d33562e9b2f5c469ef7dedf70499afabf826834cbfc0e67e",
+      "size_bytes": 150723
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/phase-memory-5055858.csv": {
+      "sha256": "f3bc8669f0bb261d8f29dd1e978ba9b58272b20c43ebd7b10389959027778771",
+      "size_bytes": 63152
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/training-5055858.log": {
+      "sha256": "0a6455c49cd49c8533ca30f7c39e6b5eaceb57aadbf308fdc2efe5ad8cd3f928",
+      "size_bytes": 150556
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-2gpu/attempt-5055858/trial-5055858.json": {
+      "sha256": "1b6208ddd37a043883baa8e4aa762cfe1119e4d82e03b6754e7a1491ae47bc55",
+      "size_bytes": 1431
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/allocator-traces/allocator-802123.jsonl": {
+      "sha256": "f90571cc23c7d711a020d93027779f2747728ef208968d110eeefd8c69f0957f",
+      "size_bytes": 1398
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/allocator-traces/allocator-802124.jsonl": {
+      "sha256": "08f1ee26e4509d3cb8f81f74e7bdf7eebc3a2fa9604b65d5bcd0c12f6df3bcce",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/allocator-traces/allocator-802125.jsonl": {
+      "sha256": "27fce5cdc6d40e04cf28b8a9588417fa4d31d71d25a0f6448e2fde36dff24059",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/allocator-traces/allocator-802126.jsonl": {
+      "sha256": "c433f20090d90f9a1e1b48cf608830a712fbd4d4b2b2abbc259096e8fa8a0b24",
+      "size_bytes": 1405
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/probe-exit-idle.json": {
+      "sha256": "a758c491b843983e36475e411900d02e8cfe90cd43e70454db802d7f0970998b",
+      "size_bytes": 3688
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/ray-resources.json": {
+      "sha256": "c377cfc3411bac36b667c6e7a6cd3911a489adb3dbaed2140ab241c00f59624a",
+      "size_bytes": 1552
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/trainer-cuda.json": {
+      "sha256": "3e7ceebf4bc857dbe8d997addf297a242d5929997cddb3b954a39edbae19e8d7",
+      "size_bytes": 855
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/trainer-exec.json": {
+      "sha256": "4dd27278c99d1db3736774d9dd258eb90aab8dceb4bcbb8e64fef8068ff99994",
+      "size_bytes": 448
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/trainer-terminal.json": {
+      "sha256": "10fa0454f1463af1a30b115bdf45620cdc3045447f28c215f6070fe69ab886c1",
+      "size_bytes": 164
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/worker-actor_rollout-0-802123.json": {
+      "sha256": "3216c1337dfffe6313abc84ea51abd8a9e396dc177a7e8dfa41eaabf6c209aa4",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/worker-actor_rollout-1-802124.json": {
+      "sha256": "e950e452136d75ba43a1ea45176cec9a1e10d1346bc1285a66da86cd500f8a6a",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/worker-actor_rollout-2-802125.json": {
+      "sha256": "94e4eff45487753971d2277b257b09871006e7593a43e1deadee3661c9ef9ff2",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/device-evidence/worker-actor_rollout-3-802126.json": {
+      "sha256": "8a94205f733595bb4f894a4beaab8f90801d2f7c75c00b2bafb95e38a2fab40f",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/dispatch.json": {
+      "sha256": "91e269ac53b2d3a0f95dc830478c372c2069ab150b1fe7b02d89e0b5aa3d474d",
+      "size_bytes": 4512
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/environment-5055858.json": {
+      "sha256": "4779aa01665897ec82b1f6204f6225dda322e33ece9619aa27173ac37676e468",
+      "size_bytes": 4900
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/gpu-device-map.json": {
+      "sha256": "b45a4d85a0d89f2226c0dff1c6697ca3d6bb444f224d61466086ae6b697ff166",
+      "size_bytes": 811
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/gpu-memory-5055858.csv": {
+      "sha256": "5e449ad227dc376eefe37833e1e88fc6ac94796fcf7a1736fbf9f77ac1b23582",
+      "size_bytes": 137508
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/gpu-telemetry-5055858.csv": {
+      "sha256": "a6afbe28a1df8aa2cf2c2dba25d9538ca40dc8f133d538945f4eaca1df183187",
+      "size_bytes": 576417
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/launcher.log": {
+      "sha256": "909b6cd621ed6bf0077c3801ec09de4be2008c9fa280c73ca4fb19d2146a0e7e",
+      "size_bytes": 138551
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/phase-memory-5055858.csv": {
+      "sha256": "aa9a9130f88ca1e39853dfd4877a8970aba8409051053638022a6809c11262f1",
+      "size_bytes": 183608
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/training-5055858.log": {
+      "sha256": "abfbc06c66ce14ee4c8b3b100e3cf9335169a8e3162c8a87723b3a8f27b71b24",
+      "size_bytes": 138384
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s162-4gpu/attempt-5055858/trial-5055858.json": {
+      "sha256": "b46f64d2b6062b9f24d82b69f276a9a5471cd41288ac15cdf6ec218574844047",
+      "size_bytes": 1431
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/device-evidence/probe-exit-idle.json": {
+      "sha256": "b415aa828c58dfc309ffebf6c0a6575b26b9b2430b8a54b14d34ae71a905c034",
+      "size_bytes": 3690
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/device-evidence/ray-resources.json": {
+      "sha256": "516789ba306e38fb53f8b5458825519366e43caeb67cb17f89129d5889c3494d",
+      "size_bytes": 1559
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/device-evidence/trainer-cuda.json": {
+      "sha256": "18200e287843a74c96abea10e8b2300f586c49a18a45cea1eca423e63040e09e",
+      "size_bytes": 575
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/device-evidence/trainer-exec.json": {
+      "sha256": "c175ad2bb51f042c4bfdd0050a3f6aed6bf30e9c0e2e2c86ac7f2d261fdbb5b4",
+      "size_bytes": 367
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/device-evidence/trainer-terminal.json": {
+      "sha256": "266051af79e99249a9b6922f26b8a07705a9ec3dbd1caafc5407e7a7e9b0cf35",
+      "size_bytes": 165
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/device-evidence/worker-actor_rollout-0-3547555.json": {
+      "sha256": "37a0d7a8ae322ffcb1987b546ced6af852943a086b26241b429d7ea293a81fb9",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/device-evidence/worker-actor_rollout-1-3547556.json": {
+      "sha256": "e2afbf56454eff27ad2dd52bc76069436dfcb0c62c616cc7dc9f7a399dde17a2",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/dispatch.json": {
+      "sha256": "bcb7f7078254f8d59cbed3a4997aa844489fdc5d4e10ce7743b557c99c3a5131",
+      "size_bytes": 4330
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/environment-5055847.json": {
+      "sha256": "18c21604af831b1b1665813cef754edb93cfa7b2f2dfc61262b5672289437c09",
+      "size_bytes": 4418
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/gpu-device-map.json": {
+      "sha256": "7acec01171399fbfd415fbb9fdfefdf75e9000e882ef74d7ada1839b0cb17027",
+      "size_bytes": 471
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/gpu-memory-5055847.csv": {
+      "sha256": "19c9c00a2042cf00b838944ab9d53541b3e3f6ab830847616506baf642082cd1",
+      "size_bytes": 44431
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/gpu-telemetry-5055847.csv": {
+      "sha256": "7d894cc0dfab7932636f2f5bda81ccc26d7ee58ab832a79d2e3a128594d2a781",
+      "size_bytes": 133007
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/launcher.log": {
+      "sha256": "60f634390988b81e710a04d37eb3d7a1705fa70ef466d420fd45e05ddcf650d0",
+      "size_bytes": 152445
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/phase-memory-5055847.csv": {
+      "sha256": "c25ad1b9a33e6d28afffea147ef8e2f8d944961b9e99d957c22c14414070f940",
+      "size_bytes": 67291
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/training-5055847.log": {
+      "sha256": "c9cb86baea65985262d7c08dee415bd705bbb657577b3092168dc7670d59cfa3",
+      "size_bytes": 152278
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-2gpu/attempt-5055847/trial-5055847.json": {
+      "sha256": "57dc50de8b0b2bc365e966297638655eafca869a4fcef5be84a371c2cc61222e",
+      "size_bytes": 1431
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/allocator-traces/allocator-3563810.jsonl": {
+      "sha256": "c345803b85bb7b1007edb566d512d0d23835bcf1f86fb2f6d967a06fad35092e",
+      "size_bytes": 1398
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/allocator-traces/allocator-3563811.jsonl": {
+      "sha256": "c8e0a83607e5769079bb984a5e91b1cf6a7318f163b3ad117448be5d19dbb7cb",
+      "size_bytes": 1410
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/allocator-traces/allocator-3563812.jsonl": {
+      "sha256": "fdba6f8fffc9c3481e2941ee05b560499a45d672b2a7353ff5c175c7fcb22a91",
+      "size_bytes": 1409
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/allocator-traces/allocator-3563813.jsonl": {
+      "sha256": "3bf0e61e4decb549210e8ef34dfe68ed815b3ea8b47683a4b2396ac4b00adffe",
+      "size_bytes": 1410
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/probe-exit-idle.json": {
+      "sha256": "a0e794eb7188da3859f2158ddf4a03f049d136ee18decaa2a8432c8e3c34a07d",
+      "size_bytes": 3690
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/ray-resources.json": {
+      "sha256": "5fa6bb9d95647cde35d976f59c86ad0ce9de4062858e5d63cb5c9e02f6a54b0e",
+      "size_bytes": 1559
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/trainer-cuda.json": {
+      "sha256": "2b52867b5f81972aadc25d5cfefa86a9270966cad52d841eb1f90fde316de843",
+      "size_bytes": 857
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/trainer-exec.json": {
+      "sha256": "03811e669d3623195c23a7759b50accdb05808c736506e9303b71618cf85797c",
+      "size_bytes": 449
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/trainer-terminal.json": {
+      "sha256": "966e1433ea458a6ac9e78fedd703da8fd444e549bebf9356762d0c7af177a95c",
+      "size_bytes": 165
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/worker-actor_rollout-0-3563810.json": {
+      "sha256": "462c3601f438c62a5e9210151a1717bb18fa4816d620ca1f747621645f661fb9",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/worker-actor_rollout-1-3563811.json": {
+      "sha256": "72fe6f42647a258775d00fd48052963ca9a55be891880970ec9c6c61f5c7b401",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/worker-actor_rollout-2-3563812.json": {
+      "sha256": "56e43743ba141f80cbc576203b785c4154910e176ff2a96f81255f297ccfc7be",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/device-evidence/worker-actor_rollout-3-3563813.json": {
+      "sha256": "389efebd3a4ea66a3d2faf5e9ea46a6b9cb3b9124e347da23d37835e03bf515c",
+      "size_bytes": 657
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/dispatch.json": {
+      "sha256": "f1dd993d2f3f8d9dbb6bf2986bd0b3f097b0a744ce84d70ddbbe8cd3b5b2bdb2",
+      "size_bytes": 4512
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/environment-5055847.json": {
+      "sha256": "4e03274b2a7fa9234085017249c2822d5480a06ffa085209fdc1a6aa2fa5b162",
+      "size_bytes": 4900
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/gpu-device-map.json": {
+      "sha256": "91f43ee075a1abe7320de6c73f9a96fed3b69c8086db6abf068f2fe3f9211e73",
+      "size_bytes": 811
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/gpu-memory-5055847.csv": {
+      "sha256": "926af37d182966cf3d826acb08f698ba9b4137c284709b42357450dba4e3ebc3",
+      "size_bytes": 224585
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/gpu-telemetry-5055847.csv": {
+      "sha256": "3db078630b08f1cf337a3b279c4df79369f076e25b087aef032a74bb52cb7f9b",
+      "size_bytes": 945675
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/launcher.log": {
+      "sha256": "0909dc5b195fd2a5d991f433505f7dffcab889c0ecdc5668a10aa703374d0ead",
+      "size_bytes": 141166
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/phase-memory-5055847.csv": {
+      "sha256": "ba545bca34e70cfa866919860dd7ef2d2da7f09ef3b23dac6846f39e6c5ecc20",
+      "size_bytes": 299506
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/training-5055847.log": {
+      "sha256": "a4a40b83284c8b0561cd1a1d6de4298b37c701f1248239535f02b795b8991d19",
+      "size_bytes": 140999
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-gsm8k-c2-s163-4gpu/attempt-5055847/trial-5055847.json": {
+      "sha256": "e23b2997b7a855ef1601efd231f694876dd6fa9c85d36128e5cd90fcda1910b8",
+      "size_bytes": 1431
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/device-evidence/probe-exit-idle.json": {
+      "sha256": "c085339a3bb6a8423a99a4b5e6f5a59ce53a571552d8b560201aef9e8a34118e",
+      "size_bytes": 3689
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/device-evidence/ray-resources.json": {
+      "sha256": "e67148eb3d351b840e83b84957ee13d79ed32b06b0d4fd4aa828389d72024720",
+      "size_bytes": 1558
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/device-evidence/trainer-cuda.json": {
+      "sha256": "397a8a6aef1a20331f9c25cb502516a5d1880a30bc64eeacffb87e4262a59c30",
+      "size_bytes": 574
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/device-evidence/trainer-exec.json": {
+      "sha256": "97dc64e38e4ce043e80985bc33e6072a3ff0d16c47a31bb7380988d8ff77909a",
+      "size_bytes": 366
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/device-evidence/trainer-terminal.json": {
+      "sha256": "fc15df3659f0e15ff682ea80a05d6031773c1e8a9a4fa56e5066ffbb8c617b42",
+      "size_bytes": 164
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/device-evidence/worker-actor_rollout-0-3597684.json": {
+      "sha256": "93b2b62213c276bb87f97433b34bd7a23e008f066169379a41252a7f6be34731",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/device-evidence/worker-actor_rollout-1-3597685.json": {
+      "sha256": "53d6a9bc99fb89ce017e31ef0fa0491435f2505586fe74333126dfb2ff44f615",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/dispatch.json": {
+      "sha256": "f645c1a9516d69a0b8bc7e061b88369be40fa544c537a4f0e3c36677e467d1f1",
+      "size_bytes": 4318
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/environment-5055864.json": {
+      "sha256": "e912b4eddc048e6c275e84b8baab706df188c3263a7ceccfb1454d39fcf1a6fa",
+      "size_bytes": 4414
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/gpu-device-map.json": {
+      "sha256": "82b5db5ed4b8f850e2d60268f09937819d3516adc2bda514dcf28fd30721aae1",
+      "size_bytes": 470
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/gpu-memory-5055864.csv": {
+      "sha256": "4be4879326e0b303927533f28f746e706e7a0ab7f90a5636b00170f190c3b2c7",
+      "size_bytes": 39563
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/gpu-telemetry-5055864.csv": {
+      "sha256": "2003ff9dac6e9a4d9f37ca439a2c2198cec058af530a713492eb1d90f78b557e",
+      "size_bytes": 117517
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/launcher.log": {
+      "sha256": "585dc88e6962db949729714f29234a8ac354c435fbec2d116a33cdd097b1ee89",
+      "size_bytes": 151969
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/phase-memory-5055864.csv": {
+      "sha256": "d2d6ece196ec15e92bd7f0505a3dad2a67f3f96a7b35262b2e88496ded4645dc",
+      "size_bytes": 59678
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/training-5055864.log": {
+      "sha256": "80cdb67c540fa19967d9c5627fa0d8b33c024cbcb7ae23d7e58d4535d01d8053",
+      "size_bytes": 151803
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-2gpu/attempt-5055864/trial-5055864.json": {
+      "sha256": "3942ac0b5bc951c9a9c22b6ab7145ebc2d241c5e78ac112e77cec363bf74d3bd",
+      "size_bytes": 1424
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/allocator-traces/allocator-3571156.jsonl": {
+      "sha256": "ad805b8eee80dc4b7b13169579f06e5f8bfc9e265517a177c7d06b014f412882",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/allocator-traces/allocator-3571157.jsonl": {
+      "sha256": "d9f68dccb3b9f936695f18f5509fe99cb05599bc52d69430ef55b364d197e09b",
+      "size_bytes": 1409
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/allocator-traces/allocator-3571158.jsonl": {
+      "sha256": "9fecba1ca02906a161e139724431b292134a52c547391a5e8b9007783de9e82d",
+      "size_bytes": 1412
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/allocator-traces/allocator-3571159.jsonl": {
+      "sha256": "c22b43989ec3bca8f6f62f8ff48f0af654b475b96a20dfc1f680cb560b19103b",
+      "size_bytes": 1410
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/probe-exit-idle.json": {
+      "sha256": "ce04ee6f11c8a9c4d83a8b1f9b6df352f0c91da33aea814be6dfcda32862687e",
+      "size_bytes": 3689
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/ray-resources.json": {
+      "sha256": "a6f1fa5a7ed1b81891e799d09ee8f6c6ea31bdcc70d738325d62eb0c429ced9b",
+      "size_bytes": 1558
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/trainer-cuda.json": {
+      "sha256": "9c07c2184bc56597d8e58dca03bbd42e5a658708e8d17874110d586accbe4b58",
+      "size_bytes": 856
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/trainer-exec.json": {
+      "sha256": "3cd6eae16780f0879274834b811f948d14ab0406a0b74aaca81ede9867cb321e",
+      "size_bytes": 448
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/trainer-terminal.json": {
+      "sha256": "16cc70afa31fc1247c745fb6499bf991b4e70100444dce8044a023f54942b1bd",
+      "size_bytes": 164
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/worker-actor_rollout-0-3571156.json": {
+      "sha256": "2a8dffb74119c328f1defc94f17137189c611818e08e91bcf2e2c33eb9565fb3",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/worker-actor_rollout-1-3571157.json": {
+      "sha256": "46e3f08ea23076bd5c8f67b3ca990fabce9a618792edaf7b009a3345d699982b",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/worker-actor_rollout-2-3571158.json": {
+      "sha256": "3bc5ec9404104f79c07ee1acbb6981a586cb3be23d30119fd48ebfa28992818a",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/device-evidence/worker-actor_rollout-3-3571159.json": {
+      "sha256": "fb53ac6637803eb628fcab6e08ad88f5835b2af804fe875099aa3a711a24dc4a",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/dispatch.json": {
+      "sha256": "538e8b0a98691fa3dd457ea212197fad1eb197a311f8a40159e1cf7d7f64b205",
+      "size_bytes": 4500
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/environment-5055864.json": {
+      "sha256": "9fa0bc5986fc09193bbd8905f9d8386d73ac91fadf0369e4ca4f5011b772f543",
+      "size_bytes": 4896
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/gpu-device-map.json": {
+      "sha256": "10673761c821963f041f7a7a30f4c4387d6d29cedf5214d8152663c47a43882d",
+      "size_bytes": 810
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/gpu-memory-5055864.csv": {
+      "sha256": "91060ef947f1e5d26ea5375d591c9f11313f11226e35a5d2e7ef3ff54184fec3",
+      "size_bytes": 149539
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/gpu-telemetry-5055864.csv": {
+      "sha256": "336a8aaf180fbca3ef765d87526d39ded5d94458dddc6399e3b3150300789eff",
+      "size_bytes": 630000
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/launcher.log": {
+      "sha256": "c915e0421724b0ff0c94c7859e2b4212bbefb040f962f8066f0baee4e705103a",
+      "size_bytes": 140944
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/phase-memory-5055864.csv": {
+      "sha256": "0bc8bbcf2213a9b1e1307d09b0e40de783a5543de338d67501fdf738b4a26862",
+      "size_bytes": 199996
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/training-5055864.log": {
+      "sha256": "7e2179f00a1cc6ec75671faab917cbc8eea7454df0c07f0a275ed6e7f97b7106",
+      "size_bytes": 140778
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s161-4gpu/attempt-5055864/trial-5055864.json": {
+      "sha256": "87f26af8968fd9e52e53e2455cd9068dd711d8bcbb02c8e240b9248c76850939",
+      "size_bytes": 1424
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/device-evidence/probe-exit-idle.json": {
+      "sha256": "d7e1aa648ee83e84de3bc1d7c58ae4b87b27bab0e7cd059f57b52ec426f9f550",
+      "size_bytes": 3689
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/device-evidence/ray-resources.json": {
+      "sha256": "ceca2d7ffdb6c4d7e6acb7e04bb44475273b95e4d5d901abc8b18e50801321de",
+      "size_bytes": 1558
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/device-evidence/trainer-cuda.json": {
+      "sha256": "cb94127ca0d7494b5a10de55847516ecaa125cf7f68714b38b51b8b53466a12f",
+      "size_bytes": 574
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/device-evidence/trainer-exec.json": {
+      "sha256": "6646883863a9523ea9266df2de5a999c9646fcc371013ab5470dd67f0e6f0b46",
+      "size_bytes": 366
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/device-evidence/trainer-terminal.json": {
+      "sha256": "38963c8ef334c8a20eeccba605cb9f9fcfa953a17ab310a4bd854ea39cb3226b",
+      "size_bytes": 164
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/device-evidence/worker-actor_rollout-0-3524806.json": {
+      "sha256": "6a7f7a063f54cf34d8eb6d2d3bc8d59c6956e15e56fa40de44495f7eba8dc2fd",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/device-evidence/worker-actor_rollout-1-3524807.json": {
+      "sha256": "463403cbc813bafe388acbef24bfe849a2165574d9ae2f5a47a7279e2f8541e6",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/dispatch.json": {
+      "sha256": "23ad348e9a0bb4c0ebf9410cecfc1e35c9d5961185d9b804a03e53ff3f2ee025",
+      "size_bytes": 4318
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/environment-5055859.json": {
+      "sha256": "009af079583012e7cd7f4c8e99ba5aebd723292b1093c88a7176095241642a11",
+      "size_bytes": 4414
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/gpu-device-map.json": {
+      "sha256": "c742c595089726a43c76cafa21708c8667cbe40c17f2fc3097b613980ac8938e",
+      "size_bytes": 470
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/gpu-memory-5055859.csv": {
+      "sha256": "9f70bec34a73f50d64f5b98d33bd4351150f6b855ae106082ee4412e4a037f09",
+      "size_bytes": 37641
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/gpu-telemetry-5055859.csv": {
+      "sha256": "a6ad33cf45a48734d90247b4a43ff33692eaf6ae1261cfcd85a429afeab767ff",
+      "size_bytes": 112122
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/launcher.log": {
+      "sha256": "8ef75c910c46ad8d9825ac3c3333839e29d019fc90a8802bf953f500378f1d42",
+      "size_bytes": 144385
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/phase-memory-5055859.csv": {
+      "sha256": "a86a8dfc41e9984a7225f5e45ac48d448c65697496a3eabb3c2c445a2e00e847",
+      "size_bytes": 56856
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/training-5055859.log": {
+      "sha256": "f83faa610986608599b0e517acf8396c8e6a1522f81d65f07d192c2793df6f6b",
+      "size_bytes": 144219
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-2gpu/attempt-5055859/trial-5055859.json": {
+      "sha256": "1a7488a0481b8bf3032cb77f194084e2cd85cde2d8c2da4dc8eab5d60c0a701a",
+      "size_bytes": 1424
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/allocator-traces/allocator-3539673.jsonl": {
+      "sha256": "3f84ecfb3ba77e54f57f136a6e0defca7be0a4146c882dcb9be6085c4b58ff71",
+      "size_bytes": 1407
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/allocator-traces/allocator-3539674.jsonl": {
+      "sha256": "a510bb169fa55ce5dd474fd0f10f9bdd57c5bdf3e20524e7ee20236a76c2c264",
+      "size_bytes": 1407
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/allocator-traces/allocator-3539675.jsonl": {
+      "sha256": "5989a701dc26009a6a9927c3593ea914baf0f201e0e632fb5538437db1684e0b",
+      "size_bytes": 1413
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/allocator-traces/allocator-3539676.jsonl": {
+      "sha256": "1bf7c0db77e488b6d62b32c74025a99665f8a98976c9c8d308beb6468b091f0e",
+      "size_bytes": 1411
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/probe-exit-idle.json": {
+      "sha256": "df325c5d5dcf6d772ee453e29ef100ff2b1149bcabafa04e6075e289cc63773b",
+      "size_bytes": 3689
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/ray-resources.json": {
+      "sha256": "0f8edd00fb5cb5f0cbc01b1f2b1234487c876c9b1741c3ee1504b326ec2c44ea",
+      "size_bytes": 1558
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/trainer-cuda.json": {
+      "sha256": "83cf2e3d2f191a0bd7d22bc1be1867b02b2f9c9de0953119fadf5929fa39d9f1",
+      "size_bytes": 856
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/trainer-exec.json": {
+      "sha256": "299b81402619b96c53575c419de06f7aea3a7499cb120cb69bf60a682a3e288c",
+      "size_bytes": 448
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/trainer-terminal.json": {
+      "sha256": "e355eca03a188cc59bb1427390d7c3dbf1bd2f85b04be3cc56d6845768dd50be",
+      "size_bytes": 164
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/worker-actor_rollout-0-3539673.json": {
+      "sha256": "c0dcc6b3817f1db4962f86e67dd98ae9e3928de1044ffb1eda60300dc23e062b",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/worker-actor_rollout-1-3539674.json": {
+      "sha256": "0f0a3f3b79a0196527783032a568d89c96ede1bece1fc690cee34c7fac04aada",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/worker-actor_rollout-2-3539675.json": {
+      "sha256": "c290d4472e0ba843817466a3eb90d8f2848a94f91253e45af7ec924db42a31b3",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/device-evidence/worker-actor_rollout-3-3539676.json": {
+      "sha256": "42e00bc12078e63cf9941ea356251cd007f94da8256f25abb6538ebcc74c0798",
+      "size_bytes": 656
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/dispatch.json": {
+      "sha256": "e0e0590fd32a6048876b2f93e24ea174a662f1b6a1111e44b84d96bd67d7e7bf",
+      "size_bytes": 4500
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/environment-5055859.json": {
+      "sha256": "762d6a8d8a2a3fd6c6e19fbbc1cb9d2cdef558dd78838eebaf34abe9082bc2ca",
+      "size_bytes": 4896
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/gpu-device-map.json": {
+      "sha256": "7595b966ca546cc6d3a9f8552a47f17337b68b5df71d21ee4d607d925cea0809",
+      "size_bytes": 810
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/gpu-memory-5055859.csv": {
+      "sha256": "0afb280d3ced36c4d7b3818cd30e102b482734d0c8c9018e3b6c6cc3d032960b",
+      "size_bytes": 184880
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/gpu-telemetry-5055859.csv": {
+      "sha256": "3ef7237492bc0b9e74a0ab6fa28330d9e78dd8ea74e7363d36c8a5d04487ca26",
+      "size_bytes": 773393
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/launcher.log": {
+      "sha256": "f0ae16874095d68c1a79e32fe7cbfd31a85feeb29b7db0410816934ca5ed0130",
+      "size_bytes": 140603
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/phase-memory-5055859.csv": {
+      "sha256": "a6851d4660bbd5d2739d52e3b2865a88e6ae4e413dd5ddb31a42924dacbe4d31",
+      "size_bytes": 246219
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/training-5055859.log": {
+      "sha256": "7902fc03bb9ad4608e8d8006d7150fac599d957d8439f7ce75b17c984793e761",
+      "size_bytes": 140437
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s162-4gpu/attempt-5055859/trial-5055859.json": {
+      "sha256": "2c198c29365b1a55a281b4d06c444124e632b9472b4e2f3f7386f54ef69c3c5f",
+      "size_bytes": 1424
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/device-evidence/probe-exit-idle.json": {
+      "sha256": "6f49019b647d632fa0688dbe1fdd3c7cf3c8894de9b2914a5784ec23078cdcfa",
+      "size_bytes": 3687
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/device-evidence/ray-resources.json": {
+      "sha256": "acee45cccc0405a605ced0baa6137b21aa915807a3e37b08c201956085e40593",
+      "size_bytes": 1551
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/device-evidence/trainer-cuda.json": {
+      "sha256": "26325ab7c7afae5eaa70df35c292fa87b94429b39825155cc656c68e259f2eb3",
+      "size_bytes": 572
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/device-evidence/trainer-exec.json": {
+      "sha256": "ae4cf78c2a118a01c7ff85f330e70e516110100823671b7f52faeace4660e1b2",
+      "size_bytes": 365
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/device-evidence/trainer-terminal.json": {
+      "sha256": "ef6324517a61d535813dcffecb9bef82e85ae7aae3429f9eb0da855cacab067e",
+      "size_bytes": 163
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/device-evidence/worker-actor_rollout-0-873976.json": {
+      "sha256": "25e15c6d6227c7c16dc68b64af3e03520331ca34d4625943890fd0b08ff41bd2",
+      "size_bytes": 655
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/device-evidence/worker-actor_rollout-1-873977.json": {
+      "sha256": "ed331e46edbfbca3a0687291e9a2d3673b245119fff3bb1c9acbe737e3f4b62a",
+      "size_bytes": 655
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/dispatch.json": {
+      "sha256": "f992efaf90e3139177fa0ffaa6d9f99582d65d6b19f53cf95cc147c451e1b734",
+      "size_bytes": 4318
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/environment-5055863.json": {
+      "sha256": "8c6910e80b91671965264e645285ef4b6bebaf4811e704b580fcf61c1be93881",
+      "size_bytes": 4414
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/gpu-device-map.json": {
+      "sha256": "8619b487797b3e1f722a2dbefca1834ed378b0bb2e248a74fb598a36ce3b4b7c",
+      "size_bytes": 470
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/gpu-memory-5055863.csv": {
+      "sha256": "baa37fa35eff6146f3d5d5f651264a3b14a34dd8ccc491b247e87125ed6ed1f2",
+      "size_bytes": 36664
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/gpu-telemetry-5055863.csv": {
+      "sha256": "c46c326d82545eafa153cdcf0cd934fff63fc461500a81a173646ffcedce68e5",
+      "size_bytes": 109072
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/launcher.log": {
+      "sha256": "64404885773717a98e7918c7f5105cce0bf8f729472cc1b1590286fddc321d40",
+      "size_bytes": 150636
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/phase-memory-5055863.csv": {
+      "sha256": "c6391a964849aed375ebae6401c5eb5ecf539b158fde433532add57193763dcb",
+      "size_bytes": 55339
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/training-5055863.log": {
+      "sha256": "17c19dfa4d4ad3112381f58d6ed78a252194ac6e109f94c6d81b8e719f1b1361",
+      "size_bytes": 150470
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-2gpu/attempt-5055863/trial-5055863.json": {
+      "sha256": "d240f525d4a2dda5bb865b2c7776e06040494133d6fb0ff393ea6ad153341e9c",
+      "size_bytes": 1424
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/allocator-traces/allocator-843954.jsonl": {
+      "sha256": "57395fe2006d7015b9ef16a947f46306d8343a95bd81a3f9c163d04a49bc9609",
+      "size_bytes": 1396
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/allocator-traces/allocator-843955.jsonl": {
+      "sha256": "579b3bc01e48c774186f34e616df6e46693bbec9ba67fb983e1449a38804043c",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/allocator-traces/allocator-843956.jsonl": {
+      "sha256": "87ecc7af97fa3c3644b00b27be9844fcb34a8dd7dde38514a52aaf39e14215cf",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/allocator-traces/allocator-843957.jsonl": {
+      "sha256": "e327495b335caa7d68ab8b2db0354cbc3ee44457579d42e4fc686f691e5b7501",
+      "size_bytes": 1404
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/probe-exit-idle.json": {
+      "sha256": "7fd57b5d734135814de94b6ac7521afca704a3db06387a88b7eb803cef02ce45",
+      "size_bytes": 3687
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/ray-resources.json": {
+      "sha256": "1b30a754890f7ac0b31d02e03793cf08eae6def09680e96e60cb1f141864a8fd",
+      "size_bytes": 1551
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/trainer-cuda.json": {
+      "sha256": "7a3fd4b406870ef39c20a069b0338a463b5d80b0ec7eb005d75471cbe9aae1ab",
+      "size_bytes": 854
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/trainer-exec.json": {
+      "sha256": "6b8fd626a18b67c0475304cd620af4433a6192418b3c74f09674db9e1946806d",
+      "size_bytes": 447
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/trainer-terminal.json": {
+      "sha256": "07c122d5cd4b5ec36a62906348e53c0cc02cae67758509625676905dc15c339b",
+      "size_bytes": 163
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/worker-actor_rollout-0-843954.json": {
+      "sha256": "83ff37fcc1ef0bf0bfcfbaf08d423625a762054b7d3f369a15ec4996ae223ca7",
+      "size_bytes": 655
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/worker-actor_rollout-1-843955.json": {
+      "sha256": "b4681c2f1044304f9c46703d0ce66ddbdddeeec1bd146db8e117126d9cb8d778",
+      "size_bytes": 655
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/worker-actor_rollout-2-843956.json": {
+      "sha256": "415c5f4c909141580f36370e3fd29989ead8dbdb3f2f9cc8f47e22e41670e67e",
+      "size_bytes": 655
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/device-evidence/worker-actor_rollout-3-843957.json": {
+      "sha256": "e6f798dc163b1ef76928f10de5239919d4fa14cee5ea92f90fef0f803f1499ce",
+      "size_bytes": 655
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/dispatch.json": {
+      "sha256": "bf51d850168699d0ede13c8f8a6c722464545023e81f605072d4874d648ad9b0",
+      "size_bytes": 4500
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/environment-5055863.json": {
+      "sha256": "2ac19c3094ef999e349caab05586f1ffce9c568cf99aa51824da1431ee979a63",
+      "size_bytes": 4896
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/gpu-device-map.json": {
+      "sha256": "fe307eb340ed2932b4dadfe0c421932b281fed01bba1f40863fd4e26e1380722",
+      "size_bytes": 810
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/gpu-memory-5055863.csv": {
+      "sha256": "73ac680c79b74b6e39fc9d3406d92b19f04347f72fd4074d6cded9261e7addda",
+      "size_bytes": 187686
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/gpu-telemetry-5055863.csv": {
+      "sha256": "7c9735d625e31113ec70e643ef12065986c485eb16ff037a93fd4ad1aaca4377",
+      "size_bytes": 792219
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/launcher.log": {
+      "sha256": "b85345393decf96dbf37dd352b56788b77dcb7ff9fca47f63521a1ff17ffc7f6",
+      "size_bytes": 139931
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/phase-memory-5055863.csv": {
+      "sha256": "c5028bc7781e488666283c064d251e7d35c033c62e8b9db4daa38e2f653da022",
+      "size_bytes": 251256
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/training-5055863.log": {
+      "sha256": "4a57f829f41ce3ed8e5d5ef25e7442157533be345b2c675eb4c8b19049dac858",
+      "size_bytes": 139765
+    },
+    "output/estimation_host_capacity/host-qwen25-7b-math-c2-s163-4gpu/attempt-5055863/trial-5055863.json": {
+      "sha256": "e8bb9e6c3a8e9d9d96f54c2015c592efee7865dede33a90fe94d8cfbedf082d3",
+      "size_bytes": 1424
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s161/allocation-trace.jsonl": {
+      "sha256": "ccfd3fad0f8bb5a5efc0b5f7fd6ddc583fa31e51813fed28eb3736ba721c122f",
+      "size_bytes": 358865
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s161/ledger.jsonl": {
+      "sha256": "333c3a9409bf517fd2ca41c6b17298d3c18ffde6d0780bbd7bd4b980953a7a54",
+      "size_bytes": 13600
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s161/pair-summary.json": {
+      "sha256": "9589ed74c9ed4da96bcfd2bd6ec994784b44e4f57150c9cd881cb516dfd86e35",
+      "size_bytes": 801
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s161/pair.json": {
+      "sha256": "11f432ad69e4f19a7e964601235286986f30fb97862cb358860a3b4a45b81ed4",
+      "size_bytes": 8824
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s161/period-1.json": {
+      "sha256": "a5537abf1e57731739c04dae9526c5e5899ffd5e4e684341ef9d0124dee0421f",
+      "size_bytes": 6261
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s161/period-2.json": {
+      "sha256": "ebfddf6918a70324f056725c6e96eb25da12ab1a7d3016fe970badfcaaa38b23",
+      "size_bytes": 5462
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s162/allocation-trace.jsonl": {
+      "sha256": "19aaab448f0fdb85bc998cf177496fa5bf4a1d5c355dd7cac59c2f7342d5580f",
+      "size_bytes": 419764
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s162/ledger.jsonl": {
+      "sha256": "1c00aa35420037ed210fc575999f0151051f8b4627b06d67904904e489f0c6dd",
+      "size_bytes": 13602
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s162/pair-summary.json": {
+      "sha256": "5550e11a235fcba0459f608f88fee5dae9a301f034674cfdc4ced162d34fc5e8",
+      "size_bytes": 803
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s162/pair.json": {
+      "sha256": "ba5822d60980ed2368ce46612583322f5385a116a98a85abeb700f1080e19e5a",
+      "size_bytes": 8824
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s162/period-1.json": {
+      "sha256": "29ee4da55c986383b3a165192ff467a9224237d60c5a7bc9a58848e6ff2cd71b",
+      "size_bytes": 5465
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s162/period-2.json": {
+      "sha256": "9470f412d34b3d7433d10665af7f11bc0f52b346c71f2675d52d2fee33881ca5",
+      "size_bytes": 6244
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s163/allocation-trace.jsonl": {
+      "sha256": "369da5916ed13fce410cd1922309503f2c220849828ca994364bcaf1c3b30f50",
+      "size_bytes": 396639
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s163/ledger.jsonl": {
+      "sha256": "9d18e012ffc9f2064dcbad10dafa59b750ce161497eec51e0e6bc176ce46c3c4",
+      "size_bytes": 13610
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s163/pair-summary.json": {
+      "sha256": "8a8f7dec9e09fdefb9731d565895496696d87ea02d9d6ee9a9075e0c18772912",
+      "size_bytes": 800
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s163/pair.json": {
+      "sha256": "d9475a95dfbf2600d351db83bfc49b45774c5e13c2ab968d21a2168b43d9573f",
+      "size_bytes": 8824
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s163/period-1.json": {
+      "sha256": "a05a722b4e27d32971cd07914935b60ebe8f8f2cc329304452fde6ca5a5b016f",
+      "size_bytes": 5466
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-code_heavy_tail-c2-s163/period-2.json": {
+      "sha256": "71a56d85b9394891cdc42fc94565d97a181b3dad8a6deb6816fcd2b25c9a3e7e",
+      "size_bytes": 6260
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s161/allocation-trace.jsonl": {
+      "sha256": "83094617e346df15c7f7167d7732c48e714a5497dcb73aae8781a6aea141f77f",
+      "size_bytes": 413666
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s161/ledger.jsonl": {
+      "sha256": "0d00f6eb5b648385af3f6ce1714c02b352b0a05dad2d539984f23e9783c471ce",
+      "size_bytes": 13294
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s161/pair-summary.json": {
+      "sha256": "081fe31718aeeace255a1af16a0df374a240de1b90eb2d6a996f2e237b6d960f",
+      "size_bytes": 792
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s161/pair.json": {
+      "sha256": "cfa0de3b3cd08dfeacfdce5c3ebf3e3e2cef59bc2da204889e86042c4850708f",
+      "size_bytes": 8496
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s161/period-1.json": {
+      "sha256": "c3ec892da14b05f0af55e38ca97e8e9eb07cf998df59452f4510f386e80076e4",
+      "size_bytes": 5357
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s161/period-2.json": {
+      "sha256": "67b7c5427d7a1941fb34e5e0aa67384b1b6850fa997be9012431df9822e4331f",
+      "size_bytes": 6135
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s162/allocation-trace.jsonl": {
+      "sha256": "b8759a7ec6b648418323b0d14ed2d88d660bd616bf6d2fa40fdafc5a13a7eca6",
+      "size_bytes": 342799
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s162/ledger.jsonl": {
+      "sha256": "4dcf9a91ae6bbba137a4afab1907896accd528c333c05f9396998563518b7eaa",
+      "size_bytes": 13274
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s162/pair-summary.json": {
+      "sha256": "585e717cf86fe5df810bbc3d33ad0a12de04065cde207dfde5cf5976d18c9e27",
+      "size_bytes": 793
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s162/pair.json": {
+      "sha256": "cb05d94260ce1ee8a79015825d072921a10254d9d914a0df3e5c51f3be375fef",
+      "size_bytes": 8496
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s162/period-1.json": {
+      "sha256": "a56fcab542b3c7da013debc7b7b96cdb5e26d2b4c83176f403ab8fa73a2d32e5",
+      "size_bytes": 6123
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s162/period-2.json": {
+      "sha256": "44da63e937ba49567ca09bbcdde1aaba76fc4a9cf9e6b6522d88af173c9ac797",
+      "size_bytes": 5350
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s163/allocation-trace.jsonl": {
+      "sha256": "9a2e78c0bf284a4ad215c97f9e34bb68553cc92db3e381702d8c754cb55b9df3",
+      "size_bytes": 506203
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s163/ledger.jsonl": {
+      "sha256": "cde48950a284805dca7150f75182dab4ab0a034cd0b41efeb9fe2b83512a8dd9",
+      "size_bytes": 13287
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s163/pair-summary.json": {
+      "sha256": "73fb54c4e55429b4a686af60ba9459a974b6654b21d4dcde246319c3c6a5c955",
+      "size_bytes": 790
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s163/pair.json": {
+      "sha256": "10a666b083e54c59a9b1ac6144602a9e67fe987c366ba739ea87679570ff7d22",
+      "size_bytes": 8496
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s163/period-1.json": {
+      "sha256": "4a1d5241e8a0418bdce0e39b38a44556de7500c6b35a3c3f30b6e5b1e6ff1fa6",
+      "size_bytes": 5356
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-gsm8k-c2-s163/period-2.json": {
+      "sha256": "a9f64eb27668c9a5cdb98b5e5e6005ba493ebff92240b507d910bcd8eac78e8a",
+      "size_bytes": 6131
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s161/allocation-trace.jsonl": {
+      "sha256": "d5e51f2f9959f7f15226784bda3682940d8c96712e3e51361c998c085e5d1077",
+      "size_bytes": 364372
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s161/ledger.jsonl": {
+      "sha256": "35af3985e7adf8837ec64dd3380dbac41b910e49a59dcb258c793c7bf4e0b53e",
+      "size_bytes": 13265
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s161/pair-summary.json": {
+      "sha256": "d38e7e03e7a22eb15506a9d5c7099f4f2a6f31339d66a628997622e6bc2906fa",
+      "size_bytes": 789
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s161/pair.json": {
+      "sha256": "da4248ba78237ac4377771fbd810c138222c7d89cc1960cd484ada584e184ab9",
+      "size_bytes": 8481
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s161/period-1.json": {
+      "sha256": "7212a19d01836b08a6f071c27a99f53f30cf76820f2fc596528f2787c38844db",
+      "size_bytes": 6137
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s161/period-2.json": {
+      "sha256": "2377679d475af540267575d66cdde6c6d6230674d3da1c752d351e67ccd7544a",
+      "size_bytes": 5343
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s162/allocation-trace.jsonl": {
+      "sha256": "57034385a9e3bd4f768f9898fbc80b3eeed5b10509ac57b97fcce5ff8b7f5c4c",
+      "size_bytes": 429045
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s162/ledger.jsonl": {
+      "sha256": "dc8d64e4c1acaab7d56a2609e8325cf9f18b62861342caf38bd2d2458019e1bb",
+      "size_bytes": 13286
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s162/pair-summary.json": {
+      "sha256": "1abe4426e172d9f16111fba7f1a9f92d4853837c1e26230fcdcb6029c9808ab6",
+      "size_bytes": 790
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s162/pair.json": {
+      "sha256": "29d4201db5096e9951dd1c70a5df4b57c945d95dfe55d30830b1b4db32ab4186",
+      "size_bytes": 8481
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s162/period-1.json": {
+      "sha256": "7cca740094b97c6e82320269fcc5be6870524c88be04613d7609b93df179e6b2",
+      "size_bytes": 5344
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s162/period-2.json": {
+      "sha256": "fe07fc54ad949b6114c46690501a5cdbf64267f3db1523bed1a7fe2368de2af5",
+      "size_bytes": 6168
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s163/allocation-trace.jsonl": {
+      "sha256": "9eda9b409798a408cecb8b6be83f79dba013094c068a73df15b2f4c0f1af1b10",
+      "size_bytes": 426531
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s163/ledger.jsonl": {
+      "sha256": "045f78ee36bcaec336b9f1ab0a0b08096132b5eff8d76089ceaed23da8eeb80a",
+      "size_bytes": 13242
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s163/pair-summary.json": {
+      "sha256": "54714f312a7b5defe828075d2b4adff38fc4c49885b37f94baa6e1ff00cbae83",
+      "size_bytes": 790
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s163/pair.json": {
+      "sha256": "d0fb1b825aaa3e394285a542e31a674611288684d7ef2a2f5eae6a96b4659e95",
+      "size_bytes": 8481
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s163/period-1.json": {
+      "sha256": "d73d2e6a98e0a30b7c40640b568d53fd6f940ab5995b758559f12ff9b753a098",
+      "size_bytes": 6111
+    },
+    "output/estimation_host_capacity/pairs/host-qwen25-7b-math-c2-s163/period-2.json": {
+      "sha256": "e69aad8c200ebbb97e87a385322ee34c17ea0a00c7644ad0b7a29effc28f2525",
+      "size_bytes": 5341
+    }
+  },
+  "original_amendments_sha256": {
+    "amendment-01.json": "b02fe0419f865c4cc3d77fb35bb4205a54f3aa9605fdadc7b86a9a11b172d25e"
+  },
+  "original_prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "original_protocol_sha256": "1694e447e842600612604891e7b3d036ff0791fa84c4bdbeba54ed093feefdeb",
+  "panel_scope": "Separate host-resource follow-up; no pooling with original slots.",
+  "prediction_frozen_at_utc": "2026-09-15T14:10:21.535819+00:00",
+  "prediction_inheritance": "Exact original sealed predictions with new configuration IDs; no fitting or outcome-dependent update.",
+  "prediction_seal_binding": "Effective input/output hashes and pre-claim chronology; runner verifies seal but does not store its hash per period.",
+  "prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "protocol_input_evidence": {
+    "matrix.csv": {
+      "sha256": "1d2b2af601361a3cb46b65ff3be263685b3f725f2b0e4787a8ff9966084f5332",
+      "size_bytes": 8931
+    },
+    "predictions.json": {
+      "sha256": "5ac9cef3c6e7d08036d29315be9cb6220f6bb85fe48a0475f97f2ebce66b9980",
+      "size_bytes": 10821
+    },
+    "protocol.json": {
+      "sha256": "f3f49617a7fca63ddac8923bccb83a15eaf52646e5f3db5df4aa716bb25c1ef6",
+      "size_bytes": 5676
+    },
+    "study_freeze.json": {
+      "sha256": "80559199c59246d0e4ce52bf268d0375c90fc5168a5246ed900c9266abd951cd",
+      "size_bytes": 610
+    },
+    "targets.csv": {
+      "sha256": "4aaa0913debe9425ef40664f0554b2ed15980f4cab59bf8223dc86093f313fdc",
+      "size_bytes": 2885
+    }
+  },
+  "protocol_relative_dir": "benchmark/host_capacity",
+  "protocol_sha256": "f3f49617a7fca63ddac8923bccb83a15eaf52646e5f3db5df4aa716bb25c1ef6",
+  "raw_statuses_used_as_labels": false,
+  "runner_validation_implementation_sha256": "f340fb7eec5297cb675a48e267618c15d7787a42891d4a2ae4a670ec24a0cc47",
+  "source_commit_expected": null,
+  "source_input_evidence": {
+    "benchmark.py": {
+      "sha256": "35e36caad46d2814b0ac9f8180961de5564746347cf668d5c3fc1e643fd477e8",
+      "size_bytes": 10897
+    },
+    "benchmark/attempts.csv": {
+      "sha256": "397c8caaf0d3abe06587fd649c181fe71d5b8b5f5e24e0591cc7e56d38e275c1",
+      "size_bytes": 588698
+    },
+    "benchmark/configurations.csv": {
+      "sha256": "3a77c96a67b82e01d23fb6f7a440cba23041bed1dae2749072cb9abb5b5d239d",
+      "size_bytes": 71349
+    },
+    "benchmark/estimation/amendment-01.json": {
+      "sha256": "b02fe0419f865c4cc3d77fb35bb4205a54f3aa9605fdadc7b86a9a11b172d25e",
+      "size_bytes": 4632
+    },
+    "benchmark/estimation/fitted_model.json": {
+      "sha256": "8b84aa1ae57fe56fd478817dbbce505487cbef6b26652ae2c8f45e9fa5ef5df4",
+      "size_bytes": 11485
+    },
+    "benchmark/estimation/matrix.csv": {
+      "sha256": "1ff175e22c76bf1af3857b4ae57cd4f78bafe0d280a295d696e96815ef85e9c8",
+      "size_bytes": 16755
+    },
+    "benchmark/estimation/model_metadata.json": {
+      "sha256": "2f0ce16c13e72900d2a60f9b7ad28d4dc5ed43d7915d8a88925ba9c5ffd684ad",
+      "size_bytes": 5599
+    },
+    "benchmark/estimation/prediction_freeze.json": {
+      "sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+      "size_bytes": 3004
+    },
+    "benchmark/estimation/predictions.json": {
+      "sha256": "96d7f2ae11145f0985c0faf743333d941afbcd3b80966a857b1af0af15306ace",
+      "size_bytes": 21607
+    },
+    "benchmark/estimation/protocol.json": {
+      "sha256": "1694e447e842600612604891e7b3d036ff0791fa84c4bdbeba54ed093feefdeb",
+      "size_bytes": 11490
+    },
+    "benchmark/estimation/retrospective.json": {
+      "sha256": "8ada76da63ab91e0b1ca6276a98f2b096979fe6acd7578c1223469d55d399f3a",
+      "size_bytes": 228053
+    },
+    "benchmark/estimation/targets.csv": {
+      "sha256": "f2481278127fa726f24297d81fc9df46e999315fe543167ed398e671fffa522f",
+      "size_bytes": 5037
+    },
+    "benchmark/outcomes.csv": {
+      "sha256": "af05cd91ed1de843735cc188e5e54dbd1645b3ed91c97f503ac3de67bc5f61c9",
+      "size_bytes": 21219
+    },
+    "memory_tuner/estimation_baselines.py": {
+      "sha256": "8cc20f9697eb38cb6a19a2255e95712ac44469cbd147eaf93e7e7ed183360ad2",
+      "size_bytes": 26850
+    },
+    "memory_tuner/host_capacity_protocol.py": {
+      "sha256": "9bf811457f04e02e67e31d3c9289d1155f73ee1364a233b6b77d08d86becf44b",
+      "size_bytes": 16560
+    },
+    "memory_tuner/model_memory_metadata.py": {
+      "sha256": "8845a1197b49d9463ebe5dc8c953463dd2106361c54e7b12244057c48aaa2712",
+      "size_bytes": 6588
+    },
+    "memory_tuner/plan_estimation_study.py": {
+      "sha256": "16855f584441528870fcca38c3a19eafd1234c3eacb9b43cc9eebdd4bd6ad862",
+      "size_bytes": 10472
+    },
+    "memory_tuner/run_host_capacity.py": {
+      "sha256": "23f1eaf462f1825a77e91d2c8d8a4ab073f4debe0fbab134ff1863e096345d37",
+      "size_bytes": 1497
+    },
+    "memory_tuner/run_matched_gpu.py": {
+      "sha256": "f340fb7eec5297cb675a48e267618c15d7787a42891d4a2ae4a670ec24a0cc47",
+      "size_bytes": 49744
+    },
+    "run_host_capacity.slurm": {
+      "sha256": "59d3daa9499d1fc76d0b856be6c0a813472f488eb49f990e6ffa57ccf819b919",
+      "size_bytes": 1231
+    }
+  },
+  "study_design_validation_implementation_sha256": "9bf811457f04e02e67e31d3c9289d1155f73ee1364a233b6b77d08d86becf44b",
+  "study_freeze_sha256": "80559199c59246d0e4ce52bf268d0375c90fc5168a5246ed900c9266abd951cd",
+  "study_frozen_at_utc": "2026-09-15T18:52:11.222223+00:00",
+  "study_group": "estimation_host_capacity",
+  "study_loader_implementation_sha256": "9726f0499e7774c25752f7ce02f2dfeada03ffd5a14183621c5791f9e674abc4"
+}

@@ -1,0 +1,11 @@
+{
+  "files_sha256": {
+    "matrix.csv": "1d2b2af601361a3cb46b65ff3be263685b3f725f2b0e4787a8ff9966084f5332",
+    "predictions.json": "5ac9cef3c6e7d08036d29315be9cb6220f6bb85fe48a0475f97f2ebce66b9980",
+    "targets.csv": "4aaa0913debe9425ef40664f0554b2ed15980f4cab59bf8223dc86093f313fdc"
+  },
+  "frozen_at_utc": "2026-09-15T18:52:11.222223+00:00",
+  "original_prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "protocol_sha256": "f3f49617a7fca63ddac8923bccb83a15eaf52646e5f3db5df4aa716bb25c1ef6",
+  "status": "frozen_after_host_censoring_before_followup_execution"
+}

@@ -1,0 +1,10 @@
+both_completed,both_eligible,configuration_level,dataset,first_task_gpu_count,four_gpu_state,pair_id,peak_difference_4_minus_2_mib,runtime_difference_4_minus_2_seconds,training_seed,two_gpu_state
+False,False,c2,code_heavy_tail,4,unresolved,host-qwen25-7b-code_heavy_tail-c2-s161,,,161,memory_failure
+False,False,c2,gsm8k,2,unresolved,host-qwen25-7b-gsm8k-c2-s163,,,163,memory_failure
+False,False,c2,code_heavy_tail,2,unresolved,host-qwen25-7b-code_heavy_tail-c2-s162,,,162,memory_failure
+False,False,c2,gsm8k,4,unresolved,host-qwen25-7b-gsm8k-c2-s162,,,162,memory_failure
+False,False,c2,math,2,unresolved,host-qwen25-7b-math-c2-s162,,,162,memory_failure
+False,False,c2,code_heavy_tail,2,unresolved,host-qwen25-7b-code_heavy_tail-c2-s163,,,163,memory_failure
+False,False,c2,math,4,unresolved,host-qwen25-7b-math-c2-s163,,,163,memory_failure
+False,False,c2,math,4,unresolved,host-qwen25-7b-math-c2-s161,,,161,memory_failure
+False,False,c2,gsm8k,2,unresolved,host-qwen25-7b-gsm8k-c2-s161,,,161,memory_failure

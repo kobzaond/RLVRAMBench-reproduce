@@ -1,0 +1,2780 @@
+{
+  "accounting_validation_implementation_sha256": "9b00de319d8ac76d32897322bfbdfde47248737436854111f1e1808f156d4d08",
+  "allocation_accounting_sha256": "1a91571d5bc83040c72a507602c8640faac7d6197608fcac4d17596c7ffc8483",
+  "amendments_sha256": {
+    "amendment-01.json": "b02fe0419f865c4cc3d77fb35bb4205a54f3aa9605fdadc7b86a9a11b172d25e"
+  },
+  "analysis_implementation_sha256": "8326859efb69b0c0f7003932d1b491efb80618671437e87d77edbb3ec5f484ba",
+  "contamination_scope": "All-four allocation samples, excluded-device process membership, and recorded live-child ownership annotations. This is not continuous monitoring or an independent offline reconstruction of PID ancestry.",
+  "data_verification_scope": "Environment-captured dataset file hashes compared with frozen protocol; no external dataset/cache paths are opened.",
+  "execution_commits_expected": {
+    "est-qwen25-7b-code_heavy_tail-c2-s151": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-code_heavy_tail-c2-s152": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-code_heavy_tail-c2-s153": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-code_heavy_tail-c3-s151": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-code_heavy_tail-c3-s152": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-code_heavy_tail-c3-s153": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-gsm8k-c2-s151": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-gsm8k-c2-s152": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-gsm8k-c2-s153": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-gsm8k-c3-s151": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-gsm8k-c3-s152": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-gsm8k-c3-s153": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-math-c2-s151": "0bd659b3f69e2f779dbea84bb2da221bd0ff52db",
+    "est-qwen25-7b-math-c2-s152": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-math-c2-s153": "0bd659b3f69e2f779dbea84bb2da221bd0ff52db",
+    "est-qwen25-7b-math-c3-s151": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-math-c3-s152": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+    "est-qwen25-7b-math-c3-s153": "d8e0c3551d8572fb64e3b7126fbd7569a987973f"
+  },
+  "execution_commits_file_sha256": "cf70aa7c361f114b2d06a5da5fbbbf5021a13b7d19c24a55023647f5b3c8301a",
+  "input_evidence": {
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/device-evidence/probe-exit-idle.json": {
+      "sha256": "59ac6704b23ff5aca33cfe234516b279eb35438f0f57de2f53fc6296a6a0822f",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/device-evidence/ray-resources.json": {
+      "sha256": "240ed32057f9ac3215820c4f668a9b749a8b74366e1d7110705f45f15d235540",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/device-evidence/trainer-cuda.json": {
+      "sha256": "6db5d30339a7a103e282a65773db986a21c668aca74509b53d187e94612dfa05",
+      "size_bytes": 584
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/device-evidence/trainer-exec.json": {
+      "sha256": "2e34663623ab8886b276d2f026545b1d5a91ae997c7fd4dd5799e1e5a2b004c4",
+      "size_bytes": 376
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/device-evidence/trainer-terminal.json": {
+      "sha256": "98c6af2df44a4ed720f4ecbf79a698f228cc0e2fcb246c465b134c95234eb14f",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/device-evidence/worker-actor_rollout-0-2847646.json": {
+      "sha256": "c59714f3e36decf24003ab844dc2f4e28fb19742410e53f9a23a5482522258bc",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/device-evidence/worker-actor_rollout-1-2847647.json": {
+      "sha256": "c68ba7e3610020755bd923894624daf1f92785f78d7680b6cbcf3e93593c8901",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/dispatch.json": {
+      "sha256": "e271fc82bb39ce803f6b2907bf7c9449c6b671f5f942cade9b27835b61776392",
+      "size_bytes": 4624
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/environment-5055021.json": {
+      "sha256": "dc9523edefc96ab630e2e890f1a7e7a9d233ec3137a3f5729471dab8ea817655",
+      "size_bytes": 4477
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/gpu-device-map.json": {
+      "sha256": "aab4742f53515eb078dc9017769673b5359f9ae32057b1b453ee7fb7d37a893f",
+      "size_bytes": 480
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/gpu-memory-5055021.csv": {
+      "sha256": "8eee692f090582e0996a4bb5a3c0a41dc9ca915d3a85ea8e01ddfe04681b6961",
+      "size_bytes": 35780
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/gpu-telemetry-5055021.csv": {
+      "sha256": "124ec9b8654220701700f7632af6f3573a602dae76bb35317b354c361d9d03d0",
+      "size_bytes": 106440
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/launcher.log": {
+      "sha256": "544226afd6c0563acec4bc8803f024df112934fd695044a2b2ece22863925763",
+      "size_bytes": 152195
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/phase-memory-5055021.csv": {
+      "sha256": "50895000b239cde5c35211c9dec3e7c0dbadb1acc6dbec4d06e63215e38ad7f2",
+      "size_bytes": 54005
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/training-5055021.log": {
+      "sha256": "6cba7640bf4ad67f263ef7bcdfde785b8ceddaafb925adb9e5e0cdc2e0b29c3d",
+      "size_bytes": 152021
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-2gpu/attempt-5055021/trial-5055021.json": {
+      "sha256": "7adccf2c8a206a647c52dcaee6b38f2038cbe733af5092aac876dfa17edf76be",
+      "size_bytes": 1484
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/probe-exit-idle.json": {
+      "sha256": "c3895c62afadb8531a52e370c3c4547dc1a2f897213c382798d17bd6b5fa1a84",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/ray-resources.json": {
+      "sha256": "1d1645a40094b2dbf8ca8873c537f72e9877c468ffae3e217b103c6447345ef1",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/trainer-cuda.json": {
+      "sha256": "f15c100be8acaeac00f9f1323da3e459d2e96c757f089e1884bc1e84509547ad",
+      "size_bytes": 866
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/trainer-exec.json": {
+      "sha256": "46279d7151c77515200baef466903bc6f79d84cc7895684458183ab63a62f9cb",
+      "size_bytes": 458
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/trainer-terminal.json": {
+      "sha256": "2f400eeb5b4d8de17cd8666e7134c42e24395773ca546eab44ee13f0e1c2063f",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/worker-actor_rollout-0-2863714.json": {
+      "sha256": "5b46dbe63b9680b17004cdcd4602ad57ecd32d279d6f0fcb1463d4dfd31cd965",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/worker-actor_rollout-1-2863716.json": {
+      "sha256": "8da2c0e12d30d97d21f03bfc7b5313d7f58f7ea818bedcd26758dde64637661a",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/worker-actor_rollout-2-2863717.json": {
+      "sha256": "eac450361359b14778d7244f270a78194889e9417390d0f07c35a46fac0ddbc3",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/device-evidence/worker-actor_rollout-3-2863718.json": {
+      "sha256": "9217ac7676b4b665509e9b3cbc31cc7a6df7a02d51821a1eb5f2b296fde5b864",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/dispatch.json": {
+      "sha256": "9711833b6e17e33129847fbe1585f56ed91246d3f895acc5cf4fe53ea3e8be5c",
+      "size_bytes": 4806
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/environment-5055021.json": {
+      "sha256": "41e270bd8c1b602ffa4f3264d62028501a787ffb8e269b0f703e2989c944a632",
+      "size_bytes": 4959
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/gpu-device-map.json": {
+      "sha256": "9c4a4ab9c1b6e40323aea6b42a5bb0ff656e2a90d7efef7ea63b285d78723e01",
+      "size_bytes": 820
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/gpu-memory-5055021.csv": {
+      "sha256": "2e4f46e888ea1e0a502288ec02b1d0185797181adb6856dd0cea10035aa91bb0",
+      "size_bytes": 115142
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/gpu-telemetry-5055021.csv": {
+      "sha256": "3a26241b95a96a5bdc53bfa6a72419f40bcaad0b0a86f2e30884db2562adb141",
+      "size_bytes": 495499
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/launcher.log": {
+      "sha256": "483fe40e09949a0060c50d6cad25db0eb5ac222e85db9317ca2619c813da629b",
+      "size_bytes": 156335
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/phase-memory-5055021.csv": {
+      "sha256": "53421fc3d0d6c14065ee3d25f88527187bece56450a1d4a54f95eca60d9572bf",
+      "size_bytes": 156827
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/training-5055021.log": {
+      "sha256": "e8989c94e4c9cc40a77bc06629623c89976d44394b1625536cd417d54cc962d7",
+      "size_bytes": 151931
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s151-4gpu/attempt-5055021/trial-5055021.json": {
+      "sha256": "e5b4c52cd1ea74a4fbed17679cb89719c29e6943d7d654af7703b17fee9aa691",
+      "size_bytes": 1486
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/device-evidence/probe-exit-idle.json": {
+      "sha256": "06788be8e4ab4a66d84a5f888b3ae266d10a31823619c95085e8f0fb204e8e18",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/device-evidence/ray-resources.json": {
+      "sha256": "d10c6b1cc8ad3606becb69efc89cdfd2f38cce6ca77a7f440db3c5d5adefe9e2",
+      "size_bytes": 1564
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/device-evidence/trainer-cuda.json": {
+      "sha256": "7b60df8097081d1305f443ea80c96a0f8e6eca8509a256374ce81fe6411dc15c",
+      "size_bytes": 584
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/device-evidence/trainer-exec.json": {
+      "sha256": "b746028b9da71eeedea63d2497242524579802310ce90fe20d18472edf1529a1",
+      "size_bytes": 376
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/device-evidence/trainer-terminal.json": {
+      "sha256": "a6e0d870c7828428215a0b4c944d5419b9a18f73c3821cb627279fae5cebc364",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/device-evidence/worker-actor_rollout-0-3863206.json": {
+      "sha256": "6f65586995d73b33f284570b9090c2e1ef92dc2c65477e994a8c0461a1ec9faa",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/device-evidence/worker-actor_rollout-1-3863207.json": {
+      "sha256": "9dc729aead9de893b70950852d573b1cc502bb87730dadfa2ec5c04e20feb2a9",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/dispatch.json": {
+      "sha256": "0a9cc1883db8c345fab254b01fe8205c708390b10710a7d19e9c3af42d7ecbb1",
+      "size_bytes": 4624
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/environment-5055038.json": {
+      "sha256": "7769820322233f09377224ce5b5e30be0049d0e13096e981a62964e6b883a602",
+      "size_bytes": 4478
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/gpu-device-map.json": {
+      "sha256": "2bab05f7ebdbf272d9beac042b2b80296e85a6bc9b42ea0e0a6fad16f9459f9a",
+      "size_bytes": 480
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/gpu-memory-5055038.csv": {
+      "sha256": "ebebd6645dba5d56e28a05beffde1f83035a8e61252612e04ff9f76d97f5624e",
+      "size_bytes": 47314
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/gpu-telemetry-5055038.csv": {
+      "sha256": "4fa73da0d4251d5831f0860f051c780d3dd2ffaec39d6a320e09f70ef26e4e53",
+      "size_bytes": 141666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/launcher.log": {
+      "sha256": "7b79b4c7e8db395bdc28a398cdd1790de8f8e8fe37d16a3bab4ed8bbd533acb4",
+      "size_bytes": 152465
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/phase-memory-5055038.csv": {
+      "sha256": "7ed12b25686f800f6dcf0bc33b5ce7f2b79c63b6a20fa4a751dfb3fd76d67407",
+      "size_bytes": 71674
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/training-5055038.log": {
+      "sha256": "0cc2bfe9bae03072afba2ccb12de2aa21de0ca058da66539d35577b8c7265108",
+      "size_bytes": 152291
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-2gpu/attempt-5055038/trial-5055038.json": {
+      "sha256": "6744ce597a88246ab51bd713b1ed6614a8fde76ff50ea98d9fdeec0f3fbe9eda",
+      "size_bytes": 1484
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/probe-exit-idle.json": {
+      "sha256": "8b1ccc04fdd4e1f26d062c82befdcbfd8e9ea4b72855a2282bdbf6393c5f9347",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/ray-resources.json": {
+      "sha256": "70f32aef4e5ab2d3b120af5277f34771bd135be7a7e80457f6ffb34b6040aa8b",
+      "size_bytes": 1564
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/trainer-cuda.json": {
+      "sha256": "a7892dd36619cc3e5b5b410313408327106b61c83717e17d343018addad1215d",
+      "size_bytes": 866
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/trainer-exec.json": {
+      "sha256": "e0c4c2ae64f028e41ddfe337ada5001dddb8d3f0bf1f48b4f6c172c2831de620",
+      "size_bytes": 458
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/trainer-terminal.json": {
+      "sha256": "70ff4c3db2624624d0b6fba9f0b4a3fcd2a63b1c4518b20c056a0727c74f2359",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/worker-actor_rollout-0-3880160.json": {
+      "sha256": "aa43321177a6b725c2403c667027e4ed695d4afe115c5fc36bf1906dec254d38",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/worker-actor_rollout-1-3880161.json": {
+      "sha256": "ea802e402fc79d4afc381104c32f2deb99b4a33192470254b0bd55b78d168c90",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/worker-actor_rollout-2-3880162.json": {
+      "sha256": "6b3b94932f581857f1a346734a5362e32341c1667f9e303d3514dcdd600b3fce",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/device-evidence/worker-actor_rollout-3-3880163.json": {
+      "sha256": "154af79171e521caa6ac463595a6f2bdd7f18ab73dbb5715b0951903cdacb675",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/dispatch.json": {
+      "sha256": "bc7647952f6a372a3122de9fab3398c11177d586c12a0791ef3f42591d064c72",
+      "size_bytes": 4806
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/environment-5055038.json": {
+      "sha256": "7ed940b09897c2c22d9b258faf30a7140e677a7d35414f97475d135bfa2e7f90",
+      "size_bytes": 4960
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/gpu-device-map.json": {
+      "sha256": "feda07913dcfd858a305c32c66fb3ccb71d3f756ea6a1459c01a818917775b90",
+      "size_bytes": 820
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/gpu-memory-5055038.csv": {
+      "sha256": "f72a4b3e83039ded6131e1411d2321fa02e0c0e7fc6db388e67e9fedf11d91a3",
+      "size_bytes": 144748
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/gpu-telemetry-5055038.csv": {
+      "sha256": "dd18c56d53c5443f509c4a2c322338dcb9a137dba3cf3197140001ae0e59e991",
+      "size_bytes": 623657
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/launcher.log": {
+      "sha256": "c551e284334c9a8f62873b12e09af98ebdcc33161c82d875a768ace9b3bf81fb",
+      "size_bytes": 157394
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/phase-memory-5055038.csv": {
+      "sha256": "ef7f2487dfb44ef51488729d67960e1581edda80886c1b1f7eb707136bb31344",
+      "size_bytes": 196768
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/training-5055038.log": {
+      "sha256": "0bb0940597c79ceacb042cad25784ff994cde287562bbcee3ea9f37f2b02d28f",
+      "size_bytes": 152990
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s152-4gpu/attempt-5055038/trial-5055038.json": {
+      "sha256": "d33afb7d2165c3b58f339954a726bb22cce8c5bdc50372f944ae5f9f9bb7fbdd",
+      "size_bytes": 1486
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/device-evidence/probe-exit-idle.json": {
+      "sha256": "cd369e377d41866b76297480596ae3d3eae8ce0b6b29ae7ae37afd3e26af4d96",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/device-evidence/ray-resources.json": {
+      "sha256": "9ba191429c00f916d630eb15dd9328f03b509b1fad66608a57f7cc966fc7c013",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/device-evidence/trainer-cuda.json": {
+      "sha256": "1292ce78c459c1ca4c89febb68f5eb302bbcbab3c552310322ce8b6982b599a7",
+      "size_bytes": 584
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/device-evidence/trainer-exec.json": {
+      "sha256": "625509c4097be0ab2cb2148eb2cd28de620eaa8379d84813b6663cc813a89164",
+      "size_bytes": 376
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/device-evidence/trainer-terminal.json": {
+      "sha256": "8d1b85b4998ba51db4b89b1562337f1bcfa2a82c71b63ad82e51373e17b9de0f",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/device-evidence/worker-actor_rollout-0-2946112.json": {
+      "sha256": "123c71f974d50d86276b8fe8eafef84e564472281bf33e3bd586054d1063d059",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/device-evidence/worker-actor_rollout-1-2946113.json": {
+      "sha256": "b6f16d2d19ccd6671d4eedc73c014fc17042a3484582017f41320dfa459a0bc9",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/dispatch.json": {
+      "sha256": "398811eda2fae3f01c9dca1785e46c0c6ecb372b4588234cbe2b5b1b30241868",
+      "size_bytes": 4624
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/environment-5055043.json": {
+      "sha256": "d5d218033f04a8e86ab72b1884addc7607df0d9796cad718400df827de4a6a6b",
+      "size_bytes": 4478
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/gpu-device-map.json": {
+      "sha256": "519cf45cd70e1e21e20bddfd45b884855b1d761d4eea9d42bd6ce535b208f5dc",
+      "size_bytes": 480
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/gpu-memory-5055043.csv": {
+      "sha256": "f6e255d7300c8839f9451f8c902383582d1d420b2abc0c101a945cd2017672c9",
+      "size_bytes": 36103
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/gpu-telemetry-5055043.csv": {
+      "sha256": "3444736f71d1b39795fdf2233920f3701d947b6f2b2477ac1aff72049800306d",
+      "size_bytes": 107332
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/launcher.log": {
+      "sha256": "05cfb24ddcb97a8471f8e5a1864bf7c4979443aa19364858a60a3f314ca39a22",
+      "size_bytes": 152207
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/phase-memory-5055043.csv": {
+      "sha256": "bebd44ed58f397851a83ea3cad2ef0bc421fe59de299eaff0205ec9eb713604b",
+      "size_bytes": 54478
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/training-5055043.log": {
+      "sha256": "d0ac49f27c0ab58b5c1c877a0788c62693b6be669b8ad3d53035ec618ff2ccfc",
+      "size_bytes": 152033
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-2gpu/attempt-5055043/trial-5055043.json": {
+      "sha256": "27caa17a29a90fe2e69ca0136b06f12db9a39a3b925a4e680a1cc800d7850b53",
+      "size_bytes": 1484
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/probe-exit-idle.json": {
+      "sha256": "9a66db948d472b8046476007fcdad2d432a533f52838311102d420dda3901286",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/ray-resources.json": {
+      "sha256": "1ee986794bd3c8d6b5b344fef16a70a94b1e0ca1ffb6bf8e6778ae757a798bb2",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/trainer-cuda.json": {
+      "sha256": "9b4a22503317da374d43a23f4b53201852d9c964cd40d4c7fc959acbc648903d",
+      "size_bytes": 866
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/trainer-exec.json": {
+      "sha256": "3a0df9680b509f4a0e162e4f19391d5e4f65ad3bed023fad7f1c8d16b8eb1907",
+      "size_bytes": 458
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/trainer-terminal.json": {
+      "sha256": "6e1097ea5a58807f6e86e675145bd73626b937be72eeada2e26ebcad3f7b206a",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/worker-actor_rollout-0-2919667.json": {
+      "sha256": "ab56e033abbf5177755a2a1c82f5f12ae26a83b2e7e706d9c80403a8430f4290",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/worker-actor_rollout-1-2919668.json": {
+      "sha256": "5950acfb5bdb1528655956453b08969ba18f612361c83e893ac947e0b192ac6b",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/worker-actor_rollout-2-2919669.json": {
+      "sha256": "033e6db4c21e7adcf3dc7699e6747bf5368030f5d643e57d32c1f768d060c828",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/device-evidence/worker-actor_rollout-3-2919670.json": {
+      "sha256": "360ed25da26bbfb53e39345ad17af6566d2df8ada71fd55ce8972740d722082f",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/dispatch.json": {
+      "sha256": "09eeb0682b65b65d4a66fabf8d267f87956d6a3f4d3d740655b5929207ae7aa6",
+      "size_bytes": 4806
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/environment-5055043.json": {
+      "sha256": "1b095bc4465e2ce59df24f2f28bf774e06e661d0897470eb18f1a46f420d445a",
+      "size_bytes": 4960
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/gpu-device-map.json": {
+      "sha256": "de46fa8a4b591ab86f3e20d8ae39b52015ce63f73899ddf0934a779a32e8aa90",
+      "size_bytes": 820
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/gpu-memory-5055043.csv": {
+      "sha256": "c28b0f36f440bfa757a26c60b04d51948918aae3844f79000e228e09f79a453b",
+      "size_bytes": 120246
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/gpu-telemetry-5055043.csv": {
+      "sha256": "14f1ca6d04ebf29d746d7a669eca8bfafd8cfa94f2e40e163fcb3949f3521b9f",
+      "size_bytes": 517516
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/launcher.log": {
+      "sha256": "96c0081f7748058983ef221b12d11f75ce458a55336f6fca87b01e4335aab59c",
+      "size_bytes": 155993
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/phase-memory-5055043.csv": {
+      "sha256": "5e745ccc5158ec741e13afb1dfa5f9a98b832d78017b1f151d8676746838307a",
+      "size_bytes": 163731
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/training-5055043.log": {
+      "sha256": "94732240e47f1f55f7b40f3dc33e8e5a790c28bb242dc85b8a461b4c7dbbd039",
+      "size_bytes": 151589
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c2-s153-4gpu/attempt-5055043/trial-5055043.json": {
+      "sha256": "55c6b063d7d740884dbd12abcd1e3e78a696134a581a8ec7eeef7417a0a56ba1",
+      "size_bytes": 1486
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/device-evidence/probe-exit-idle.json": {
+      "sha256": "1dbca815c0ca64dfd29c17b92c98942af39216801130a3cf99a3ce25beff73cb",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/device-evidence/ray-resources.json": {
+      "sha256": "f2302720a3a7d6169ee524e86cc7650d26e87c29678fd46e92d83582d6837cef",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/device-evidence/trainer-cuda.json": {
+      "sha256": "425152808096f4aa55bf92085af2dc9ae2eeb8a4c6eeaeb8a3e530b8326a5ba6",
+      "size_bytes": 584
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/device-evidence/trainer-exec.json": {
+      "sha256": "f3788a0989a0c53e94b14ac6909ea408aa54cbfc88072ba83b7279d0b1650241",
+      "size_bytes": 376
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/device-evidence/trainer-terminal.json": {
+      "sha256": "7a026ea04526d8a6b0d6e671e4f58fd7175f132da97ce8131c3c26327695ab73",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/device-evidence/worker-actor_rollout-0-3775650.json": {
+      "sha256": "036022d50beb4e158213b551bacf2d74893cb4d5fee2b1853a80bbbead0aff37",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/device-evidence/worker-actor_rollout-1-3775651.json": {
+      "sha256": "8a4e4feb3d04879bd4b6a8f84c8196588600730a9b91ad96e7bc84c62a15fadc",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/dispatch.json": {
+      "sha256": "66cce611f2dacfc11f526cc1f651a8b34967264e97e99a750f75be5d14e3a0f9",
+      "size_bytes": 4626
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/environment-5055003.json": {
+      "sha256": "7c6ed8206a056b2827bfcac1648aa7a45927dbe1cbeaac63fcbf4c53759e0740",
+      "size_bytes": 4477
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/gpu-device-map.json": {
+      "sha256": "2927b900f40bf89cdeba06b93541e9938d7c190192982dec71487651e5dc1081",
+      "size_bytes": 480
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/gpu-memory-5055003.csv": {
+      "sha256": "3d281d09002977b58be3d3d9d4aeea7c485e6b765006dd68369d835be3351b28",
+      "size_bytes": 35521
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/gpu-telemetry-5055003.csv": {
+      "sha256": "7c31209872628d4650f44d2e068e62c72ea082b18eb4eb15f37b512e18559518",
+      "size_bytes": 105985
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/launcher.log": {
+      "sha256": "43187a548d50712f6321fba2eaae6d0ca0b55dad038cf2f48f433aff25b54d6c",
+      "size_bytes": 151470
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/phase-memory-5055003.csv": {
+      "sha256": "0d6c4d80d13e43d6a06d584d434219f34f4cfea7e982c4ae54e14b6fbd258731",
+      "size_bytes": 53701
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/training-5055003.log": {
+      "sha256": "3f2f637634fc1063bb356c604b358c22487f976a9b70ad63c244cc74a4a5d016",
+      "size_bytes": 151296
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-2gpu/attempt-5055003/trial-5055003.json": {
+      "sha256": "2296fd8267a00e1bef5aac9eec0aed83db8e07491f9da9599b203f71a21f33d4",
+      "size_bytes": 1485
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/probe-exit-idle.json": {
+      "sha256": "c05919680cb026fd0bb30d782fbf36bdfc232495871e622afb9001efd2e2751f",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/ray-resources.json": {
+      "sha256": "a4b4fa60dd0b3245023f79b76de467605833c72cbad72f8940a5ffb42cda639d",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/trainer-cuda.json": {
+      "sha256": "eeca73034df046a0157ca4ee233d695dec5578235338694c31f167a31e6915c1",
+      "size_bytes": 866
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/trainer-exec.json": {
+      "sha256": "4088f7c7db31dca42e32de1b5d3f8935ff164475069c11d88183eb2dd9cedf7d",
+      "size_bytes": 458
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/trainer-terminal.json": {
+      "sha256": "57f4e131503f015e788d8613412898fabb23ae8ef1ccc21ad10ca68323bafee2",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/worker-actor_rollout-0-3759124.json": {
+      "sha256": "46d595d5eea54b45f95461c4289663aee2058b51b71f3e5a49b2852807852f40",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/worker-actor_rollout-1-3759125.json": {
+      "sha256": "14953a3ed01d4ea153adf9ff04e86f512240cbf1da62c6d0bea846a3f13f5ebd",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/worker-actor_rollout-2-3759126.json": {
+      "sha256": "6dfa91d43e218f2ce43c2f072064b22216b0b0903cb04793fa3dbf81b84b07be",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/device-evidence/worker-actor_rollout-3-3759127.json": {
+      "sha256": "cbfa10eb46c5b41110cd61b671c80f6a3bf5f735290b55f87d854e0142b31309",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/dispatch.json": {
+      "sha256": "49a2eac7c803535585c4d2e290936650057d84d6e736d32f797daeea0ace0542",
+      "size_bytes": 4808
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/environment-5055003.json": {
+      "sha256": "52eec9d31096ff784035edb6430343c8708d31b33a85090ab7bb4c803705bad1",
+      "size_bytes": 4959
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/gpu-device-map.json": {
+      "sha256": "37d5331e002fd0857e302da14b4f0a67523f88ffc4b079147142c7377db4f86d",
+      "size_bytes": 820
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/gpu-memory-5055003.csv": {
+      "sha256": "4e5699d4d404f1e65cb930cf3ac4d3589cae54f8b48d3ed01f213f64d81b098a",
+      "size_bytes": 47035
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/gpu-telemetry-5055003.csv": {
+      "sha256": "d28687e50cf18cfcfa6aba6ffa83a19977d2094cacac803af5745df042680048",
+      "size_bytes": 212412
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/launcher.log": {
+      "sha256": "82d3bc1640be7a05984ca17e5e201cf791dcd68888fd57c2c55a39eb76b7e530",
+      "size_bytes": 153481
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/phase-memory-5055003.csv": {
+      "sha256": "c4c90a218525062d83c7c4961d00f3e487ff7c2cbe45af4ca71b4cb9afc4db0b",
+      "size_bytes": 65245
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/training-5055003.log": {
+      "sha256": "fa3747ff929ebf99fadc14fb094422278a4a55d854b4cbc87574c65856985e36",
+      "size_bytes": 153307
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s151-4gpu/attempt-5055003/trial-5055003.json": {
+      "sha256": "0f3e3c195fe013b88f153e9338163c8603c5ca70c66031150581163ce2a670c7",
+      "size_bytes": 1485
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/device-evidence/probe-exit-idle.json": {
+      "sha256": "4dddd6f43a859cd78c98af4fd5c6750cd8d6f6bf2e91d21e3d126b1e345a7fb5",
+      "size_bytes": 3697
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/device-evidence/ray-resources.json": {
+      "sha256": "74866920e335bf455aee1a7f1316122724863c64ce45eb8457d656cbf0c8afe3",
+      "size_bytes": 1565
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/device-evidence/trainer-cuda.json": {
+      "sha256": "b4d0b4527db57f795d9b1aa92533a7bb20e2f558d7706cefc6cdde44c9a844d7",
+      "size_bytes": 582
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/device-evidence/trainer-exec.json": {
+      "sha256": "9938b206b9be5b69e7c7028f16e470db2b928ad31b67381537ec4fe32a4cdcfd",
+      "size_bytes": 375
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/device-evidence/trainer-terminal.json": {
+      "sha256": "dff1f8e389a02941b4ec9e1754dc28949832d8ba0c03b3872befe8db64cbd717",
+      "size_bytes": 173
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/device-evidence/worker-actor_rollout-0-491385.json": {
+      "sha256": "349131ff049ff2a5bad62f9d18292fdacbff524648703738b7966336af81d512",
+      "size_bytes": 665
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/device-evidence/worker-actor_rollout-1-491386.json": {
+      "sha256": "4b8cfeae5cf93c1ec9dfcd2b93c20de749aeba98e2e25ef4248c8e84da39e393",
+      "size_bytes": 665
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/dispatch.json": {
+      "sha256": "b6261583974e56d2d13c8ea39ea3065c93b1adf8e8072176a712cda589a00cd9",
+      "size_bytes": 4626
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/environment-5055037.json": {
+      "sha256": "b41f6b3060e57d01afba52dc76d18186e52bce80573afcc5ea9ab53547fa8b6b",
+      "size_bytes": 4478
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/gpu-device-map.json": {
+      "sha256": "ea0b9571a2378c3216b581a93c4287010f50bd11138f3e8e29a2c19e28aa87bb",
+      "size_bytes": 480
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/gpu-memory-5055037.csv": {
+      "sha256": "299caa31a771c09a7e5d7a9c49aa1385debfb087e2ebf6081dc01eae02cbbd7a",
+      "size_bytes": 41497
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/gpu-telemetry-5055037.csv": {
+      "sha256": "a8c7aa6ae4941da21b4a961c68d1f608614e32ebc6124ce7e3df07b2a5d7a061",
+      "size_bytes": 123871
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/launcher.log": {
+      "sha256": "9c4b445036c304b05e0e0acebd49ab621b8f2fddf90b37b8e19fa089c2599256",
+      "size_bytes": 150890
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/phase-memory-5055037.csv": {
+      "sha256": "150fe7a2ac73efb233b06be8082ca8d8f15c0cd11877dd8b14a99e11587ddcdb",
+      "size_bytes": 62752
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/training-5055037.log": {
+      "sha256": "ccb5821387ec2ffc3f48d4649893763b1ed5b25568f55ee0f0c2d2c9002e7dee",
+      "size_bytes": 150716
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-2gpu/attempt-5055037/trial-5055037.json": {
+      "sha256": "dd79d25853552b59ccf59cebee27dde61a7d331aa8e0aedc8aef2f0451d216cc",
+      "size_bytes": 1485
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/probe-exit-idle.json": {
+      "sha256": "2d45bea356f7df91ee8451791346e7dff9732e302082cd44c864e9992f1e3248",
+      "size_bytes": 3697
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/ray-resources.json": {
+      "sha256": "e6107c10b10b2719393ed551a50964432b9767250463057733117dea58dd3642",
+      "size_bytes": 1565
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/trainer-cuda.json": {
+      "sha256": "f11c4ce68ec319e3081fa242d8915b83e8685064709f2231bcc8f90954609581",
+      "size_bytes": 864
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/trainer-exec.json": {
+      "sha256": "00d59ed2aa6499c0d63a09bf2382de01010943312a9ce4d029b3d3205972b9c1",
+      "size_bytes": 457
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/trainer-terminal.json": {
+      "sha256": "2cb33ca007c8eb5c220102fcec672cdf785b48da834a0fef9aaf2ea4321d6044",
+      "size_bytes": 173
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/worker-actor_rollout-0-506520.json": {
+      "sha256": "a4671b3883acc42c00c5703e057c1cb15f9b0516f5b82fd4c8a2eababd8ed128",
+      "size_bytes": 665
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/worker-actor_rollout-1-506521.json": {
+      "sha256": "087489b7296a73ed81a2682cf6f60e391f40abb0ed449127d2e6fe90c5bba425",
+      "size_bytes": 665
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/worker-actor_rollout-2-506522.json": {
+      "sha256": "c00392cd88f11271e001f3cbaa3c6b7129fe13ab26016a65ff716556aca8916f",
+      "size_bytes": 665
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/device-evidence/worker-actor_rollout-3-506523.json": {
+      "sha256": "a32cb5e57dbf602e6a07d4427824af1c011de75188b310440a8fa614056bd05a",
+      "size_bytes": 665
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/dispatch.json": {
+      "sha256": "fa60d7e32a7c1c67cd0b22be34ef47a2302bf8b931662065373877d26a90b177",
+      "size_bytes": 4808
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/environment-5055037.json": {
+      "sha256": "8fa11cd57bafd85216c491025cbab112fb145c376ceecc7576243b37f8c949d5",
+      "size_bytes": 4960
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/gpu-device-map.json": {
+      "sha256": "3fc9e4cce9959d4d5a73aefd1eff6387d1fa7025cde4a67b24ffc232b8b1be3c",
+      "size_bytes": 820
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/gpu-memory-5055037.csv": {
+      "sha256": "ec6e33aebb9acb4027f88550bef74a22ad7dca593d4674065f71b1d52453fca3",
+      "size_bytes": 51276
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/gpu-telemetry-5055037.csv": {
+      "sha256": "bd7f8494bc81561a4d089555630854ca3f946f47ccce271c84aa3b5e87a9a78a",
+      "size_bytes": 231627
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/launcher.log": {
+      "sha256": "d0cd4a803cfd0f696ff08828d1e89c43d5f3211f5f8f74e71d03202298561d4f",
+      "size_bytes": 145218
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/phase-memory-5055037.csv": {
+      "sha256": "cccf9069f246c4132130cffbee009c1dc9a500c0f4f84c6299430421ffc1bf20",
+      "size_bytes": 71136
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/training-5055037.log": {
+      "sha256": "ef5cfb905ad581e903cef0383c9969696a07071fe4304000ce6af7896142553f",
+      "size_bytes": 145044
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s152-4gpu/attempt-5055037/trial-5055037.json": {
+      "sha256": "af0ebe13249914ddcced0693be9486881f2ed569ebd308dfa12bb18309ae3355",
+      "size_bytes": 1485
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/device-evidence/probe-exit-idle.json": {
+      "sha256": "c7ea57595cd681d4804cd50d48de65e77cdc7154d5dfd2d0f00dfcee46b231e8",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/device-evidence/ray-resources.json": {
+      "sha256": "979091ff34b7646c0e4f6345a72d02d4ce7fac2ef474de75d12a3426938f2d1a",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/device-evidence/trainer-cuda.json": {
+      "sha256": "838ddd90bf7ef6893ad319ad189f98834528492119fc05c61069db76278a61ac",
+      "size_bytes": 584
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/device-evidence/trainer-exec.json": {
+      "sha256": "f0e25344c5d2247073cfb12ed546f21999602e165e28aac966e1c69b83dd2bc7",
+      "size_bytes": 376
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/device-evidence/trainer-terminal.json": {
+      "sha256": "14eb55652badaa6b507ea35ff6a13c26da740cd556338e0de934717c3a445481",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/device-evidence/worker-actor_rollout-0-3743555.json": {
+      "sha256": "f327f3b0ad3b34b927709f7caed2ea5a05eaa9bbe6b02edcad57e03eb1a70635",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/device-evidence/worker-actor_rollout-1-3743556.json": {
+      "sha256": "7ba8ef82430bb9cb06d38905c0b5d529d0dc9779ddb2664f067088a3ff299b1a",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/dispatch.json": {
+      "sha256": "2a834f169fc8c23cb738b438bf1097757693bb457249c79964dd4bbd98845116",
+      "size_bytes": 4626
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/environment-5054977.json": {
+      "sha256": "25b9859ffb8893d1842eabf162857d746502aa26a76580343cb6c1c17aa5eba7",
+      "size_bytes": 4477
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/gpu-device-map.json": {
+      "sha256": "ea0bc1e29c1fd0dc123b9ae96090692b0396962c53c2b880bbd001bce7c9fbf3",
+      "size_bytes": 480
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/gpu-memory-5054977.csv": {
+      "sha256": "a1dd94c41cec7c30210850bd955d500c4862ee89226afa847f536428f88de1aa",
+      "size_bytes": 34344
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/gpu-telemetry-5054977.csv": {
+      "sha256": "9aff437d423474591294b65cb27c70d23ef83d60a2cf99065cdf1a608b97410d",
+      "size_bytes": 102139
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/launcher.log": {
+      "sha256": "a65fc554b4779680b5afa0e8df03a63dc60bd01c73445ed3ad7a0c6b348ba965",
+      "size_bytes": 152010
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/phase-memory-5054977.csv": {
+      "sha256": "7e1a86266ba5a836ac717fb6735b150873ca1ebfb1f1adca2e3a99edfb4c6205",
+      "size_bytes": 51834
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/training-5054977.log": {
+      "sha256": "f177f9e729edff85dd41b55be183dfcdd4c10d70bdad4f20179712b7405f8185",
+      "size_bytes": 151836
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-2gpu/attempt-5054977/trial-5054977.json": {
+      "sha256": "49ac889b4e91adeb4c6b5924d5843d5613d56a6af126fafdb272d038d0fe40f6",
+      "size_bytes": 1485
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/probe-exit-idle.json": {
+      "sha256": "1e087eb0fbba4a0e247b7de9785ecdd86a4fdee87813673eac5e48fd09c24436",
+      "size_bytes": 3699
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/ray-resources.json": {
+      "sha256": "037136fe1967772a27659960a5ecd1351fc84d50946229a1ebd06f7cbecfa995",
+      "size_bytes": 1568
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/trainer-cuda.json": {
+      "sha256": "e6a2e3cac024ef35b611ce2d74831c7a78587d4b893c7ce4c0ce1ff3db97ba72",
+      "size_bytes": 866
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/trainer-exec.json": {
+      "sha256": "df64137971a9c606dea4bbdedf3bedf76049b57a3ef0269dddffff5b9bffebb0",
+      "size_bytes": 458
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/trainer-terminal.json": {
+      "sha256": "059151a4189cd3adf234f5299b6d044974b4ede7eb901800855f4d12e0b9fb94",
+      "size_bytes": 174
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/worker-actor_rollout-0-3728119.json": {
+      "sha256": "af7d609c5056946c78d7e49e2121d5da002d8efa1edf05ca237bbf39ad331785",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/worker-actor_rollout-1-3728120.json": {
+      "sha256": "4e21ba3d6ce1c507cd42ce10942e542f16a4bd79ca7dac4d54155e33ba20a8cb",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/worker-actor_rollout-2-3728121.json": {
+      "sha256": "16c39326f48ac4786af80c726fd023d240d7b6f7da25505c28b095399c253a6a",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/device-evidence/worker-actor_rollout-3-3728122.json": {
+      "sha256": "38cd6dfb455d39aa4ce8c303aee2df25ffe1062d09e0d131151e43f45d902fd7",
+      "size_bytes": 666
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/dispatch.json": {
+      "sha256": "559e2725e3024e1a24e9d26c2fa0b621f1f0cde7fe939624c2aee024b1f35b7e",
+      "size_bytes": 4808
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/environment-5054977.json": {
+      "sha256": "2f8de95ea29c1049c8bba2e05682492dd40bf1f56de09197548fe84ed20a5285",
+      "size_bytes": 4959
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/gpu-device-map.json": {
+      "sha256": "d617289cda88bb19f23fa678bda283096f719bb51dbb79f3a575e4c9b9bb80d6",
+      "size_bytes": 820
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/gpu-memory-5054977.csv": {
+      "sha256": "f9aec4bbf519828277fad7c7a25cee84f5c345318bedaa5c62f50fd645f6f2b0",
+      "size_bytes": 51283
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/gpu-telemetry-5054977.csv": {
+      "sha256": "9f4d16122a232b98b2c37d4e61148e3bed3f9f4646e1a1777794d4d9d585ae02",
+      "size_bytes": 232805
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/launcher.log": {
+      "sha256": "5828c1974b390835d9a09635ab2877b4c594a576f300dd645d2e3467c7d3d864",
+      "size_bytes": 152307
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/phase-memory-5054977.csv": {
+      "sha256": "3111c35961a1cf85081605c2cb0b55bf39e005fe223f774a8b66701163955514",
+      "size_bytes": 71278
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/training-5054977.log": {
+      "sha256": "37a43e59a8ada4e16c298ce7f0143564efc191c533f3e3927ebb80da124fd872",
+      "size_bytes": 152133
+    },
+    "output/prospective_estimation/est-qwen25-7b-code_heavy_tail-c3-s153-4gpu/attempt-5054977/trial-5054977.json": {
+      "sha256": "6144b3b428ca1c7d089cdbc97d76b73aafc64cb6abe9f92054e78dc0890b5412",
+      "size_bytes": 1485
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/device-evidence/probe-exit-idle.json": {
+      "sha256": "90fa0e4b1a52340e8c4c98ff7cdda0bfa41db592bb24a1ce6f8fa7c2e77e0db1",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/device-evidence/ray-resources.json": {
+      "sha256": "379306cc2fc1befcba3cff1a6b52b9b896d8048ea4b172cb0772626d95a14ed4",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/device-evidence/trainer-cuda.json": {
+      "sha256": "959e67c1120b0b8d729f78c4588be2eefce7fc7969923e247fd6539a1622da5e",
+      "size_bytes": 574
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/device-evidence/trainer-exec.json": {
+      "sha256": "6eefc78e8732ded6413708812b52170f89d81d24ba367da7181b8c03762d7aa5",
+      "size_bytes": 366
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/device-evidence/trainer-terminal.json": {
+      "sha256": "2affc3b0e9e4c8aaf79e72f5f5e194dd43391e8499d6ada32c502ced7556908e",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/device-evidence/worker-actor_rollout-0-2806307.json": {
+      "sha256": "2bd7411c693d1f5e88ac7660f6f381f9add9db1b6739d1365c0b0960f65e6ada",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/device-evidence/worker-actor_rollout-1-2806308.json": {
+      "sha256": "e42937dd13e8751db5b0c8584f4f12a7dee51995f28d626ec6628aa58a34cb14",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/dispatch.json": {
+      "sha256": "a745b8f334d678244c170d5976bb6c97f25dfd70ac4b74bcfbf3fd04bfdec5de",
+      "size_bytes": 4321
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/environment-5054981.json": {
+      "sha256": "4f23124f2bc26ef778e3540cd85cf909a1eb71eb5955a33f99a20bcd905204e4",
+      "size_bytes": 4415
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/gpu-device-map.json": {
+      "sha256": "0b7d5c09e2e71adacea6ad1c12a389e9a3f506b224badbd21f481993bc3e6119",
+      "size_bytes": 470
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/gpu-memory-5054981.csv": {
+      "sha256": "594b29129675b1d8aaad73f0b7f7bba385ea25a41808ec1bfa316708153365dd",
+      "size_bytes": 36703
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/gpu-telemetry-5054981.csv": {
+      "sha256": "2f10422e6e524eb6eee6a9945b83b984a39b1147812566585d7d9ede92b4e44a",
+      "size_bytes": 109117
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/launcher.log": {
+      "sha256": "25d890d270752afebcf6ce0b4cb69c0a47c0f0807d67f5b49f7b9aa77bfcdbb7",
+      "size_bytes": 145143
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/phase-memory-5054981.csv": {
+      "sha256": "cc9ecf092643bc201917289cbcf6efdc4cc3cd04d0efac19063eab808ccc4795",
+      "size_bytes": 55378
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/training-5054981.log": {
+      "sha256": "7e0c204cf0fb81c5de0b75b7423f4784870918609c53f5f9f62a5f4c60e05e79",
+      "size_bytes": 144979
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-2gpu/attempt-5054981/trial-5054981.json": {
+      "sha256": "a0e64245e03316933ae4a918d3a5b7042bf12391f2b755ebdfaed1abd2fb3574",
+      "size_bytes": 1416
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/allocator-traces/allocator-2821514.jsonl": {
+      "sha256": "d712ede802469e2fc3d9ce82a40a0e759cb9c9e4a6a2cabafecded378ef63f97",
+      "size_bytes": 282
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/probe-exit-idle.json": {
+      "sha256": "804525c85e678aa8486d51856d2a0c86a0d398d928e4d987ecea9f461d1acc43",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/ray-resources.json": {
+      "sha256": "e125f16005583c083bfbdf37f8b02d66ffb66ded09892d9973396469cea11e48",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/trainer-cuda.json": {
+      "sha256": "2113a7f63fe8fdb43df0a1c7093667f0828f72de9e715be77c787975b8d92d9e",
+      "size_bytes": 856
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/trainer-exec.json": {
+      "sha256": "f07158d34fc4f35d2bfc5d755f3635f101bee2e95c01804a878a81966e32e094",
+      "size_bytes": 448
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/trainer-terminal.json": {
+      "sha256": "61d00347814e1a6efbf91bac154fdfc7a7b82d476d0cc01f5141c3ddaba5246a",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/worker-actor_rollout-0-2821511.json": {
+      "sha256": "a29ce4602e2cb85e6bde07e0920fc634b78212dec9e28220fcc1b36894ca66df",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/worker-actor_rollout-1-2821512.json": {
+      "sha256": "631f3c3ed615605dcecc5e381c9efa5261c6cc2c0001dd3eaf9af2f89b9f2560",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/worker-actor_rollout-2-2821513.json": {
+      "sha256": "8a514ce8a8f9a171747de1879c0b6082070d966f4ffcb432d037f6f441cf42a2",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/device-evidence/worker-actor_rollout-3-2821514.json": {
+      "sha256": "88b41ad98e9c0f255cc91589b3dceb7723888dac04e03e2fa2eb4b19a58cd255",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/dispatch.json": {
+      "sha256": "7f32c0f73e6b8a5387a064ffd544a62f41ed40b83b8207ae89af865c517e4af2",
+      "size_bytes": 4503
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/environment-5054981.json": {
+      "sha256": "87c427e3d01a09ab48ea3fc289f2fa27ca1f5607a39d68cf49d37650c74c07f3",
+      "size_bytes": 4897
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/gpu-device-map.json": {
+      "sha256": "c2b62990f941295d01f7cbe5c12620400b43d1e5931388ba743caa1080524382",
+      "size_bytes": 810
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/gpu-memory-5054981.csv": {
+      "sha256": "fedee8ab4ea4d93f43862a55f65364fb4b723dcbe4b60091723a51742e96cc18",
+      "size_bytes": 148795
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/gpu-telemetry-5054981.csv": {
+      "sha256": "77ae93c83f0b2b9ed0503695fab0824223ce939879ddea126e1e44443477642b",
+      "size_bytes": 638968
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/launcher.log": {
+      "sha256": "e5ef1d05b8ad1452bba3822d12a8c2198a15e4f4ed2401bfa0592ec8dc4ab05f",
+      "size_bytes": 151411
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/phase-memory-5054981.csv": {
+      "sha256": "137e9f609fe7871e3a15149734c439fb3ee6a8ca63d80ed5fccbfb9d8ce2808c",
+      "size_bytes": 202165
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/training-5054981.log": {
+      "sha256": "7e6ecd4d14d60f69fee1aa2c049ed80450ed690984240cb645effd038ce2775f",
+      "size_bytes": 147017
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s151-4gpu/attempt-5054981/trial-5054981.json": {
+      "sha256": "e4c49ff774d87acd2707f9919cc4e7e38cac180f272510ab07b7ce4d521176bb",
+      "size_bytes": 1418
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/device-evidence/probe-exit-idle.json": {
+      "sha256": "4107ab6efd8cf9f913e0e9ce2ad869009bf653be72f96668ab572930c398d554",
+      "size_bytes": 3687
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/device-evidence/ray-resources.json": {
+      "sha256": "fb599bb3d368204b6f67460c0f2edfb47e810fc63ea5892ef70cd38a4f1c687d",
+      "size_bytes": 1555
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/device-evidence/trainer-cuda.json": {
+      "sha256": "71ba7599e62fcc02f34215cb6797d1670f90f64f5b7ec21f9ec1f6cc4b442b94",
+      "size_bytes": 572
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/device-evidence/trainer-exec.json": {
+      "sha256": "2901ce44563e23a22630c972c1f7ff5b4fedb484b86cb6e8c3f985490d6b5c89",
+      "size_bytes": 365
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/device-evidence/trainer-terminal.json": {
+      "sha256": "76938616f3b0ecdf8dd0bb130c841148738c9a8cbfeb3a5b1e759161ca5e0ac9",
+      "size_bytes": 163
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/device-evidence/worker-actor_rollout-0-410106.json": {
+      "sha256": "d54d55e5cfd50fbfe7a6dda907bc9df188ddb97e3849fd6e4b45e9905093a341",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/device-evidence/worker-actor_rollout-1-410107.json": {
+      "sha256": "38328e22b423781ce6a9dd70e913733e3906739e18aedb7b123b94f5e7afd192",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/dispatch.json": {
+      "sha256": "66245783253fe1702d869a83ebf5dce6f7de90cdc4479b6b6888ec88cbaed8d1",
+      "size_bytes": 4321
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/environment-5054954.json": {
+      "sha256": "c43b67c49ac56dbaa3e87669b8f172784d60fc55f5a0cff1cf48c56559828d80",
+      "size_bytes": 4415
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/gpu-device-map.json": {
+      "sha256": "2aa119121505ecf0b1f143a601f830a8a2b658abeba9a854cbb6e5cd2896281f",
+      "size_bytes": 470
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/gpu-memory-5054954.csv": {
+      "sha256": "49c1874add9eec467618a448372ca0683061d9bd42a6997e61e78ea9062ef750",
+      "size_bytes": 46060
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/gpu-telemetry-5054954.csv": {
+      "sha256": "c8ba1477ae0cb483f1b8eccc6eb379b23ff5d78a9c0e8bc4a88b0e43beb06dbd",
+      "size_bytes": 137886
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/launcher.log": {
+      "sha256": "0936366d54213dddf49d9a5658b0faab622209e8d5f457c3a859004969c50ca1",
+      "size_bytes": 151336
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/phase-memory-5054954.csv": {
+      "sha256": "18edaf82dc8332757ab1cdd3019e941a5f24b8f7bd75ce09139dd99994bb8a90",
+      "size_bytes": 69760
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/training-5054954.log": {
+      "sha256": "85ba10cc4807c211269cb392b762776278df81a3486b771518405ecc4bf5facb",
+      "size_bytes": 151172
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-2gpu/attempt-5054954/trial-5054954.json": {
+      "sha256": "3061299ae20effdca2058e6ec3f2c5e366edd76d89e0441a03b3bd93eaca7315",
+      "size_bytes": 1416
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/probe-exit-idle.json": {
+      "sha256": "a0840a56e6ed3999c2df3a1ca4128c92106f6d375b68a2987aaaaf79a6ea9989",
+      "size_bytes": 3687
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/ray-resources.json": {
+      "sha256": "54b57283b9d7b599b79c480e9fbf4f3866c6eea5236db157288ad489294ef486",
+      "size_bytes": 1555
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/trainer-cuda.json": {
+      "sha256": "a00dded3334bf4fb4a146e469ae097e978036d44c7a0597176aaca40d1e7c0ae",
+      "size_bytes": 854
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/trainer-exec.json": {
+      "sha256": "83b2c66f451c32a52bb6bddcf2a7080205e7376c64fcecb11d77266ad0c384a6",
+      "size_bytes": 447
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/trainer-terminal.json": {
+      "sha256": "17b5d4d261d6069ba8b0490a1fe91ab677a35b1aed9892797e3bb65d42c2af28",
+      "size_bytes": 163
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/worker-actor_rollout-0-425449.json": {
+      "sha256": "1fe0df63775786fe2e683c38e0227d3e772bee605caeedaff5b362cd18f186f2",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/worker-actor_rollout-1-425450.json": {
+      "sha256": "453244a6ddfb3cfa1ecf697649ac9469cada3af2dd5b74478afd8c9ac1efe70c",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/worker-actor_rollout-2-425451.json": {
+      "sha256": "b8e8310bf3a481032ed6686fa43875321c0420f080a9e9ae5599aa14375c8b8f",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/device-evidence/worker-actor_rollout-3-425452.json": {
+      "sha256": "196ae6067fbb4d0da5ad61f8047f5d689c5027aded996f1450f50c78007913f7",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/dispatch.json": {
+      "sha256": "d8b404e1ce721be1b75cb9a521417393f7fe94aa4501cf7aee4b557f2cb36a5e",
+      "size_bytes": 4503
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/environment-5054954.json": {
+      "sha256": "de422397ce8452971821b11615c76883c1becf77095bd17df516dccb884521fb",
+      "size_bytes": 4897
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/gpu-device-map.json": {
+      "sha256": "d71a8d5d4de49d6eeb98973e2a16438376da0a09a4c3cabc744a345cc53e2b55",
+      "size_bytes": 810
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/gpu-memory-5054954.csv": {
+      "sha256": "cb0ac66c6a7db36de316dc325916d9a6b891ce569391fa77513bac760d531767",
+      "size_bytes": 139033
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/gpu-telemetry-5054954.csv": {
+      "sha256": "4365fb4ad0ab3f5dd2b5d7c7495ca020fa1a5b9b8de729ada6cfdafdc60f14e1",
+      "size_bytes": 597830
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/launcher.log": {
+      "sha256": "c1028c2500fcd9c27d42910fbc1936c8788718ca70196f842b9c52f3e3c60987",
+      "size_bytes": 154490
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/phase-memory-5054954.csv": {
+      "sha256": "69755c74c35ff5140c4eec63a72729ed2844df34ff7d16d517f50c15bd176541",
+      "size_bytes": 188893
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/training-5054954.log": {
+      "sha256": "d474369fe8dd11d3d56229fdf74edd99de482ddb07e2a715074602c2936e6113",
+      "size_bytes": 150098
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s152-4gpu/attempt-5054954/trial-5054954.json": {
+      "sha256": "bd51bcbcfa5a66cd9704a7f0b3832631fb64b7571119d5e54162b72e382117cb",
+      "size_bytes": 1418
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/device-evidence/probe-exit-idle.json": {
+      "sha256": "1740e788d8ca31f8d485b02f312ae133e8984d2ab8ec2b0352f04d6aba4b79f0",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/device-evidence/ray-resources.json": {
+      "sha256": "73ac142c2c64255ecdc645e3ad386685cfca2df4ea9af8b47d1b70255443e2b5",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/device-evidence/trainer-cuda.json": {
+      "sha256": "b51154ea81e3bffcb63d92fdcfe1e91c99cf702178476c6c5b6246a02a403631",
+      "size_bytes": 574
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/device-evidence/trainer-exec.json": {
+      "sha256": "49b64b8bb3ec47badefab7e6456c4b59c4845f91fe005cdbea42916b5169e1da",
+      "size_bytes": 366
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/device-evidence/trainer-terminal.json": {
+      "sha256": "2b3a128aab444c9a43aa92da219fb3d66e1d4ffa29e8b91adf36c732d2faa77e",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/device-evidence/worker-actor_rollout-0-3813590.json": {
+      "sha256": "696bd08fcbef4fb038266d69ccc2d83c595d76dca9c0d376e0c2f4c51763a77b",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/device-evidence/worker-actor_rollout-1-3813591.json": {
+      "sha256": "66d2f3537f94d99974072439ebceb226a6c3e848f1b13b99caaa4b91e7a55b50",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/dispatch.json": {
+      "sha256": "ee3fe7b2450d0a8fc5126ba05bb05831b045fd30eabd91a240ac3831e2935c6b",
+      "size_bytes": 4321
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/environment-5055027.json": {
+      "sha256": "1b08b8218f41f5c1682af48e0309e7459376d7aec57a9515e55c4faacea05b99",
+      "size_bytes": 4416
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/gpu-device-map.json": {
+      "sha256": "a0779d6df7a6ece5304bf455b9311d601db75272721242c06992e9485f4cbbef",
+      "size_bytes": 470
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/gpu-memory-5055027.csv": {
+      "sha256": "b482a38cf025c6f19926530e0337b07c9caa4118a74561d96d80c2080f90d35c",
+      "size_bytes": 34465
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/gpu-telemetry-5055027.csv": {
+      "sha256": "ccb5f5e6182ce8dc290c557b40e90753f4a57b431caeb0880d1c7527d6be2814",
+      "size_bytes": 102542
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/launcher.log": {
+      "sha256": "ff4e042e2bba908035d947e1ed2c37f118572761693337ea2597b6b022dcfb5a",
+      "size_bytes": 151202
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/phase-memory-5055027.csv": {
+      "sha256": "4df2331347bbd97373729430a1f7e794144d5c158b610e4a0ed6fa135c2569ec",
+      "size_bytes": 52030
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/training-5055027.log": {
+      "sha256": "3591d0732d8cd8ddf2bdb13b4619d2cb653bea94f7bac683e00b63cd6f37fd22",
+      "size_bytes": 151038
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-2gpu/attempt-5055027/trial-5055027.json": {
+      "sha256": "2b1eadcb97b5b5d95d2b6da97b29c93b1bb45aef50876db0459fd66535046e8a",
+      "size_bytes": 1416
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/probe-exit-idle.json": {
+      "sha256": "9396260cb7ae11e8401f6eceec19a742a58b7cb54d658fee0571370163045007",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/ray-resources.json": {
+      "sha256": "762d7f4b31f962551471ccdc53bcf1d2ed3d7d4acd3cac1e0bdf26ec4b03b5ae",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/trainer-cuda.json": {
+      "sha256": "1f101fded9d3db22b50f2240f614880fda3442bba550fdc0cd6101a99a102148",
+      "size_bytes": 856
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/trainer-exec.json": {
+      "sha256": "d30090c7beebfba68cb21ae77b7013b1d3eee3ac36632ff514442a98a11e8030",
+      "size_bytes": 448
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/trainer-terminal.json": {
+      "sha256": "8ef37cefc5d55eb8bffebcb3894dc9118c29b3e1cee70cbb6b6984d1521ed7de",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/worker-actor_rollout-0-3791141.json": {
+      "sha256": "cf926a2b5d7815be8edfa86adb1ebe72a74a29336abf8d6263845c5e6d818dd2",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/worker-actor_rollout-1-3791142.json": {
+      "sha256": "2096638c193ca5b78bce7ae334e40047d13fb8bfd82fafad05b2dbb68f041b8d",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/worker-actor_rollout-2-3791143.json": {
+      "sha256": "c834ec491bc157a4716f57f47b77aa61e9c43386bf02072704c6b3faa051d888",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/device-evidence/worker-actor_rollout-3-3791144.json": {
+      "sha256": "ef8911f8ec15a89654550067fd1cbf31c88cf1710e02a2634cb9172abee32cbf",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/dispatch.json": {
+      "sha256": "0ee85ca91b25aefd41d19426a356b6d4bfbf8bb458b77d79cc1bebf3289cb8cf",
+      "size_bytes": 4503
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/environment-5055027.json": {
+      "sha256": "c7bca2b0b46488551114bdc3e5f426caaa54e62650468f9aeac7819ef75c4440",
+      "size_bytes": 4898
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/gpu-device-map.json": {
+      "sha256": "5e60dbc55d5622911b43fb84013bdd919157e11fdb296d5f0439444b7a519bf9",
+      "size_bytes": 810
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/gpu-memory-5055027.csv": {
+      "sha256": "f113e972e4ea6055560fabc80f7164d30ac18338d46b54a5decf26288784688e",
+      "size_bytes": 116232
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/gpu-telemetry-5055027.csv": {
+      "sha256": "690105f46069a92e5690a69e7a7289372e9ca257df6e01a4668dbfd00abef3d3",
+      "size_bytes": 499267
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/launcher.log": {
+      "sha256": "044bf81654363aa7c6a5ffeba166a652c2f37d78b6d18f1c06cffafef27e81ce",
+      "size_bytes": 155291
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/phase-memory-5055027.csv": {
+      "sha256": "343842d69c393a31990a3313711f8b8ad026724c408f10cda220e56490d26541",
+      "size_bytes": 158172
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/training-5055027.log": {
+      "sha256": "dbaffc5c9c4193221001f79f952d79fe0b64faaf7e9090674d4c5de8ceeb6f4f",
+      "size_bytes": 150897
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c2-s153-4gpu/attempt-5055027/trial-5055027.json": {
+      "sha256": "6c1c8661f969a04b0b0ac3e529ba0b0df3221077145a7aac7028a079385b7d91",
+      "size_bytes": 1418
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/device-evidence/probe-exit-idle.json": {
+      "sha256": "ba15bdea21460527e89ea13e69842b0dc631c0c75162128b6cb74a7a3a649cce",
+      "size_bytes": 3687
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/device-evidence/ray-resources.json": {
+      "sha256": "09219e8fb099749b8eb0b5666c1ecbdd30f4111760cd7f96c8ce9fc80f29348f",
+      "size_bytes": 1551
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/device-evidence/trainer-cuda.json": {
+      "sha256": "7eb14600fff6eac6282edc52175b1adebbbe760003a3ef31d614e61875fd8ce2",
+      "size_bytes": 572
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/device-evidence/trainer-exec.json": {
+      "sha256": "7bc938dd09dba8725db54cc59e434f0271dd362dc8d0b1c5102aa7139d4261ea",
+      "size_bytes": 365
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/device-evidence/trainer-terminal.json": {
+      "sha256": "61c643e521dcde021ea1617350721923fbde77850ca37b89fb4db9af50e21bba",
+      "size_bytes": 163
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/device-evidence/worker-actor_rollout-0-239632.json": {
+      "sha256": "3da55a07a3457923c36bfa1ceb7033967479098421a7046c44611b0029fe9b85",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/device-evidence/worker-actor_rollout-1-239633.json": {
+      "sha256": "bc1b457afa0ef091ae3310cdba84965376acd22aaa00b37214ab0c38e4ba2be9",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/dispatch.json": {
+      "sha256": "2fae3952ea5c1fde9ed60ada9fccf26483d9d03afabb983d3d42ce6111e5b505",
+      "size_bytes": 4323
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/environment-5055039.json": {
+      "sha256": "87f9dc01bbc55e3f0cc67591cc2c460d71827b5b6402c673b2f6029842b784e0",
+      "size_bytes": 4416
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/gpu-device-map.json": {
+      "sha256": "fae28d32a9df9180c58eda619dff6b5db8df46bb18c233b2ef41234d05e45378",
+      "size_bytes": 470
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/gpu-memory-5055039.csv": {
+      "sha256": "a54ec463961e181c556b9abc43910301f6d6a74ddd35aaaf12b358f4f49a685e",
+      "size_bytes": 35250
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/gpu-telemetry-5055039.csv": {
+      "sha256": "d3bfb6aee8f9eae4d5630661739aaf7113868eccd2aecec1e8b9971a0f9cc08a",
+      "size_bytes": 104846
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/launcher.log": {
+      "sha256": "205092ecb0bc5c914b36ffdbb8870ae2bb5bb09fde8a46653c372f1faaf8b59b",
+      "size_bytes": 150703
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/phase-memory-5055039.csv": {
+      "sha256": "314d55a058f4a8ba1385c8885a2111027035665448f45ec61a236c1e81cfb825",
+      "size_bytes": 53205
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/training-5055039.log": {
+      "sha256": "4a58745127c8523f1c96911dd815e87da77be3b06bd3a770754bee9f7235472d",
+      "size_bytes": 150539
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-2gpu/attempt-5055039/trial-5055039.json": {
+      "sha256": "dde907c9c97a7036741ad42b45ff91855d3f3734763eeb795dbca1f2b535b8e7",
+      "size_bytes": 1417
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/probe-exit-idle.json": {
+      "sha256": "b12f8a6ec4e595945f6ce230731b3f086196cbca04c07c0900957dea69528998",
+      "size_bytes": 3687
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/ray-resources.json": {
+      "sha256": "fa8834ac36566e78d4fdabc8a7c2604d47d79cb3c1b73b1d96a66a9aa6f07a61",
+      "size_bytes": 1551
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/trainer-cuda.json": {
+      "sha256": "5fcc43e1ce2e6853aa13c3cb855f5e03da3219469ba0181951cfca7dcb100636",
+      "size_bytes": 854
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/trainer-exec.json": {
+      "sha256": "c0beefaeea52dd3a3c37838d6fc01e73857f7b42c5248145b09a5aebc90fb7fd",
+      "size_bytes": 447
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/trainer-terminal.json": {
+      "sha256": "f1595d9da0d74ab3c803d31eff5276d18f0b1bc657ba6e69e0fc9e7537a49e57",
+      "size_bytes": 163
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/worker-actor_rollout-0-223649.json": {
+      "sha256": "26a408fbf6ae56e0593299fee27efdf253aef44354bf51094d252274f1e3c0de",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/worker-actor_rollout-1-223650.json": {
+      "sha256": "62f30eefe34dccf5318b4e9ce2d379c7e3474590f900ba0e0968e30cdb3851c6",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/worker-actor_rollout-2-223651.json": {
+      "sha256": "3f565bde33bbe381432aa553ab98d9a96033f7e946280ccc2d958a0c3a1608ef",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/device-evidence/worker-actor_rollout-3-223652.json": {
+      "sha256": "9dbfad63684dd6b9c8d4975b31b6e11ae2ddc4b5566bdb5665974e02591fef10",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/dispatch.json": {
+      "sha256": "e7d5b49fe00aca4ac25fe286e83ce98de47b4c8eef763b7a04708f4571af7f34",
+      "size_bytes": 4505
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/environment-5055039.json": {
+      "sha256": "eeaa99b78ef7e9ff35d6eb0dc05b8ef398fae6e2c7b272fd6f13094bf2dae18a",
+      "size_bytes": 4898
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/gpu-device-map.json": {
+      "sha256": "7559ab85f60fcd5254e2134eda144444bd97cf2e4a3796e449ae3450105d9ca3",
+      "size_bytes": 810
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/gpu-memory-5055039.csv": {
+      "sha256": "b4b4e19dd46e05882f0eb6239d50081bf3fb41128dc9aaf69af544b59f2e6c3c",
+      "size_bytes": 52234
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/gpu-telemetry-5055039.csv": {
+      "sha256": "757a749f5d82b9303b34e6183405244fe0aeb8dc806b0881680f4e5b629ea13b",
+      "size_bytes": 236803
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/launcher.log": {
+      "sha256": "a056539d039a4b064daaffaf2666ebda418123f101f05830c8cdc804ead51466",
+      "size_bytes": 152029
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/phase-memory-5055039.csv": {
+      "sha256": "81cf73993ba8398b64d63d49573d5f2ff00262f13fb0b682be8585b65c82cae3",
+      "size_bytes": 72559
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/training-5055039.log": {
+      "sha256": "33e3c6f3b906271e7850fb9020806adc86d620e389c69be33935a783930dfa3a",
+      "size_bytes": 151865
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s151-4gpu/attempt-5055039/trial-5055039.json": {
+      "sha256": "20533f21f4494b5ea2cee41ea77ca60fa4e5e0100993924d2c8806ed88463f18",
+      "size_bytes": 1417
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/device-evidence/probe-exit-idle.json": {
+      "sha256": "feee07cb7f76a70f68b03182ced69610f5d33a29c1527dbc5df8222c07b06ca1",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/device-evidence/ray-resources.json": {
+      "sha256": "a1f8aa24e578f0039fb7b9941d269783e257642595cbc4ff0c02fba94317305d",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/device-evidence/trainer-cuda.json": {
+      "sha256": "d9559a799fa49f3187916a1af9288c31c535858c83fbb10f6e3147c9a3898879",
+      "size_bytes": 574
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/device-evidence/trainer-exec.json": {
+      "sha256": "561323fbd8b8535cf5418f098f71810fa10ac94ff2d8270afb9ca0cfe411d8a8",
+      "size_bytes": 366
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/device-evidence/trainer-terminal.json": {
+      "sha256": "b8484860c422989e82224921da56c8d9e3a03ad092f2bd1901112036f519310b",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/device-evidence/worker-actor_rollout-0-2902450.json": {
+      "sha256": "3307be1a667009467159f69e201cad1b6e4beca18ba6d49450159300f1c9eb89",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/device-evidence/worker-actor_rollout-1-2902451.json": {
+      "sha256": "5f00a77643eceb402ebfdac0447aeaa43f52cc9061569782f7d7ab774295214b",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/dispatch.json": {
+      "sha256": "5b45b509a807fb6d79cf3d153cd88f037ffadbbcddafe34b1b07be5d2663dcce",
+      "size_bytes": 4323
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/environment-5055040.json": {
+      "sha256": "40c6943fa4388e05558e340c6180cdd13649c60e0c5110a128f7ab5b3789f22e",
+      "size_bytes": 4416
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/gpu-device-map.json": {
+      "sha256": "3495fd0696fd723901acb870a0b34177df4d4972f8312ab7ad7ce9d0220559fa",
+      "size_bytes": 470
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/gpu-memory-5055040.csv": {
+      "sha256": "4163dbdf9f2443113abf7b578e013717cd0b220ad021c948cf5900e56704838f",
+      "size_bytes": 37007
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/gpu-telemetry-5055040.csv": {
+      "sha256": "7548b88fe81f9776870b1d4725252c3e3a8d57b880f862beb68110b297a8e32d",
+      "size_bytes": 110110
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/launcher.log": {
+      "sha256": "5d00afea2962b0949280254f4cc9f35a6f70a8d86d750e6a5ce089cd3e398f9a",
+      "size_bytes": 140971
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/phase-memory-5055040.csv": {
+      "sha256": "22be30796ae66cc4170aa19b4e45feb57a43e09b08a2b2f691661b1915e9f9fa",
+      "size_bytes": 55862
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/training-5055040.log": {
+      "sha256": "369f4d3b0f5a16b625bae5f70fb59c815661c5aaccc5aab4e436c45c6ac09908",
+      "size_bytes": 140807
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-2gpu/attempt-5055040/trial-5055040.json": {
+      "sha256": "722c6aa143f3d154e35b863f491771e5f90e1a104293600cfdec795cd064a239",
+      "size_bytes": 1417
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/probe-exit-idle.json": {
+      "sha256": "2bea834a702244208d969f98a894452a750ce7e185afd6b2cb1929bbbc024459",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/ray-resources.json": {
+      "sha256": "a7782c6d413819d743caf2110cff21144fda783d9ef9415b1b53eb282e33cbdf",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/trainer-cuda.json": {
+      "sha256": "157d8b6700f0a64f914f3042df4a2c46d0c5200fb638375bf7e2cab19b7d0e72",
+      "size_bytes": 856
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/trainer-exec.json": {
+      "sha256": "85b18cc608cf75bcdc9fee8718afa6b98ac3dcb54dce7eaf77b14328aa788f21",
+      "size_bytes": 448
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/trainer-terminal.json": {
+      "sha256": "f7b4ca047049210b34e206639e5e6b47aba848f35ab68a2f1806e5105fe994d5",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/worker-actor_rollout-0-2887019.json": {
+      "sha256": "ac319652b009e95d853a593b78a6b59b5c3b30364264086e1c07504f88a1cfa3",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/worker-actor_rollout-1-2887020.json": {
+      "sha256": "b7b2b3c867a4105d8546c2f628a5ade8d80b51b3acb0f64a625619e75ad921ad",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/worker-actor_rollout-2-2887021.json": {
+      "sha256": "a37e4fd1723a1a62a55e60a44d05775750971f6ce6c7ccb6fe1444c00c01d26d",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/device-evidence/worker-actor_rollout-3-2887022.json": {
+      "sha256": "2f9f69f3c15fc8d6488ee3976b76dad55b7b0dd0de251f797326f0fd2833aa12",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/dispatch.json": {
+      "sha256": "d33647238742eedb44dba2d151f03383b6fe1214544214e43bc94ee7cac553ed",
+      "size_bytes": 4505
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/environment-5055040.json": {
+      "sha256": "a70d7d101c1811df6f942a4e0459ed2d5ace97143b31a1fe24e6a56be88d5922",
+      "size_bytes": 4898
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/gpu-device-map.json": {
+      "sha256": "4e003ac25bcb095a3c7e55a45bf816f6bf0351a567d17d1b503d8c9aa4ba00ce",
+      "size_bytes": 810
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/gpu-memory-5055040.csv": {
+      "sha256": "7d3bc7fa380d4544cf96c56437476191a8c9e852b1413b08a785ae4bc2b02e02",
+      "size_bytes": 49029
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/gpu-telemetry-5055040.csv": {
+      "sha256": "80203b36d91d12ebf912cde8acdf05acea63d7b4a29b6f824f7d64692dd4e751",
+      "size_bytes": 221146
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/launcher.log": {
+      "sha256": "b943caad1f40f41905f322485febe7aa8c7764752f70042270409ecbda57348e",
+      "size_bytes": 155846
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/phase-memory-5055040.csv": {
+      "sha256": "b2291867ff38d0a752bf73c9536bf61b8991221e3c600a4b73a824124dac0e7d",
+      "size_bytes": 67974
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/training-5055040.log": {
+      "sha256": "e6e2ca38ce707c7e488c5d5aa8377ba53a4cbe557e3f888efa7ad9005ad7ee6a",
+      "size_bytes": 155682
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s152-4gpu/attempt-5055040/trial-5055040.json": {
+      "sha256": "04f5c2ca8313cba072da72603637da301d1b6ca326429b5e3252e220264d6396",
+      "size_bytes": 1417
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/device-evidence/probe-exit-idle.json": {
+      "sha256": "d7c8c0fbd4376432e73b6c8759bc44c2eea73fc84f269d4f8c2f658dcd8f1daa",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/device-evidence/ray-resources.json": {
+      "sha256": "403b9de0f449cb25dd5d35dce27083db4f0ea173aa3c7ff72db8bf80e87bbb7e",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/device-evidence/trainer-cuda.json": {
+      "sha256": "50c07928d6b0bac5f2e08870c94af2bc53e6a069a63846efb16928c4a8ffa0dd",
+      "size_bytes": 574
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/device-evidence/trainer-exec.json": {
+      "sha256": "b1f85bb98ab0ba953cb1204cf08eb0b2f8fab1d05079c7af16aba51ac1d996af",
+      "size_bytes": 366
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/device-evidence/trainer-terminal.json": {
+      "sha256": "f3b7ee842055fa434b6ea1e099bde1a40635180c7950924fca6ba450c129d724",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/device-evidence/worker-actor_rollout-0-2760700.json": {
+      "sha256": "0d4d894ac3bf5d9bd8ee6679d9821605e4c0e5c188a13f965388748938cd3f94",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/device-evidence/worker-actor_rollout-1-2760701.json": {
+      "sha256": "ce131b01419e22cb02e5a85346400046f0ed36865499b757ffc3408a6dd5ee19",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/dispatch.json": {
+      "sha256": "8043b4b55eece61862ba81169400a18661ff47853c5e653ceb6a92ce53162afa",
+      "size_bytes": 4323
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/environment-5054952.json": {
+      "sha256": "afaa0d70abf3cde2a8c8b9d8d3c38c67dbb1309f7f165b3c9f57788826571d41",
+      "size_bytes": 4415
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/gpu-device-map.json": {
+      "sha256": "bad13271331f2ea11b13d98b4452d396f53c8d430074a9af291b7777d3873af0",
+      "size_bytes": 470
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/gpu-memory-5054952.csv": {
+      "sha256": "5b5f6997e624d8af915c62b812cbbde59c81a65b0eba62382017516ea5261ac0",
+      "size_bytes": 45872
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/gpu-telemetry-5054952.csv": {
+      "sha256": "774662db1ec7c689f3f6bd87dd5f23f77cdf83716c9d3215fe73ec95b435e926",
+      "size_bytes": 137383
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/launcher.log": {
+      "sha256": "863901fa900c31e06f19d77714eeae085f8c8ebb503162931708fdcd7ea39970",
+      "size_bytes": 152621
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/phase-memory-5054952.csv": {
+      "sha256": "d18bd122fa26508a60eb8a326f92a017bde7c74ae9da3a050958bb282be4385b",
+      "size_bytes": 69497
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/training-5054952.log": {
+      "sha256": "85abdbcd12fefe6edf252af0497e53e5d54f2cea23662ea91176b9dc1a0197cf",
+      "size_bytes": 152457
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-2gpu/attempt-5054952/trial-5054952.json": {
+      "sha256": "85386c62174686d5201c0834cad0d14e06ecf8d7ed1ae7d71cc8f05ee3f77c8c",
+      "size_bytes": 1417
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/probe-exit-idle.json": {
+      "sha256": "685ed87ce4d077f99653c7c53f90a98655da0c12e7e61decffe4f6092cf6e71d",
+      "size_bytes": 3689
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/ray-resources.json": {
+      "sha256": "44ac9a3817f8d2f976d969f91cddc30685db79ede4cef5d4c7a7d24441463f71",
+      "size_bytes": 1558
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/trainer-cuda.json": {
+      "sha256": "da98dea5b322620b2d2d73aa8e565a6b3e2e5580d28a0f7df491eb63eac78895",
+      "size_bytes": 856
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/trainer-exec.json": {
+      "sha256": "3bd0a6d86437317bf3c94814fad2db0992f31e094adaec7eeeb9b5a07f4e2dae",
+      "size_bytes": 448
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/trainer-terminal.json": {
+      "sha256": "8104be04acdedd4d36e862784fce4690661c6c219d2c8da604be1f70a6c2d6a6",
+      "size_bytes": 164
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/worker-actor_rollout-0-2788660.json": {
+      "sha256": "d67d94856b298c4f5454eb84b109f84900a847a9bc3f541af8a6e916c5cc2eb3",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/worker-actor_rollout-1-2788661.json": {
+      "sha256": "10e2d8192a8dcc7a2d994dcebf5f60c358a1ec57518383ae6cffff528877a2aa",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/worker-actor_rollout-2-2788662.json": {
+      "sha256": "d160db7fd34b20bf355b9c65ffc1d796a3c3adc95a83752a2fe413a13d67e5c5",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/device-evidence/worker-actor_rollout-3-2788663.json": {
+      "sha256": "6e466baf7e0927b9e1688f1d338e981bdea6b8d0dece90fa86570fd129c42b9d",
+      "size_bytes": 656
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/dispatch.json": {
+      "sha256": "8d8d4416de398f8faecb78cfabb5b3430b706f33e6f763b7664363926ffe04b6",
+      "size_bytes": 4505
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/environment-5054952.json": {
+      "sha256": "3e2532255afcffeed84584822d74c424d299bcc70fe81cc45ec3abea5be8122d",
+      "size_bytes": 4897
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/gpu-device-map.json": {
+      "sha256": "345d3ef06279fe77e65068ccecf5bac8f1604fc79803196594fe00054b9dace1",
+      "size_bytes": 810
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/gpu-memory-5054952.csv": {
+      "sha256": "265e77f8d181c60fcc525dc4fcddac206ee733dcac679d9f85a7ed6457a5af31",
+      "size_bytes": 49132
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/gpu-telemetry-5054952.csv": {
+      "sha256": "2cf282e3cf99d9c2a36b305e5a1860e0fe8616bbed7e3d7202df7957c0f7ef9c",
+      "size_bytes": 221504
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/launcher.log": {
+      "sha256": "ef1c1c80ed3b0cc41e0ff28038a6c05e1b44b004fe40e07b895c95b299f30d2e",
+      "size_bytes": 155733
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/phase-memory-5054952.csv": {
+      "sha256": "2e5a994f775670b9576219310f5bb2e68fdd694fbc609aba2c907864697d0701",
+      "size_bytes": 68107
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/training-5054952.log": {
+      "sha256": "2147efcf62abd483d7078a1452c2dbc5049741f0826a3531ecc84e95692c26d5",
+      "size_bytes": 155569
+    },
+    "output/prospective_estimation/est-qwen25-7b-gsm8k-c3-s153-4gpu/attempt-5054952/trial-5054952.json": {
+      "sha256": "dd7a44d1166aff42c546442053606e573bb6692367116507ce2ea5ab5079c2ec",
+      "size_bytes": 1417
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/device-evidence/trainer-cuda.json": {
+      "sha256": "90e16c69bc181a9009833b3ddd8160d5a592d64bc97c52918b048924f078e871",
+      "size_bytes": 571
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/dispatch.json": {
+      "sha256": "2345925c10892031a4cc309320d3e2643c0acd247d537f7a1acc71160c7ae84d",
+      "size_bytes": 4309
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/environment-5054345.json": {
+      "sha256": "b51954a2607845c3cce4463635348d68f0f1132fb758ea0d6ccfaafe2f4d9701",
+      "size_bytes": 4411
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/gpu-device-map.json": {
+      "sha256": "7a4216ea83e6a6756cb22c5262d380e288af353ed6510b5a09902433ea47225b",
+      "size_bytes": 469
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/gpu-memory-5054345.csv": {
+      "sha256": "1d47fc8ba3e2d468f3c70d188990359d9db1a587e15b13ccf2cdf094d6deaba5",
+      "size_bytes": 1260
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/gpu-telemetry-5054345.csv": {
+      "sha256": "87a2440969988c477592b8a48d99f6d6bf0aa11782f5244d3abd20e0c278db6f",
+      "size_bytes": 3940
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/launcher.log": {
+      "sha256": "f57a87c23afdfcc37de4193c2ac128cb8e5b1a003b49c849a09381c05c269136",
+      "size_bytes": 258
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/phase-memory-5054345.csv": {
+      "sha256": "f530f6baf12d8f31b5d4b73cc7815f498c6e48da68f6b5547f5bda595e845d93",
+      "size_bytes": 1935
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-2gpu/attempt-5054345/training-5054345.log": {
+      "sha256": "eac54c43cc7f6f3e8e3600f74443e9e8a61bd69e2f995f6628a777e008ed0bdd",
+      "size_bytes": 95
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/device-evidence/probe-exit-idle.json": {
+      "sha256": "9461184cd58c9a70e3bd729e7711d65d93a1f9a3a72f00bce0ffc2e01eae62b5",
+      "size_bytes": 3686
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/device-evidence/trainer-cuda.json": {
+      "sha256": "a89d064ad40a6b68bf2315cfc8c551a1c62d7d63235a6f7de84fab2ad23307e0",
+      "size_bytes": 853
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/device-evidence/trainer-exec.json": {
+      "sha256": "46bd8136afdc19421c361a385359ea9185374d631051f31b018a39b475897765",
+      "size_bytes": 446
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/device-evidence/trainer-terminal.json": {
+      "sha256": "d48a2803b8f633a538050fc486e04f0710bf20a061d5131b442bee73f648ee72",
+      "size_bytes": 162
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/dispatch.json": {
+      "sha256": "4b077647f91142d2e99676ea21982990e7d55cd7745d815e2b093f4813d67526",
+      "size_bytes": 4491
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/environment-5054345.json": {
+      "sha256": "f63005c8a5b9dc5a19e38b602e8ba4ff1a17749916689f2d629b2ae9f9c5a79a",
+      "size_bytes": 4893
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/gpu-device-map.json": {
+      "sha256": "3a6325e56d84a0132f2962fca19be36779c10f9de471c6929e4fcde88af3a133",
+      "size_bytes": 809
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/gpu-memory-5054345.csv": {
+      "sha256": "dcb3012335a99a5d21820ef66818228848bb412292ff4e1b610f2dada9f8caa2",
+      "size_bytes": 8820
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/gpu-telemetry-5054345.csv": {
+      "sha256": "e799d4f61172b95a161d4b1661acbbeb54cd913b41a59dace0502ae7c7f1ad50",
+      "size_bytes": 42210
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/launcher.log": {
+      "sha256": "307f1dc04dde6c3fdca42369c832e7079469183ddc4d7ef1736fa54392e654e7",
+      "size_bytes": 10455
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/phase-memory-5054345.csv": {
+      "sha256": "384e2104d66b97c634d8fca42e1be39e86ee6f7e40b76395d13478bd3c66b97e",
+      "size_bytes": 12495
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/training-5054345.log": {
+      "sha256": "1ff7787dc3f88e6f80d318949ce48c33619476d4bedd24b138669b2e673313a5",
+      "size_bytes": 10292
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s151-4gpu/attempt-5054345/trial-5054345.json": {
+      "sha256": "9fa49106720cb9aca024b7b033413838d7f492d7f2df414e2729969ed1a42878",
+      "size_bytes": 1406
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/device-evidence/probe-exit-idle.json": {
+      "sha256": "b99eb0d22eab6d453b09c81a4a9292ae4bfa8df33987c7357a978799e1438dbe",
+      "size_bytes": 3686
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/device-evidence/ray-resources.json": {
+      "sha256": "9bd8b9a2b86c0aa0e2214bdf0459e3f0fb0366e4464d70c1a66b05b4354fcb3a",
+      "size_bytes": 1554
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/device-evidence/trainer-cuda.json": {
+      "sha256": "6e0f8f609672add0a13fd987e36a64c632e433cfea7c96effb6a4fe9379afc29",
+      "size_bytes": 571
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/device-evidence/trainer-exec.json": {
+      "sha256": "3eee4e55c1ac1b6f55e6039bf86de7d35cabeeed5f296592b07d6a7d0a2abec5",
+      "size_bytes": 364
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/device-evidence/trainer-terminal.json": {
+      "sha256": "4fcaf8558ecc49ffc5884d8742c07288d0656437104ddbb9d18c459dc8b6524b",
+      "size_bytes": 162
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/device-evidence/worker-actor_rollout-0-451980.json": {
+      "sha256": "f46a96671843faae2bacfa5801f211f9c077a3f4c74a09136bfb35a4d6ad45f3",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/device-evidence/worker-actor_rollout-1-451981.json": {
+      "sha256": "788b19e134eea78e486fd3575aef5df18d67c8fae97da0dca293feeb99346f04",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/dispatch.json": {
+      "sha256": "8feb16464f0d2ca28f3b541361ca7f3270f23b53e8fe1283e44bd597c9da4512",
+      "size_bytes": 4309
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/environment-5054998.json": {
+      "sha256": "34f0ffa07a9e7e7897548aafa9aa92b406331dad4b0ee6a8f8def18a4a60046d",
+      "size_bytes": 4411
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/gpu-device-map.json": {
+      "sha256": "66fb2bfc97ae0fb2fff38f57d1655e69c2d4ff87e566a407448b1191667c6642",
+      "size_bytes": 469
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/gpu-memory-5054998.csv": {
+      "sha256": "0aa37086ab7e9070b081d5aa3bc91b09046ebd89b1b7bb5d36754b0b24ac5882",
+      "size_bytes": 39421
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/gpu-telemetry-5054998.csv": {
+      "sha256": "79419c7b608679323a25f9eb9bc3bd841c9a4cbaa10ac0e10c4a043ffec15d39",
+      "size_bytes": 117551
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/launcher.log": {
+      "sha256": "e1c5cafb971c65d4f32d5d2100fe963ed8bbdb582f2a8af8809c4d2d4356f882",
+      "size_bytes": 150618
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/phase-memory-5054998.csv": {
+      "sha256": "4c6841f02bb6e70398bdc4e2962e740607f761b67c49e19c4ed3c684064d5336",
+      "size_bytes": 59581
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/training-5054998.log": {
+      "sha256": "d7e24d5d98c6bff45277e89937c759eea50f7d3c7fc8549f4936ff92ed12d5e7",
+      "size_bytes": 150455
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-2gpu/attempt-5054998/trial-5054998.json": {
+      "sha256": "8f6495ad693eece376505beb764beb1a5ffac9dd68245a3c1e07117c51c8323f",
+      "size_bytes": 1409
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/probe-exit-idle.json": {
+      "sha256": "480897e3332992290eb1bfe8cfb14cb1e618fe9e07be293ca8d9da342dda2e1b",
+      "size_bytes": 3686
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/ray-resources.json": {
+      "sha256": "fbcdf42ed79b27a2fa4876f4c64600f61d8cdc3447a5c9a1544abc0c255ba0d3",
+      "size_bytes": 1554
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/trainer-cuda.json": {
+      "sha256": "068ceaf1f12e7cf0baab78193e53f33ebd120aaa69d5e67032d43bfdc49ed673",
+      "size_bytes": 853
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/trainer-exec.json": {
+      "sha256": "ac50779ae57691b01213b50b92a54b14d0ca75b52476e3a8cedd3c01a8c1de26",
+      "size_bytes": 446
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/trainer-terminal.json": {
+      "sha256": "b546a9a74658f0041d3902c6c47c969cb2f371d477578bbf1ac991e7fd7b8b32",
+      "size_bytes": 162
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/worker-actor_rollout-0-468090.json": {
+      "sha256": "8203cdbd03b5128e28f98377ca3a85d1cf33af2b77875a4dee1d9ca75f1a6e1c",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/worker-actor_rollout-1-468091.json": {
+      "sha256": "ae9eb18efaada3d17e6bcb30b784311126c4ac644d6eabd3a44f01dce8f96d1f",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/worker-actor_rollout-2-468092.json": {
+      "sha256": "f7bda721987a42665b53210a77fe64ba1681a5c5e106724c4096b63884939b13",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/device-evidence/worker-actor_rollout-3-468093.json": {
+      "sha256": "77fc128d253218b05955d2629d59c76c96ee7b6972388b5bed0498958ba97fc6",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/dispatch.json": {
+      "sha256": "70a85f75536c2d081ffdfff4060c74c8d12716a6da6c0a0b7e8ffd3c080a249e",
+      "size_bytes": 4491
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/environment-5054998.json": {
+      "sha256": "f6b532622d557861a86f4d020dd8c90a2aef1a2b914236e37f2bf5c4f84aee04",
+      "size_bytes": 4893
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/gpu-device-map.json": {
+      "sha256": "ba38781c7d65e96531ad2145a1ac09d048655521309b744f31f0aeff333713f4",
+      "size_bytes": 809
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/gpu-memory-5054998.csv": {
+      "sha256": "f24cade344c4d736fb5c189db544559e44a297d8ac224219d96e91dd70b545d5",
+      "size_bytes": 120081
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/gpu-telemetry-5054998.csv": {
+      "sha256": "2ee05e876c95ff50fbdab8a5d2f8238a4f798938d12a6e4eb21c204fb3de4e37",
+      "size_bytes": 514727
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/launcher.log": {
+      "sha256": "8769792fe6f87d61b318ff8c3d47278a8a6d6369aaf6d44c53fd898e74882983",
+      "size_bytes": 155006
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/phase-memory-5054998.csv": {
+      "sha256": "516f8f2d677a0cdefe574773590f06f5c37140858ea64def3efc16e1089fe225",
+      "size_bytes": 163326
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/training-5054998.log": {
+      "sha256": "f08ddac8dcede8a9cfb583001419cd35efb23bbe0f37602023505e23fcecf89f",
+      "size_bytes": 150615
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s152-4gpu/attempt-5054998/trial-5054998.json": {
+      "sha256": "ad7680af13190276e3f550de3e21e20565290b233aa0fd9b9329da07148d8430",
+      "size_bytes": 1411
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/device-evidence/probe-exit-idle.json": {
+      "sha256": "9556b7a32f70dfe5fc0fdee601a63f24d377c8f901f55704b16c64b9b37c40f7",
+      "size_bytes": 3686
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/device-evidence/trainer-cuda.json": {
+      "sha256": "627f3a672aa5f9906b1a1879ca51d295189df78beae66ced55afa584d265d54e",
+      "size_bytes": 571
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/device-evidence/trainer-exec.json": {
+      "sha256": "0512a053e74e7deb268d5b79ac28359f4ccd03ed49cad60a219d007147fdc4ef",
+      "size_bytes": 364
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/device-evidence/trainer-terminal.json": {
+      "sha256": "255b902ec26f18f7aac5a48ed6810647a5fc96ca619ada351cfb27d1bc30b0de",
+      "size_bytes": 162
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/dispatch.json": {
+      "sha256": "f443e29fcaca20845c206cd1e75f01fda8e9309021558543e68d3602479104d6",
+      "size_bytes": 4309
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/environment-5054339.json": {
+      "sha256": "85536a219980d06af0fb3e414fef1e08d77340315cb4b1fcb21400f3e4dd379f",
+      "size_bytes": 4411
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/gpu-device-map.json": {
+      "sha256": "c23a51963967ba1c56250dfefbe360f84038ccb2a340ed13f9fd82e65e8c92c5",
+      "size_bytes": 469
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/gpu-memory-5054339.csv": {
+      "sha256": "67ad25e15c2c36498138738f5ed66a4b8abfa5a7ae7efcf1b47a10c2c328e2fd",
+      "size_bytes": 8568
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/gpu-telemetry-5054339.csv": {
+      "sha256": "39d1bc0c68fd85d7e8771e422d3e21ea25c19f0c59c31d2bfd173796ce6171e7",
+      "size_bytes": 26386
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/launcher.log": {
+      "sha256": "7e584aaf5cf66367ff6f878235c2036849c9d9c680bfc87eb6b7e7a4e58e27f8",
+      "size_bytes": 10455
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/phase-memory-5054339.csv": {
+      "sha256": "e9183963a2da9aa0cc3ef666762ebb23dfb65ef51377115225b8b4c97fa3337d",
+      "size_bytes": 13158
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/training-5054339.log": {
+      "sha256": "a1f531d3332468e2f18de8be8d4a95fd63c97c85f68b45fa1a1a7bb418d74d1b",
+      "size_bytes": 10292
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-2gpu/attempt-5054339/trial-5054339.json": {
+      "sha256": "9e13c1af0b908f0c2ea40afc9a2e40e057c5d6e699022896f7a0c9ca294d1e4d",
+      "size_bytes": 1406
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/device-evidence/probe-exit-idle.json": {
+      "sha256": "85bb241b33744fc554a9470d27ebd8997d8d92a0c7b3538c46f44a6e0dec9f2b",
+      "size_bytes": 3686
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/device-evidence/trainer-cuda.json": {
+      "sha256": "8fef48b328cd2dbeae005c2a2a631d1a41c22a13d4ef818a4d9354f28f598279",
+      "size_bytes": 853
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/device-evidence/trainer-exec.json": {
+      "sha256": "830f16c01399d463901bf46346f7d056c6445e6d162740725a788cf95fc81f1e",
+      "size_bytes": 446
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/device-evidence/trainer-terminal.json": {
+      "sha256": "0cb7630274d2962c1437aecc687238e7535d32dad0bf593893a3445c2328a39d",
+      "size_bytes": 162
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/dispatch.json": {
+      "sha256": "a4f5709aca2c38d8b134e11d1b9a9a3e5c87874724e91676e40e03dabdae8a24",
+      "size_bytes": 4491
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/environment-5054339.json": {
+      "sha256": "d6fa5cbdb4fb4461ae7d1ed3ec0f70c1fdb13a641e469cb60df47e49fc6dedb8",
+      "size_bytes": 4893
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/gpu-device-map.json": {
+      "sha256": "cef4624a72f61ccea59349b6643641f674f07f617ac12af67e9d125e66d41e25",
+      "size_bytes": 809
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/gpu-memory-5054339.csv": {
+      "sha256": "abc3721de8b9d42a4a628edfc908136493eeb983f55c201e0724cf8e9455c77a",
+      "size_bytes": 8676
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/gpu-telemetry-5054339.csv": {
+      "sha256": "d3c90732ec74ee2fd0c15c57a9de5da8a688a831335443b8804bea860b8d9e17",
+      "size_bytes": 41522
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/launcher.log": {
+      "sha256": "0286464a61f5b44cf1fac9a343e0a2c7c720aea31c0d5a3d27483f93a9b6abbf",
+      "size_bytes": 10455
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/phase-memory-5054339.csv": {
+      "sha256": "80e29952e1e78ec8cf2dfdd16622001329ea334e853cf464c45ff3858c77e5ef",
+      "size_bytes": 12291
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/training-5054339.log": {
+      "sha256": "3d9523bc5029e605006be55f02104673f3659f2b203ea391b8167ccccb1fde40",
+      "size_bytes": 10292
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c2-s153-4gpu/attempt-5054339/trial-5054339.json": {
+      "sha256": "7d682fa15fb1c4d17716c268f3325d56e9aec006e42af1f780428e9a59a04d74",
+      "size_bytes": 1406
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/device-evidence/probe-exit-idle.json": {
+      "sha256": "dc080bb6455b5c27d0eda6020d2a958af63da0d47428e52292a801e191669c9d",
+      "size_bytes": 3688
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/device-evidence/ray-resources.json": {
+      "sha256": "c8f7557d827168a4274f5b704773c8a0dd0ef1a5b0f3a6c513e80128c0844fca",
+      "size_bytes": 1557
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/device-evidence/trainer-cuda.json": {
+      "sha256": "728df0a70dc279a477ec99b3589065df079d8d653bb070537fa56eb1c2ee4497",
+      "size_bytes": 573
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/device-evidence/trainer-exec.json": {
+      "sha256": "d6f94c33136dae78f148d76906efcbd5463c37aa8f95d7d7b3a46d09797b7ea5",
+      "size_bytes": 365
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/device-evidence/trainer-terminal.json": {
+      "sha256": "11a073586b2c2af528e846f6ea30c4a0fda256fee7b617ad66cd9a2b88efe094",
+      "size_bytes": 163
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/device-evidence/worker-actor_rollout-0-2335597.json": {
+      "sha256": "7f15cd1128e8efae260d741824058b6ecde6b2576cdd4799a59bcf8acc388eef",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/device-evidence/worker-actor_rollout-1-2335598.json": {
+      "sha256": "ab1818f63a85fc426235e9ff2fd7d23731c94269d817602a61346bae95bf47d7",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/dispatch.json": {
+      "sha256": "d321cbad33c38be83a730bf724ea8d93f8288d2c15efef21644c7a29ee3eaf30",
+      "size_bytes": 4311
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/environment-5054953.json": {
+      "sha256": "5872fc717498756fb30975e06897bb997113a76c8abe72a4c8628db7a8fee9ff",
+      "size_bytes": 4411
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/gpu-device-map.json": {
+      "sha256": "9c55175ad610ff22efdd27a61e9ced07b78da3a8ad3845d3e58a947fe66b9df5",
+      "size_bytes": 469
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/gpu-memory-5054953.csv": {
+      "sha256": "3e849fcc9be3487d04e31f92eee40c102e3be2f5dfaa69e32d83fab4f760a02f",
+      "size_bytes": 35549
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/gpu-telemetry-5054953.csv": {
+      "sha256": "5a85bcec3e90bbcc73bc05984ed29437e883d1bca15d9dfd1ea0728d9f3c1e07",
+      "size_bytes": 105743
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/launcher.log": {
+      "sha256": "446e29d3a8fe336a7649febe5293bde8b8ffd6b2760cd32057882da5ef03c5b1",
+      "size_bytes": 152309
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/phase-memory-5054953.csv": {
+      "sha256": "659c30c780578bc889aa3042ae3cd140fe169b8922dbd4234cb7e362e07a6639",
+      "size_bytes": 53654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/training-5054953.log": {
+      "sha256": "4e8f15a53467228b73de03ef2745d9f9ed7e8f9ad8630f7293eb500b32d683f4",
+      "size_bytes": 152146
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-2gpu/attempt-5054953/trial-5054953.json": {
+      "sha256": "12c875a5f2a690b2051c155437768272d20eefa85ddbdc74f397cd21a03e0c70",
+      "size_bytes": 1410
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/probe-exit-idle.json": {
+      "sha256": "1b68671ff81fd691046739262b384d0639678fca68575a84c33e347882337395",
+      "size_bytes": 3688
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/ray-resources.json": {
+      "sha256": "9aa27652f7589676c6cf38a4d294d6e5aed1c4560f5091e17c74849acb2eed25",
+      "size_bytes": 1557
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/trainer-cuda.json": {
+      "sha256": "75f045bae702f5c4ed4bb19b9eb664122c9cbbc15428e6d4198b4d0393536c87",
+      "size_bytes": 855
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/trainer-exec.json": {
+      "sha256": "a16ec95a7ba4dc7c134bf14383f5a19db90ffaa13f13fedb77d371e9b8432915",
+      "size_bytes": 447
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/trainer-terminal.json": {
+      "sha256": "b9953b5d0c5b6eb7f4f64bb222ad77c22e65086c47e368b3d48602866d747675",
+      "size_bytes": 163
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/worker-actor_rollout-0-2319770.json": {
+      "sha256": "33195e5fdb45b6905f7a786aef09677f688b4afd699d57b0ed859be03a98e750",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/worker-actor_rollout-1-2319772.json": {
+      "sha256": "29b75cca43746c50b361dea870f2c96c74c72452b415337257d027cc84caca60",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/worker-actor_rollout-2-2319776.json": {
+      "sha256": "0d60c15ce3da29ace1eb5323a300bcde899cc8da98383d75665f96fa319f8539",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/device-evidence/worker-actor_rollout-3-2319777.json": {
+      "sha256": "d94a7dd302bf69ebee7df1c9532e48d89832e198c23f2f22fe4fd5bd6eba4e62",
+      "size_bytes": 655
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/dispatch.json": {
+      "sha256": "de01f7d0e1e75cdbab5e13f72ed1b8c62709a7727eb421eae30cfeb89247790e",
+      "size_bytes": 4493
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/environment-5054953.json": {
+      "sha256": "f6d71510fb687c6b20af9baf45dbe9849905c249f74b5b65749e50a8453df4f2",
+      "size_bytes": 4893
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/gpu-device-map.json": {
+      "sha256": "1095177515b19f8f7400445cbd4f3f2626b687a02ef62865930d79a4985061e1",
+      "size_bytes": 809
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/gpu-memory-5054953.csv": {
+      "sha256": "3f93f3e58278d0f6ddf75cce3b5b23b8efd6dba7cb3aa63e89fd5ffa4ac89e11",
+      "size_bytes": 60617
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/gpu-telemetry-5054953.csv": {
+      "sha256": "f208c89d404a576caa68f1178dddb8900490f8fb23073c079e41a02cc4d92ff8",
+      "size_bytes": 276311
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/launcher.log": {
+      "sha256": "5f8861e1eae0f29616ebeb6e2d1b3949fd61dc935fb1ce01e1dcb411adc04014",
+      "size_bytes": 154767
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/phase-memory-5054953.csv": {
+      "sha256": "d66080b583636b67e2a6018c1726c8620000a860de3b216bb508fd54f0cbc0e6",
+      "size_bytes": 84377
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/training-5054953.log": {
+      "sha256": "c9194693783b900807f42728d2576d93194397371168f7cd2a935501ba8d533b",
+      "size_bytes": 154604
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s151-4gpu/attempt-5054953/trial-5054953.json": {
+      "sha256": "b21bf8eb7e0c6fd7c674192106dc31137667fc5eb9e9ee9998a528ab53180ac9",
+      "size_bytes": 1410
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/device-evidence/probe-exit-idle.json": {
+      "sha256": "3a5a01204c8543baa9e97497197a61d568dc803091b25526a01f154ccd46b831",
+      "size_bytes": 3686
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/device-evidence/ray-resources.json": {
+      "sha256": "9094ac4d4c1b98478a0cc1af1ce741ccc57f5ebc32b52853ec20335507c34b1a",
+      "size_bytes": 1550
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/device-evidence/trainer-cuda.json": {
+      "sha256": "4e710b39490af687bea7ef5d00e1295c67a57e67f3c0242c7d34849ddd06808c",
+      "size_bytes": 571
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/device-evidence/trainer-exec.json": {
+      "sha256": "59ff0e9d2cc60581af8b691256193958fee52dc1616e96637e19b9513ca43af0",
+      "size_bytes": 364
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/device-evidence/trainer-terminal.json": {
+      "sha256": "6504c3731f00a06446447d9037f55d0e68098fb98d60da8f54b2c5d635ecc1dd",
+      "size_bytes": 162
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/device-evidence/worker-actor_rollout-0-256435.json": {
+      "sha256": "cbee17ce5e575b9016a475ac4dabeda3595a32d3c433fee2a46101c6db061144",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/device-evidence/worker-actor_rollout-1-256436.json": {
+      "sha256": "9d93ab01540a69389e859485a551484fc620b2425bc8de62cba5caddd62b107f",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/dispatch.json": {
+      "sha256": "a9191b57fb9c325f8cc4e946bf649a509544cbb4d992e3eb6cb22f73de435393",
+      "size_bytes": 4311
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/environment-5055042.json": {
+      "sha256": "4a90b0b811ac3f504daa59ea0140f3313590fc3240440e7497f86f3a00068181",
+      "size_bytes": 4412
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/gpu-device-map.json": {
+      "sha256": "0235428df2fd0de8018643234456f36ad2d6ec351c273e32225b8d1595c91275",
+      "size_bytes": 469
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/gpu-memory-5055042.csv": {
+      "sha256": "b64fd681c3a6c1c97c4126b0df0848c6cf4fd2c164c68acb9b39ad23b96d0bb0",
+      "size_bytes": 35818
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/gpu-telemetry-5055042.csv": {
+      "sha256": "16db51ad8195093dff45792488347fa38e88198a4564b5253c78fdb92e4d2740",
+      "size_bytes": 106540
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/launcher.log": {
+      "sha256": "7a2f3a9b6eba94a5200c8eb0ef525fce7d99dda68443906693162a1c2bcf886d",
+      "size_bytes": 150049
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/phase-memory-5055042.csv": {
+      "sha256": "fa7326fc19942091ab5b7eb7270e3da658865b7ff0daffd01e1a4bf1bb5f27e7",
+      "size_bytes": 54058
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/training-5055042.log": {
+      "sha256": "efa31f8c575d34d16d417343eb93361e6b4e0a45a9d8d82312479967e1693c52",
+      "size_bytes": 149886
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-2gpu/attempt-5055042/trial-5055042.json": {
+      "sha256": "bd886eb42686b3594abdea833bb85be5b03987d57c452d40af121efd75684f3d",
+      "size_bytes": 1410
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/probe-exit-idle.json": {
+      "sha256": "6d8ab896edab73bb94e793b34a47b047fa9e8e412e3dab38518f37bc777cdfeb",
+      "size_bytes": 3686
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/ray-resources.json": {
+      "sha256": "801627c53c09cff4358b400a759197cd8fc42271435e09d5d433221ff92764cc",
+      "size_bytes": 1550
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/trainer-cuda.json": {
+      "sha256": "889e7d5e46bc399be6fb555e8357c0cda642ea94f16f4942a2e245f758666194",
+      "size_bytes": 853
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/trainer-exec.json": {
+      "sha256": "b45899103b146a3115ab40b665559d767a7a554f22cb1935197a0859d77c2f88",
+      "size_bytes": 446
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/trainer-terminal.json": {
+      "sha256": "8c6c78b946e0425f3d670d9d9126e88aeb0a68a0921e5bd42a0a669b28744842",
+      "size_bytes": 162
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/worker-actor_rollout-0-271826.json": {
+      "sha256": "97b6066afc768bc47c034f1bb16bfc41afae4bd6d023af0d4b47545679ddbb46",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/worker-actor_rollout-1-271827.json": {
+      "sha256": "fb23862ab7523861850f25d7c6f34d6a87bfad494ec5336393058dbe7345f850",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/worker-actor_rollout-2-271828.json": {
+      "sha256": "0b7f6a2a2b9868e4333c0c8732a997411e511982cf4cc6beecbfc69bdfbbc807",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/device-evidence/worker-actor_rollout-3-271829.json": {
+      "sha256": "e4b17a57e711b930edfc03ac27bdc989ae0ffe1adf91a976cd9ae62ec60635c0",
+      "size_bytes": 654
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/dispatch.json": {
+      "sha256": "508c995eed13d8d3c415b50927ef6f476df03e708eba1d4a6fcb66960914044a",
+      "size_bytes": 4493
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/environment-5055042.json": {
+      "sha256": "2624ff1e23a4bc65cba09c4fbe6f5eadfa493eca1b91d3ec57bc12a989e1442a",
+      "size_bytes": 4894
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/gpu-device-map.json": {
+      "sha256": "015d25cd11446a500b26d8a261d55d2079605e7bfde4bec84c3ab1457b779db1",
+      "size_bytes": 809
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/gpu-memory-5055042.csv": {
+      "sha256": "d29299319947f7bc5ee9b40f999cd4fa131dda811d522c4545fe6ccede367e03",
+      "size_bytes": 48924
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/gpu-telemetry-5055042.csv": {
+      "sha256": "d6ec8fa9354cfaf14edc524e35cb213afd5c891c5ded9c42d74d3f27426b6a42",
+      "size_bytes": 220846
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/launcher.log": {
+      "sha256": "1ee76d3c2b4f3394a26d001d8bf57ccc8f0eae5d7f01c4dcf75ca9e4529e1340",
+      "size_bytes": 152058
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/phase-memory-5055042.csv": {
+      "sha256": "0f27c83bd3e5e93a1072e0ceb35fbc33aa6507a1255f33e074c96b7afaf0490b",
+      "size_bytes": 67854
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/training-5055042.log": {
+      "sha256": "0ff88a9c6cae57835ec98107deafb8ce7f827969ef45bec47cc31409aa39e94d",
+      "size_bytes": 151895
+    },
+    "output/prospective_estimation/est-qwen25-7b-math-c3-s153-4gpu/attempt-5055042/trial-5055042.json": {
+      "sha256": "404ef3f97726c0e1a9ae76a458d3d1e821ce3fe8033281fd0df89d6c865e8abd",
+      "size_bytes": 1410
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s151/allocation-trace.jsonl": {
+      "sha256": "f90e4b2f4ef0d88e63ad1c5f8abf286acf8167e60fe15ca5a1c399cea45e4410",
+      "size_bytes": 276326
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s151/ledger.jsonl": {
+      "sha256": "677ebb50042b1ef16e7bd82768cee7a2d1b0266b54e3c9794f113c7de86ace1d",
+      "size_bytes": 12931
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s151/pair-summary.json": {
+      "sha256": "6d190ac0b100b8ec17b64146822229790c7984ad1969715c22bd111f3dafc63c",
+      "size_bytes": 799
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s151/pair.json": {
+      "sha256": "6395afe03e9cd59953f22397461c744de2d05916ffb204a554841f8f90503496",
+      "size_bytes": 8773
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s151/period-1.json": {
+      "sha256": "0d322ca95de51e4c9e59b5c821b8a9cece02537ed550068f61dd561f91c553ff",
+      "size_bytes": 5438
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s151/period-2.json": {
+      "sha256": "5c6a29f46f9992da8f98a6837a727c8721bade5340c22864324f0097dd6ddfa0",
+      "size_bytes": 5522
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s152/allocation-trace.jsonl": {
+      "sha256": "c5ba26588b879eebc3bc93eb9c829a0d57aa23ee752d6f8fa30afe24d37e7e31",
+      "size_bytes": 347853
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s152/ledger.jsonl": {
+      "sha256": "b9f49fb1c9f629d7d00cc59e9558b0bcc1ab86462a8ecc48b357cc36086b0564",
+      "size_bytes": 12935
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s152/pair-summary.json": {
+      "sha256": "80a9b2673e5e5f2b98ddfc6dbf3891921b7ee4d347a42e4ccaec6f885bac29e9",
+      "size_bytes": 801
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s152/pair.json": {
+      "sha256": "e537f9a68f04d79dfc3db97a988dd61656824cab1d1b99587a263c448b225dd6",
+      "size_bytes": 8780
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s152/period-1.json": {
+      "sha256": "3947ef95bd853c1bdea4dd89c06984f0a04d5b04d812f9da749820e9e40b8a4f",
+      "size_bytes": 5439
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s152/period-2.json": {
+      "sha256": "0ca3ca397b90057e3ad00c1f7c1fa771a1616124be10319087cc6be1afc68c15",
+      "size_bytes": 5523
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s153/allocation-trace.jsonl": {
+      "sha256": "33930aca9919d5ba9991881300fda2838e3e4bb7d5e93bedb41fbdd7605a87d3",
+      "size_bytes": 283662
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s153/ledger.jsonl": {
+      "sha256": "265adb55fb58ffe85ab0f4e5e2802e00235c2654fd8429eba9595177d83aaa09",
+      "size_bytes": 12933
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s153/pair-summary.json": {
+      "sha256": "1b15acf0c4252f63130557e8976faaa8ef738b1846e99aaa40d86a812a98caa1",
+      "size_bytes": 802
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s153/pair.json": {
+      "sha256": "14764ab83644f8cd5912cebea75dae9b704ca48ba0b6bc4cb9007fd7751c599b",
+      "size_bytes": 8776
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s153/period-1.json": {
+      "sha256": "43b653a327031d00a1b5a8d61efbeb3274ffe8c35f936bc547ba07931017cf5a",
+      "size_bytes": 5522
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c2-s153/period-2.json": {
+      "sha256": "fccdc42c532e6dfeb18f2be70812ad34dc16ef7f6186f9292124befb3e7be621",
+      "size_bytes": 5437
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s151/allocation-trace.jsonl": {
+      "sha256": "e5b76edeebef279a0e81b67cfee721f4b1091ba1afb03f865f88b77b6cfbe77a",
+      "size_bytes": 159437
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s151/ledger.jsonl": {
+      "sha256": "158c05ad2355beccb78137a62d51614f4d958c7f9bb4c9bfc87ab8ecbe770e7d",
+      "size_bytes": 13340
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s151/pair-summary.json": {
+      "sha256": "7ca8c968f976131c50df0f099f37c6a73bfa38bf558b1a65c361ef0426bdc6fb",
+      "size_bytes": 790
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s151/pair.json": {
+      "sha256": "a4fcb78a9489edfbcfa33200c5d7e9f27b030f982c3e9a28f33ca963b42d44e8",
+      "size_bytes": 8775
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s151/period-1.json": {
+      "sha256": "d09bc7a33289c7dfc22f8721d7a66865763d60eb8d29929923c65eebf6dbe5ad",
+      "size_bytes": 5980
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s151/period-2.json": {
+      "sha256": "4a80e6150a46f646146126eb4cf6a7117fc4671b3b56d5226a6f684fa0aa88a0",
+      "size_bytes": 5438
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s152/allocation-trace.jsonl": {
+      "sha256": "df4bd2e9a681568af8cf7533a86c952d8dd30adcc494e6576f5c00ee6ee9658b",
+      "size_bytes": 175325
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s152/ledger.jsonl": {
+      "sha256": "cb53fc6413afbaa786f81fe6a3e57cfe1b07e57d577b6beb5f0904935ebade22",
+      "size_bytes": 13329
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s152/pair-summary.json": {
+      "sha256": "3a09f561dbd890c29891b53f84f3c7af8e7d57a3dd2bf16f810f904978222512",
+      "size_bytes": 792
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s152/pair.json": {
+      "sha256": "7c27305530e8fe45b8afd153ce30cfe047562310d8ac0ae5ee4583924a7c85c6",
+      "size_bytes": 8778
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s152/period-1.json": {
+      "sha256": "a36a00269828bab116cb8db1cc480808b204c2aa403d550c663aadcebc76ed6e",
+      "size_bytes": 5432
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s152/period-2.json": {
+      "sha256": "23edc1c9eb457dd8d92f9e38c7abf88fe766e9be9e193fcfa494b44b2760740c",
+      "size_bytes": 5975
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s153/allocation-trace.jsonl": {
+      "sha256": "6b3a88de178d4364039781d6973ffc28cd5540bd5141a6aa1cd414af309e0a41",
+      "size_bytes": 163143
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s153/ledger.jsonl": {
+      "sha256": "8cb922fc5199e4161a37bbb447ce56f022ff98268ca967d7adefc6d6a4fd5771",
+      "size_bytes": 13343
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s153/pair-summary.json": {
+      "sha256": "351ae5b96b9604dbfe4bb5cd55b58fae64baa339b1844587d2e037322b4334c0",
+      "size_bytes": 793
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s153/pair.json": {
+      "sha256": "ec8e4a2106cd025faadd7c787be1326212b53334a8aad98ef84dd624dd9eea7b",
+      "size_bytes": 8775
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s153/period-1.json": {
+      "sha256": "4d2c84dc5fa51ffae118aedd06e8c09271f2a38ac7805582438d12f7173d512f",
+      "size_bytes": 5981
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-code_heavy_tail-c3-s153/period-2.json": {
+      "sha256": "c30480e747475bf45c044b00a07741a652763ea2074865c163403a1f544b49a7",
+      "size_bytes": 5437
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s151/allocation-trace.jsonl": {
+      "sha256": "2f57115feefb2f4d89f64488e0e8031eda17696bbcc85d394f714f6f92175909",
+      "size_bytes": 336928
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s151/ledger.jsonl": {
+      "sha256": "ec8fab57145124ce0f69f1235a1021166e930084acdfb22ad6d67c48fd712354",
+      "size_bytes": 12766
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s151/pair-summary.json": {
+      "sha256": "2ec699836b9f47fa8fbd45e447445ab1bd64680e31b39b10294f9efdce272ce8",
+      "size_bytes": 791
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s151/pair.json": {
+      "sha256": "223d0ca5805a06be1ba04808797cec4b35d1a0f4d2fde64bba8e75662da8719c",
+      "size_bytes": 8445
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s151/period-1.json": {
+      "sha256": "ef26a4927527100d380325d84c5eae5b15eddec48e6643740a66c329bff31ebf",
+      "size_bytes": 5329
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s151/period-2.json": {
+      "sha256": "2fa3961d8c7bc4188db063f2d7af0f656b0ffafd266538e0869ddf3aa1100fe9",
+      "size_bytes": 5576
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s152/allocation-trace.jsonl": {
+      "sha256": "d6ebefb119f644d04752a99fdf47f4fd2eaec22a68764d46e890e28f27361cd1",
+      "size_bytes": 340104
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s152/ledger.jsonl": {
+      "sha256": "58395abc9d5df303ef2155cf53231c86275c1ee75370b7ac083497b225f997dc",
+      "size_bytes": 12615
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s152/pair-summary.json": {
+      "sha256": "3183b9e7cbe7b5a13e408bdbc0bf586fe0320fc7fbcb6e3246348aad60ee0673",
+      "size_bytes": 792
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s152/pair.json": {
+      "sha256": "06f240c40980feac67a620ecb986328a9c43f805ee3dbe35e414ea149376a59e",
+      "size_bytes": 8445
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s152/period-1.json": {
+      "sha256": "ac026a220f5609a1efb1c1d9ac1ea6f5412bd0c816f726bc3f63d7152016cd62",
+      "size_bytes": 5325
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s152/period-2.json": {
+      "sha256": "ea4ad9e24978da3904c5d45bd4cc042d3a62e8def0ec5c1b486b76f10089b5d3",
+      "size_bytes": 5408
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s153/allocation-trace.jsonl": {
+      "sha256": "b7304b806774a75e8b111a83e656a325ab8581c3c16e81619f64be8b4a92e667",
+      "size_bytes": 277990
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s153/ledger.jsonl": {
+      "sha256": "e3fecbf6c338a0d390915e18757a9b0ac12973f79d191f60925cab0e6a67c367",
+      "size_bytes": 12625
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s153/pair-summary.json": {
+      "sha256": "410686e5aa976c61001870b499d85a6cf6233bdccaa032c29bc6bebfecf88191",
+      "size_bytes": 791
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s153/pair.json": {
+      "sha256": "ea390f752b0726d01796ec9bd9cdbc7b95ba2e214c76a72933f5e840914630d6",
+      "size_bytes": 8448
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s153/period-1.json": {
+      "sha256": "f2636b4abde9a7dcce5573d0bce5dd813f116a3ff4c33e118d33652be4cd5f0f",
+      "size_bytes": 5412
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c2-s153/period-2.json": {
+      "sha256": "f4052500d39310d01e7d10f027f879cfae2f32ba8c458896b62e8cbdfbb19a52",
+      "size_bytes": 5330
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s151/allocation-trace.jsonl": {
+      "sha256": "83b0445bfdd38479d75b45c14c1d185bd163e1d639b053c02d466faa35b68839",
+      "size_bytes": 164725
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s151/ledger.jsonl": {
+      "sha256": "1974529d05d8aa3adf94448d49f6178553bb12da672dd9ffbe8f9d1f283f06b8",
+      "size_bytes": 13023
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s151/pair-summary.json": {
+      "sha256": "b87e931ff905db4ae4a55d8fd2f33399972e27bfc46d887d4aa2b6c3ce72e952",
+      "size_bytes": 782
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s151/pair.json": {
+      "sha256": "019720c3288d38821c459ca30347a1829315b6cbfc8a267aa2bd35f81fa32b92",
+      "size_bytes": 8450
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s151/period-1.json": {
+      "sha256": "b174fc403f481f5b9c69cbb582f89716356970aea5176db7014c344f72bbc731",
+      "size_bytes": 5865
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s151/period-2.json": {
+      "sha256": "38a8f2b0f4d7349a09514002b026c8fb4d868dd2da68b27a750eed3863b400bc",
+      "size_bytes": 5326
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s152/allocation-trace.jsonl": {
+      "sha256": "aa2e2b2d9fb8720968302dbf5f7f8cd38c9c89db937bd2b041856b2e8f31f018",
+      "size_bytes": 166986
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s152/ledger.jsonl": {
+      "sha256": "c92968019ad2d4c7b072941de26e1bc6621c4f980c66e27a304e703d1a3e04a5",
+      "size_bytes": 13070
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s152/pair-summary.json": {
+      "sha256": "532050bf4427ddc49a982a8cc0f843ea2f6c120cd882c3208d74a98d9831eca2",
+      "size_bytes": 781
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s152/pair.json": {
+      "sha256": "a66599ba72b406d526e0c736ef1daaee8d5d6f844a26eb38f4d3f5df6b57a4dd",
+      "size_bytes": 8450
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s152/period-1.json": {
+      "sha256": "44d9a011187dff4f6563e735da526c1abc07c8f577f8dd346ed324fde344ce4f",
+      "size_bytes": 5872
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s152/period-2.json": {
+      "sha256": "b1035f53de96d786ca1d945d199702eadce09f4bc1663d1c021d77141238b191",
+      "size_bytes": 5389
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s153/allocation-trace.jsonl": {
+      "sha256": "4db45e17bea7b6160f8e051ff73c63b1cb9511d33630c9e3929236080870242b",
+      "size_bytes": 181831
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s153/ledger.jsonl": {
+      "sha256": "0ab7e45cad162bfab6e8e6ae2c77bcbdf29c32fa102f3a39d2712159556b48cb",
+      "size_bytes": 13036
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s153/pair-summary.json": {
+      "sha256": "5fdef1e489a6973ddb619f4fb981decee82bf654d58246715b80c1c3888214ff",
+      "size_bytes": 783
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s153/pair.json": {
+      "sha256": "e2db8b1be2bf8cc717f5d9cecc6493baab989bc84fd92e2465486dfe15bc0b49",
+      "size_bytes": 8447
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s153/period-1.json": {
+      "sha256": "7e35e6f767d532f1635e2a51c61268b1b3d3bcbf6d1af838f7b74c130c321197",
+      "size_bytes": 5329
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-gsm8k-c3-s153/period-2.json": {
+      "sha256": "f9e1208d6b4fc1bccab85947fb28d793435c3baf049fe9f9cdb4054e65a506a6",
+      "size_bytes": 5872
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s151/allocation-trace.jsonl": {
+      "sha256": "01001e86d80590e8df284c54bdd4c11cd92bc96611b050dfa084fb33579abdb7",
+      "size_bytes": 33018
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s151/ledger.jsonl": {
+      "sha256": "3dff67c7e3f4c24f35883caef96992ab323630eab11c2bdfcce2d34ada12d403",
+      "size_bytes": 10655
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s151/pair-summary.json": {
+      "sha256": "0417a52a7930ee9005b184ad39ac097062319b4a1b431df404a3a99bf765a642",
+      "size_bytes": 818
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s151/pair.json": {
+      "sha256": "3352f7e0ba5d4ae3c78325713c59a571f6c1b0a46d936e6975a437fc46565feb",
+      "size_bytes": 8386
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s151/period-1.json": {
+      "sha256": "a62701a3a3d2e887a5dcf11dfc741b2610823f44a246a92e5231af32de42c3b1",
+      "size_bytes": 4535
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s151/period-2.json": {
+      "sha256": "dc42ec7153404640342efd1b6bf759ca275347ed57e6a7ca228e5ca1e3f31663",
+      "size_bytes": 3984
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s152/allocation-trace.jsonl": {
+      "sha256": "c013445b2c8f7c4c9ef002f1566ea315fc8dbce8d4d187b61aadc9fbe39eb90b",
+      "size_bytes": 290796
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s152/ledger.jsonl": {
+      "sha256": "1064fb987e1b69fe0bf650314ce057fe2a4c8059614c565045d7155346cfbe06",
+      "size_bytes": 12581
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s152/pair-summary.json": {
+      "sha256": "17c0da435b3dbbfea3a5382f501465a9e7909d98f4cb40f2ab599c4ba87f4bdc",
+      "size_bytes": 791
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s152/pair.json": {
+      "sha256": "2aeea4bb6c09da6918856caa89918ada979d4d0f64691bc1d5597c23d0ed52fd",
+      "size_bytes": 8430
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s152/period-1.json": {
+      "sha256": "6fb0dc67d5195559c72d0cd34b71f38c462ab3a842b61385f1a12269af1ad4a7",
+      "size_bytes": 5312
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s152/period-2.json": {
+      "sha256": "b0416039d3dea26af289e2743d09f15297798a19243986540b9837310c8e5b9b",
+      "size_bytes": 5396
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s153/allocation-trace.jsonl": {
+      "sha256": "af5e048c8a1b23081d8238d38dcd5d49268eac01c0f8f69f41c321e38cf4146f",
+      "size_bytes": 50378
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s153/ledger.jsonl": {
+      "sha256": "8a7b481ea18db0c3bdfae4ab480be6e357c735feaa755a90c0e76031a8de6b7d",
+      "size_bytes": 11417
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s153/pair-summary.json": {
+      "sha256": "2899a3997c5b1365fcdf94a4a116df1bfd0aa0c76cef0def4fd3fda9623ce7dd",
+      "size_bytes": 797
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s153/pair.json": {
+      "sha256": "991df8f86d667cb619f1114341213752936e091f06df8f609442286416781efc",
+      "size_bytes": 8390
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s153/period-1.json": {
+      "sha256": "474661536a016fd6e5239e1b9ef06a1a1993cbfd2fe85aab4676f45fd36c112e",
+      "size_bytes": 4434
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c2-s153/period-2.json": {
+      "sha256": "598ee231712394d428000a04280120717d2efa0325f4919c744c3d2284090e94",
+      "size_bytes": 4914
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s151/allocation-trace.jsonl": {
+      "sha256": "e09e862f52ca448b1d2ab053f7221f1cf29008c1ff323215a6494de4900f78cb",
+      "size_bytes": 180126
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s151/ledger.jsonl": {
+      "sha256": "933314fb69c761afd7901fcca99b7b7ca86a2ff64e93d4cafd39a4c3c02712ac",
+      "size_bytes": 13000
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s151/pair-summary.json": {
+      "sha256": "1bdbd50b4bae9ebed6a065dae42bf75590be28ecfefda7c376f85b3329f22bea",
+      "size_bytes": 781
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s151/pair.json": {
+      "sha256": "56a9e2bf77364a2c7548a806774042887622e49fb384cc9ae0d540ff95105c2c",
+      "size_bytes": 8432
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s151/period-1.json": {
+      "sha256": "3544821ef82aece87f7911e0f4da77ed7b506d9d0ec758b190c0556481454e15",
+      "size_bytes": 5859
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s151/period-2.json": {
+      "sha256": "189147a36ee101b178ff7b5d1998c084bef53d5a0941b6a86310b5f6fdebf1e6",
+      "size_bytes": 5316
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s152/ledger.jsonl": {
+      "sha256": "85f9da6513e1fe16b8dad1e6fec0d54aabe0af20601fa5883a21c81b4a73a06a",
+      "size_bytes": 2116
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s152/pair.json": {
+      "sha256": "f4f5d85031ac044d1db31cb535d93ca010ced3f61d7e8abfae2fe2391dffe85e",
+      "size_bytes": 4240
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s152/period-1.json": {
+      "sha256": "a340cb89d26f9c9158cbe131e6bb132d5420f5be48c23cb1199e0441d389eb71",
+      "size_bytes": 608
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s152/period-2.json": {
+      "sha256": "ccb8e7920276d16ec0d655cbf4a9d5b4bd15176db54d27216a8f17e25d57ff7b",
+      "size_bytes": 608
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s153/allocation-trace.jsonl": {
+      "sha256": "57a29a189b190c01ef7281386dac6c163dc068a47d9f11b541faf7c8ac5869e7",
+      "size_bytes": 160947
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s153/ledger.jsonl": {
+      "sha256": "f8bdfa5c80e6aaddc5e45ba364a1fec1f08730ec8ca6149077226468af82fb42",
+      "size_bytes": 12992
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s153/pair-summary.json": {
+      "sha256": "f487a2d5cdf6bf23840f6a8fcff6a8d2a4c3a663451c6d41b52bb6a7270f38fa",
+      "size_bytes": 782
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s153/pair.json": {
+      "sha256": "4cb4bf4a3c5922f305b91dd0985935fde9f33d62c50b707baeb014d517f9c595",
+      "size_bytes": 8435
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s153/period-1.json": {
+      "sha256": "c2c47befba8102cb5b474225c37a483e46fea3b2cd00a76be9fc022846bad405",
+      "size_bytes": 5314
+    },
+    "output/prospective_estimation/pairs/est-qwen25-7b-math-c3-s153/period-2.json": {
+      "sha256": "b18ab401d9e1a5a0de2c281c06e15bab497d3e0aee208b16a4f894ad34bc251b",
+      "size_bytes": 5854
+    }
+  },
+  "prediction_frozen_at_utc": "2026-09-15T14:10:21.535819+00:00",
+  "prediction_seal_binding": "Effective input/output hashes and pre-claim chronology; runner verifies seal but does not store its hash per period.",
+  "prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "protocol_input_evidence": {
+    "amendment-01.json": {
+      "sha256": "b02fe0419f865c4cc3d77fb35bb4205a54f3aa9605fdadc7b86a9a11b172d25e",
+      "size_bytes": 4632
+    },
+    "fitted_model.json": {
+      "sha256": "8b84aa1ae57fe56fd478817dbbce505487cbef6b26652ae2c8f45e9fa5ef5df4",
+      "size_bytes": 11485
+    },
+    "matrix.csv": {
+      "sha256": "1ff175e22c76bf1af3857b4ae57cd4f78bafe0d280a295d696e96815ef85e9c8",
+      "size_bytes": 16755
+    },
+    "model_metadata.json": {
+      "sha256": "2f0ce16c13e72900d2a60f9b7ad28d4dc5ed43d7915d8a88925ba9c5ffd684ad",
+      "size_bytes": 5599
+    },
+    "prediction_freeze.json": {
+      "sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+      "size_bytes": 3004
+    },
+    "predictions.json": {
+      "sha256": "96d7f2ae11145f0985c0faf743333d941afbcd3b80966a857b1af0af15306ace",
+      "size_bytes": 21607
+    },
+    "protocol.json": {
+      "sha256": "1694e447e842600612604891e7b3d036ff0791fa84c4bdbeba54ed093feefdeb",
+      "size_bytes": 11490
+    },
+    "retrospective.json": {
+      "sha256": "8ada76da63ab91e0b1ca6276a98f2b096979fe6acd7578c1223469d55d399f3a",
+      "size_bytes": 228053
+    },
+    "targets.csv": {
+      "sha256": "f2481278127fa726f24297d81fc9df46e999315fe543167ed398e671fffa522f",
+      "size_bytes": 5037
+    }
+  },
+  "protocol_sha256": "1694e447e842600612604891e7b3d036ff0791fa84c4bdbeba54ed093feefdeb",
+  "raw_statuses_used_as_labels": false,
+  "runner_validation_implementation_sha256": "f340fb7eec5297cb675a48e267618c15d7787a42891d4a2ae4a670ec24a0cc47",
+  "source_commit_expected": null,
+  "source_input_evidence": {
+    "benchmark.py": {
+      "sha256": "35e36caad46d2814b0ac9f8180961de5564746347cf668d5c3fc1e643fd477e8",
+      "size_bytes": 10897
+    },
+    "benchmark/attempts.csv": {
+      "sha256": "397c8caaf0d3abe06587fd649c181fe71d5b8b5f5e24e0591cc7e56d38e275c1",
+      "size_bytes": 588698
+    },
+    "benchmark/configurations.csv": {
+      "sha256": "3a77c96a67b82e01d23fb6f7a440cba23041bed1dae2749072cb9abb5b5d239d",
+      "size_bytes": 71349
+    },
+    "benchmark/estimation/matrix.csv": {
+      "sha256": "1ff175e22c76bf1af3857b4ae57cd4f78bafe0d280a295d696e96815ef85e9c8",
+      "size_bytes": 16755
+    },
+    "benchmark/estimation/model_metadata.json": {
+      "sha256": "2f0ce16c13e72900d2a60f9b7ad28d4dc5ed43d7915d8a88925ba9c5ffd684ad",
+      "size_bytes": 5599
+    },
+    "benchmark/estimation/targets.csv": {
+      "sha256": "f2481278127fa726f24297d81fc9df46e999315fe543167ed398e671fffa522f",
+      "size_bytes": 5037
+    },
+    "benchmark/outcomes.csv": {
+      "sha256": "af05cd91ed1de843735cc188e5e54dbd1645b3ed91c97f503ac3de67bc5f61c9",
+      "size_bytes": 21219
+    },
+    "memory_tuner/estimation_baselines.py": {
+      "sha256": "8cc20f9697eb38cb6a19a2255e95712ac44469cbd147eaf93e7e7ed183360ad2",
+      "size_bytes": 26850
+    },
+    "memory_tuner/model_memory_metadata.py": {
+      "sha256": "8845a1197b49d9463ebe5dc8c953463dd2106361c54e7b12244057c48aaa2712",
+      "size_bytes": 6588
+    },
+    "memory_tuner/plan_estimation_study.py": {
+      "sha256": "16855f584441528870fcca38c3a19eafd1234c3eacb9b43cc9eebdd4bd6ad862",
+      "size_bytes": 10472
+    }
+  }
+}

@@ -292,7 +292,9 @@ def trial_row(
     failure_annotations: dict[str, dict[str, str]] | None = None,
     *,
     root: Path | None = None,
+    include_prompt_profile: bool = True,
 ) -> dict:
+    """Parse a trial, optionally enriching historical rows with prompt profiles."""
     from memory_tuner.artifact_paths import load_trial_record
     trial = load_trial_record(trial_path, root)
     experiment_id = trial_path.parent.name
@@ -304,7 +306,7 @@ def trial_row(
         "scientific_valid": 1,
         "validity_reason": "",
         **metadata,
-        **prompt_profile(metadata, trial),
+        **(prompt_profile(metadata, trial) if include_prompt_profile else {}),
         **trial,
         "success": int(int(trial.get("exit_code", 1)) == 0),
     }

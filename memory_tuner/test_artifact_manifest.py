@@ -13,6 +13,235 @@ from memory_tuner.artifact_manifest import (
 
 
 class ArtifactManifestTests(unittest.TestCase):
+    def test_estimation_preserves_partial_raw_records_without_a_completed_trial(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            paths = [
+                "pairs/cell/pair.json",
+                "pairs/cell/ledger.jsonl",
+                "pairs/cell/allocation-trace.jsonl",
+                "pairs/cell/period-1.json",
+                "pairs/cell/pair-summary.json",
+                "cell-2gpu/attempt-123/dispatch.json",
+                "cell-2gpu/attempt-123/launcher.log",
+                "cell-2gpu/attempt-123/gpu-device-map.json",
+                "cell-2gpu/attempt-123/device-evidence/trainer-cuda.json",
+                "cell-2gpu/attempt-123/device-evidence/ray-resources.json",
+                "cell-4gpu/attempt-123/trial-123.json",
+                "cell-4gpu/attempt-123/environment-123.json",
+                "cell-4gpu/attempt-123/training-123.log",
+                "cell-4gpu/attempt-123/phase-memory-123.csv",
+                "cell-4gpu/attempt-123/gpu-memory-123.csv",
+                "cell-4gpu/attempt-123/gpu-telemetry-123.csv",
+                "cell-4gpu/attempt-123/device-evidence/worker-error-1.json",
+            ]
+            trial_root = root / "output/prospective_estimation"
+            for name in paths:
+                path = trial_root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                # Even a truncated record belongs in the archive; this is
+                # inclusion, not parsing or successful-outcome selection.
+                path.write_text('{"partial":')
+            alias = trial_root / "cell-4gpu/trial-123.json"
+            alias.symlink_to("attempt-123/trial-123.json")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(
+                {path.relative_to(trial_root) for path in files},
+                {Path(name) for name in paths} | {Path("cell-4gpu/trial-123.json")},
+            )
+            self.assertEqual(set(files.values()), {"prospective_estimation_evidence"})
+
+    def test_estimation_prunes_ray_and_cache_trees_but_keeps_preflight_json(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            included = [
+                "output/estimation-device-preflight/123/preflight-start.json",
+                "output/estimation-device-preflight/123/preflight-passed.json",
+                "output/estimation-device-preflight/123/task-2/preflight-ray.json",
+                "output/estimation-device-preflight/123/task-4/preflight-ray.json",
+                "output/prospective_estimation/cell/attempt-123/device-evidence/ray-resources.json",
+            ]
+            excluded = [
+                "output/estimation-device-preflight/123/task-2/ray-runtime/session_1/logs/event.json",
+                "output/estimation-device-preflight/123/task-2/ray-runtime/session_1/worker.log",
+                "output/estimation-device-preflight/123/task-2/cache/metadata.json",
+                "output/estimation-device-preflight/123/task-2/debug.log",
+                "output/prospective_estimation/cell/attempt-123/r/ray/session_1/event.json",
+                "output/prospective_estimation/cell/attempt-123/.cache/state.json",
+                "output/prospective_estimation/cell/attempt-123/runtime/cache.json",
+                "output/prospective_estimation/cell/attempt-123/torchinductor/kernel.py",
+            ]
+            for name in included + excluded:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("{}")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {(root / name).absolute() for name in included})
+
+    def test_estimation_excludes_model_payloads_but_preserves_checkpoint_markers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            trial_root = root / "output/prospective_estimation/cell/attempt-123"
+            marker = trial_root / "latest_checkpointed_iteration.txt"
+            marker.parent.mkdir(parents=True)
+            marker.write_text("1\n")
+            for name in (
+                "global_step_1/actor/model.pt",
+                "global_step_1/actor/config.json",
+                "checkpoints/weights.dat",
+                "model/weights.dat",
+                "models--Qwen--Qwen2.5-7B/snapshots/revision/config.json",
+                "model.safetensors", "pytorch_model.bin", "optimizer.pt",
+                "weights.pth", "weights.ckpt",
+            ):
+                path = trial_root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(b"not published")
+            (trial_root / "payload-alias.json").symlink_to("optimizer.pt")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {marker.absolute()})
+
+    def test_estimation_does_not_follow_external_runtime_links_or_proof_paths(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "project"
+            runtime = Path(directory) / "r/ray"
+            runtime.mkdir(parents=True)
+            runtime_file = runtime / "runtime.json"
+            runtime_file.write_text("{}")
+            task = root / "output/estimation-device-preflight/123/task-2"
+            task.mkdir(parents=True)
+            proof = task / "preflight-ray.json"
+            proof.write_text(json.dumps({"runtime": str(runtime)}))
+            (task / "ray-runtime").symlink_to(runtime, target_is_directory=True)
+            (task / "other-runtime-link").symlink_to(runtime, target_is_directory=True)
+            (task / "external-file.json").symlink_to(runtime_file)
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {proof.absolute()})
+
+    def test_estimation_structured_inputs_results_and_notes_are_recursive(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            included = [
+                "protocol.json", "amendment-01.json", "model_metadata.json",
+                "prediction_freeze.json", "fitted_model.json", "predictions.json",
+                "retrospective.json", "matrix.csv", "targets.csv",
+                "scheduler-accounting.psv",
+                "results/summary.json", "results/partial-attempts.csv",
+                "audits/numerical-threadpools/review.md",
+            ]
+            excluded = [
+                "results/debug.log", "results/payload.bin",
+                "cache/backend.json", "__pycache__/state.json",
+                "global_step_1/actor/config.json",
+            ]
+            base = root / "benchmark/estimation"
+            for name in included + excluded:
+                path = base / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("{}")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {(base / name).absolute() for name in included})
+            self.assertEqual(set(files.values()), {"estimation_benchmark"})
+
+    def test_estimation_scheduler_log_selection_is_limited_to_exact_families(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            logs = root / "logs"
+            logs.mkdir()
+            included = [
+                "matched-gpu-123_0.out", "matched-gpu-123_0.err",
+                "matched-preflight-124.out", "matched-preflight-124.err",
+                "gpu-identity-125.out", "gpu-identity-125.err",
+                "host-capacity-126_8.out", "host-capacity-126_8.err",
+            ]
+            excluded = [
+                "matched-other-123.out", "matched-gpu-extra-123.out",
+                "other-matched-gpu-123.out", "gpu-identity-unrelated.out",
+                "matched-preflight-124.out.bak", "matched-gpu-123_0.json",
+                "host-capacity-extra-126.out", "host-capacity-126_8.out.bak",
+            ]
+            for name in included + excluded:
+                (logs / name).write_text("scheduler evidence")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {(logs / name).absolute() for name in included})
+            self.assertEqual(set(files.values()), {"estimation_scheduler_log"})
+
+    def test_existing_source_globs_include_estimation_helpers_and_launchers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            paths = [
+                "memory_tuner/estimation_baselines.py",
+                "memory_tuner/model_memory_metadata.py",
+                "memory_tuner/collect_estimation_study.py",
+                "memory_tuner/run_matched_gpu.py",
+                "memory_tuner/device_contract.py",
+                "run_matched_gpu.slurm",
+                "run_matched_gpu_preflight.slurm",
+                "memory_tuner/host_capacity_protocol.py",
+                "memory_tuner/run_host_capacity.py",
+                "memory_tuner/collect_host_capacity.py",
+                "memory_tuner/capture_allocation_accounting.py",
+                "run_host_capacity.slurm",
+            ]
+            for name in paths:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("# source")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {(root / name).absolute() for name in paths})
+
+    def test_host_followup_preserves_separate_raw_and_design_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            included = [
+                "output/estimation_host_capacity/pairs/pair/ledger.jsonl",
+                "output/estimation_host_capacity/cell/attempt-123/dispatch.json",
+                "output/estimation_host_capacity/cell/attempt-123/training-123.log",
+                "benchmark/host_capacity/protocol.json",
+                "benchmark/host_capacity/study_freeze.json",
+                "benchmark/host_capacity/predictions.json",
+                "benchmark/host_capacity/targets.csv",
+                "benchmark/host_capacity/scheduler-accounting.psv",
+                "benchmark/host_capacity/results/configurations_flat.csv",
+                "benchmark/host_capacity/README.md",
+            ]
+            excluded = [
+                "output/estimation_host_capacity/cell/attempt-123/model.safetensors",
+                "output/estimation_host_capacity/cell/attempt-123/ray/session_1/log.json",
+                "benchmark/host_capacity/cache/private.json",
+            ]
+            for name in included + excluded:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("{}")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {(root / name).absolute() for name in included})
+            self.assertEqual(set(files.values()),
+                             {"host_capacity_evidence", "host_capacity_benchmark"})
+
+    def test_uuid_compatibility_hook_is_explicit_pinned_runtime_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            runtime = root / "instrumented_python_packages"
+            hook = runtime / "sitecustomize.py"
+            verl_init = runtime / "verl/__init__.py"
+            unrelated = runtime / "unrelated.py"
+            verl_init.parent.mkdir(parents=True)
+            for path in (hook, verl_init, unrelated):
+                path.write_text("# source")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {hook.absolute(), verl_init.absolute()})
+            self.assertEqual(set(files.values()), {"instrumented_runtime_source"})
+
     def test_decision_panel_preserves_protocol_attempts_and_not_model_payloads(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

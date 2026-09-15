@@ -1,0 +1,13 @@
+{
+  "completed_processes": 0,
+  "eligible_processes": 9,
+  "known_launched_processes": 18,
+  "pair_errors": {},
+  "planned_configurations": 6,
+  "planned_pairs": 9,
+  "planned_processes": 18,
+  "resolved_configurations": 3,
+  "schema_version": 1,
+  "unknown_launch_status_processes": 0,
+  "unresolved_processes": 9
+}

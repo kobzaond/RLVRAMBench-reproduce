@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "original_protocol_sha256": "1694e447e842600612604891e7b3d036ff0791fa84c4bdbeba54ed093feefdeb",
+  "events": [
+    {
+      "kind": "zero_training_preflight",
+      "job_id": "5054195",
+      "source_commit": "e41df1aa1ab289cb5e2b0b3beeb3a03ff66e66d3",
+      "status": "failed",
+      "elapsed_seconds": 5,
+      "allocated_gpus": 4,
+      "training_launched": false,
+      "cause": "Global Slurm GPU ordinals 4..7 differ from the four-device NVML job-view ordinals 0..3."
+    },
+    {
+      "kind": "read_only_device_diagnostic",
+      "job_id": "5054207",
+      "status": "completed",
+      "elapsed_seconds": 2,
+      "allocated_gpus": 4,
+      "training_launched": false,
+      "finding": "Exactly four devices visible through NVML, matching CUDA_VISIBLE_DEVICES=0,1,2,3; global Slurm GPU indices retained separately. UUIDs resolve from this complete job view."
+    },
+    {
+      "kind": "zero_training_preflight",
+      "job_id": "5054224",
+      "source_commit": "0bd659b3f69e2f779dbea84bb2da221bd0ff52db",
+      "status": "completed",
+      "elapsed_seconds": 53,
+      "allocated_gpus": 4,
+      "training_launched": false,
+      "checks": "Nonconsecutive two-device subset, then all four; actual CUDA UUIDs, Ray placement, NVML selection and post-exit all-device idle checks passed."
+    },
+    {
+      "kind": "study_array",
+      "array_job_id": "5054326",
+      "source_commit": "0bd659b3f69e2f779dbea84bb2da221bd0ff52db",
+      "requested_pair_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "started_pair_indices": [0, 1],
+      "never_started_pair_indices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "cancelled_at_utc": "2026-09-15T14:33:09+00:00",
+      "reason": "First pair exposed deterministic vLLM integer parsing of UUID masks during import, before model initialization. Cancellation prevented repeated setup failures. Cleanup also raced an allocation-sampler subprocess.",
+      "started_invocation_evidence": "Three training logs diagnose the vLLM UUID-to-integer import failure. Seed151/twoGPU was interrupted during device preflight and has no matching traceback. All four invocations are infrastructure-invalid, not memory outcomes.",
+      "repair_scope": "Device-identification compatibility and sampler shutdown only. Frozen predictions, models, data, settings, seeds, pair order and subsets are unchanged.",
+      "replacement_policy": "No started pair or invocation will be rerun. Only indices never claimed may be launched once from corrected immutable source. Missing repeated labels remain unresolved."
+    },
+    {
+      "kind": "expanded_zero_training_preflight",
+      "job_id": "5054489",
+      "source_commit": "26418498a5b5405a31c8ce7e4f2b9bd1cd7f9575",
+      "status": "failed",
+      "started_at_utc": "2026-09-15T15:26:01+00:00",
+      "ended_at_utc": "2026-09-15T15:26:40+00:00",
+      "elapsed_seconds": 39,
+      "allocated_gpus": 4,
+      "training_launched": false,
+      "cause": "A training-library import initialized CUDA. The preflight incorrectly equated zero training with zero CUDA-context initialization. The failing import was not identified by this version.",
+      "checks_completed": "Initial allocation idle check and preflight-start record only. No two/four-GPU runtime report or pass record was produced.",
+      "additional_checks": "Actual VERL and vLLM worker imports, UUID-to-NVML round-trip validation, capability queries in driver and Ray actors, preservation of physical UUID masks, and post-exit idle checks."
+    },
+    {
+      "kind": "remaining_study_array",
+      "array_job_id": "5054693",
+      "source_commit": "26418498a5b5405a31c8ce7e4f2b9bd1cd7f9575",
+      "status": "cancelled_before_any_start",
+      "reason": "The expanded preflight failed; DependencyNeverSatisfied prevented every array element from starting. Cancelled only this pending array before queuing the never-claimed slots behind the corrected preflight.",
+      "started_pair_indices": [],
+      "dependency": "afterok:5054489",
+      "requested_pair_indices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "maximum_concurrency": 3,
+      "retry_or_replacement": false,
+      "source_worktree_clean_before_submission": true,
+      "frozen_protocol_matrix_and_prediction_seal_unchanged": true,
+      "runtime_scope": "Device identity compatibility and sampling shutdown only; no model, data, batching, precision, memory-control, seed, order, subset, or predictor changes."
+    },
+    {
+      "kind": "corrected_import_context_zero_training_preflight",
+      "job_id": "5054938",
+      "source_commit": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+      "status": "completed",
+      "started_at_utc": "2026-09-15T15:46:24+00:00",
+      "ended_at_utc": "2026-09-15T15:47:47+00:00",
+      "elapsed_seconds": 83,
+      "allocated_gpus": 4,
+      "training_launched": false,
+      "correction": "Explicitly disposable preflight children may initialize CUDA through imports. Per-import transitions are recorded; actual task UUIDs, NVML capabilities and Ray placement remain checked. All-four-device idle checks now follow both successful and failed child exits.",
+      "checks_completed": "Both task sizes passed CUDA/Ray/NVML identity and capability checks, with two all-four-device idle samples after each disposable child. Recorded import-created CUDA contexts arose while importing verl.workers.rollout.vllm_rollout.vllm_async_server.",
+      "two_gpu_runtime_report_sha256": "77f617e346869b6a617eb316468a7ac74b9156ae7e168df3ea089aba5153c81d",
+      "two_gpu_post_child_idle_sha256": "6c4adc25407078a374b10cebf6d810db8ee4cf724215679fa570128e5f16cd32",
+      "four_gpu_runtime_report_sha256": "64e83062d19c77987a2215851b2335a8d25ca6ac79020f72073d6cc1109ac97f",
+      "four_gpu_post_child_idle_sha256": "df025b3e93ead549afe56be266c4b0407a96d4cea243e1eab50dc29d8af91cec",
+      "actual_training_bridge_and_trainer_probe_exec_unchanged": true,
+      "frozen_protocol_matrix_and_prediction_seal_unchanged": true
+    },
+    {
+      "kind": "remaining_study_array",
+      "array_job_id": "5054951",
+      "source_commit": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+      "status": "completed_all_claims_terminal",
+      "first_started_at_utc": "2026-09-15T15:48:51+00:00",
+      "last_ended_at_utc": "2026-09-15T16:22:37+00:00",
+      "dependency": "afterok:5054938",
+      "requested_pair_indices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "maximum_concurrency": 3,
+      "retry_or_replacement": false,
+      "source_worktree_clean_before_submission": true,
+      "frozen_protocol_matrix_and_prediction_seal_unchanged": true
+    },
+    {
+      "kind": "host_memory_censoring_diagnostic",
+      "observed_at_utc": "2026-09-15T16:08:43+00:00",
+      "array_job_id": "5054951",
+      "source_commit": "d8e0c3551d8572fb64e3b7126fbd7569a987973f",
+      "host_memory_limit_mib": 196608,
+      "confirmed_jobs": [
+        {
+          "job_id": "5054954",
+          "pair_index": 4,
+          "pair_id": "est-qwen25-7b-gsm8k-c2-s152",
+          "node": "acn18",
+          "scheduler_oom_kill_events": 4,
+          "scheduler_max_rss_mib": 196607.84,
+          "ended_at_utc": "2026-09-15T15:57:33+00:00"
+        },
+        {
+          "job_id": "5054981",
+          "pair_index": 6,
+          "pair_id": "est-qwen25-7b-gsm8k-c2-s151",
+          "node": "acn11",
+          "scheduler_oom_kill_events": 3,
+          "scheduler_max_rss_mib": 196607.59,
+          "ended_at_utc": "2026-09-15T16:02:35+00:00"
+        }
+      ],
+      "finding": "Both four-task-GPU c2 periods reached generation-engine graph capture and then lost workers at the host-memory cgroup limit. Neither completed a training step or reported CUDA out-of-memory. Partial device peaks do not establish a completed memory label.",
+      "eligibility": "Keep four-GPU outcomes unresolved. Earlier two-GPU admission failures remain separately subject to independent evidence validation. Retain costs and all raw evidence.",
+      "additional_scheduler_evidence": "Array index 7, job 5054998, also ended OUT_OF_MEMORY at 16:05:07 UTC with four oom_kill events; its detailed period diagnosis is not included in the two-job finding above.",
+      "original_study_resources_and_prediction_seal_unchanged": true,
+      "new_followup_launched": false
+    }
+  ],
+  "status": "complete_independently_collected",
+  "final_outcomes": {
+    "planned_slots": 36,
+    "launched_invocations": 34,
+    "eligible_memory_admission_failures": 23,
+    "completed_invocations": 0,
+    "unresolved_slots": 13,
+    "resolved_configurations": 6,
+    "resolved_configuration_states": "all memory_failure",
+    "unresolved_configurations": 6,
+    "unresolved_slot_causes": {
+      "initial_setup_or_interrupted_invocation": 4,
+      "host_memory_exhaustion": 7,
+      "scheduler_identity_nonlaunch": 2
+    },
+    "same_setting_retries_or_replacements": 0,
+    "accounted_outer_allocations": 18,
+    "outer_allocation_gpu_seconds": 23296,
+    "batch_step_gpu_seconds_separate_not_additive": 23308,
+    "preflight_and_diagnostic_gpu_seconds_separate": 728,
+    "results_directory": "benchmark/estimation/results",
+    "accounting_input": "benchmark/estimation/allocation_accounting.json",
+    "accounting_raw_source": "benchmark/estimation/allocation_accounting_sacct.psv"
+  },
+  "study_resource_cap_unchanged_reserved_gpu_hours": 66,
+  "preflight_cost_reported_separately": true
+}

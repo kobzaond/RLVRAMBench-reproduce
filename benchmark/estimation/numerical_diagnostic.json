@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "diagnostic_date": "2026-09-15",
+  "prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "original_seal_and_predictions_unchanged": true,
+  "interpreter": "project-local .venv-reproduce/bin/python",
+  "versions": {
+    "python": "3.11.4",
+    "numpy": "1.24.3",
+    "scipy": "1.10.1",
+    "scikit-learn": "1.3.0",
+    "threadpoolctl": "2.2.0"
+  },
+  "numpy_backend": {
+    "library": "libopenblas64_p-r0-15028c96.3.21.so",
+    "sha256": "554bde1d8a0c71d8dc21ae74de05c44da4fff5dbc6791a819f6acf5adfe90bd9",
+    "configuration": "OpenBLAS 0.3.21 USE64BITINT DYNAMIC_ARCH NO_AFFINITY Zen MAX_THREADS=64",
+    "historical_fitting_thread_limit": "not established",
+    "cause_of_discovery_warning": "threadpoolctl looked for unsuffixed openblas_get_config; this NumPy build exports openblas_get_config64_. Its fallback returned None and the callback raised AttributeError on split().",
+    "diagnostic_getter_threads": 64,
+    "diagnostic_thread_count_interpretation": "Getter result in a later read-only process, not a historical fitting measurement or active-worker count."
+  },
+  "other_reported_pools": "The original seal records SciPy OpenBLAS 0.3.18 and scikit-learn OpenMP at one thread; that does not establish the NumPy pool.",
+  "independent_saved_solution_checks": {
+    "prospective_prediction_rows_exact": 36,
+    "retrospective_prediction_rows_exact": 270,
+    "retrospective_scores_and_costs_exact": true,
+    "nnls_optimality_checked": true,
+    "all_parameters_finite": true,
+    "nnls_coefficients_nonnegative": true,
+    "smallest_scaled_gradient_above": -1e-12,
+    "largest_active_coordinate_gradient_magnitude_below": 1e-12,
+    "conclusion": "No scientific correctness blocker found; CPU performance/thread-control claim remains limited."
+  },
+  "separate_parent_fresh_fit_check": {
+    "status": "passed",
+    "relative_tolerance": 1e-9,
+    "absolute_tolerance": 1e-6,
+    "categorical_labels_exact": true,
+    "prospective_outcomes_read": false,
+    "original_outputs_overwritten": false
+  }
+}

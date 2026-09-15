@@ -114,7 +114,8 @@ def validate_historical_source_horizon(log, phase_steps, success):
     return "training_log_and_phase" if phase_steps else "training_log_legacy_zero_phase_counter"
 
 
-def select_attempt(root, spec, *, exclusions=None, annotations=None, trial_path=None):
+def select_attempt(root, spec, *, exclusions=None, annotations=None, trial_path=None,
+                   include_prompt_profile=True):
     exclusions = exclusions if exclusions is not None else load_attempt_exclusions(
         root / "memory_tuner/attempt_exclusions.csv")
     annotations = annotations if annotations is not None else load_failure_annotations(
@@ -131,7 +132,8 @@ def select_attempt(root, spec, *, exclusions=None, annotations=None, trial_path=
             raise EvidenceValidationError(f"{spec['experiment_id']}: designated trial outside slot")
         paths = [trial_path]
     for path in paths:
-        record = trial_row(path, annotations, root=root)
+        record = trial_row(path, annotations, root=root,
+                           include_prompt_profile=include_prompt_profile)
         if str(record["job_id"]) in exclusions:
             excluded.append(str(record["job_id"]))
             continue

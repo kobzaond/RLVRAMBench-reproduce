@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "source_commit": "120e29a146294722a6668f55a1e7fed2878eb62a",
+  "protocol_sha256": "f3f49617a7fca63ddac8923bccb83a15eaf52646e5f3db5df4aa716bb25c1ef6",
+  "matrix_sha256": "1d2b2af601361a3cb46b65ff3be263685b3f725f2b0e4787a8ff9966084f5332",
+  "study_freeze_sha256": "80559199c59246d0e4ce52bf268d0375c90fc5168a5246ed900c9266abd951cd",
+  "original_prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "preflight": {
+    "job_id": "5055844",
+    "status": "completed",
+    "started_at_utc": "2026-09-15T18:54:58+00:00",
+    "ended_at_utc": "2026-09-15T18:56:14+00:00",
+    "elapsed_seconds": 76,
+    "allocated_gpus": 4,
+    "allocated_cpus": 64,
+    "host_memory_mib": 393216,
+    "training_launched": false,
+    "task_gpu_counts_checked": [2, 4],
+    "pass_record": "output/estimation-device-preflight/5055844/preflight-passed.json",
+    "cost_reported_separately": true
+  },
+  "study_array": {
+    "array_job_id": "5055845",
+    "dependency": "afterok:5055844",
+    "requested_pair_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "first_started_at_utc": "2026-09-15T18:56:16+00:00",
+    "maximum_concurrency": 3,
+    "status": "complete_all_nine_pairs_terminal",
+    "last_ended_at_utc": "2026-09-15T19:27:18+00:00",
+    "outer_job_states": "all FAILED with exit 2:0 from incomplete pair outcomes",
+    "retries": 0,
+    "replacement_of_original_slots": false,
+    "source_worktree_clean_before_submission": true
+  },
+  "prelaunch_validation": {
+    "protocol_and_reviewer_tests_passed": 34,
+    "combined_protocol_runtime_tests_passed": 183,
+    "combined_optional_checks_skipped": 1,
+    "actual_verify_protocol_path_passed": true,
+    "original_effective_inputs_and_prepared_data_hashes_verified": true
+  },
+  "runtime_change": "Exact scheduler array-element lookup and one-record identity matching replace ambiguous parent-array lookup. The original final allocation's response was not retained, so its detailed mechanism remains a diagnostic inference. Its two nonlaunches were not rerun.",
+  "maximum_reserved_study_gpu_hours": 33,
+  "further_host_memory_escalation_permitted": false,
+  "final_outcomes": {
+    "planned_slots": 18,
+    "launched_invocations": 18,
+    "eligible_two_gpu_memory_admission_failures": 9,
+    "unresolved_four_gpu_invocations": 9,
+    "validated_completions": 0,
+    "resolved_configurations": 3,
+    "unresolved_configurations": 3,
+    "scheduler_host_oom_recorded": false,
+    "four_gpu_missingness": "Successful exit and returning update/synchronization calls, but no exact one-step terminal record. Completion eligibility remains unchanged; partial peaks are not completed peaks.",
+    "accounted_outer_allocations": 9,
+    "outer_allocation_gpu_seconds": 20828,
+    "batch_step_gpu_seconds_separate_not_additive": 20828,
+    "preflight_gpu_seconds_separate": 304,
+    "results_directory": "benchmark/host_capacity/results",
+    "accounting_input": "benchmark/host_capacity/allocation_accounting.json",
+    "accounting_raw_source": "benchmark/host_capacity/allocation_accounting_sacct.psv"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "acquisition_seed": 2026091513,
+  "allocation_gpus": 4,
+  "comparison": "Two versus four task GPUs within the same four-GPU/64-CPU/384-GiB allocation. Matched settings and prompt seed, not necessarily identical generated responses. No causal effect of host capacity is estimated against the original panel.",
+  "cost_scope": "Both periods reserve four GPUs. Report task-provisioned GPU-time (2*t2+4*t4), reservation during invocations 4*(t2+t4), and whole allocation4*T separately. Include failed/unresolved work; queue wait is separate. None is utilization-weighted time.",
+  "cpus_per_task": 64,
+  "data_sha256": {
+    "data/codecontests/heavy_tail/test.parquet": "e9d077a023de7f80aa013c5541c33b5978a43e203ce916045bc72c4fe5c62a82",
+    "data/codecontests/heavy_tail/train.parquet": "0bc6ec8fd7ef1618a604417faa4bb13cb9a0117dcffb75685b2c80c1da95f697",
+    "data/gsm8k/test.parquet": "0dcd50ed32caa9d8f434d4e3ef8031bc3e49b0f823655a53be5c002e727f17dd",
+    "data/gsm8k/train.parquet": "8fb13a0cd8621e5fcacdee3ffe28b3a369975478ea7ab514781f3f190cba2488",
+    "data/math/test.parquet": "e0cb48b1e49874c71f4a02dff944eba08844067d98dc5bdc89c004644e6b597d",
+    "data/math/train.parquet": "4aa303577e968be6f810600730c970b14be659a9ae9072cc2afefd04d67e7cb8"
+  },
+  "device_capacity_mib": 40960,
+  "estimators": "Exact inherited predictions, donor choices and numerical peaks. No fitting, threshold change, calibration, or update from either panel's outcomes.",
+  "evaluation_seeds": [
+    161,
+    162,
+    163
+  ],
+  "failure_policy": "No retries, replacements, requeues or further host-memory escalation. Each pair is claimed once. Continue period two only after verified cleanup and all-device idle checks. Preserve nonlaunches and incomplete pairs.",
+  "group": "estimation_host_capacity",
+  "host_memory_mib": 393216,
+  "implementation_sha256": {
+    "memory_tuner/host_capacity_protocol.py": "9bf811457f04e02e67e31d3c9289d1155f73ee1364a233b6b77d08d86becf44b",
+    "memory_tuner/run_host_capacity.py": "23f1eaf462f1825a77e91d2c8d8a4ab073f4debe0fbab134ff1863e096345d37",
+    "memory_tuner/run_matched_gpu.py": "f340fb7eec5297cb675a48e267618c15d7787a42891d4a2ae4a670ec24a0cc47",
+    "run_host_capacity.slurm": "59d3daa9499d1fc76d0b856be6c0a813472f488eb49f990e6ffa57ccf819b919"
+  },
+  "memory_margin_limit_mib": 38912,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "numerical_reporting": "Peak error uses only configurations with three completed invocations, comparing the inherited prediction with their maximum external completed peak. Donor-copy numerical values are inherited source measurements, not refitted target estimates. Host-kill and GPU-failure peaks are not imputed or scored as completed peaks. Paired peak and runtime differences require both invocations to complete.",
+  "order_seed": 2026091511,
+  "original_prediction_seal_sha256": "5ed714caff922a5109346a4242545d19f2824636d0f52bb0bbd2a09b40ed4666",
+  "original_protocol_sha256": "1694e447e842600612604891e7b3d036ff0791fa84c4bdbeba54ed093feefdeb",
+  "outcome_rule": "All three eligible seeds required for a repeated label. Any validated GPU memory failure implies memory_failure; otherwise any completed peak above 38912 MiB implies above_margin; otherwise within_margin. Other slots are unresolved with partial eligible evidence retained.",
+  "planned_pairs": 9,
+  "planned_processes": 18,
+  "prediction_origins": {
+    "host-qwen25-7b-code_heavy_tail-c2-2gpu": "est-qwen25-7b-code_heavy_tail-c2-2gpu",
+    "host-qwen25-7b-code_heavy_tail-c2-4gpu": "est-qwen25-7b-code_heavy_tail-c2-4gpu",
+    "host-qwen25-7b-gsm8k-c2-2gpu": "est-qwen25-7b-gsm8k-c2-2gpu",
+    "host-qwen25-7b-gsm8k-c2-4gpu": "est-qwen25-7b-gsm8k-c2-4gpu",
+    "host-qwen25-7b-math-c2-2gpu": "est-qwen25-7b-math-c2-2gpu",
+    "host-qwen25-7b-math-c2-4gpu": "est-qwen25-7b-math-c2-4gpu"
+  },
+  "primary_reporting": "Separate six-configuration inventory, all eighteen seed slots, each method's useful/failing/above-margin approvals and unscored approvals. No pooled denominator with the original panel and no population interval.",
+  "protocol_version": "host-capacity-1.0",
+  "randomization": "Five two-GPU-first and four four-GPU-first pairs; each workload has both orders. All six two-of-four subsets occur, with three appearing twice; each allocation ordinal appears four or five times.",
+  "rationale": "Original four-GPU c2 runs were censored by the 192 GiB host limit. This one follow-up tests all three original workloads under a separately declared expanded host-resource condition; it does not replace original slots.",
+  "resource_cap": {
+    "gpus_per_allocation": 4,
+    "idle_timeout_seconds": 180,
+    "initial_allocations": 9,
+    "max_concurrent_allocations": 3,
+    "maximum_reserved_gpu_hours": 33,
+    "payload_timeout_seconds": 1500,
+    "requeue": false,
+    "retries": 0,
+    "wall_minutes_per_allocation": 55
+  },
+  "scope": "Known Qwen family and A100 stack. New seeds and host-resource condition; not blind method development, external validation, or cross-hardware transfer.",
+  "specified_at_utc": "2026-09-15T18:52:11.216739+00:00",
+  "stopping": "Exactly nine planned allocation claims, each capped at 55 minutes. A systemic safety or infrastructure problem may stop remaining work but cannot authorize replacement slots. Stopping must not depend on prediction correctness or favorability. Diagnosed GPU-memory failures are expected study outcomes, not by themselves infrastructure-abort grounds. Any safety or infrastructure stop is documented, and all unstarted slots remain in the inventory.",
+  "subset_seed": 2026091512,
+  "target_configurations": 6
+}

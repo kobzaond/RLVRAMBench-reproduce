@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-message: "Please cite the RLVRAMBench evidence release and associated paper."
+message: "Please cite the RLVRAMBench evidence release and associated memory-feasibility measurement study."
 type: software
-title: "RLVRAMBench: resource transfer benchmark and reproduction code"
+title: "RLVRAMBench: memory-feasibility measurement evidence and reproduction code"
 version: "2026.09.15"
 date-released: "2026-09-15"
 license: MIT

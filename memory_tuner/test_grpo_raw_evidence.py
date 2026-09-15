@@ -49,7 +49,8 @@ def test_legacy_source_requires_logged_horizon_without_fabricating_phase_steps()
         validate_historical_source_horizon("training/global_step:1", {}, 1)
 
 
-def test_exact_trial_selection_never_parses_a_corrupt_sibling(tmp_path, monkeypatch):
+@pytest.mark.parametrize("profile_option", [{}, {"include_prompt_profile": False}])
+def test_exact_trial_selection_never_parses_a_corrupt_sibling(tmp_path, monkeypatch, profile_option):
     directory = tmp_path / "output/panel/slot"
     directory.mkdir(parents=True)
     (directory / "trial-1.json").write_text("corrupt original")
@@ -58,13 +59,14 @@ def test_exact_trial_selection_never_parses_a_corrupt_sibling(tmp_path, monkeypa
     current.write_text("{}")
     visited = []
 
-    def inspect(path, annotations, *, root):
+    def inspect(path, annotations, *, root, include_prompt_profile):
         assert root == tmp_path
+        assert include_prompt_profile is profile_option.get("include_prompt_profile", True)
         visited.append(path)
         raise RuntimeError("reached designated current attempt")
 
     monkeypatch.setattr(evidence, "trial_row", inspect)
     with pytest.raises(RuntimeError, match="designated current"):
         evidence.select_attempt(tmp_path, {"run_group": "panel", "experiment_id": "slot"},
-                                exclusions={"1"}, annotations={}, trial_path=current)
+                                exclusions={"1"}, annotations={}, trial_path=current, **profile_option)
     assert visited == [current]

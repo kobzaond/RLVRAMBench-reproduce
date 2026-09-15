@@ -1,15 +1,15 @@
 {
   "source_repository": "https://github.com/kobzaond/rl",
-  "source_commit": "7b534ef1d1e902ba490677acdccd8294e59e8bf5",
-  "selection": "CPU reconstruction closure, static transfer suite and independently evaluated admission panel",
+  "source_commit": "6a7606fa72a162b9929d2e73a3175f1ac3ac91a4",
+  "selection": "CPU reconstruction closure, static transfer suite and independently evaluated admission panel; sealed estimation replay and independent paired-study reconstruction; separately frozen host-capacity inheritance and raw reconstruction",
   "files": {
     "BENCHMARK.md": {
-      "sha256": "09ed7d80bd70e9b548b1cb0f012501f8f66b78acf07d9e6113981d89ab893e4c",
-      "size_bytes": 12129
+      "sha256": "fd9ccf667a854b625faba82f7ac288294838c642cb77dd7857f090fec67f2f95",
+      "size_bytes": 13070
     },
     "DATA_DICTIONARY.md": {
-      "sha256": "f7e2da6e55ef188650b4cef0428c6cdcc9a4986063dca19e4278fe9bbe9b0237",
-      "size_bytes": 16703
+      "sha256": "71c90c5767a36ee80cf022860ff55ed179daa35734ff573f8064645e7a492664",
+      "size_bytes": 22852
     },
     "RIGHTS.md": {
       "sha256": "7c1f948ecd8082ad2d0cbe334e576566d6e26a5ccfdb5ac19b69611044fafe96",
@@ -27,6 +27,18 @@
       "sha256": "0db5a7f9ce24f0ba1432573b19a9ca25b16894f50e1fd36e5c2d7b3d40f26511",
       "size_bytes": 18373
     },
+    "instrumented_python_packages/sitecustomize.py": {
+      "sha256": "45717a59c0057284c651c8b50e50f6317cbf37ce35bf8e53e068f1a4f15f173d",
+      "size_bytes": 212
+    },
+    "instrumented_python_packages/verl/__init__.py": {
+      "sha256": "66964045d9a274850f08eb8ed9c321d63f9d94dd093443b2d709d1db95f3840f",
+      "size_bytes": 6011
+    },
+    "instrumented_python_packages/verl/workers/engine_workers.py": {
+      "sha256": "ea5f9baf0cd2526eadee5f49e5be6c8997147b1dfe86fbc7aad39cd556c52e9b",
+      "size_bytes": 40857
+    },
     "memory_tuner/__init__.py": {
       "sha256": "027aba95d634d9ead178819412a859239c7ddd5418a0e5eaf8e3d429fe8e6629",
       "size_bytes": 191
@@ -36,8 +48,8 @@
       "size_bytes": 6398
     },
     "memory_tuner/artifact_manifest.py": {
-      "sha256": "1075fbbd3e0bcec9c429c8cf97c03b143822dacaf1da7bf78323992ccd6e0d20",
-      "size_bytes": 29685
+      "sha256": "5761585baae223533293ff9e3bf656b518130ca18e5d47fe9b2b96e8e6b27721",
+      "size_bytes": 33362
     },
     "memory_tuner/artifact_paths.py": {
       "sha256": "8b89a2f8956c7b1fe40563e2b0b776414ebc583d3801fab6d83fc125861beb91",
@@ -54,6 +66,10 @@
     "memory_tuner/benchmark_v2_cross_family_analysis.py": {
       "sha256": "623c4dbf729a3f3076a915579ab3f31ee0efb5e805635ddb8e7211e0dd6490bb",
       "size_bytes": 11877
+    },
+    "memory_tuner/benchmark_v2_env.py": {
+      "sha256": "f4ac4bb91ff7789a422fa6731b842a4dd0f44bf14fe46bfad89f7e5a0b229aa0",
+      "size_bytes": 4137
     },
     "memory_tuner/benchmark_v2_family_transfer.py": {
       "sha256": "510b508e9d523c5f6f68142e0cde9d4c25f8433ff16f25fdbd7279d40266f5aa",
@@ -84,16 +100,44 @@
       "size_bytes": 687
     },
     "memory_tuner/build_benchmark_corpus.py": {
-      "sha256": "aa58fdc828f7f8daa393e8081987540c0f23ff89c24688ddb8cb8928a5be4c5e",
-      "size_bytes": 21482
+      "sha256": "fbd2103d55436fd503630f8132c21d1c0905751d68db02d516db87443e802001",
+      "size_bytes": 21643
+    },
+    "memory_tuner/capture_allocation_accounting.py": {
+      "sha256": "9b00de319d8ac76d32897322bfbdfde47248737436854111f1e1808f156d4d08",
+      "size_bytes": 8912
+    },
+    "memory_tuner/capture_environment.py": {
+      "sha256": "d2a98be4ecd3aab0d1638ad91265ef9ba73413debc97801e31306b42f63e1118",
+      "size_bytes": 9993
+    },
+    "memory_tuner/code_shape_reward.py": {
+      "sha256": "7d6435b38fcdbcc32ca4b68e5e19c6a172f79cf59fc2b222d0fde7e8440c4b04",
+      "size_bytes": 1303
     },
     "memory_tuner/collect_decision_benchmark.py": {
       "sha256": "142ac0904c7f22d5e7c21955c26ff69426a45350676181df15b764cf221a3f76",
       "size_bytes": 16002
     },
+    "memory_tuner/collect_estimation_study.py": {
+      "sha256": "8326859efb69b0c0f7003932d1b491efb80618671437e87d77edbb3ec5f484ba",
+      "size_bytes": 69986
+    },
+    "memory_tuner/collect_host_capacity.py": {
+      "sha256": "9726f0499e7774c25752f7ce02f2dfeada03ffd5a14183621c5791f9e674abc4",
+      "size_bytes": 5579
+    },
     "memory_tuner/core.py": {
       "sha256": "08aadf36744a1fe82b95acd86f69b63ab33da520b1b2769239f84313f6df8f71",
       "size_bytes": 7166
+    },
+    "memory_tuner/device_contract.py": {
+      "sha256": "f28a239a3aca7d47094329e14d1c6dd46be22ce047f1445bf1e2b0ee42f85c2c",
+      "size_bytes": 19896
+    },
+    "memory_tuner/estimation_baselines.py": {
+      "sha256": "8cc20f9697eb38cb6a19a2255e95712ac44469cbd147eaf93e7e7ed183360ad2",
+      "size_bytes": 26850
     },
     "memory_tuner/failure_annotations.csv": {
       "sha256": "c4512e1c7108f7206a5bd1df4627b368987b87c50782b88b6d8ba4b02bb26c62",
@@ -103,13 +147,21 @@
       "sha256": "978a039ace01d3da30faca49f10829bd187bea44f248614112fa7da30108e526",
       "size_bytes": 8046
     },
+    "memory_tuner/gpu_monitor.py": {
+      "sha256": "b8768fc8b72ec131f0cf640dcf5f36a5806db07520d09d4773f38095dd162eb3",
+      "size_bytes": 7054
+    },
     "memory_tuner/grpo_phase_sensitivity.py": {
       "sha256": "90311132865b5968d806220772f1eed579af03aedbfc441111032c4138e0d65d",
       "size_bytes": 5924
     },
     "memory_tuner/grpo_raw_evidence.py": {
-      "sha256": "8ddea3c0dec26818502c52c29c1f153eda6a16e4b8a14cc455bd987d1b0e3079",
-      "size_bytes": 15946
+      "sha256": "2430a3dcb2342693b7ada5c89bcd300fa633d2baf367b42448113abd6613d173",
+      "size_bytes": 16068
+    },
+    "memory_tuner/host_capacity_protocol.py": {
+      "sha256": "9bf811457f04e02e67e31d3c9289d1155f73ee1364a233b6b77d08d86becf44b",
+      "size_bytes": 16560
     },
     "memory_tuner/log_parser.py": {
       "sha256": "8f4e60996953f67362dcdb30de0a0d2952fba1ea12bb4b173acbbaca99259cdb",
@@ -135,6 +187,10 @@
       "sha256": "555ef8ad0ef8653500d3616cb5473a4d2822145781c66bc2685527516513a23b",
       "size_bytes": 20429
     },
+    "memory_tuner/model_memory_metadata.py": {
+      "sha256": "8845a1197b49d9463ebe5dc8c953463dd2106361c54e7b12244057c48aaa2712",
+      "size_bytes": 6588
+    },
     "memory_tuner/phaseguard.py": {
       "sha256": "77a0f7120d118f6f05e36c3e2f76c4797ca75c536ab2230fbe26ee119d86106e",
       "size_bytes": 12107
@@ -151,6 +207,10 @@
       "sha256": "03633652f4005004ff79cca74cfa8b661b6a5800b5da17b5e683fd8edd014ade",
       "size_bytes": 10730
     },
+    "memory_tuner/plan_estimation_study.py": {
+      "sha256": "16855f584441528870fcca38c3a19eafd1234c3eacb9b43cc9eebdd4bd6ad862",
+      "size_bytes": 10472
+    },
     "memory_tuner/plan_scientific_revision.py": {
       "sha256": "e66098950b73af706237adcafe3e6b3a200ca0724c4b85105cd5391d557c6771",
       "size_bytes": 5663
@@ -158,6 +218,10 @@
     "memory_tuner/publication_plot_style.py": {
       "sha256": "2fa16ee763aa0bf5ec5d508ef8c0a0099b910d28c5ae7adc08bbb4683458c634",
       "size_bytes": 367
+    },
+    "memory_tuner/resolve_hf_snapshot.py": {
+      "sha256": "746c29b44ad34b4dbd129b71bf3d0d9abfd01d0993a6bb53dae1a1e47fc8b103",
+      "size_bytes": 2696
     },
     "memory_tuner/review_attempt_workload_audit.py": {
       "sha256": "b6f97703890c798075ab8ecf8e5f825132b8dbda8c5e16a184d89a619d49781d",
@@ -355,6 +419,14 @@
       "sha256": "56ff2c0241198f58eb9a4176214bf7a6021378734fc7d0ce135593bb73140f20",
       "size_bytes": 2156
     },
+    "memory_tuner/run_host_capacity.py": {
+      "sha256": "23f1eaf462f1825a77e91d2c8d8a4ab073f4debe0fbab134ff1863e096345d37",
+      "size_bytes": 1497
+    },
+    "memory_tuner/run_matched_gpu.py": {
+      "sha256": "f340fb7eec5297cb675a48e267618c15d7787a42891d4a2ae4a670ec24a0cc47",
+      "size_bytes": 49744
+    },
     "memory_tuner/scientific_revision_analysis.py": {
       "sha256": "de24e321676838a5d9f7467f95d563465bbf979ed8c23225915035667a936b4d",
       "size_bytes": 20352
@@ -384,24 +456,72 @@
       "size_bytes": 14386
     },
     "memory_tuner/test_artifact_manifest.py": {
-      "sha256": "d7f72a2bd3dd68672961a26c1d0392e1b788e10abfb4eac533cef831feb2ed57",
-      "size_bytes": 9830
+      "sha256": "2402b36aa7c82314c782b9bda2d66bcfd7eb71f38132afa46c17ae28b8ccefa8",
+      "size_bytes": 22090
     },
     "memory_tuner/test_artifact_paths.py": {
       "sha256": "677e881884210a3089f86744d2db65a13e0f055ecd24ddd510b60880ab93e7c7",
       "size_bytes": 1292
     },
+    "memory_tuner/test_benchmark_v2_env.py": {
+      "sha256": "aba2768e5ce79b1cbf458b22ed10b5e1f68898e810c20a7fd0823785fecb1dc0",
+      "size_bytes": 2732
+    },
+    "memory_tuner/test_capture_allocation_accounting.py": {
+      "sha256": "f1b83d5ec8bfd56e7337c26b3b07152870f925f967c0136a97522da6d92bbda7",
+      "size_bytes": 4247
+    },
+    "memory_tuner/test_capture_environment.py": {
+      "sha256": "c7355019d7f6504110eec6cdc9afd949cb20521ddcc4b47ee93d6d538785551d",
+      "size_bytes": 1565
+    },
+    "memory_tuner/test_code_shape_reward.py": {
+      "sha256": "d60e25723141f9d4f4684c84b3bb885882925fc1f33dde557a75bee42f01a77f",
+      "size_bytes": 808
+    },
     "memory_tuner/test_collect_decision_benchmark.py": {
       "sha256": "0098e0f9565b1b87de71666678c5ac0d54b6b5465be8a19e465affaf4ce70cba",
       "size_bytes": 10968
+    },
+    "memory_tuner/test_collect_estimation_study.py": {
+      "sha256": "fe066361c8f6c5743798e16f03c004089e5af3370e3282a11b23b3c7a3cf9d00",
+      "size_bytes": 55807
+    },
+    "memory_tuner/test_collect_host_capacity.py": {
+      "sha256": "bf8056a0d3d1ee25d3cae615e4cf298e4e13f15e5a4d8e03f15fdea02b629325",
+      "size_bytes": 11140
+    },
+    "memory_tuner/test_estimation_baselines.py": {
+      "sha256": "06672edfab055fe420fcd145b21ddde4df649e56c4b52bde8fd685fe6aca167b",
+      "size_bytes": 9143
+    },
+    "memory_tuner/test_gpu_monitor.py": {
+      "sha256": "de589038b5c39e35d3d3088b8b4025317c4eb6157816bb1b83e0dcfc334a14f8",
+      "size_bytes": 583
     },
     "memory_tuner/test_grpo_phase_sensitivity.py": {
       "sha256": "8759b29c2a180453e500c1d19c7144a2801d105a1ddb288f67ae954736c1fd6b",
       "size_bytes": 1468
     },
     "memory_tuner/test_grpo_raw_evidence.py": {
-      "sha256": "17c80c0546f7c0056f5029bda157087f88207cd4a6c910188f4a8f6dae2f7372",
-      "size_bytes": 3041
+      "sha256": "52694155a56edb811c86253271b1be0ff8e9e86908946de467df0137b1c4743c",
+      "size_bytes": 3275
+    },
+    "memory_tuner/test_host_capacity_protocol.py": {
+      "sha256": "58079e25792bdd11c4f6672fc9ff5a3813836a097dfbfe207339e146a7134895",
+      "size_bytes": 5922
+    },
+    "memory_tuner/test_matched_gpu.py": {
+      "sha256": "f254d075138a916f7b2f8b38e3f6fdf4d18bfe96629ffbe4786a378357cf0914",
+      "size_bytes": 46859
+    },
+    "memory_tuner/test_model_memory_metadata.py": {
+      "sha256": "ee6f5ede1efbd1c1e1f7475e79cd99d3c97fae7aa7996ceff8fbd770dcb811e5",
+      "size_bytes": 2654
+    },
+    "memory_tuner/test_resolve_hf_snapshot.py": {
+      "sha256": "9758e8c4f8e9b5478f05c9e4ff706dbeb362da1f4bcec6b488568146914f6e41",
+      "size_bytes": 1623
     },
     "memory_tuner/test_review_attempt_workload_audit.py": {
       "sha256": "d1edff78641b0485ace58106f8e35e83b3b2fc990808ad3cd2e0899c4ead2e66",
@@ -415,6 +535,10 @@
       "sha256": "062421e1b0ecd6b95877d4e718512d480fac087e5e3ffb730bf9215cd35a6de6",
       "size_bytes": 4229
     },
+    "memory_tuner/test_run_host_capacity.py": {
+      "sha256": "f7dc79d14bcb5d38681a15a10245b8bbc6408e787fc62ffae9e1cc9dddc28a85",
+      "size_bytes": 14586
+    },
     "memory_tuner/test_scientific_revision_analysis.py": {
       "sha256": "5885eb4bf730f606bd9b745ed2c15f252cb7ee3b08567e2a869b8e36aeb2a41d",
       "size_bytes": 5412
@@ -427,6 +551,14 @@
       "sha256": "8d4a8178e1f3ad88a227b04411e4ce58582b5f4fcbe0c2b58bf37a28499d6a7e",
       "size_bytes": 706
     },
+    "memory_tuner/test_verify_estimation.py": {
+      "sha256": "076d3a5c87cbbb1829c5725df64287336344059b6940ad91c9e654beff3d46a9",
+      "size_bytes": 956
+    },
+    "memory_tuner/test_vllm_uuid_compat.py": {
+      "sha256": "018ba696de4f1d18e4d18f6e9e6874a10577b9055e243338efbd915d2679a2f2",
+      "size_bytes": 21826
+    },
     "memory_tuner/trial_attempts.py": {
       "sha256": "024db44e547a436cc3e4a75996db731d61291d4dacbde1f85542c53c49873a39",
       "size_bytes": 2317
@@ -434,6 +566,10 @@
     "memory_tuner/validate_trial_matrix.py": {
       "sha256": "8746082d2b12b98eaad20248e638fee60d4202d44bd95656a45cd597f4f33320",
       "size_bytes": 11686
+    },
+    "memory_tuner/verify_estimation.py": {
+      "sha256": "ac4597d18400a9a7b94522fd490db6b77d53521f039850256b3a2006a4043e95",
+      "size_bytes": 6783
     },
     "memory_tuner/verl_phase_matrix.csv": {
       "sha256": "6836744743d35c3b36a1a26c4fb1cd39a991d42447b650aa4f92f70dea31f23e",
@@ -451,9 +587,29 @@
       "sha256": "c11595fc3e8ebfb6f49f1f0c696bd349b78ba7347380d5a754d7bcfb931e66d3",
       "size_bytes": 1668
     },
+    "memory_tuner/vllm_uuid_compat.py": {
+      "sha256": "ca975369e6ad29d7a6404e6ad4f25d02421f12f93fd07b85cea018e4bc3ed3e6",
+      "size_bytes": 11211
+    },
     "publication-requirements.txt": {
-      "sha256": "3c86c539ab6f053981c6c58c93135f6e085434cfd4ea112424469b25f16b6a5b",
-      "size_bytes": 458
+      "sha256": "c11edabd061028e385944e85996da0136b583379fb80fbc607802bc14085853d",
+      "size_bytes": 472
+    },
+    "run_grpo_instrumented.slurm": {
+      "sha256": "5fad931d05049888e79e45d406972eed695b3c07c5f694d1707c4e9c1777ec4a",
+      "size_bytes": 15545
+    },
+    "run_host_capacity.slurm": {
+      "sha256": "59d3daa9499d1fc76d0b856be6c0a813472f488eb49f990e6ffa57ccf819b919",
+      "size_bytes": 1231
+    },
+    "run_matched_gpu.slurm": {
+      "sha256": "dd7ffde1a93be9dacf57546d6109903445af263170d2b74c5e9546e9b9b7dc16",
+      "size_bytes": 1224
+    },
+    "run_matched_gpu_preflight.slurm": {
+      "sha256": "0f5c7cefa81d71fc06e0887b7dd6774ac3aa1fa947a27754a52088d2c95f446e",
+      "size_bytes": 3116
     },
     "test_benchmark.py": {
       "sha256": "f1bde2313834d3a9eaa3d2b4ae0ca389a6977d5a662494100cd16a83c29c3b4c",

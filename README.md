@@ -1,11 +1,13 @@
 # RLVRAMBench: evaluate resource decisions and reproduce the evidence
 
-CPU-only reconstruction of the measurements, statistical tables, and four
-figures supporting **RLVRAMBench: A Benchmark for Memory Feasibility in
-Colocated Language-Model Reinforcement Learning**.
+CPU-only reconstruction of the measurements, tables, and figures supporting
+**Memory Feasibility in Colocated Language-Model Reinforcement Learning:
+A Failure-Aware Measurement Study**. RLVRAMBench is the accompanying evidence
+and configuration-evaluation artifact for the studied LoRA-GRPO execution
+stack on A100 hardware, not a general benchmark of reinforcement-learning systems.
 
-Authors: Ondřej Kobza and Jan Šedivý, CIIRC, Czech Technical University in
-Prague.
+Authors: Ondřej Kobza and Jan Šedivý, Czech Institute of Informatics,
+Robotics and Cybernetics, Czech Technical University in Prague.
 
 This repository separates the reproduction code from the larger research
 workspace. The benchmark evidence is hosted at
@@ -64,6 +66,57 @@ panel; they are not 48 independent cases or 48 free policy observations.
 The following sections describe the separate, heavier reconstruction of
 the paper's results from raw evidence.
 
+## Optional estimation extension
+
+Releases with `expected_estimation_derived_files` in `release.json` also
+include a separate estimation comparison. Fixed references copy donor labels,
+fit empirical component regression with a startup-budget check, or fit
+multinomial logistic classification. Eight architecture/configuration size
+proxies are not an exact tensor-liveness model. Three retrospective folds
+withhold one model family each; historical outcomes were visible during
+method design.
+
+The prospective schedule has twelve configurations and 36 planned slots,
+not 36 guaranteed eligible outcomes. The release's `estimation_counts`
+come from the collector and retain unresolved processes and configurations.
+The original protocol, amendment, frozen predictions, complete expected execution-commit
+map, and any scheduler accounting remain separate from derived outcomes.
+Earlier releases without this extension follow the unchanged reconstruction
+path.
+
+For a release containing the frozen estimator inputs, replay and compare
+fresh fits without reading prospective outcomes:
+
+```bash
+.venv-reproduce/bin/python -m memory_tuner.verify_estimation \
+  --root . --refit --output estimator-verification.json
+```
+
+The output must not already exist. Numerical tolerances are reported and
+categorical decisions must match exactly. Recorded backend-discovery warnings
+limit thread-count and CPU-performance claims; passing numerical checks does
+not establish that every numerical library used one thread.
+
+### Separate expanded-host follow-up
+
+Releases with `expected_host_capacity_derived_files` also reconstruct
+`benchmark/host_capacity/`. This follow-up keeps the original predictions
+and uses new seed slots under an expanded host-resource condition. It does
+not replace the original larger-model panel or refit its predictors.
+
+All eighteen invocations launched: nine two-GPU startup memory-admission
+failures are eligible, while nine four-GPU invocations lack the required
+final-step record and remain unresolved. Returning update/synchronization
+calls and a zero exit are not substituted for that missing evidence.
+Only three of six repeated configuration labels resolve, all to failure.
+No completed-peak error or recovery of a usable setting is established.
+
+The wrapper verifies both frozen designs, hides both target-outcome trees
+from the historical refit, checks prediction inheritance without a host
+refit, and independently reconstructs the two thirteen-file result sets.
+Coverage and costs stay separate. See the cohort guides and `release.json`
+for exact versions and observed counts.
+
 ## What is reproduced
 
 - 588 principal processes: 438 historical and 150 prospective revision runs.
@@ -82,6 +135,13 @@ the paper's results from raw evidence.
   independent repeated labels, per-case acquisition transcripts, and
   three admission rules at four measurement budgets. Reference target
   outcomes are hidden from their own reconstruction.
+- When present, the estimation collector's exact output file set, independent
+  raw reconstruction, frozen prediction replay, and a separately reported
+  fresh-fit comparison. The expected file count and observed coverage are
+  taken from `release.json`, not assumed from the planned schedule.
+- When present, the separate host-capacity collector's thirteen outputs,
+  its inherited-prediction check, and independent raw reconstruction under
+  the original completion criteria.
 
 The procedure verifies the archive and every evidence-manifest entry,
 removes precomputed profiles from the analysis root, restores only the raw
@@ -117,9 +177,12 @@ bash memory_tuner/bootstrap_publication.sh
 This creates `.venv-reproduce` using `publication-requirements.txt`.
 Run environment-creation commands from the project directory; keep every
 virtual environment inside the project, not in your home directory.
-The scientific dependency versions are unchanged from the original paper
-release. The copied analysis modules and matrices are recorded, with their
-SHA-256 digests, in `source-provenance.json`.
+Use the complete staged requirements, including the estimation dependencies
+when that extension is present. The copied analysis
+modules and matrices are recorded, with their SHA-256 digests, in
+`source-provenance.json`. Estimation reconstruction checks those standalone
+files against both this record and their archived source copies before
+executing analysis.
 
 ## Get the frozen benchmark
 
@@ -162,6 +225,29 @@ and the machine-readable acceptance report in `reproduced/verification.json`.
 The reference profiles are retained separately under
 `reproduced/reference-profiles/`; they are never placed back into the
 analysis input tree, apart from the required raw paired-allocation records.
+
+For an estimation release, `reproduced/estimation-verification.json` records
+replay and fresh-fit checks, and `reproduced/estimation-results/` contains
+the independently collected outputs. Only the frozen protocol, amendment,
+matrix, architecture metadata, target settings, fitted models, predictions,
+seal, execution-commit map, and used allocation accounting are restored from
+the estimation reference directory. Its `results/` directory is never restored.
+Historical fitting tables come from the preceding regeneration.
+
+With `--isolate-analysis`, all analysis children are denied the reference
+directories. The replay/refit child is additionally denied prospective raw
+records, scheduler logs, and manuscript files containing reported outcomes;
+the collector can read the raw inputs afterward.
+Reference comparison happens in the parent process. Estimation CSV/JSON
+contents must match after artifact-root path normalization; each output
+manifest is independently verified against its own files, since relocated
+paths can change byte hashes. Coverage counts, the prediction-seal hash, and
+the execution-commit map must also match the release.
+
+The final report separates `estimation_independent_raw_reconstruction_passed`,
+`estimation_prediction_replay_passed`, and `estimation_fresh_refit_compared`.
+The two estimation isolation flags are false when filesystem isolation is
+omitted; that run cannot satisfy the isolated publication gate.
 
 ## Tests
 

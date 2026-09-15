@@ -7,6 +7,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import re
 from collections import Counter
 from pathlib import Path
@@ -28,6 +29,19 @@ REFERENCED_FILE_FIELDS = (
     "run_log",
 )
 CHECKPOINT_DIRECTORY_PATTERN = re.compile(r"^global_step_[0-9]+$")
+ESTIMATION_EXCLUDED_DIRECTORIES = frozenset({
+    ".cache", ".pytest_cache", "__pycache__", "cache", "checkpoint",
+    "checkpoints", "huggingface", "model", "models", "ray", "ray-runtime",
+    "ray_runtime", "runtime", "runtime_cache", "torch_extensions",
+    "torchinductor", "triton",
+})
+ESTIMATION_PAYLOAD_SUFFIXES = frozenset({
+    ".bin", ".ckpt", ".pt", ".pth", ".safetensors",
+})
+ESTIMATION_SCHEDULER_LOG_PATTERN = re.compile(
+    r"^(?:matched-gpu|matched-preflight|gpu-identity|host-capacity)-"
+    r"[0-9]+(?:_[0-9]+)?\.(?:out|err)$"
+)
 
 
 def file_sha256(path: Path, chunk_size: int = 1024 * 1024) -> str:
@@ -91,6 +105,59 @@ def add_trial_tree(
         if path.is_file() and not is_checkpoint_payload(path, trial_root):
             # Preserve canonical relative trial links as well as their immutable
             # attempt targets; matrix reconstruction discovers the former.
+            files[path.absolute()] = category
+
+
+def is_estimation_runtime_directory(name: str) -> bool:
+    return (
+        name.lower() in ESTIMATION_EXCLUDED_DIRECTORIES
+        or name.startswith("models--")
+        or CHECKPOINT_DIRECTORY_PATTERN.fullmatch(name) is not None
+    )
+
+
+def add_estimation_tree(
+    files: dict[Path, str],
+    tree_root: Path,
+    category: str,
+    *,
+    suffixes: frozenset[str] | None = None,
+) -> None:
+    """Retain partial evidence without traversing runtime or checkpoint trees.
+
+    This selector is separate from historical trial eligibility. In particular,
+    a dispatch, launch ledger, or device proof is evidence even when no trial
+    record was produced. Preflight proof paths are not runtime dependencies:
+    neither referenced paths nor directory symlinks are followed.
+    """
+    resolved_root = tree_root.resolve()
+    for directory, children, names in os.walk(tree_root, followlinks=False):
+        parent = Path(directory)
+        children[:] = [
+            name for name in children
+            if not is_estimation_runtime_directory(name)
+            and not (parent / name).is_symlink()
+        ]
+        for name in names:
+            path = parent / name
+            if (
+                path.suffix.lower() in ESTIMATION_PAYLOAD_SUFFIXES
+                or (suffixes is not None and path.suffix.lower() not in suffixes)
+                or not path.is_file()
+            ):
+                continue
+            # Keep an internal trial-file alias, but never use an alias to
+            # import an external runtime or an otherwise excluded payload.
+            try:
+                target = path.resolve().relative_to(resolved_root)
+            except ValueError:
+                continue
+            if (
+                any(is_estimation_runtime_directory(part) for part in target.parts[:-1])
+                or target.suffix.lower() in ESTIMATION_PAYLOAD_SUFFIXES
+                or (suffixes is not None and target.suffix.lower() not in suffixes)
+            ):
+                continue
             files[path.absolute()] = category
 
 
@@ -525,6 +592,29 @@ def collect_files(
                    "review_instrumentation_control")
     add_trial_tree(files, repo_root / "output/prospective_decision",
                    "prospective_decision_evidence")
+    add_estimation_tree(
+        files, repo_root / "output/prospective_estimation",
+        "prospective_estimation_evidence",
+    )
+    add_estimation_tree(
+        files, repo_root / "output/estimation_host_capacity",
+        "host_capacity_evidence",
+    )
+    add_estimation_tree(
+        files, repo_root / "output/estimation-device-preflight",
+        "estimation_device_preflight_evidence", suffixes=frozenset({".json"}),
+    )
+    add_estimation_tree(
+        files, repo_root / "benchmark/estimation",
+        "estimation_benchmark", suffixes=frozenset({".json", ".csv", ".md", ".psv"}),
+    )
+    add_estimation_tree(
+        files, repo_root / "benchmark/host_capacity",
+        "host_capacity_benchmark", suffixes=frozenset({".json", ".csv", ".md", ".psv"}),
+    )
+    for path in (repo_root / "logs").glob("*"):
+        if path.is_file() and ESTIMATION_SCHEDULER_LOG_PATTERN.fullmatch(path.name):
+            files[path.resolve()] = "estimation_scheduler_log"
 
     static_globs = (
         ("README.md", "review_entry_point"),
@@ -553,6 +643,7 @@ def collect_files(
         ("memory_tuner/*.slurm", "job_launcher"),
         ("*.slurm", "job_launcher"),
         ("sppo_replay/*.py", "training_code"),
+        ("instrumented_python_packages/sitecustomize.py", "instrumented_runtime_source"),
         ("instrumented_python_packages/verl/**/*", "instrumented_runtime_source"),
         ("third_party/TransferQueue/**/*", "pinned_runtime_dependency"),
         ("paper/*.md", "paper_artifact"),

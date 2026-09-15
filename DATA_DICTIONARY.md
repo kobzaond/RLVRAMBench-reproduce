@@ -1,7 +1,8 @@
 # RLVRAMBench data dictionary
 
 Static data protocol 1.0, evaluator 1.1. The separate admission protocol is
-specified in `benchmark/decision/protocol.json`.
+specified in `benchmark/decision/protocol.json`; the memory-estimation
+comparison has its own `benchmark/estimation/protocol.json`.
 CSV files use UTF-8, a header row, and a blank cell for missing
 or unavailable information. Blank is **not zero**, success, or a memory
 failure. Measurements in MiB use 1 MiB = 1,048,576 bytes. Identifiers are
@@ -268,3 +269,98 @@ donor attempts, actually requested target attempts, and full physical
 collection costs have separate ledgers. Physical GPU-seconds multiply
 each recorded runner invocation's elapsed seconds by its two allocated
 GPUs; this excludes queue time and other allocation overhead.
+
+## Memory-estimation comparison
+
+This comparison does not change the historical table counts above.
+The retrospective evaluation reuses ninety historical configurations,
+holding out an entire model family at a time. The separate prospective
+inventory fixes twelve larger-model configurations, three seeds per
+configuration, and eighteen matched two-/four-GPU pairs. A planned slot
+is not necessarily a launched process or an eligible memory measurement.
+
+| File in `benchmark/estimation/` | Meaning |
+|---|---|
+| `protocol.json`, `amendment-01.json` | Frozen design and prelaunch correction |
+| `model_metadata.json` | Architecture and parameter counts derived from upstream configuration and tensor headers |
+| `matrix.csv`, `targets.csv` | Execution slots and the twelve configuration-level prediction targets |
+| `retrospective.json` | Separate family-held-out fits, predictions, scores and source-evidence costs |
+| `fitted_model.json`, `predictions.json` | Final historical-only fit and predictions sealed before prospective execution |
+| `prediction_freeze.json` | Timestamp and hashes binding the frozen inputs and outputs |
+| `execution_commits.json`, `execution_history.json` | Immutable execution source for each pair and disclosed runtime repairs |
+| `results/configurations_flat.csv` | Browsable settings, seed coverage, observed state and all three frozen predictions |
+| `results/processes.csv` | All 36 planned slots, including validation failures and unknown launch status |
+| `results/configurations.csv` | Configuration-level outcomes with structured settings and seed lists |
+| `results/pairs.csv` | Two-/four-GPU outcomes in each matched allocation |
+| `results/evaluation.json` | Resolved-subset scores, full-panel coverage and unscored approvals |
+| `results/costs.json` | Task, invocation-reservation, observed-allocation and whole-allocation time |
+| `results/summary.json`, `results/provenance.json` | Counts and independently checked evidence/source hashes |
+| `results/output_manifest.json` | Hashes and sizes of the twelve reconstructed JSON/CSV outputs |
+
+The flat table is a browsing view, not a permitted input to blind prediction:
+it deliberately displays target outcomes beside predictions. `gpu_count`
+is the number of devices assigned to the training process; each enclosing
+allocation reserves four devices. `eligible_seed_count`, `eligible_seeds`
+and `unresolved_seeds` expose the coverage behind `observed_state`.
+All three seeds must be eligible before a repeated label can be assigned.
+Otherwise `observed_state` is `unresolved`, even when an eligible seed
+already establishes a failure. `known_memory_failure` and
+`known_margin_exceedance` retain such partial eligible evidence.
+
+`completed_peak_mib` is available only when all three seeds complete with
+validated measurements. `maximum_known_completed_peak_mib` may summarize
+fewer completions; it must not be substituted for the completed repeated
+outcome. Host-memory exhaustion, software failure and missing evidence do
+not establish a GPU-memory label.
+
+Each method has a `<method>_predicted_state` column. The method names are
+`donor_copy`, `component_regression` and `logistic`. Component regression
+supplies an estimated `<method>_predicted_peak_mib`; donor copying retains
+the donor's measured peak, not a newly estimated target peak. The classifier's
+blank peak field is not a zero estimate. An
+`<method>_unscored_approval` marks a predicted within-margin setting whose
+repeated outcome remains unresolved. Those approvals must accompany any
+reported precision or failure count on the resolved subset.
+
+The process table separates `launched`, `eligible`, `completed`,
+`online_status` and reconstructed `state`. The runner's online status is
+not accepted as a label without checking its raw evidence. Unknown launch
+status is distinct from `False`. `validation_errors` explains unresolved
+measurements. Pair peak and runtime differences are reported only when
+both members have validated completions; they describe total execution
+under each device assignment, not identical generated responses.
+
+The four cost views are alternatives, not additive charges:
+task time weights each invocation by its two or four assigned GPUs;
+invocation-reservation time weights both by four; observed allocation
+time includes recorded overhead through runner finalization; whole-job
+time requires actual scheduler start/end accounting. Each reports known
+and unknown record counts. A missing terminal record is unknown cost,
+not zero cost. Preflight jobs are reported separately in execution history.
+
+The enhanced `allocation_accounting.json` preserves outer-job and batch-step
+records separately, with the original UTC scheduler lines, their hashes,
+one-second timestamp precision, and links to the recorded pair claims.
+A cancelled job's batch cleanup can end later than its outer record.
+Both measured spans remain explicit; they are never summed. A nonlaunched
+slot has no invocation cost, but its enclosing allocation can still have a
+verified scheduler cost.
+
+## Expanded-host follow-up
+
+`benchmark/host_capacity/` uses the same thirteen-file results schema as
+the estimation panel, but contains eighteen new planned slots, nine pairs
+and six configurations. It is a separate experiment, not a repair that
+replaces original outcomes. The fixed seeds are 161–163.
+The raw records are under `output/estimation_host_capacity/`.
+
+`study_freeze.json` seals this new design and its inherited predictions.
+Provenance keeps its `study_freeze_sha256` separate from the original
+`prediction_seal_sha256`. The new `protocol_sha256` identifies the expanded
+host-resource condition; the original protocol and prediction seal remain
+additional anchors. No predictions are fitted from this panel.
+
+All completion, partial-evidence and scoring definitions above still apply.
+In particular, exit code zero without evidence of the requested training
+step does not establish completion. Its sampled peak is not a completed-run
+peak. The per-panel cost files exclude each other's allocations.

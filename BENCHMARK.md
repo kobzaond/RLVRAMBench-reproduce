@@ -3,8 +3,8 @@
 RLVRAMBench measures **whether a colocated language-model reinforcement
 learning configuration completes within a specified device-memory margin**,
 and whether that resource label transfers to another execution setting.
-It is a measured systems dataset and a set of open transfer tasks, not a
-language-model quality test, a trained predictor, or a live GPU service.
+It is a measured systems dataset and a set of open evaluation tasks, not a
+language-model quality test or a general memory-prediction service.
 
 The released configurations run Group Relative Policy Optimization (GRPO)
 with low-rank adaptation (LoRA). Generation, policy training, and weight
@@ -122,6 +122,23 @@ not for blind prediction. Any extra measurements or use of these open
 labels must be declared; this is **not a hidden leaderboard**. A method
 developed on these outcomes requires new whole-case measurements for an
 independent generalization claim.
+
+## Separate model-family estimation comparison
+
+`benchmark/estimation/` uses a different information contract from the
+task-local suite above. Its ninety historical configurations supply three
+leave-family-out tests: fit on sixty configurations and predict the thirty
+from the remaining family. The references are donor copying, empirical
+component regression with a startup guard, and regularized logistic
+classification. All seeds and GPU-count variants of the test family remain
+outside fitting. Historical labels were visible during method design.
+
+The [estimator guide](benchmark/estimation/README.md) gives the frozen
+specification, prediction files, per-family scores and a CPU verification
+command. The references have different failure and rejection patterns; none
+uniformly improves on the others. Do not mix these fitting pools with
+the original task-local donor rules or pool their repeated targets into
+an inflated test-set size.
 
 ## What this release can distinguish
 

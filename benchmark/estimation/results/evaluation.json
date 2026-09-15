@@ -1,0 +1,216 @@
+{
+  "approvals": {
+    "component_regression": {
+      "full_panel_approved_configurations": 3,
+      "full_panel_approved_ids": [
+        "est-qwen25-7b-code_heavy_tail-c2-4gpu",
+        "est-qwen25-7b-gsm8k-c2-4gpu",
+        "est-qwen25-7b-math-c2-4gpu"
+      ],
+      "scored_approved_configurations": 0,
+      "unscored_approvals_with_known_failure": [],
+      "unscored_approvals_with_known_margin_exceedance": [],
+      "unscored_approved_configurations": 3,
+      "unscored_approved_ids": [
+        "est-qwen25-7b-code_heavy_tail-c2-4gpu",
+        "est-qwen25-7b-gsm8k-c2-4gpu",
+        "est-qwen25-7b-math-c2-4gpu"
+      ]
+    },
+    "donor_copy": {
+      "full_panel_approved_configurations": 12,
+      "full_panel_approved_ids": [
+        "est-qwen25-7b-code_heavy_tail-c2-2gpu",
+        "est-qwen25-7b-code_heavy_tail-c2-4gpu",
+        "est-qwen25-7b-code_heavy_tail-c3-2gpu",
+        "est-qwen25-7b-code_heavy_tail-c3-4gpu",
+        "est-qwen25-7b-gsm8k-c2-2gpu",
+        "est-qwen25-7b-gsm8k-c2-4gpu",
+        "est-qwen25-7b-gsm8k-c3-2gpu",
+        "est-qwen25-7b-gsm8k-c3-4gpu",
+        "est-qwen25-7b-math-c2-2gpu",
+        "est-qwen25-7b-math-c2-4gpu",
+        "est-qwen25-7b-math-c3-2gpu",
+        "est-qwen25-7b-math-c3-4gpu"
+      ],
+      "scored_approved_configurations": 6,
+      "unscored_approvals_with_known_failure": [
+        "est-qwen25-7b-math-c2-2gpu",
+        "est-qwen25-7b-math-c3-2gpu",
+        "est-qwen25-7b-math-c3-4gpu"
+      ],
+      "unscored_approvals_with_known_margin_exceedance": [],
+      "unscored_approved_configurations": 6,
+      "unscored_approved_ids": [
+        "est-qwen25-7b-code_heavy_tail-c2-4gpu",
+        "est-qwen25-7b-gsm8k-c2-4gpu",
+        "est-qwen25-7b-math-c2-2gpu",
+        "est-qwen25-7b-math-c2-4gpu",
+        "est-qwen25-7b-math-c3-2gpu",
+        "est-qwen25-7b-math-c3-4gpu"
+      ]
+    },
+    "logistic": {
+      "full_panel_approved_configurations": 0,
+      "full_panel_approved_ids": [],
+      "scored_approved_configurations": 0,
+      "unscored_approvals_with_known_failure": [],
+      "unscored_approvals_with_known_margin_exceedance": [],
+      "unscored_approved_configurations": 0,
+      "unscored_approved_ids": []
+    }
+  },
+  "full_panel_coverage": 0.5,
+  "interpretation": "Unresolved configurations are unscored, not correct predictions or safe labels.",
+  "metric_scope": "resolved_subset_only",
+  "planned_configurations": 12,
+  "resolved_configurations": 6,
+  "resolved_ids": [
+    "est-qwen25-7b-code_heavy_tail-c2-2gpu",
+    "est-qwen25-7b-code_heavy_tail-c3-2gpu",
+    "est-qwen25-7b-code_heavy_tail-c3-4gpu",
+    "est-qwen25-7b-gsm8k-c2-2gpu",
+    "est-qwen25-7b-gsm8k-c3-2gpu",
+    "est-qwen25-7b-gsm8k-c3-4gpu"
+  ],
+  "resolved_subset_metrics": {
+    "component_regression": {
+      "above_margin_among_approved": null,
+      "approval_rate_on_above_margin_targets": null,
+      "approval_rate_on_memory_failure_targets": 0.0,
+      "approved": 0,
+      "approved_above_margin": 0,
+      "approved_memory_failure": 0,
+      "approved_within_margin": 0,
+      "completed_peak_mae_mib": null,
+      "completed_peak_mean_signed_error_mib": null,
+      "completed_peak_prediction_coverage": 0,
+      "completed_peak_worst_underestimate_mib": null,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "above_margin": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 0
+        },
+        "memory_failure": {
+          "above_margin": 0,
+          "memory_failure": 6,
+          "within_margin": 0
+        },
+        "within_margin": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 0
+        }
+      },
+      "correct_three_state": 6,
+      "distinct_target_configurations": 6,
+      "memory_failure_among_approved": null,
+      "queries": 6,
+      "rejected_within_margin": 0,
+      "rejection_rate_on_within_margin_targets": null,
+      "startup_guard_changed_states": 0,
+      "target_above_margin": 0,
+      "target_memory_failure": 6,
+      "target_within_margin": 0,
+      "three_state_accuracy": 1.0,
+      "within_margin_approval_precision": null,
+      "within_margin_recall": null
+    },
+    "donor_copy": {
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_above_margin_targets": null,
+      "approval_rate_on_memory_failure_targets": 1.0,
+      "approved": 6,
+      "approved_above_margin": 0,
+      "approved_memory_failure": 6,
+      "approved_within_margin": 0,
+      "completed_peak_mae_mib": null,
+      "completed_peak_mean_signed_error_mib": null,
+      "completed_peak_prediction_coverage": 0,
+      "completed_peak_worst_underestimate_mib": null,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "above_margin": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 0
+        },
+        "memory_failure": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 0
+        },
+        "within_margin": {
+          "above_margin": 0,
+          "memory_failure": 6,
+          "within_margin": 0
+        }
+      },
+      "correct_three_state": 0,
+      "distinct_target_configurations": 6,
+      "memory_failure_among_approved": 1.0,
+      "queries": 6,
+      "rejected_within_margin": 0,
+      "rejection_rate_on_within_margin_targets": null,
+      "startup_guard_changed_states": 0,
+      "target_above_margin": 0,
+      "target_memory_failure": 6,
+      "target_within_margin": 0,
+      "three_state_accuracy": 0.0,
+      "within_margin_approval_precision": 0.0,
+      "within_margin_recall": null
+    },
+    "logistic": {
+      "above_margin_among_approved": null,
+      "approval_rate_on_above_margin_targets": null,
+      "approval_rate_on_memory_failure_targets": 0.0,
+      "approved": 0,
+      "approved_above_margin": 0,
+      "approved_memory_failure": 0,
+      "approved_within_margin": 0,
+      "completed_peak_mae_mib": null,
+      "completed_peak_mean_signed_error_mib": null,
+      "completed_peak_prediction_coverage": 0,
+      "completed_peak_worst_underestimate_mib": null,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "above_margin": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 0
+        },
+        "memory_failure": {
+          "above_margin": 0,
+          "memory_failure": 6,
+          "within_margin": 0
+        },
+        "within_margin": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 0
+        }
+      },
+      "correct_three_state": 6,
+      "distinct_target_configurations": 6,
+      "memory_failure_among_approved": null,
+      "queries": 6,
+      "rejected_within_margin": 0,
+      "rejection_rate_on_within_margin_targets": null,
+      "startup_guard_changed_states": 0,
+      "target_above_margin": 0,
+      "target_memory_failure": 6,
+      "target_within_margin": 0,
+      "three_state_accuracy": 1.0,
+      "within_margin_approval_precision": null,
+      "within_margin_recall": null
+    }
+  },
+  "unresolved_configurations": 6,
+  "unresolved_ids": [
+    "est-qwen25-7b-code_heavy_tail-c2-4gpu",
+    "est-qwen25-7b-gsm8k-c2-4gpu",
+    "est-qwen25-7b-math-c2-2gpu",
+    "est-qwen25-7b-math-c2-4gpu",
+    "est-qwen25-7b-math-c3-2gpu",
+    "est-qwen25-7b-math-c3-4gpu"
+  ]
+}

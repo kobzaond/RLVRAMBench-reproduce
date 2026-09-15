@@ -1,0 +1,43 @@
+{
+  "base_protocol_sha256": "1694e447e842600612604891e7b3d036ff0791fa84c4bdbeba54ed093feefdeb",
+  "amended_at_utc": "2026-09-15T14:09:16+00:00",
+  "before_new_target_execution": true,
+  "reason": "Prelaunch code review found that a nonnegative coefficient on an offload=true indicator could only increase predicted memory. Replace that indicator with the resident actor-shard volume. The shared feature change affects both regression and logistic classification. Old-source unit-test fits occurred; no final prediction seal or new standard-GRPO target execution existed at this amendment. No hyperparameter search or target outcome motivated the correction.",
+  "previous_feature_order": [
+    "actor_shards_gib", "adapter_optimizer_gib", "generation_budget_gib",
+    "generation_replica_gib", "largest_unit_proxy_gib",
+    "checkpoint_boundary_volume_gib", "vocabulary_output_volume_gib",
+    "actor_parameter_offload"
+  ],
+  "updates": {
+    "features": [
+      "actor_shards_gib", "adapter_optimizer_gib", "generation_budget_gib",
+      "generation_replica_gib", "largest_unit_proxy_gib",
+      "checkpoint_boundary_volume_gib", "vocabulary_output_volume_gib",
+      "resident_actor_shards_gib"
+    ],
+    "feature_scope": "Architecture/checkpoint-header and configured shape volumes only. Largest-unit proxy=max(largest decoder block, root non-block elements, largest weight tensor), not an observed wrapping map. Checkpoint-boundary and vocabulary-output volumes are predictive covariates, not exact live activation totals. No source identity, dataset name, compound level, actual generated length or outcome appears as a numeric feature. The eighth feature is zero when actor parameters are offloaded and otherwise 4(P+R)/(G*2^30) GiB. Unconditional actor shards remain a separate training-state proxy. Both estimators use the amended eight-feature order. Startup applicability reads the validated offload setting directly.",
+    "component_regression": "Empirical component regression WITH a one-sided startup guard. Nonnegative least squares with an intercept, float64, maxiter=10000; training-completion-only scaling and peak targets unchanged. Report the raw peak-derived class and whether the guard changed it. Coefficients are empirical, not causal or independently identified physical components.",
+    "scoring": "Require three eligible distinct seeds for a repeated prospective label. Unresolved configurations are not labels: report resolved-subset categorical metrics separately from all 12 planned configurations, resolved/unresolved IDs, known failure/margin flags and each method's unscored approvals. Do not impute failure peaks from capacity or surviving processes. Retrospective scores are separate by held-out family. Report the deduplicated donor acquisition subset separately from the full fitting pool."
+  },
+  "implementation_sha256": {
+    "benchmark.py": "35e36caad46d2814b0ac9f8180961de5564746347cf668d5c3fc1e643fd477e8",
+    "memory_tuner/estimation_baselines.py": "8cc20f9697eb38cb6a19a2255e95712ac44469cbd147eaf93e7e7ed183360ad2"
+  },
+  "additional_prelaunch_checks": [
+    "Reject stored feature-name/order mismatch before prediction.",
+    "Reject unresolved or duplicate truth configurations in the known-label scorer.",
+    "Record Python, NumPy, SciPy, scikit-learn, backend and thread settings; limit final fitting to one numerical thread.",
+    "Recheck all effective input hashes before writing outputs and bind original protocol plus amendment hashes in the final seal.",
+    "The runner must validate sealed prediction outputs and effective inputs before any study invocation."
+  ],
+  "unchanged_inputs_verified_sha256": {
+    "benchmark/estimation/matrix.csv": "1ff175e22c76bf1af3857b4ae57cd4f78bafe0d280a295d696e96815ef85e9c8",
+    "benchmark/estimation/targets.csv": "f2481278127fa726f24297d81fc9df46e999315fe543167ed398e671fffa522f",
+    "benchmark/estimation/model_metadata.json": "2f0ce16c13e72900d2a60f9b7ad28d4dc5ed43d7915d8a88925ba9c5ffd684ad",
+    "benchmark/attempts.csv": "397c8caaf0d3abe06587fd649c181fe71d5b8b5f5e24e0591cc7e56d38e275c1",
+    "benchmark/configurations.csv": "3a77c96a67b82e01d23fb6f7a440cba23041bed1dae2749072cb9abb5b5d239d",
+    "benchmark/outcomes.csv": "af05cd91ed1de843735cc188e5e54dbd1645b3ed91c97f503ac3de67bc5f61c9"
+  },
+  "unchanged_design": "Original protocol, 90 source-ID allowlist, 12 target settings, 36 scheduled invocations, all seeds/order/subsets, model snapshot and metadata, data hashes, donor rule, method hyperparameters, budgets and no-retry policy remain unchanged. No new target observation may update either GPU-count prediction."
+}
