@@ -106,8 +106,17 @@ def normalize_paths(text: str, roots: list[Path]) -> str:
     return text
 
 
-def run_child(arguments, work: Path, hidden: list[Path]) -> None:
+def run_child(arguments, work: Path, hidden: list[Path], *, cwd: Path | None = None) -> None:
     work = work.resolve()
+    child_cwd = ROOT
+    if cwd is not None:
+        cwd = Path(cwd).absolute()
+        if (not cwd.is_relative_to(work / "artifact") or not cwd.is_dir()
+                or any(p.is_symlink() for p in (cwd, *cwd.parents))
+                or cwd.resolve() != cwd
+                or any(cwd.is_relative_to(Path(p).resolve()) for p in hidden)):
+            raise ValueError("Archived child cwd must be an unlinked, visible directory within extracted work")
+        child_cwd = cwd
     temporary = work / "tmp"
     if temporary.is_symlink():
         raise ValueError("Child temporary directory must not be a symlink")
@@ -116,6 +125,9 @@ def run_child(arguments, work: Path, hidden: list[Path]) -> None:
         raise ValueError("Child temporary directory escapes the work-local path")
     env = dict(os.environ)
     env.pop("PYTHONPATH", None)
+    if cwd is not None:
+        env.pop("PYTHONHOME", None)
+        env["PYTHONNOUSERSITE"] = "1"
     env.update({
         "PYTHONDONTWRITEBYTECODE": "1",
         "MPLCONFIGDIR": str(work / "cache/matplotlib"),
@@ -134,6 +146,8 @@ def run_child(arguments, work: Path, hidden: list[Path]) -> None:
         # This read-only mount exposes only the interpreter and dependencies.
         isolated_python = "/run/rlvrambench-python"
         wrapper += ["--tmpfs", "/run", "--ro-bind", sys.prefix, isolated_python]
+        if cwd is not None:
+            wrapper += ["--ro-bind", str(cwd), str(cwd)]
         for path in hidden:
             if path.exists():
                 if path.is_dir():
@@ -165,10 +179,31 @@ def run_child(arguments, work: Path, hidden: list[Path]) -> None:
         subprocess.run(
             wrapper + ["--", command[0], "-c", probe,
                        json.dumps([str(p) for p in hidden])],
-            cwd=ROOT, env=env, check=True,
+            cwd=child_cwd, env=env, check=True,
         )
         command = wrapper + ["--", *command]
-    subprocess.run(command, cwd=ROOT, env=env, check=True)
+    if cwd is not None:
+        # A missing archive module must not fall back to a site package, .pth
+        # checkout, caller PYTHONPATH, or the standalone public implementation.
+        module = arguments[1] if arguments[:1] == ["-m"] else "memory_tuner.completion_replication_protocol"
+        if not module.startswith("memory_tuner.") or any(
+                not part.isidentifier() for part in module.split(".")):
+            raise ValueError("Archived child requires an explicit memory_tuner module")
+        probe = (
+            "import importlib.util,sys; from pathlib import Path; "
+            "root=Path.cwd().resolve(); package=importlib.util.find_spec('memory_tuner'); "
+            "assert package is not None, 'Archived package missing'; "
+            "assert package.submodule_search_locations and all("
+            "Path(p).resolve().is_relative_to(root) for p in package.submodule_search_locations), "
+            "'Forbidden package fallback'; "
+            "spec=importlib.util.find_spec(sys.argv[1]); "
+            "assert spec is not None and spec.origin and "
+            "Path(spec.origin).resolve()==root.joinpath(*sys.argv[1].split('.')).with_suffix('.py'), "
+            "'Forbidden archived-module fallback'"
+        )
+        prefix = command[:command.index("--") + 2] if hidden else [sys.executable]
+        subprocess.run(prefix + ["-c", probe, module], cwd=child_cwd, env=env, check=True)
+    subprocess.run(command, cwd=child_cwd, env=env, check=True)
 
 
 def verify_estimation_source(artifact: Path, release: dict, *, required=None) -> int:
@@ -495,7 +530,11 @@ def main() -> None:
     extra_hidden = [p.resolve() for p in args.hide_path]
     if extra_hidden and not args.isolate_analysis:
         raise ValueError("--hide-path requires --isolate-analysis")
-    for path in ([ORIGINAL_ROOT, ROOT / "benchmark", *extra_hidden]
+    from replication_reproduction import (
+        LIVE_PARENT, contract_sha256, prepare_panels, restore_panel_inputs, reconstruct_panels,
+    )
+    panel_hidden = [LIVE_PARENT] if release.get("replication_reproduction") is not None else []
+    for path in ([ORIGINAL_ROOT, ROOT / "benchmark", *extra_hidden, *panel_hidden]
                  if args.isolate_analysis else []):
         if not path.is_dir():
             if path in extra_hidden:
@@ -506,6 +545,9 @@ def main() -> None:
     work.mkdir(parents=True, exist_ok=False)
     artifact = work / "artifact"
     members = extract(args.archive.resolve(), artifact)
+    if "archive_members" in release and (
+            type(release["archive_members"]) is not int or release["archive_members"] != members):
+        raise ValueError("Archive member count differs from release (including safe directories)")
 
     from memory_tuner.artifact_manifest import read_csv, verify_manifest
     manifest = artifact / "profiles/benchmark/publication-artifact-manifest.csv"
@@ -513,8 +555,15 @@ def main() -> None:
     if errors:
         raise SystemExit("Extracted evidence verification failed:\n" + "\n".join(errors))
     manifest_entries = len(read_csv(manifest))
+    if "manifest_entries" in release and (
+            type(release["manifest_entries"]) is not int or release["manifest_entries"] != manifest_entries):
+        raise ValueError("Evidence file-manifest count differs from release")
     manifest_digest = sha256(manifest)
     print(f"Verified {manifest_entries} evidence files.", flush=True)
+    panels = prepare_panels(artifact, ROOT, release, manifest, isolated=args.isolate_analysis)
+    # Capture the complete in-memory contract that passed validation. Never
+    # rebuild it from result fields or reread a subsequently finalized release.
+    replication_contract = contract_sha256(release["replication_reproduction"]) if panels else None
     estimation_count = release.get("expected_estimation_derived_files", 0)
     has_estimation_reference = (artifact / "benchmark/estimation/results/summary.json").is_file()
     if estimation_count or has_estimation_reference:
@@ -551,13 +600,22 @@ def main() -> None:
         restore_estimation_inputs(curated_reference, artifact, release)
     if host_capacity_count:
         restore_host_capacity_inputs(curated_reference, artifact, release)
+    restore_panel_inputs(artifact, curated_reference, panels)
     shutil.copytree(
         reference / "strengthening/same_node",
         artifact / "profiles/strengthening/same_node",
     )
     hidden = list(dict.fromkeys([
-        reference, curated_reference, ORIGINAL_ROOT, ROOT / "benchmark", *extra_hidden,
+        reference, curated_reference, ORIGINAL_ROOT, ROOT / "benchmark", *extra_hidden, *panel_hidden,
     ])) if args.isolate_analysis else []
+    # Legacy analysis/refitting must not see either new panel's target evidence.
+    panel_base_hidden = list(hidden)
+    if panels:
+        hidden = list(dict.fromkeys([
+            *hidden, artifact / "reproduction_sources",
+            artifact / "output/completion_replication", artifact / "output/replication_control",
+            artifact / "benchmark/completion_replication", artifact / "benchmark/replication_control",
+        ]))
     tables = work / "results"
     report = work / "reports/evidence.md"
     run_child([
@@ -682,6 +740,12 @@ def main() -> None:
                 or decision_summary["validated_memory_outcomes"] !=
                 release["decision_validated_memory_outcomes"]):
             raise ValueError("Decision-panel slot/attempt accounting differs")
+    replication_result = reconstruct_panels(
+        artifact, curated_reference, work, panel_base_hidden, panels, run_child)
+    if replication_contract is not None:
+        if contract_sha256(release["replication_reproduction"]) != replication_contract:
+            raise ValueError("Validated replication release contract changed during reconstruction")
+        replication_result["replication_reproduction_contract_sha256"] = replication_contract
     result = {
         "status": "passed", "archive_sha256": sha256(args.archive),
         "archive_members": members, "manifest_entries_verified": manifest_entries,
@@ -705,6 +769,7 @@ def main() -> None:
         "network_namespace_isolation_claimed": False,
         **estimation_result,
         **host_capacity_result,
+        **replication_result,
     }
     (work / "verification.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))

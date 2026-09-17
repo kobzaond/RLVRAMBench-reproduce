@@ -11,6 +11,9 @@ to the extracted evidence archive.
 
 ## Tables and joins
 
+The table below describes the unchanged historical corpus. The later
+replications have separate tables described at the end of this document.
+
 | File in `benchmark/` | Unit | Key / relation |
 |---|---|---|
 | `transfer_configurations.csv` | One of 98 configurations used as a source or target | `configuration_id`; convenient settings/outcomes join for browsing |
@@ -364,3 +367,74 @@ All completion, partial-evidence and scoring definitions above still apply.
 In particular, exit code zero without evidence of the requested training
 step does not establish completion. Its sampled peak is not a completed-run
 peak. The per-panel cost files exclude each other's allocations.
+
+## Larger-model replication
+
+`benchmark/completion_replication/` describes a new schedule of 36
+configurations and 108 seed slots. It tests Qwen2.5-7B and
+Mistral-7B-Instruct-v0.3 with the original fitted predictors. The raw records
+are under `output/completion_replication/`; the earlier two larger-model
+panels are not pooled with them.
+
+| File in `benchmark/completion_replication/results/` | Unit and purpose |
+|---|---|
+| `configurations.csv` | One setting, with seed coverage, repeated outcome and frozen predictions |
+| `slots.csv` | One of the 108 planned invocations, including missing and invalid observations |
+| `pairs.csv` | One of the 54 planned allocations, pairing two- and four-GPU execution |
+| `summary.json` | Coverage, scores by model and parameter-offload group, and separate cost views |
+
+The configuration fields use the prediction and partial-evidence meanings
+defined for the estimation panel above. `donor_gpu_count_matches` states
+whether the fixed donor had the target's GPU count. A false value marks
+an additional change in the prediction task; it is not an exclusion.
+`configuration_level=c1` enables actor-parameter offload, whereas c2 and
+c3 keep those parameters resident.
+
+At slot level, `status` distinguishes `completed`, `memory_failure`,
+`infrastructure_invalid`, and other unresolved execution states.
+`state` is the resource label when the evidence is eligible.
+The expected and observed source-commit and amendment fields make the
+post-start logging repair explicit. Initial affected observations retain
+their original invalid classifications.
+
+`collection_cpu_wall_seconds` in the summary measures reconstruction
+duration, not GPU execution cost. It is the sole timing field that is
+expected to differ between equivalent CPU reconstructions. Scientific
+outputs and recorded experiment costs must still agree.
+
+## Randomized batch/reservation controls
+
+`benchmark/replication_control/` contains the frozen four-condition
+design for twelve model–workload cases and three seeds per case.
+Each of its 36 blocks uses the same two physical GPUs for all four
+conditions. Raw records are under `output/replication_control/`.
+
+| File in `benchmark/replication_control/results/` | Unit and purpose |
+|---|---|
+| `replication_control_trials.csv` | One of 144 planned condition/seed slots, including failures and unresolved records |
+| `replication_control_blocks.csv` | One allocation, with coverage and within-block contrasts |
+| `replication_control_cases.csv` | One model–workload case, with contributing-block count, mean and range |
+| `replication_control_summary.json` | Complete planned-slot accounting and equal-case summaries where supported |
+
+`base` uses actor micro-batch 8 and generation reservation 0.60.
+`actor_only` changes the batch to 16, `reservation_only` changes the
+reservation to 0.70, and `joint` changes both. `period` is the
+condition's preassigned execution position, not its treatment value.
+Full instrumentation is fixed in all four conditions.
+
+Contrast names identify the measured stage and the changed control:
+for example, `actor_update_batch_mib` is the larger-minus-smaller batch
+difference in actor-update peak, averaged over the two reservations.
+`whole_run_reservation_mib` is the higher-minus-lower reservation
+difference in overall peak, averaged over the two batches.
+An `interaction_mib` contrast is the difference between the two batch
+effects at the higher and lower reservations.
+Each case reports `_n`, `_mean`, `_min`, and `_max` across complete,
+eligible blocks. A missing contrast is not a zero effect.
+
+`scientific_eligible` requires the frozen device, completion and
+measurement checks. `historical_expected_label` is a source reference,
+not the observed outcome or an eligibility criterion. Invocation cost is
+reported even for scientifically unresolved runs when duration is known.
+Whole-allocation accounting is separate and must not be added to those
+invocation costs.

@@ -31,9 +31,15 @@ if [[ ${RLVRAM_GPU_UUIDS+x} ]]; then
   : "${RLVRAM_INVOCATION_ID:?paired invocation identity required}"
   : "${RLVRAM_PERIOD:?paired period required}"
   [[ "$RLVRAM_INVOCATION_ID" =~ ^[a-z0-9][a-z0-9_-]*$ ]]
-  [[ "$RLVRAM_PERIOD" =~ ^[12]$ ]]
+  if [[ "${RLVRAM_CONTRACT_ALLOCATION_GPUS:-4}" == "2" ]]; then
+    [[ "$RLVRAM_PERIOD" =~ ^[1-8]$ ]]
+    PORT_SEED=$((SLURM_JOB_ID * 9 + RLVRAM_PERIOD))
+  else
+    [[ "${RLVRAM_CONTRACT_ALLOCATION_GPUS:-4}" == "4" ]]
+    [[ "$RLVRAM_PERIOD" =~ ^[12]$ ]]
+    PORT_SEED=$((SLURM_JOB_ID * 3 + RLVRAM_PERIOD))
+  fi
   SCRATCH_RUNTIME=$SCRATCH_RUNTIME/matched-$RLVRAM_INVOCATION_ID
-  PORT_SEED=$((SLURM_JOB_ID * 3 + RLVRAM_PERIOD))
   set -o noclobber
 fi
 # Reserve one contiguous block for both the trainer and vLLM. vLLM otherwise
@@ -83,6 +89,15 @@ DEVICE_CAPTURE_ARGS=()
 DEVICE_MONITOR_ARGS=()
 TRAINER_COMMAND=(python -m verl.trainer.main_ppo)
 TEE_ARGS=()
+DURABLE_CONTAINER_ARGS=()
+if [[ ${RLVRAM_DURABLE_METRICS_DIR+x} ]]; then
+  : "${RLVRAM_INVOCATION_ID:?durable metrics require invocation identity}"
+  [[ "$RLVRAM_DURABLE_METRICS_DIR" == "$OUTPUT_DIR/trainer-metrics" ]]
+  [[ ! -e "$RLVRAM_DURABLE_METRICS_DIR" ]]
+  DURABLE_CONTAINER_ARGS=(
+    --env "RLVRAM_DURABLE_METRICS_DIR=$RLVRAM_DURABLE_METRICS_DIR"
+    --env "RLVRAM_INVOCATION_ID=$RLVRAM_INVOCATION_ID")
+fi
 CACHE_RUNTIME=$RUNTIME/cache
 LOG_ROOT=$REPO_ROOT/logs
 if [[ ${RLVRAM_GPU_UUIDS+x} ]]; then
@@ -96,6 +111,7 @@ if [[ ${RLVRAM_GPU_UUIDS+x} ]]; then
     --env "CUDA_VISIBLE_DEVICES=$RLVRAM_GPU_UUIDS"
     --env "RLVRAM_GPU_UUIDS=$RLVRAM_GPU_UUIDS"
     --env "RLVRAM_ALLOCATION_GPU_UUIDS=$RLVRAM_ALLOCATION_GPU_UUIDS"
+    --env "RLVRAM_CONTRACT_ALLOCATION_GPUS=${RLVRAM_CONTRACT_ALLOCATION_GPUS:-4}"
     --env "RLVRAM_INVOCATION_ID=$RLVRAM_INVOCATION_ID"
     --env "RLVRAM_DEVICE_EVIDENCE_DIR=$RLVRAM_DEVICE_EVIDENCE_DIR")
   DEVICE_CAPTURE_ARGS=(--resolved-model-path "$RLVRAM_MODEL_SNAPSHOT")
@@ -175,6 +191,31 @@ FATAL_WATCHDOG_GRACE_SECONDS=${FATAL_WATCHDOG_GRACE_SECONDS:-60}
 FATAL_WATCHDOG_PID=
 LAUNCHER_PID=$BASHPID
 
+retain_ray_worker_logs() {
+  if [[ ${RLVRAM_DURABLE_METRICS_DIR+x} && -d "$SCRATCH_RUNTIME/ray" ]]; then
+    # Ray appends "ray" to RAY_TMPDIR. Its session_latest link can also be
+    # absolute in the container namespace and unusable from the host.
+    # Walk real session directories without following links; retain hierarchy.
+    local worker_log relative target inventory
+    inventory=$(mktemp "$OUTPUT_DIR/.ray-log-paths.XXXXXX") || return 1
+    # Paired execution enables noclobber. This file was exclusively created
+    # above for this inventory; explicitly allow writing its existing inode.
+    if ! find "$SCRATCH_RUNTIME/ray" -type f \
+        \( -name 'worker-*.out' -o -name 'worker-*.err' \) -print0 >| "$inventory"; then
+      return 1
+    fi
+    while IFS= read -r -d '' worker_log; do
+      [[ -f "$worker_log" && ! -L "$worker_log" ]] || continue
+      relative=${worker_log#"$SCRATCH_RUNTIME/ray/"}
+      [[ "$relative" != "$worker_log" ]] || return 1
+      target="$OUTPUT_DIR/ray-logs/$relative"
+      mkdir -p -- "${target%/*}" || return 1
+      cp --no-dereference -- "$worker_log" "$target" || return 1
+    done < "$inventory"
+    rm -- "$inventory" || return 1
+  fi
+}
+
 cleanup() {
   if [[ -n "$FATAL_WATCHDOG_PID" ]]; then
     kill "$FATAL_WATCHDOG_PID" 2>/dev/null || true
@@ -182,7 +223,12 @@ cleanup() {
   fi
   kill "$GPU_MONITOR_PID" 2>/dev/null || true
   wait "$GPU_MONITOR_PID" 2>/dev/null || true
-  rm -rf "$SCRATCH_RUNTIME"
+  if retain_ray_worker_logs; then
+    rm -rf "$SCRATCH_RUNTIME"
+  else
+    printf 'Worker-log retention failed; preserving scratch for recovery: %s\n' \
+      "$SCRATCH_RUNTIME" >&2
+  fi
 }
 trap cleanup EXIT
 if [[ ${RLVRAM_GPU_UUIDS+x} ]]; then
@@ -234,6 +280,7 @@ STARTED_AT=$(date +%s)
 set +e
 apptainer exec --nv --cleanenv \
   "${DEVICE_CONTAINER_ARGS[@]}" \
+  "${DURABLE_CONTAINER_ARGS[@]}" \
   --home "$RUNTIME/home" \
   --bind "$VERL_ROOT:$VERL_ROOT" \
   --bind "/scratch/project/open-35-44:/scratch/project/open-35-44" \
@@ -340,6 +387,12 @@ PEAK_MIB=$(awk -F, '{for(i=2;i<=NF;i++)if($i+0>peak)peak=$i+0}END{print peak+0}'
 printf '{"algorithm":"grpo","job_id":"%s","exit_code":%s,"elapsed_seconds":%s,"peak_gpu_memory_mib":%s,"model":"%s","gpu_count":%s,"rollout_tp_size":%s,"actor_micro_batch":%s,"rollout_logprob_micro_batch":%s,"ref_logprob_micro_batch":%s,"vllm_gpu_memory_utilization":%s,"parameter_offload":"%s","optimizer_offload":"%s","free_cache_engine":"%s","data_dir":"%s","max_prompt_length":%s,"max_response_length":%s,"max_model_len":%s,"max_num_seqs":%s,"rollout_n":%s,"train_batch_size":%s,"dataloader_num_workers":%s,"training_seed":%s,"run_log":"%s","phase_memory_csv":"%s","gpu_telemetry_csv":"%s","allocator_trace_dir":"%s","gpu_monitor_interval_ms":%s,"environment_json":"%s","response_length_trace":"%s"}\n' \
   "$SLURM_JOB_ID" "$EXIT_CODE" "$ELAPSED" "$PEAK_MIB" "$MODEL_ID" "$N_GPUS_PER_NODE" "$ROLLOUT_TP_SIZE" "$ACTOR_MICRO_BATCH" "$ROLLOUT_LOGPROB_MICRO_BATCH" "$REF_LOGPROB_MICRO_BATCH" "$VLLM_GPU_MEMORY_UTILIZATION" "$PARAMETER_OFFLOAD" "$OPTIMIZER_OFFLOAD" "$FREE_CACHE_ENGINE" "$DATA_DIR" "$MAX_PROMPT_LENGTH" "$MAX_RESPONSE_LENGTH" "$MAX_MODEL_LEN" "$MAX_NUM_SEQS" "$ROLLOUT_N" "$TRAIN_BATCH_SIZE" "$DATALOADER_NUM_WORKERS" "$TRAINING_SEED" "$RUN_LOG" "$PHASE_MEMORY_CSV" "$GPU_TELEMETRY_CSV" "$OUTPUT_DIR/allocator-traces" "$GPU_MONITOR_INTERVAL_MS" "$ENVIRONMENT_JSON" "$RESPONSE_LENGTH_TRACE" \
   > "$OUTPUT_DIR/trial-$SLURM_JOB_ID.json"
+if ! retain_ray_worker_logs; then
+  printf 'Worker-log retention failed; preserving scratch for recovery: %s\n' \
+    "$SCRATCH_RUNTIME" >&2
+  trap - EXIT
+  exit 1
+fi
 rm -rf "$SCRATCH_RUNTIME"
 trap - EXIT
 exit "$EXIT_CODE"

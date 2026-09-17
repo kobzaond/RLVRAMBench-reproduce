@@ -1,0 +1,1730 @@
+[
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c1-2gpu",
+    "donor_configuration_id": "cfg-cd3974595f9db882",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 21580.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 31504.95244431273,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c1-4gpu",
+    "donor_configuration_id": "cfg-cd3974595f9db882",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 21580.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 28783.07077898791,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c2-2gpu",
+    "donor_configuration_id": "cfg-338d9224eb9d2f3a",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 33108.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 46461.218916058904,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c2-4gpu",
+    "donor_configuration_id": "cfg-399f6b038d6f65f9",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 29840.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 38751.70456713468,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c3-2gpu",
+    "donor_configuration_id": "cfg-7a9a974958c57abc",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 37140.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 49851.347837658235,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c3-4gpu",
+    "donor_configuration_id": "cfg-cc2c35944156e5d4",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 33872.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 42141.83348873401,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-gsm8k-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c1-2gpu",
+    "donor_configuration_id": "cfg-62f371a80968a0ba",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 21900.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 31470.221685028853,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c1-4gpu",
+    "donor_configuration_id": "cfg-62f371a80968a0ba",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 21900.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 28748.34001970403,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c2-2gpu",
+    "donor_configuration_id": "cfg-30f98456fdb322c1",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 33446.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 46391.75739749115,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c2-4gpu",
+    "donor_configuration_id": "cfg-f03e4e98c682240e",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 30180.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 38682.24304856692,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c3-2gpu",
+    "donor_configuration_id": "cfg-f009e9e3891c06f4",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 37478.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 49712.42480052272,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c3-4gpu",
+    "donor_configuration_id": "cfg-714c540f76d9525d",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 34212.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 42002.910451598495,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-math-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c1-2gpu",
+    "donor_configuration_id": "cfg-bfb83ff32b7fd921",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 21560.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 31496.26975449176,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c1-4gpu",
+    "donor_configuration_id": "cfg-bfb83ff32b7fd921",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 21560.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 28774.38808916694,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c2-2gpu",
+    "donor_configuration_id": "cfg-e91942abb5b4f847",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 33436.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 46443.853536416966,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 39409.6357421875,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c2-4gpu",
+    "donor_configuration_id": "cfg-e91942abb5b4f847",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 33436.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 38734.33918749274,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31992.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c3-2gpu",
+    "donor_configuration_id": "cfg-1c5278f8be90a50a",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 37682.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 49816.61707837435,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 43505.6357421875,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c3-4gpu",
+    "donor_configuration_id": "cfg-1c5278f8be90a50a",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 37682.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 42107.102729450125,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-qwen25-7b-code_heavy_tail-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 36088.81787109375,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c1-2gpu",
+    "donor_configuration_id": "cfg-b8dd70ab682c13b2",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 26054.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 27996.523509768456,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c1-4gpu",
+    "donor_configuration_id": "cfg-b8dd70ab682c13b2",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 26054.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 25401.092615480502,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c2-2gpu",
+    "donor_configuration_id": "cfg-96ccf395b84393f7",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 35538.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 42505.02243051848,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c2-4gpu",
+    "donor_configuration_id": "cfg-301e4dae7048c6ec",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 31658.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 35153.66988052938,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c3-2gpu",
+    "donor_configuration_id": "cfg-c0605c1607caa079",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 39570.0,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 45926.46036171855,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c3-4gpu",
+    "donor_configuration_id": "cfg-17e69bcf1b041bd9",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 35730.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 38575.107811729446,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-gsm8k-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c1-2gpu",
+    "donor_configuration_id": "cfg-0f8a31ef7ac4c551",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 26348.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 27951.356413950998,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c1-4gpu",
+    "donor_configuration_id": "cfg-0f8a31ef7ac4c551",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 26348.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 25355.925519663044,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c2-2gpu",
+    "donor_configuration_id": "cfg-0f540d3f6fe4661b",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 35920.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 42414.688238883566,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c2-4gpu",
+    "donor_configuration_id": "cfg-371ae37408089efe",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 32108.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 35063.33568889447,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c3-2gpu",
+    "donor_configuration_id": "cfg-a3987314cb2f9f12",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 40080.0,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 45745.79197844872,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c3-4gpu",
+    "donor_configuration_id": "cfg-072bd7669d20f8fa",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 36204.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 38394.43942845962,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-math-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c1-2gpu",
+    "donor_configuration_id": "cfg-18285c3cb50308d4",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 26056.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 27985.23173581409,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c1-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c1-4gpu",
+    "donor_configuration_id": "cfg-18285c3cb50308d4",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 26056.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 25389.800841526136,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c1-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": false,
+      "budget_plus_actor_mib": null,
+      "predicted_startup_budget_failure": null,
+      "reason": "resident-actor assumption does not apply"
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c2-2gpu",
+    "donor_configuration_id": "cfg-e117f15dd5ccfb30",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 36100.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 42482.43888260975,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c2-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 38720.5078125,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c2-4gpu",
+    "donor_configuration_id": "cfg-e117f15dd5ccfb30",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 36100.0,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 35131.08633262065,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c2-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 31648.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c3-2gpu",
+    "donor_configuration_id": "cfg-89ca48ce88ea694e",
+    "donor_gpu_count_matches": true,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 40112.0,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "memory_failure",
+    "predicted_peak_mib": 45881.29326590109,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c3-2gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 42816.5078125,
+      "predicted_startup_budget_failure": true
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c3-4gpu",
+    "donor_configuration_id": "cfg-89ca48ce88ea694e",
+    "donor_gpu_count_matches": false,
+    "method": "donor_copy",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": 40112.0,
+    "predicted_state": "above_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "component_regression",
+    "peak_only_predicted_state": "within_margin",
+    "predicted_peak_mib": 38529.940715911995,
+    "predicted_state": "within_margin",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": false
+  },
+  {
+    "configuration_id": "cr-mistral-7b-code_heavy_tail-c3-4gpu",
+    "donor_configuration_id": null,
+    "donor_gpu_count_matches": null,
+    "method": "logistic",
+    "peak_only_predicted_state": null,
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "startup_budget_diagnostic": {
+      "applicable": true,
+      "assumption": "FP32 actor shards resident before vLLM requested-budget free-memory check",
+      "budget_plus_actor_mib": 35744.25390625,
+      "predicted_startup_budget_failure": false
+    },
+    "startup_guard_changed_state": null
+  }
+]

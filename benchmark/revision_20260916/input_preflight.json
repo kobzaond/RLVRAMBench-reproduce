@@ -1,0 +1,26 @@
+{
+  "checked_on_utc_date": "2026-09-16",
+  "scope": "Input-only CPU compatibility check before the new evaluation freeze; no training or GPU-memory outcomes",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "model_revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "container": "/mnt/proj3/open-35-44/verl/images/verl-vllm018-dev1.sif",
+  "local_files_only": true,
+  "network_or_downloads": false,
+  "tokenizer_type": "TokenizersBackend",
+  "chat_template": {
+    "all_prompts_rendered": true,
+    "all_role_patterns": ["user"],
+    "train_counts": {"gsm8k": 7473, "math": 7500, "code_heavy_tail": 64},
+    "test_counts": {"gsm8k": 1319, "math": 5000, "code_heavy_tail": 64},
+    "one_prompt_tokenized_per_split": true
+  },
+  "training_prompt_filter_check": [
+    {"dataset": "gsm8k", "input_rows": 7473, "prompt_cap": 1024, "surviving_rows": 7473, "global_batch": 32},
+    {"dataset": "math", "input_rows": 7500, "prompt_cap": 512, "surviving_rows": 7417, "global_batch": 64},
+    {"dataset": "code_heavy_tail", "input_rows": 64, "prompt_cap": 1536, "surviving_rows": 63, "global_batch": 32}
+  ],
+  "filter_definition": "Apply the cached tokenizer chat template with tokenize=True and add_generation_prompt=True; retain prompts whose token count is at most the prescribed prompt cap.",
+  "all_workloads_have_a_full_batch": true,
+  "predictors_use_preflight_outputs": false,
+  "interpretation": "This checks format and input availability, not training completion or memory feasibility. Model-specific filtering can change the examples used."
+}

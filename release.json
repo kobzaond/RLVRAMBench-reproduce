@@ -1,15 +1,15 @@
 {
-  "release": "submission-20260915-6a7606f",
-  "source_commit": "6a7606fa72a162b9929d2e73a3175f1ac3ac91a4",
+  "release": "submission-20260917-b0018d0",
+  "source_commit": "b0018d0825b9c1819cc51faec0549cae2ac3a69e",
   "huggingface_repository": "kobzaond/RLVRAMBench",
   "code_repository": "kobzaond/RLVRAMBench-reproduce",
   "archive": {
-    "path": "releases/RLVRAMBench-review-artifact-submission-20260915-6a7606f.tar.zst",
-    "sha256": "b9b62e1d94da603ba96ddc89dc362d661ca7366c3cfe798dc0a63a4fa8fc26fb",
-    "size_bytes": 181477577
+    "path": "releases/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst",
+    "sha256": "3dd90eaca2f2d9b5eceb955fe67b6a3528210a6bb9bd7684ac3eb3c36d84a5ab",
+    "size_bytes": 210126067
   },
-  "manifest_entries": 21374,
-  "archive_members": 21376,
+  "manifest_entries": 107897,
+  "archive_members": 107971,
   "expected_derived_files": 40,
   "principal_processes": 588,
   "supporting_source_processes": 16,
@@ -24,7 +24,7 @@
   "review_control_attempted_processes": 26,
   "review_control_usable_blocks": 6,
   "original_recorded_attempts": 657,
-  "prior_immutable_release_preserved": "admission-20260915-7b534ef",
+  "prior_immutable_release_preserved": "submission-20260915-6a7606f",
   "manuscript_editing_authority": "direct_tex",
   "benchmark_protocol_version": "1.0",
   "benchmark_tasks": 52,
@@ -111,5 +111,39 @@
   },
   "host_capacity_execution_commits_sha256": "117b2449b2365db03f5af05aeae2c2943421ab739e5fd3c0ae16e3ce67ac5fcc",
   "host_capacity_allocation_accounting_sha256": "8df8040c1cd1608abd10759dd42448d734aa1b501733c926978247d2177f12ee",
-  "huggingface_revision": "d8321f8cda59951601419dbb08deb00fa8d7047b"
+  "replication_reproduction": {
+    "schema_version": 1,
+    "code_sha256": {
+      "reproduce.py": "8fd175975d33c807cf249aeafd9b667e31fe8cb07ae50a9eb7b65e76842566e6",
+      "replication_reproduction.py": "5964067312a8eb61ea2be429770a61a5d80c88ae16d9c69c33ea84f2d61c3a62"
+    },
+    "panels": {
+      "completion_replication": {
+        "source_tree_sha256": {
+          "original": "81029a3a91f04e533113563b72b07f1daf29d0ccfabf54f3a4fd2a694ceeff1f",
+          "amended": "b235ab95804547049a41669dbb53870102c5b6ca8f4e6824df7971fbe18b3750"
+        },
+        "freeze_sha256": "ba3e24e9e3a13b60ca35b22f92ec60d5dac322a80d8f68e660bfd3e98ef1f922",
+        "runtime_amendment_sha256": "9c5f501771d34d02fb2f5b5eb733397b66d2b8df64119dd9cf43c7fbfd9a5f8a",
+        "amendment_filename": "completion-runtime-amendment-01.json",
+        "allocation_accounting_sha256": "6ca996246b1456049f964a94ab421d3bef45ce8e14fc29d26b9c0ae967ae14b2"
+      },
+      "replication_control": {
+        "source_tree_sha256": {
+          "amended": "e0f7c1f25405fedcb2cd309fe8ba562824bf38c77860851f4a6781a54ed67f54"
+        },
+        "execution_seal_sha256": "a562d7bc5a5cc6bc6ed676f2e62c06de8f8d2e0718bbff3611047dd5df26efc5",
+        "runtime_amendment_sha256": "ee0fefe323225909e16eba6de42a8574ca42049ecaeb8f54a235e271eb386a6c",
+        "allocation_accounting_sha256": "d97455a901eaa281d453a091263d3d64ea1d4d223de97afb5f6153be472edd25",
+        "accounting_code_sha256": {
+          "memory_tuner/__init__.py": "027aba95d634d9ead178819412a859239c7ddd5418a0e5eaf8e3d429fe8e6629",
+          "memory_tuner/capture_allocation_accounting.py": "9b00de319d8ac76d32897322bfbdfde47248737436854111f1e1808f156d4d08",
+          "memory_tuner/core.py": "08aadf36744a1fe82b95acd86f69b63ab33da520b1b2769239f84313f6df8f71",
+          "memory_tuner/device_contract.py": "b3f7164774e5d6ec01b8cde6dd1083823352c15ccee0cceb949cfe3022f40764",
+          "memory_tuner/replication_control_accounting.py": "6f1498bc6ac4fbce48753c73200f6d1d52a5777955aa02bb6c4f5bf16e66922f"
+        }
+      }
+    }
+  },
+  "huggingface_revision": null
 }

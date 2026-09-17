@@ -1,0 +1,10 @@
+{
+  "files_sha256": {
+    "matrix.csv": "7ced80768bdf13f663a241ee18c047620d7448d3230b6f51e1a26a5298c2b84a",
+    "predictions.json": "c48a51707f24a9e713ab09b1295112cdd935e52445fce740d129b1308a76977e",
+    "protocol.json": "1eb79c4cf75f1292e72b4e1253e2d6d569f9b6fe41602a8a72bf6914467a0683"
+  },
+  "frozen_at_utc": "2026-09-16T10:59:07.690883+00:00",
+  "schema_version": "completion-replication-1",
+  "status": "frozen_before_new_completion_replication_execution"
+}

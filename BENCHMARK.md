@@ -242,16 +242,19 @@ Neither is a GPU-time saving estimate.
 ## Inspect or reconstruct the evidence
 
 See `DATA_DICTIONARY.md` for all fields, units, nulls, exclusions, and joins.
-The Hugging Face default view displays actual configuration settings beside
-their repeated outcomes; other views expose all configurations, eligible
-runs, attempts, stages, and queries.
+The Hugging Face default view displays the larger-model replication:
+configuration identity and settings, seed coverage, repeated outcome,
+and the three frozen predictions. Its configuration levels are defined
+in the dataset card. Other views expose the historical configurations,
+admission candidates, eligible runs, attempts, stages, and queries.
 
 `export_benchmark.py --root EXTRACTED_ARTIFACT --output CURATED_DIRECTORY`
-rebuilds these views from the validated result tables and original attempt
+rebuilds the historical curated tables from validated results and original attempt
 logs. It does not rerun training or recalculate the underlying scientific
-measurements. For raw-evidence reconstruction, use the separate
+measurements. The new replication tables are produced by their own
+archived, source-bound collectors. For raw-evidence reconstruction, use the separate
 `reproduce.py` procedure in the reproduction repository. Its output tables
-can then be curated again and compared byte-for-byte.
+can then be checked against the published references.
 
 The archived GPU launchers require the recorded software environment,
 upstream models, a suitable allocation, and adaptation of cluster-specific

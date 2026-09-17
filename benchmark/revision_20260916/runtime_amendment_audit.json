@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Post-start implementation audit; original outcomes are not revised",
+  "cause": "The retention wrapper enabled noclobber, created a temporary inventory with mktemp, and then attempted to redirect into that existing file with >.",
+  "executable_shell_change": "The inventory redirection now uses >| for the exclusively created temporary file. Training settings, data, predictions, budgets, scientific eligibility rules and slot counts are unchanged.",
+  "original_evidence": {
+    "completion_pair_index": 0,
+    "completion_job_id": "5060748",
+    "completion_retained_statuses": ["memory_failure", "infrastructure_invalid"],
+    "control_block_index": 0,
+    "control_job_id": "5060749",
+    "control_retained_statuses": ["unresolved", "unresolved", "unresolved", "unresolved"],
+    "retries_or_replacements": false
+  },
+  "parent_verification": {
+    "retention_tests_passed": 52,
+    "targeted_tests_failing_against_original_wrapper": 10,
+    "completion_exact_source_tests_passed": 401,
+    "completion_exact_source_tests_skipped": 1,
+    "control_exact_source_tests_passed": 333,
+    "control_exact_source_tests_skipped": 1,
+    "control_first_block_reconstructed_under_amendment": {
+      "trial_rows": 144,
+      "block_rows": 36,
+      "case_rows": 12,
+      "all_original_csv_columns_identical": true,
+      "all_original_summary_fields_identical": true
+    },
+    "completion_first_pair_reconstructed_under_amendment": {
+      "slot_rows": 108,
+      "pair_rows": 54,
+      "configuration_rows": 36,
+      "all_original_csv_columns_identical": true,
+      "original_outcomes_predictions_and_costs_identical": true,
+      "nondeterministic_field_excluded_from_comparison": "collection_cpu_wall_seconds"
+    }
+  },
+  "amendments": {
+    "completion": {
+      "sha256": "9c5f501771d34d02fb2f5b5eb733397b66d2b8df64119dd9cf43c7fbfd9a5f8a",
+      "source_commit": "e43a5559f0017140dd03024f530f40365293849e",
+      "allowed_indices": "1-53"
+    },
+    "control": {
+      "sha256": "ee0fefe323225909e16eba6de42a8574ca42049ecaeb8f54a235e271eb386a6c",
+      "source_commit": "04a0b12133d7cea366c72723fe54f2299e9bbe0a",
+      "allowed_indices": "1-35"
+    }
+  }
+}

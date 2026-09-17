@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "evaluation_complete",
+  "initial_execution_source_commit": "8c1ebe4ae084b24c77ae4eb316270b794cdf0c36",
+  "source_policy": "Initial allocations remain under the original source and retain their original outcomes. Only the still-unexecuted indices use the independently sealed log-retention amendments.",
+  "completion_replication": {
+    "source_root": "/mnt/proj3/open-35-44/verl/experiments/completion-replication-8c1ebe4",
+    "results_root": "/mnt/proj3/open-35-44/verl/rl/output/completion_replication",
+    "freeze_sha256": "ba3e24e9e3a13b60ca35b22f92ec60d5dac322a80d8f68e660bfd3e98ef1f922",
+    "amended_source_root": "/mnt/proj3/open-35-44/verl/experiments/completion-replication-e43a555",
+    "amended_source_commit": "e43a5559f0017140dd03024f530f40365293849e",
+    "runtime_amendment": "/mnt/proj3/open-35-44/verl/experiments/replication-runtime-amendments-20260916/completion-runtime-amendment-01.json",
+    "runtime_amendment_sha256": "9c5f501771d34d02fb2f5b5eb733397b66d2b8df64119dd9cf43c7fbfd9a5f8a",
+    "submissions": [
+      {
+        "array_job_id": "5060748",
+        "indices": "0",
+        "scheduler_state": "FAILED",
+        "scheduler_elapsed_seconds": 474,
+        "scheduler_allocated_gpu_seconds": 1896,
+        "observed_outcomes": ["memory_failure", "infrastructure_invalid"]
+      },
+      {
+        "array_job_id": "5060837",
+        "indices": "1",
+        "scheduler_state": "COMPLETED",
+        "scheduler_elapsed_seconds": 301,
+        "scheduler_allocated_gpu_seconds": 1204,
+        "observed_outcomes": ["memory_failure", "memory_failure"]
+      },
+      {
+        "array_job_id": "5060873",
+        "indices": "2-53",
+        "maximum_concurrent_allocations": 3,
+        "status_at_submission": "accepted"
+      }
+    ],
+    "not_yet_submitted_indices": [],
+    "planned_allocations": 54,
+    "planned_invocations": 108,
+    "reserved_gpu_hour_ceiling": 198,
+    "final_collection": {
+      "scheduler_terminal_allocations": 54,
+      "scheduler_states": {"COMPLETED": 53, "FAILED": 1},
+      "whole_allocation_gpu_seconds": 99284,
+      "statuses": {"completed": 35, "memory_failure": 72, "infrastructure_invalid": 1},
+      "resolved_configurations": 35,
+      "unresolved_configurations": 1,
+      "resolved_states": {"within_margin": 7, "above_margin": 4, "memory_failure": 24},
+      "pair_errors": [],
+      "unplanned_entries": [],
+      "unplanned_pairs": [],
+      "original_outcomes_preserved": true,
+      "copied_raw_tree_byte_comparison_passed": true,
+      "analysis_source": "reproduction_sources/completion_replication/amended",
+      "results_directory": "benchmark/completion_replication/results",
+      "result_sha256": {
+        "configurations.csv": "c7265e2fcb6d291dc237b4035dde4b9163fa37ecb6d57050b35536327937b614",
+        "pairs.csv": "ed7bf32dc47204cbaa51565172e97bef5f953166eb450981b98ebbe479b4096b",
+        "slots.csv": "92a590b430d7aa933ba3842d4ce95c69826a36fc3f6db6f72ab791f6461979e3",
+        "summary.json": "8b57e4ec57c1546255495abe75eaf4fb544e63322ebaea7d2dd42705d6802eca"
+      },
+      "allocation_accounting_sha256": "6ca996246b1456049f964a94ab421d3bef45ce8e14fc29d26b9c0ae967ae14b2",
+      "scheduler_capture_sha256": "749da61fcc5112dc32890c7257abdc6f9f87c248ae7cb894acbe8da6a76be75a",
+      "full_release_isolated_reconstruction": "Reported separately by the versioned release finalizer"
+    }
+  },
+  "replication_control": {
+    "source_root": "/mnt/proj3/open-35-44/verl/experiments/replication-control-8c1ebe4",
+    "analysis_source_root": "/mnt/proj3/open-35-44/verl/experiments/replication-control-analysis-source-a562d7b",
+    "results_root": "/mnt/proj3/open-35-44/verl/experiments/replication-control-8c1ebe4/output/replication_control",
+    "execution_seal_sha256": "a562d7bc5a5cc6bc6ed676f2e62c06de8f8d2e0718bbff3611047dd5df26efc5",
+    "amended_source_root": "/mnt/proj3/open-35-44/verl/experiments/replication-control-noclobber-20260916",
+    "amended_source_commit": "04a0b12133d7cea366c72723fe54f2299e9bbe0a",
+    "amended_analysis_source_root": "/mnt/proj3/open-35-44/verl/experiments/replication-control-analysis-source-ee0fefe",
+    "runtime_amendment": "/mnt/proj3/open-35-44/verl/experiments/replication-runtime-amendments-20260916/control-runtime-amendment-01.json",
+    "runtime_amendment_sha256": "ee0fefe323225909e16eba6de42a8574ca42049ecaeb8f54a235e271eb386a6c",
+    "submissions": [
+      {
+        "array_job_id": "5060749",
+        "indices": "0",
+        "scheduler_state": "FAILED",
+        "scheduler_elapsed_seconds": 1076,
+        "scheduler_allocated_gpu_seconds": 2152,
+        "observed_outcomes": ["unresolved", "unresolved", "unresolved", "unresolved"]
+      },
+      {
+        "array_job_id": "5060872",
+        "indices": "1",
+        "scheduler_state": "COMPLETED",
+        "scheduler_elapsed_seconds": 1032,
+        "scheduler_allocated_gpu_seconds": 2064,
+        "observed_outcomes": ["completed", "completed", "completed", "completed"],
+        "independent_archived_source_reconstruction_passed": true
+      },
+      {
+        "array_job_id": "5061014",
+        "indices": "2-35",
+        "maximum_concurrent_allocations": 3,
+        "status_at_submission": "accepted"
+      }
+    ],
+    "not_yet_submitted_indices": [],
+    "planned_allocations": 36,
+    "planned_invocations": 144,
+    "reserved_gpu_hour_ceiling": 72,
+    "final_collection": {
+      "scheduler_terminal_allocations": 36,
+      "scheduler_states": {"COMPLETED": 35, "FAILED": 1},
+      "whole_allocation_gpu_seconds": 74994,
+      "observed_launched_slots": 144,
+      "statuses": {"completed": 140, "unresolved": 4},
+      "within_margin_completed_slots": 116,
+      "above_margin_completed_slots": 24,
+      "complete_blocks": 35,
+      "contributing_cases": 12,
+      "original_outcomes_preserved": true,
+      "copied_raw_tree_byte_comparison_passed": true,
+      "analysis_source": "reproduction_sources/replication_control",
+      "results_directory": "benchmark/replication_control/results",
+      "result_sha256": {
+        "replication_control_blocks.csv": "ea84158dc183bd5815811e13981a888a66442074bdac2f7b9aae4873a1cf9b08",
+        "replication_control_cases.csv": "08aae53544a00a07215822e63acfc3bb99a3bc39b3c6c498606e288b471b746b",
+        "replication_control_summary.json": "27bd7442dedecc34c9bc9329c4007f0de9284d812a6209c96234be6e1dcfa863",
+        "replication_control_trials.csv": "50dd590a89d81c2a638b22847a412e3e45a36038313814e0f7242773a0e738b1"
+      },
+      "allocation_accounting_sha256": "d97455a901eaa281d453a091263d3d64ea1d4d223de97afb5f6153be472edd25",
+      "allocation_costs_sha256": "dd56064f2d75b3934a1f9136c252c89b3cde42d078cc20a0f6e7d11f660a85bc",
+      "scheduler_capture_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "full_release_isolated_reconstruction": "Reported separately by the versioned release finalizer"
+    }
+  },
+  "constraints": {
+    "maximum_concurrent_allocations_per_panel": 3,
+    "evaluation_retries_allowed": false,
+    "evaluation_replacements_allowed": false,
+    "diagnostics_excluded_from_evaluation": true,
+    "first_allocation_evidence_checked_before_remaining_submission": true
+  }
+}

@@ -21,6 +21,14 @@ UUID_PATTERN = re.compile(r"GPU-[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]
 FORWARDED = ("RLVRAM_GPU_UUIDS", "RLVRAM_DEVICE_EVIDENCE_DIR", "RLVRAM_INVOCATION_ID")
 
 
+def allocation_gpu_count() -> int:
+    """Legacy matched pairs use four GPUs; new controls opt into exactly two."""
+    value = os.environ.get("RLVRAM_CONTRACT_ALLOCATION_GPUS", "4")
+    if value not in ("2", "4"):
+        raise ValueError("The explicit device contract supports two or four allocation GPUs")
+    return int(value)
+
+
 def parse_uuids(value: str) -> list[str]:
     items = value.split(",")
     if not items or any(not UUID_PATTERN.fullmatch(item) for item in items):
@@ -177,7 +185,7 @@ def wait_probe_idle(allocation_uuids, timeout=180):
         if consecutive >= 2:
             return observations
         time.sleep(1)
-    raise RuntimeError("CUDA probe did not leave all four allocation GPUs idle")
+    raise RuntimeError("CUDA probe did not leave all allocation GPUs idle")
 
 
 def checked_training(arguments: list[str]) -> None:
@@ -186,8 +194,9 @@ def checked_training(arguments: list[str]) -> None:
     if expected is None:
         raise ValueError("Checked training requires RLVRAM_GPU_UUIDS")
     allocation = parse_uuids(os.environ["RLVRAM_ALLOCATION_GPU_UUIDS"])
-    if len(allocation) != 4 or len(expected) not in (2, 4) or not set(expected).issubset(allocation):
-        raise ValueError("Task UUIDs do not belong to the four-GPU allocation")
+    if (len(allocation) != allocation_gpu_count() or len(expected) not in (2, 4)
+            or not set(expected).issubset(allocation)):
+        raise ValueError("Task UUIDs do not belong to the declared GPU allocation")
     directory = Path(os.environ["RLVRAM_DEVICE_EVIDENCE_DIR"])
     subprocess.run([sys.executable, "-m", "memory_tuner.device_contract", "--probe-cuda"],
                    check=True, timeout=120)
@@ -237,6 +246,8 @@ def execute_training(arguments: list[str]) -> None:
         if "CUDA_VISIBLE_DEVICES" in env_vars:
             raise ValueError("Ray runtime_env must not override per-worker CUDA assignment")
         env_vars.update({name: os.environ[name] for name in FORWARDED})
+        if "RLVRAM_DURABLE_METRICS_DIR" in os.environ:
+            env_vars["RLVRAM_DURABLE_METRICS_DIR"] = os.environ["RLVRAM_DURABLE_METRICS_DIR"]
         runtime["env_vars"] = env_vars
         kwargs["runtime_env"] = runtime
         result = original_init(**kwargs)

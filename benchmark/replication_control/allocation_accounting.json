@@ -1,0 +1,1730 @@
+[
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789557897.0,
+    "batch_started_at_epoch": 1789556821.0,
+    "batch_state": "FAILED",
+    "ended_at_epoch": 1789557897.0,
+    "job_id": "5060749",
+    "pair_id": "replication_control-qwen25_3b-code_standard-s211",
+    "pair_ledger_sha256": "26b5aa0a106d2d61faac4f7072aeae7e99f70a82fb13fd1f8f1c7170b9692e97",
+    "pair_manifest_sha256": "a3ac2c710d847a1ecc11a4fc45cc190b24f7529f12840c26a360ea23fce463b4",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5060749_0.batch|5060749.batch|batch|FAILED|2:0|2026-09-16T11:07:01|2026-09-16T11:24:57|1076|cpu=32,gres/gpu=2,mem=192G,node=1|acn54|",
+        "line_number": 2,
+        "sha256": "22b71ae02245dcbd51660d851aa4f69fe55c67ec1ec2bdc1f784fa71eab27fb8"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5060749_0|5060749|replication_control|FAILED|2:0|2026-09-16T11:07:01|2026-09-16T11:24:57|1076|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn54|None",
+        "line_number": 1,
+        "sha256": "f6e60720fcb73e33450d2afbddb276cdfa237acce5fe9b818a8d580e5657e233"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "2:0",
+    "scheduler_job_id": "5060749_0",
+    "scheduler_node_list": "acn54",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "FAILED",
+    "started_at_epoch": 1789556821.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789560239.0,
+    "batch_started_at_epoch": 1789559207.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789560239.0,
+    "job_id": "5060872",
+    "pair_id": "replication_control-qwen25_3b-gsm8k-s213",
+    "pair_ledger_sha256": "0080b27e95cd75ee79537f3984d8bfbd0110c8948fbf7a5eb96f7dfe218e128f",
+    "pair_manifest_sha256": "723e6bfc4ce6b8c41f05844515dd41872bccb02ed6942ec1ba75adae89fe5724",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5060872_1.batch|5060872.batch|batch|COMPLETED|0:0|2026-09-16T11:46:47|2026-09-16T12:03:59|1032|cpu=32,gres/gpu=2,mem=192G,node=1|acn28|",
+        "line_number": 5,
+        "sha256": "52486529f61525f82bb13a25334000eb2b862a1dccc3e1afc235657badc88e77"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5060872_1|5060872|replication_control|COMPLETED|0:0|2026-09-16T11:46:47|2026-09-16T12:03:59|1032|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn28|None",
+        "line_number": 4,
+        "sha256": "71dbb9e7542d304d2c7acb90c60212162c16c92453801e4e1d4b8d2d990a47c8"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5060872_1",
+    "scheduler_node_list": "acn28",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789559207.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789573793.0,
+    "batch_started_at_epoch": 1789572726.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789573793.0,
+    "job_id": "5061014",
+    "pair_id": "replication_control-granite33_2b-code_heavy_tail-s212",
+    "pair_ledger_sha256": "cfab50c25c1dff5e8a8c194af7f51ead979e2d1fc7b7e68809d605afffeb4c34",
+    "pair_manifest_sha256": "6a9271793bd9245fe975eb5766c278a08ead2e950db256c1cd041940e941ca14",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_35.batch|5061014.batch|batch|COMPLETED|0:0|2026-09-16T15:32:06|2026-09-16T15:49:53|1067|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 107,
+        "sha256": "3779f3b41d5f680fcad18051b3dde1c741482ba2cb96b3f4592295c35ca99b6a"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_35|5061014|replication_control|COMPLETED|0:0|2026-09-16T15:32:06|2026-09-16T15:49:53|1067|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 106,
+        "sha256": "d6c7d1649f0fa46c9cea67faea64c545450566126c3467b78b955dd18bf03edf"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_35",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789572726.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789562128.0,
+    "batch_started_at_epoch": 1789561079.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789562128.0,
+    "job_id": "5061031",
+    "pair_id": "replication_control-phi4_mini-gsm8k-s212",
+    "pair_ledger_sha256": "33d0fe7eca193ee8cf584cb0ea002c544a00f3c2709926982b603b124961b203",
+    "pair_manifest_sha256": "7267c5db1a409d333617692d3ed5f3aca76f6a371ceee4f7b5f80b43f67bc992",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_2.batch|5061031.batch|batch|COMPLETED|0:0|2026-09-16T12:17:59|2026-09-16T12:35:28|1049|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 8,
+        "sha256": "1f7baf88e4f2e98b82a8b748adebd8a06db17e9ba23ba5f1dca9f1fd6e5df17c"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_2|5061031|replication_control|COMPLETED|0:0|2026-09-16T12:17:59|2026-09-16T12:35:28|1049|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|None",
+        "line_number": 7,
+        "sha256": "2ca6c8f7dd83a964ba394ca7e1052a9c2223ec53ea362dfd821c351c1805c847"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_2",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789561079.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789562201.0,
+    "batch_started_at_epoch": 1789561134.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789562201.0,
+    "job_id": "5061033",
+    "pair_id": "replication_control-granite33_2b-gsm8k-s211",
+    "pair_ledger_sha256": "f4ac303a5192323105e544c59b80fcd8e0b81dfa557cde96b5f695f3843df44c",
+    "pair_manifest_sha256": "5eefff50de167ff8c95d0765836925762c9877fb925064ccf435ba37a0ae8bb3",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_3.batch|5061033.batch|batch|COMPLETED|0:0|2026-09-16T12:18:54|2026-09-16T12:36:41|1067|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 11,
+        "sha256": "fd6d4e4c143f86d5e1fc833cffb68fff8dc0781f5b77f3d57849f8a9b1940088"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_3|5061033|replication_control|COMPLETED|0:0|2026-09-16T12:18:54|2026-09-16T12:36:41|1067|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|QOSGrpNodeLimit",
+        "line_number": 10,
+        "sha256": "978debc34b579120e38580c21bfa5b22ab67932ca4bb727871e531d18551ef7f"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_3",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789561134.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789563238.0,
+    "batch_started_at_epoch": 1789562129.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789563238.0,
+    "job_id": "5061072",
+    "pair_id": "replication_control-phi4_mini-code_heavy_tail-s211",
+    "pair_ledger_sha256": "dacafdecb70c72406d5e4d3486f9f206bef8349e7fc8415f8d2795dcd513f1f1",
+    "pair_manifest_sha256": "5e4c0e1c95db102f4a2abb9ba4790bf09ece9300eb8b4fc8d2037b2dea4a889a",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_4.batch|5061072.batch|batch|COMPLETED|0:0|2026-09-16T12:35:29|2026-09-16T12:53:58|1109|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 14,
+        "sha256": "cbe0dcb99746eda27acf9f3b1a9439f83a4193efc5885e10899ffb80dcec8a88"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_4|5061072|replication_control|COMPLETED|0:0|2026-09-16T12:35:29|2026-09-16T12:53:58|1109|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|QOSGrpNodeLimit",
+        "line_number": 13,
+        "sha256": "fc3e2598e8129730f221bfc81a2f1a2c9aff1385f3655d6fca6e672975243ada"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_4",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789562129.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789563226.0,
+    "batch_started_at_epoch": 1789562203.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789563226.0,
+    "job_id": "5061077",
+    "pair_id": "replication_control-qwen25_3b-code_standard-s212",
+    "pair_ledger_sha256": "d93703ffb0b0b1753268f52b03d63aac2c73dbcb5a00c66b3c77cc390b7a4fd1",
+    "pair_manifest_sha256": "a5a5605cd890ce6dc0e63c1d8b7a6785109d7513b08bad612229650915fb2af3",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_5.batch|5061077.batch|batch|COMPLETED|0:0|2026-09-16T12:36:43|2026-09-16T12:53:46|1023|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 17,
+        "sha256": "14286a6aa2b1a119b0620c5b38c8277b30f1e5eda34e41f6e9e2e254b03ceeb2"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_5|5061077|replication_control|COMPLETED|0:0|2026-09-16T12:36:43|2026-09-16T12:53:46|1023|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|QOSGrpNodeLimit",
+        "line_number": 16,
+        "sha256": "9a0293db81e84dbe8c2e89160d16c5d3e6750e5891f75b4d2e2dab84e48f4988"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_5",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789562203.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789564209.0,
+    "batch_started_at_epoch": 1789563204.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789564209.0,
+    "job_id": "5061136",
+    "pair_id": "replication_control-qwen25_3b-gsm8k-s211",
+    "pair_ledger_sha256": "2b5b13d9bb25767913b382b532eb43ffefeecc1f65c0620f4a2b01c9dbf3262c",
+    "pair_manifest_sha256": "875d68ab1c6882a46c92cd10a117fc0596596cffeba9ac4eae2c54670be4d6ee",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_6.batch|5061136.batch|batch|COMPLETED|0:0|2026-09-16T12:53:24|2026-09-16T13:10:09|1005|cpu=32,gres/gpu=2,mem=192G,node=1|acn28|",
+        "line_number": 20,
+        "sha256": "b3df8db04235eb090a9dac64f8b6aee701a5aedf8a5a8dfcafb72dc3989bfc39"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_6|5061136|replication_control|COMPLETED|0:0|2026-09-16T12:53:24|2026-09-16T13:10:09|1005|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn28|QOSGrpNodeLimit",
+        "line_number": 19,
+        "sha256": "a8a78533f3cfc30272914c4b5251a24033b1590f21b06432d4967c969bab9ec3"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_6",
+    "scheduler_node_list": "acn28",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789563204.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789564203.0,
+    "batch_started_at_epoch": 1789563227.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789564203.0,
+    "job_id": "5061139",
+    "pair_id": "replication_control-phi4_mini-gsm8k-s211",
+    "pair_ledger_sha256": "bf01014e50b54f38bfb3e2f72bfa9a69f7596d6ec6986774f685809d68fbfba1",
+    "pair_manifest_sha256": "9205324520b6653a647695bc5c1685dc2ec779375c024246ae44ded06420e50f",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_7.batch|5061139.batch|batch|COMPLETED|0:0|2026-09-16T12:53:47|2026-09-16T13:10:03|976|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 23,
+        "sha256": "f31f9632b5a355bc983a42d88e782c163234bf609738c13a0989e76da9fbde21"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_7|5061139|replication_control|COMPLETED|0:0|2026-09-16T12:53:47|2026-09-16T13:10:03|976|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|JobArrayTaskLimit",
+        "line_number": 22,
+        "sha256": "f4b743af0101da0bbc5c3c77e1ce9dda11e4370b6b832d189dab42b57a6c2540"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_7",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789563227.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789564358.0,
+    "batch_started_at_epoch": 1789563242.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789564358.0,
+    "job_id": "5061142",
+    "pair_id": "replication_control-granite33_2b-gsm8k-s212",
+    "pair_ledger_sha256": "9a7ec47d3b7c412add13992769108e8c394219b85686b6dcc7cf8707ea6ca0f6",
+    "pair_manifest_sha256": "15bb16cbd0d1ef76c1750ea59a012c3d2cbee116305b382d6a26feb543523910",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_8.batch|5061142.batch|batch|COMPLETED|0:0|2026-09-16T12:54:02|2026-09-16T13:12:38|1116|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 26,
+        "sha256": "7a749e77314131b16cd0856631dae716a6222756dac629306f8d6a3605bfcaf0"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_8|5061142|replication_control|COMPLETED|0:0|2026-09-16T12:54:02|2026-09-16T13:12:38|1116|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|QOSGrpNodeLimit",
+        "line_number": 25,
+        "sha256": "d4f38a62e62c756fbc1c318e5d2a448ca3fc23754f7e64fb796b43f3d390e886"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_8",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789563242.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789565230.0,
+    "batch_started_at_epoch": 1789564205.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789565230.0,
+    "job_id": "5061182",
+    "pair_id": "replication_control-phi4_mini-code_heavy_tail-s212",
+    "pair_ledger_sha256": "71e4be728fc45a4982a1ae4d995966db65259e115aafaca1a7222eb2175b393a",
+    "pair_manifest_sha256": "29ca068f854d350d4fb835f5d414751f923e7acb58c886fe2bb82e482c549edd",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_9.batch|5061182.batch|batch|COMPLETED|0:0|2026-09-16T13:10:05|2026-09-16T13:27:10|1025|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 29,
+        "sha256": "25c85c4c5766e4cd4c4f29b57f7e4eec44b4dc54b2d7684523a47ea6d4214750"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_9|5061182|replication_control|COMPLETED|0:0|2026-09-16T13:10:05|2026-09-16T13:27:10|1025|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|JobArrayTaskLimit",
+        "line_number": 28,
+        "sha256": "2556b46e8b097ec247c7367ac88c93c29d958f59f19cc66bce4def0c7ceb4d4a"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_9",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789564205.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789565273.0,
+    "batch_started_at_epoch": 1789564211.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789565273.0,
+    "job_id": "5061183",
+    "pair_id": "replication_control-qwen25_3b-code_standard-s213",
+    "pair_ledger_sha256": "7a4e5e76914a5df4a4dcf77b16193834c7d1627513295ab2699ab846874ad86a",
+    "pair_manifest_sha256": "f144136cda562f5f40071854e3300d79b68ea08691c9470446a5390343fd38d3",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_10.batch|5061183.batch|batch|COMPLETED|0:0|2026-09-16T13:10:11|2026-09-16T13:27:53|1062|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 32,
+        "sha256": "6061168a8fdb597c5d33e222c639d3d41bdf95de0406df28813a6674e43ff439"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_10|5061183|replication_control|COMPLETED|0:0|2026-09-16T13:10:11|2026-09-16T13:27:53|1062|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 31,
+        "sha256": "463bc8f7a7fee498014d20950331a1d9669b337b2b45d56996d673c158e198e1"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_10",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789564211.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789565397.0,
+    "batch_started_at_epoch": 1789564360.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789565397.0,
+    "job_id": "5061187",
+    "pair_id": "replication_control-phi4_mini-math-s211",
+    "pair_ledger_sha256": "5fb5f73c7719f20e2bb065ce9acbc59d4fed61a2b0b780b9e3c53e803497f226",
+    "pair_manifest_sha256": "7304508c0d9bb1eb6a5f7df93e72c787c89f9a5a7f859ffbf4a0c0a971ff184a",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_11.batch|5061187.batch|batch|COMPLETED|0:0|2026-09-16T13:12:40|2026-09-16T13:29:57|1037|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 35,
+        "sha256": "dae82134495b43c2fac1f87b2c4c74b98cc11e39a5e3df24f90f72c2ce00581b"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_11|5061187|replication_control|COMPLETED|0:0|2026-09-16T13:12:40|2026-09-16T13:29:57|1037|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 34,
+        "sha256": "f4e888ad125d8fa7a95278d47cad0884b44e679c626d985bb6b8d703d5de3145"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_11",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789564360.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789566275.0,
+    "batch_started_at_epoch": 1789565232.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789566275.0,
+    "job_id": "5061251",
+    "pair_id": "replication_control-granite33_2b-math-s213",
+    "pair_ledger_sha256": "b0dacbe89ba21c65d5fef0a35035aad6238daf0baba5540a6b42a08f645a1bea",
+    "pair_manifest_sha256": "355825b54fa198dac58e0096d822016c2836fa242bc4e53bf2f1ffd853ca664d",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_12.batch|5061251.batch|batch|COMPLETED|0:0|2026-09-16T13:27:12|2026-09-16T13:44:35|1043|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 38,
+        "sha256": "beef4ef1e690e63538b9bd51133a2813b83baec7ed6075e443b98ac3d5bd7719"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_12|5061251|replication_control|COMPLETED|0:0|2026-09-16T13:27:12|2026-09-16T13:44:35|1043|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|JobArrayTaskLimit",
+        "line_number": 37,
+        "sha256": "7aa09d842cc34788c37b859ab6d5730e82384ab8945b5c66ee6bf7a1c95c45d1"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_12",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789565232.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789566294.0,
+    "batch_started_at_epoch": 1789565274.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789566294.0,
+    "job_id": "5061252",
+    "pair_id": "replication_control-phi4_mini-code_standard-s211",
+    "pair_ledger_sha256": "de15f5e3172a61bbbdce72136dbbce575fb4629b511e3114d4916f4f870640ef",
+    "pair_manifest_sha256": "26ef051675888f9e1710a13fa7a65e9d313d9784a0c4db243a0412773529e095",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_13.batch|5061252.batch|batch|COMPLETED|0:0|2026-09-16T13:27:54|2026-09-16T13:44:54|1020|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 41,
+        "sha256": "0f87dd3aa805aa4080535a9d3822c5d88eda8c73b409497aeb68cfd260ab38d3"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_13|5061252|replication_control|COMPLETED|0:0|2026-09-16T13:27:54|2026-09-16T13:44:54|1020|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 40,
+        "sha256": "0595b7396fcd7725e93d8be4edaf313c68de6e8d4c371aeb1b4d0d12287e1638"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_13",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789565274.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789566452.0,
+    "batch_started_at_epoch": 1789565399.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789566452.0,
+    "job_id": "5061260",
+    "pair_id": "replication_control-phi4_mini-code_heavy_tail-s213",
+    "pair_ledger_sha256": "56eb72dcf1e9241c0c6b2688b14b9e0042d72d8cd60e10c58f26aa602f45f885",
+    "pair_manifest_sha256": "bd81b0d3daa9a8b92c67a6682ba8402567f85733237ef43e74209e169d9ec3db",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_14.batch|5061260.batch|batch|COMPLETED|0:0|2026-09-16T13:29:59|2026-09-16T13:47:32|1053|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 44,
+        "sha256": "fd2a88add2e92da0ac6982a1a73fa8abd5ecb004fb3ef7b09e42c4ecc1f21aeb"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_14|5061260|replication_control|COMPLETED|0:0|2026-09-16T13:29:59|2026-09-16T13:47:32|1053|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 43,
+        "sha256": "00b60bc9a575ec8d939fe11f19ecaf30fd82289af1c0cee528384958c26cb1b3"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_14",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789565399.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789567285.0,
+    "batch_started_at_epoch": 1789566276.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789567285.0,
+    "job_id": "5061312",
+    "pair_id": "replication_control-phi4_mini-math-s213",
+    "pair_ledger_sha256": "9ee4a2bcbaa8631a7339a6b39b8ebe2a6a4b5fa1efb9a807824e3caf6cbd337a",
+    "pair_manifest_sha256": "9b03d99d013f61f66c79bbd1b7ac6718b14e84986819438691b2469d05cad3d7",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_15.batch|5061312.batch|batch|COMPLETED|0:0|2026-09-16T13:44:36|2026-09-16T14:01:25|1009|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 47,
+        "sha256": "7c10b9b6814ee0642594ef0ca656396472999fb14ec5b74e4d9a88067383657a"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_15|5061312|replication_control|COMPLETED|0:0|2026-09-16T13:44:36|2026-09-16T14:01:25|1009|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|JobArrayTaskLimit",
+        "line_number": 46,
+        "sha256": "8648e07133b92242fb3875ff5a135a7267e6d82d713be4a11a9ff51f1d20e2b3"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_15",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789566276.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789567365.0,
+    "batch_started_at_epoch": 1789566297.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789567365.0,
+    "job_id": "5061314",
+    "pair_id": "replication_control-qwen25_3b-math-s211",
+    "pair_ledger_sha256": "37ba0695b23262a703988c34cd79fe91c9db95787d6b507322f0b025fdaa8d1a",
+    "pair_manifest_sha256": "b69ecd96c43b43d75ed570a8595d56b730ec58bb00173e1f7ea7bcdac26b2793",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_16.batch|5061314.batch|batch|COMPLETED|0:0|2026-09-16T13:44:57|2026-09-16T14:02:45|1068|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 50,
+        "sha256": "b856290952f28f61d3ceb1cd29b403e4af50ed1bcba6e85aeddf1d0ac06da16b"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_16|5061314|replication_control|COMPLETED|0:0|2026-09-16T13:44:57|2026-09-16T14:02:45|1068|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 49,
+        "sha256": "d14cd6f89aecc2621542e2584f4b7263e6862eba2d6f0c42785db7c4b7c3f706"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_16",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789566297.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789567471.0,
+    "batch_started_at_epoch": 1789566454.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789567471.0,
+    "job_id": "5061345",
+    "pair_id": "replication_control-phi4_mini-gsm8k-s213",
+    "pair_ledger_sha256": "d05ac900f97ac4e4ccef777fd1e86986f3d399f2925e5c84fdfe6141b51f07b8",
+    "pair_manifest_sha256": "d94b520cbecf94926c320501395231fe34e386f6b06e6e8e208e07b3cae7bef2",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_17.batch|5061345.batch|batch|COMPLETED|0:0|2026-09-16T13:47:34|2026-09-16T14:04:31|1017|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 53,
+        "sha256": "92e63e57c1e7f889eeae9f997f92363687b1750f7e410351d5e69413dbe2a602"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_17|5061345|replication_control|COMPLETED|0:0|2026-09-16T13:47:34|2026-09-16T14:04:31|1017|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 52,
+        "sha256": "b15bee5cfd7570b793a29dd33872a46113682bdb02a59d24835b62ca1aca68b7"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_17",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789566454.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789568302.0,
+    "batch_started_at_epoch": 1789567289.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789568302.0,
+    "job_id": "5061386",
+    "pair_id": "replication_control-granite33_2b-code_heavy_tail-s211",
+    "pair_ledger_sha256": "8dc83fbe535e92d5a5c8171eb2a9298d8c1b4a4df734af7f343fad60ed777b0b",
+    "pair_manifest_sha256": "8611bde6050fa01832ee22f23978b44557a7e4ceb80e2c62b3c833afe7be449e",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_18.batch|5061386.batch|batch|COMPLETED|0:0|2026-09-16T14:01:29|2026-09-16T14:18:22|1013|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 56,
+        "sha256": "1e543454e9fc06e2b038295873656a8866e57ca9ecb4bbe0f258980728d94e87"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_18|5061386|replication_control|COMPLETED|0:0|2026-09-16T14:01:29|2026-09-16T14:18:22|1013|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|QOSGrpNodeLimit",
+        "line_number": 55,
+        "sha256": "d9593e638c20af46b6695ab490777a59ea3c5152745cbba21fde994fc864f8b0"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_18",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789567289.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789568408.0,
+    "batch_started_at_epoch": 1789567367.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789568408.0,
+    "job_id": "5061390",
+    "pair_id": "replication_control-qwen25_3b-code_heavy_tail-s211",
+    "pair_ledger_sha256": "dc787b8cc116b03e8d6561530efab224a4b32626526f6a0bd8621059a9a42f6a",
+    "pair_manifest_sha256": "91824b6bd9eeead1a67b3cd7c006dba26060f3e9d354e7c4f821e6797ffc53a5",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_19.batch|5061390.batch|batch|COMPLETED|0:0|2026-09-16T14:02:47|2026-09-16T14:20:08|1041|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 59,
+        "sha256": "81c6dd60d0633e8dbba1ade4d766a6b7409697500adc6ef504656977ff759d5e"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_19|5061390|replication_control|COMPLETED|0:0|2026-09-16T14:02:47|2026-09-16T14:20:08|1041|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|QOSGrpNodeLimit",
+        "line_number": 58,
+        "sha256": "0a61edbf41ea4370668013939f4f8e135f7110ea05a48bde36cffbb417bac5df"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_19",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789567367.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789568500.0,
+    "batch_started_at_epoch": 1789567472.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789568500.0,
+    "job_id": "5061397",
+    "pair_id": "replication_control-phi4_mini-code_standard-s213",
+    "pair_ledger_sha256": "ac671093cc65b1e58fbd5d473108b6c58b2ab3ff273c3487d4b78aadc5281aa0",
+    "pair_manifest_sha256": "417d9ef000cbf575065d260373bf30a14ceacdf4915204768a8746c217a06e9d",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_20.batch|5061397.batch|batch|COMPLETED|0:0|2026-09-16T14:04:32|2026-09-16T14:21:40|1028|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 62,
+        "sha256": "6231cc91bdbe335bf2998319e586d996ac13b130333c76c61b46c2aa15d43b89"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_20|5061397|replication_control|COMPLETED|0:0|2026-09-16T14:04:32|2026-09-16T14:21:40|1028|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 61,
+        "sha256": "dad71ae7b7124c7d97b123461540198f5387fb32c86514da734d60e5f9155598"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_20",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789567472.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789569300.0,
+    "batch_started_at_epoch": 1789568304.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789569300.0,
+    "job_id": "5061470",
+    "pair_id": "replication_control-qwen25_3b-code_heavy_tail-s212",
+    "pair_ledger_sha256": "705dd66e96ca659389f17a34b1370afbbd8b1b7b0ee6498cd891cb59b12539ba",
+    "pair_manifest_sha256": "b7da0a20889631d95bc610e742e422258bc0d11d48a678645cc455bc0a76074a",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_21.batch|5061470.batch|batch|COMPLETED|0:0|2026-09-16T14:18:24|2026-09-16T14:35:00|996|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 65,
+        "sha256": "73c1fea0f33e88b90fbcf6a5854d47d34793fb965406dfb2ffd706a6e98e995e"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_21|5061470|replication_control|COMPLETED|0:0|2026-09-16T14:18:24|2026-09-16T14:35:00|996|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|JobArrayTaskLimit",
+        "line_number": 64,
+        "sha256": "38bdbade29a46790ff252fd5837547f01c0bc40dc047515413488819228f05f3"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_21",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789568304.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789569411.0,
+    "batch_started_at_epoch": 1789568409.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789569411.0,
+    "job_id": "5061473",
+    "pair_id": "replication_control-qwen25_3b-gsm8k-s212",
+    "pair_ledger_sha256": "85aab4e18b99c8938ffa5ac131c73ce55b4f6761c9121b10e6e0e20797356bd1",
+    "pair_manifest_sha256": "8810eb2b09e675ae795cc80bf3dda9d6a1a11be8a46f2c75d434f717e12665a5",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_22.batch|5061473.batch|batch|COMPLETED|0:0|2026-09-16T14:20:09|2026-09-16T14:36:51|1002|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 68,
+        "sha256": "7f6f0fe454b368160d54788a84b287cbbf9fd89f2d9c1e765c204a8e7f07b60a"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_22|5061473|replication_control|COMPLETED|0:0|2026-09-16T14:20:09|2026-09-16T14:36:51|1002|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 67,
+        "sha256": "16aa2941706cc879ec98ef3136ccb06e4f8c63af12fb48a1d5dac38dc12f7a35"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_22",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789568409.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789569512.0,
+    "batch_started_at_epoch": 1789568502.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789569512.0,
+    "job_id": "5061475",
+    "pair_id": "replication_control-granite33_2b-code_standard-s211",
+    "pair_ledger_sha256": "dbf991f73c9052e3c5a7057aeccc6386555434798c40312152262b3b1d8f5847",
+    "pair_manifest_sha256": "be1b98f5495deb0f4d5f6900ef5ffc9e5811af4c58d242c98641a41ca5dada70",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_23.batch|5061475.batch|batch|COMPLETED|0:0|2026-09-16T14:21:42|2026-09-16T14:38:32|1010|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 71,
+        "sha256": "dd7cf4b83a752ebaa291084a1a8efbbb4dba1d210bc423983cd39ee0ccdcd2b4"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_23|5061475|replication_control|COMPLETED|0:0|2026-09-16T14:21:42|2026-09-16T14:38:32|1010|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 70,
+        "sha256": "5aa774a7a89c2b5a7db4365b064e64908020b9ea5ee3e4d146e61822b2ff7e88"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_23",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789568502.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789570338.0,
+    "batch_started_at_epoch": 1789569301.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789570338.0,
+    "job_id": "5061489",
+    "pair_id": "replication_control-granite33_2b-math-s212",
+    "pair_ledger_sha256": "9516b14f978ff5e1deba159e49d3e346f05cb3f45d5687ea2fe7f8d27be0b485",
+    "pair_manifest_sha256": "12dbde29274ce0c0fca5142284bd504beada71f4632573ceb531246e3b8c7854",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_24.batch|5061489.batch|batch|COMPLETED|0:0|2026-09-16T14:35:01|2026-09-16T14:52:18|1037|cpu=32,gres/gpu=2,mem=192G,node=1|acn42|",
+        "line_number": 74,
+        "sha256": "1dfcff0b7ddac34182539f03ef1daf5726da39a24007d58bbe5e0bceb8b6ee35"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_24|5061489|replication_control|COMPLETED|0:0|2026-09-16T14:35:01|2026-09-16T14:52:18|1037|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn42|JobArrayTaskLimit",
+        "line_number": 73,
+        "sha256": "cdad8960c5e309a2097acdbc7c2617acb1bb69dea9f97741580f4f53a0b8e50d"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_24",
+    "scheduler_node_list": "acn42",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789569301.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789570482.0,
+    "batch_started_at_epoch": 1789569412.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789570482.0,
+    "job_id": "5061492",
+    "pair_id": "replication_control-qwen25_3b-math-s213",
+    "pair_ledger_sha256": "47a4de8f35b4d359bbf2d70848811c4fe64cbdeaa8694ab828b35bbb5e8592c3",
+    "pair_manifest_sha256": "b2432fdad18c4ae9006b6d40b76fc68dac3e68411c51b5bb8843039e53fef8fb",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_25.batch|5061492.batch|batch|COMPLETED|0:0|2026-09-16T14:36:52|2026-09-16T14:54:42|1070|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 77,
+        "sha256": "7730725ce14b120c049ac76c944324e78b10b43391457fd1a0ff1086d7c78cad"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_25|5061492|replication_control|COMPLETED|0:0|2026-09-16T14:36:52|2026-09-16T14:54:42|1070|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 76,
+        "sha256": "02db53960cb513c5df01a32fd15b5c40d7e8bf7bdc51b57fb945a9a5fc98bf65"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_25",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789569412.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789570572.0,
+    "batch_started_at_epoch": 1789569514.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789570572.0,
+    "job_id": "5061494",
+    "pair_id": "replication_control-qwen25_3b-math-s212",
+    "pair_ledger_sha256": "e0b768e5c22624d6600a1ac7ff51afcffb5b38cab96524b76c67c99d9632f00a",
+    "pair_manifest_sha256": "b5ad3a06cbf1d2c75e036fabf9152bcd051b3d04a3bd5abc128922f7f72611c4",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_26.batch|5061494.batch|batch|COMPLETED|0:0|2026-09-16T14:38:34|2026-09-16T14:56:12|1058|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 80,
+        "sha256": "96c2a48d9697b4d11d4acd037f2ff8f5396338095c67ad3dd13aa1a531ffb668"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_26|5061494|replication_control|COMPLETED|0:0|2026-09-16T14:38:34|2026-09-16T14:56:12|1058|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 79,
+        "sha256": "71c756fe25cfe54f5cd742f1ef29382464d6ceeac64aace7187582fa08b9402b"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_26",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789569514.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789571369.0,
+    "batch_started_at_epoch": 1789570340.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789571369.0,
+    "job_id": "5061596",
+    "pair_id": "replication_control-granite33_2b-code_heavy_tail-s213",
+    "pair_ledger_sha256": "63c1b3e79ea196058d6b1b316e2df38070c3083b3e4b97717a03f8c5759a6906",
+    "pair_manifest_sha256": "d578c7633be357b761df6701313717500ad89de8bcb89b5f627f42a296c12d8f",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_27.batch|5061596.batch|batch|COMPLETED|0:0|2026-09-16T14:52:20|2026-09-16T15:09:29|1029|cpu=32,gres/gpu=2,mem=192G,node=1|acn30|",
+        "line_number": 83,
+        "sha256": "c91285179b04d2479042ca2a6a46c573554bbff5bff900ddf32b212ccd0091f9"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_27|5061596|replication_control|COMPLETED|0:0|2026-09-16T14:52:20|2026-09-16T15:09:29|1029|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn30|JobArrayTaskLimit",
+        "line_number": 82,
+        "sha256": "81455395e2cdf76317db08b1a5df8efdf46d4c874fdd266c31c68f3809079e46"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_27",
+    "scheduler_node_list": "acn30",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789570340.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789571522.0,
+    "batch_started_at_epoch": 1789570484.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789571522.0,
+    "job_id": "5061608",
+    "pair_id": "replication_control-phi4_mini-code_standard-s212",
+    "pair_ledger_sha256": "a58940fa5afc0e12978affa0b401d0e36791dd3556afd5a1e278edf60aa2ba25",
+    "pair_manifest_sha256": "23d20d240daa62410651b483b33e6829651c563d57e19412810065d734dddb19",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_28.batch|5061608.batch|batch|COMPLETED|0:0|2026-09-16T14:54:44|2026-09-16T15:12:02|1038|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 86,
+        "sha256": "49b6954f28fa9bdd24c1c7df870056791eb291bb76e153cfdb8dba148210a676"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_28|5061608|replication_control|COMPLETED|0:0|2026-09-16T14:54:44|2026-09-16T15:12:02|1038|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 85,
+        "sha256": "df3d633501203ab08723bff01267949020fe58b6e8281faca2599307549a42d9"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_28",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789570484.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789571632.0,
+    "batch_started_at_epoch": 1789570573.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789571632.0,
+    "job_id": "5061609",
+    "pair_id": "replication_control-granite33_2b-math-s211",
+    "pair_ledger_sha256": "c0b05bc1b9f5e9df7b3da6d93b4cba79d93a0da0b09b39aaf0d230e45498f9e6",
+    "pair_manifest_sha256": "4d28fdc64e21da7dd3afa2dc143316a92765ab70073f6e41530bd556e8ccbb2d",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_29.batch|5061609.batch|batch|COMPLETED|0:0|2026-09-16T14:56:13|2026-09-16T15:13:52|1059|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 89,
+        "sha256": "86cd65a7f340c70c653f9f90076af9dcf5800ca997f705cc00fb9a0f344cbaea"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_29|5061609|replication_control|COMPLETED|0:0|2026-09-16T14:56:13|2026-09-16T15:13:52|1059|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 88,
+        "sha256": "7d22bc582646ac58d05e02c4c4d3d5867a85c8fc7b0491d2e311a334851b5976"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_29",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789570573.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789572406.0,
+    "batch_started_at_epoch": 1789571372.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789572406.0,
+    "job_id": "5061730",
+    "pair_id": "replication_control-granite33_2b-gsm8k-s213",
+    "pair_ledger_sha256": "5c86918134745a9bea5a84bbf503099f5f9647d89e4ad396ad88ccea2d52ea42",
+    "pair_manifest_sha256": "520d99b146553bb5d0b85dbedbc48da44c74e565c75aaf260117f1fa880a9e6a",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_30.batch|5061730.batch|batch|COMPLETED|0:0|2026-09-16T15:09:32|2026-09-16T15:26:46|1034|cpu=32,gres/gpu=2,mem=192G,node=1|acn30|",
+        "line_number": 92,
+        "sha256": "252f45634c4a232a4bccceda057902139c6edbb88db8091c0f6b8259f366c19b"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_30|5061730|replication_control|COMPLETED|0:0|2026-09-16T15:09:32|2026-09-16T15:26:46|1034|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn30|QOSGrpNodeLimit",
+        "line_number": 91,
+        "sha256": "9cd2f98e5992a72fbdb6c344f6980befb5a01d3e4e1d0411620250362c4be379"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_30",
+    "scheduler_node_list": "acn30",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789571372.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789572606.0,
+    "batch_started_at_epoch": 1789571524.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789572606.0,
+    "job_id": "5061734",
+    "pair_id": "replication_control-phi4_mini-math-s212",
+    "pair_ledger_sha256": "ee8a7e48265fcd4bd27eafac27217f9658b7ff04d6b407ac893d4c64d05f106f",
+    "pair_manifest_sha256": "3973e16850f35f550b1192c46a97121fd731531fb2ca464865cc3e5825c3a46a",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_31.batch|5061734.batch|batch|COMPLETED|0:0|2026-09-16T15:12:04|2026-09-16T15:30:06|1082|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 95,
+        "sha256": "fa654a8dbb9c45b0a187b3a1910628cd716fb42d43425d8982f66f44649970aa"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_31|5061734|replication_control|COMPLETED|0:0|2026-09-16T15:12:04|2026-09-16T15:30:06|1082|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 94,
+        "sha256": "508830f08dbe9ffad9c6b7c72828de352f2ea6a39553a7a3d1dac6898256224c"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_31",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789571524.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789572725.0,
+    "batch_started_at_epoch": 1789571633.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789572725.0,
+    "job_id": "5061736",
+    "pair_id": "replication_control-granite33_2b-code_standard-s212",
+    "pair_ledger_sha256": "1df888d5d7dbc6d57a1644fb47beb8f874393fbc31e3c51601d3a6cea682cf97",
+    "pair_manifest_sha256": "981aa898f95147d39e8ae3b59ced4c4efb86eb3ffed2eb5bea108f11b6454bc1",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_32.batch|5061736.batch|batch|COMPLETED|0:0|2026-09-16T15:13:53|2026-09-16T15:32:05|1092|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 98,
+        "sha256": "25a50c6a201c4ed92ad453b9be76bd070d1501aedd125d88955ec42fa33aa0ea"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_32|5061736|replication_control|COMPLETED|0:0|2026-09-16T15:13:53|2026-09-16T15:32:05|1092|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 97,
+        "sha256": "897ce9afb41a9b8ed71ee5be704ca57a3e5dc06978f92e97ffa4e840748a8479"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_32",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789571633.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789573419.0,
+    "batch_started_at_epoch": 1789572408.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789573419.0,
+    "job_id": "5061804",
+    "pair_id": "replication_control-granite33_2b-code_standard-s213",
+    "pair_ledger_sha256": "7cde64b5f5a9abbabd34b569fc56818d68116fb3912b7354335dcbef989632a2",
+    "pair_manifest_sha256": "22383cd86d7f20a3dcd4bfa7ef1476afe51445737d1447ce0235658a818e0eda",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_33.batch|5061804.batch|batch|COMPLETED|0:0|2026-09-16T15:26:48|2026-09-16T15:43:39|1011|cpu=32,gres/gpu=2,mem=192G,node=1|acn30|",
+        "line_number": 101,
+        "sha256": "6a59d9916278c93caf925b6a2fb4c0d2a0497e656eb3dfc92d2953e856fe6009"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_33|5061804|replication_control|COMPLETED|0:0|2026-09-16T15:26:48|2026-09-16T15:43:39|1011|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn30|JobArrayTaskLimit",
+        "line_number": 100,
+        "sha256": "50213748fec586bd14dc31c64fa2a3cfa8ac77735843baa71eda6d8638169565"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_33",
+    "scheduler_node_list": "acn30",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789572408.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  },
+  {
+    "accounting_schema_version": 1,
+    "allocated_gpu_count": 2,
+    "batch_ended_at_epoch": 1789573650.0,
+    "batch_started_at_epoch": 1789572607.0,
+    "batch_state": "COMPLETED",
+    "ended_at_epoch": 1789573650.0,
+    "job_id": "5061842",
+    "pair_id": "replication_control-qwen25_3b-code_heavy_tail-s213",
+    "pair_ledger_sha256": "070bf914d70a86193ba4eb09bcc2c4ee94f43729308a79c1d8bdfdfe40bff374",
+    "pair_manifest_sha256": "ad7049b2c3fc03058412a6c6463363453fb4b96bda916660791318209f28c619",
+    "raw_record_provenance": {
+      "batch": {
+        "line": "5061014_34.batch|5061842.batch|batch|COMPLETED|0:0|2026-09-16T15:30:07|2026-09-16T15:47:30|1043|cpu=32,gres/gpu=2,mem=192G,node=1|acn11|",
+        "line_number": 104,
+        "sha256": "1bef46d618a91c82d4cfda92d53a4ba98294cdaefa52ac210b0ae68b443a45aa"
+      },
+      "format_fields": [
+        "JobID",
+        "JobIDRaw",
+        "JobName",
+        "State",
+        "ExitCode",
+        "Start",
+        "End",
+        "ElapsedRaw",
+        "AllocTRES",
+        "NodeList",
+        "Reason"
+      ],
+      "outer": {
+        "line": "5061014_34|5061842|replication_control|COMPLETED|0:0|2026-09-16T15:30:07|2026-09-16T15:47:30|1043|billing=2,cpu=32,gres/gpu=2,mem=192G,node=1|acn11|JobArrayTaskLimit",
+        "line_number": 103,
+        "sha256": "062c39b966ecb4f8f01b0742ef759a21e615fcb167f981c7b64c77a2074b394a"
+      },
+      "source_sha256": "57958812ce4171fec8830eaff2d64a0fca6bc29aef2b4e14cbe4ce2ebf1194d6",
+      "time_format": "standard",
+      "timezone": "UTC"
+    },
+    "scheduler_exit_code": "0:0",
+    "scheduler_job_id": "5061014_34",
+    "scheduler_node_list": "acn11",
+    "scheduler_scope": "outer_job_record",
+    "scheduler_state": "COMPLETED",
+    "started_at_epoch": 1789572607.0,
+    "timestamp_interval": "[reported_epoch, reported_epoch + precision_seconds)",
+    "timestamp_precision_seconds": 1
+  }
+]

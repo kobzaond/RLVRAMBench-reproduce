@@ -1,18 +1,198 @@
 import tempfile
 import unittest
 import json
+import shutil
+import subprocess
+import tarfile
 from pathlib import Path
+from unittest.mock import patch
 
 from memory_tuner.artifact_manifest import (
     add_trial_tree,
     collect_files,
     file_sha256,
+    manifest_rows,
+    publication_empty_directories,
+    replication_empty_directories,
     verify_manifest,
     write_manifest,
 )
 
 
 class ArtifactManifestTests(unittest.TestCase):
+    def test_replication_keeps_nested_retained_logs_and_every_partial_record(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            included = [
+                "output/completion_replication/pairs/cell/ledger.jsonl",
+                "output/completion_replication/cell/attempt-1/.ray-log-paths.ABC123",
+                "output/completion_replication/cell/attempt-1/trainer-metrics/step-1.json",
+                "output/completion_replication/cell/attempt-1/ray-logs/ray/session_1/logs/worker-a-123.out",
+                "output/replication_control/attempts/cell/ray-logs/ray/session_1/logs/worker-a-123.err",
+                "output/completion_diagnostics/check/result.json",
+                "output/revision_retention_recovery/first/ray-logs/ray/session_1/logs/worker-a-123.out",
+                "benchmark/completion_replication/freeze.json",
+                "benchmark/completion_replication_initial/predictions.json",
+                "benchmark/completion_replication/results/configurations.csv",
+                "benchmark/replication_control/replication_control_execution_seal.json",
+                "benchmark/replication_control/runtime_amendment.json",
+                "benchmark/revision_20260916/execution.json",
+                "benchmark/revision_20260916/plan.md",
+                "logs/completion-replication-123_0.out",
+                "logs/replication_control-124_2.err",
+            ]
+            excluded = [
+                "output/completion_replication/cell/attempt-1/ray/session_1/worker-a-123.out",
+                "output/completion_replication/cell/attempt-1/ray-logs/ray/session_1/model.safetensors",
+                "output/replication_control/attempts/cell/cache/token.json",
+                "logs/completion-replication-other-123.out",
+            ]
+            for name in included + excluded:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("retained bytes")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {(root / name).absolute() for name in included})
+
+    def test_source_snapshots_keep_model_source_directories_and_licenses(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            included = [
+                "reproduction_sources/completion/original/instrumented_python_packages/verl/models/model.py",
+                "reproduction_sources/completion/amended/memory_tuner/collector.py",
+                "reproduction_sources/control/original/benchmark/replication_control/protocol.json",
+                "reproduction_sources/control/amended/third_party/TransferQueue/LICENSE",
+            ]
+            for name in included:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("source")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            self.assertEqual(set(files), {(root / name).absolute() for name in included})
+            bad = root / "reproduction_sources/weights.safetensors"
+            bad.write_bytes(b"not source")
+            with self.assertRaisesRegex(ValueError, "Model payload"):
+                collect_files(root)
+
+    def test_source_snapshots_refuse_linked_sources(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            tree = root / "reproduction_sources"
+            tree.mkdir()
+            outside = root / "outside.py"
+            outside.write_text("source")
+            (tree / "alias.py").symlink_to(outside)
+            with self.assertRaisesRegex(ValueError, "Nonregular reproduction source"):
+                collect_files(root)
+
+    def test_replication_empty_directory_inventory_does_not_import_runtime(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            kept = root / "output/completion_replication/cell/attempt-1/allocator-traces"
+            kept.mkdir(parents=True)
+            cache = root / "output/completion_replication/cell/attempt-1/cache"
+            cache.mkdir()
+            (cache / "private").write_text("not evidence")
+            irrelevant = root / "output/old_study/empty"
+            irrelevant.mkdir(parents=True)
+            self.assertEqual(replication_empty_directories(root), [kept])
+
+    def test_publication_keeps_only_referenced_legacy_empty_directories(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            trace = root / "output/legacy/cell/allocator-traces"
+            leaf = trace / "rank-0"
+            leaf.mkdir(parents=True)
+            (root / "output/unrelated/empty").mkdir(parents=True)
+            corpus = root / "profiles/benchmark/benchmark-corpus.csv"
+            corpus.parent.mkdir(parents=True)
+            corpus.write_text(
+                "allocator_trace_dir\n"
+                "/mnt/proj3/open-35-44/verl/rl/output/legacy/cell/allocator-traces\n"
+                "/mnt/proj3/open-35-44/verl/rl/output/legacy/cell/allocator-traces\n")
+            self.assertEqual(publication_empty_directories(root), [leaf])
+            (leaf / "rank.jsonl").write_text("{}\n")
+            self.assertEqual(publication_empty_directories(root), [])
+
+    def test_publication_does_not_recreate_missing_or_follow_linked_allocator_dirs(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "artifact"
+            corpus = root / "profiles/benchmark/benchmark-corpus.csv"
+            corpus.parent.mkdir(parents=True)
+            corpus.write_text("allocator_trace_dir\noutput/legacy/allocator-traces\n")
+            with self.assertRaisesRegex(ValueError, "Missing recorded allocator"):
+                publication_empty_directories(root)
+            trace = root / "output/legacy/allocator-traces"
+            trace.parent.mkdir(parents=True)
+            outside = Path(directory) / "outside"
+            outside.mkdir()
+            trace.symlink_to(outside, target_is_directory=True)
+            with self.assertRaisesRegex(ValueError, "Unsafe recorded allocator"):
+                publication_empty_directories(root)
+
+    @unittest.skipUnless(shutil.which("zstd"), "zstd archive compressor is required")
+    def test_review_archive_preserves_empty_legacy_dirs_for_manifest_rebuilding(self):
+        from memory_tuner.build_review_archives import build
+
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            root = base / "source"
+            trace = root / "output/legacy/cell/allocator-traces"
+            trace.mkdir(parents=True)
+            corpus = root / "profiles/benchmark/benchmark-corpus.csv"
+            corpus.parent.mkdir(parents=True)
+            corpus.write_text(
+                "allocator_trace_dir\n"
+                "/mnt/proj3/open-35-44/verl/rl/output/legacy/cell/allocator-traces\n")
+            submission = root / "paper/submission/ieee_access_submission"
+            submission.mkdir(parents=True)
+            # Minimal archiver fixture; compilation and science auditing are
+            # outside this test of directory preservation and reconstruction.
+            stem = "RLVRAMBench_IEEE_Access_submission"
+            verification = {
+                "source_bundle_verified_after_extraction": True,
+                "author_blockers_remain": [],
+            }
+            for name, field in (
+                (stem + ".tex", "tex_sha256"), (stem + ".pdf", "pdf_sha256"),
+                ("RLVRAMBench_supplement.tex", "supplement_tex_sha256"),
+                ("RLVRAMBench_supplement.pdf", "supplement_pdf_sha256"),
+            ):
+                path = submission / name
+                path.write_text("Authoritative submission manuscript. Edit this TeX directly")
+                verification[field] = file_sha256(path)
+            bundle = root / "paper/submission/RLVRAMBench_IEEE_Access_source.zip"
+            bundle.write_bytes(b"archiver fixture")
+            verification["source_bundle_sha256"] = file_sha256(bundle)
+            (submission / "export_verification.json").write_text(json.dumps(verification))
+            (root / "paper/artifact_manifest.md").write_text("Manifest fixture\n")
+            files, missing = collect_files(root)
+            self.assertEqual(missing, [])
+            expected = manifest_rows(root, files)
+            write_manifest(root / "profiles/benchmark/publication-artifact-manifest.csv", expected)
+            with patch("memory_tuner.build_review_archives.audit_package",
+                       return_value=([], [], {})):
+                report = build(root, base / "release", "test-empty-directories")
+            self.assertEqual(report["empty_evidence_directories"],
+                             ["output/legacy/cell/allocator-traces"])
+            archive = Path(report["archives"][0]["path"])
+            extracted = base / "extracted"
+            extracted.mkdir()
+            decompressor = subprocess.Popen(
+                ["zstd", "-q", "-d", "-c", str(archive)], stdout=subprocess.PIPE)
+            with tarfile.open(fileobj=decompressor.stdout, mode="r|") as contents:
+                contents.extractall(extracted)
+            decompressor.stdout.close()
+            self.assertEqual(decompressor.wait(), 0)
+            rebuilt, missing = collect_files(extracted)
+            self.assertEqual(missing, [])
+            self.assertEqual(manifest_rows(extracted, rebuilt), expected)
+            self.assertEqual(verify_manifest(
+                extracted, extracted / "profiles/benchmark/publication-artifact-manifest.csv"), [])
+            self.assertTrue((extracted / trace.relative_to(root)).is_dir())
+
     def test_estimation_preserves_partial_raw_records_without_a_completed_trial(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -345,6 +525,32 @@ class ArtifactManifestTests(unittest.TestCase):
             self.assertEqual(verify_manifest(root, manifest), [])
             artifact.write_text("second")
             self.assertTrue(verify_manifest(root, manifest))
+
+    def test_manifest_verification_rejects_missing_or_empty_inventory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest = root / "manifest.csv"
+            self.assertTrue(verify_manifest(root, manifest))
+            write_manifest(manifest, [])
+            self.assertTrue(verify_manifest(root, manifest))
+
+    def test_manifest_verification_rejects_duplicate_escaping_and_invalid_rows(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            artifact = root / "artifact.txt"
+            artifact.write_text("evidence")
+            manifest = root / "manifest.csv"
+            good = dict(path="artifact.txt", category="test",
+                        size_bytes=artifact.stat().st_size, sha256=file_sha256(artifact))
+            for rows in (
+                [good, good],
+                [{**good, "path": str(artifact)}],
+                [{**good, "path": "../artifact.txt"}],
+                [{**good, "size_bytes": "-1"}],
+                [{**good, "sha256": "not-a-digest"}],
+            ):
+                write_manifest(manifest, rows)
+                self.assertTrue(verify_manifest(root, manifest))
 
     def test_strict_multistep_requires_generated_matrix(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -42,6 +42,14 @@ ESTIMATION_SCHEDULER_LOG_PATTERN = re.compile(
     r"^(?:matched-gpu|matched-preflight|gpu-identity|host-capacity)-"
     r"[0-9]+(?:_[0-9]+)?\.(?:out|err)$"
 )
+REPLICATION_SCHEDULER_LOG_PATTERN = re.compile(
+    r"^(?:completion-replication-|replication_control-)"
+    r"[0-9]+(?:_[0-9]+)?\.(?:out|err)$"
+)
+REPLICATION_EVIDENCE_TREES = (
+    "completion_replication", "replication_control",
+    "completion_diagnostics", "revision_retention_recovery",
+)
 
 
 def file_sha256(path: Path, chunk_size: int = 1024 * 1024) -> str:
@@ -122,6 +130,7 @@ def add_estimation_tree(
     category: str,
     *,
     suffixes: frozenset[str] | None = None,
+    retain_worker_logs: bool = False,
 ) -> None:
     """Retain partial evidence without traversing runtime or checkpoint trees.
 
@@ -131,11 +140,20 @@ def add_estimation_tree(
     neither referenced paths nor directory symlinks are followed.
     """
     resolved_root = tree_root.resolve()
+
+    def excluded(parts):
+        return any(
+            is_estimation_runtime_directory(name)
+            and not (retain_worker_logs and name == "ray" and index
+                     and parts[index - 1] == "ray-logs")
+            for index, name in enumerate(parts)
+        )
+
     for directory, children, names in os.walk(tree_root, followlinks=False):
         parent = Path(directory)
         children[:] = [
             name for name in children
-            if not is_estimation_runtime_directory(name)
+            if not excluded((parent / name).relative_to(tree_root).parts)
             and not (parent / name).is_symlink()
         ]
         for name in names:
@@ -153,12 +171,91 @@ def add_estimation_tree(
             except ValueError:
                 continue
             if (
-                any(is_estimation_runtime_directory(part) for part in target.parts[:-1])
+                excluded(target.parts[:-1])
                 or target.suffix.lower() in ESTIMATION_PAYLOAD_SUFFIXES
                 or (suffixes is not None and target.suffix.lower() not in suffixes)
             ):
                 continue
             files[path.absolute()] = category
+
+
+def add_reproduction_source_tree(files: dict[Path, str], tree_root: Path) -> None:
+    """Archive exported source snapshots, including source directories named models.
+
+    These are explicit Git-free snapshots, not live execution checkouts. Refuse
+    links and model payloads instead of silently publishing an incomplete source
+    closure. Source verification remains the responsibility of the frozen loaders.
+    """
+    if tree_root.is_symlink():
+        raise ValueError(f"Linked reproduction source root: {tree_root}")
+    for directory, children, names in os.walk(tree_root, followlinks=False):
+        parent = Path(directory)
+        children[:] = [name for name in children
+                       if name not in {".git", "__pycache__", ".pytest_cache"}]
+        for name in children:
+            if (parent / name).is_symlink():
+                raise ValueError(f"Linked reproduction source directory: {parent / name}")
+        for name in names:
+            path = parent / name
+            if name == ".git":
+                continue
+            if path.is_symlink() or not path.is_file():
+                raise ValueError(f"Nonregular reproduction source: {path}")
+            if path.suffix.lower() in ESTIMATION_PAYLOAD_SUFFIXES:
+                raise ValueError(f"Model payload in reproduction source snapshot: {path}")
+            files[path.absolute()] = "sealed_reproduction_source"
+
+
+def replication_empty_directories(repo_root: Path) -> list[Path]:
+    """Keep empty raw-evidence directories authenticated by runtime amendments."""
+    result = []
+    for name in REPLICATION_EVIDENCE_TREES:
+        tree = repo_root / "output" / name
+        if tree.is_symlink():
+            raise ValueError(f"Linked replication evidence root: {tree}")
+        for directory, children, names in os.walk(tree, followlinks=False):
+            parent = Path(directory)
+            children[:] = [
+                name for name in children
+                if not is_estimation_runtime_directory(name)
+                and not (parent / name).is_symlink()
+            ]
+            # A pruned nonempty cache is not an empty evidence directory.
+            if not names and not children and not any(parent.iterdir()):
+                result.append(parent)
+    return sorted(result)
+
+
+def publication_empty_directories(repo_root: Path) -> list[Path]:
+    """Preserve existing empty evidence directories, never synthesize missing ones.
+
+    Older corpus rows reference allocator directories even for failures before
+    any allocator event was written. Their existence is needed to rebuild the
+    file manifest from an extracted archive. A file-only manifest cannot retain
+    those directories, so the archive carries explicit, confined directory
+    members in addition to the new panels' empty evidence.
+    """
+    root = repo_root.absolute()
+    result = set(replication_empty_directories(root))
+    for row in read_csv(root / "profiles/benchmark/benchmark-corpus.csv"):
+        trace = resolve_path(root, row.get("allocator_trace_dir"))
+        if trace is None:
+            continue
+        relative = trace.relative_to(root)
+        if (not relative.parts or relative.parts[0] not in {"output", "profiles"}
+                or not trace.resolve().is_relative_to(root.resolve())
+                or any(path.is_symlink() for path in
+                       (trace, *trace.parents) if path.is_relative_to(root))):
+            raise ValueError(f"Unsafe recorded allocator directory: {trace}")
+        if not trace.is_dir():
+            raise ValueError(f"Missing recorded allocator directory: {trace}")
+        for directory, children, names in os.walk(trace, followlinks=False):
+            parent = Path(directory)
+            if any((parent / name).is_symlink() for name in children):
+                raise ValueError(f"Linked allocator evidence directory: {parent}")
+            if not names and not children:
+                result.add(parent)
+    return sorted(result)
 
 
 def collect_files(
@@ -612,9 +709,21 @@ def collect_files(
         files, repo_root / "benchmark/host_capacity",
         "host_capacity_benchmark", suffixes=frozenset({".json", ".csv", ".md", ".psv"}),
     )
+    for name in REPLICATION_EVIDENCE_TREES:
+        add_estimation_tree(files, repo_root / "output" / name,
+                            f"{name}_evidence", retain_worker_logs=True)
+    for name in ("completion_replication", "completion_replication_initial",
+                 "replication_control", "revision_20260916"):
+        add_estimation_tree(
+            files, repo_root / "benchmark" / name, f"{name}_protocol_and_results",
+            suffixes=frozenset({".json", ".csv", ".md", ".psv"}),
+        )
+    add_reproduction_source_tree(files, repo_root / "reproduction_sources")
     for path in (repo_root / "logs").glob("*"):
         if path.is_file() and ESTIMATION_SCHEDULER_LOG_PATTERN.fullmatch(path.name):
             files[path.resolve()] = "estimation_scheduler_log"
+        elif path.is_file() and REPLICATION_SCHEDULER_LOG_PATTERN.fullmatch(path.name):
+            files[path.resolve()] = "replication_scheduler_log"
 
     static_globs = (
         ("README.md", "review_entry_point"),
@@ -730,11 +839,32 @@ def write_manifest(path: Path, rows: list[dict]) -> None:
 
 
 def verify_manifest(repo_root: Path, manifest: Path) -> list[str]:
-    errors = []
-    for row in read_csv(manifest):
-        path = resolve_path(repo_root, row["path"])
-        if path is None or not path.is_file():
+    if not manifest.is_file():
+        return [f"missing manifest: {manifest}"]
+    rows = read_csv(manifest)
+    if not rows:
+        return [f"empty manifest: {manifest}"]
+    errors, seen = [], set()
+    for row in rows:
+        if not {"path", "size_bytes", "sha256"}.issubset(row):
+            return [f"malformed manifest columns: {manifest}"]
+        name = row["path"]
+        relative = Path(name)
+        if (not name or relative.is_absolute() or ".." in relative.parts
+                or name in seen):
+            errors.append(f"unsafe or duplicate manifest path: {name}")
+            continue
+        seen.add(name)
+        path = repo_root / relative
+        if not path.resolve().is_relative_to(repo_root.resolve()):
+            errors.append(f"manifest path escapes artifact: {name}")
+            continue
+        if not path.is_file():
             errors.append(f"missing: {row['path']}")
+            continue
+        if (not re.fullmatch(r"\d+", row["size_bytes"] or "")
+                or not re.fullmatch(r"[a-f0-9]{64}", row["sha256"] or "")):
+            errors.append(f"invalid manifest size/digest: {name}")
             continue
         if path.stat().st_size != int(row["size_bytes"]):
             errors.append(f"size mismatch: {row['path']}")

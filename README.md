@@ -4,7 +4,8 @@ CPU-only reconstruction of the measurements, tables, and figures supporting
 **Memory Feasibility in Colocated Language-Model Reinforcement Learning:
 A Failure-Aware Measurement Study**. RLVRAMBench is the accompanying evidence
 and configuration-evaluation artifact for the studied LoRA-GRPO execution
-stack on A100 hardware, not a general benchmark of reinforcement-learning systems.
+stack on A100 hardware, with models up to approximately 7.6 billion parameters,
+not a general benchmark of reinforcement-learning systems.
 
 Authors: Ondřej Kobza and Jan Šedivý, Czech Institute of Informatics,
 Robotics and Cybernetics, Czech Technical University in Prague.
@@ -117,6 +118,61 @@ refit, and independently reconstructs the two thirteen-file result sets.
 Coverage and costs stay separate. See the cohort guides and `release.json`
 for exact versions and observed counts.
 
+## Separate replication panels
+
+Releases with `replication_reproduction` in `release.json` add two panels
+alongside the earlier estimation and expanded-host cohorts.
+
+The larger-model completion replication compares two- and four-GPU runs of
+Qwen2.5-7B and Mistral-7B-Instruct-v0.3. Its 108 slots yield 35 validated
+completions, 72 GPU-memory failures, and one original infrastructure failure
+retained as invalid without retry. Of 36 configuration labels, 35 resolve:
+seven within-margin, four above-margin, and 24 memory
+failures. The frozen logistic classifier approves six within-margin
+configurations, no resolved memory-failing configuration, and one resolved
+above-margin configuration. It also approves the unresolved configuration,
+whose eligible completions already exceed the memory limit. All six useful
+classifier approvals use four GPUs at c1, with actor parameter offload enabled.
+These are one-step measurements without validation or checkpoints, not
+evidence of full-training feasibility.
+
+The batch/reservation replication control specifies 36 blocks, 144 slots,
+and twelve model–workload cases, with full instrumentation fixed.
+All slots launched: 140 completed with validated evidence and the
+original four remain unresolved. Thirty-five complete blocks cover
+all twelve cases, with two blocks for Qwen on standard code and three
+elsewhere. The actor-stage batch contrast is positive in every complete
+block; its equal-case mean is 3,904.61 MiB, compared with 7.46 MiB in
+the whole-run batch contrast. The whole-run reservation contrast averages
+4,060.26 MiB. Full instrumentation remains fixed, so these results do
+not establish logging independence.
+
+The wrapper verifies the archived exact source snapshots, freezes, and
+runtime amendments, then reconstructs four scientific outputs per panel
+from raw evidence. It separately replays the frozen completion predictions
+using the original 90-configuration fit, without refitting or reading target
+outcomes. The eight scientific outputs are:
+
+```text
+reproduced/completion_replication-results/
+  summary.json
+  slots.csv
+  configurations.csv
+  pairs.csv
+reproduced/replication_control-results/
+  replication_control_summary.json
+  replication_control_trials.csv
+  replication_control_blocks.csv
+  replication_control_cases.csv
+```
+
+Comparison normalizes the documented artifact and source path prefixes.
+Only `collection_cpu_wall_seconds` in the completion `summary.json` is
+excluded from content equivalence; that summary is compared as canonical
+JSON, and both CPU collection times remain in `verification.json`.
+The other seven files must match exactly after path normalization, with
+no field exclusions for the control.
+
 ## What is reproduced
 
 - 588 principal processes: 438 historical and 150 prospective revision runs.
@@ -142,13 +198,15 @@ for exact versions and observed counts.
 - When present, the separate host-capacity collector's thirteen outputs,
   its inherited-prediction check, and independent raw reconstruction under
   the original completion criteria.
+- When present, the eight replication-panel scientific outputs and frozen
+  completion prediction replay described above.
 
 The procedure verifies the archive and every evidence-manifest entry,
 removes precomputed profiles from the analysis root, restores only the raw
 paired-allocation provenance, and reconstructs the results from retained raw
-executions and frozen matrices. Optional filesystem isolation hides
-the original project, reference tables, and the code checkout's precomputed
-curated views during analysis. Each child checks that the hidden directories
+executions and frozen matrices. With `--isolate-analysis`, filesystem isolation
+hides the original project, reference tables, and the code checkout's
+precomputed curated views during analysis. Each child checks that the hidden directories
 are inaccessible as evidence. Use repeatable `--hide-path DIRECTORY`
 arguments for other known copies of the project or reference evidence;
 the reconstruction output must be outside those directories.
@@ -156,7 +214,7 @@ the reconstruction output must be outside those directories.
 This is reproduction of completed measurements, not a rerun of GPU training.
 It does not require model weights, CUDA, an A100 allocation, or Slurm.
 It does not establish learning-quality improvements or generalization beyond
-the reported compact-LoRA/A100 configurations.
+the reported configurations in this single LoRA-GRPO/A100 software stack.
 
 Some historical source records identify modified working trees without
 preserving their per-run changes as patches. The saved measurements can
@@ -167,8 +225,11 @@ immutable execution sources.
 ## Requirements
 
 Use CPython 3.11 on Linux, `zstd`, and the pinned publication dependencies.
-Allow roughly 4 GB of free disk space for extraction, reference copies, and
-outputs. `bwrap` (bubblewrap) is optional for filesystem-isolation checking.
+For this revised full release, `bwrap` (bubblewrap) must be available and
+permitted to create the isolated child processes required by
+`--isolate-analysis`. Allow sufficient free disk space for archive extraction,
+separate reference copies, and reconstructed outputs; the required space
+depends on the release.
 
 ```bash
 bash memory_tuner/bootstrap_publication.sh
@@ -186,9 +247,12 @@ executing analysis.
 
 ## Get the frozen benchmark
 
-The exact dataset commit, archive filename, and SHA-256 are pinned in
-`release.json`. You can download that archive manually from the Hugging Face
-dataset repository. Do not substitute an older review archive.
+The archive filename and SHA-256 are pinned in `release.json`. A published
+release also pins the dataset commit in `huggingface_revision`. If that field
+is `null`, the release is prepared locally but has not yet been published:
+use the accompanying verified archive, not the download helper or an older
+public archive. After publication, you can download the pinned archive
+manually from the Hugging Face dataset repository.
 
 For the download helper, use a separate environment:
 
@@ -213,9 +277,11 @@ Replace `ARCHIVE.tar.zst` below with the downloaded filename printed by
   --isolate-analysis
 ```
 
-Omit `--isolate-analysis` if bubblewrap is unavailable. The same raw
-reconstruction and numerical comparisons are still performed, but filesystem
-isolation is then explicitly not claimed.
+Releases containing either replication panel require `--isolate-analysis`;
+this revised full release has no non-isolated fallback. Only for historical
+releases without replication panels may you omit the flag if bubblewrap is
+unavailable. Those runs still perform raw reconstruction and numerical
+comparisons, but do not claim filesystem isolation.
 
 Original results appear in `reproduced/results/`, revised audits and controls
 in `reproduced/review-results/`, figures in `reproduced/figures/`,
@@ -268,8 +334,8 @@ matrices are copied unchanged. The download/extraction/comparison wrapper is pac
 code and is tested separately. Some modules retain historical internal names;
 these are implementation dependencies, not additional claims of this paper.
 
-The new control supports positive observed actor-stage batch contrasts
-without allocator logging. Generated responses vary between conditions,
+The earlier batch-by-logging control supports positive observed actor-stage
+batch contrasts without allocator logging. Generated responses vary between conditions,
 so the measurements do not establish pure tracing overhead on identical
 tensors, logging equivalence, or a universal correction factor. Earlier
 immutable evidence releases remain available in the dataset repository.

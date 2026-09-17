@@ -1,0 +1,260 @@
+{
+  "allocation_count": 36,
+  "allocations": [
+    {
+      "batch_step_gpu_seconds": 2152.0,
+      "block_id": "replication_control-qwen25_3b-code_standard-s211",
+      "job_id": "5060749",
+      "scheduler_state": "FAILED",
+      "whole_allocation_gpu_seconds": 2152.0
+    },
+    {
+      "batch_step_gpu_seconds": 2064.0,
+      "block_id": "replication_control-qwen25_3b-gsm8k-s213",
+      "job_id": "5060872",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2064.0
+    },
+    {
+      "batch_step_gpu_seconds": 2134.0,
+      "block_id": "replication_control-granite33_2b-code_heavy_tail-s212",
+      "job_id": "5061014",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2134.0
+    },
+    {
+      "batch_step_gpu_seconds": 2098.0,
+      "block_id": "replication_control-phi4_mini-gsm8k-s212",
+      "job_id": "5061031",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2098.0
+    },
+    {
+      "batch_step_gpu_seconds": 2134.0,
+      "block_id": "replication_control-granite33_2b-gsm8k-s211",
+      "job_id": "5061033",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2134.0
+    },
+    {
+      "batch_step_gpu_seconds": 2218.0,
+      "block_id": "replication_control-phi4_mini-code_heavy_tail-s211",
+      "job_id": "5061072",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2218.0
+    },
+    {
+      "batch_step_gpu_seconds": 2046.0,
+      "block_id": "replication_control-qwen25_3b-code_standard-s212",
+      "job_id": "5061077",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2046.0
+    },
+    {
+      "batch_step_gpu_seconds": 2010.0,
+      "block_id": "replication_control-qwen25_3b-gsm8k-s211",
+      "job_id": "5061136",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2010.0
+    },
+    {
+      "batch_step_gpu_seconds": 1952.0,
+      "block_id": "replication_control-phi4_mini-gsm8k-s211",
+      "job_id": "5061139",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 1952.0
+    },
+    {
+      "batch_step_gpu_seconds": 2232.0,
+      "block_id": "replication_control-granite33_2b-gsm8k-s212",
+      "job_id": "5061142",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2232.0
+    },
+    {
+      "batch_step_gpu_seconds": 2050.0,
+      "block_id": "replication_control-phi4_mini-code_heavy_tail-s212",
+      "job_id": "5061182",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2050.0
+    },
+    {
+      "batch_step_gpu_seconds": 2124.0,
+      "block_id": "replication_control-qwen25_3b-code_standard-s213",
+      "job_id": "5061183",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2124.0
+    },
+    {
+      "batch_step_gpu_seconds": 2074.0,
+      "block_id": "replication_control-phi4_mini-math-s211",
+      "job_id": "5061187",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2074.0
+    },
+    {
+      "batch_step_gpu_seconds": 2086.0,
+      "block_id": "replication_control-granite33_2b-math-s213",
+      "job_id": "5061251",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2086.0
+    },
+    {
+      "batch_step_gpu_seconds": 2040.0,
+      "block_id": "replication_control-phi4_mini-code_standard-s211",
+      "job_id": "5061252",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2040.0
+    },
+    {
+      "batch_step_gpu_seconds": 2106.0,
+      "block_id": "replication_control-phi4_mini-code_heavy_tail-s213",
+      "job_id": "5061260",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2106.0
+    },
+    {
+      "batch_step_gpu_seconds": 2018.0,
+      "block_id": "replication_control-phi4_mini-math-s213",
+      "job_id": "5061312",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2018.0
+    },
+    {
+      "batch_step_gpu_seconds": 2136.0,
+      "block_id": "replication_control-qwen25_3b-math-s211",
+      "job_id": "5061314",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2136.0
+    },
+    {
+      "batch_step_gpu_seconds": 2034.0,
+      "block_id": "replication_control-phi4_mini-gsm8k-s213",
+      "job_id": "5061345",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2034.0
+    },
+    {
+      "batch_step_gpu_seconds": 2026.0,
+      "block_id": "replication_control-granite33_2b-code_heavy_tail-s211",
+      "job_id": "5061386",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2026.0
+    },
+    {
+      "batch_step_gpu_seconds": 2082.0,
+      "block_id": "replication_control-qwen25_3b-code_heavy_tail-s211",
+      "job_id": "5061390",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2082.0
+    },
+    {
+      "batch_step_gpu_seconds": 2056.0,
+      "block_id": "replication_control-phi4_mini-code_standard-s213",
+      "job_id": "5061397",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2056.0
+    },
+    {
+      "batch_step_gpu_seconds": 1992.0,
+      "block_id": "replication_control-qwen25_3b-code_heavy_tail-s212",
+      "job_id": "5061470",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 1992.0
+    },
+    {
+      "batch_step_gpu_seconds": 2004.0,
+      "block_id": "replication_control-qwen25_3b-gsm8k-s212",
+      "job_id": "5061473",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2004.0
+    },
+    {
+      "batch_step_gpu_seconds": 2020.0,
+      "block_id": "replication_control-granite33_2b-code_standard-s211",
+      "job_id": "5061475",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2020.0
+    },
+    {
+      "batch_step_gpu_seconds": 2074.0,
+      "block_id": "replication_control-granite33_2b-math-s212",
+      "job_id": "5061489",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2074.0
+    },
+    {
+      "batch_step_gpu_seconds": 2140.0,
+      "block_id": "replication_control-qwen25_3b-math-s213",
+      "job_id": "5061492",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2140.0
+    },
+    {
+      "batch_step_gpu_seconds": 2116.0,
+      "block_id": "replication_control-qwen25_3b-math-s212",
+      "job_id": "5061494",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2116.0
+    },
+    {
+      "batch_step_gpu_seconds": 2058.0,
+      "block_id": "replication_control-granite33_2b-code_heavy_tail-s213",
+      "job_id": "5061596",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2058.0
+    },
+    {
+      "batch_step_gpu_seconds": 2076.0,
+      "block_id": "replication_control-phi4_mini-code_standard-s212",
+      "job_id": "5061608",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2076.0
+    },
+    {
+      "batch_step_gpu_seconds": 2118.0,
+      "block_id": "replication_control-granite33_2b-math-s211",
+      "job_id": "5061609",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2118.0
+    },
+    {
+      "batch_step_gpu_seconds": 2068.0,
+      "block_id": "replication_control-granite33_2b-gsm8k-s213",
+      "job_id": "5061730",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2068.0
+    },
+    {
+      "batch_step_gpu_seconds": 2164.0,
+      "block_id": "replication_control-phi4_mini-math-s212",
+      "job_id": "5061734",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2164.0
+    },
+    {
+      "batch_step_gpu_seconds": 2184.0,
+      "block_id": "replication_control-granite33_2b-code_standard-s212",
+      "job_id": "5061736",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2184.0
+    },
+    {
+      "batch_step_gpu_seconds": 2022.0,
+      "block_id": "replication_control-granite33_2b-code_standard-s213",
+      "job_id": "5061804",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2022.0
+    },
+    {
+      "batch_step_gpu_seconds": 2086.0,
+      "block_id": "replication_control-qwen25_3b-code_heavy_tail-s213",
+      "job_id": "5061842",
+      "scheduler_state": "COMPLETED",
+      "whole_allocation_gpu_seconds": 2086.0
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Whole outer allocations; batch steps are not added again",
+  "whole_allocation_gpu_seconds": 74994.0
+}

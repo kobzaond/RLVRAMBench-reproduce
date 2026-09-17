@@ -1,15 +1,15 @@
 {
   "source_repository": "https://github.com/kobzaond/rl",
-  "source_commit": "6a7606fa72a162b9929d2e73a3175f1ac3ac91a4",
-  "selection": "CPU reconstruction closure, static transfer suite and independently evaluated admission panel; sealed estimation replay and independent paired-study reconstruction; separately frozen host-capacity inheritance and raw reconstruction",
+  "source_commit": "b0018d0825b9c1819cc51faec0549cae2ac3a69e",
+  "selection": "CPU reconstruction closure, static transfer suite and independently evaluated admission panel; sealed estimation replay and independent paired-study reconstruction; separately frozen host-capacity inheritance and raw reconstruction; version-bound archived sources for the two separate replication panels",
   "files": {
     "BENCHMARK.md": {
-      "sha256": "fd9ccf667a854b625faba82f7ac288294838c642cb77dd7857f090fec67f2f95",
-      "size_bytes": 13070
+      "sha256": "94046015d51d7f1ab8e700a09b333fc1e5bb525311a0a6bd5a22cba6f859c663",
+      "size_bytes": 13329
     },
     "DATA_DICTIONARY.md": {
-      "sha256": "71c90c5767a36ee80cf022860ff55ed179daa35734ff573f8064645e7a492664",
-      "size_bytes": 22852
+      "sha256": "0d1f722917238e3a5189e4d0de8dfb66bd8a09f91181050529829a2723b70245",
+      "size_bytes": 26957
     },
     "RIGHTS.md": {
       "sha256": "7c1f948ecd8082ad2d0cbe334e576566d6e26a5ccfdb5ac19b69611044fafe96",
@@ -48,8 +48,8 @@
       "size_bytes": 6398
     },
     "memory_tuner/artifact_manifest.py": {
-      "sha256": "5761585baae223533293ff9e3bf656b518130ca18e5d47fe9b2b96e8e6b27721",
-      "size_bytes": 33362
+      "sha256": "f88094d46fb98dc2751c6dde1a9230dd8cbdc3c354ea5a574d49fd3c450c9c66",
+      "size_bytes": 39591
     },
     "memory_tuner/artifact_paths.py": {
       "sha256": "8b89a2f8956c7b1fe40563e2b0b776414ebc583d3801fab6d83fc125861beb91",
@@ -132,8 +132,8 @@
       "size_bytes": 7166
     },
     "memory_tuner/device_contract.py": {
-      "sha256": "f28a239a3aca7d47094329e14d1c6dd46be22ce047f1445bf1e2b0ee42f85c2c",
-      "size_bytes": 19896
+      "sha256": "b3f7164774e5d6ec01b8cde6dd1083823352c15ccee0cceb949cfe3022f40764",
+      "size_bytes": 20412
     },
     "memory_tuner/estimation_baselines.py": {
       "sha256": "8cc20f9697eb38cb6a19a2255e95712ac44469cbd147eaf93e7e7ed183360ad2",
@@ -218,6 +218,10 @@
     "memory_tuner/publication_plot_style.py": {
       "sha256": "2fa16ee763aa0bf5ec5d508ef8c0a0099b910d28c5ae7adc08bbb4683458c634",
       "size_bytes": 367
+    },
+    "memory_tuner/replication_control_accounting.py": {
+      "sha256": "6f1498bc6ac4fbce48753c73200f6d1d52a5777955aa02bb6c4f5bf16e66922f",
+      "size_bytes": 6443
     },
     "memory_tuner/resolve_hf_snapshot.py": {
       "sha256": "746c29b44ad34b4dbd129b71bf3d0d9abfd01d0993a6bb53dae1a1e47fc8b103",
@@ -456,8 +460,8 @@
       "size_bytes": 14386
     },
     "memory_tuner/test_artifact_manifest.py": {
-      "sha256": "2402b36aa7c82314c782b9bda2d66bcfd7eb71f38132afa46c17ae28b8ccefa8",
-      "size_bytes": 22090
+      "sha256": "1b67c61b7022480b0a3caee7edb9ab84c9b1bb693d85fe6283cc1511969b7890",
+      "size_bytes": 33373
     },
     "memory_tuner/test_artifact_paths.py": {
       "sha256": "677e881884210a3089f86744d2db65a13e0f055ecd24ddd510b60880ab93e7c7",
@@ -518,6 +522,10 @@
     "memory_tuner/test_model_memory_metadata.py": {
       "sha256": "ee6f5ede1efbd1c1e1f7475e79cd99d3c97fae7aa7996ceff8fbd770dcb811e5",
       "size_bytes": 2654
+    },
+    "memory_tuner/test_replication_control_accounting.py": {
+      "sha256": "0a4e529901c39b49915d1b51beb1f3889f656c95ccc6d2abdbaf0fdd145f09da",
+      "size_bytes": 5189
     },
     "memory_tuner/test_resolve_hf_snapshot.py": {
       "sha256": "9758e8c4f8e9b5478f05c9e4ff706dbeb362da1f4bcec6b488568146914f6e41",
@@ -596,8 +604,8 @@
       "size_bytes": 472
     },
     "run_grpo_instrumented.slurm": {
-      "sha256": "5fad931d05049888e79e45d406972eed695b3c07c5f694d1707c4e9c1777ec4a",
-      "size_bytes": 15545
+      "sha256": "3e69a99f510edea5a1235b4a1af87c6b53c927688a114d51a2a3ac6af09c5fe6",
+      "size_bytes": 17825
     },
     "run_host_capacity.slurm": {
       "sha256": "59d3daa9499d1fc76d0b856be6c0a813472f488eb49f990e6ffa57ccf819b919",
