@@ -12,14 +12,12 @@
     },
     "horizon": {
       "memory_failure": 4,
-      "unresolved": 2,
-      "within_margin": 6
+      "within_margin": 8
     },
     "larger_models": {
       "above_margin": 1,
       "memory_failure": 4,
-      "unresolved": 1,
-      "within_margin": 18
+      "within_margin": 19
     },
     "reservation_sweep": {
       "above_margin": 1,
@@ -41,14 +39,12 @@
     },
     "horizon": {
       "memory_failure": 12,
-      "other_failure": 6,
-      "within_margin": 18
+      "within_margin": 24
     },
     "larger_models": {
       "above_margin": 3,
       "memory_failure": 12,
-      "other_failure": 1,
-      "within_margin": 56
+      "within_margin": 57
     },
     "reservation_sweep": {
       "above_margin": 2,

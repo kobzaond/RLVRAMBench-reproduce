@@ -91,7 +91,7 @@ hardware_transfer,amd-a1e1493969108180,grpo,lora,cfg-fd4d4789145230df,ibm-granit
 hardware_transfer,amd-a9fe8a0a3475948b,grpo,lora,cfg-fd5bb0db68b0dae3,ibm-granite/granite-3.3-2b-instruct,gsm8k,c0,2,1,0.3,True,True,1,within_margin,3,3,0,0,0,,28190,28129.3
 larger_models,amd-1357c30c5c7f243f,grpo,lora,cr-mistral-7b-math-c3-4gpu,mistralai/Mistral-7B-Instruct-v0.3,math,c3,4,16,0.7,False,True,1,within_margin,3,3,0,0,0,,60936,60897.0
 larger_models,amd-08589e8a12d1faa3,grpo,lora,cr-mistral-7b-math-c3-2gpu,mistralai/Mistral-7B-Instruct-v0.3,math,c3,2,16,0.7,False,True,1,memory_failure,3,3,0,0,3,generation_wakeup_oom,,
-larger_models,amd-e7037dac094c2364,grpo,lora,cr-mistral-7b-gsm8k-c3-4gpu,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,c3,4,16,0.7,False,True,1,unresolved,2,3,0,1,0,,60920,60899.0
+larger_models,amd-e7037dac094c2364,grpo,lora,cr-mistral-7b-gsm8k-c3-4gpu,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,c3,4,16,0.7,False,True,1,within_margin,3,3,0,0,0,,60920,60892.0
 larger_models,amd-d0e8d84e34fe568f,grpo,lora,cr-mistral-7b-gsm8k-c3-2gpu,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,c3,2,16,0.7,False,True,1,memory_failure,3,3,0,0,3,generation_wakeup_oom,,
 larger_models,amd-ac93f889b5805c53,grpo,lora,cr-mistral-7b-math-c2-2gpu,mistralai/Mistral-7B-Instruct-v0.3,math,c2,2,8,0.6,False,True,1,within_margin,3,3,0,0,0,,59631,59597.0
 larger_models,amd-a438947d12ad6fd1,grpo,lora,cr-mistral-7b-math-c2-4gpu,mistralai/Mistral-7B-Instruct-v0.3,math,c2,4,8,0.6,False,True,1,within_margin,3,3,0,0,0,,54407,54385.0
@@ -142,11 +142,11 @@ algorithm_adaptation,amd-8a629db678e853a2,grpo,lora,,Qwen/Qwen2.5-3B-Instruct,gs
 algorithm_adaptation,amd-e31bfa5415ea52ad,ppo,lora,,Qwen/Qwen2.5-3B-Instruct,gsm8k,c3,2,16,0.7,False,True,1,memory_failure,3,3,0,0,3,generation_wakeup_oom,,
 algorithm_adaptation,amd-573a483093217867,grpo,full,,Qwen/Qwen2.5-3B-Instruct,gsm8k,c3,2,16,0.7,False,True,1,memory_failure,3,3,0,0,3,generation_wakeup_oom,,
 horizon,amd-3258805f9c65b4a0,grpo,lora,cfg-0a36e5abf5f9732e,Qwen/Qwen2.5-1.5B-Instruct,math,safe_margin,2,4,0.5,False,True,1,within_margin,3,3,0,0,0,,43790,43724.7
-horizon,amd-fcb3ee90f597982b,grpo,lora,cfg-0a36e5abf5f9732e,Qwen/Qwen2.5-1.5B-Instruct,math,safe_margin,2,4,0.5,False,True,40,unresolved,0,3,0,3,0,slurm_timeout,,
+horizon,amd-fcb3ee90f597982b,grpo,lora,cfg-0a36e5abf5f9732e,Qwen/Qwen2.5-1.5B-Instruct,math,safe_margin,2,4,0.5,False,True,40,within_margin,3,3,0,0,0,,46497,46367.3
 horizon,amd-fbca17ba60f60393,grpo,lora,cfg-792be3e27c84b0cb,Qwen/Qwen2.5-1.5B-Instruct,math,one_step_unsafe,2,16,0.8,False,True,1,memory_failure,3,3,0,0,3,generation_wakeup_oom;update_weights_oom,,
 horizon,amd-e4a683826958d34f,grpo,lora,cfg-792be3e27c84b0cb,Qwen/Qwen2.5-1.5B-Instruct,math,one_step_unsafe,2,16,0.8,False,True,40,memory_failure,3,3,0,0,3,generation_wakeup_oom;update_weights_oom,,
 horizon,amd-84b70d775ddcd1ee,grpo,lora,cfg-872fe55d8f69b30c,Qwen/Qwen2.5-1.5B-Instruct,math,near_boundary,2,4,0.65,False,True,1,within_margin,3,3,0,0,0,,53789,53529.3
-horizon,amd-522b467a9db34561,grpo,lora,cfg-872fe55d8f69b30c,Qwen/Qwen2.5-1.5B-Instruct,math,near_boundary,2,4,0.65,False,True,40,unresolved,0,3,0,3,0,slurm_timeout,,
+horizon,amd-522b467a9db34561,grpo,lora,cfg-872fe55d8f69b30c,Qwen/Qwen2.5-1.5B-Instruct,math,near_boundary,2,4,0.65,False,True,40,within_margin,3,3,0,0,0,,56478,56354.7
 horizon,amd-353177607b5c6e35,grpo,lora,cfg-967e29810f12167f,Qwen/Qwen2.5-3B-Instruct,gsm8k,one_step_unsafe,2,16,0.8,False,True,1,memory_failure,3,3,0,0,3,generation_wakeup_oom;update_weights_oom,,
 horizon,amd-03879f9b6ce7cf6c,grpo,lora,cfg-967e29810f12167f,Qwen/Qwen2.5-3B-Instruct,gsm8k,one_step_unsafe,2,16,0.8,False,True,40,memory_failure,3,3,0,0,3,generation_wakeup_oom,,
 horizon,amd-d98faa8ea1e5767e,grpo,lora,cfg-c38f036ca97204f7,Qwen/Qwen2.5-3B-Instruct,gsm8k,safe_margin,2,16,0.5,False,True,1,within_margin,3,3,0,0,0,,49064,48836.0

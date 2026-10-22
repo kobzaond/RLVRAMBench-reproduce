@@ -1,7 +1,7 @@
 source_configuration_id,model,workload,level,gpu_count,actor_micro_batch,reservation,parameter_offload,state_release,a100_label,mi250x_label,a100_failure_stages,mi250x_failure_stages,a100_max_completed_peak_mib,mi250x_max_completed_peak_mib,a100_non_reservation_mib,mi250x_non_reservation_mib,mi250x_eligible,mi250x_planned
 cr-mistral-7b-math-c3-4gpu,Mistral-7B-v0.3,math,c3,4,16,0.7,False,True,memory_failure,within_margin,startup admission:3,,,60936,,15072,3,3
 cr-mistral-7b-math-c3-2gpu,Mistral-7B-v0.3,math,c3,2,16,0.7,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
-cr-mistral-7b-gsm8k-c3-4gpu,Mistral-7B-v0.3,gsm8k,c3,4,16,0.7,False,True,memory_failure,unresolved,startup admission:3,,,60920,,15056,2,3
+cr-mistral-7b-gsm8k-c3-4gpu,Mistral-7B-v0.3,gsm8k,c3,4,16,0.7,False,True,memory_failure,within_margin,startup admission:3,,,60920,,15056,3,3
 cr-mistral-7b-gsm8k-c3-2gpu,Mistral-7B-v0.3,gsm8k,c3,2,16,0.7,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
 cr-mistral-7b-math-c2-2gpu,Mistral-7B-v0.3,math,c2,2,8,0.6,False,True,memory_failure,within_margin,startup admission:3,,,59631,,20319,3,3
 cr-mistral-7b-math-c2-4gpu,Mistral-7B-v0.3,math,c2,4,8,0.6,False,True,above_margin,within_margin,,,39808.0,54407,15232,15095,3,3

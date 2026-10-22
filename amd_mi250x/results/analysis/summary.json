@@ -1,22 +1,20 @@
 {
   "trial_states": {
     "hardware_transfer/within_margin": 207,
-    "larger_models/within_margin": 56,
+    "larger_models/within_margin": 57,
     "hardware_transfer/memory_failure": 41,
     "reservation_sweep/memory_failure": 24,
+    "horizon/within_margin": 24,
     "reservation_sweep/within_margin": 22,
     "hardware_transfer/above_margin": 21,
     "algorithm_adaptation/within_margin": 21,
-    "horizon/within_margin": 18,
     "larger_models/memory_failure": 12,
     "horizon/memory_failure": 12,
     "algorithm_adaptation/memory_failure": 9,
     "algorithm_adaptation/above_margin": 6,
-    "horizon/other_failure": 6,
     "larger_models/above_margin": 3,
     "reservation_sweep/above_margin": 2,
-    "hardware_transfer/other_failure": 1,
-    "larger_models/other_failure": 1
+    "hardware_transfer/other_failure": 1
   },
   "failure_modes": {
     "generation_wakeup_oom": 67,
@@ -51,21 +49,20 @@
   },
   "larger_models": {
     "configurations": 24,
-    "resolved_on_both": 23,
+    "resolved_on_both": 24,
     "label_agreement": 9,
     "confusion_a100_to_mi250x": {
       "above_margin->within_margin": 3,
       "memory_failure->above_margin": 1,
       "memory_failure->memory_failure": 4,
-      "memory_failure->unresolved": 1,
-      "memory_failure->within_margin": 10,
+      "memory_failure->within_margin": 11,
       "within_margin->within_margin": 5
     },
     "copied_a100_approvals": 5,
     "copied_approvals_failing_on_mi250x": 0,
     "copied_approvals_above_margin_on_mi250x": 0,
-    "mi250x_within_margin_rejected_by_copy": 13,
-    "mi250x_within_margin": 18,
+    "mi250x_within_margin_rejected_by_copy": 14,
+    "mi250x_within_margin": 19,
     "median_non_reservation_load_mib": {
       "a100": 14283.0,
       "mi250x": 13619.5,
@@ -81,10 +78,10 @@
   },
   "horizon": {
     "pairs": 18,
-    "resolved_pairs": 12,
-    "agreeing_pairs": 12,
+    "resolved_pairs": 18,
+    "agreeing_pairs": 18,
     "disagreements": [],
-    "mean_long_minus_screen_peak_mib": 2038.7,
-    "max_long_minus_screen_peak_mib": 2483.0
+    "mean_long_minus_screen_peak_mib": 2386.3,
+    "max_long_minus_screen_peak_mib": 3138.0
   }
 }
