@@ -1,13 +1,13 @@
 {
   "schema_version": "rlvrambench-submission-1",
-  "release": "electronics-submission-2026-10-22",
+  "release": "electronics-submission-2026-10-22-r2",
   "date": "2026-10-22",
   "dataset_repository": "kobzaond/RLVRAMBench",
-  "dataset_revision": "electronics-submission-2026-10-22",
+  "dataset_revision": "electronics-submission-2026-10-22-r2",
   "dataset_main_contains_submission": true,
   "dataset_doi": "10.57967/hf/10780",
   "code_repository": "kobzaond/RLVRAMBench-reproduce",
-  "code_revision": "electronics-submission-2026-10-22",
+  "code_revision": "electronics-submission-2026-10-22-r2",
   "manuscript_branch": "electronics-revision-mi250x",
   "reviewed_manuscript_base_commit": "7bc9eb9",
   "historical_reconstruction_contract": "release.json in the reproduction code repository",
@@ -65,5 +65,7 @@
   "dataset_views": 29,
   "new_gpu_experiments_during_release_preparation": false,
   "model_weights_included": false,
-  "optimizer_checkpoints_included": false
+  "optimizer_checkpoints_included": false,
+  "supersedes_release": "electronics-submission-2026-10-22",
+  "revision_reason": "Exclude Hugging Face server-managed .gitattributes from dataset checksum manifests; scientific data and results unchanged."
 }
