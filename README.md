@@ -15,7 +15,14 @@ This repository separates the reproduction code from the larger research
 workspace. The benchmark evidence is hosted at
 <https://huggingface.co/datasets/kobzaond/RLVRAMBench>.
 Both repositories are public as of 2026-09-14. Downloads require neither
-authentication nor access approval. No DOI has been generated.
+authentication nor access approval. The dataset DOI is `10.57967/hf/10780`.
+
+**Electronics submission version:** tag `electronics-submission-2026-10-22`
+in this repository and on the Hugging Face dataset. Hugging Face `main`
+contains this version, including the paper, all four raw-evidence archives,
+curated results, and validation reports. See
+[the submission release guide](docs/SUBMISSION_RELEASE.md) for downloads,
+archive coverage, and the complete CPU reconstruction commands.
 
 ## Start with the benchmark
 
@@ -220,9 +227,10 @@ That report records the authors' relocated raw-evidence reconstruction
 (50,058 evidence files, five CSVs byte-identical, summary identical apart
 from `raw_root`/`source_snapshot`). Repeating that reconstruction requires
 the raw per-block evidence under `output/offload_factorial/`, which is not
-part of this repository or the pinned Sept-17 release archive.
-This repository therefore checks the curated tables and the recorded hashes.
-It does not re-derive `slots.csv` from raw records. The collection and
+part of the pinned Sept-17 archive. The submission dataset now supplies
+that evidence separately as `releases/RLVRAMBench-offload-raw-20261022.tar.zst`,
+including the frozen source and accounting. The submission release guide
+shows how to re-derive `slots.csv` and the other five outputs. The collection and
 analysis modules (`memory_tuner/collect_offload_factorial.py`,
 `offload_factorial_analysis.py`, `offload_factorial_protocol.py`,
 `offload_factorial_runtime.py`) and their unit tests are included for that
@@ -269,7 +277,8 @@ cluster paths are not included.
 `electronics-full-20261021-a53af63.tar.zst`
 (SHA-256 `f70f639fc0c991e79b9e140d4c26482a9c3490000abe3c5acf6bc62fb7a599bf`).
 It is not part of this repository, and its historical part also needs
-`profiles/standard_grpo/` tables from that archive.
+`profiles/standard_grpo/` tables from that archive. The submission dataset
+publishes the complete archive in `releases/`; no author contact is needed.
 
 ## Cross-accelerator replication (AMD MI250X)
 

@@ -1,0 +1,69 @@
+{
+  "schema_version": "rlvrambench-submission-1",
+  "release": "electronics-submission-2026-10-22",
+  "date": "2026-10-22",
+  "dataset_repository": "kobzaond/RLVRAMBench",
+  "dataset_revision": "electronics-submission-2026-10-22",
+  "dataset_main_contains_submission": true,
+  "dataset_doi": "10.57967/hf/10780",
+  "code_repository": "kobzaond/RLVRAMBench-reproduce",
+  "code_revision": "electronics-submission-2026-10-22",
+  "manuscript_branch": "electronics-revision-mi250x",
+  "reviewed_manuscript_base_commit": "7bc9eb9",
+  "historical_reconstruction_contract": "release.json in the reproduction code repository",
+  "archives": [
+    {
+      "path": "releases/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst",
+      "sha256": "3dd90eaca2f2d9b5eceb955fe67b6a3528210a6bb9bd7684ac3eb3c36d84a5ab",
+      "size_bytes": 210126067,
+      "cohort": "historical_a100"
+    },
+    {
+      "path": "releases/RLVRAMBench-offload-raw-20261022.tar.zst",
+      "sha256": "ac2c69bae8d7e0af07e27de9c182e095fa77a28f5b0d0fc906fbfff302040041",
+      "size_bytes": 33356651,
+      "cohort": "independent_offload_a100"
+    },
+    {
+      "path": "releases/electronics-full-20261021-a53af63.tar.zst",
+      "sha256": "f70f639fc0c991e79b9e140d4c26482a9c3490000abe3c5acf6bc62fb7a599bf",
+      "size_bytes": 74609840,
+      "cohort": "electronics_followups_a100"
+    },
+    {
+      "path": "releases/RLVRAMBench-mi250x-raw-20261022.tar.zst",
+      "sha256": "400f75b1c3015d9903b3e898b0ed2dc3771b07363bff7f8761aec0c798ed67ae",
+      "size_bytes": 58527374,
+      "cohort": "mi250x"
+    }
+  ],
+  "mi250x": {
+    "planned_slots": 462,
+    "eligible_outcomes": 461,
+    "completions": 363,
+    "memory_failures": 98,
+    "ineligible": 1,
+    "configurations": 154,
+    "hardware_replay_configurations": 90,
+    "hardware_replay_resolved": 89,
+    "hardware_replay_agreements": 79,
+    "hardware_replay_unresolved": 1,
+    "started_jobs": 510,
+    "executions_including_restart": 511,
+    "runtime_amendments": 4
+  },
+  "a100_formal_followups": {
+    "runs": 312,
+    "within_margin": 258,
+    "above_margin": 17,
+    "memory_failure": 33,
+    "ineligible": 4
+  },
+  "native_llmem_pairs": 24,
+  "benchmark_queries": 400,
+  "distinct_benchmark_targets": 94,
+  "dataset_views": 29,
+  "new_gpu_experiments_during_release_preparation": false,
+  "model_weights_included": false,
+  "optimizer_checkpoints_included": false
+}
