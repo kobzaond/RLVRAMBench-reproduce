@@ -1,0 +1,1308 @@
+{
+  "analytic": {
+    "calibrated_overhead_constants_mib": {
+      "fallback_tasks": 0,
+      "fitted_tasks": 52,
+      "max": 6709.801,
+      "median": 3189.401,
+      "min": -15846.815,
+      "tasks": 52
+    },
+    "completed_configurations_scored": 251,
+    "configuration_peak_error_mib": {
+      "analytic_bf16": {
+        "actor_update": {
+          "max_error_mib": 38648.324382,
+          "mean_absolute_error_mib": 7388.296998,
+          "mean_signed_error_mib": 4523.644213,
+          "median_absolute_error_mib": 3963.335938,
+          "min_error_mib": -5912.351237,
+          "n": 232,
+          "share_underestimated": 0.482759
+        },
+        "completed_config_label_agreement": "173/235",
+        "generation": {
+          "max_error_mib": -557.25,
+          "mean_absolute_error_mib": 3813.633041,
+          "mean_signed_error_mib": -3813.633041,
+          "median_absolute_error_mib": 3620.852865,
+          "min_error_mib": -6622.186198,
+          "n": 232,
+          "share_underestimated": 1.0
+        },
+        "peak": {
+          "max_error_mib": 24435.950684,
+          "mean_absolute_error_mib": 4648.220728,
+          "mean_signed_error_mib": -1768.598646,
+          "median_absolute_error_mib": 3473.800781,
+          "min_error_mib": -9855.873047,
+          "n": 251,
+          "share_underestimated": 0.812749
+        },
+        "peak_by_model": {
+          "granite33_2b": {
+            "max_error_mib": 1796.199219,
+            "mean_absolute_error_mib": 3203.859487,
+            "mean_signed_error_mib": -3019.493862,
+            "median_absolute_error_mib": 3375.800781,
+            "min_error_mib": -5685.800781,
+            "n": 70,
+            "share_underestimated": 0.942857
+          },
+          "mistral": {
+            "max_error_mib": -7719.873047,
+            "mean_absolute_error_mib": 8579.073047,
+            "mean_signed_error_mib": -8579.073047,
+            "median_absolute_error_mib": 8239.873047,
+            "min_error_mib": -9855.873047,
+            "n": 5,
+            "share_underestimated": 1.0
+          },
+          "phi4_mini": {
+            "max_error_mib": 18940.81543,
+            "mean_absolute_error_mib": 6780.97742,
+            "mean_signed_error_mib": 65.302642,
+            "median_absolute_error_mib": 4907.43457,
+            "min_error_mib": -7501.43457,
+            "n": 74,
+            "share_underestimated": 0.756757
+          },
+          "qwen25_1p5b": {
+            "max_error_mib": 24435.950684,
+            "mean_absolute_error_mib": 5414.766439,
+            "mean_signed_error_mib": -81.465983,
+            "median_absolute_error_mib": 3607.5625,
+            "min_error_mib": -5875.174316,
+            "n": 12,
+            "share_underestimated": 0.666667
+          },
+          "qwen25_3b": {
+            "max_error_mib": 8431.480469,
+            "mean_absolute_error_mib": 3384.90239,
+            "mean_signed_error_mib": -1727.102167,
+            "median_absolute_error_mib": 3302.019531,
+            "min_error_mib": -6548.019531,
+            "n": 84,
+            "share_underestimated": 0.75
+          },
+          "qwen25_7b": {
+            "max_error_mib": -7629.091064,
+            "mean_absolute_error_mib": 8072.757731,
+            "mean_signed_error_mib": -8072.757731,
+            "median_absolute_error_mib": 7972.091064,
+            "min_error_mib": -8979.091064,
+            "n": 6,
+            "share_underestimated": 1.0
+          }
+        },
+        "weight_sync": {
+          "max_error_mib": 3593.532552,
+          "mean_absolute_error_mib": 3435.924438,
+          "mean_signed_error_mib": -3253.906748,
+          "median_absolute_error_mib": 3153.800781,
+          "min_error_mib": -11314.686198,
+          "n": 232,
+          "share_underestimated": 0.965517
+        }
+      },
+      "analytic_fp32_master": {
+        "actor_update": {
+          "max_error_mib": 40477.482096,
+          "mean_absolute_error_mib": 8121.372578,
+          "mean_signed_error_mib": 7330.827635,
+          "median_absolute_error_mib": 3372.75944,
+          "min_error_mib": -3194.240885,
+          "n": 232,
+          "share_underestimated": 0.271552
+        },
+        "completed_config_label_agreement": "181/235",
+        "generation": {
+          "max_error_mib": -167.205729,
+          "mean_absolute_error_mib": 1418.87887,
+          "mean_signed_error_mib": -1418.87887,
+          "median_absolute_error_mib": 1147.65625,
+          "min_error_mib": -4424.098633,
+          "n": 232,
+          "share_underestimated": 1.0
+        },
+        "peak": {
+          "max_error_mib": 25908.151367,
+          "mean_absolute_error_mib": 3057.741818,
+          "mean_signed_error_mib": 1086.942492,
+          "median_absolute_error_mib": 1091.039062,
+          "min_error_mib": -6399.746094,
+          "n": 251,
+          "share_underestimated": 0.737052
+        },
+        "peak_by_model": {
+          "granite33_2b": {
+            "max_error_mib": 4212.371094,
+            "mean_absolute_error_mib": 1178.775,
+            "mean_signed_error_mib": -706.87221,
+            "median_absolute_error_mib": 973.628906,
+            "min_error_mib": -3269.628906,
+            "n": 70,
+            "share_underestimated": 0.9
+          },
+          "mistral": {
+            "max_error_mib": -4263.746094,
+            "mean_absolute_error_mib": 5122.946094,
+            "mean_signed_error_mib": -5122.946094,
+            "median_absolute_error_mib": 4783.746094,
+            "min_error_mib": -6399.746094,
+            "n": 5,
+            "share_underestimated": 1.0
+          },
+          "phi4_mini": {
+            "max_error_mib": 22599.130859,
+            "mean_absolute_error_mib": 5382.091243,
+            "mean_signed_error_mib": 3575.307987,
+            "median_absolute_error_mib": 1335.119141,
+            "min_error_mib": -3843.119141,
+            "n": 74,
+            "share_underestimated": 0.648649
+          },
+          "qwen25_1p5b": {
+            "max_error_mib": 25908.151367,
+            "mean_absolute_error_mib": 4924.032878,
+            "mean_signed_error_mib": 1390.734701,
+            "median_absolute_error_mib": 3987.151367,
+            "min_error_mib": -4402.973633,
+            "n": 12,
+            "share_underestimated": 0.666667
+          },
+          "qwen25_3b": {
+            "max_error_mib": 11374.460938,
+            "mean_absolute_error_mib": 2087.535435,
+            "mean_signed_error_mib": 1110.771856,
+            "median_absolute_error_mib": 707.615234,
+            "min_error_mib": -3605.039062,
+            "n": 84,
+            "share_underestimated": 0.654762
+          },
+          "qwen25_7b": {
+            "max_error_mib": -3997.682129,
+            "mean_absolute_error_mib": 4441.348796,
+            "mean_signed_error_mib": -4441.348796,
+            "median_absolute_error_mib": 4340.682129,
+            "min_error_mib": -5347.682129,
+            "n": 6,
+            "share_underestimated": 1.0
+          }
+        },
+        "weight_sync": {
+          "max_error_mib": 6009.704427,
+          "mean_absolute_error_mib": 944.73793,
+          "mean_signed_error_mib": -446.723327,
+          "median_absolute_error_mib": 717.628906,
+          "min_error_mib": -8371.705729,
+          "n": 232,
+          "share_underestimated": 0.831897
+        }
+      }
+    },
+    "failing_configurations": 65,
+    "failing_predicted": {
+      "analytic_bf16": {
+        "above_margin": 12,
+        "memory_failure": 21,
+        "within_margin": 32
+      },
+      "analytic_fp32_master": {
+        "above_margin": 0,
+        "memory_failure": 55,
+        "within_margin": 10
+      }
+    },
+    "failing_predicted_by_source": {
+      "analytic_bf16": {
+        "benchmark": {
+          "above_margin": 7,
+          "memory_failure": 15,
+          "within_margin": 6
+        },
+        "completion_replication": {
+          "above_margin": 2,
+          "memory_failure": 3,
+          "within_margin": 19
+        },
+        "decision": {
+          "above_margin": 2,
+          "memory_failure": 0,
+          "within_margin": 2
+        },
+        "estimation": {
+          "above_margin": 1,
+          "memory_failure": 3,
+          "within_margin": 2
+        },
+        "host_capacity": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 3
+        }
+      },
+      "analytic_fp32_master": {
+        "benchmark": {
+          "above_margin": 0,
+          "memory_failure": 28,
+          "within_margin": 0
+        },
+        "completion_replication": {
+          "above_margin": 0,
+          "memory_failure": 14,
+          "within_margin": 10
+        },
+        "decision": {
+          "above_margin": 0,
+          "memory_failure": 4,
+          "within_margin": 0
+        },
+        "estimation": {
+          "above_margin": 0,
+          "memory_failure": 6,
+          "within_margin": 0
+        },
+        "host_capacity": {
+          "above_margin": 0,
+          "memory_failure": 3,
+          "within_margin": 0
+        }
+      }
+    },
+    "figures": [
+      "analytic_predicted_vs_measured.pdf",
+      "analytic_predicted_vs_measured.png"
+    ],
+    "query_peak_error_mib": {
+      "analytic_bf16/all": {
+        "max_error_mib": 16742.81543,
+        "mean_absolute_error_mib": 3821.915696,
+        "mean_signed_error_mib": -1939.69909,
+        "median_absolute_error_mib": 3355.800781,
+        "min_error_mib": -7501.43457,
+        "n": 296,
+        "share_underestimated": 0.790541
+      },
+      "analytic_bf16/gpu_count_transfer": {
+        "max_error_mib": 16547.657715,
+        "mean_absolute_error_mib": 4235.437103,
+        "mean_signed_error_mib": -768.806366,
+        "median_absolute_error_mib": 3146.196533,
+        "min_error_mib": -5553.800781,
+        "n": 32,
+        "share_underestimated": 0.8125
+      },
+      "analytic_bf16/horizon_transfer": {
+        "max_error_mib": 16742.81543,
+        "mean_absolute_error_mib": 7416.462891,
+        "mean_signed_error_mib": 954.944824,
+        "median_absolute_error_mib": 4774.617676,
+        "min_error_mib": -5351.43457,
+        "n": 4,
+        "share_underestimated": 0.75
+      },
+      "analytic_bf16/model_transfer": {
+        "max_error_mib": 14888.81543,
+        "mean_absolute_error_mib": 3715.720027,
+        "mean_signed_error_mib": -2128.341947,
+        "median_absolute_error_mib": 3370.910156,
+        "min_error_mib": -7501.43457,
+        "n": 104,
+        "share_underestimated": 0.788462
+      },
+      "analytic_bf16/workload_transfer": {
+        "max_error_mib": 14888.81543,
+        "mean_absolute_error_mib": 3715.720027,
+        "mean_signed_error_mib": -2128.341947,
+        "median_absolute_error_mib": 3370.910156,
+        "min_error_mib": -7501.43457,
+        "n": 156,
+        "share_underestimated": 0.788462
+      },
+      "analytic_fp32_master/all": {
+        "max_error_mib": 20401.130859,
+        "mean_absolute_error_mib": 2517.694567,
+        "mean_signed_error_mib": 931.329464,
+        "median_absolute_error_mib": 1141.079102,
+        "min_error_mib": -3843.119141,
+        "n": 296,
+        "share_underestimated": 0.655405
+      },
+      "analytic_fp32_master/gpu_count_transfer": {
+        "max_error_mib": 18547.130859,
+        "mean_absolute_error_mib": 2937.017273,
+        "mean_signed_error_mib": 1354.775452,
+        "median_absolute_error_mib": 1100.374023,
+        "min_error_mib": -3137.628906,
+        "n": 32,
+        "share_underestimated": 0.8125
+      },
+      "analytic_fp32_master/horizon_transfer": {
+        "max_error_mib": 20401.130859,
+        "mean_absolute_error_mib": 6208.376953,
+        "mean_signed_error_mib": 3992.188477,
+        "median_absolute_error_mib": 1737.374023,
+        "min_error_mib": -1781.628906,
+        "n": 4,
+        "share_underestimated": 0.75
+      },
+      "analytic_fp32_master/model_transfer": {
+        "max_error_mib": 18547.130859,
+        "mean_absolute_error_mib": 2409.305889,
+        "mean_signed_error_mib": 832.122897,
+        "median_absolute_error_mib": 1141.079102,
+        "min_error_mib": -3843.119141,
+        "n": 104,
+        "share_underestimated": 0.634615
+      },
+      "analytic_fp32_master/workload_transfer": {
+        "max_error_mib": 18547.130859,
+        "mean_absolute_error_mib": 2409.305889,
+        "mean_signed_error_mib": 832.122897,
+        "median_absolute_error_mib": 1141.079102,
+        "min_error_mib": -3843.119141,
+        "n": 156,
+        "share_underestimated": 0.634615
+      },
+      "calibrated_bf16/all": {
+        "max_error_mib": 19512.25,
+        "mean_absolute_error_mib": 2806.783382,
+        "mean_signed_error_mib": 21.175104,
+        "median_absolute_error_mib": 1777.67627,
+        "min_error_mib": -13175.008952,
+        "n": 296,
+        "share_underestimated": 0.628378
+      },
+      "calibrated_bf16/gpu_count_transfer": {
+        "max_error_mib": 11304.967285,
+        "mean_absolute_error_mib": 2893.92571,
+        "mean_signed_error_mib": 242.546743,
+        "median_absolute_error_mib": 1657.508952,
+        "min_error_mib": -13175.008952,
+        "n": 32,
+        "share_underestimated": 0.4375
+      },
+      "calibrated_bf16/horizon_transfer": {
+        "max_error_mib": 1488.0,
+        "mean_absolute_error_mib": 586.5,
+        "mean_signed_error_mib": 157.5,
+        "median_absolute_error_mib": 365.0,
+        "min_error_mib": -566.0,
+        "n": 4,
+        "share_underestimated": 0.75
+      },
+      "calibrated_bf16/model_transfer": {
+        "max_error_mib": 16882.216211,
+        "mean_absolute_error_mib": 2872.243588,
+        "mean_signed_error_mib": -20.419854,
+        "median_absolute_error_mib": 1994.033789,
+        "min_error_mib": -7138.790039,
+        "n": 104,
+        "share_underestimated": 0.586538
+      },
+      "calibrated_bf16/workload_transfer": {
+        "max_error_mib": 19512.25,
+        "mean_absolute_error_mib": 2802.198237,
+        "mean_signed_error_mib": -0.0,
+        "median_absolute_error_mib": 1852.53125,
+        "min_error_mib": -8059.5625,
+        "n": 156,
+        "share_underestimated": 0.692308
+      }
+    },
+    "score_comparison": [
+      {
+        "approved": 104,
+        "approved_above_margin": 12,
+        "approved_memory_failure": 6,
+        "approved_within_margin": 86,
+        "method": "analytic_bf16",
+        "queries": 144,
+        "rejected_within_margin": 2,
+        "target_above_margin": 16,
+        "target_memory_failure": 40,
+        "target_within_margin": 88,
+        "three_state_accuracy": 0.736111,
+        "track": "model_transfer",
+        "within_margin_approval_precision": 0.826923,
+        "within_margin_recall": 0.977273
+      },
+      {
+        "approved": 90,
+        "approved_above_margin": 4,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 86,
+        "method": "analytic_fp32_master",
+        "queries": 144,
+        "rejected_within_margin": 2,
+        "target_above_margin": 16,
+        "target_memory_failure": 40,
+        "target_within_margin": 88,
+        "three_state_accuracy": 0.930556,
+        "track": "model_transfer",
+        "within_margin_approval_precision": 0.955556,
+        "within_margin_recall": 0.977273
+      },
+      {
+        "approved": 93,
+        "approved_above_margin": 6,
+        "approved_memory_failure": 1,
+        "approved_within_margin": 86,
+        "method": "calibrated_bf16",
+        "queries": 144,
+        "rejected_within_margin": 2,
+        "target_above_margin": 16,
+        "target_memory_failure": 40,
+        "target_within_margin": 88,
+        "three_state_accuracy": 0.861111,
+        "track": "model_transfer",
+        "within_margin_approval_precision": 0.924731,
+        "within_margin_recall": 0.977273
+      },
+      {
+        "approved": 88,
+        "approved_above_margin": 8,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 80,
+        "method": "source_label",
+        "queries": 144,
+        "rejected_within_margin": 8,
+        "target_above_margin": 16,
+        "target_memory_failure": 40,
+        "target_within_margin": 88,
+        "three_state_accuracy": 0.777778,
+        "track": "model_transfer",
+        "within_margin_approval_precision": 0.909091,
+        "within_margin_recall": 0.909091
+      },
+      {
+        "approved": 144,
+        "approved_above_margin": 16,
+        "approved_memory_failure": 40,
+        "approved_within_margin": 88,
+        "method": "always_approve",
+        "queries": 144,
+        "rejected_within_margin": 0,
+        "target_above_margin": 16,
+        "target_memory_failure": 40,
+        "target_within_margin": 88,
+        "three_state_accuracy": 0.611111,
+        "track": "model_transfer",
+        "within_margin_approval_precision": 0.611111,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 0,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 0,
+        "method": "always_reject",
+        "queries": 144,
+        "rejected_within_margin": 88,
+        "target_above_margin": 16,
+        "target_memory_failure": 40,
+        "target_within_margin": 88,
+        "three_state_accuracy": 0.277778,
+        "track": "model_transfer",
+        "within_margin_approval_precision": null,
+        "within_margin_recall": 0.0
+      },
+      {
+        "approved": 156,
+        "approved_above_margin": 18,
+        "approved_memory_failure": 9,
+        "approved_within_margin": 129,
+        "method": "analytic_bf16",
+        "queries": 216,
+        "rejected_within_margin": 3,
+        "target_above_margin": 24,
+        "target_memory_failure": 60,
+        "target_within_margin": 132,
+        "three_state_accuracy": 0.736111,
+        "track": "workload_transfer",
+        "within_margin_approval_precision": 0.826923,
+        "within_margin_recall": 0.977273
+      },
+      {
+        "approved": 135,
+        "approved_above_margin": 6,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 129,
+        "method": "analytic_fp32_master",
+        "queries": 216,
+        "rejected_within_margin": 3,
+        "target_above_margin": 24,
+        "target_memory_failure": 60,
+        "target_within_margin": 132,
+        "three_state_accuracy": 0.930556,
+        "track": "workload_transfer",
+        "within_margin_approval_precision": 0.955556,
+        "within_margin_recall": 0.977273
+      },
+      {
+        "approved": 138,
+        "approved_above_margin": 4,
+        "approved_memory_failure": 5,
+        "approved_within_margin": 129,
+        "method": "calibrated_bf16",
+        "queries": 216,
+        "rejected_within_margin": 3,
+        "target_above_margin": 24,
+        "target_memory_failure": 60,
+        "target_within_margin": 132,
+        "three_state_accuracy": 0.87963,
+        "track": "workload_transfer",
+        "within_margin_approval_precision": 0.934783,
+        "within_margin_recall": 0.977273
+      },
+      {
+        "approved": 132,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 132,
+        "method": "source_label",
+        "queries": 216,
+        "rejected_within_margin": 0,
+        "target_above_margin": 24,
+        "target_memory_failure": 60,
+        "target_within_margin": 132,
+        "three_state_accuracy": 1.0,
+        "track": "workload_transfer",
+        "within_margin_approval_precision": 1.0,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 216,
+        "approved_above_margin": 24,
+        "approved_memory_failure": 60,
+        "approved_within_margin": 132,
+        "method": "always_approve",
+        "queries": 216,
+        "rejected_within_margin": 0,
+        "target_above_margin": 24,
+        "target_memory_failure": 60,
+        "target_within_margin": 132,
+        "three_state_accuracy": 0.611111,
+        "track": "workload_transfer",
+        "within_margin_approval_precision": 0.611111,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 0,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 0,
+        "method": "always_reject",
+        "queries": 216,
+        "rejected_within_margin": 132,
+        "target_above_margin": 24,
+        "target_memory_failure": 60,
+        "target_within_margin": 132,
+        "three_state_accuracy": 0.277778,
+        "track": "workload_transfer",
+        "within_margin_approval_precision": null,
+        "within_margin_recall": 0.0
+      },
+      {
+        "approved": 27,
+        "approved_above_margin": 4,
+        "approved_memory_failure": 1,
+        "approved_within_margin": 22,
+        "method": "analytic_bf16",
+        "queries": 36,
+        "rejected_within_margin": 4,
+        "target_above_margin": 6,
+        "target_memory_failure": 4,
+        "target_within_margin": 26,
+        "three_state_accuracy": 0.666667,
+        "track": "gpu_count_transfer",
+        "within_margin_approval_precision": 0.814815,
+        "within_margin_recall": 0.846154
+      },
+      {
+        "approved": 23,
+        "approved_above_margin": 1,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 22,
+        "method": "analytic_fp32_master",
+        "queries": 36,
+        "rejected_within_margin": 4,
+        "target_above_margin": 6,
+        "target_memory_failure": 4,
+        "target_within_margin": 26,
+        "three_state_accuracy": 0.805556,
+        "track": "gpu_count_transfer",
+        "within_margin_approval_precision": 0.956522,
+        "within_margin_recall": 0.846154
+      },
+      {
+        "approved": 23,
+        "approved_above_margin": 1,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 22,
+        "method": "calibrated_bf16",
+        "queries": 36,
+        "rejected_within_margin": 4,
+        "target_above_margin": 6,
+        "target_memory_failure": 4,
+        "target_within_margin": 26,
+        "three_state_accuracy": 0.722222,
+        "track": "gpu_count_transfer",
+        "within_margin_approval_precision": 0.956522,
+        "within_margin_recall": 0.846154
+      },
+      {
+        "approved": 26,
+        "approved_above_margin": 4,
+        "approved_memory_failure": 2,
+        "approved_within_margin": 20,
+        "method": "source_label",
+        "queries": 36,
+        "rejected_within_margin": 6,
+        "target_above_margin": 6,
+        "target_memory_failure": 4,
+        "target_within_margin": 26,
+        "three_state_accuracy": 0.555556,
+        "track": "gpu_count_transfer",
+        "within_margin_approval_precision": 0.769231,
+        "within_margin_recall": 0.769231
+      },
+      {
+        "approved": 36,
+        "approved_above_margin": 6,
+        "approved_memory_failure": 4,
+        "approved_within_margin": 26,
+        "method": "always_approve",
+        "queries": 36,
+        "rejected_within_margin": 0,
+        "target_above_margin": 6,
+        "target_memory_failure": 4,
+        "target_within_margin": 26,
+        "three_state_accuracy": 0.722222,
+        "track": "gpu_count_transfer",
+        "within_margin_approval_precision": 0.722222,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 0,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 0,
+        "method": "always_reject",
+        "queries": 36,
+        "rejected_within_margin": 26,
+        "target_above_margin": 6,
+        "target_memory_failure": 4,
+        "target_within_margin": 26,
+        "three_state_accuracy": 0.111111,
+        "track": "gpu_count_transfer",
+        "within_margin_approval_precision": null,
+        "within_margin_recall": 0.0
+      },
+      {
+        "approved": 3,
+        "approved_above_margin": 1,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 2,
+        "method": "analytic_bf16",
+        "queries": 4,
+        "rejected_within_margin": 1,
+        "target_above_margin": 1,
+        "target_memory_failure": 0,
+        "target_within_margin": 3,
+        "three_state_accuracy": 0.5,
+        "track": "horizon_transfer",
+        "within_margin_approval_precision": 0.666667,
+        "within_margin_recall": 0.666667
+      },
+      {
+        "approved": 3,
+        "approved_above_margin": 1,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 2,
+        "method": "analytic_fp32_master",
+        "queries": 4,
+        "rejected_within_margin": 1,
+        "target_above_margin": 1,
+        "target_memory_failure": 0,
+        "target_within_margin": 3,
+        "three_state_accuracy": 0.5,
+        "track": "horizon_transfer",
+        "within_margin_approval_precision": 0.666667,
+        "within_margin_recall": 0.666667
+      },
+      {
+        "approved": 3,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 3,
+        "method": "calibrated_bf16",
+        "queries": 4,
+        "rejected_within_margin": 0,
+        "target_above_margin": 1,
+        "target_memory_failure": 0,
+        "target_within_margin": 3,
+        "three_state_accuracy": 1.0,
+        "track": "horizon_transfer",
+        "within_margin_approval_precision": 1.0,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 3,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 3,
+        "method": "source_label",
+        "queries": 4,
+        "rejected_within_margin": 0,
+        "target_above_margin": 1,
+        "target_memory_failure": 0,
+        "target_within_margin": 3,
+        "three_state_accuracy": 1.0,
+        "track": "horizon_transfer",
+        "within_margin_approval_precision": 1.0,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 4,
+        "approved_above_margin": 1,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 3,
+        "method": "always_approve",
+        "queries": 4,
+        "rejected_within_margin": 0,
+        "target_above_margin": 1,
+        "target_memory_failure": 0,
+        "target_within_margin": 3,
+        "three_state_accuracy": 0.75,
+        "track": "horizon_transfer",
+        "within_margin_approval_precision": 0.75,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 0,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 0,
+        "method": "always_reject",
+        "queries": 4,
+        "rejected_within_margin": 3,
+        "target_above_margin": 1,
+        "target_memory_failure": 0,
+        "target_within_margin": 3,
+        "three_state_accuracy": 0.0,
+        "track": "horizon_transfer",
+        "within_margin_approval_precision": null,
+        "within_margin_recall": 0.0
+      },
+      {
+        "approved": 290,
+        "approved_above_margin": 35,
+        "approved_memory_failure": 16,
+        "approved_within_margin": 239,
+        "method": "analytic_bf16",
+        "queries": 400,
+        "rejected_within_margin": 10,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.7275,
+        "track": "all",
+        "within_margin_approval_precision": 0.824138,
+        "within_margin_recall": 0.959839
+      },
+      {
+        "approved": 251,
+        "approved_above_margin": 12,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 239,
+        "method": "analytic_fp32_master",
+        "queries": 400,
+        "rejected_within_margin": 10,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.915,
+        "track": "all",
+        "within_margin_approval_precision": 0.952191,
+        "within_margin_recall": 0.959839
+      },
+      {
+        "approved": 257,
+        "approved_above_margin": 11,
+        "approved_memory_failure": 6,
+        "approved_within_margin": 240,
+        "method": "calibrated_bf16",
+        "queries": 400,
+        "rejected_within_margin": 9,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.86,
+        "track": "all",
+        "within_margin_approval_precision": 0.933852,
+        "within_margin_recall": 0.963855
+      },
+      {
+        "approved": 249,
+        "approved_above_margin": 12,
+        "approved_memory_failure": 2,
+        "approved_within_margin": 235,
+        "method": "source_label",
+        "queries": 400,
+        "rejected_within_margin": 14,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.88,
+        "track": "all",
+        "within_margin_approval_precision": 0.943775,
+        "within_margin_recall": 0.943775
+      },
+      {
+        "approved": 400,
+        "approved_above_margin": 47,
+        "approved_memory_failure": 104,
+        "approved_within_margin": 249,
+        "method": "always_approve",
+        "queries": 400,
+        "rejected_within_margin": 0,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.6225,
+        "track": "all",
+        "within_margin_approval_precision": 0.6225,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 0,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 0,
+        "method": "always_reject",
+        "queries": 400,
+        "rejected_within_margin": 249,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.26,
+        "track": "all",
+        "within_margin_approval_precision": null,
+        "within_margin_recall": 0.0
+      }
+    ],
+    "variants": {
+      "analytic_bf16": "a priori: bf16 FSDP weight shard, 1,024 MiB overhead; target settings only",
+      "analytic_fp32_master": "a priori alternative: fp32 FSDP master-weight shard; target settings only",
+      "calibrated_bf16": "analytic_bf16 with the overhead constant replaced by the mean residual of the task's completed source configurations (source measurements only)"
+    }
+  },
+  "deepspeed": {
+    "called_for_real": true,
+    "completed_configurations": 251,
+    "deepspeed_version": "0.19.8",
+    "estimator_sources": {
+      "stage3": {
+        "file": "deepspeed/runtime/zero/stage3.py",
+        "functions": {
+          "estimate_zero3_model_states_mem_needs": 4016,
+          "estimate_zero3_model_states_mem_needs_all_cold": 4099
+        },
+        "sha256": "4ff3fdb4cbabaddfeaa866e43785b49a69cdfe35db4e0ceda6f1b432b6fbf9d7"
+      },
+      "stage_1_and_2": {
+        "file": "deepspeed/runtime/zero/stage_1_and_2.py",
+        "functions": {
+          "estimate_zero2_model_states_mem_needs": 4017,
+          "estimate_zero2_model_states_mem_needs_all_cold": 4073
+        },
+        "sha256": "752235af95d0de6f5fe6322b13409c736abe9d0c77be24f85d87489cc41489cb"
+      }
+    },
+    "failing_configurations": 65,
+    "peak_errors": {
+      "ds2_full": {
+        "completed_label_agreement": "168/235",
+        "failing_configs_predicted": {
+          "above_margin": 10,
+          "memory_failure": 33,
+          "within_margin": 22
+        },
+        "whole_run_peak": {
+          "max_error_mib": 14836.316162,
+          "mean_absolute_error_mib": 7152.078613,
+          "mean_signed_error_mib": -2509.194957,
+          "median_absolute_error_mib": 5552.785156,
+          "min_error_mib": -24759.79248,
+          "n": 251,
+          "share_underestimated": 0.605578
+        }
+      },
+      "ds2_full+reservation": {
+        "completed_label_agreement": "6/235",
+        "failing_configs_predicted": {
+          "above_margin": 0,
+          "memory_failure": 65,
+          "within_margin": 0
+        },
+        "whole_run_peak": {
+          "max_error_mib": 33268.316162,
+          "mean_absolute_error_mib": 22768.510223,
+          "mean_signed_error_mib": 22768.510223,
+          "median_absolute_error_mib": 23560.785156,
+          "min_error_mib": 4160.20752,
+          "n": 251,
+          "share_underestimated": 0.0
+        }
+      },
+      "ds3_full": {
+        "completed_label_agreement": "191/235",
+        "failing_configs_predicted": {
+          "above_margin": 0,
+          "memory_failure": 19,
+          "within_margin": 46
+        },
+        "whole_run_peak": {
+          "max_error_mib": -248.661133,
+          "mean_absolute_error_mib": 11636.041143,
+          "mean_signed_error_mib": -11636.041143,
+          "median_absolute_error_mib": 10088.398438,
+          "min_error_mib": -31421.0,
+          "n": 251,
+          "share_underestimated": 1.0
+        }
+      },
+      "ds3_full+reservation": {
+        "completed_label_agreement": "38/235",
+        "failing_configs_predicted": {
+          "above_margin": 0,
+          "memory_failure": 59,
+          "within_margin": 6
+        },
+        "whole_run_peak": {
+          "max_error_mib": 24391.338867,
+          "mean_absolute_error_mib": 15973.731516,
+          "mean_signed_error_mib": 13641.664036,
+          "median_absolute_error_mib": 16149.824219,
+          "min_error_mib": -17085.0,
+          "n": 251,
+          "share_underestimated": 0.151394
+        }
+      },
+      "ds3_full+reservation+activations": {
+        "completed_label_agreement": "35/235",
+        "failing_configs_predicted": {
+          "above_margin": 0,
+          "memory_failure": 59,
+          "within_margin": 6
+        },
+        "whole_run_peak": {
+          "max_error_mib": 71119.338867,
+          "mean_absolute_error_mib": 30792.679827,
+          "mean_signed_error_mib": 29326.66633,
+          "median_absolute_error_mib": 30851.824219,
+          "min_error_mib": -13028.75,
+          "n": 251,
+          "share_underestimated": 0.115538
+        }
+      },
+      "ds3_lora+frozen_base": {
+        "completed_label_agreement": "191/235",
+        "failing_configs_predicted": {
+          "above_margin": 0,
+          "memory_failure": 0,
+          "within_margin": 65
+        },
+        "vs_measured_actor_update_stage": {
+          "max_error_mib": -6717.414062,
+          "mean_absolute_error_mib": 14263.818431,
+          "mean_signed_error_mib": -14263.818431,
+          "median_absolute_error_mib": 12893.664551,
+          "min_error_mib": -38341.799316,
+          "n": 232,
+          "share_underestimated": 1.0
+        },
+        "whole_run_peak": {
+          "max_error_mib": -18847.222656,
+          "mean_absolute_error_mib": 31210.116194,
+          "mean_signed_error_mib": -31210.116194,
+          "median_absolute_error_mib": 32001.8125,
+          "min_error_mib": -38837.799316,
+          "n": 251,
+          "share_underestimated": 1.0
+        }
+      },
+      "ds3_lora+frozen_base+reservation": {
+        "completed_label_agreement": "191/235",
+        "failing_configs_predicted": {
+          "above_margin": 4,
+          "memory_failure": 0,
+          "within_margin": 61
+        },
+        "whole_run_peak": {
+          "max_error_mib": -2493.222656,
+          "mean_absolute_error_mib": 5932.411015,
+          "mean_signed_error_mib": -5932.411015,
+          "median_absolute_error_mib": 4898.644531,
+          "min_error_mib": -17665.8125,
+          "n": 251,
+          "share_underestimated": 1.0
+        }
+      },
+      "ds3_lora+frozen_base+reservation+activations": {
+        "completed_label_agreement": "84/235",
+        "failing_configs_predicted": {
+          "above_margin": 4,
+          "memory_failure": 54,
+          "within_margin": 7
+        },
+        "whole_run_peak": {
+          "max_error_mib": 41926.157715,
+          "mean_absolute_error_mib": 11567.965903,
+          "mean_signed_error_mib": 9752.591278,
+          "median_absolute_error_mib": 8323.31543,
+          "min_error_mib": -13609.5625,
+          "n": 251,
+          "share_underestimated": 0.163347
+        }
+      }
+    },
+    "score_comparison": [
+      {
+        "approved": 400,
+        "approved_above_margin": 47,
+        "approved_memory_failure": 104,
+        "approved_within_margin": 249,
+        "method": "ds3_full",
+        "queries": 400,
+        "rejected_within_margin": 0,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.6225,
+        "track": "all",
+        "within_margin_approval_precision": 0.6225,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 122,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 122,
+        "method": "ds3_full+reservation",
+        "queries": 400,
+        "rejected_within_margin": 127,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.565,
+        "track": "all",
+        "within_margin_approval_precision": 1.0,
+        "within_margin_recall": 0.48996
+      },
+      {
+        "approved": 121,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 121,
+        "method": "ds3_full+reservation+activations",
+        "queries": 400,
+        "rejected_within_margin": 128,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.5625,
+        "track": "all",
+        "within_margin_approval_precision": 1.0,
+        "within_margin_recall": 0.485944
+      },
+      {
+        "approved": 400,
+        "approved_above_margin": 47,
+        "approved_memory_failure": 104,
+        "approved_within_margin": 249,
+        "method": "ds3_lora+frozen_base",
+        "queries": 400,
+        "rejected_within_margin": 0,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.6225,
+        "track": "all",
+        "within_margin_approval_precision": 0.6225,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 380,
+        "approved_above_margin": 47,
+        "approved_memory_failure": 84,
+        "approved_within_margin": 249,
+        "method": "ds3_lora+frozen_base+reservation",
+        "queries": 400,
+        "rejected_within_margin": 0,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.6225,
+        "track": "all",
+        "within_margin_approval_precision": 0.655263,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 170,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 170,
+        "method": "ds3_lora+frozen_base+reservation+activations",
+        "queries": 400,
+        "rejected_within_margin": 79,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.6875,
+        "track": "all",
+        "within_margin_approval_precision": 1.0,
+        "within_margin_recall": 0.682731
+      },
+      {
+        "approved": 272,
+        "approved_above_margin": 25,
+        "approved_memory_failure": 62,
+        "approved_within_margin": 185,
+        "method": "ds2_full",
+        "queries": 400,
+        "rejected_within_margin": 64,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.5175,
+        "track": "all",
+        "within_margin_approval_precision": 0.680147,
+        "within_margin_recall": 0.742972
+      },
+      {
+        "approved": 20,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 20,
+        "method": "ds2_full+reservation",
+        "queries": 400,
+        "rejected_within_margin": 229,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.31,
+        "track": "all",
+        "within_margin_approval_precision": 1.0,
+        "within_margin_recall": 0.080321
+      },
+      {
+        "approved": 290,
+        "approved_above_margin": 35,
+        "approved_memory_failure": 16,
+        "approved_within_margin": 239,
+        "method": "analytic_bf16",
+        "queries": 400,
+        "rejected_within_margin": 10,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.7275,
+        "track": "all",
+        "within_margin_approval_precision": 0.824138,
+        "within_margin_recall": 0.959839
+      },
+      {
+        "approved": 251,
+        "approved_above_margin": 12,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 239,
+        "method": "analytic_fp32_master",
+        "queries": 400,
+        "rejected_within_margin": 10,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.915,
+        "track": "all",
+        "within_margin_approval_precision": 0.952191,
+        "within_margin_recall": 0.959839
+      },
+      {
+        "approved": 257,
+        "approved_above_margin": 11,
+        "approved_memory_failure": 6,
+        "approved_within_margin": 240,
+        "method": "calibrated_bf16",
+        "queries": 400,
+        "rejected_within_margin": 9,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.86,
+        "track": "all",
+        "within_margin_approval_precision": 0.933852,
+        "within_margin_recall": 0.963855
+      },
+      {
+        "approved": 249,
+        "approved_above_margin": 12,
+        "approved_memory_failure": 2,
+        "approved_within_margin": 235,
+        "method": "source_label",
+        "queries": 400,
+        "rejected_within_margin": 14,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.88,
+        "track": "all",
+        "within_margin_approval_precision": 0.943775,
+        "within_margin_recall": 0.943775
+      },
+      {
+        "approved": 400,
+        "approved_above_margin": 47,
+        "approved_memory_failure": 104,
+        "approved_within_margin": 249,
+        "method": "always_approve",
+        "queries": 400,
+        "rejected_within_margin": 0,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.6225,
+        "track": "all",
+        "within_margin_approval_precision": 0.6225,
+        "within_margin_recall": 1.0
+      },
+      {
+        "approved": 0,
+        "approved_above_margin": 0,
+        "approved_memory_failure": 0,
+        "approved_within_margin": 0,
+        "method": "always_reject",
+        "queries": 400,
+        "rejected_within_margin": 249,
+        "target_above_margin": 47,
+        "target_memory_failure": 104,
+        "target_within_margin": 249,
+        "three_state_accuracy": 0.26,
+        "track": "all",
+        "within_margin_approval_precision": null,
+        "within_margin_recall": 0.0
+      }
+    ],
+    "term_shares": {
+      "median_ds3_full_model_states_mib": 27673.824219,
+      "median_ds3_lora_model_states_mib": 3983.355469,
+      "median_fraction_of_peak_lora_model_states": 0.105358,
+      "median_fraction_of_peak_reservation": 0.737708,
+      "median_measured_peak_mib": 35958.0,
+      "median_reservation_mib": 24576.0
+    },
+    "torch_version": "2.14.1+cpu"
+  }
+}

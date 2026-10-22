@@ -1,0 +1,132 @@
+{
+  "snapshot_sha256": "f55a85fbbab3464c29b8b1ec4539fc361a7137937b5f377804269a43ee2a4672",
+  "final": true,
+  "scheduler_timezone": "Europe/Prague (timestamps as emitted by sacct)",
+  "cost_definition": "Outer Slurm elapsed seconds times allocated GPUs, counted once per array task.",
+  "task_cost_definition": "Payload invocation elapsed seconds times task GPUs, including startup and failure.",
+  "scope": "Revision jobs only; historical runs, CPU analysis, storage, and unavailable power costs excluded.",
+  "allocation_and_task_costs_are_overlapping": true,
+  "total_allocated_gpu_hours": 172.76166666666668,
+  "formal_allocated_gpu_hours": 171.74,
+  "development_allocated_gpu_hours": 1.0216666666666667,
+  "panels": [
+    {
+      "panel": "pilot",
+      "expected_allocations": 3,
+      "recorded_allocations": 3,
+      "terminal_allocations": 3,
+      "states": {
+        "COMPLETED": 3
+      },
+      "allocated_gpu_hours": 0.9833333333333334,
+      "development_only": true,
+      "planned_invocations": 3,
+      "timed_invocations": 3,
+      "task_invocation_gpu_hours": 0.9318540751163124,
+      "timed_invocation_states": {
+        "within_margin": 3
+      }
+    },
+    {
+      "panel": "adaptation",
+      "expected_allocations": 15,
+      "recorded_allocations": 15,
+      "terminal_allocations": 15,
+      "states": {
+        "COMPLETED": 13,
+        "FAILED": 2
+      },
+      "allocated_gpu_hours": 44.38777777777778,
+      "development_only": false,
+      "planned_invocations": 108,
+      "timed_invocations": 108,
+      "task_invocation_gpu_hours": 43.5858967703511,
+      "timed_invocation_states": {
+        "within_margin": 106,
+        "unresolved": 2
+      }
+    },
+    {
+      "panel": "reservation",
+      "expected_allocations": 12,
+      "recorded_allocations": 12,
+      "terminal_allocations": 12,
+      "states": {
+        "COMPLETED": 11,
+        "FAILED": 1
+      },
+      "allocated_gpu_hours": 62.63444444444444,
+      "development_only": false,
+      "planned_invocations": 144,
+      "timed_invocations": 144,
+      "task_invocation_gpu_hours": 61.45726780139841,
+      "timed_invocation_states": {
+        "within_margin": 111,
+        "memory_failure": 21,
+        "above_margin": 11,
+        "unresolved": 1
+      }
+    },
+    {
+      "panel": "release",
+      "expected_allocations": 6,
+      "recorded_allocations": 6,
+      "terminal_allocations": 6,
+      "states": {
+        "COMPLETED": 5,
+        "FAILED": 1
+      },
+      "allocated_gpu_hours": 10.933333333333334,
+      "development_only": false,
+      "planned_invocations": 36,
+      "timed_invocations": 36,
+      "task_invocation_gpu_hours": 5.332125381602802,
+      "timed_invocation_states": {
+        "memory_failure": 12,
+        "within_margin": 17,
+        "above_margin": 6,
+        "unresolved": 1
+      }
+    },
+    {
+      "panel": "timing",
+      "expected_allocations": 6,
+      "recorded_allocations": 6,
+      "terminal_allocations": 6,
+      "states": {
+        "COMPLETED": 6
+      },
+      "allocated_gpu_hours": 53.62,
+      "development_only": false,
+      "planned_invocations": 24,
+      "timed_invocations": 24,
+      "task_invocation_gpu_hours": 53.28925380382066,
+      "timed_invocation_states": {
+        "within_margin": 24
+      }
+    },
+    {
+      "panel": "llmem_native",
+      "expected_allocations": 8,
+      "recorded_allocations": 8,
+      "terminal_allocations": 8,
+      "states": {
+        "COMPLETED": 8
+      },
+      "allocated_gpu_hours": 0.16444444444444442,
+      "development_only": false
+    },
+    {
+      "panel": "llmem_development",
+      "expected_allocations": 2,
+      "recorded_allocations": 2,
+      "terminal_allocations": 2,
+      "states": {
+        "FAILED": 1,
+        "COMPLETED": 1
+      },
+      "allocated_gpu_hours": 0.03833333333333333,
+      "development_only": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "captured_at_utc": "2026-10-21T08:07:28.136071+00:00",
+  "command": "sacct -j 5214781,5214860,5214872,5214944,5214838,5215023,5215024,5215025 --parsable2 --format=JobID,JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES,NodeList",
+  "scope": "Final outer-allocation accounting; batch/extern rows are retained in the snapshot but excluded from GPU-hour sums."
+}

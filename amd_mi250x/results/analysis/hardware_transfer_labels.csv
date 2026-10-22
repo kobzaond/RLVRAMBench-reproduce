@@ -1,0 +1,91 @@
+source_configuration_id,model,workload,level,gpu_count,actor_micro_batch,reservation,parameter_offload,state_release,a100_label,mi250x_label,a100_failure_stages,mi250x_failure_stages,a100_max_completed_peak_mib,mi250x_max_completed_peak_mib,a100_non_reservation_mib,mi250x_non_reservation_mib,mi250x_eligible,mi250x_planned
+cfg-00e028aa49d34e64,Phi-4-mini,gsm8k,joint,2,16,0.7,False,True,above_margin,above_margin,,,39570.0,64756,10898,18892,3,3
+cfg-072bd7669d20f8fa,Phi-4-mini,math,c3,4,16,0.7,False,True,within_margin,within_margin,,,36204.0,62744,7532,16880,3,3
+cfg-09d34ea9e791de94,Qwen2.5-3B,gsm8k,reservation_only,2,8,0.7,False,True,within_margin,within_margin,,,37140.0,57692,8468,11828,3,3
+cfg-0f540d3f6fe4661b,Phi-4-mini,math,c2,2,8,0.6,False,True,within_margin,within_margin,,,35920.0,55540,11344,16228,3,3
+cfg-0f8a31ef7ac4c551,Phi-4-mini,math,c1,2,4,0.45,True,True,within_margin,within_margin,,,26348.0,44637,7916,15153,3,3
+cfg-1432bb8a4d9c3b8c,Phi-4-mini,math,c4,4,16,0.8,False,True,above_margin,memory_failure,,generation-state restore (wake-up):2;weight synchronization:1,40236.0,,7468,,3,3
+cfg-14d47144a7cbb833,Phi-4-mini,gsm8k,base,2,8,0.6,False,True,within_margin,within_margin,,,35518.0,53972,10942,14660,3,3
+cfg-17e69bcf1b041bd9,Phi-4-mini,gsm8k,c3,4,16,0.7,False,True,within_margin,within_margin,,,35730.0,57722,7058,11858,3,3
+cfg-18edbed17d1a0c2e,Qwen2.5-3B,math,safe_margin,2,2,0.35,True,True,within_margin,within_margin,,,22360.0,37367,8024,14435,3,3
+cfg-191bdf2aa4d09de2,Phi-4-mini,math,base,2,8,0.6,False,True,within_margin,within_margin,,,36158.0,55496,11582,16184,3,3
+cfg-211b6fafd167a310,Phi-4-mini,math,actor_only,2,16,0.6,False,True,within_margin,within_margin,,,36602.0,60420,12026,21108,3,3
+cfg-2afbe250af9cd3e1,granite-3.3-2b,math,c3,4,16,0.7,False,True,within_margin,within_margin,,,34068.0,54764,5396,8900,3,3
+cfg-301e4dae7048c6ec,Phi-4-mini,gsm8k,c2,4,8,0.6,False,True,within_margin,within_margin,,,31658.0,51034,7082,11722,3,3
+cfg-30e348e68aa5fb5c,Qwen2.5-3B,math,near_boundary,2,16,0.65,False,False,memory_failure,memory_failure,weight synchronization:3,actor update:2;weight synchronization:1,,,,,3,3
+cfg-30f98456fdb322c1,Qwen2.5-3B,math,c2,2,8,0.6,False,True,within_margin,within_margin,,,33446.0,52291,8870,12979,3,3
+cfg-32977d5aa42a41cb,granite-3.3-2b,math,c5,2,32,0.85,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):2;weight synchronization:1,,,,,3,3
+cfg-338d9224eb9d2f3a,Qwen2.5-3B,gsm8k,c2,2,8,0.6,False,True,within_margin,within_margin,,,33108.0,51342,8532,12030,3,3
+cfg-352f4dbc55fbcd3c,Qwen2.5-3B,gsm8k,c5,2,32,0.85,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):1;weight synchronization:2,,,,,3,3
+cfg-371ae37408089efe,Phi-4-mini,math,c2,4,8,0.6,False,True,within_margin,within_margin,,,32108.0,51585,7532,12273,3,3
+cfg-399f6b038d6f65f9,Qwen2.5-3B,gsm8k,c2,4,8,0.6,False,True,within_margin,within_margin,,,29840.0,48636,5264,9324,3,3
+cfg-3b9787f775169f3d,granite-3.3-2b,math,actor_only,2,16,0.6,False,True,within_margin,within_margin,,,32670.0,51501,8094,12189,3,3
+cfg-3c86a11fdb8455cb,Phi-4-mini,gsm8k,c5,2,32,0.85,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):2,,,,,2,3
+cfg-3ca7715d60421fe4,Phi-4-mini,math,joint,2,16,0.7,False,True,above_margin,memory_failure,,generation-state restore (wake-up):2;weight synchronization:1,40160.0,,11488,,3,3
+cfg-3f0f48a3c570a0c8,Qwen2.5-3B,math,c0,2,1,0.3,True,True,within_margin,within_margin,,,21860.0,31154,9572,11498,3,3
+cfg-3fb18b33cd9f8bcf,Qwen2.5-3B,math,near_boundary,2,16,0.65,False,True,within_margin,above_margin,,,37302.0,64788,10678,22200,3,3
+cfg-402f13fde534d758,Qwen2.5-3B,gsm8k,actor_only,2,16,0.6,False,True,within_margin,within_margin,,,33108.0,54685,8532,15373,3,3
+cfg-419301d6d3eea82b,Qwen2.5-3B,gsm8k,safe_margin,2,1,0.3,True,False,within_margin,within_margin,,,26820.0,41366,14532,21710,3,3
+cfg-445e1547e9317cd0,granite-3.3-2b,gsm8k,base,2,8,0.6,False,True,within_margin,within_margin,,,32322.0,49582,7746,10270,3,3
+cfg-44b1b60788cfb061,Qwen2.5-3B,gsm8k,safe_margin,2,1,0.3,True,True,within_margin,within_margin,,,21560.0,29000,9272,9344,3,3
+cfg-4e0b53e75324e5f8,Qwen2.5-3B,gsm8k,near_boundary,2,16,0.65,False,True,within_margin,within_margin,,,36750.0,58828,10126,16240,3,3
+cfg-5047dff55c13e55f,Qwen2.5-3B,gsm8k,base,2,8,0.6,False,True,within_margin,within_margin,,,33108.0,51399,8532,12087,3,3
+cfg-5244d13eac3116ad,Qwen2.5-3B,gsm8k,c0,2,1,0.3,True,True,within_margin,within_margin,,,21560.0,29579,9272,9923,3,3
+cfg-55811d23c5144bb7,Qwen2.5-3B,math,c4,2,16,0.8,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cfg-57f3e6381e2a814a,Phi-4-mini,gsm8k,actor_only,2,16,0.6,False,True,within_margin,within_margin,,,35538.0,58020,10962,18708,3,3
+cfg-5839ccf95c2c1722,Qwen2.5-3B,gsm8k,c4,2,16,0.8,False,True,memory_failure,memory_failure,weight synchronization:3,generation-state restore (wake-up):1;weight synchronization:2,,,,,3,3
+cfg-584e6c6664859977,granite-3.3-2b,gsm8k,actor_only,2,16,0.6,False,True,within_margin,within_margin,,,32302.0,50968,7726,11656,3,3
+cfg-5c14e44760909675,Qwen2.5-1.5B,math,near_boundary,2,16,0.7,False,True,within_margin,within_margin,,,34230.0,59017,5558,13153,3,3
+cfg-5ff9621270e710ed,Phi-4-mini,gsm8k,c4,4,16,0.8,False,True,above_margin,above_margin,,,39806.0,65497,7038,13081,3,3
+cfg-62f371a80968a0ba,Qwen2.5-3B,math,c1,2,4,0.45,True,True,within_margin,within_margin,,,21900.0,40717,3468,11233,3,3
+cfg-6a4562db98b38d6f,granite-3.3-2b,gsm8k,c4,2,16,0.8,False,True,above_margin,above_margin,,,40382.0,64082,7614,11666,3,3
+cfg-714c540f76d9525d,Qwen2.5-3B,math,c3,4,16,0.7,False,True,within_margin,within_margin,,,34212.0,59570,5540,13706,3,3
+cfg-71b33248b3cb3190,granite-3.3-2b,math,joint,2,16,0.7,False,True,within_margin,within_margin,,,36670.0,57784,7998,11920,3,3
+cfg-73c06764ba28a56b,granite-3.3-2b,gsm8k,c3,2,16,0.7,False,True,within_margin,within_margin,,,36302.0,57623,7630,11759,3,3
+cfg-75662a6552e74f29,granite-3.3-2b,math,base,2,8,0.6,False,True,within_margin,within_margin,,,32710.0,49442,8134,10130,3,3
+cfg-78c440d3891ddbc2,Qwen2.5-3B,gsm8k,c4,4,16,0.8,False,True,within_margin,within_margin,,,37976.0,62639,5208,10223,3,3
+cfg-7a9a974958c57abc,Qwen2.5-3B,gsm8k,c3,2,16,0.7,False,True,within_margin,within_margin,,,37140.0,61106,8468,15242,3,3
+cfg-7ee75feb0b09675f,Qwen2.5-3B,math,actor_only,2,16,0.6,False,True,within_margin,within_margin,,,33446.0,55971,8870,16659,3,3
+cfg-835067f7405e89a2,granite-3.3-2b,math,c3,2,16,0.7,False,True,within_margin,within_margin,,,38718.0,57673,10046,11809,3,3
+cfg-8a39420e5b484230,Phi-4-mini,math,reservation_only,2,8,0.7,False,True,above_margin,within_margin,,,40594.0,62189,11922,16325,3,3
+cfg-8b7eb5281a925727,granite-3.3-2b,gsm8k,joint,2,16,0.7,False,True,within_margin,within_margin,,,36302.0,57132,7630,11268,3,3
+cfg-8bd7050cd7f49e78,Phi-4-mini,gsm8k,c0,2,1,0.3,True,True,within_margin,within_margin,,,26036.0,35589,13748,15933,3,3
+cfg-966f5804dc918967,Phi-4-mini,gsm8k,c4,2,16,0.8,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cfg-96ccf395b84393f7,Phi-4-mini,gsm8k,c2,2,8,0.6,False,True,within_margin,within_margin,,,35538.0,55038,10962,15726,3,3
+cfg-9758870c0a0b4d69,granite-3.3-2b,math,c2,4,8,0.6,False,True,within_margin,within_margin,,,30068.0,46538,5492,7226,3,3
+cfg-997a5dca920f4fb3,Qwen2.5-1.5B,gsm8k,near_boundary,2,16,0.7,False,False,above_margin,within_margin,,,40706.0,60914,12034,15050,3,3
+cfg-9f624ec22aa3dde0,granite-3.3-2b,math,c4,4,16,0.8,False,True,within_margin,within_margin,,,38148.0,61423,5380,9007,3,3
+cfg-a188f9742074d270,Qwen2.5-3B,gsm8k,near_boundary,2,16,0.65,False,False,memory_failure,above_margin,weight synchronization:3,,,65074,,22486,3,3
+cfg-a23a9ffc1f670139,Qwen2.5-3B,math,c4,4,16,0.8,False,True,within_margin,above_margin,,,38316.0,65499,5548,13083,3,3
+cfg-a3987314cb2f9f12,Phi-4-mini,math,c3,2,16,0.7,False,True,above_margin,memory_failure,,generation-state restore (wake-up):3,40080.0,,11408,,3,3
+cfg-b1aeb72d4434b30d,Phi-4-mini,gsm8k,reservation_only,2,8,0.7,False,True,above_margin,within_margin,,,39550.0,60560,10878,14696,3,3
+cfg-b3fe40f61c5686ea,Qwen2.5-1.5B,math,near_boundary,2,16,0.7,False,False,memory_failure,within_margin,actor update:3,,,63425,,17561,3,3
+cfg-b5352215babfeba6,granite-3.3-2b,math,c2,2,8,0.6,False,True,within_margin,within_margin,,,32710.0,49780,8134,10468,3,3
+cfg-b56fb353c2f2fa3e,granite-3.3-2b,math,c0,2,1,0.3,True,True,within_margin,within_margin,,,19418.0,28614,7130,8958,3,3
+cfg-b5912aa6ea40b7fd,Qwen2.5-3B,math,base,2,8,0.6,False,True,within_margin,within_margin,,,33446.0,52279,8870,12967,3,3
+cfg-b68e9036992511d4,Qwen2.5-3B,math,safe_margin,2,2,0.35,True,False,within_margin,within_margin,,,32608.0,49879,18272,26947,3,3
+cfg-b7a35495ef8f0eb3,Qwen2.5-3B,math,reservation_only,2,8,0.7,False,True,within_margin,within_margin,,,37478.0,58886,8806,13022,3,3
+cfg-b8dd70ab682c13b2,Phi-4-mini,gsm8k,c1,2,4,0.45,True,True,within_margin,within_margin,,,26054.0,43530,7622,14046,3,3
+cfg-b8e90bd69c9744ea,granite-3.3-2b,gsm8k,c2,4,8,0.6,False,True,within_margin,within_margin,,,29660.0,46230,5084,6918,3,3
+cfg-c0605c1607caa079,Phi-4-mini,gsm8k,c3,2,16,0.7,False,True,above_margin,above_margin,,,39570.0,63800,10898,17936,3,3
+cfg-c2a8e6e8e140e109,granite-3.3-2b,gsm8k,c3,4,16,0.7,False,True,within_margin,within_margin,,,33660.0,53967,4988,8103,3,3
+cfg-c2d27e8a89945048,Qwen2.5-3B,gsm8k,joint,2,16,0.7,False,True,within_margin,within_margin,,,37140.0,61178,8468,15314,3,3
+cfg-ca5490162c750c31,Qwen2.5-1.5B,gsm8k,near_boundary,2,16,0.7,False,True,within_margin,within_margin,,,33956.0,57395,5284,11531,3,3
+cfg-cad8341dbbff10ba,Qwen2.5-3B,math,c5,2,32,0.85,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cfg-cc2c35944156e5d4,Qwen2.5-3B,gsm8k,c3,4,16,0.7,False,True,within_margin,within_margin,,,33872.0,56189,5200,10325,3,3
+cfg-cc900fb7731c3f49,Phi-4-mini,math,c5,2,32,0.85,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):2;weight synchronization:1,,,,,3,3
+cfg-cd3974595f9db882,Qwen2.5-3B,gsm8k,c1,2,4,0.45,True,True,within_margin,within_margin,,,21580.0,39863,3148,10379,3,3
+cfg-d02503f8c9804a2d,granite-3.3-2b,math,c4,2,16,0.8,False,True,above_margin,above_margin,,,40750.0,64377,7982,11961,3,3
+cfg-d138048feeb8fe5d,Phi-4-mini,math,c4,2,16,0.8,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):2;weight synchronization:1,,,,,3,3
+cfg-d4a213515805a9a7,granite-3.3-2b,gsm8k,c1,2,4,0.45,True,True,within_margin,within_margin,,,21128.0,38448,2696,8964,3,3
+cfg-e2763ffc8afa3602,granite-3.3-2b,gsm8k,reservation_only,2,8,0.7,False,True,within_margin,within_margin,,,36302.0,56033,7630,10169,3,3
+cfg-e2a205be8efba055,Phi-4-mini,math,c0,2,1,0.3,True,True,within_margin,within_margin,,,26348.0,37642,14060,17986,3,3
+cfg-e8893b12558f51dd,granite-3.3-2b,gsm8k,c5,2,32,0.85,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cfg-ef2331208f38fbaf,Qwen2.5-3B,math,joint,2,16,0.7,False,True,within_margin,within_margin,,,37478.0,62766,8806,16902,3,3
+cfg-f009e9e3891c06f4,Qwen2.5-3B,math,c3,2,16,0.7,False,True,within_margin,within_margin,,,37478.0,62445,8806,16581,3,3
+cfg-f03e4e98c682240e,Qwen2.5-3B,math,c2,4,8,0.6,False,True,within_margin,within_margin,,,30180.0,48897,5604,9585,3,3
+cfg-f439d2dd90137a80,granite-3.3-2b,gsm8k,c4,4,16,0.8,False,True,within_margin,within_margin,,,37740.0,60483,4972,8067,3,3
+cfg-f989b39cd682f07b,granite-3.3-2b,math,reservation_only,2,8,0.7,False,True,within_margin,within_margin,,,36710.0,55932,8038,10068,3,3
+cfg-fbe1c0422f98cb38,granite-3.3-2b,gsm8k,c2,2,8,0.6,False,True,within_margin,within_margin,,,32302.0,49374,7726,10062,3,3
+cfg-fd4d4789145230df,granite-3.3-2b,math,c1,2,4,0.45,True,True,within_margin,within_margin,,,21516.0,38250,3084,8766,3,3
+cfg-fd5bb0db68b0dae3,granite-3.3-2b,gsm8k,c0,2,1,0.3,True,True,within_margin,within_margin,,,19050.0,28190,6762,8534,3,3

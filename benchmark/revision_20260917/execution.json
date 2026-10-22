@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-09-17T11:24:29+00:00",
+  "group": "offload_factorial",
+  "source_commit": "3d6ecac1852e16a0422c9c72a230187be663f8b5",
+  "source_root": "/mnt/proj3/open-35-44/verl/experiments/offload-factorial-3d6ecac",
+  "freeze_sha256": "5df43f35e0b02c23e4816b7e860c5a613176da41f5adb27e57f79ac2becf1fb9",
+  "first_block_array_job_id": "5069460",
+  "first_block_indices": [0],
+  "remaining_indices_submitted": [],
+  "execution_gate": "pending independent reconstruction of the first block",
+  "watcher_code_sha256": "4ef40e5234bdf6c4a0dd9cd4b0d0ee0e590503918087cf2fd94dd242d68f4c57",
+  "watcher_state_path": "/mnt/proj3/open-35-44/verl/rl/output/offload-factorial-watch-5069460",
+  "source_export_report_sha256": "c04faf4aec74c0ef12c71e8fd46c8859137953a4f9f64810edb61ae907a35f9f",
+  "maximum_concurrent_allocations": 3,
+  "maximum_reserved_gpu_hours": 216,
+  "retries": 0,
+  "replacement": false
+}

@@ -1,0 +1,8 @@
+{
+  "job_id": "5214781",
+  "source_commit": "fcd019198906b7e91278243dc64ac58d76d96354",
+  "source_root": "/mnt/proj3/open-35-44/verl/experiments/electronics-pilot-fcd0191",
+  "protocol_sha256": "3b3bf9bd119ad0ba64d07e3092bbf4cb7add473e6c757114cce30a3b6df7e969",
+  "panel": "pilot",
+  "development_only": true
+}

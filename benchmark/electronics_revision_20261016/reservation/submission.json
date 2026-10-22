@@ -1,0 +1,8 @@
+{
+  "job_id": "5215023",
+  "source_commit": "cf86c7ae0f94df817531abd4b653645b1a2eb814",
+  "source_root": "/mnt/proj3/open-35-44/verl/experiments/electronics-controls-cf86c7a",
+  "protocol_sha256": "6eec153a0ebb28ebb3bec4f2245226191a673b54470aae2bf2ad3cd391b00461",
+  "panel": "reservation",
+  "dependency": null
+}

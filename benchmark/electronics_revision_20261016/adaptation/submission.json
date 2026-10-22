@@ -1,0 +1,8 @@
+{
+  "job_id": "5214838",
+  "source_commit": "e6a8f0abd7790544362d97e4e633414f9528c241",
+  "source_root": "/mnt/proj3/open-35-44/verl/experiments/electronics-adaptation-e6a8f0a",
+  "protocol_sha256": "e6fdbdb747b86f5d05c9f69cfeec20ea990359be7d047487b5079c6636ea59f1",
+  "panel": "adaptation",
+  "development_only": false
+}

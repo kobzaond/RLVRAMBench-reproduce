@@ -1,0 +1,13 @@
+model,workload,level,gpu_count,algorithm,adaptation,reservation,parameter_offload,steps,label,eligible,planned,failure_modes,max_completed_peak_mib,mean_actor_stage_peak_mib,mean_generation_peak_mib,whole_run_peak_stage,mean_step_seconds,mean_update_actor_seconds,mean_update_weights_seconds,mean_elapsed_seconds
+Qwen2.5-1.5B,math,safe_margin,2,grpo,lora,0.5,False,1,within_margin,3,3,,43790,12995.0,38020.3,gen:3,242.7,108.5,8.4,476.7
+Qwen2.5-1.5B,math,safe_margin,2,grpo,lora,0.5,False,40,unresolved,0,3,slurm_timeout,,,,,,,,
+Qwen2.5-1.5B,math,one_step_unsafe,2,grpo,lora,0.8,False,1,memory_failure,3,3,generation_wakeup_oom;update_weights_oom,,,,,,,,
+Qwen2.5-1.5B,math,one_step_unsafe,2,grpo,lora,0.8,False,40,memory_failure,3,3,generation_wakeup_oom;update_weights_oom,,,,,,,,
+Qwen2.5-1.5B,math,near_boundary,2,grpo,lora,0.65,False,1,within_margin,3,3,,53789,12943.3,47889.3,update_weights:2;gen:1,243.4,109.7,8.5,478.0
+Qwen2.5-1.5B,math,near_boundary,2,grpo,lora,0.65,False,40,unresolved,0,3,slurm_timeout,,,,,,,,
+Qwen2.5-3B,gsm8k,one_step_unsafe,2,grpo,lora,0.8,False,1,memory_failure,3,3,generation_wakeup_oom;update_weights_oom,,,,,,,,
+Qwen2.5-3B,gsm8k,one_step_unsafe,2,grpo,lora,0.8,False,40,memory_failure,3,3,generation_wakeup_oom,,,,,,,,
+Qwen2.5-3B,gsm8k,safe_margin,2,grpo,lora,0.5,False,1,within_margin,3,3,,49064,18634.7,41162.0,update_weights:2;gen:1,195.1,50.8,15.2,442.0
+Qwen2.5-3B,gsm8k,safe_margin,2,grpo,lora,0.5,False,40,within_margin,3,3,,51128,21636.3,50973.7,gen:3,166.1,46.6,14.8,6938.0
+Qwen2.5-3B,gsm8k,near_boundary,2,grpo,lora,0.65,False,1,within_margin,3,3,,58974,18800.3,51162.3,update_weights:2;gen:1,190.5,50.8,14.7,441.7
+Qwen2.5-3B,gsm8k,near_boundary,2,grpo,lora,0.65,False,40,within_margin,3,3,,60877,21702.7,60804.3,gen:3,167.9,46.6,14.8,7026.0

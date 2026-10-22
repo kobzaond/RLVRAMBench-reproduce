@@ -1,0 +1,16 @@
+{
+  "protocol_sha256": "bc505a318538db9d230e68cbb51464b03432139f70ed0ad6db69dc7d6ca69af2",
+  "source_commit": "f933e933d63a976fb0a5c9395e27fcfd820f13d8",
+  "planned_pairs": 24,
+  "states": {
+    "completed_pair": 24
+  },
+  "complete_cases": 8,
+  "equal_case_mae_mib": 236.625,
+  "equal_case_signed_error_mib": 236.625,
+  "equal_case_relative_error_percent": 5.367035497982311,
+  "equal_case_absolute_relative_error_percent": 5.367035497982311,
+  "underestimated_pairs": 0,
+  "native_only": true,
+  "rl_target_prediction_accuracy_evaluated": false
+}

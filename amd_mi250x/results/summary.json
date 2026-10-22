@@ -1,0 +1,59 @@
+{
+  "configuration_states": {
+    "algorithm_adaptation": {
+      "above_margin": 2,
+      "memory_failure": 3,
+      "within_margin": 7
+    },
+    "hardware_transfer": {
+      "above_margin": 8,
+      "memory_failure": 14,
+      "within_margin": 68
+    },
+    "horizon": {
+      "memory_failure": 4,
+      "unresolved": 2,
+      "within_margin": 6
+    },
+    "larger_models": {
+      "above_margin": 1,
+      "memory_failure": 4,
+      "unresolved": 1,
+      "within_margin": 18
+    },
+    "reservation_sweep": {
+      "above_margin": 1,
+      "memory_failure": 8,
+      "within_margin": 7
+    }
+  },
+  "trial_states": {
+    "algorithm_adaptation": {
+      "above_margin": 6,
+      "memory_failure": 9,
+      "within_margin": 21
+    },
+    "hardware_transfer": {
+      "above_margin": 21,
+      "memory_failure": 41,
+      "other_failure": 1,
+      "within_margin": 207
+    },
+    "horizon": {
+      "memory_failure": 12,
+      "other_failure": 6,
+      "within_margin": 18
+    },
+    "larger_models": {
+      "above_margin": 3,
+      "memory_failure": 12,
+      "other_failure": 1,
+      "within_margin": 56
+    },
+    "reservation_sweep": {
+      "above_margin": 2,
+      "memory_failure": 24,
+      "within_margin": 22
+    }
+  }
+}

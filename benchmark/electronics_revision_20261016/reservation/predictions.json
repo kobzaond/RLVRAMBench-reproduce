@@ -1,0 +1,3026 @@
+[
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 37032.64314764103,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 30460.769860145636,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 33805.43422187119,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 40377.30750936659,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 42020.27583124043,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 32103.738182019482,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 35448.40254374504,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 33746.706503893336,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 37091.37086561888,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 38734.33918749274,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 28817.801538271786,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 35389.674825767186,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 32040.716546702082,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 25468.84325920669,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 35153.66988052938,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 33510.70155865553,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 30397.748224828232,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 31867.733236781685,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 28754.779902954382,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 38439.60652427708,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 36796.63820240323,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 30224.764914907835,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off0-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off0-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 27111.81158108054,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 33683.68486857593,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-gsm8k-off1-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-gsm8k-off1-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 33488.1180107468,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 31845.149688872953,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 25446.259711297957,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 38417.022976368346,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 32018.132998793357,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 30202.181366999102,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 35131.08633262065,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 33661.1013206672,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 30375.164676919507,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 27089.228033171807,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 28732.196355045657,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 36774.0546544945,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 28835.166917913724,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 37108.73624526082,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 35407.040205409125,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 35465.76792338698,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 38751.70456713468,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 42037.64121088237,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r60",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r60",
+    "method": "component_regression",
+    "predicted_peak_mib": 33764.071883535275,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r60",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r60",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r60",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r60",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r45",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r45",
+    "method": "component_regression",
+    "predicted_peak_mib": 33822.79960151313,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r45",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r45",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r45",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off0-r45",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r55",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r55",
+    "method": "component_regression",
+    "predicted_peak_mib": 32121.10356166142,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r55",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r55",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r55",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r55",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r70",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r70",
+    "method": "component_regression",
+    "predicted_peak_mib": 37050.00852728297,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r70",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r70",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r70",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r70",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r65",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "memory_failure",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r65",
+    "method": "component_regression",
+    "predicted_peak_mib": 40394.67288900853,
+    "predicted_state": "above_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r65",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r65",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r65",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off0-r65",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r50",
+    "method": "frozen_logistic",
+    "predicted_peak_mib": null,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r50",
+    "method": "component_regression",
+    "predicted_peak_mib": 30478.135239787574,
+    "predicted_state": "within_margin",
+    "prediction_type": "three_state",
+    "startup_guard_changed_state": false
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r50",
+    "method": "offload_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r50",
+    "method": "strict_c1",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": false,
+    "configuration_id": "reservation-q7-gsm8k-off1-r50",
+    "method": "reservation_only",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": true,
+    "configuration_id": "reservation-q7-gsm8k-off1-r50",
+    "method": "offload_or_low_reservation",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "admission_only",
+    "startup_guard_changed_state": null
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off0-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-code_heavy_tail-off1-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off1-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off1-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off0-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off0-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off1-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off0-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off1-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off0-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off0-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off0-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off1-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-gsm8k-off1-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off1-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-m7-code_heavy_tail-off0-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off1-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off0-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off1-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off0-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off0-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off0-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off1-r60",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off0-r45",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off1-r55",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off1-r70",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off0-r65",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  },
+  {
+    "approved": null,
+    "configuration_id": "reservation-q7-gsm8k-off1-r50",
+    "method": "LLMem_native",
+    "predicted_peak_mib": null,
+    "predicted_state": null,
+    "prediction_type": "unsupported",
+    "reason": "Native OPT/Gemini training comparator has no validated LoRA/FSDP/vLLM mapping."
+  }
+]

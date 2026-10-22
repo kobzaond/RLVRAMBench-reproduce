@@ -1,0 +1,16 @@
+NodeName=acn19 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=128 CPUEfctv=128 CPUTot=128 CPULoad=9.44
+   AvailableFeatures=x86_64,amd,milan
+   ActiveFeatures=x86_64,amd,milan
+   Gres=gpu:a100:8(S:0-7)
+   NodeAddr=acn19 NodeHostName=acn19 Version=25.11.8
+   OS=Linux 4.18.0-553.148.1.el8_10.x86_64 #1 SMP Tue Jul 28 13:11:07 UTC 2026 
+   RealMemory=1030000 AllocMem=757504 FreeMem=733437 Sockets=8 Boards=1
+   State=ALLOCATED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=qgpu,qgpu_big,qgpu_biz,qgpu_exp,qgpu_free,qgpu_preempt 
+   BootTime=2026-10-16T11:05:52 SlurmdStartTime=2026-10-16T11:19:05
+   LastBusyTime=2026-10-16T11:25:19 ResumeAfterTime=None
+   CfgTRES=cpu=128,mem=1030000M,billing=8,gres/gpu=8
+   AllocTRES=cpu=128,mem=757504M,gres/gpu=8
+   CurrentWatts=0 AveWatts=0
+

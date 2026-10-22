@@ -1,0 +1,260 @@
+{
+  "protocol_version": "1.1",
+  "selected_track": "horizon_transfer",
+  "rate_with_zero_denominator": null,
+  "cost_scope": "provided donor measurements, deduplicated within each reported scope",
+  "cost_warning": "Provided evidence is not measured method usage or saved computation. Track/task costs overlap; do not add them. Extra measurements must be disclosed.",
+  "evaluation_warning": "Open descriptive tasks, not a blind leaderboard or independent query samples.",
+  "overall": {
+    "queries": 4,
+    "distinct_target_configurations": 4,
+    "correct_three_state": 4,
+    "three_state_accuracy": 1.0,
+    "approved": 3,
+    "approved_within_margin": 3,
+    "within_margin_recall": 1.0,
+    "within_margin_approval_precision": 1.0,
+    "approved_memory_failure": 0,
+    "approved_above_margin": 0,
+    "rejected_within_margin": 0,
+    "target_within_margin": 3,
+    "target_above_margin": 1,
+    "target_memory_failure": 0,
+    "memory_failure_among_approved": 0.0,
+    "above_margin_among_approved": 0.0,
+    "approval_rate_on_memory_failure_targets": null,
+    "approval_rate_on_above_margin_targets": 0.0,
+    "rejection_rate_on_within_margin_targets": 0.0,
+    "confusion_matrix_predicted_rows_observed_columns": {
+      "within_margin": {
+        "within_margin": 3,
+        "above_margin": 0,
+        "memory_failure": 0
+      },
+      "above_margin": {
+        "within_margin": 0,
+        "above_margin": 1,
+        "memory_failure": 0
+      },
+      "memory_failure": {
+        "within_margin": 0,
+        "above_margin": 0,
+        "memory_failure": 0
+      }
+    },
+    "distinct_source_configurations": 4,
+    "eligible_source_processes": 12,
+    "recorded_source_attempts": 15
+  },
+  "per_track": {
+    "horizon_transfer": {
+      "queries": 4,
+      "distinct_target_configurations": 4,
+      "correct_three_state": 4,
+      "three_state_accuracy": 1.0,
+      "approved": 3,
+      "approved_within_margin": 3,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 3,
+      "target_above_margin": 1,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": 0.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 3,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 1,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 4,
+      "eligible_source_processes": 12,
+      "recorded_source_attempts": 15,
+      "tasks": 4,
+      "macro_task_three_state_accuracy": 1.0
+    }
+  },
+  "per_task": {
+    "task-39ce89d6e6988e60": {
+      "queries": 1,
+      "distinct_target_configurations": 1,
+      "correct_three_state": 1,
+      "three_state_accuracy": 1.0,
+      "approved": 1,
+      "approved_within_margin": 1,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 1,
+      "target_above_margin": 0,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 1,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 1,
+      "eligible_source_processes": 3,
+      "recorded_source_attempts": 3
+    },
+    "task-41b351b1f1624c37": {
+      "queries": 1,
+      "distinct_target_configurations": 1,
+      "correct_three_state": 1,
+      "three_state_accuracy": 1.0,
+      "approved": 1,
+      "approved_within_margin": 1,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 1,
+      "target_above_margin": 0,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 1,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 1,
+      "eligible_source_processes": 3,
+      "recorded_source_attempts": 6
+    },
+    "task-4e6c7db198ff7c7b": {
+      "queries": 1,
+      "distinct_target_configurations": 1,
+      "correct_three_state": 1,
+      "three_state_accuracy": 1.0,
+      "approved": 0,
+      "approved_within_margin": 0,
+      "within_margin_recall": null,
+      "within_margin_approval_precision": null,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 0,
+      "target_above_margin": 1,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": null,
+      "above_margin_among_approved": null,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": 0.0,
+      "rejection_rate_on_within_margin_targets": null,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 1,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 1,
+      "eligible_source_processes": 3,
+      "recorded_source_attempts": 3
+    },
+    "task-878bc846f8be91af": {
+      "queries": 1,
+      "distinct_target_configurations": 1,
+      "correct_three_state": 1,
+      "three_state_accuracy": 1.0,
+      "approved": 1,
+      "approved_within_margin": 1,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 1,
+      "target_above_margin": 0,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 1,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 1,
+      "eligible_source_processes": 3,
+      "recorded_source_attempts": 3
+    }
+  }
+}

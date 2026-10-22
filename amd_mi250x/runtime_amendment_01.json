@@ -1,0 +1,18 @@
+{
+  "amendment": "runtime-amendment-01",
+  "recorded": "2026-10-21",
+  "defect": "Co-located Slurm jobs shared the host /tmp inside the container. VERL 0.9.0 names its colocated weight-transfer ZMQ socket ipc:///tmp/rl-colocate-zmq-<ray job id>-replica-<r>-rank-<k>.sock, and each fresh Ray cluster reuses the same first job id, so concurrently started jobs on one node connected to each other's sockets. Receivers got foreign CUDA IPC handles (hipErrorInvalidDevicePointer) or waited indefinitely; all affected slots hit the 45-minute limit without completing step 1.",
+  "evidence": "Seven slots, all TIMEOUT, no completed step: jobs 23030141-23030143 started together on nid007898 and 23030147-23030150 together on nid007897; four of their logs contain 'invalid device pointer'.",
+  "fix": "run_grpo_mi250x.slurm binds a private per-job directory to /tmp in the container and treats 'invalid device pointer' as fatal for the watchdog. Pending jobs submitted with the old script were cancelled before starting (cancelled_pending_before_tmp_fix.txt in the run root).",
+  "settings_changed": false,
+  "rule": "Only slots whose recorded attempt shows this defect are run again; the original attempt stays in submissions.csv and attempt_job_ids. A diagnosed memory outcome is never rerun.",
+  "rerun_run_ids": [
+    "hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s81",
+    "hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s82",
+    "hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s83",
+    "hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s41",
+    "hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s42",
+    "hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s43",
+    "hardware_transfer-amd-5b5cf2b323b2a85f-grpo-lora-s81"
+  ]
+}

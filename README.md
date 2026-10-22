@@ -5,7 +5,8 @@ CPU-only reconstruction of the measurements, tables, and figures supporting
 A Failure-Aware Measurement Study**. RLVRAMBench is the accompanying evidence
 and configuration-evaluation artifact for the studied LoRA-GRPO execution
 stack on A100 hardware, with models up to approximately 7.6 billion parameters,
-not a general benchmark of reinforcement-learning systems.
+plus a cross-accelerator replication on AMD MI250X. It is not a general
+benchmark of reinforcement-learning systems.
 
 Authors: Ondřej Kobza and Jan Šedivý, Czech Institute of Informatics,
 Robotics and Cybernetics, Czech Technical University in Prague.
@@ -172,6 +173,151 @@ excluded from content equivalence; that summary is compared as canonical
 JSON, and both CPU collection times remain in `verification.json`.
 The other seven files must match exactly after path normalization, with
 no field exclusions for the control.
+
+## Independent offload factorial
+
+`benchmark/offload_factorial/` holds the later experiment that varies actor
+parameter offload, actor micro-batch (4/8), and generation reservation
+(0.45/0.70) independently on four GPUs for Qwen2.5-7B and
+Mistral-7B-Instruct-v0.3 on three workloads. `freeze.json` seals
+`protocol.json`, `matrix.csv`, and the six methods' approval decisions in
+`predictions.json` before execution (source commit `3d6ecac`). All 144 slots
+are eligible without retry: 108 complete within margin and 36 fail the
+generation engine's startup budget check. The 48 configurations each have
+three agreeing seeds: 36 within margin and 12 memory failures (every
+resident-actor configuration at reservation 0.70).
+
+| File in `results/` | Unit |
+|---|---|
+| `slots.csv` | One of 144 invocations, eligibility, peaks per stage, diagnostics |
+| `configurations.csv` | One of 48 settings, three-seed label, each frozen approval |
+| `prediction_scores.csv` | Approvals/rejections per method, overall and by stratum |
+| `offload_pairs.csv` | One of 72 matched offload-on/off comparisons |
+| `block_contrasts.csv` | Within-block factor contrasts where measurements exist |
+| `summary.json` | Coverage, transitions, case contributions, accounting, raw-evidence hashes |
+
+`panel_group=anchors` marks the six original-c1 settings; the other 42 are
+`challenge`. A missing continuous contrast is not zero: completed-peak
+differences need both runs to complete, so the 0.70 stratum has none.
+`allocation_accounting.json` holds terminal scheduler records; its
+whole-allocation cost is not added to invocation costs. Data-dictionary
+entries for this panel are kept here, not in `DATA_DICTIONARY.md` or
+`BENCHMARK.md`, because those two files are hash-bound to the pinned
+release in `source-provenance.json` and `reproduce.py` rejects any change.
+
+The CPU check `tests/test_offload_factorial_paper_numbers.py` recomputes the
+manuscript's numbers from the curated files. It reads the labels from
+`slots.csv` and the approvals from the sealed `predictions.json`, and uses
+the derived tables only as cross-checks. It covers the outcome table, the
+prediction table (combined rule 36/0/0, frozen logistic 29/0/7, component
+regression 36/6/0, offload only 24/0/12, reservation only 24/0/12, c1 only
+6/0/30), and the matched reductions at reservation 0.45 (equal-case means
+3,226 and 3,223 MiB, range 1,868–4,296 MiB, weight sync setting every
+offloaded peak). It also verifies the hashes in `freeze.json` and in
+`benchmark/revision_20260917/offload-independent-reconstruction.json`.
+
+That report records the authors' relocated raw-evidence reconstruction
+(50,058 evidence files, five CSVs byte-identical, summary identical apart
+from `raw_root`/`source_snapshot`). Repeating that reconstruction requires
+the raw per-block evidence under `output/offload_factorial/`, which is not
+part of this repository or the pinned Sept-17 release archive.
+This repository therefore checks the curated tables and the recorded hashes.
+It does not re-derive `slots.csv` from raw records. The collection and
+analysis modules (`memory_tuner/collect_offload_factorial.py`,
+`offload_factorial_analysis.py`, `offload_factorial_protocol.py`,
+`offload_factorial_runtime.py`) and their unit tests are included for that
+purpose. `run_offload_factorial.py/.slurm`, `watch_offload_factorial.py`, and
+`snapshot_offload_factorial.py` are launch-only provenance. Their hashes are
+listed under `offload_factorial_extension` in `source-provenance.json`,
+separately from the pinned release closure.
+
+## Electronics revision (2026-10)
+
+The MDPI *Electronics* revision adds four frozen A100 RL panels and a native
+LLMem comparison.
+
+**Curated results.** The results are in `profiles/electronics_revision/`, and the
+frozen protocols, matrices, and resource accounting are in
+`benchmark/electronics_revision_20261016/`. The panels are:
+
+| Panel | Runs | Within | Above | Memory failure | Unresolved |
+|---|---:|---:|---:|---:|---:|
+| Full-parameter / LoRA and no-reference controls | 108 | 106 | 0 | 0 | 2 |
+| Reservation 0.45–0.70 (7B) | 144 | 111 | 11 | 21 | 1 |
+| Generation-state release sweep | 36 | 17 | 6 | 12 | 1 |
+| Twenty-update operating cost | 24 | 24 | 0 | 0 | 0 |
+
+The native LLMem comparison has 24 prediction/measurement pairs, with an
+equal-case MAE of 236.6 MiB and a mean absolute relative error of 5.37%.
+
+**Copied from the paper workspace.** The analysis, figure and table modules
+are copied unchanged from the workspace branch `electronics-revision-20261016`
+(commit `4febe59`): `memory_tuner/electronics_*`, `collect_llmem_native.py`
+and `llmem_native*.py`. The unmodified upstream estimator is in
+`third_party/llmem_estimator/` with its provenance note.
+`docs/REPRODUCING_ELECTRONICS_REVISION.md` and
+`docs/electronics_measurement_audit.md` are the authors' reconstruction guide
+and telemetry audit.
+
+**Numbers check.** `tests/test_electronics_revision_paper_numbers.py` checks
+the manuscript's revision numbers against the curated files.
+
+**Not portable.** Launch-design tests that are hard-wired to the Karolina
+cluster paths are not included.
+
+**Raw archive.** Full raw reconstruction uses the separate evidence archive
+`electronics-full-20261021-a53af63.tar.zst`
+(SHA-256 `f70f639fc0c991e79b9e140d4c26482a9c3490000abe3c5acf6bc62fb7a599bf`).
+It is not part of this repository, and its historical part also needs
+`profiles/standard_grpo/` tables from that archive.
+
+## Cross-accelerator replication (AMD MI250X)
+
+`amd_mi250x/` replays the A100 configurations on the LUMI supercomputer. It
+uses MI250X GCDs (65,520 MiB) with ROCm 7.2.3, vLLM 0.25.1 and VERL 0.9.0. It
+changes hardware and software together, so it is a transfer test rather than
+a hardware ablation.
+
+The panel has 462 planned one-step and 40-step invocations in five parts:
+- the A100 GSM8K/MATH grid
+- the 7B models
+- a reservation sweep from 0.30 to 0.95
+- GRPO-LoRA, PPO with a full-parameter critic, and full-parameter GRPO
+- one-step versus 40-step runs
+
+**Results.** Eighty of the 90 replayed configurations keep their repeated A100
+label. Two findings differ from A100:
+- **Failure stage.** Infeasible settings fail after the actor update, while
+  vLLM restores its released state, instead of at vLLM startup.
+- **Whole-run peak.** The whole-run peak no longer hides actor-stage growth.
+
+**Files.**
+- `amd_mi250x/README.md`: harness, outcome rules and the four runtime amendments.
+- `amd_mi250x/results/`: per-trial and per-configuration outcomes.
+- `amd_mi250x/results/analysis/`: the comparison with the A100 tables.
+
+**Reproduce the tables on a CPU.** The tables are reproducible from those
+outputs:
+
+```bash
+python3.11 amd_mi250x/analyze.py
+python3.11 amd_mi250x/make_supplement.py --output s21.tex
+```
+
+`collect.py` needs the raw run directories.
+
+## Estimator comparison
+
+`estimator_comparison/` applies two estimators to all 400 benchmark targets and
+scores them with `benchmark.py evaluate`:
+- DeepSpeed's published ZeRO-2/ZeRO-3 model-state estimators, called from
+  DeepSpeed 0.19.8 and recorded in `deepspeed_estimates.json`
+- a transparent analytic component budget
+
+**Results.** Model states alone approve every memory-failing target, and
+adding the vLLM reservation still approves 84 of 104. The comparison
+complements the paper's native LLMem validation. It does not test DeepSpeed
+within its intended training scope. See `estimator_comparison/README.md`.
 
 ## What is reproduced
 

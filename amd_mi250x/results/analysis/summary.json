@@ -1,0 +1,90 @@
+{
+  "trial_states": {
+    "hardware_transfer/within_margin": 207,
+    "larger_models/within_margin": 56,
+    "hardware_transfer/memory_failure": 41,
+    "reservation_sweep/memory_failure": 24,
+    "reservation_sweep/within_margin": 22,
+    "hardware_transfer/above_margin": 21,
+    "algorithm_adaptation/within_margin": 21,
+    "horizon/within_margin": 18,
+    "larger_models/memory_failure": 12,
+    "horizon/memory_failure": 12,
+    "algorithm_adaptation/memory_failure": 9,
+    "algorithm_adaptation/above_margin": 6,
+    "horizon/other_failure": 6,
+    "larger_models/above_margin": 3,
+    "reservation_sweep/above_margin": 2,
+    "hardware_transfer/other_failure": 1,
+    "larger_models/other_failure": 1
+  },
+  "failure_modes": {
+    "generation_wakeup_oom": 67,
+    "update_weights_oom": 17,
+    "update_actor_oom": 2,
+    "rollout_startup_admission": 12
+  },
+  "hardware_transfer": {
+    "configurations": 90,
+    "resolved_on_both": 90,
+    "label_agreement": 80,
+    "confusion_a100_to_mi250x": {
+      "above_margin->above_margin": 5,
+      "above_margin->memory_failure": 3,
+      "above_margin->within_margin": 3,
+      "memory_failure->above_margin": 1,
+      "memory_failure->memory_failure": 11,
+      "memory_failure->within_margin": 1,
+      "within_margin->above_margin": 2,
+      "within_margin->within_margin": 64
+    },
+    "copied_a100_approvals": 66,
+    "copied_approvals_failing_on_mi250x": 0,
+    "copied_approvals_above_margin_on_mi250x": 2,
+    "mi250x_within_margin_rejected_by_copy": 4,
+    "mi250x_within_margin": 68,
+    "median_non_reservation_load_mib": {
+      "a100": 8031.0,
+      "mi250x": 12058.5,
+      "n": 74
+    }
+  },
+  "larger_models": {
+    "configurations": 24,
+    "resolved_on_both": 23,
+    "label_agreement": 9,
+    "confusion_a100_to_mi250x": {
+      "above_margin->within_margin": 3,
+      "memory_failure->above_margin": 1,
+      "memory_failure->memory_failure": 4,
+      "memory_failure->unresolved": 1,
+      "memory_failure->within_margin": 10,
+      "within_margin->within_margin": 5
+    },
+    "copied_a100_approvals": 5,
+    "copied_approvals_failing_on_mi250x": 0,
+    "copied_approvals_above_margin_on_mi250x": 0,
+    "mi250x_within_margin_rejected_by_copy": 13,
+    "mi250x_within_margin": 18,
+    "median_non_reservation_load_mib": {
+      "a100": 14283.0,
+      "mi250x": 13619.5,
+      "n": 8
+    }
+  },
+  "stage_masking": {
+    "cases": 5,
+    "equal_case_actor_stage_batch_contrast_mib": 2837.0,
+    "equal_case_whole_run_batch_contrast_mib": 2836.4,
+    "equal_case_whole_run_reservation_contrast_mib": 6522.6,
+    "actor_stage_batch_contrast_positive_cases": 5
+  },
+  "horizon": {
+    "pairs": 18,
+    "resolved_pairs": 12,
+    "agreeing_pairs": 12,
+    "disagreements": [],
+    "mean_long_minus_screen_peak_mib": 2038.7,
+    "max_long_minus_screen_peak_mib": 2483.0
+  }
+}

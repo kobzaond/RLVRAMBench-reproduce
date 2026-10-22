@@ -1,0 +1,588 @@
+{
+  "protocol_version": "1.1",
+  "selected_track": "gpu_count_transfer",
+  "rate_with_zero_denominator": null,
+  "cost_scope": "provided donor measurements, deduplicated within each reported scope",
+  "cost_warning": "Provided evidence is not measured method usage or saved computation. Track/task costs overlap; do not add them. Extra measurements must be disclosed.",
+  "evaluation_warning": "Open descriptive tasks, not a blind leaderboard or independent query samples.",
+  "overall": {
+    "queries": 36,
+    "distinct_target_configurations": 36,
+    "correct_three_state": 26,
+    "three_state_accuracy": 0.7222222222222222,
+    "approved": 36,
+    "approved_within_margin": 26,
+    "within_margin_recall": 1.0,
+    "within_margin_approval_precision": 0.7222222222222222,
+    "approved_memory_failure": 4,
+    "approved_above_margin": 6,
+    "rejected_within_margin": 0,
+    "target_within_margin": 26,
+    "target_above_margin": 6,
+    "target_memory_failure": 4,
+    "memory_failure_among_approved": 0.1111111111111111,
+    "above_margin_among_approved": 0.16666666666666666,
+    "approval_rate_on_memory_failure_targets": 1.0,
+    "approval_rate_on_above_margin_targets": 1.0,
+    "rejection_rate_on_within_margin_targets": 0.0,
+    "confusion_matrix_predicted_rows_observed_columns": {
+      "within_margin": {
+        "within_margin": 26,
+        "above_margin": 6,
+        "memory_failure": 4
+      },
+      "above_margin": {
+        "within_margin": 0,
+        "above_margin": 0,
+        "memory_failure": 0
+      },
+      "memory_failure": {
+        "within_margin": 0,
+        "above_margin": 0,
+        "memory_failure": 0
+      }
+    },
+    "distinct_source_configurations": 36,
+    "eligible_source_processes": 108,
+    "recorded_source_attempts": 121
+  },
+  "per_track": {
+    "gpu_count_transfer": {
+      "queries": 36,
+      "distinct_target_configurations": 36,
+      "correct_three_state": 26,
+      "three_state_accuracy": 0.7222222222222222,
+      "approved": 36,
+      "approved_within_margin": 26,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.7222222222222222,
+      "approved_memory_failure": 4,
+      "approved_above_margin": 6,
+      "rejected_within_margin": 0,
+      "target_within_margin": 26,
+      "target_above_margin": 6,
+      "target_memory_failure": 4,
+      "memory_failure_among_approved": 0.1111111111111111,
+      "above_margin_among_approved": 0.16666666666666666,
+      "approval_rate_on_memory_failure_targets": 1.0,
+      "approval_rate_on_above_margin_targets": 1.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 26,
+          "above_margin": 6,
+          "memory_failure": 4
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 36,
+      "eligible_source_processes": 108,
+      "recorded_source_attempts": 121,
+      "tasks": 12,
+      "macro_task_three_state_accuracy": 0.7222222222222222
+    }
+  },
+  "per_task": {
+    "task-0a7b3697bda19f1a": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 2,
+      "three_state_accuracy": 0.6666666666666666,
+      "approved": 3,
+      "approved_within_margin": 2,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.6666666666666666,
+      "approved_memory_failure": 1,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 2,
+      "target_above_margin": 0,
+      "target_memory_failure": 1,
+      "memory_failure_among_approved": 0.3333333333333333,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": 1.0,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 2,
+          "above_margin": 0,
+          "memory_failure": 1
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-208583082607be66": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 2,
+      "three_state_accuracy": 0.6666666666666666,
+      "approved": 3,
+      "approved_within_margin": 2,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.6666666666666666,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 1,
+      "rejected_within_margin": 0,
+      "target_within_margin": 2,
+      "target_above_margin": 1,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.3333333333333333,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": 1.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 2,
+          "above_margin": 1,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-320726fbf887849b": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 2,
+      "three_state_accuracy": 0.6666666666666666,
+      "approved": 3,
+      "approved_within_margin": 2,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.6666666666666666,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 1,
+      "rejected_within_margin": 0,
+      "target_within_margin": 2,
+      "target_above_margin": 1,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.3333333333333333,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": 1.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 2,
+          "above_margin": 1,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-40ee498dd6eb62ef": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 2,
+      "three_state_accuracy": 0.6666666666666666,
+      "approved": 3,
+      "approved_within_margin": 2,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.6666666666666666,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 1,
+      "rejected_within_margin": 0,
+      "target_within_margin": 2,
+      "target_above_margin": 1,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.3333333333333333,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": 1.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 2,
+          "above_margin": 1,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-736ccfc7b4ac6585": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 1,
+      "three_state_accuracy": 0.3333333333333333,
+      "approved": 3,
+      "approved_within_margin": 1,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.3333333333333333,
+      "approved_memory_failure": 1,
+      "approved_above_margin": 1,
+      "rejected_within_margin": 0,
+      "target_within_margin": 1,
+      "target_above_margin": 1,
+      "target_memory_failure": 1,
+      "memory_failure_among_approved": 0.3333333333333333,
+      "above_margin_among_approved": 0.3333333333333333,
+      "approval_rate_on_memory_failure_targets": 1.0,
+      "approval_rate_on_above_margin_targets": 1.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 1,
+          "above_margin": 1,
+          "memory_failure": 1
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-7e27216358a2f20e": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 1,
+      "three_state_accuracy": 0.3333333333333333,
+      "approved": 3,
+      "approved_within_margin": 1,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.3333333333333333,
+      "approved_memory_failure": 1,
+      "approved_above_margin": 1,
+      "rejected_within_margin": 0,
+      "target_within_margin": 1,
+      "target_above_margin": 1,
+      "target_memory_failure": 1,
+      "memory_failure_among_approved": 0.3333333333333333,
+      "above_margin_among_approved": 0.3333333333333333,
+      "approval_rate_on_memory_failure_targets": 1.0,
+      "approval_rate_on_above_margin_targets": 1.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 1,
+          "above_margin": 1,
+          "memory_failure": 1
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-830c6b3db722666c": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 3,
+      "three_state_accuracy": 1.0,
+      "approved": 3,
+      "approved_within_margin": 3,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 3,
+      "target_above_margin": 0,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 3,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 19
+    },
+    "task-87a8fa9526a1eeb0": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 3,
+      "three_state_accuracy": 1.0,
+      "approved": 3,
+      "approved_within_margin": 3,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 3,
+      "target_above_margin": 0,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 3,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-a1999f6c7a9799bc": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 2,
+      "three_state_accuracy": 0.6666666666666666,
+      "approved": 3,
+      "approved_within_margin": 2,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.6666666666666666,
+      "approved_memory_failure": 1,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 2,
+      "target_above_margin": 0,
+      "target_memory_failure": 1,
+      "memory_failure_among_approved": 0.3333333333333333,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": 1.0,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 2,
+          "above_margin": 0,
+          "memory_failure": 1
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 12
+    },
+    "task-e43d181a6203ba69": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 3,
+      "three_state_accuracy": 1.0,
+      "approved": 3,
+      "approved_within_margin": 3,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 3,
+      "target_above_margin": 0,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 3,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-f0f04e404c034013": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 2,
+      "three_state_accuracy": 0.6666666666666666,
+      "approved": 3,
+      "approved_within_margin": 2,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 0.6666666666666666,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 1,
+      "rejected_within_margin": 0,
+      "target_within_margin": 2,
+      "target_above_margin": 1,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.3333333333333333,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": 1.0,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 2,
+          "above_margin": 1,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    },
+    "task-fd4d842b842defee": {
+      "queries": 3,
+      "distinct_target_configurations": 3,
+      "correct_three_state": 3,
+      "three_state_accuracy": 1.0,
+      "approved": 3,
+      "approved_within_margin": 3,
+      "within_margin_recall": 1.0,
+      "within_margin_approval_precision": 1.0,
+      "approved_memory_failure": 0,
+      "approved_above_margin": 0,
+      "rejected_within_margin": 0,
+      "target_within_margin": 3,
+      "target_above_margin": 0,
+      "target_memory_failure": 0,
+      "memory_failure_among_approved": 0.0,
+      "above_margin_among_approved": 0.0,
+      "approval_rate_on_memory_failure_targets": null,
+      "approval_rate_on_above_margin_targets": null,
+      "rejection_rate_on_within_margin_targets": 0.0,
+      "confusion_matrix_predicted_rows_observed_columns": {
+        "within_margin": {
+          "within_margin": 3,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "above_margin": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        },
+        "memory_failure": {
+          "within_margin": 0,
+          "above_margin": 0,
+          "memory_failure": 0
+        }
+      },
+      "distinct_source_configurations": 3,
+      "eligible_source_processes": 9,
+      "recorded_source_attempts": 9
+    }
+  }
+}

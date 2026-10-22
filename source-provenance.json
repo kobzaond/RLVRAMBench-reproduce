@@ -627,5 +627,116 @@
       "sha256": "242065ace28800569237fe12d2df98a69a232e348dfd09e19ae892c1799a6c6d",
       "size_bytes": 8462
     }
+  },
+  "offload_factorial_extension": {
+    "source_repository": "https://github.com/kobzaond/rl",
+    "source_commit": "b4737a4938c9403ddf805728a618c41d04500873",
+    "selection": "Independent offload factorial: collection/analysis closure, archive builder closure, launch-only provenance (run/watch/snapshot) and their tests; byte-identical to the source commit. Not part of the pinned release closure above: reproduce.py verifies only 'files' against release.json's source_commit and archive.",
+    "files": {
+      "memory_tuner/build_review_archives.py": {
+        "sha256": "3478c3975bb40822802e453c8208ddbada50df634435facd9ec66c226d55f396",
+        "size_bytes": 7492
+      },
+      "memory_tuner/build_submission_manuscript.py": {
+        "sha256": "98b1f237199f61ea84e5135da25dff79d6832022bfde2349788c7aada033fd5c",
+        "size_bytes": 15699
+      },
+      "memory_tuner/check_paper_citations.py": {
+        "sha256": "d6c9b43c88dd73c6ac70f5f23558f4e6524605703cd9bbe609fd718b78c8ed70",
+        "size_bytes": 3338
+      },
+      "memory_tuner/collect_completion_replication.py": {
+        "sha256": "f13d2ca4f72bf8e0f1c3c9ef3852a48c1b0c30660ba790088ce55ec06230dc69",
+        "size_bytes": 35201
+      },
+      "memory_tuner/collect_offload_factorial.py": {
+        "sha256": "e7cb37946c522618199d3183d7e247b8358f0fe4d50533eaa53065cacd8ea04a",
+        "size_bytes": 21780
+      },
+      "memory_tuner/completion_replication_protocol.py": {
+        "sha256": "11d7d1984ce22512614aaa61c5dc7d3127f0623e0c0c9337532f9aea9a8acad2",
+        "size_bytes": 63951
+      },
+      "memory_tuner/durable_metrics.py": {
+        "sha256": "cef0714ff9b5e5f07000bdb4d668be49d4f125b8e3eb13bdc1ee3b708e371a5a",
+        "size_bytes": 6526
+      },
+      "memory_tuner/offload_factorial_analysis.py": {
+        "sha256": "47d4fee9be6f23a4d16f53f4efbcf90637253ee0f60c823e1cda1d9df56b35fb",
+        "size_bytes": 40197
+      },
+      "memory_tuner/offload_factorial_protocol.py": {
+        "sha256": "dc7ad2e71073f1dfe5802fb3fb09debebc7201c4d3caf86ab1b971eeaeddfd33",
+        "size_bytes": 27447
+      },
+      "memory_tuner/offload_factorial_runtime.py": {
+        "sha256": "0aa191e5aba5afd5aa794670fc1cb26fd108e969677f28effa510c6273404dd7",
+        "size_bytes": 4373
+      },
+      "memory_tuner/run_completion_replication.py": {
+        "sha256": "f40e0eb9de262501560e4b1705316153f29a8f49e93dc9da641269e5fff80cd6",
+        "size_bytes": 15924
+      },
+      "memory_tuner/run_offload_factorial.py": {
+        "sha256": "5defe7de983c775fbd94d85c0ea426d5ec1291499908e35412ce51a651ad2734",
+        "size_bytes": 24694
+      },
+      "memory_tuner/run_offload_factorial.slurm": {
+        "sha256": "6652a0e0f90de66fd87c9fd16918ac4e95b502cdbb165e66ea207e112bc02586",
+        "size_bytes": 1327
+      },
+      "memory_tuner/snapshot_offload_factorial.py": {
+        "sha256": "25aa7758db5865291175d9c98f948952ecc4968a8edc2241398b08ed393dc2bc",
+        "size_bytes": 27155
+      },
+      "memory_tuner/stage_decision_release.py": {
+        "sha256": "72813048e8b7592a699eab01761e25af9ba6638aa7221379024ae5f2945e1b72",
+        "size_bytes": 56245
+      },
+      "memory_tuner/standard_grpo_readiness.py": {
+        "sha256": "31f18bdd0925495ecd09055c5e71f4eb5222805f09bf0d7b25dc2b3fe484a4c3",
+        "size_bytes": 7552
+      },
+      "memory_tuner/test_build_review_archives.py": {
+        "sha256": "7d7c9ef5a3d603d2e0c90c877ba9778b3fcbd7502c194181dbd7f5a66e017f73",
+        "size_bytes": 2495
+      },
+      "memory_tuner/test_collect_offload_factorial.py": {
+        "sha256": "05e3ea732ae2074fa2b362ec9139c18de8a646285ad9e27c21434fe7a2c5b79b",
+        "size_bytes": 5573
+      },
+      "memory_tuner/test_offload_factorial_analysis.py": {
+        "sha256": "59d7f63cfae7fb6a8f99abe1e329c7ac8230e2ca4cf80c41c2eababc2fc21d6f",
+        "size_bytes": 55313
+      },
+      "memory_tuner/test_offload_factorial_protocol.py": {
+        "sha256": "94b5a671d68a332561bb4119e813d73eeec7163dabd5cdd4e96a3a27d21ec29d",
+        "size_bytes": 7194
+      },
+      "memory_tuner/test_offload_factorial_reconstruction.py": {
+        "sha256": "ce2817ce25ff2066b425db66fb08cdc2eb91b7392b29496ae0110d7eb7f6a594",
+        "size_bytes": 9175
+      },
+      "memory_tuner/test_run_offload_factorial.py": {
+        "sha256": "089ff9bde4064a1c704814864114a3d347aad13a0f4d1436e9aff6ce3f87a55e",
+        "size_bytes": 35035
+      },
+      "memory_tuner/test_snapshot_offload_factorial.py": {
+        "sha256": "4234214494306b395f0c30f69278bd29dcf0db0c6a5f194496dc426a831499c2",
+        "size_bytes": 21027
+      },
+      "memory_tuner/test_stage_decision_release.py": {
+        "sha256": "93f572b53134662c9bc792475146bf56e91ec9d6e4e15b0d9c576e8d99d2193d",
+        "size_bytes": 55630
+      },
+      "memory_tuner/test_watch_offload_factorial.py": {
+        "sha256": "0e1233dd1bc1aee4e39b06585c97b9a89aa76b4b180e3cf0f4e71fa5a84669c2",
+        "size_bytes": 27422
+      },
+      "memory_tuner/watch_offload_factorial.py": {
+        "sha256": "4ef40e5234bdf6c4a0dd9cd4b0d0ee0e590503918087cf2fd94dd242d68f4c57",
+        "size_bytes": 18757
+      }
+    }
   }
 }

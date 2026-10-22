@@ -10,3 +10,5 @@ reproduced/
 *.pyc
 .env
 .env.*
+.venv-deepspeed/
+amd_mi250x/outputs/

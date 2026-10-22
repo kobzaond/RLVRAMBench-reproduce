@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "e6fdbdb747b86f5d05c9f69cfeec20ea990359be7d047487b5079c6636ea59f1",
+  "source_commit": "e6a8f0abd7790544362d97e4e633414f9528c241",
+  "planned": 108,
+  "states": {
+    "within_margin": 106,
+    "unresolved": 2
+  },
+  "source_scope": "raw evidence reassessment; no missing-slot replacement",
+  "panel": "adaptation",
+  "planned_configurations": 36,
+  "configuration_states": {
+    "within_margin": 34,
+    "unresolved": 2
+  },
+  "planned_contrasts": 54,
+  "resolved_contrasts": 52,
+  "completed_contrasts": 52,
+  "secondary_error_runs": 0,
+  "diagnoses": {
+    "completed": 106,
+    "unavailable": 2
+  },
+  "all_slots_terminal": false,
+  "all_blocks_finished": true,
+  "unfinished_blocks": []
+}

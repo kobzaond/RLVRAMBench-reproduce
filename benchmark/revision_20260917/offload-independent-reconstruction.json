@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "source_commit": "3d6ecac1852e16a0422c9c72a230187be663f8b5",
+  "freeze_sha256": "5df43f35e0b02c23e4816b7e860c5a613176da41f5adb27e57f79ac2becf1fb9",
+  "stage": "/tmp/rlvram-offload-reconstruction-06a_a5u7",
+  "derived_files_matched": [
+    "block_contrasts.csv",
+    "configurations.csv",
+    "offload_pairs.csv",
+    "prediction_scores.csv",
+    "slots.csv",
+    "summary.json"
+  ],
+  "comparison": "Five CSVs byte-identical; summary identical except the two validated raw_root/source_snapshot fields.",
+  "live_project_and_reference_results_hidden": true,
+  "child_namespace_inaccessibility_probed": true,
+  "hidden_paths": [
+    "/mnt/proj3/open-35-44/verl",
+    "/tmp/rlvrambench-offload-revision-20260917.Cr8Cya/rl"
+  ],
+  "archived_source_only": true,
+  "evidence_files_verified": 50058,
+  "statuses": {
+    "completed": 108,
+    "infrastructure_invalid": 0,
+    "memory_failure": 36,
+    "not_launched": 0
+  },
+  "configuration_states": {
+    "above_margin": 0,
+    "memory_failure": 12,
+    "unresolved": 0,
+    "within_margin": 36
+  },
+  "fitting_or_new_gpu_execution_performed": false,
+  "result_sha256": {
+    "block_contrasts.csv": "c3d30a671034f5b5befa696b4b724dc248e37401019b172b17e1adcf78bcc96a",
+    "configurations.csv": "10c6400783b0213c9030469625a9ab5377aaed3a75b49db8668554035cf8382a",
+    "offload_pairs.csv": "1f79e6ff74d765b2a0e8aa782153cd6ef43c0713791e749775b8fd2ecf558f43",
+    "prediction_scores.csv": "71ce107160003796f67b40bfcc7cfbf2e6d805092e1f3c5dc4b137b296e4cabe",
+    "slots.csv": "9c63727809d3eeaddca1e35eb23761fb0276efb497f0b6685657f2322716d1c6",
+    "summary.json": "a23680d847a74c356475d3708a8c25bfa29ae4da3c4493fa715d229823dca944"
+  }
+}

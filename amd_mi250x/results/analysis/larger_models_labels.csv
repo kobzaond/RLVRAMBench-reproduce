@@ -1,0 +1,25 @@
+source_configuration_id,model,workload,level,gpu_count,actor_micro_batch,reservation,parameter_offload,state_release,a100_label,mi250x_label,a100_failure_stages,mi250x_failure_stages,a100_max_completed_peak_mib,mi250x_max_completed_peak_mib,a100_non_reservation_mib,mi250x_non_reservation_mib,mi250x_eligible,mi250x_planned
+cr-mistral-7b-math-c3-4gpu,Mistral-7B-v0.3,math,c3,4,16,0.7,False,True,memory_failure,within_margin,startup admission:3,,,60936,,15072,3,3
+cr-mistral-7b-math-c3-2gpu,Mistral-7B-v0.3,math,c3,2,16,0.7,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cr-mistral-7b-gsm8k-c3-4gpu,Mistral-7B-v0.3,gsm8k,c3,4,16,0.7,False,True,memory_failure,unresolved,startup admission:3,,,60920,,15056,2,3
+cr-mistral-7b-gsm8k-c3-2gpu,Mistral-7B-v0.3,gsm8k,c3,2,16,0.7,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cr-mistral-7b-math-c2-2gpu,Mistral-7B-v0.3,math,c2,2,8,0.6,False,True,memory_failure,within_margin,startup admission:3,,,59631,,20319,3,3
+cr-mistral-7b-math-c2-4gpu,Mistral-7B-v0.3,math,c2,4,8,0.6,False,True,above_margin,within_margin,,,39808.0,54407,15232,15095,3,3
+cr-qwen25-7b-math-c1-2gpu,Qwen2.5-7B,math,c1,2,4,0.45,True,True,memory_failure,above_margin,weight synchronization:3,,,64746,,35262,3,3
+cr-qwen25-7b-math-c1-4gpu,Qwen2.5-7B,math,c1,4,4,0.45,True,True,within_margin,within_margin,,,32936.0,42620,14504,13136,3,3
+cr-qwen25-7b-gsm8k-c2-4gpu,Qwen2.5-7B,gsm8k,c2,4,8,0.6,False,True,within_margin,within_margin,,,38638.0,53415,14062,14103,3,3
+cr-qwen25-7b-gsm8k-c2-2gpu,Qwen2.5-7B,gsm8k,c2,2,8,0.6,False,True,memory_failure,within_margin,startup admission:3,,,59832,,20520,3,3
+cr-qwen25-7b-gsm8k-c1-2gpu,Qwen2.5-7B,gsm8k,c1,2,4,0.45,True,True,memory_failure,within_margin,weight synchronization:3,,,63214,,33730,3,3
+cr-qwen25-7b-gsm8k-c1-4gpu,Qwen2.5-7B,gsm8k,c1,4,4,0.45,True,True,within_margin,within_margin,,,32390.0,41303,13958,11819,3,3
+cr-mistral-7b-math-c1-2gpu,Mistral-7B-v0.3,math,c1,2,4,0.45,True,True,memory_failure,within_margin,weight synchronization:3,,,61618,,32134,3,3
+cr-mistral-7b-math-c1-4gpu,Mistral-7B-v0.3,math,c1,4,4,0.45,True,True,within_margin,within_margin,,,32048.0,40175,13616,10691,3,3
+cr-mistral-7b-gsm8k-c1-4gpu,Mistral-7B-v0.3,gsm8k,c1,4,4,0.45,True,True,within_margin,within_margin,,,31550.0,40293,13118,10809,3,3
+cr-mistral-7b-gsm8k-c1-2gpu,Mistral-7B-v0.3,gsm8k,c1,2,4,0.45,True,True,memory_failure,within_margin,weight synchronization:3,,,61424,,31940,3,3
+cr-qwen25-7b-gsm8k-c3-4gpu,Qwen2.5-7B,gsm8k,c3,4,16,0.7,False,True,memory_failure,within_margin,startup admission:3,,,59928,,14064,3,3
+cr-qwen25-7b-gsm8k-c3-2gpu,Qwen2.5-7B,gsm8k,c3,2,16,0.7,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cr-mistral-7b-gsm8k-c2-2gpu,Mistral-7B-v0.3,gsm8k,c2,2,8,0.6,False,True,memory_failure,within_margin,startup admission:3,,,58358,,19046,3,3
+cr-mistral-7b-gsm8k-c2-4gpu,Mistral-7B-v0.3,gsm8k,c2,4,8,0.6,False,True,above_margin,within_margin,,,39290.0,54351,14714,15039,3,3
+cr-qwen25-7b-math-c3-4gpu,Qwen2.5-7B,math,c3,4,16,0.7,False,True,memory_failure,within_margin,startup admission:3,,,59989,,14125,3,3
+cr-qwen25-7b-math-c3-2gpu,Qwen2.5-7B,math,c3,2,16,0.7,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):3,,,,,3,3
+cr-qwen25-7b-math-c2-4gpu,Qwen2.5-7B,math,c2,4,8,0.6,False,True,above_margin,within_margin,,,39124.0,53485,14548,14173,3,3
+cr-qwen25-7b-math-c2-2gpu,Qwen2.5-7B,math,c2,2,8,0.6,False,True,memory_failure,within_margin,startup admission:3,,,61079,,21767,3,3

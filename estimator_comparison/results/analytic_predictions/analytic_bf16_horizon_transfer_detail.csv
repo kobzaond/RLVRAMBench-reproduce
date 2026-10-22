@@ -1,0 +1,5 @@
+query_id,predicted_state,task_id,track,target_configuration_id,predicted_peak_mib,predicted_peak_stage,pred_generation_mib,pred_actor_update_mib,pred_logprob_mib,pred_weight_sync_mib,overhead_mib,calibration_sources
+query-69f16a44c67f378b,within_margin,task-4e6c7db198ff7c7b,horizon_transfer,cfg-3197439008c27071,35212.1992,weight_sync,35020.1719,10316.6641,6220.4453,35212.1992,1024.0,0
+query-8d86cf5af0ae2aca,memory_failure,task-41b351b1f1624c37,horizon_transfer,cfg-cadb236b55d403e1,54458.8154,actor_update,32010.3154,54458.8154,17108.8154,33182.5654,1024.0,0
+query-a9650bee46606c7d,within_margin,task-878bc846f8be91af,horizon_transfer,cfg-a330fc0dc0b46c34,35212.1992,weight_sync,35020.1719,21581.5391,6988.5547,35212.1992,1024.0,0
+query-c706b21190a01dfb,within_margin,task-39ce89d6e6988e60,horizon_transfer,cfg-818aa43be2ebba5e,33182.5654,weight_sync,32010.3154,23306.8154,13982.8154,33182.5654,1024.0,0

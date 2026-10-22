@@ -1,0 +1,33 @@
+{
+  "protocol_sha256": "6eec153a0ebb28ebb3bec4f2245226191a673b54470aae2bf2ad3cd391b00461",
+  "source_commit": "cf86c7ae0f94df817531abd4b653645b1a2eb814",
+  "planned": 144,
+  "states": {
+    "within_margin": 111,
+    "memory_failure": 21,
+    "above_margin": 11,
+    "unresolved": 1
+  },
+  "source_scope": "raw evidence reassessment; no missing-slot replacement",
+  "panel": "reservation",
+  "planned_configurations": 48,
+  "configuration_states": {
+    "within_margin": 37,
+    "unresolved": 1,
+    "memory_failure": 7,
+    "above_margin": 3
+  },
+  "planned_contrasts": 72,
+  "resolved_contrasts": 71,
+  "completed_contrasts": 50,
+  "secondary_error_runs": 0,
+  "diagnoses": {
+    "completed": 122,
+    "rollout_oom": 3,
+    "startup_budget_rejection": 18,
+    "unavailable": 1
+  },
+  "all_slots_terminal": false,
+  "all_blocks_finished": true,
+  "unfinished_blocks": []
+}

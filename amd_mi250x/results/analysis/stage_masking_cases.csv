@@ -1,0 +1,6 @@
+model,workload,completed_processes,actor_stage_batch_contrast_mib,whole_run_batch_contrast_mib,whole_run_reservation_contrast_mib
+Phi-4-mini,gsm8k,12,3802,3802,6651
+Qwen2.5-3B,gsm8k,12,3242,3241,6394
+Qwen2.5-3B,math,12,4015,4016,6715
+granite-3.3-2b,gsm8k,12,1285,1284,6393
+granite-3.3-2b,math,12,1841,1839,6460

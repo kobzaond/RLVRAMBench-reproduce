@@ -1,0 +1,13 @@
+model,workload,level,gpu_count,algorithm,adaptation,reservation,parameter_offload,steps,label,eligible,planned,failure_modes,max_completed_peak_mib,mean_actor_stage_peak_mib,mean_generation_peak_mib,whole_run_peak_stage,mean_step_seconds,mean_update_actor_seconds,mean_update_weights_seconds,mean_elapsed_seconds
+Qwen2.5-1.5B,gsm8k,c2,2,grpo,lora,0.6,False,1,within_margin,3,3,,47963,10672.3,44090.0,update_weights:2;gen:1,86.3,8.4,8.5,370.3
+Qwen2.5-1.5B,gsm8k,c2,2,ppo,lora,0.6,False,1,within_margin,3,3,,56983,25558.0,47435.0,update_weights:2;gen:1,86.3,6.1,8.6,414.0
+Qwen2.5-1.5B,gsm8k,c2,2,grpo,full,0.6,False,1,within_margin,3,3,,54753,24550.3,44054.3,update_weights:2;gen:1,60.6,7.1,2.1,313.7
+Qwen2.5-1.5B,gsm8k,c3,2,grpo,lora,0.7,False,1,within_margin,3,3,,57646,13389.7,50446.7,gen:2;update_weights:1,91.7,6.3,8.8,352.3
+Qwen2.5-1.5B,gsm8k,c3,2,ppo,lora,0.7,False,1,above_margin,3,3,,64674,26656.3,53866.0,update_weights:2;gen:1,81.9,3.8,8.7,345.0
+Qwen2.5-1.5B,gsm8k,c3,2,grpo,full,0.7,False,1,within_margin,3,3,,60815,24316.7,50787.0,gen:3,60.1,7.0,2.1,310.0
+Qwen2.5-3B,gsm8k,c2,2,grpo,lora,0.6,False,1,within_margin,3,3,,51011,14267.7,46922.7,update_weights:3,93.7,10.2,14.5,349.7
+Qwen2.5-3B,gsm8k,c2,2,ppo,lora,0.6,False,1,memory_failure,3,3,generation_wakeup_oom;update_weights_oom,,,,,,,,
+Qwen2.5-3B,gsm8k,c2,2,grpo,full,0.6,False,1,above_margin,3,3,,65509,43960.0,47060.3,update_weights:3,71.7,8.7,2.7,296.7
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.7,False,1,within_margin,3,3,,61011,17709.3,53745.0,update_weights:2;gen:1,90.9,7.4,14.8,349.3
+Qwen2.5-3B,gsm8k,c3,2,ppo,lora,0.7,False,1,memory_failure,3,3,generation_wakeup_oom,,,,,,,,
+Qwen2.5-3B,gsm8k,c3,2,grpo,full,0.7,False,1,memory_failure,3,3,generation_wakeup_oom,,,,,,,,

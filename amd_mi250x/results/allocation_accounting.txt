@@ -1,0 +1,9 @@
+executed attempts and allocated GCD-hours (elapsed x allocated GCDs), from sacct
+('evaluation', 'algorithm_adaptation') 36 7.1
+('evaluation', 'hardware_transfer') 309 116.5
+('evaluation', 'horizon') 36 53.5
+('evaluation', 'larger_models') 72 35.0
+('evaluation', 'reservation_sweep') 50 9.9
+('pilot', 'algorithm_adaptation') 4 0.6
+('pilot', 'larger_models') 8 2.5
+total executed 515 GCD-hours 225.1

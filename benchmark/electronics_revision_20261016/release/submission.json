@@ -1,0 +1,8 @@
+{
+  "job_id": "5215025",
+  "source_commit": "cf86c7ae0f94df817531abd4b653645b1a2eb814",
+  "source_root": "/mnt/proj3/open-35-44/verl/experiments/electronics-controls-cf86c7a",
+  "protocol_sha256": "38210ee150aeb336349922ab9b63719c9f870dcff1cac6e6fa67173f52c72e65",
+  "panel": "release",
+  "dependency": "afterany:5214838"
+}

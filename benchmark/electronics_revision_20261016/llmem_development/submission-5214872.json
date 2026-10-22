@@ -1,0 +1,7 @@
+{
+  "job_id": "5214872",
+  "source_commit": "420d9ae3a84beaf94726ff60a8067a40ff6b4c9f",
+  "source_root": "/mnt/proj3/open-35-44/verl/experiments/electronics-llmem-420d9ae",
+  "development_only": true,
+  "amends_setup_job": "5214860"
+}

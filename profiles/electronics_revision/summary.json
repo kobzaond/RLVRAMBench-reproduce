@@ -1,0 +1,58 @@
+{
+  "stage": {
+    "planned_slots": 144,
+    "complete_blocks": 35,
+    "excluded_slots": 4,
+    "equal_case_actor_batch_mib": 3904.611111111111,
+    "equal_case_whole_batch_mib": 7.458333333333333
+  },
+  "horizon": {
+    "comparisons": 42,
+    "agreements": 40,
+    "paired_case_labels_agree": 4,
+    "paired_case_denominator": 4,
+    "caveat": "Historical and paired protocols are separate; no pooled accuracy estimate. Original 100-step panel: two extra excluded attempts; paired panel: three. Binary approval agreement does not resolve the type of an unsuitable outcome."
+  },
+  "failures": [
+    {
+      "study": "Boundary",
+      "eligible_invocations": 216,
+      "completed": 156,
+      "startup_budget_rejection": 48,
+      "startup_allocation_oom": 3,
+      "rollout_oom": 6,
+      "weight_sync_oom": 3,
+      "actor_update_oom": 0
+    },
+    {
+      "study": "State release",
+      "eligible_invocations": 36,
+      "completed": 27,
+      "startup_budget_rejection": 0,
+      "startup_allocation_oom": 0,
+      "rollout_oom": 0,
+      "weight_sync_oom": 6,
+      "actor_update_oom": 3
+    },
+    {
+      "study": "Independent offload",
+      "eligible_invocations": 144,
+      "completed": 108,
+      "startup_budget_rejection": 36,
+      "startup_allocation_oom": 0,
+      "rollout_oom": 0,
+      "weight_sync_oom": 0,
+      "actor_update_oom": 0
+    }
+  ],
+  "input_sha256": {
+    "benchmark/replication_control/results/replication_control_trials.csv": "50dd590a89d81c2a638b22847a412e3e45a36038313814e0f7242773a0e738b1",
+    "profiles/standard_grpo/temporal-40-audit.csv": "02450359827e28a0edf9fd96f796a403e2e1f1c8e770bf88aeb9c40eeb02f4b6",
+    "profiles/standard_grpo/temporal-100-trials.csv": "b9066ba5fab0139a3ec03d02dbae944b91fa37e5a8014c0ec585153256ef261b",
+    "profiles/standard_grpo/revision-temporal-pairs.csv": "8684dd8a13b0ce6d6bf3aed04ec2de51c0d5eb5aa71c5d834ab499910de349f9",
+    "profiles/standard_grpo/revision-temporal-cases.csv": "9418c5e274878d3b2d35bf0d514b86145f1d72528cc28b62fbc31fa7c4caa171",
+    "profiles/standard_grpo/boundary-trials.csv": "6b0bda9727e04be13242e8b3eca63aa8f01a4ff9122899b59d59dd2d03d0df7a",
+    "profiles/standard_grpo/same-node-trials.csv": "6a4bf28758f88758e09c34e8465d0c16e5142b4f757a24ab09939d9381ed797b",
+    "benchmark/offload_factorial/results/slots.csv": "9c63727809d3eeaddca1e35eb23761fb0276efb497f0b6685657f2322716d1c6"
+  }
+}

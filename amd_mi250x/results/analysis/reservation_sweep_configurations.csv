@@ -1,0 +1,17 @@
+model,workload,level,gpu_count,algorithm,adaptation,reservation,parameter_offload,steps,label,eligible,planned,failure_modes,max_completed_peak_mib,mean_actor_stage_peak_mib,mean_generation_peak_mib,whole_run_peak_stage,mean_step_seconds,mean_update_actor_seconds,mean_update_weights_seconds,mean_elapsed_seconds
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.3,False,1,within_margin,3,3,,35170,17711.0,27389.7,update_weights:3,92.4,7.6,14.8,354.3
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.45,False,1,within_margin,3,3,,44927,17680.0,37403.3,gen:2;update_weights:1,88.3,7.5,14.9,362.0
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.6,False,1,within_margin,3,3,,54466,17676.0,47070.3,gen:2;update_weights:1,99.4,7.6,15.1,394.7
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.7,False,1,within_margin,3,3,,61184,17709.7,53537.3,update_weights:3,101.3,7.6,14.7,365.0
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.8,False,1,memory_failure,3,3,generation_wakeup_oom;update_weights_oom,,,,,,,,
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.85,False,1,memory_failure,3,3,generation_wakeup_oom;update_weights_oom,,,,,,,,
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.9,False,1,memory_failure,3,3,rollout_startup_admission,,,,,,,,
+Qwen2.5-3B,gsm8k,c3,2,grpo,lora,0.95,False,1,memory_failure,3,3,rollout_startup_admission,,,,,,,,
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.3,False,1,within_margin,3,3,,37236,19874.0,29936.0,update_weights:3,80.0,6.6,16.6,376.3
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.45,False,1,within_margin,3,3,,48766,20684.7,40013.0,update_weights:2;gen:1,132.6,7.2,16.8,462.0
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.6,False,1,within_margin,3,3,,58112,20295.0,49623.3,update_weights:2;gen:1,120.1,6.9,16.7,435.0
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.7,False,1,above_margin,3,3,,64269,20274.3,56451.7,gen:3,96.3,6.8,16.8,380.7
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.8,False,1,memory_failure,3,3,generation_wakeup_oom,,,,,,,,
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.85,False,1,memory_failure,3,3,generation_wakeup_oom;update_weights_oom,,,,,,,,
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.9,False,1,memory_failure,3,3,rollout_startup_admission,,,,,,,,
+Phi-4-mini,gsm8k,c3,2,grpo,lora,0.95,False,1,memory_failure,3,3,rollout_startup_admission,,,,,,,,

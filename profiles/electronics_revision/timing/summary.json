@@ -1,0 +1,24 @@
+{
+  "protocol_sha256": "1415fa87037028c153c795751aecd7b41be78e7f793a6acc6c1c7d7b2ce821f3",
+  "source_commit": "cf86c7ae0f94df817531abd4b653645b1a2eb814",
+  "planned": 24,
+  "states": {
+    "within_margin": 24
+  },
+  "source_scope": "raw evidence reassessment; no missing-slot replacement",
+  "panel": "timing",
+  "planned_configurations": 8,
+  "configuration_states": {
+    "within_margin": 8
+  },
+  "planned_contrasts": 18,
+  "resolved_contrasts": 18,
+  "completed_contrasts": 18,
+  "secondary_error_runs": 0,
+  "diagnoses": {
+    "completed": 24
+  },
+  "all_slots_terminal": true,
+  "all_blocks_finished": true,
+  "unfinished_blocks": []
+}

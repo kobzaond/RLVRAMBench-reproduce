@@ -262,7 +262,7 @@ def fake_child(tree, calls):
 
 
 def test_optional_panels_absent_preserve_old_workflow(tmp_path):
-    assert replication.prepare_panels(tmp_path, ROOT, {}, tmp_path / "absent", isolated=False) == {}
+    assert replication.prepare_panels(tmp_path, tmp_path, {}, tmp_path / "absent", isolated=False) == {}
     assert replication.reconstruct_panels(tmp_path, tmp_path, tmp_path, [], {}, None) == {}
 
 

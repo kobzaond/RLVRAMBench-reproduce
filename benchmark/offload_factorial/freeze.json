@@ -1,0 +1,10 @@
+{
+  "files_sha256": {
+    "matrix.csv": "efaf3d434066f06ed439a0c47e20c0dd824670b7327b099d9377c1e3b9d91d7d",
+    "predictions.json": "d8dd530f1ca1ac2dea466570c6b03934f9a5ec09cc1eb6607e2bcc858f8aa3b8",
+    "protocol.json": "c374f7feb282a83f656b138762a03cc61ecd232765447f5a8bcaa858550258d2"
+  },
+  "frozen_at_utc": "2026-09-17T11:22:10.537012+00:00",
+  "schema_version": "offload-factorial-1",
+  "status": "sealed_before_offload_factorial_execution"
+}

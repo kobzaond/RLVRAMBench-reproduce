@@ -1,0 +1,9 @@
+protocol,model_family,dataset,comparisons,agreements,within_to_unsuitable,source_within,long_within
+Historical screen / 40 steps,qwen25_3b,gsm8k,9,9,0,6,6
+Historical screen / 40 steps,qwen25_1p5b,math,9,9,0,6,6
+Historical screen / 100 steps,qwen25_3b,gsm8k,6,6,0,6,6
+Historical screen / 100 steps,qwen25_1p5b,math,6,6,0,6,6
+Paired screen / 100 steps,granite33_2b,gsm8k,3,3,0,3,3
+Paired screen / 100 steps,granite33_2b,math,3,1,2,2,0
+Paired screen / 100 steps,phi4_mini,gsm8k,3,3,0,3,3
+Paired screen / 100 steps,phi4_mini,math,3,3,0,3,3

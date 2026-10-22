@@ -1,0 +1,27 @@
+{
+  "amendment": "runtime-amendment-04",
+  "recorded": "2026-10-22",
+  "defects": {
+    "horizon_time_limit": "Planning error: the matrix gave 40-step runs 120 minutes. Qwen-1.5B/MATH steps take about 245 s, so these six runs reached step 30 without any memory failure and were stopped by the time limit. They rerun with 240 minutes; settings are unchanged.",
+    "requeue_cache": "Slot larger_models-amd-e7037dac094c2364-grpo-lora-s223: job 23033917 lost its node (NODE_FAIL) before the cleanup trap ran; Slurm requeued it under the same job ID, so the second execution reused the killed attempt's runtime directory and failed reading a partially written Triton cache (KeyError 'hsaco'). The batch script now empties its runtime directory at start. The slot runs once more."
+  },
+  "settings_changed": false,
+  "rule": "Only these seven slots run again; diagnosed memory outcomes are never rerun.",
+  "time_limit_minutes": {
+    "horizon-amd-fcb3ee90f597982b-grpo-lora-s501": 240,
+    "horizon-amd-fcb3ee90f597982b-grpo-lora-s502": 240,
+    "horizon-amd-fcb3ee90f597982b-grpo-lora-s503": 240,
+    "horizon-amd-522b467a9db34561-grpo-lora-s501": 240,
+    "horizon-amd-522b467a9db34561-grpo-lora-s502": 240,
+    "horizon-amd-522b467a9db34561-grpo-lora-s503": 240
+  },
+  "rerun_run_ids": [
+    "horizon-amd-fcb3ee90f597982b-grpo-lora-s501",
+    "horizon-amd-fcb3ee90f597982b-grpo-lora-s502",
+    "horizon-amd-fcb3ee90f597982b-grpo-lora-s503",
+    "horizon-amd-522b467a9db34561-grpo-lora-s501",
+    "horizon-amd-522b467a9db34561-grpo-lora-s502",
+    "horizon-amd-522b467a9db34561-grpo-lora-s503",
+    "larger_models-amd-e7037dac094c2364-grpo-lora-s223"
+  ]
+}

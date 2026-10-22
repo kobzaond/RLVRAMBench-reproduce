@@ -1,0 +1,18 @@
+{
+  "scope": "Post-run hardware naming cross-check; not a contemporaneous per-process hardware dump",
+  "recorded_at_utc": "2026-10-16T13:18:30.678527+00:00",
+  "node": "acn19",
+  "scheduler_command": [
+    "scontrol",
+    "show",
+    "node",
+    "acn19"
+  ],
+  "scheduler_capture_utc": "2026-10-16T12:44:19.858342+00:00",
+  "scheduler_capture_sha256": "e28bebcabfe76a242ce6c24f7bfa5d3c8fa86904e7ad185f8d3d61a54cb4e4e6",
+  "scheduler_gres": "gpu:a100:8(S:0-7)",
+  "documentation_url": "https://docs.it4i.cz/en/docs/clusters/karolina/hardware-overview",
+  "documentation_sha256": "a0526b810b4046bd82fca5f003f555f14541de1e11e8dc8b5a231d5ad0139271",
+  "documented_node_family": "Acn01\u2013Acn72: eight NVIDIA A100 GPUs with 40 GB HBM2 per GPU",
+  "contemporaneous_identity": "Per-pair claim and result records retain physical GPU UUID and hostname"
+}

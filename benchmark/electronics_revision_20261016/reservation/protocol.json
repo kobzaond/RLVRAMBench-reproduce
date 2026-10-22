@@ -1,0 +1,69 @@
+{
+  "allocation_gpus": 4,
+  "blocks": 12,
+  "capacity_mib": 40960,
+  "caps": {
+    "max_concurrent_allocations": 4,
+    "payload_timeout_seconds": 900,
+    "wall_seconds": 14400
+  },
+  "data_sha256": {
+    "data/codecontests/heavy_tail/test.parquet": "e9d077a023de7f80aa013c5541c33b5978a43e203ce916045bc72c4fe5c62a82",
+    "data/codecontests/heavy_tail/train.parquet": "0bc6ec8fd7ef1618a604417faa4bb13cb9a0117dcffb75685b2c80c1da95f697",
+    "data/gsm8k/test.parquet": "0dcd50ed32caa9d8f434d4e3ef8031bc3e49b0f823655a53be5c002e727f17dd",
+    "data/gsm8k/train.parquet": "8fb13a0cd8621e5fcacdee3ffe28b3a369975478ea7ab514781f3f190cba2488"
+  },
+  "development": false,
+  "endpoint_scope": "Frozen selected-grid resource outcomes, not deployment probabilities.",
+  "failure_policy": "Only diagnosed GPU-memory errors are memory outcomes; timeouts and host OOM remain unresolved.",
+  "frozen_at_utc": "2026-10-16T11:47:44.466839+00:00",
+  "group": "electronics_reservation_20261016",
+  "margin_mib": 38912,
+  "matrix_sha256": "d46fe2b91707f5dfb558ae394b464bf05f4c0646c3e63ad6b7ad96511478fd14",
+  "measurement": "Per-task-device NVML, 100 ms; host stage markers are not allocation ownership.",
+  "model_cache": {
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "files_sha256": {
+        "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+        "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+        "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+        "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+        "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+        "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "path": "/mnt/proj3/open-35-44/verl/runtime/kobzaond/cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+      "files_sha256": {
+        "README.md": "3166974023134d972368b585d730fa5f70100873684f90a10a773b20e80b30ba",
+        "config.json": "affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99",
+        "generation_config.json": "b4669f1b8f4185324bd9b12a69e85a1ad2289bc48111ef739cfaaea3bba6b0a9",
+        "model-00001-of-00003.safetensors": "ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19",
+        "model-00002-of-00003.safetensors": "8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0",
+        "model-00003-of-00003.safetensors": "905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca",
+        "model.safetensors.index.json": "e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016",
+        "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+        "tokenizer.json": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49",
+        "tokenizer.model": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+        "tokenizer.model.v3": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+        "tokenizer_config.json": "0533dec9cfe319163801b6618d0f3ec9cfa126b6288e3df5deca6e32acb09cd2"
+      },
+      "path": "/mnt/proj3/open-35-44/verl/runtime/kobzaond/cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71"
+    }
+  },
+  "no_automatic_retries": true,
+  "non_lora_policy": "rank=0; native KL retains a separate CPU-offloaded reference; KL-disabled matched controls remove it in both training modes.",
+  "planned_invocations": 144,
+  "predictions_sha256": "f97a4b9fa0a3325b07090f47d337b40b73af0d35972d7af057bc3581e5c0ed6c",
+  "schema_version": 1,
+  "seed_role": "fresh process repeats",
+  "study": "reservation",
+  "success_policy": "All requested durable step metrics, successful trainer exit, physical-device identity, raw traces and parameter metadata."
+}

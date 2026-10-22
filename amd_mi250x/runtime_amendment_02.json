@@ -1,0 +1,101 @@
+{
+  "amendment": "runtime-amendment-02",
+  "recorded": "2026-10-21",
+  "defects": {
+    "shared_tmp": "As amendment 01, for jobs that were already running when it was recorded.",
+    "shm_psm_missing": "vLLM start-up failed because a psm_* POSIX shared-memory segment in the node-wide /dev/shm disappeared (FileNotFoundError). The cause was not established; Singularity cannot bind a private directory onto /dev, so no fix is applied.",
+    "port_race": "vLLM's TCPStore failed to bind an ephemeral port taken by a co-located job. run_grpo_mi250x.slurm now sets a job-specific VLLM_PORT base."
+  },
+  "not_rerun": "Job 23032954 ('Memory usage increased after sleeping', a vLLM sleep-mode self-check) shows none of these defects and keeps its recorded non-memory outcome. Diagnosed memory failures are never rerun.",
+  "settings_changed": false,
+  "attempts_per_slot_limit": "one rerun under this amendment",
+  "evidence": {
+    "hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s113": {
+      "job_id": "23032950",
+      "defect": "vLLM psm_* shared-memory segment missing at start-up"
+    },
+    "hardware_transfer-amd-624145edbc91703d-grpo-lora-s83": {
+      "job_id": "23030167",
+      "defect": "shared /tmp collision partner: timed out before step 1 under the pre-fix harness"
+    },
+    "hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s94": {
+      "job_id": "23030168",
+      "defect": "shared /tmp collision partner: timed out before step 1 under the pre-fix harness"
+    },
+    "hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s95": {
+      "job_id": "23030169",
+      "defect": "shared /tmp ZMQ socket collision (invalid device pointer)"
+    },
+    "hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s96": {
+      "job_id": "23030170",
+      "defect": "shared /tmp collision partner: timed out before step 1 under the pre-fix harness"
+    },
+    "hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s112": {
+      "job_id": "23030190",
+      "defect": "shared /tmp ZMQ socket collision (invalid device pointer)"
+    },
+    "hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s113": {
+      "job_id": "23030191",
+      "defect": "shared /tmp collision partner: timed out before step 1 under the pre-fix harness"
+    },
+    "hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s111": {
+      "job_id": "23030211",
+      "defect": "shared /tmp ZMQ socket collision (invalid device pointer)"
+    },
+    "hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s112": {
+      "job_id": "23030212",
+      "defect": "shared /tmp collision partner: timed out before step 1 under the pre-fix harness"
+    },
+    "hardware_transfer-amd-996a3920c206da4c-grpo-lora-s113": {
+      "job_id": "23030253",
+      "defect": "shared /tmp collision partner: timed out before step 1 under the pre-fix harness"
+    },
+    "hardware_transfer-amd-bc00117c458b5d5d-grpo-lora-s91": {
+      "job_id": "23030266",
+      "defect": "shared /tmp ZMQ socket collision (invalid device pointer)"
+    },
+    "hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s94": {
+      "job_id": "23030275",
+      "defect": "vLLM psm_* shared-memory segment missing at start-up"
+    },
+    "hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s95": {
+      "job_id": "23030276",
+      "defect": "shared /tmp collision partner: timed out before step 1 under the pre-fix harness"
+    },
+    "hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s96": {
+      "job_id": "23030277",
+      "defect": "shared /tmp ZMQ socket collision (invalid device pointer)"
+    },
+    "hardware_transfer-amd-4b92cc3197922be7-grpo-lora-s113": {
+      "job_id": "23030284",
+      "defect": "vLLM psm_* shared-memory segment missing at start-up"
+    },
+    "hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s42": {
+      "job_id": "23032991",
+      "defect": "TCP port race with a co-located job"
+    },
+    "reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s301": {
+      "job_id": "23034023",
+      "defect": "TCP port race with a co-located job"
+    }
+  },
+  "rerun_run_ids": [
+    "hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s113",
+    "hardware_transfer-amd-624145edbc91703d-grpo-lora-s83",
+    "hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s94",
+    "hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s95",
+    "hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s96",
+    "hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s112",
+    "hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s113",
+    "hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s111",
+    "hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s112",
+    "hardware_transfer-amd-996a3920c206da4c-grpo-lora-s113",
+    "hardware_transfer-amd-bc00117c458b5d5d-grpo-lora-s91",
+    "hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s94",
+    "hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s95",
+    "hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s96",
+    "hardware_transfer-amd-4b92cc3197922be7-grpo-lora-s113",
+    "hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s42",
+    "reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s301"
+  ]
+}

@@ -1,0 +1,133 @@
+study,model,dataset,actor_micro_batch,reservation,actor_offload,release,eligible_invocations,completed,startup_budget_rejection,startup_allocation_oom,rollout_oom,weight_sync_oom,actor_update_oom
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_heavy_tail,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_heavy_tail,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_heavy_tail,16,0.8,False,True,3,0,0,0,3,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_heavy_tail,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_heavy_tail,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_heavy_tail,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_standard,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_standard,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_standard,16,0.8,False,True,3,0,0,0,3,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_standard,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_standard,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,code_standard,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,gsm8k,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,gsm8k,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,gsm8k,16,0.8,False,True,3,0,0,0,0,3,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,gsm8k,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,gsm8k,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,gsm8k,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,math,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,math,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,math,16,0.8,False,True,3,0,0,3,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,math,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,math,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,Qwen/Qwen2.5-3B-Instruct,math,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_heavy_tail,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_heavy_tail,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_heavy_tail,16,0.8,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_heavy_tail,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_heavy_tail,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_heavy_tail,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_standard,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_standard,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_standard,16,0.8,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_standard,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_standard,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,code_standard,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,gsm8k,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,gsm8k,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,gsm8k,16,0.8,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,gsm8k,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,gsm8k,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,gsm8k,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,math,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,math,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,math,16,0.8,False,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,math,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,math,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,ibm-granite/granite-3.3-2b-instruct,math,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_heavy_tail,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_heavy_tail,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_heavy_tail,16,0.8,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_heavy_tail,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_heavy_tail,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_heavy_tail,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_standard,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_standard,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_standard,16,0.8,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_standard,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_standard,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,code_standard,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,gsm8k,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,gsm8k,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,gsm8k,16,0.8,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,gsm8k,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,gsm8k,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,gsm8k,8,0.6,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,math,1,0.3,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,math,16,0.7,False,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,math,16,0.8,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,math,32,0.85,False,True,3,0,3,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,math,4,0.45,True,True,3,3,0,0,0,0,0
+Boundary,microsoft/Phi-4-mini-instruct,math,8,0.6,False,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,4,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,4,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,4,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,4,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,8,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,8,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,8,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,code_heavy_tail,8,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,4,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,4,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,4,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,4,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,8,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,8,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,8,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,gsm8k,8,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,4,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,4,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,4,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,4,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,8,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,8,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,8,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,Qwen/Qwen2.5-7B-Instruct,math,8,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,4,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,4,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,4,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,4,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,8,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,8,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,8,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,code_heavy_tail,8,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,4,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,4,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,4,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,4,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,8,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,8,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,8,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,gsm8k,8,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,4,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,4,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,4,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,4,0.7,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,8,0.45,False,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,8,0.45,True,True,3,3,0,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,8,0.7,False,True,3,0,3,0,0,0,0
+Independent offload,mistralai/Mistral-7B-Instruct-v0.3,math,8,0.7,True,True,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-1.5B-Instruct,gsm8k,16,0.7,False,False,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-1.5B-Instruct,gsm8k,16,0.7,False,True,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-1.5B-Instruct,math,16,0.7,False,False,3,0,0,0,0,0,3
+State release,Qwen/Qwen2.5-1.5B-Instruct,math,16,0.7,False,True,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-3B-Instruct,gsm8k,1,0.3,True,False,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-3B-Instruct,gsm8k,1,0.3,True,True,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-3B-Instruct,gsm8k,16,0.65,False,False,3,0,0,0,0,3,0
+State release,Qwen/Qwen2.5-3B-Instruct,gsm8k,16,0.65,False,True,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-3B-Instruct,math,16,0.65,False,False,3,0,0,0,0,3,0
+State release,Qwen/Qwen2.5-3B-Instruct,math,16,0.65,False,True,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-3B-Instruct,math,2,0.35,True,False,3,3,0,0,0,0,0
+State release,Qwen/Qwen2.5-3B-Instruct,math,2,0.35,True,True,3,3,0,0,0,0,0
