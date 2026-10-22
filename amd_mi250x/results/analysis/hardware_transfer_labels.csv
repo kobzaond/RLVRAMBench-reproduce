@@ -20,7 +20,7 @@ cfg-352f4dbc55fbcd3c,Qwen2.5-3B,gsm8k,c5,2,32,0.85,False,True,memory_failure,mem
 cfg-371ae37408089efe,Phi-4-mini,math,c2,4,8,0.6,False,True,within_margin,within_margin,,,32108.0,51585,7532,12273,3,3
 cfg-399f6b038d6f65f9,Qwen2.5-3B,gsm8k,c2,4,8,0.6,False,True,within_margin,within_margin,,,29840.0,48636,5264,9324,3,3
 cfg-3b9787f775169f3d,granite-3.3-2b,math,actor_only,2,16,0.6,False,True,within_margin,within_margin,,,32670.0,51501,8094,12189,3,3
-cfg-3c86a11fdb8455cb,Phi-4-mini,gsm8k,c5,2,32,0.85,False,True,memory_failure,memory_failure,startup admission:3,generation-state restore (wake-up):2,,,,,2,3
+cfg-3c86a11fdb8455cb,Phi-4-mini,gsm8k,c5,2,32,0.85,False,True,memory_failure,unresolved,startup admission:3,generation-state restore (wake-up):2,,,,,2,3
 cfg-3ca7715d60421fe4,Phi-4-mini,math,joint,2,16,0.7,False,True,above_margin,memory_failure,,generation-state restore (wake-up):2;weight synchronization:1,40160.0,,11488,,3,3
 cfg-3f0f48a3c570a0c8,Qwen2.5-3B,math,c0,2,1,0.3,True,True,within_margin,within_margin,,,21860.0,31154,9572,11498,3,3
 cfg-3fb18b33cd9f8bcf,Qwen2.5-3B,math,near_boundary,2,16,0.65,False,True,within_margin,above_margin,,,37302.0,64788,10678,22200,3,3

@@ -24,14 +24,15 @@
   },
   "hardware_transfer": {
     "configurations": 90,
-    "resolved_on_both": 90,
-    "label_agreement": 80,
+    "resolved_on_both": 89,
+    "label_agreement": 79,
     "confusion_a100_to_mi250x": {
       "above_margin->above_margin": 5,
       "above_margin->memory_failure": 3,
       "above_margin->within_margin": 3,
       "memory_failure->above_margin": 1,
-      "memory_failure->memory_failure": 11,
+      "memory_failure->memory_failure": 10,
+      "memory_failure->unresolved": 1,
       "memory_failure->within_margin": 1,
       "within_margin->above_margin": 2,
       "within_margin->within_margin": 64

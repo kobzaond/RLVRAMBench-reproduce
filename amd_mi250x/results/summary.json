@@ -7,7 +7,8 @@
     },
     "hardware_transfer": {
       "above_margin": 8,
-      "memory_failure": 14,
+      "memory_failure": 13,
+      "unresolved": 1,
       "within_margin": 68
     },
     "horizon": {

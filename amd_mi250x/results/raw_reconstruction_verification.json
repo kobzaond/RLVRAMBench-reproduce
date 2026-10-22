@@ -1,0 +1,23 @@
+{
+  "archive": "RLVRAMBench-mi250x-raw-20261022.tar.zst",
+  "sha256": "400f75b1c3015d9903b3e898b0ed2dc3771b07363bff7f8761aec0c798ed67ae",
+  "size_bytes": 58527374,
+  "location": "https://huggingface.co/datasets/kobzaond/RLVRAMBench/blob/main/releases/RLVRAMBench-mi250x-raw-20261022.tar.zst",
+  "manifest_files": 3065,
+  "manifest_verified": true,
+  "procedure": "extract into an empty directory; sha256sum -c release/MANIFEST.sha256; python3.11 amd_mi250x/collect.py --root <dir> --output <dir>/results",
+  "byte_identical_outputs": [
+    "results/trials.csv",
+    "results/configurations.csv",
+    "results/summary.json"
+  ],
+  "executions": {
+    "submitted_jobs": 803,
+    "started_jobs": 510,
+    "started_executions_including_requeue": 511,
+    "allocated_gcd_hours": 255.5,
+    "pilot_executions": 12,
+    "pilot_gcd_hours": 3.1,
+    "source": "results/attempt_ledger.csv (sacct -D, one row per execution)"
+  }
+}

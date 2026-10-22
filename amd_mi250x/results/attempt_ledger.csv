@@ -1,0 +1,817 @@
+job_id,execution,run,slurm_state,start,end,elapsed_seconds,node,allocated_gcds,gcd_hours,started
+23027462,1,pilot/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s221,CANCELLED by 327004680,2026-10-21T13:49:30,2026-10-21T13:49:51,21,nid005003,2,0.0117,1
+23027463,1,pilot/larger_models-amd-a5848a3a9c189e55-grpo-lora-s221,CANCELLED by 327004680,2026-10-21T13:49:30,2026-10-21T13:49:51,21,nid007954,4,0.0233,1
+23027468,1,pilot/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s221,OUT_OF_MEMORY,2026-10-21T13:51:05,2026-10-21T13:58:42,457,nid007904,2,0.2539,1
+23027469,1,pilot/larger_models-amd-a5848a3a9c189e55-grpo-lora-s221,OUT_OF_MEMORY,2026-10-21T13:53:15,2026-10-21T14:00:06,411,nid007863,4,0.4567,1
+23027470,1,pilot/algorithm_adaptation-amd-e31bfa5415ea52ad-ppo-lora-s401,FAILED,2026-10-21T13:53:15,2026-10-21T13:54:23,68,nid007863,2,0.0378,1
+23027471,1,pilot/algorithm_adaptation-amd-573a483093217867-grpo-full-s401,FAILED,2026-10-21T13:53:15,2026-10-21T14:00:38,443,nid007863,2,0.2461,1
+23028013,1,pilot/algorithm_adaptation-amd-e31bfa5415ea52ad-ppo-lora-s401,FAILED,2026-10-21T14:09:27,2026-10-21T14:13:04,217,nid005059,2,0.1206,1
+23028112,1,pilot/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s221,FAILED,2026-10-21T14:09:27,2026-10-21T14:17:51,504,nid005059,2,0.28,1
+23028113,1,pilot/larger_models-amd-a5848a3a9c189e55-grpo-lora-s221,OUT_OF_MEMORY,2026-10-21T14:13:23,2026-10-21T14:20:34,431,nid005114,4,0.4789,1
+23028115,1,evaluation/hardware_transfer-amd-3676c66cad477bbb-grpo-lora-s94,COMPLETED,2026-10-21T14:13:23,2026-10-21T14:21:31,488,nid007863,2,0.2711,1
+23028116,1,evaluation/hardware_transfer-amd-3676c66cad477bbb-grpo-lora-s95,COMPLETED,2026-10-21T14:13:23,2026-10-21T14:23:16,593,nid007887,2,0.3294,1
+23028117,1,evaluation/hardware_transfer-amd-3676c66cad477bbb-grpo-lora-s96,COMPLETED,2026-10-21T14:13:23,2026-10-21T14:23:25,602,nid007894,2,0.3344,1
+23028118,1,evaluation/hardware_transfer-amd-58689244cc3e554e-grpo-lora-s111,COMPLETED,2026-10-21T14:20:10,2026-10-21T14:27:06,416,nid005059,4,0.4622,1
+23028119,1,evaluation/hardware_transfer-amd-58689244cc3e554e-grpo-lora-s112,COMPLETED,2026-10-21T14:20:56,2026-10-21T14:28:50,474,nid005114,4,0.5267,1
+23028120,1,evaluation/hardware_transfer-amd-58689244cc3e554e-grpo-lora-s113,COMPLETED,2026-10-21T14:24:46,2026-10-21T14:32:48,482,nid005043,4,0.5356,1
+23028121,1,evaluation/hardware_transfer-amd-7a4aa814cdd7fc71-grpo-lora-s94,COMPLETED,2026-10-21T14:15:40,2026-10-21T14:22:14,394,nid005059,2,0.2189,1
+23028122,1,evaluation/hardware_transfer-amd-7a4aa814cdd7fc71-grpo-lora-s95,COMPLETED,2026-10-21T14:15:40,2026-10-21T14:23:27,467,nid007880,2,0.2594,1
+23028123,1,evaluation/hardware_transfer-amd-7a4aa814cdd7fc71-grpo-lora-s96,COMPLETED,2026-10-21T14:15:40,2026-10-21T14:23:17,457,nid007904,2,0.2539,1
+23028124,1,evaluation/hardware_transfer-amd-10dc40d3ee084759-grpo-lora-s41,COMPLETED,2026-10-21T14:23:59,2026-10-21T14:29:59,360,nid007863,2,0.2,1
+23028125,1,evaluation/hardware_transfer-amd-10dc40d3ee084759-grpo-lora-s42,COMPLETED,2026-10-21T14:23:59,2026-10-21T14:31:00,421,nid007880,2,0.2339,1
+23028126,1,evaluation/hardware_transfer-amd-10dc40d3ee084759-grpo-lora-s43,COMPLETED,2026-10-21T14:23:59,2026-10-21T14:29:59,360,nid007887,2,0.2,1
+23028127,1,evaluation/hardware_transfer-amd-07714872b6cf4c4e-grpo-lora-s111,FAILED,2026-10-21T14:27:28,2026-10-21T14:33:16,348,nid005059,4,0.3867,1
+23028128,1,evaluation/hardware_transfer-amd-07714872b6cf4c4e-grpo-lora-s112,FAILED,2026-10-21T14:29:14,2026-10-21T14:35:04,350,nid005114,4,0.3889,1
+23028129,1,evaluation/hardware_transfer-amd-07714872b6cf4c4e-grpo-lora-s113,FAILED,2026-10-21T14:33:10,2026-10-21T14:39:03,353,nid005043,4,0.3922,1
+23028130,1,evaluation/hardware_transfer-amd-3f2c004121459594-grpo-lora-s94,COMPLETED,2026-10-21T14:23:59,2026-10-21T14:29:40,341,nid007894,2,0.1894,1
+23028131,1,evaluation/hardware_transfer-amd-3f2c004121459594-grpo-lora-s95,COMPLETED,2026-10-21T14:23:59,2026-10-21T14:30:45,406,nid007904,2,0.2256,1
+23028132,1,evaluation/hardware_transfer-amd-3f2c004121459594-grpo-lora-s96,COMPLETED,2026-10-21T14:31:14,2026-10-21T14:39:35,501,nid005039,2,0.2783,1
+23028133,1,evaluation/hardware_transfer-amd-16aa91c382fcee55-grpo-lora-s111,COMPLETED,2026-10-21T14:33:54,2026-10-21T14:39:28,334,nid005059,4,0.3711,1
+23028134,1,evaluation/hardware_transfer-amd-16aa91c382fcee55-grpo-lora-s112,COMPLETED,2026-10-21T14:34:33,2026-10-21T14:42:25,472,nid007898,4,0.5244,1
+23028135,1,evaluation/hardware_transfer-amd-16aa91c382fcee55-grpo-lora-s113,COMPLETED,2026-10-21T14:34:33,2026-10-21T14:42:25,472,nid007898,4,0.5244,1
+23028136,1,evaluation/hardware_transfer-amd-2942e2d84a06a471-grpo-lora-s94,COMPLETED,2026-10-21T14:31:14,2026-10-21T14:37:12,358,nid007863,2,0.1989,1
+23028137,1,evaluation/hardware_transfer-amd-2942e2d84a06a471-grpo-lora-s95,COMPLETED,2026-10-21T14:31:14,2026-10-21T14:39:45,511,nid007865,2,0.2839,1
+23028138,1,evaluation/hardware_transfer-amd-2942e2d84a06a471-grpo-lora-s96,COMPLETED,2026-10-21T14:31:14,2026-10-21T14:39:44,510,nid007874,2,0.2833,1
+23028140,1,evaluation/hardware_transfer-amd-7c663a31f02a7c0e-grpo-lora-s94,COMPLETED,2026-10-21T14:31:14,2026-10-21T14:37:12,358,nid007887,2,0.1989,1
+23028141,1,evaluation/hardware_transfer-amd-7c663a31f02a7c0e-grpo-lora-s95,COMPLETED,2026-10-21T14:31:14,2026-10-21T14:37:09,355,nid007894,2,0.1972,1
+23028142,1,evaluation/hardware_transfer-amd-7c663a31f02a7c0e-grpo-lora-s96,COMPLETED,2026-10-21T14:33:57,2026-10-21T14:39:47,350,nid007880,2,0.1944,1
+23028143,1,evaluation/hardware_transfer-amd-31ddc8f9592d9050-grpo-lora-s111,COMPLETED,2026-10-21T14:35:26,2026-10-21T14:41:36,370,nid005114,4,0.4111,1
+23028144,1,evaluation/hardware_transfer-amd-31ddc8f9592d9050-grpo-lora-s112,COMPLETED,2026-10-21T14:37:32,2026-10-21T14:43:47,375,nid007863,4,0.4167,1
+23028145,1,evaluation/hardware_transfer-amd-31ddc8f9592d9050-grpo-lora-s113,COMPLETED,2026-10-21T14:39:27,2026-10-21T14:45:43,376,nid005043,4,0.4178,1
+23028146,1,evaluation/hardware_transfer-amd-4f8670d8bc94a368-grpo-lora-s111,COMPLETED,2026-10-21T14:39:50,2026-10-21T14:47:25,455,nid005059,4,0.5056,1
+23028147,1,evaluation/hardware_transfer-amd-4f8670d8bc94a368-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028148,1,evaluation/hardware_transfer-amd-4f8670d8bc94a368-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028149,1,evaluation/hardware_transfer-amd-95d1b5ecf5287987-grpo-lora-s81,FAILED,2026-10-21T14:31:14,2026-10-21T14:41:06,592,nid007868,2,0.3289,1
+23028150,1,evaluation/hardware_transfer-amd-95d1b5ecf5287987-grpo-lora-s82,FAILED,2026-10-21T14:31:14,2026-10-21T14:39:15,481,nid007904,2,0.2672,1
+23028151,1,evaluation/hardware_transfer-amd-95d1b5ecf5287987-grpo-lora-s83,FAILED,2026-10-21T14:31:14,2026-10-21T14:41:06,592,nid007929,2,0.3289,1
+23028152,1,evaluation/hardware_transfer-amd-b0db192cb313b102-grpo-lora-s41,COMPLETED,2026-10-21T14:40:03,2026-10-21T14:47:36,453,nid005039,2,0.2517,1
+23028153,1,evaluation/hardware_transfer-amd-b0db192cb313b102-grpo-lora-s42,COMPLETED,2026-10-21T14:40:03,2026-10-21T14:46:11,368,nid005059,2,0.2044,1
+23028154,1,evaluation/hardware_transfer-amd-b0db192cb313b102-grpo-lora-s43,COMPLETED,2026-10-21T14:40:03,2026-10-21T14:46:47,404,nid007874,2,0.2244,1
+23028155,1,evaluation/hardware_transfer-amd-efa37088bbe2696a-grpo-lora-s91,FAILED,2026-10-21T14:40:03,2026-10-21T14:46:39,396,nid007887,2,0.22,1
+23028156,1,evaluation/hardware_transfer-amd-efa37088bbe2696a-grpo-lora-s92,FAILED,2026-10-21T14:40:03,2026-10-21T14:46:31,388,nid007894,2,0.2156,1
+23028157,1,evaluation/hardware_transfer-amd-efa37088bbe2696a-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028158,1,evaluation/hardware_transfer-amd-95ab18c5ee8fa418-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028159,1,evaluation/hardware_transfer-amd-95ab18c5ee8fa418-grpo-lora-s42,COMPLETED,2026-10-21T14:40:03,2026-10-21T14:45:54,351,nid007904,2,0.195,1
+23028160,1,evaluation/hardware_transfer-amd-95ab18c5ee8fa418-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028161,1,evaluation/hardware_transfer-amd-a228d8b325a815e1-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028162,1,evaluation/hardware_transfer-amd-a228d8b325a815e1-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028163,1,evaluation/hardware_transfer-amd-a228d8b325a815e1-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028165,1,evaluation/hardware_transfer-amd-c2aa8d9dbf7bd299-grpo-lora-s111,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028166,1,evaluation/hardware_transfer-amd-c2aa8d9dbf7bd299-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028167,1,evaluation/hardware_transfer-amd-c2aa8d9dbf7bd299-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028168,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s111,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028169,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028170,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028171,1,evaluation/hardware_transfer-amd-2ca307101ddfa774-grpo-lora-s94,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028172,1,evaluation/hardware_transfer-amd-2ca307101ddfa774-grpo-lora-s95,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028173,1,evaluation/hardware_transfer-amd-2ca307101ddfa774-grpo-lora-s96,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028174,1,evaluation/hardware_transfer-amd-bc36784076bf5976-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028175,1,evaluation/hardware_transfer-amd-bc36784076bf5976-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028176,1,evaluation/hardware_transfer-amd-bc36784076bf5976-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23028649,1,pilot/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s221,COMPLETED,2026-10-21T14:40:05,2026-10-21T14:49:39,574,nid007865,2,0.3189,1
+23028650,1,pilot/algorithm_adaptation-amd-e31bfa5415ea52ad-ppo-lora-s401,FAILED,2026-10-21T14:40:09,2026-10-21T14:45:54,345,nid007880,2,0.1917,1
+23029114,1,pilot/larger_models-amd-a5848a3a9c189e55-grpo-lora-s221,COMPLETED,2026-10-21T14:43:17,2026-10-21T14:53:40,623,nid007898,4,0.6922,1
+23030138,1,evaluation/hardware_transfer-amd-3323c146ee1cddc9-grpo-lora-s41,COMPLETED,2026-10-21T14:53:28,2026-10-21T15:01:43,495,nid005092,2,0.275,1
+23030139,1,evaluation/hardware_transfer-amd-3323c146ee1cddc9-grpo-lora-s42,COMPLETED,2026-10-21T14:53:59,2026-10-21T15:02:43,524,nid005097,2,0.2911,1
+23030140,1,evaluation/hardware_transfer-amd-3323c146ee1cddc9-grpo-lora-s43,COMPLETED,2026-10-21T14:54:09,2026-10-21T15:02:23,494,nid007898,2,0.2744,1
+23030141,1,evaluation/hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s81,TIMEOUT,2026-10-21T14:54:09,2026-10-21T15:39:20,2711,nid007898,2,1.5061,1
+23030142,1,evaluation/hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s82,TIMEOUT,2026-10-21T14:54:09,2026-10-21T15:39:20,2711,nid007898,2,1.5061,1
+23030143,1,evaluation/hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s83,TIMEOUT,2026-10-21T14:54:09,2026-10-21T15:39:20,2711,nid007898,2,1.5061,1
+23030144,1,evaluation/hardware_transfer-amd-db2d88aac405ec72-grpo-lora-s94,FAILED,2026-10-21T14:55:02,2026-10-21T15:03:06,484,nid007922,2,0.2689,1
+23030145,1,evaluation/hardware_transfer-amd-db2d88aac405ec72-grpo-lora-s95,FAILED,2026-10-21T14:55:30,2026-10-21T15:03:31,481,nid005102,2,0.2672,1
+23030146,1,evaluation/hardware_transfer-amd-db2d88aac405ec72-grpo-lora-s96,FAILED,2026-10-21T14:56:15,2026-10-21T15:02:44,389,nid005039,2,0.2161,1
+23030147,1,evaluation/hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s41,TIMEOUT,2026-10-21T14:57:49,2026-10-21T15:42:50,2701,nid007897,2,1.5006,1
+23030148,1,evaluation/hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s42,TIMEOUT,2026-10-21T14:57:49,2026-10-21T15:42:50,2701,nid007897,2,1.5006,1
+23030149,1,evaluation/hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s43,TIMEOUT,2026-10-21T14:57:49,2026-10-21T15:42:50,2701,nid007897,2,1.5006,1
+23030150,1,evaluation/hardware_transfer-amd-5b5cf2b323b2a85f-grpo-lora-s81,TIMEOUT,2026-10-21T14:57:49,2026-10-21T15:42:50,2701,nid007897,2,1.5006,1
+23030151,1,evaluation/hardware_transfer-amd-5b5cf2b323b2a85f-grpo-lora-s82,COMPLETED,2026-10-21T14:59:27,2026-10-21T15:09:25,598,nid005046,2,0.3322,1
+23030152,1,evaluation/hardware_transfer-amd-5b5cf2b323b2a85f-grpo-lora-s83,COMPLETED,2026-10-21T15:01:03,2026-10-21T15:11:05,602,nid005065,2,0.3344,1
+23030153,1,evaluation/hardware_transfer-amd-31dac0b7c4eb7aa7-grpo-lora-s94,COMPLETED,2026-10-21T15:01:32,2026-10-21T15:08:54,442,nid005097,2,0.2456,1
+23030154,1,evaluation/hardware_transfer-amd-31dac0b7c4eb7aa7-grpo-lora-s95,COMPLETED,2026-10-21T15:02:03,2026-10-21T15:09:16,433,nid005092,2,0.2406,1
+23030155,1,evaluation/hardware_transfer-amd-31dac0b7c4eb7aa7-grpo-lora-s96,COMPLETED,2026-10-21T15:03:04,2026-10-21T15:09:00,356,nid005039,2,0.1978,1
+23030156,1,evaluation/hardware_transfer-amd-aba6d1da0a9c7f3c-grpo-lora-s81,COMPLETED,2026-10-21T15:03:17,2026-10-21T15:10:14,417,nid007898,2,0.2317,1
+23030157,1,evaluation/hardware_transfer-amd-aba6d1da0a9c7f3c-grpo-lora-s82,COMPLETED,2026-10-21T15:03:25,2026-10-21T15:11:25,480,nid007922,2,0.2667,1
+23030158,1,evaluation/hardware_transfer-amd-aba6d1da0a9c7f3c-grpo-lora-s83,COMPLETED,2026-10-21T15:03:28,2026-10-21T15:12:17,529,nid005082,2,0.2939,1
+23030159,1,evaluation/hardware_transfer-amd-2206ce9d2c7ab26b-grpo-lora-s94,COMPLETED,2026-10-21T15:03:31,2026-10-21T15:12:17,526,nid007862,2,0.2922,1
+23030160,1,evaluation/hardware_transfer-amd-2206ce9d2c7ab26b-grpo-lora-s95,COMPLETED,2026-10-21T15:03:34,2026-10-21T15:12:24,530,nid005097,2,0.2944,1
+23030161,1,evaluation/hardware_transfer-amd-2206ce9d2c7ab26b-grpo-lora-s96,COMPLETED,2026-10-21T15:03:52,2026-10-21T15:10:36,404,nid005102,2,0.2244,1
+23030162,1,evaluation/hardware_transfer-amd-cd828bf6bf3d3751-grpo-lora-s81,COMPLETED,2026-10-21T15:04:19,2026-10-21T15:13:00,521,nid005117,2,0.2894,1
+23030163,1,evaluation/hardware_transfer-amd-cd828bf6bf3d3751-grpo-lora-s82,COMPLETED,2026-10-21T15:04:23,2026-10-21T15:13:05,522,nid005120,2,0.29,1
+23030164,1,evaluation/hardware_transfer-amd-cd828bf6bf3d3751-grpo-lora-s83,COMPLETED,2026-10-21T15:05:29,2026-10-21T15:14:03,514,nid005051,2,0.2856,1
+23030165,1,evaluation/hardware_transfer-amd-624145edbc91703d-grpo-lora-s81,COMPLETED,2026-10-21T15:05:37,2026-10-21T15:13:54,497,nid005114,2,0.2761,1
+23030166,1,evaluation/hardware_transfer-amd-624145edbc91703d-grpo-lora-s82,COMPLETED,2026-10-21T15:06:18,2026-10-21T15:13:38,440,nid005082,2,0.2444,1
+23030167,1,evaluation/hardware_transfer-amd-624145edbc91703d-grpo-lora-s83,TIMEOUT,2026-10-21T15:07:10,2026-10-21T15:52:28,2718,nid005083,2,1.51,1
+23030168,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s94,TIMEOUT,2026-10-21T15:07:10,2026-10-21T15:52:28,2718,nid005083,2,1.51,1
+23030169,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s95,TIMEOUT,2026-10-21T15:07:10,2026-10-21T15:52:28,2718,nid005083,2,1.51,1
+23030170,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s96,TIMEOUT,2026-10-21T15:07:10,2026-10-21T15:52:28,2718,nid005083,2,1.51,1
+23030171,1,evaluation/hardware_transfer-amd-f7931ebca5cf43f3-grpo-lora-s41,COMPLETED,2026-10-21T15:09:19,2026-10-21T15:15:58,399,nid005039,2,0.2217,1
+23030172,1,evaluation/hardware_transfer-amd-f7931ebca5cf43f3-grpo-lora-s42,COMPLETED,2026-10-21T15:09:41,2026-10-21T15:16:24,403,nid005092,2,0.2239,1
+23030173,1,evaluation/hardware_transfer-amd-f7931ebca5cf43f3-grpo-lora-s43,COMPLETED,2026-10-21T15:09:43,2026-10-21T15:16:50,427,nid005097,2,0.2372,1
+23030174,1,evaluation/hardware_transfer-amd-6db1179b0ce02cdc-grpo-lora-s41,FAILED,2026-10-21T15:09:46,2026-10-21T15:15:34,348,nid005046,2,0.1933,1
+23030175,1,evaluation/hardware_transfer-amd-6db1179b0ce02cdc-grpo-lora-s42,FAILED,2026-10-21T15:10:55,2026-10-21T15:17:37,402,nid005102,2,0.2233,1
+23030176,1,evaluation/hardware_transfer-amd-6db1179b0ce02cdc-grpo-lora-s43,FAILED,2026-10-21T15:11:04,2026-10-21T15:16:55,351,nid007898,2,0.195,1
+23030177,1,evaluation/hardware_transfer-amd-7d0e120c76c6677c-grpo-lora-s94,COMPLETED,2026-10-21T15:11:25,2026-10-21T15:18:28,423,nid005065,2,0.235,1
+23030178,1,evaluation/hardware_transfer-amd-7d0e120c76c6677c-grpo-lora-s95,COMPLETED,2026-10-21T15:11:46,2026-10-21T15:19:11,445,nid007922,2,0.2472,1
+23030179,1,evaluation/hardware_transfer-amd-7d0e120c76c6677c-grpo-lora-s96,COMPLETED,2026-10-21T15:12:37,2026-10-21T15:19:32,415,nid007862,2,0.2306,1
+23030180,1,evaluation/hardware_transfer-amd-e240b3480ce8542e-grpo-lora-s41,FAILED,2026-10-21T15:13:08,2026-10-21T15:19:00,352,nid005082,2,0.1956,1
+23030181,1,evaluation/hardware_transfer-amd-e240b3480ce8542e-grpo-lora-s42,FAILED,2026-10-21T15:13:11,2026-10-21T15:20:25,434,nid007863,2,0.2411,1
+23030182,1,evaluation/hardware_transfer-amd-e240b3480ce8542e-grpo-lora-s43,FAILED,2026-10-21T15:13:14,2026-10-21T15:19:44,390,nid005097,2,0.2167,1
+23030183,1,evaluation/hardware_transfer-amd-2e3bce1d496ae6aa-grpo-lora-s94,COMPLETED,2026-10-21T15:13:20,2026-10-21T15:19:44,384,nid005117,2,0.2133,1
+23030184,1,evaluation/hardware_transfer-amd-2e3bce1d496ae6aa-grpo-lora-s95,COMPLETED,2026-10-21T15:13:26,2026-10-21T15:21:36,490,nid005120,2,0.2722,1
+23030185,1,evaluation/hardware_transfer-amd-2e3bce1d496ae6aa-grpo-lora-s96,COMPLETED,2026-10-21T15:14:14,2026-10-21T15:21:54,460,nid005114,2,0.2556,1
+23030186,1,evaluation/hardware_transfer-amd-c228404d62439c3d-grpo-lora-s81,COMPLETED,2026-10-21T15:14:22,2026-10-21T15:20:06,344,nid005051,2,0.1911,1
+23030187,1,evaluation/hardware_transfer-amd-c228404d62439c3d-grpo-lora-s82,COMPLETED,2026-10-21T15:14:29,2026-10-21T15:20:17,348,nid005082,2,0.1933,1
+23030188,1,evaluation/hardware_transfer-amd-c228404d62439c3d-grpo-lora-s83,COMPLETED,2026-10-21T15:15:54,2026-10-21T15:21:42,348,nid005046,2,0.1933,1
+23030189,1,evaluation/hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s111,COMPLETED,2026-10-21T15:20:03,2026-10-21T15:26:43,400,nid005097,4,0.4444,1
+23030190,1,evaluation/hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s112,TIMEOUT,2026-10-21T15:23:52,2026-10-21T16:08:59,2707,nid007867,4,3.0078,1
+23030191,1,evaluation/hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s113,TIMEOUT,2026-10-21T15:23:52,2026-10-21T16:09:00,2708,nid007867,4,3.0089,1
+23030192,1,evaluation/hardware_transfer-amd-0d9dfdf3635c8357-grpo-lora-s41,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:26:32,378,nid005039,2,0.21,1
+23030194,1,evaluation/hardware_transfer-amd-0d9dfdf3635c8357-grpo-lora-s42,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:26:37,383,nid005065,2,0.2128,1
+23030195,1,evaluation/hardware_transfer-amd-0d9dfdf3635c8357-grpo-lora-s43,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:28:29,495,nid005077,2,0.275,1
+23030196,1,evaluation/hardware_transfer-amd-0f111e00e982fa73-grpo-lora-s91,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:28:37,503,nid005082,2,0.2794,1
+23030197,1,evaluation/hardware_transfer-amd-0f111e00e982fa73-grpo-lora-s92,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:26:53,399,nid005092,2,0.2217,1
+23030198,1,evaluation/hardware_transfer-amd-0f111e00e982fa73-grpo-lora-s93,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:29:41,567,nid005110,2,0.315,1
+23030199,1,evaluation/hardware_transfer-amd-97c36f5b27a63ec8-grpo-lora-s111,COMPLETED,2026-10-21T15:27:06,2026-10-21T15:34:11,425,nid005097,4,0.4722,1
+23030200,1,evaluation/hardware_transfer-amd-97c36f5b27a63ec8-grpo-lora-s112,COMPLETED,2026-10-21T15:27:57,2026-10-21T15:35:23,446,nid005103,4,0.4956,1
+23030201,1,evaluation/hardware_transfer-amd-97c36f5b27a63ec8-grpo-lora-s113,COMPLETED,2026-10-21T15:28:58,2026-10-21T15:34:42,344,nid005082,4,0.3822,1
+23030202,1,evaluation/hardware_transfer-amd-319586df8cb983ad-grpo-lora-s94,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:25:56,342,nid005117,2,0.19,1
+23030203,1,evaluation/hardware_transfer-amd-319586df8cb983ad-grpo-lora-s95,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:26:47,393,nid007922,2,0.2183,1
+23030204,1,evaluation/hardware_transfer-amd-319586df8cb983ad-grpo-lora-s96,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:27:58,464,nid007861,2,0.2578,1
+23030205,1,evaluation/hardware_transfer-amd-702dace60b98e62b-grpo-lora-s91,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:27:53,459,nid007862,2,0.255,1
+23030206,1,evaluation/hardware_transfer-amd-702dace60b98e62b-grpo-lora-s92,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:34:35,435,nid005039,2,0.2417,1
+23030207,1,evaluation/hardware_transfer-amd-702dace60b98e62b-grpo-lora-s93,COMPLETED,2026-10-21T15:20:14,2026-10-21T15:27:49,455,nid005102,2,0.2528,1
+23030208,1,evaluation/hardware_transfer-amd-a6f8c442329499cc-grpo-lora-s94,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:34:00,400,nid005046,2,0.2222,1
+23030209,1,evaluation/hardware_transfer-amd-a6f8c442329499cc-grpo-lora-s95,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:33:57,397,nid005051,2,0.2206,1
+23030210,1,evaluation/hardware_transfer-amd-a6f8c442329499cc-grpo-lora-s96,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:34:00,400,nid005065,2,0.2222,1
+23030211,1,evaluation/hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s111,TIMEOUT,2026-10-21T15:34:32,2026-10-21T16:19:32,2700,nid005035,4,3.0,1
+23030212,1,evaluation/hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s112,TIMEOUT,2026-10-21T15:34:32,2026-10-21T16:19:32,2700,nid005035,4,3.0,1
+23030213,1,evaluation/hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s113,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:40:09,337,nid005097,4,0.3744,1
+23030214,1,evaluation/hardware_transfer-amd-8a629db678e853a2-grpo-lora-s41,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:35:18,478,nid005071,2,0.2656,1
+23030215,1,evaluation/hardware_transfer-amd-8a629db678e853a2-grpo-lora-s42,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:33:12,352,nid005092,2,0.1956,1
+23030216,1,evaluation/hardware_transfer-amd-8a629db678e853a2-grpo-lora-s43,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:35:12,472,nid005100,2,0.2622,1
+23030217,1,evaluation/hardware_transfer-amd-4c003e96f4a40527-grpo-lora-s94,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:33:17,357,nid005114,2,0.1983,1
+23030218,1,evaluation/hardware_transfer-amd-4c003e96f4a40527-grpo-lora-s95,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:33:05,345,nid005117,2,0.1917,1
+23030219,1,evaluation/hardware_transfer-amd-4c003e96f4a40527-grpo-lora-s96,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:33:17,357,nid005120,2,0.1983,1
+23030220,1,evaluation/hardware_transfer-amd-cee9bcdb405f0c9c-grpo-lora-s91,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:33:30,370,nid007863,2,0.2056,1
+23030221,1,evaluation/hardware_transfer-amd-cee9bcdb405f0c9c-grpo-lora-s92,COMPLETED,2026-10-21T15:27:20,2026-10-21T15:33:00,340,nid007922,2,0.1889,1
+23030222,1,evaluation/hardware_transfer-amd-cee9bcdb405f0c9c-grpo-lora-s93,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:40:16,344,nid005046,2,0.1911,1
+23030224,1,evaluation/hardware_transfer-amd-ac8a1ce2d05b8157-grpo-lora-s94,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:41:30,418,nid005051,2,0.2322,1
+23030225,1,evaluation/hardware_transfer-amd-ac8a1ce2d05b8157-grpo-lora-s95,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:40:31,359,nid005065,2,0.1994,1
+23030226,1,evaluation/hardware_transfer-amd-ac8a1ce2d05b8157-grpo-lora-s96,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:41:31,419,nid005077,2,0.2328,1
+23030227,1,evaluation/hardware_transfer-amd-eade522db41fb9ae-grpo-lora-s94,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:40:50,378,nid005092,2,0.21,1
+23030228,1,evaluation/hardware_transfer-amd-eade522db41fb9ae-grpo-lora-s95,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:40:05,333,nid005110,2,0.185,1
+23030229,1,evaluation/hardware_transfer-amd-eade522db41fb9ae-grpo-lora-s96,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:40:19,347,nid005114,2,0.1928,1
+23030230,1,evaluation/hardware_transfer-amd-0fb5b9b1ad50c1b7-grpo-lora-s41,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:41:56,444,nid005117,2,0.2467,1
+23030231,1,evaluation/hardware_transfer-amd-0fb5b9b1ad50c1b7-grpo-lora-s42,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:42:21,469,nid005120,2,0.2606,1
+23030232,1,evaluation/hardware_transfer-amd-0fb5b9b1ad50c1b7-grpo-lora-s43,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:42:34,482,nid007898,2,0.2678,1
+23030233,1,evaluation/hardware_transfer-amd-c55449d2a3ce2003-grpo-lora-s41,FAILED,2026-10-21T15:34:32,2026-10-21T15:40:20,348,nid007922,2,0.1933,1
+23030234,1,evaluation/hardware_transfer-amd-c55449d2a3ce2003-grpo-lora-s42,FAILED,2026-10-21T15:34:32,2026-10-21T15:41:24,412,nid007861,2,0.2289,1
+23030235,1,evaluation/hardware_transfer-amd-c55449d2a3ce2003-grpo-lora-s43,FAILED,2026-10-21T15:34:32,2026-10-21T15:40:19,347,nid007862,2,0.1928,1
+23030236,1,evaluation/hardware_transfer-amd-41118f3abadb1a03-grpo-lora-s41,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:41:14,402,nid007863,2,0.2233,1
+23030237,1,evaluation/hardware_transfer-amd-41118f3abadb1a03-grpo-lora-s42,COMPLETED,2026-10-21T15:34:32,2026-10-21T15:40:25,353,nid005102,2,0.1961,1
+23030238,1,evaluation/hardware_transfer-amd-41118f3abadb1a03-grpo-lora-s43,COMPLETED,2026-10-21T15:34:38,2026-10-21T15:44:09,571,nid007899,2,0.3172,1
+23030239,1,evaluation/hardware_transfer-amd-59a6bce242dfad16-grpo-lora-s111,COMPLETED,2026-10-21T15:35:05,2026-10-21T15:40:39,334,nid005082,4,0.3711,1
+23030240,1,evaluation/hardware_transfer-amd-59a6bce242dfad16-grpo-lora-s112,COMPLETED,2026-10-21T15:35:45,2026-10-21T15:41:57,372,nid005103,4,0.4133,1
+23030241,1,evaluation/hardware_transfer-amd-59a6bce242dfad16-grpo-lora-s113,COMPLETED,2026-10-21T15:40:32,2026-10-21T15:46:43,371,nid005097,4,0.4122,1
+23030242,1,evaluation/hardware_transfer-amd-e6738cdc8f14edf2-grpo-lora-s81,COMPLETED,2026-10-21T15:36:51,2026-10-21T15:42:49,358,nid005039,2,0.1989,1
+23030243,1,evaluation/hardware_transfer-amd-e6738cdc8f14edf2-grpo-lora-s82,COMPLETED,2026-10-21T15:36:51,2026-10-21T15:42:40,349,nid005071,2,0.1939,1
+23030244,1,evaluation/hardware_transfer-amd-e6738cdc8f14edf2-grpo-lora-s83,COMPLETED,2026-10-21T15:36:51,2026-10-21T15:42:36,345,nid005100,2,0.1917,1
+23030245,1,evaluation/hardware_transfer-amd-c4c173bd73fc3a93-grpo-lora-s111,COMPLETED,2026-10-21T15:40:53,2026-10-21T15:47:54,421,nid007898,4,0.4678,1
+23030246,1,evaluation/hardware_transfer-amd-c4c173bd73fc3a93-grpo-lora-s112,COMPLETED,2026-10-21T15:41:02,2026-10-21T15:46:37,335,nid005082,4,0.3722,1
+23030247,1,evaluation/hardware_transfer-amd-c4c173bd73fc3a93-grpo-lora-s113,COMPLETED,2026-10-21T15:42:21,2026-10-21T15:47:54,333,nid005103,4,0.37,1
+23030248,1,evaluation/hardware_transfer-amd-dbaabe25ccc3db3b-grpo-lora-s81,COMPLETED,2026-10-21T15:36:51,2026-10-21T15:44:26,455,nid007874,2,0.2528,1
+23030249,1,evaluation/hardware_transfer-amd-dbaabe25ccc3db3b-grpo-lora-s82,COMPLETED,2026-10-21T15:42:21,2026-10-21T15:49:27,426,nid005046,2,0.2367,1
+23030250,1,evaluation/hardware_transfer-amd-dbaabe25ccc3db3b-grpo-lora-s83,COMPLETED,2026-10-21T15:42:21,2026-10-21T15:49:31,430,nid005051,2,0.2389,1
+23030251,1,evaluation/hardware_transfer-amd-996a3920c206da4c-grpo-lora-s111,COMPLETED,2026-10-21T15:42:38,2026-10-21T15:49:10,392,nid007863,4,0.4356,1
+23030252,1,evaluation/hardware_transfer-amd-996a3920c206da4c-grpo-lora-s112,COMPLETED,2026-10-21T15:43:24,2026-10-21T15:49:27,363,nid007898,4,0.4033,1
+23030253,1,evaluation/hardware_transfer-amd-996a3920c206da4c-grpo-lora-s113,TIMEOUT,2026-10-21T15:44:00,2026-10-21T16:29:05,2705,nid007897,4,3.0056,1
+23030254,1,evaluation/hardware_transfer-amd-2ddef87b4d4f33f0-grpo-lora-s41,FAILED,2026-10-21T15:44:00,2026-10-21T15:50:12,372,nid005039,2,0.2067,1
+23030255,1,evaluation/hardware_transfer-amd-2ddef87b4d4f33f0-grpo-lora-s42,FAILED,2026-10-21T15:44:00,2026-10-21T15:49:57,357,nid005065,2,0.1983,1
+23030256,1,evaluation/hardware_transfer-amd-2ddef87b4d4f33f0-grpo-lora-s43,FAILED,2026-10-21T15:44:00,2026-10-21T15:51:06,426,nid005071,2,0.2367,1
+23030257,1,evaluation/hardware_transfer-amd-90f806956c6ba08f-grpo-lora-s94,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:49:42,342,nid005077,2,0.19,1
+23030258,1,evaluation/hardware_transfer-amd-90f806956c6ba08f-grpo-lora-s95,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:50:03,363,nid005092,2,0.2017,1
+23030259,1,evaluation/hardware_transfer-amd-90f806956c6ba08f-grpo-lora-s96,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:50:42,402,nid005100,2,0.2233,1
+23030260,1,evaluation/hardware_transfer-amd-8e04d7f20af81c6f-grpo-lora-s81,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:49:50,350,nid005110,2,0.1944,1
+23030261,1,evaluation/hardware_transfer-amd-8e04d7f20af81c6f-grpo-lora-s82,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:49:50,350,nid005114,2,0.1944,1
+23030262,1,evaluation/hardware_transfer-amd-8e04d7f20af81c6f-grpo-lora-s83,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:49:50,350,nid005117,2,0.1944,1
+23030263,1,evaluation/hardware_transfer-amd-4ab62abdfa77b6bd-grpo-lora-s91,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:49:48,348,nid005120,2,0.1933,1
+23030264,1,evaluation/hardware_transfer-amd-4ab62abdfa77b6bd-grpo-lora-s92,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:51:26,446,nid007895,2,0.2478,1
+23030265,1,evaluation/hardware_transfer-amd-4ab62abdfa77b6bd-grpo-lora-s93,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:51:24,444,nid007897,2,0.2467,1
+23030266,1,evaluation/hardware_transfer-amd-bc00117c458b5d5d-grpo-lora-s91,TIMEOUT,2026-10-21T15:44:00,2026-10-21T16:29:05,2705,nid007897,2,1.5028,1
+23030267,1,evaluation/hardware_transfer-amd-bc00117c458b5d5d-grpo-lora-s92,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:53:03,543,nid007904,2,0.3017,1
+23030268,1,evaluation/hardware_transfer-amd-bc00117c458b5d5d-grpo-lora-s93,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:51:33,453,nid007922,2,0.2517,1
+23030269,1,evaluation/hardware_transfer-amd-8e27f29e45ad0fb3-grpo-lora-s94,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:50:50,410,nid007861,2,0.2278,1
+23030270,1,evaluation/hardware_transfer-amd-8e27f29e45ad0fb3-grpo-lora-s95,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:50:51,411,nid007862,2,0.2283,1
+23030271,1,evaluation/hardware_transfer-amd-8e27f29e45ad0fb3-grpo-lora-s96,COMPLETED,2026-10-21T15:44:00,2026-10-21T15:49:53,353,nid005102,2,0.1961,1
+23030272,1,evaluation/hardware_transfer-amd-c0364521aa0318de-grpo-lora-s81,COMPLETED,2026-10-21T15:44:28,2026-10-21T15:57:15,767,nid007899,2,0.4261,1
+23030273,1,evaluation/hardware_transfer-amd-c0364521aa0318de-grpo-lora-s82,COMPLETED,2026-10-21T15:44:40,2026-10-21T15:58:45,845,nid007868,2,0.4694,1
+23030274,1,evaluation/hardware_transfer-amd-c0364521aa0318de-grpo-lora-s83,COMPLETED,2026-10-21T15:44:43,2026-10-21T15:58:29,826,nid005031,2,0.4589,1
+23030275,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s94,FAILED,2026-10-21T15:44:47,2026-10-21T15:48:17,210,nid007874,2,0.1167,1
+23030276,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s95,TIMEOUT,2026-10-21T15:45:07,2026-10-21T16:30:35,2728,nid007858,2,1.5156,1
+23030277,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s96,TIMEOUT,2026-10-21T15:45:07,2026-10-21T16:30:35,2728,nid007858,2,1.5156,1
+23030278,1,evaluation/hardware_transfer-amd-6466d4338e50b0f8-grpo-lora-s41,COMPLETED,2026-10-21T15:45:07,2026-10-21T15:53:04,477,nid007858,2,0.265,1
+23030279,1,evaluation/hardware_transfer-amd-6466d4338e50b0f8-grpo-lora-s42,COMPLETED,2026-10-21T15:45:07,2026-10-21T15:53:05,478,nid007858,2,0.2656,1
+23030280,1,evaluation/hardware_transfer-amd-6466d4338e50b0f8-grpo-lora-s43,COMPLETED,2026-10-21T15:45:22,2026-10-21T15:53:27,485,nid007863,2,0.2694,1
+23030281,1,evaluation/hardware_transfer-amd-4b92cc3197922be7-grpo-lora-s111,COMPLETED,2026-10-21T15:47:00,2026-10-21T15:52:26,326,nid005082,4,0.3622,1
+23030283,1,evaluation/hardware_transfer-amd-4b92cc3197922be7-grpo-lora-s112,COMPLETED,2026-10-21T15:47:05,2026-10-21T15:54:41,456,nid005097,4,0.5067,1
+23030284,1,evaluation/hardware_transfer-amd-4b92cc3197922be7-grpo-lora-s113,FAILED,2026-10-21T15:48:18,2026-10-21T15:51:34,196,nid005103,4,0.2178,1
+23030285,1,evaluation/hardware_transfer-amd-7e9226094b3a9bb6-grpo-lora-s41,COMPLETED,2026-10-21T15:47:00,2026-10-21T15:55:05,485,nid005064,2,0.2694,1
+23030286,1,evaluation/hardware_transfer-amd-7e9226094b3a9bb6-grpo-lora-s42,COMPLETED,2026-10-21T15:47:00,2026-10-21T15:55:12,492,nid007891,2,0.2733,1
+23030287,1,evaluation/hardware_transfer-amd-7e9226094b3a9bb6-grpo-lora-s43,COMPLETED,2026-10-21T15:48:37,2026-10-21T15:55:29,412,nid007874,2,0.2289,1
+23030288,1,evaluation/hardware_transfer-amd-139f7166b78a0a4f-grpo-lora-s111,COMPLETED,2026-10-21T15:48:47,2026-10-21T15:56:05,438,nid007898,4,0.4867,1
+23030289,1,evaluation/hardware_transfer-amd-139f7166b78a0a4f-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030290,1,evaluation/hardware_transfer-amd-139f7166b78a0a4f-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030291,1,evaluation/hardware_transfer-amd-aa09bb07a2afafa9-grpo-lora-s94,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030292,1,evaluation/hardware_transfer-amd-aa09bb07a2afafa9-grpo-lora-s95,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030293,1,evaluation/hardware_transfer-amd-aa09bb07a2afafa9-grpo-lora-s96,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030294,1,evaluation/hardware_transfer-amd-93c89359554f263d-grpo-lora-s81,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030295,1,evaluation/hardware_transfer-amd-93c89359554f263d-grpo-lora-s82,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030296,1,evaluation/hardware_transfer-amd-93c89359554f263d-grpo-lora-s83,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030297,1,evaluation/hardware_transfer-amd-706ad7c152f967e2-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030298,1,evaluation/hardware_transfer-amd-706ad7c152f967e2-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030299,1,evaluation/hardware_transfer-amd-706ad7c152f967e2-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030300,1,evaluation/hardware_transfer-amd-59193ddd7363e2a8-grpo-lora-s111,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030301,1,evaluation/hardware_transfer-amd-59193ddd7363e2a8-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030302,1,evaluation/hardware_transfer-amd-59193ddd7363e2a8-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030303,1,evaluation/hardware_transfer-amd-f66257c3a7de06cf-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030304,1,evaluation/hardware_transfer-amd-f66257c3a7de06cf-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030305,1,evaluation/hardware_transfer-amd-f66257c3a7de06cf-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030306,1,evaluation/hardware_transfer-amd-32d9f2b919bd63b2-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030308,1,evaluation/hardware_transfer-amd-32d9f2b919bd63b2-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030309,1,evaluation/hardware_transfer-amd-32d9f2b919bd63b2-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030310,1,evaluation/hardware_transfer-amd-7db81e22afb3d04a-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030311,1,evaluation/hardware_transfer-amd-7db81e22afb3d04a-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030312,1,evaluation/hardware_transfer-amd-7db81e22afb3d04a-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030313,1,evaluation/hardware_transfer-amd-24d583809fda82b1-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030314,1,evaluation/hardware_transfer-amd-24d583809fda82b1-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030315,1,evaluation/hardware_transfer-amd-24d583809fda82b1-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030316,1,evaluation/hardware_transfer-amd-c4f9ec399c5617ad-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030317,1,evaluation/hardware_transfer-amd-c4f9ec399c5617ad-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030318,1,evaluation/hardware_transfer-amd-c4f9ec399c5617ad-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030319,1,evaluation/hardware_transfer-amd-91cfeefed71df992-grpo-lora-s94,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030320,1,evaluation/hardware_transfer-amd-91cfeefed71df992-grpo-lora-s95,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030321,1,evaluation/hardware_transfer-amd-91cfeefed71df992-grpo-lora-s96,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030322,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030323,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030324,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030325,1,evaluation/hardware_transfer-amd-6af25cea86aba881-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030326,1,evaluation/hardware_transfer-amd-6af25cea86aba881-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030327,1,evaluation/hardware_transfer-amd-6af25cea86aba881-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030328,1,evaluation/hardware_transfer-amd-80aca72cfd88de52-grpo-lora-s94,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030329,1,evaluation/hardware_transfer-amd-80aca72cfd88de52-grpo-lora-s95,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030330,1,evaluation/hardware_transfer-amd-80aca72cfd88de52-grpo-lora-s96,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030712,1,evaluation/hardware_transfer-amd-5f12edcf0010e0ce-grpo-lora-s41,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030991,1,evaluation/hardware_transfer-amd-5f12edcf0010e0ce-grpo-lora-s42,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030992,1,evaluation/hardware_transfer-amd-5f12edcf0010e0ce-grpo-lora-s43,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030993,1,evaluation/hardware_transfer-amd-0130ef84798da33e-grpo-lora-s111,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030994,1,evaluation/hardware_transfer-amd-0130ef84798da33e-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030995,1,evaluation/hardware_transfer-amd-0130ef84798da33e-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030996,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s111,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030997,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030998,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23030999,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s94,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031000,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s95,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031001,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s96,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031002,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031439,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031440,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031441,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031442,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031443,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031444,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031445,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031446,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031447,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031448,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031449,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031450,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031451,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031452,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031453,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031454,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031455,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031456,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031457,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031458,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031459,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031460,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031461,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031462,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031463,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031943,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031944,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031945,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031946,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031947,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031948,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031949,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031950,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031952,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031953,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031954,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031955,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031956,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031957,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23031958,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032257,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032258,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032262,1,evaluation/larger_models-amd-3b30753d38a79416-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032264,1,evaluation/larger_models-amd-1fba5684fdfd4831-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032265,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032266,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032267,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032268,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032269,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032270,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032271,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032272,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032273,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032274,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032275,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032276,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032277,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032278,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032279,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032280,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032281,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032282,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032283,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032284,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032285,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032286,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032287,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032288,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T15:49:36,0,None assigned,0,0.0,0
+23032929,1,evaluation/hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s81,COMPLETED,2026-10-21T15:50:58,2026-10-21T16:02:46,708,nid005065,2,0.3933,1
+23032930,1,evaluation/hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s82,COMPLETED,2026-10-21T15:50:58,2026-10-21T16:02:52,714,nid005077,2,0.3967,1
+23032931,1,evaluation/hardware_transfer-amd-db208f246a3c4daf-grpo-lora-s83,COMPLETED,2026-10-21T15:50:58,2026-10-21T16:03:32,754,nid005110,2,0.4189,1
+23032932,1,evaluation/hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s41,COMPLETED,2026-10-21T15:50:58,2026-10-21T15:58:50,472,nid005114,2,0.2622,1
+23032933,1,evaluation/hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s42,COMPLETED,2026-10-21T15:50:58,2026-10-21T15:58:29,451,nid005117,2,0.2506,1
+23032934,1,evaluation/hardware_transfer-amd-410b15e6c95b4909-grpo-lora-s43,COMPLETED,2026-10-21T15:50:58,2026-10-21T15:58:28,450,nid005120,2,0.25,1
+23032935,1,evaluation/hardware_transfer-amd-5b5cf2b323b2a85f-grpo-lora-s81,COMPLETED,2026-10-21T15:50:58,2026-10-21T15:59:14,496,nid007898,2,0.2756,1
+23032937,1,evaluation/hardware_transfer-amd-4f8670d8bc94a368-grpo-lora-s112,COMPLETED,2026-10-21T15:51:56,2026-10-21T15:58:26,390,nid005103,4,0.4333,1
+23032938,1,evaluation/hardware_transfer-amd-4f8670d8bc94a368-grpo-lora-s113,COMPLETED,2026-10-21T15:52:50,2026-10-21T15:59:28,398,nid005082,4,0.4422,1
+23032939,1,evaluation/hardware_transfer-amd-efa37088bbe2696a-grpo-lora-s93,FAILED,2026-10-21T15:52:50,2026-10-21T15:59:17,387,nid005071,2,0.215,1
+23032940,1,evaluation/hardware_transfer-amd-95ab18c5ee8fa418-grpo-lora-s41,COMPLETED,2026-10-21T15:52:50,2026-10-21T15:58:45,355,nid005092,2,0.1972,1
+23032941,1,evaluation/hardware_transfer-amd-95ab18c5ee8fa418-grpo-lora-s43,COMPLETED,2026-10-21T15:52:50,2026-10-21T15:59:07,377,nid005100,2,0.2094,1
+23032942,1,evaluation/hardware_transfer-amd-a228d8b325a815e1-grpo-lora-s41,FAILED,2026-10-21T15:52:50,2026-10-21T16:00:53,483,nid007878,2,0.2683,1
+23032943,1,evaluation/hardware_transfer-amd-a228d8b325a815e1-grpo-lora-s42,FAILED,2026-10-21T15:52:50,2026-10-21T15:59:33,403,nid007895,2,0.2239,1
+23032944,1,evaluation/hardware_transfer-amd-a228d8b325a815e1-grpo-lora-s43,FAILED,2026-10-21T15:52:50,2026-10-21T16:00:44,474,nid007909,2,0.2633,1
+23032945,1,evaluation/hardware_transfer-amd-c2aa8d9dbf7bd299-grpo-lora-s111,COMPLETED,2026-10-21T15:53:44,2026-10-21T16:01:29,465,nid005083,4,0.5167,1
+23032946,1,evaluation/hardware_transfer-amd-c2aa8d9dbf7bd299-grpo-lora-s112,COMPLETED,2026-10-21T15:53:44,2026-10-21T16:01:29,465,nid005083,4,0.5167,1
+23032947,1,evaluation/hardware_transfer-amd-c2aa8d9dbf7bd299-grpo-lora-s113,COMPLETED,2026-10-21T15:54:13,2026-10-21T16:01:01,408,nid007858,4,0.4533,1
+23032948,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s111,COMPLETED,2026-10-21T15:55:04,2026-10-21T16:02:18,434,nid005097,4,0.4822,1
+23032949,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s112,COMPLETED,2026-10-21T15:55:14,2026-10-21T16:02:40,446,nid007860,4,0.4956,1
+23032950,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s113,FAILED,2026-10-21T15:56:58,2026-10-21T16:00:12,194,nid007898,4,0.2156,1
+23032951,1,evaluation/hardware_transfer-amd-2ca307101ddfa774-grpo-lora-s94,COMPLETED,2026-10-21T15:53:55,2026-10-21T15:59:50,355,nid007904,2,0.1972,1
+23032952,1,evaluation/hardware_transfer-amd-2ca307101ddfa774-grpo-lora-s95,COMPLETED,2026-10-21T15:53:55,2026-10-21T15:59:38,343,nid007922,2,0.1906,1
+23032953,1,evaluation/hardware_transfer-amd-2ca307101ddfa774-grpo-lora-s96,COMPLETED,2026-10-21T15:53:55,2026-10-21T15:59:42,347,nid007897,2,0.1928,1
+23032954,1,evaluation/hardware_transfer-amd-bc36784076bf5976-grpo-lora-s41,FAILED,2026-10-21T15:53:55,2026-10-21T15:59:28,333,nid007898,2,0.185,1
+23032955,1,evaluation/hardware_transfer-amd-bc36784076bf5976-grpo-lora-s42,FAILED,2026-10-21T15:53:55,2026-10-21T15:59:33,338,nid007861,2,0.1878,1
+23032956,1,evaluation/hardware_transfer-amd-bc36784076bf5976-grpo-lora-s43,FAILED,2026-10-21T15:53:55,2026-10-21T15:59:28,333,nid007862,2,0.185,1
+23032957,1,evaluation/hardware_transfer-amd-139f7166b78a0a4f-grpo-lora-s112,COMPLETED,2026-10-21T15:58:49,2026-10-21T16:06:11,442,nid005103,4,0.4911,1
+23032958,1,evaluation/hardware_transfer-amd-139f7166b78a0a4f-grpo-lora-s113,COMPLETED,2026-10-21T15:59:52,2026-10-21T16:08:11,499,nid005082,4,0.5544,1
+23032959,1,evaluation/hardware_transfer-amd-aa09bb07a2afafa9-grpo-lora-s94,COMPLETED,2026-10-21T15:53:55,2026-10-21T15:59:37,342,nid007863,2,0.19,1
+23032960,1,evaluation/hardware_transfer-amd-aa09bb07a2afafa9-grpo-lora-s95,COMPLETED,2026-10-21T15:53:55,2026-10-21T15:59:55,360,nid005102,2,0.2,1
+23032961,1,evaluation/hardware_transfer-amd-aa09bb07a2afafa9-grpo-lora-s96,COMPLETED,2026-10-21T15:55:38,2026-10-21T16:02:34,416,nid005064,2,0.2311,1
+23032962,1,evaluation/hardware_transfer-amd-93c89359554f263d-grpo-lora-s81,COMPLETED,2026-10-21T15:55:38,2026-10-21T16:02:38,420,nid005077,2,0.2333,1
+23032963,1,evaluation/hardware_transfer-amd-93c89359554f263d-grpo-lora-s82,COMPLETED,2026-10-21T15:55:38,2026-10-21T16:01:34,356,nid007891,2,0.1978,1
+23032964,1,evaluation/hardware_transfer-amd-93c89359554f263d-grpo-lora-s83,COMPLETED,2026-10-21T15:59:52,2026-10-21T16:05:46,354,nid005031,2,0.1967,1
+23032965,1,evaluation/hardware_transfer-amd-706ad7c152f967e2-grpo-lora-s41,FAILED,2026-10-21T15:59:52,2026-10-21T16:05:46,354,nid005071,2,0.1967,1
+23032966,1,evaluation/hardware_transfer-amd-706ad7c152f967e2-grpo-lora-s42,FAILED,2026-10-21T15:59:52,2026-10-21T16:05:44,352,nid005092,2,0.1956,1
+23032967,1,evaluation/hardware_transfer-amd-706ad7c152f967e2-grpo-lora-s43,FAILED,2026-10-21T15:59:52,2026-10-21T16:05:39,347,nid005100,2,0.1928,1
+23032968,1,evaluation/hardware_transfer-amd-59193ddd7363e2a8-grpo-lora-s111,COMPLETED,2026-10-21T16:01:00,2026-10-21T16:08:42,462,nid007898,4,0.5133,1
+23032969,1,evaluation/hardware_transfer-amd-59193ddd7363e2a8-grpo-lora-s112,COMPLETED,2026-10-21T16:01:00,2026-10-21T16:08:32,452,nid007898,4,0.5022,1
+23032970,1,evaluation/hardware_transfer-amd-59193ddd7363e2a8-grpo-lora-s113,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:55,435,nid007853,4,0.4833,1
+23032971,1,evaluation/hardware_transfer-amd-f66257c3a7de06cf-grpo-lora-s41,FAILED,2026-10-21T16:01:40,2026-10-21T16:07:59,379,nid005092,2,0.2106,1
+23032972,1,evaluation/hardware_transfer-amd-f66257c3a7de06cf-grpo-lora-s42,FAILED,2026-10-21T16:01:40,2026-10-21T16:08:40,420,nid005114,2,0.2333,1
+23032973,1,evaluation/hardware_transfer-amd-f66257c3a7de06cf-grpo-lora-s43,FAILED,2026-10-21T16:01:40,2026-10-21T16:08:00,380,nid005117,2,0.2111,1
+23032974,1,evaluation/hardware_transfer-amd-32d9f2b919bd63b2-grpo-lora-s41,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:41,421,nid005120,2,0.2339,1
+23032976,1,evaluation/hardware_transfer-amd-32d9f2b919bd63b2-grpo-lora-s42,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:09:16,456,nid007853,2,0.2533,1
+23032977,1,evaluation/hardware_transfer-amd-32d9f2b919bd63b2-grpo-lora-s43,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:09:19,459,nid007853,2,0.255,1
+23032978,1,evaluation/hardware_transfer-amd-7db81e22afb3d04a-grpo-lora-s91,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:12,392,nid007874,2,0.2178,1
+23032979,1,evaluation/hardware_transfer-amd-7db81e22afb3d04a-grpo-lora-s92,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:10,390,nid007878,2,0.2167,1
+23032980,1,evaluation/hardware_transfer-amd-7db81e22afb3d04a-grpo-lora-s93,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:07:22,342,nid007895,2,0.19,1
+23032981,1,evaluation/hardware_transfer-amd-24d583809fda82b1-grpo-lora-s41,FAILED,2026-10-21T16:01:40,2026-10-21T16:08:44,424,nid007897,2,0.2356,1
+23032982,1,evaluation/hardware_transfer-amd-24d583809fda82b1-grpo-lora-s42,FAILED,2026-10-21T16:01:40,2026-10-21T16:07:33,353,nid007899,2,0.1961,1
+23032983,1,evaluation/hardware_transfer-amd-24d583809fda82b1-grpo-lora-s43,FAILED,2026-10-21T16:01:40,2026-10-21T16:08:47,427,nid007904,2,0.2372,1
+23032984,1,evaluation/hardware_transfer-amd-c4f9ec399c5617ad-grpo-lora-s91,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:19,399,nid007909,2,0.2217,1
+23032985,1,evaluation/hardware_transfer-amd-c4f9ec399c5617ad-grpo-lora-s92,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:09:28,468,nid007922,2,0.26,1
+23032986,1,evaluation/hardware_transfer-amd-c4f9ec399c5617ad-grpo-lora-s93,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:09:33,473,nid007861,2,0.2628,1
+23032987,1,evaluation/hardware_transfer-amd-91cfeefed71df992-grpo-lora-s94,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:07,387,nid007862,2,0.215,1
+23032988,1,evaluation/hardware_transfer-amd-91cfeefed71df992-grpo-lora-s95,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:09:58,498,nid007863,2,0.2767,1
+23032989,1,evaluation/hardware_transfer-amd-91cfeefed71df992-grpo-lora-s96,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:13,393,nid007868,2,0.2183,1
+23032990,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s41,COMPLETED,2026-10-21T16:01:40,2026-10-21T16:08:35,415,nid005102,2,0.2306,1
+23032991,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s42,FAILED,2026-10-21T16:01:52,2026-10-21T16:05:15,203,nid007891,2,0.1128,1
+23032992,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s43,COMPLETED,2026-10-21T16:01:55,2026-10-21T16:08:56,421,nid007858,2,0.2339,1
+23032993,1,evaluation/hardware_transfer-amd-6af25cea86aba881-grpo-lora-s91,FAILED,2026-10-21T16:01:55,2026-10-21T16:08:25,390,nid007858,2,0.2167,1
+23032994,1,evaluation/hardware_transfer-amd-6af25cea86aba881-grpo-lora-s92,FAILED,2026-10-21T16:02:24,2026-10-21T16:11:45,561,nid005083,2,0.3117,1
+23032996,1,evaluation/hardware_transfer-amd-6af25cea86aba881-grpo-lora-s93,FAILED,2026-10-21T16:02:24,2026-10-21T16:11:35,551,nid005083,2,0.3061,1
+23032997,1,evaluation/hardware_transfer-amd-80aca72cfd88de52-grpo-lora-s94,COMPLETED,2026-10-21T16:02:24,2026-10-21T16:09:55,451,nid005083,2,0.2506,1
+23032998,1,evaluation/hardware_transfer-amd-80aca72cfd88de52-grpo-lora-s95,COMPLETED,2026-10-21T16:02:24,2026-10-21T16:09:58,454,nid005083,2,0.2522,1
+23032999,1,evaluation/hardware_transfer-amd-80aca72cfd88de52-grpo-lora-s96,COMPLETED,2026-10-21T16:02:40,2026-10-21T16:08:34,354,nid005097,2,0.1967,1
+23033000,1,evaluation/hardware_transfer-amd-5f12edcf0010e0ce-grpo-lora-s41,COMPLETED,2026-10-21T16:02:40,2026-10-21T16:08:29,349,nid005097,2,0.1939,1
+23033001,1,evaluation/hardware_transfer-amd-5f12edcf0010e0ce-grpo-lora-s42,COMPLETED,2026-10-21T16:02:53,2026-10-21T16:08:40,347,nid005064,2,0.1928,1
+23033002,1,evaluation/hardware_transfer-amd-5f12edcf0010e0ce-grpo-lora-s43,COMPLETED,2026-10-21T16:03:05,2026-10-21T16:08:55,350,nid005065,2,0.1944,1
+23033003,1,evaluation/hardware_transfer-amd-0130ef84798da33e-grpo-lora-s111,COMPLETED,2026-10-21T16:03:05,2026-10-21T16:08:49,344,nid007860,4,0.3822,1
+23033004,1,evaluation/hardware_transfer-amd-0130ef84798da33e-grpo-lora-s112,COMPLETED,2026-10-21T16:03:24,2026-10-21T16:09:09,345,nid005077,4,0.3833,1
+23033005,1,evaluation/hardware_transfer-amd-0130ef84798da33e-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033006,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s111,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033007,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s112,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033008,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s113,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033009,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s94,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033010,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s95,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033011,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s96,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033012,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033013,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033014,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033015,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033016,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033017,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033018,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s91,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033019,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s92,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033020,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s93,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033021,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033022,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033023,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033024,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033025,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033026,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033027,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033028,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033029,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033030,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033031,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033032,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033033,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033034,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033035,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033036,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033037,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033038,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033039,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033040,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033041,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033042,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033043,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033044,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033045,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033046,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033047,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033048,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033049,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033050,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033051,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033052,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033053,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033054,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033055,1,evaluation/larger_models-amd-3b30753d38a79416-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033056,1,evaluation/larger_models-amd-1fba5684fdfd4831-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033057,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033058,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033059,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033060,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033061,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033062,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033063,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033064,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033065,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033066,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033067,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033068,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033069,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033070,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033071,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033072,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033073,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033074,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033075,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033076,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033077,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033078,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033079,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033080,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033081,1,evaluation/larger_models-amd-1fba5684fdfd4831-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033082,1,evaluation/larger_models-amd-3b30753d38a79416-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033083,1,evaluation/larger_models-amd-3b30753d38a79416-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033084,1,evaluation/larger_models-amd-1fba5684fdfd4831-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033085,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033086,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s222,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033087,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033089,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s223,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033090,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033091,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033092,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033093,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s221,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033094,1,evaluation/reservation_sweep-amd-4a82208f8d16f51c-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033095,1,evaluation/reservation_sweep-amd-4a82208f8d16f51c-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033096,1,evaluation/reservation_sweep-amd-4a82208f8d16f51c-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:48,0,None assigned,0,0.0,0
+23033097,1,evaluation/reservation_sweep-amd-90b9068bdecd2778-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033098,1,evaluation/reservation_sweep-amd-90b9068bdecd2778-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033099,1,evaluation/reservation_sweep-amd-90b9068bdecd2778-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033100,1,evaluation/reservation_sweep-amd-238a31a374ab3540-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033101,1,evaluation/reservation_sweep-amd-238a31a374ab3540-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033102,1,evaluation/reservation_sweep-amd-238a31a374ab3540-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033103,1,evaluation/reservation_sweep-amd-8a629db678e853a2-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033104,1,evaluation/reservation_sweep-amd-8a629db678e853a2-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033106,1,evaluation/reservation_sweep-amd-8a629db678e853a2-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033107,1,evaluation/reservation_sweep-amd-dd980883fa32bec2-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033108,1,evaluation/reservation_sweep-amd-dd980883fa32bec2-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033109,1,evaluation/reservation_sweep-amd-dd980883fa32bec2-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033110,1,evaluation/reservation_sweep-amd-116eaa74bfa95bb6-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033111,1,evaluation/reservation_sweep-amd-116eaa74bfa95bb6-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033112,1,evaluation/reservation_sweep-amd-116eaa74bfa95bb6-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033113,1,evaluation/reservation_sweep-amd-0e36253dd7e7f328-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033114,1,evaluation/reservation_sweep-amd-0e36253dd7e7f328-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033385,1,evaluation/reservation_sweep-amd-0e36253dd7e7f328-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033386,1,evaluation/reservation_sweep-amd-37b9095e89b27eeb-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033387,1,evaluation/reservation_sweep-amd-37b9095e89b27eeb-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033388,1,evaluation/reservation_sweep-amd-37b9095e89b27eeb-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033389,1,evaluation/reservation_sweep-amd-c6ded70c52543240-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033390,1,evaluation/reservation_sweep-amd-c6ded70c52543240-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033391,1,evaluation/reservation_sweep-amd-c6ded70c52543240-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033392,1,evaluation/reservation_sweep-amd-906c545fcb267bd4-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033393,1,evaluation/reservation_sweep-amd-906c545fcb267bd4-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033394,1,evaluation/reservation_sweep-amd-906c545fcb267bd4-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033395,1,evaluation/reservation_sweep-amd-930da5972a074847-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033396,1,evaluation/reservation_sweep-amd-930da5972a074847-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033397,1,evaluation/reservation_sweep-amd-930da5972a074847-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033398,1,evaluation/reservation_sweep-amd-7e9226094b3a9bb6-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033399,1,evaluation/reservation_sweep-amd-7e9226094b3a9bb6-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033400,1,evaluation/reservation_sweep-amd-7e9226094b3a9bb6-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033401,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033402,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033403,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033404,1,evaluation/reservation_sweep-amd-1e4aa5b8bfb726ba-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033405,1,evaluation/reservation_sweep-amd-1e4aa5b8bfb726ba-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033406,1,evaluation/reservation_sweep-amd-1e4aa5b8bfb726ba-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033407,1,evaluation/reservation_sweep-amd-64d0ba1c9400e0e2-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033408,1,evaluation/reservation_sweep-amd-64d0ba1c9400e0e2-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033409,1,evaluation/reservation_sweep-amd-64d0ba1c9400e0e2-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033410,1,evaluation/reservation_sweep-amd-361f1b17a66a51eb-grpo-lora-s301,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033411,1,evaluation/reservation_sweep-amd-361f1b17a66a51eb-grpo-lora-s302,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033412,1,evaluation/reservation_sweep-amd-361f1b17a66a51eb-grpo-lora-s303,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033413,1,evaluation/algorithm_adaptation-amd-a085945f3901e0d6-grpo-lora-s401,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033414,1,evaluation/algorithm_adaptation-amd-a085945f3901e0d6-grpo-lora-s402,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033415,1,evaluation/algorithm_adaptation-amd-a085945f3901e0d6-grpo-lora-s403,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033416,1,evaluation/algorithm_adaptation-amd-80f69674b0bf92ff-ppo-lora-s401,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033417,1,evaluation/algorithm_adaptation-amd-80f69674b0bf92ff-ppo-lora-s402,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033418,1,evaluation/algorithm_adaptation-amd-80f69674b0bf92ff-ppo-lora-s403,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033419,1,evaluation/algorithm_adaptation-amd-b24d57552a893d63-grpo-full-s401,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033420,1,evaluation/algorithm_adaptation-amd-b24d57552a893d63-grpo-full-s402,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033421,1,evaluation/algorithm_adaptation-amd-b24d57552a893d63-grpo-full-s403,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033422,1,evaluation/algorithm_adaptation-amd-351eb10c802dcb99-grpo-lora-s401,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033423,1,evaluation/algorithm_adaptation-amd-351eb10c802dcb99-grpo-lora-s402,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033424,1,evaluation/algorithm_adaptation-amd-351eb10c802dcb99-grpo-lora-s403,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033425,1,evaluation/algorithm_adaptation-amd-38f19c9d37ff705c-ppo-lora-s401,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033426,1,evaluation/algorithm_adaptation-amd-38f19c9d37ff705c-ppo-lora-s402,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033427,1,evaluation/algorithm_adaptation-amd-38f19c9d37ff705c-ppo-lora-s403,CANCELLED by 327004680,None,2026-10-21T16:03:47,0,None assigned,0,0.0,0
+23033899,1,evaluation/hardware_transfer-amd-0130ef84798da33e-grpo-lora-s113,COMPLETED,2026-10-21T16:20:28,2026-10-21T16:28:02,454,nid005035,4,0.5044,1
+23033900,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s111,COMPLETED,2026-10-21T16:20:28,2026-10-21T16:29:39,551,nid005035,4,0.6122,1
+23033901,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s112,COMPLETED,2026-10-21T16:20:28,2026-10-21T16:29:38,550,nid007894,4,0.6111,1
+23033902,1,evaluation/hardware_transfer-amd-1179d8822324c980-grpo-lora-s113,COMPLETED,2026-10-21T16:28:58,2026-10-21T16:35:00,362,nid005035,4,0.4022,1
+23033903,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s94,COMPLETED,2026-10-21T16:18:17,2026-10-21T16:26:00,463,nid005088,2,0.2572,1
+23033904,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s95,COMPLETED,2026-10-21T16:18:17,2026-10-21T16:24:06,349,nid007861,2,0.1939,1
+23033905,1,evaluation/hardware_transfer-amd-43432b4d4cb0c7b3-grpo-lora-s96,COMPLETED,2026-10-21T16:25:59,2026-10-21T16:32:37,398,nid005064,2,0.2211,1
+23033906,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s91,COMPLETED,2026-10-21T16:25:59,2026-10-21T16:33:40,461,nid005097,2,0.2561,1
+23033907,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s92,COMPLETED,2026-10-21T16:25:59,2026-10-21T16:32:04,365,nid007904,2,0.2028,1
+23033908,1,evaluation/hardware_transfer-amd-863089f4586ab352-grpo-lora-s93,COMPLETED,2026-10-21T16:25:59,2026-10-21T16:32:10,371,nid007909,2,0.2061,1
+23033909,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s91,COMPLETED,2026-10-21T16:25:59,2026-10-21T16:32:54,415,nid007860,2,0.2306,1
+23033910,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s92,COMPLETED,2026-10-21T16:25:59,2026-10-21T16:32:18,379,nid007861,2,0.2106,1
+23033911,1,evaluation/hardware_transfer-amd-a1e1493969108180-grpo-lora-s93,COMPLETED,2026-10-21T16:28:58,2026-10-21T16:35:02,364,nid005088,2,0.2022,1
+23033912,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s91,COMPLETED,2026-10-21T16:29:49,2026-10-21T16:36:37,408,nid007897,2,0.2267,1
+23033913,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s92,COMPLETED,2026-10-21T16:29:49,2026-10-21T16:37:19,450,nid007897,2,0.25,1
+23033914,1,evaluation/hardware_transfer-amd-a9fe8a0a3475948b-grpo-lora-s93,COMPLETED,2026-10-21T16:29:49,2026-10-21T16:38:24,515,nid007897,2,0.2861,1
+23033915,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s222,COMPLETED,2026-10-21T16:46:24,2026-10-21T16:56:19,595,nid007948,4,0.6611,1
+23033916,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s222,FAILED,2026-10-21T16:56:47,2026-10-21T17:08:14,687,nid007948,2,0.3817,1
+23033917,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s223,NODE_FAIL,2026-10-21T17:08:40,2026-10-21T17:25:39,1019,nid007948,4,1.1322,1
+23033917,2,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s223,FAILED,2026-10-21T19:24:31,2026-10-21T19:30:33,362,nid007950,4,0.4022,1
+23033918,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s223,FAILED,2026-10-21T17:17:45,2026-10-21T17:28:37,652,nid007867,2,0.3622,1
+23033919,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s221,COMPLETED,2026-10-21T17:29:01,2026-10-21T17:39:04,603,nid007867,2,0.335,1
+23033920,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s221,COMPLETED,2026-10-21T17:33:23,2026-10-21T17:43:41,618,nid007866,4,0.6867,1
+23033921,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s221,FAILED,2026-10-21T17:33:47,2026-10-21T17:43:52,605,nid007952,2,0.3361,1
+23033922,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s221,COMPLETED,2026-10-21T17:38:22,2026-10-21T17:48:29,607,nid007854,4,0.6744,1
+23033923,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s222,COMPLETED,2026-10-21T17:39:28,2026-10-21T17:49:21,593,nid007867,4,0.6589,1
+23033924,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s222,FAILED,2026-10-21T17:41:44,2026-10-21T17:54:32,768,nid005109,2,0.4267,1
+23033925,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s222,COMPLETED,2026-10-21T17:44:10,2026-10-21T17:55:33,683,nid007866,2,0.3794,1
+23033926,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s222,COMPLETED,2026-10-21T17:44:17,2026-10-21T17:54:41,624,nid007952,4,0.6933,1
+23033927,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s223,COMPLETED,2026-10-21T17:48:57,2026-10-21T17:57:55,538,nid007854,4,0.5978,1
+23033928,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s223,COMPLETED,2026-10-21T17:49:48,2026-10-21T17:59:13,565,nid007867,2,0.3139,1
+23033929,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s222,COMPLETED,2026-10-21T17:54:59,2026-10-21T18:05:57,658,nid005109,2,0.3656,1
+23033930,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s222,COMPLETED,2026-10-21T17:55:10,2026-10-21T18:04:28,558,nid007952,4,0.62,1
+23033931,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s222,COMPLETED,2026-10-21T17:55:57,2026-10-21T18:05:33,576,nid007866,2,0.32,1
+23033932,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s222,COMPLETED,2026-10-21T17:58:29,2026-10-21T18:07:32,543,nid007854,4,0.6033,1
+23033933,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s222,COMPLETED,2026-10-21T17:59:43,2026-10-21T18:08:53,550,nid007867,4,0.6111,1
+23033934,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s222,COMPLETED,2026-10-21T18:05:02,2026-10-21T18:15:00,598,nid007952,2,0.3322,1
+23033935,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s221,COMPLETED,2026-10-21T18:06:03,2026-10-21T18:16:34,631,nid007866,2,0.3506,1
+23033936,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s221,COMPLETED,2026-10-21T18:06:24,2026-10-21T18:15:56,572,nid005109,4,0.6356,1
+23033937,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s223,COMPLETED,2026-10-21T18:08:06,2026-10-21T18:17:32,566,nid007854,4,0.6289,1
+23033938,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s223,COMPLETED,2026-10-21T18:09:28,2026-10-21T18:19:40,612,nid007867,2,0.34,1
+23033939,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s223,COMPLETED,2026-10-21T18:15:25,2026-10-21T18:24:45,560,nid007952,4,0.6222,1
+23033940,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s223,COMPLETED,2026-10-21T18:16:24,2026-10-21T18:27:00,636,nid005109,2,0.3533,1
+23033941,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s223,COMPLETED,2026-10-21T18:16:59,2026-10-21T18:26:43,584,nid007866,2,0.3244,1
+23033942,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s223,COMPLETED,2026-10-21T18:18:07,2026-10-21T18:27:23,556,nid007854,4,0.6178,1
+23033943,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s223,COMPLETED,2026-10-21T18:20:11,2026-10-21T18:30:39,628,nid007867,4,0.6978,1
+23033944,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s223,COMPLETED,2026-10-21T18:25:13,2026-10-21T18:35:59,646,nid007952,2,0.3589,1
+23033945,1,evaluation/larger_models-amd-a438947d12ad6fd1-grpo-lora-s223,COMPLETED,2026-10-21T18:27:13,2026-10-21T18:36:33,560,nid007866,4,0.6222,1
+23033946,1,evaluation/larger_models-amd-ac93f889b5805c53-grpo-lora-s223,COMPLETED,2026-10-21T18:27:24,2026-10-21T18:37:13,589,nid005109,2,0.3272,1
+23033947,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s221,COMPLETED,2026-10-21T18:27:57,2026-10-21T18:36:54,537,nid007854,4,0.5967,1
+23033948,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s221,FAILED,2026-10-21T18:30:30,2026-10-21T18:41:31,661,nid007853,2,0.3672,1
+23033949,1,evaluation/larger_models-amd-3b30753d38a79416-grpo-lora-s221,COMPLETED,2026-10-21T18:31:06,2026-10-21T18:40:39,573,nid007867,2,0.3183,1
+23033950,1,evaluation/larger_models-amd-1fba5684fdfd4831-grpo-lora-s221,COMPLETED,2026-10-21T18:36:25,2026-10-21T18:46:33,608,nid007952,4,0.6756,1
+23033951,1,evaluation/larger_models-amd-d0e8d84e34fe568f-grpo-lora-s221,FAILED,2026-10-21T18:37:08,2026-10-21T18:47:17,609,nid007866,2,0.3383,1
+23033952,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s221,COMPLETED,2026-10-21T18:37:30,2026-10-21T18:46:50,560,nid007854,4,0.6222,1
+23033953,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s222,COMPLETED,2026-10-21T18:37:42,2026-10-21T18:46:50,548,nid005109,4,0.6089,1
+23033954,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s222,FAILED,2026-10-21T18:40:43,2026-10-21T18:53:40,777,nid007950,2,0.4317,1
+23033955,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s222,FAILED,2026-10-21T18:41:11,2026-10-21T18:50:52,581,nid007867,2,0.3228,1
+23033956,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s222,COMPLETED,2026-10-21T18:41:57,2026-10-21T18:52:01,604,nid007853,4,0.6711,1
+23033957,1,evaluation/larger_models-amd-84ef50c551b7a3e7-grpo-lora-s221,COMPLETED,2026-10-21T18:47:08,2026-10-21T18:56:35,567,nid007952,4,0.63,1
+23033958,1,evaluation/larger_models-amd-0a2a96d8e06c1dd8-grpo-lora-s221,COMPLETED,2026-10-21T18:47:18,2026-10-21T18:57:03,585,nid005109,2,0.325,1
+23033959,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s223,COMPLETED,2026-10-21T18:47:24,2026-10-21T18:56:35,551,nid007854,4,0.6122,1
+23033960,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s223,COMPLETED,2026-10-21T18:47:46,2026-10-21T18:57:49,603,nid007866,2,0.335,1
+23033961,1,evaluation/larger_models-amd-d918158425cd57fe-grpo-lora-s221,COMPLETED,2026-10-21T18:51:22,2026-10-21T19:01:22,600,nid007867,4,0.6667,1
+23033962,1,evaluation/larger_models-amd-de7cb9dbda0404d0-grpo-lora-s221,COMPLETED,2026-10-21T18:52:29,2026-10-21T19:02:52,623,nid007853,2,0.3461,1
+23033963,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s221,COMPLETED,2026-10-21T18:54:08,2026-10-21T19:04:05,597,nid007950,2,0.3317,1
+23033964,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s221,COMPLETED,2026-10-21T18:57:03,2026-10-21T19:07:10,607,nid007952,4,0.6744,1
+23033965,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s223,FAILED,2026-10-21T18:57:10,2026-10-21T19:07:05,595,nid007854,2,0.3306,1
+23033966,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s223,COMPLETED,2026-10-21T18:57:34,2026-10-21T19:06:57,563,nid005109,4,0.6256,1
+23033967,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s222,COMPLETED,2026-10-21T18:58:18,2026-10-21T19:09:04,646,nid007866,2,0.3589,1
+23033968,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s222,COMPLETED,2026-10-21T19:01:51,2026-10-21T19:11:04,553,nid007867,4,0.6144,1
+23033969,1,evaluation/larger_models-amd-e27e4a5f61f12c83-grpo-lora-s221,COMPLETED,2026-10-21T19:03:23,2026-10-21T19:12:24,541,nid007853,4,0.6011,1
+23033970,1,evaluation/larger_models-amd-d8ae40fb976bc965-grpo-lora-s221,COMPLETED,2026-10-21T19:04:35,2026-10-21T19:14:12,577,nid007950,2,0.3206,1
+23033971,1,evaluation/larger_models-amd-08589e8a12d1faa3-grpo-lora-s223,FAILED,2026-10-21T19:07:29,2026-10-21T19:17:17,588,nid005109,2,0.3267,1
+23033972,1,evaluation/larger_models-amd-1357c30c5c7f243f-grpo-lora-s223,COMPLETED,2026-10-21T19:07:35,2026-10-21T19:16:46,551,nid007854,4,0.6122,1
+23033973,1,evaluation/larger_models-amd-01bbc6895f3c9bd7-grpo-lora-s222,COMPLETED,2026-10-21T19:07:41,2026-10-21T19:17:26,585,nid007952,2,0.325,1
+23033974,1,evaluation/larger_models-amd-108414bae0b4705d-grpo-lora-s222,COMPLETED,2026-10-21T19:09:29,2026-10-21T19:18:50,561,nid007866,4,0.6233,1
+23033975,1,evaluation/larger_models-amd-1fba5684fdfd4831-grpo-lora-s223,COMPLETED,2026-10-21T19:11:09,2026-10-21T19:20:52,583,nid007858,4,0.6478,1
+23033976,1,evaluation/larger_models-amd-3b30753d38a79416-grpo-lora-s223,COMPLETED,2026-10-21T19:11:37,2026-10-21T19:21:24,587,nid007867,2,0.3261,1
+23033977,1,evaluation/larger_models-amd-3b30753d38a79416-grpo-lora-s222,COMPLETED,2026-10-21T19:12:59,2026-10-21T19:23:20,621,nid007853,2,0.345,1
+23033978,1,evaluation/larger_models-amd-1fba5684fdfd4831-grpo-lora-s222,COMPLETED,2026-10-21T19:14:42,2026-10-21T19:24:01,559,nid007950,4,0.6211,1
+23033979,1,evaluation/larger_models-amd-a56db0c19dd5bee9-grpo-lora-s222,COMPLETED,2026-10-21T19:16:34,2026-10-21T19:28:02,688,nid007932,2,0.3822,1
+23033980,1,evaluation/larger_models-amd-478133deaaef5007-grpo-lora-s222,COMPLETED,2026-10-21T19:17:14,2026-10-21T19:26:39,565,nid007854,4,0.6278,1
+23033981,1,evaluation/larger_models-amd-ecedb02a240f8152-grpo-lora-s223,FAILED,2026-10-21T19:17:47,2026-10-21T19:27:12,565,nid005109,2,0.3139,1
+23033982,1,evaluation/larger_models-amd-a5848a3a9c189e55-grpo-lora-s223,COMPLETED,2026-10-21T19:17:57,2026-10-21T19:26:43,526,nid007952,4,0.5844,1
+23033983,1,evaluation/larger_models-amd-dff9402db2df341d-grpo-lora-s221,COMPLETED,2026-10-21T19:19:24,2026-10-21T19:28:39,555,nid007866,4,0.6167,1
+23033984,1,evaluation/larger_models-amd-4478b4dd917a6608-grpo-lora-s221,FAILED,2026-10-21T19:21:20,2026-10-21T19:31:17,597,nid007858,2,0.3317,1
+23033985,1,evaluation/larger_models-amd-46135edd043d465e-grpo-lora-s221,COMPLETED,2026-10-21T19:21:53,2026-10-21T19:31:16,563,nid007867,4,0.6256,1
+23033986,1,evaluation/larger_models-amd-55e4d384ef7fd5d3-grpo-lora-s221,COMPLETED,2026-10-21T19:23:51,2026-10-21T19:33:38,587,nid007853,2,0.3261,1
+23033987,1,evaluation/reservation_sweep-amd-4a82208f8d16f51c-grpo-lora-s301,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:39:44,346,nid005064,2,0.1922,1
+23033988,1,evaluation/reservation_sweep-amd-4a82208f8d16f51c-grpo-lora-s302,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:39:55,357,nid005064,2,0.1983,1
+23033989,1,evaluation/reservation_sweep-amd-4a82208f8d16f51c-grpo-lora-s303,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:40:17,379,nid005110,2,0.2106,1
+23033990,1,evaluation/reservation_sweep-amd-90b9068bdecd2778-grpo-lora-s301,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:40:21,383,nid007858,2,0.2128,1
+23033991,1,evaluation/reservation_sweep-amd-90b9068bdecd2778-grpo-lora-s302,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:40:13,375,nid007858,2,0.2083,1
+23033992,1,evaluation/reservation_sweep-amd-90b9068bdecd2778-grpo-lora-s303,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:39:46,348,nid007863,2,0.1933,1
+23033993,1,evaluation/reservation_sweep-amd-238a31a374ab3540-grpo-lora-s301,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:40:25,387,nid007894,2,0.215,1
+23033994,1,evaluation/reservation_sweep-amd-238a31a374ab3540-grpo-lora-s302,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:40:50,412,nid007894,2,0.2289,1
+23033995,1,evaluation/reservation_sweep-amd-238a31a374ab3540-grpo-lora-s303,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:40:39,401,nid007904,2,0.2228,1
+23033996,1,evaluation/reservation_sweep-amd-8a629db678e853a2-grpo-lora-s301,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:39:39,341,nid007909,2,0.1894,1
+23033997,1,evaluation/reservation_sweep-amd-8a629db678e853a2-grpo-lora-s302,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:39:47,349,nid007860,2,0.1939,1
+23033998,1,evaluation/reservation_sweep-amd-8a629db678e853a2-grpo-lora-s303,COMPLETED,2026-10-21T16:33:58,2026-10-21T16:41:03,425,nid007861,2,0.2361,1
+23033999,1,evaluation/reservation_sweep-amd-dd980883fa32bec2-grpo-lora-s301,FAILED,2026-10-21T16:40:40,2026-10-21T16:46:37,357,nid005035,2,0.1983,1
+23034000,1,evaluation/reservation_sweep-amd-dd980883fa32bec2-grpo-lora-s302,FAILED,2026-10-21T16:40:40,2026-10-21T16:48:25,465,nid005053,2,0.2583,1
+23034001,1,evaluation/reservation_sweep-amd-dd980883fa32bec2-grpo-lora-s303,FAILED,2026-10-21T16:40:40,2026-10-21T16:48:12,452,nid005053,2,0.2511,1
+23034002,1,evaluation/reservation_sweep-amd-116eaa74bfa95bb6-grpo-lora-s301,FAILED,2026-10-21T16:40:40,2026-10-21T16:48:20,460,nid005061,2,0.2556,1
+23034003,1,evaluation/reservation_sweep-amd-116eaa74bfa95bb6-grpo-lora-s302,FAILED,2026-10-21T16:40:40,2026-10-21T16:46:56,376,nid005065,2,0.2089,1
+23034004,1,evaluation/reservation_sweep-amd-116eaa74bfa95bb6-grpo-lora-s303,FAILED,2026-10-21T16:40:40,2026-10-21T16:47:18,398,nid005088,2,0.2211,1
+23034005,1,evaluation/reservation_sweep-amd-0e36253dd7e7f328-grpo-lora-s301,FAILED,2026-10-21T16:40:40,2026-10-21T16:44:40,240,nid005097,2,0.1333,1
+23034006,1,evaluation/reservation_sweep-amd-0e36253dd7e7f328-grpo-lora-s302,FAILED,2026-10-21T16:40:40,2026-10-21T16:43:58,198,nid007860,2,0.11,1
+23034007,1,evaluation/reservation_sweep-amd-0e36253dd7e7f328-grpo-lora-s303,FAILED,2026-10-21T16:40:40,2026-10-21T16:44:04,204,nid007863,2,0.1133,1
+23034008,1,evaluation/reservation_sweep-amd-37b9095e89b27eeb-grpo-lora-s301,FAILED,2026-10-21T16:40:40,2026-10-21T16:45:50,310,nid007876,2,0.1722,1
+23034009,1,evaluation/reservation_sweep-amd-37b9095e89b27eeb-grpo-lora-s302,FAILED,2026-10-21T16:40:40,2026-10-21T16:44:03,203,nid007897,2,0.1128,1
+23034010,1,evaluation/reservation_sweep-amd-37b9095e89b27eeb-grpo-lora-s303,FAILED,2026-10-21T16:40:40,2026-10-21T16:43:59,199,nid007897,2,0.1106,1
+23034011,1,evaluation/reservation_sweep-amd-c6ded70c52543240-grpo-lora-s301,COMPLETED,2026-10-21T16:40:40,2026-10-21T16:46:25,345,nid007897,2,0.1917,1
+23034012,1,evaluation/reservation_sweep-amd-c6ded70c52543240-grpo-lora-s302,COMPLETED,2026-10-21T16:40:40,2026-10-21T16:47:21,401,nid007909,2,0.2228,1
+23034013,1,evaluation/reservation_sweep-amd-c6ded70c52543240-grpo-lora-s303,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:57:08,399,nid005035,2,0.2217,1
+23034014,1,evaluation/reservation_sweep-amd-906c545fcb267bd4-grpo-lora-s301,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:58:54,505,nid005039,2,0.2806,1
+23034015,1,evaluation/reservation_sweep-amd-906c545fcb267bd4-grpo-lora-s302,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:58:50,501,nid005053,2,0.2783,1
+23034016,1,evaluation/reservation_sweep-amd-906c545fcb267bd4-grpo-lora-s303,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:57:08,399,nid005053,2,0.2217,1
+23034017,1,evaluation/reservation_sweep-amd-930da5972a074847-grpo-lora-s301,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:58:59,510,nid005061,2,0.2833,1
+23034018,1,evaluation/reservation_sweep-amd-930da5972a074847-grpo-lora-s302,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:57:09,400,nid005088,2,0.2222,1
+23034019,1,evaluation/reservation_sweep-amd-930da5972a074847-grpo-lora-s303,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:57:20,411,nid005097,2,0.2283,1
+23034020,1,evaluation/reservation_sweep-amd-7e9226094b3a9bb6-grpo-lora-s301,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:57:07,398,nid005110,2,0.2211,1
+23034021,1,evaluation/reservation_sweep-amd-7e9226094b3a9bb6-grpo-lora-s302,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:57:13,404,nid007858,2,0.2244,1
+23034022,1,evaluation/reservation_sweep-amd-7e9226094b3a9bb6-grpo-lora-s303,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:56:27,358,nid007858,2,0.1989,1
+23034023,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s301,FAILED,2026-10-21T16:50:29,2026-10-21T16:54:50,261,nid007863,2,0.145,1
+23034024,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s302,FAILED,2026-10-21T16:50:29,2026-10-21T16:57:28,419,nid007876,2,0.2328,1
+23034025,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s303,FAILED,2026-10-21T16:50:29,2026-10-21T16:57:04,395,nid007894,2,0.2194,1
+23034026,1,evaluation/reservation_sweep-amd-1e4aa5b8bfb726ba-grpo-lora-s301,FAILED,2026-10-21T16:50:29,2026-10-21T16:58:55,506,nid007894,2,0.2811,1
+23034027,1,evaluation/reservation_sweep-amd-1e4aa5b8bfb726ba-grpo-lora-s302,FAILED,2026-10-21T16:50:29,2026-10-21T16:56:19,350,nid007897,2,0.1944,1
+23034028,1,evaluation/reservation_sweep-amd-1e4aa5b8bfb726ba-grpo-lora-s303,FAILED,2026-10-21T16:50:29,2026-10-21T16:56:27,358,nid007897,2,0.1989,1
+23034029,1,evaluation/reservation_sweep-amd-64d0ba1c9400e0e2-grpo-lora-s301,FAILED,2026-10-21T16:50:29,2026-10-21T16:54:00,211,nid007897,2,0.1172,1
+23034030,1,evaluation/reservation_sweep-amd-64d0ba1c9400e0e2-grpo-lora-s302,FAILED,2026-10-21T16:50:29,2026-10-21T16:54:32,243,nid007904,2,0.135,1
+23034031,1,evaluation/reservation_sweep-amd-64d0ba1c9400e0e2-grpo-lora-s303,FAILED,2026-10-21T16:50:29,2026-10-21T16:53:50,201,nid007909,2,0.1117,1
+23034032,1,evaluation/reservation_sweep-amd-361f1b17a66a51eb-grpo-lora-s301,FAILED,2026-10-21T16:50:29,2026-10-21T16:54:06,217,nid005064,2,0.1206,1
+23034033,1,evaluation/reservation_sweep-amd-361f1b17a66a51eb-grpo-lora-s302,FAILED,2026-10-21T16:50:29,2026-10-21T16:54:05,216,nid005064,2,0.12,1
+23034034,1,evaluation/reservation_sweep-amd-361f1b17a66a51eb-grpo-lora-s303,FAILED,2026-10-21T16:50:29,2026-10-21T16:54:49,260,nid005065,2,0.1444,1
+23034035,1,evaluation/algorithm_adaptation-amd-a085945f3901e0d6-grpo-lora-s401,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:56:19,350,nid007860,2,0.1944,1
+23034036,1,evaluation/algorithm_adaptation-amd-a085945f3901e0d6-grpo-lora-s402,COMPLETED,2026-10-21T16:50:29,2026-10-21T16:56:35,366,nid007861,2,0.2033,1
+23034037,1,evaluation/algorithm_adaptation-amd-a085945f3901e0d6-grpo-lora-s403,COMPLETED,2026-10-21T16:54:03,2026-10-21T17:00:56,413,nid005059,2,0.2294,1
+23034038,1,evaluation/algorithm_adaptation-amd-80f69674b0bf92ff-ppo-lora-s401,COMPLETED,2026-10-21T16:54:03,2026-10-21T17:01:00,417,nid007867,2,0.2317,1
+23034039,1,evaluation/algorithm_adaptation-amd-80f69674b0bf92ff-ppo-lora-s402,COMPLETED,2026-10-21T16:54:03,2026-10-21T17:01:12,429,nid007867,2,0.2383,1
+23034040,1,evaluation/algorithm_adaptation-amd-80f69674b0bf92ff-ppo-lora-s403,COMPLETED,2026-10-21T16:54:03,2026-10-21T17:00:59,416,nid007873,2,0.2311,1
+23034041,1,evaluation/algorithm_adaptation-amd-b24d57552a893d63-grpo-full-s401,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:01:43,373,nid005057,2,0.2072,1
+23034042,1,evaluation/algorithm_adaptation-amd-b24d57552a893d63-grpo-full-s402,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:00:10,280,nid005077,2,0.1556,1
+23034043,1,evaluation/algorithm_adaptation-amd-b24d57552a893d63-grpo-full-s403,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:00:38,308,nid007863,2,0.1711,1
+23034044,1,evaluation/algorithm_adaptation-amd-351eb10c802dcb99-grpo-lora-s401,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:01:56,386,nid007897,2,0.2144,1
+23034045,1,evaluation/algorithm_adaptation-amd-351eb10c802dcb99-grpo-lora-s402,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:01:13,343,nid007904,2,0.1906,1
+23034046,1,evaluation/algorithm_adaptation-amd-351eb10c802dcb99-grpo-lora-s403,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:01:15,345,nid007909,2,0.1917,1
+23034047,1,evaluation/algorithm_adaptation-amd-38f19c9d37ff705c-ppo-lora-s401,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:01:23,353,nid005064,2,0.1961,1
+23034048,1,evaluation/algorithm_adaptation-amd-38f19c9d37ff705c-ppo-lora-s402,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:01:18,348,nid005064,2,0.1933,1
+23034049,1,evaluation/algorithm_adaptation-amd-38f19c9d37ff705c-ppo-lora-s403,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:01:23,353,nid005065,2,0.1961,1
+23034050,1,evaluation/algorithm_adaptation-amd-54fa9a0f36b7154b-grpo-full-s401,COMPLETED,2026-10-21T16:55:30,2026-10-21T17:00:40,310,nid005061,2,0.1722,1
+23034051,1,evaluation/algorithm_adaptation-amd-54fa9a0f36b7154b-grpo-full-s402,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:22,330,nid005039,2,0.1833,1
+23034052,1,evaluation/algorithm_adaptation-amd-54fa9a0f36b7154b-grpo-full-s403,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:00,308,nid005053,2,0.1711,1
+23034053,1,evaluation/algorithm_adaptation-amd-95ab18c5ee8fa418-grpo-lora-s401,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:39,347,nid005053,2,0.1928,1
+23034054,1,evaluation/algorithm_adaptation-amd-95ab18c5ee8fa418-grpo-lora-s402,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:59,367,nid005077,2,0.2039,1
+23034055,1,evaluation/algorithm_adaptation-amd-95ab18c5ee8fa418-grpo-lora-s403,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:46,354,nid005088,2,0.1967,1
+23034056,1,evaluation/algorithm_adaptation-amd-c983904f5ee26bbc-ppo-lora-s401,FAILED,2026-10-21T17:00:52,2026-10-21T17:06:59,367,nid005097,2,0.2039,1
+23034057,1,evaluation/algorithm_adaptation-amd-c983904f5ee26bbc-ppo-lora-s402,FAILED,2026-10-21T17:00:52,2026-10-21T17:07:16,384,nid005110,2,0.2133,1
+23034058,1,evaluation/algorithm_adaptation-amd-c983904f5ee26bbc-ppo-lora-s403,FAILED,2026-10-21T17:00:52,2026-10-21T17:06:57,365,nid007858,2,0.2028,1
+23034059,1,evaluation/algorithm_adaptation-amd-4d4e53078ce5a92f-grpo-full-s401,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:04,312,nid007858,2,0.1733,1
+23034060,1,evaluation/algorithm_adaptation-amd-4d4e53078ce5a92f-grpo-full-s402,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:05:46,294,nid007876,2,0.1633,1
+23034061,1,evaluation/algorithm_adaptation-amd-4d4e53078ce5a92f-grpo-full-s403,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:05:55,303,nid007894,2,0.1683,1
+23034062,1,evaluation/algorithm_adaptation-amd-8a629db678e853a2-grpo-lora-s401,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:52,360,nid007894,2,0.2,1
+23034063,1,evaluation/algorithm_adaptation-amd-8a629db678e853a2-grpo-lora-s402,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:46,354,nid007897,2,0.1967,1
+23034064,1,evaluation/algorithm_adaptation-amd-8a629db678e853a2-grpo-lora-s403,COMPLETED,2026-10-21T17:00:52,2026-10-21T17:06:42,350,nid007897,2,0.1944,1
+23034065,1,evaluation/algorithm_adaptation-amd-e31bfa5415ea52ad-ppo-lora-s401,FAILED,2026-10-21T17:00:52,2026-10-21T17:06:54,362,nid007860,2,0.2011,1
+23034066,1,evaluation/algorithm_adaptation-amd-e31bfa5415ea52ad-ppo-lora-s402,FAILED,2026-10-21T17:00:52,2026-10-21T17:06:57,365,nid007861,2,0.2028,1
+23034067,1,evaluation/algorithm_adaptation-amd-e31bfa5415ea52ad-ppo-lora-s403,FAILED,2026-10-21T17:05:29,2026-10-21T17:11:30,361,nid005035,2,0.2006,1
+23034068,1,evaluation/algorithm_adaptation-amd-573a483093217867-grpo-full-s401,FAILED,2026-10-21T17:05:29,2026-10-21T17:12:20,411,nid005050,2,0.2283,1
+23034069,1,evaluation/algorithm_adaptation-amd-573a483093217867-grpo-full-s402,FAILED,2026-10-21T17:05:29,2026-10-21T17:11:24,355,nid005059,2,0.1972,1
+23034070,1,evaluation/algorithm_adaptation-amd-573a483093217867-grpo-full-s403,FAILED,2026-10-21T17:05:29,2026-10-21T17:10:34,305,nid005061,2,0.1694,1
+23034071,1,evaluation/horizon-amd-3258805f9c65b4a0-grpo-lora-s501,COMPLETED,2026-10-21T17:05:29,2026-10-21T17:13:35,486,nid007863,2,0.27,1
+23034072,1,evaluation/horizon-amd-3258805f9c65b4a0-grpo-lora-s502,COMPLETED,2026-10-21T17:05:29,2026-10-21T17:13:31,482,nid007873,2,0.2678,1
+23034073,1,evaluation/horizon-amd-3258805f9c65b4a0-grpo-lora-s503,COMPLETED,2026-10-21T17:05:29,2026-10-21T17:13:27,478,nid007873,2,0.2656,1
+23034074,1,evaluation/horizon-amd-fcb3ee90f597982b-grpo-lora-s501,TIMEOUT,2026-10-21T17:05:29,2026-10-21T19:05:50,7221,nid007897,2,4.0117,1
+23034075,1,evaluation/horizon-amd-fcb3ee90f597982b-grpo-lora-s502,TIMEOUT,2026-10-21T17:05:29,2026-10-21T19:05:50,7221,nid007899,2,4.0117,1
+23034076,1,evaluation/horizon-amd-fcb3ee90f597982b-grpo-lora-s503,TIMEOUT,2026-10-21T17:05:29,2026-10-21T19:05:50,7221,nid007904,2,4.0117,1
+23034077,1,evaluation/horizon-amd-fbca17ba60f60393-grpo-lora-s501,FAILED,2026-10-21T17:05:29,2026-10-21T17:12:39,430,nid007909,2,0.2389,1
+23034078,1,evaluation/horizon-amd-fbca17ba60f60393-grpo-lora-s502,FAILED,2026-10-21T17:05:29,2026-10-21T17:13:35,486,nid007950,2,0.27,1
+23034079,1,evaluation/horizon-amd-fbca17ba60f60393-grpo-lora-s503,FAILED,2026-10-21T17:05:29,2026-10-21T17:13:29,480,nid007950,2,0.2667,1
+23034080,1,evaluation/horizon-amd-e4a683826958d34f-grpo-lora-s501,FAILED,2026-10-21T17:05:29,2026-10-21T17:13:29,480,nid005056,2,0.2667,1
+23034081,1,evaluation/horizon-amd-e4a683826958d34f-grpo-lora-s502,FAILED,2026-10-21T17:05:29,2026-10-21T17:12:27,418,nid005057,2,0.2322,1
+23034082,1,evaluation/horizon-amd-e4a683826958d34f-grpo-lora-s503,FAILED,2026-10-21T17:05:29,2026-10-21T17:12:25,416,nid005064,2,0.2311,1
+23034083,1,evaluation/horizon-amd-84b70d775ddcd1ee-grpo-lora-s501,COMPLETED,2026-10-21T17:05:29,2026-10-21T17:13:34,485,nid005064,2,0.2694,1
+23034084,1,evaluation/horizon-amd-84b70d775ddcd1ee-grpo-lora-s502,COMPLETED,2026-10-21T17:05:29,2026-10-21T17:13:32,483,nid005065,2,0.2683,1
+23034085,1,evaluation/horizon-amd-84b70d775ddcd1ee-grpo-lora-s503,COMPLETED,2026-10-21T17:05:29,2026-10-21T17:13:32,483,nid005061,2,0.2683,1
+23034086,1,evaluation/horizon-amd-522b467a9db34561-grpo-lora-s501,TIMEOUT,2026-10-21T17:13:54,2026-10-21T19:14:22,7228,nid005035,2,4.0156,1
+23034087,1,evaluation/horizon-amd-522b467a9db34561-grpo-lora-s502,TIMEOUT,2026-10-21T17:13:54,2026-10-21T19:14:22,7228,nid005039,2,4.0156,1
+23034088,1,evaluation/horizon-amd-522b467a9db34561-grpo-lora-s503,TIMEOUT,2026-10-21T17:13:54,2026-10-21T19:14:22,7228,nid005050,2,4.0156,1
+23034089,1,evaluation/horizon-amd-353177607b5c6e35-grpo-lora-s501,FAILED,2026-10-21T17:13:54,2026-10-21T17:21:15,441,nid005053,2,0.245,1
+23034090,1,evaluation/horizon-amd-353177607b5c6e35-grpo-lora-s502,FAILED,2026-10-21T17:13:54,2026-10-21T17:21:29,455,nid005053,2,0.2528,1
+23034091,1,evaluation/horizon-amd-353177607b5c6e35-grpo-lora-s503,FAILED,2026-10-21T17:13:54,2026-10-21T17:22:17,503,nid005057,2,0.2794,1
+23034092,1,evaluation/horizon-amd-03879f9b6ce7cf6c-grpo-lora-s501,FAILED,2026-10-21T17:13:54,2026-10-21T17:21:29,455,nid005059,2,0.2528,1
+23034093,1,evaluation/horizon-amd-03879f9b6ce7cf6c-grpo-lora-s502,FAILED,2026-10-21T17:13:54,2026-10-21T17:21:15,441,nid005077,2,0.245,1
+23034094,1,evaluation/horizon-amd-03879f9b6ce7cf6c-grpo-lora-s503,FAILED,2026-10-21T17:13:54,2026-10-21T17:21:08,434,nid005088,2,0.2411,1
+23034095,1,evaluation/horizon-amd-d98faa8ea1e5767e-grpo-lora-s501,COMPLETED,2026-10-21T17:13:54,2026-10-21T17:21:08,434,nid005097,2,0.2411,1
+23034096,1,evaluation/horizon-amd-d98faa8ea1e5767e-grpo-lora-s502,COMPLETED,2026-10-21T17:13:54,2026-10-21T17:21:34,460,nid005110,2,0.2556,1
+23034097,1,evaluation/horizon-amd-d98faa8ea1e5767e-grpo-lora-s503,COMPLETED,2026-10-21T17:13:54,2026-10-21T17:21:23,449,nid007858,2,0.2494,1
+23034098,1,evaluation/horizon-amd-53beeafd7e52616d-grpo-lora-s501,COMPLETED,2026-10-21T17:13:54,2026-10-21T19:09:20,6926,nid007858,2,3.8478,1
+23034099,1,evaluation/horizon-amd-53beeafd7e52616d-grpo-lora-s502,COMPLETED,2026-10-21T17:13:54,2026-10-21T19:10:32,6998,nid007874,2,3.8878,1
+23034100,1,evaluation/horizon-amd-53beeafd7e52616d-grpo-lora-s503,COMPLETED,2026-10-21T17:13:54,2026-10-21T19:09:00,6906,nid007876,2,3.8367,1
+23034101,1,evaluation/horizon-amd-624145edbc91703d-grpo-lora-s501,COMPLETED,2026-10-21T17:13:54,2026-10-21T17:21:08,434,nid007894,2,0.2411,1
+23034102,1,evaluation/horizon-amd-624145edbc91703d-grpo-lora-s502,COMPLETED,2026-10-21T17:13:54,2026-10-21T17:21:32,458,nid007894,2,0.2544,1
+23034520,1,evaluation/horizon-amd-624145edbc91703d-grpo-lora-s503,COMPLETED,2026-10-21T17:13:54,2026-10-21T17:21:24,450,nid007897,2,0.25,1
+23034521,1,evaluation/horizon-amd-d85e8c45ea2fbf64-grpo-lora-s501,COMPLETED,2026-10-21T17:13:54,2026-10-21T19:10:36,7002,nid007897,2,3.89,1
+23034826,1,evaluation/horizon-amd-d85e8c45ea2fbf64-grpo-lora-s502,COMPLETED,2026-10-21T17:13:54,2026-10-21T19:10:54,7020,nid007909,2,3.9,1
+23034827,1,evaluation/horizon-amd-d85e8c45ea2fbf64-grpo-lora-s503,COMPLETED,2026-10-21T17:13:54,2026-10-21T19:11:47,7073,nid007910,2,3.9294,1
+23037443,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s113,FAILED,2026-10-21T17:47:43,2026-10-21T17:51:18,215,nid007894,4,0.2389,1
+23037444,1,evaluation/hardware_transfer-amd-624145edbc91703d-grpo-lora-s83,FAILED,2026-10-21T17:47:43,2026-10-21T17:51:59,256,nid005064,2,0.1422,1
+23037445,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s94,FAILED,2026-10-21T17:47:43,2026-10-21T17:52:49,306,nid007853,2,0.17,1
+23037446,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s95,FAILED,2026-10-21T17:47:43,2026-10-21T17:51:57,254,nid007873,2,0.1411,1
+23037447,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s96,FAILED,2026-10-21T17:47:43,2026-10-21T17:52:49,306,nid007885,2,0.17,1
+23037448,1,evaluation/hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s112,FAILED,2026-10-21T17:47:43,2026-10-21T17:52:37,294,nid007933,4,0.3267,1
+23037449,1,evaluation/hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s113,FAILED,2026-10-21T17:47:43,2026-10-21T17:51:48,245,nid007950,4,0.2722,1
+23037450,1,evaluation/hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s111,FAILED,2026-10-21T17:54:02,2026-10-21T17:58:24,262,nid005077,4,0.2911,1
+23037451,1,evaluation/hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s112,FAILED,2026-10-21T17:54:02,2026-10-21T17:58:32,270,nid007860,4,0.3,1
+23037452,1,evaluation/hardware_transfer-amd-996a3920c206da4c-grpo-lora-s113,FAILED,2026-10-21T17:54:02,2026-10-21T17:57:23,201,nid007894,4,0.2233,1
+23037453,1,evaluation/hardware_transfer-amd-bc00117c458b5d5d-grpo-lora-s91,FAILED,2026-10-21T17:47:43,2026-10-21T17:52:33,290,nid007868,2,0.1611,1
+23037454,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s94,FAILED,2026-10-21T17:54:02,2026-10-21T17:57:21,199,nid005064,2,0.1106,1
+23037455,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s95,FAILED,2026-10-21T17:54:02,2026-10-21T17:57:19,197,nid007873,2,0.1094,1
+23037456,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s96,FAILED,2026-10-21T17:54:02,2026-10-21T17:57:21,199,nid007885,2,0.1106,1
+23037457,1,evaluation/hardware_transfer-amd-4b92cc3197922be7-grpo-lora-s113,FAILED,2026-10-21T17:54:02,2026-10-21T17:57:57,235,nid007933,4,0.2611,1
+23037458,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s42,FAILED,2026-10-21T17:54:02,2026-10-21T17:59:22,320,nid007936,2,0.1778,1
+23037459,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s301,FAILED,2026-10-21T17:54:02,2026-10-21T17:57:21,199,nid007950,2,0.1106,1
+23038323,1,evaluation/hardware_transfer-amd-9680c83e3c59777b-grpo-lora-s113,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:34:11,380,nid005077,4,0.4222,1
+23038324,1,evaluation/hardware_transfer-amd-624145edbc91703d-grpo-lora-s83,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:37:18,567,nid005031,2,0.315,1
+23038325,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s94,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:35:48,477,nid005056,2,0.265,1
+23038326,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s95,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:35:47,476,nid005061,2,0.2644,1
+23038327,1,evaluation/hardware_transfer-amd-b26b51d5745e7038-grpo-lora-s96,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:35:29,458,nid007862,2,0.2544,1
+23038328,1,evaluation/hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s112,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:36:41,530,nid007894,4,0.5889,1
+23038329,1,evaluation/hardware_transfer-amd-d89e11c1db30d91c-grpo-lora-s113,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:35:30,459,nid007922,4,0.51,1
+23038330,1,evaluation/hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s111,COMPLETED,2026-10-21T18:38:18,2026-10-21T18:44:58,400,nid005053,4,0.4444,1
+23038331,1,evaluation/hardware_transfer-amd-9e2e15f277fffe36-grpo-lora-s112,COMPLETED,2026-10-21T18:38:18,2026-10-21T18:44:01,343,nid005077,4,0.3811,1
+23038332,1,evaluation/hardware_transfer-amd-996a3920c206da4c-grpo-lora-s113,COMPLETED,2026-10-21T18:38:18,2026-10-21T18:45:11,413,nid007894,4,0.4589,1
+23038333,1,evaluation/hardware_transfer-amd-bc00117c458b5d5d-grpo-lora-s91,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:36:36,525,nid007950,2,0.2917,1
+23038334,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s94,COMPLETED,2026-10-21T18:27:51,2026-10-21T18:35:40,469,nid007951,2,0.2606,1
+23038335,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s95,COMPLETED,2026-10-21T18:38:18,2026-10-21T18:44:19,361,nid005031,2,0.2006,1
+23038336,1,evaluation/hardware_transfer-amd-75ad17324769e2b3-grpo-lora-s96,COMPLETED,2026-10-21T18:38:18,2026-10-21T18:44:08,350,nid005056,2,0.1944,1
+23038337,1,evaluation/hardware_transfer-amd-4b92cc3197922be7-grpo-lora-s113,COMPLETED,2026-10-21T18:38:18,2026-10-21T18:46:56,518,nid007922,4,0.5756,1
+23038338,1,evaluation/hardware_transfer-amd-211b84c6cb8b5347-grpo-lora-s42,COMPLETED,2026-10-21T18:38:18,2026-10-21T18:46:36,498,nid005061,2,0.2767,1
+23038339,1,evaluation/reservation_sweep-amd-00fc9f14ba4ae94a-grpo-lora-s301,FAILED,2026-10-21T18:38:18,2026-10-21T18:47:25,547,nid005097,2,0.3039,1
+23064372,1,evaluation/larger_models-amd-e7037dac094c2364-grpo-lora-s223,COMPLETED,2026-10-22T11:35:38,2026-10-22T11:44:53,555,nid005112,4,0.6167,1
+23064374,1,evaluation/horizon-amd-fcb3ee90f597982b-grpo-lora-s501,COMPLETED,2026-10-22T11:35:31,2026-10-22T14:12:38,9427,nid005041,2,5.2372,1
+23064375,1,evaluation/horizon-amd-fcb3ee90f597982b-grpo-lora-s502,COMPLETED,2026-10-22T11:35:31,2026-10-22T14:15:03,9572,nid005049,2,5.3178,1
+23064376,1,evaluation/horizon-amd-fcb3ee90f597982b-grpo-lora-s503,COMPLETED,2026-10-22T11:35:31,2026-10-22T14:13:19,9468,nid005072,2,5.26,1
+23064377,1,evaluation/horizon-amd-522b467a9db34561-grpo-lora-s501,COMPLETED,2026-10-22T11:35:31,2026-10-22T14:13:51,9500,nid005086,2,5.2778,1
+23064378,1,evaluation/horizon-amd-522b467a9db34561-grpo-lora-s502,COMPLETED,2026-10-22T11:35:31,2026-10-22T14:15:49,9618,nid005090,2,5.3433,1
+23064379,1,evaluation/horizon-amd-522b467a9db34561-grpo-lora-s503,COMPLETED,2026-10-22T11:35:31,2026-10-22T14:15:26,9595,nid005093,2,5.3306,1

@@ -52,6 +52,8 @@ TRACE_STAGE = (  # traceback frames that identify the failing operation
 def submitted_jobs() -> dict[str, list[str]]:
     jobs = defaultdict(list)
     path = AMD_ROOT / "submissions.csv"
+    if not path.exists():
+        path = AMD_ROOT / "release" / "submissions.csv"   # extracted evidence archive
     if path.exists():
         for line in path.read_text().splitlines():
             job, run_name = line.split(",", 1)
@@ -90,6 +92,13 @@ def classify_failure(log: str, last_phase: str) -> tuple[str, str]:
 
 
 def slurm_state(job: str) -> str:
+    """Final Slurm state: from the archived attempt ledger when present (so an
+    extracted evidence archive is self-contained), otherwise from sacct."""
+    ledger = AMD_ROOT / "release" / "attempt_ledger.csv"
+    if ledger.exists():
+        with ledger.open() as handle:
+            states = [row["slurm_state"] for row in csv.DictReader(handle) if row["job_id"] == job]
+        return states[-1].split(" ")[0] if states else ""
     result = subprocess.run(["sacct", "-X", "-n", "-P", "-j", job, "-o", "State"],
                             capture_output=True, text=True)
     return result.stdout.strip().split("\n")[0].split(" ")[0] if result.returncode == 0 else ""
@@ -111,14 +120,20 @@ def trial(row: dict, run_dir: Path, job: str) -> dict:
         # Truncated by a Slurm requeue of a started job; the requeued
         # execution rewrites it. Not an outcome yet.
         return record
-    log = (run_dir / f"training-{job}.log").read_text(errors="replace")
+    log_path = run_dir / f"training-{job}.log"
+    log = log_path.read_text(errors="replace") if log_path.exists() else ""
     phases, samples = read_samples(run_dir / f"phase-memory-{job}.csv", 3)
-    device_map = json.loads((run_dir / f"gpu-device-map-{job}.json").read_text())
-    capacity = min(column["vram_total_mib"] for column in device_map["columns"])
+    _, memory_samples = read_samples(run_dir / f"gpu-memory-{job}.csv", 1)
+    map_path = run_dir / f"gpu-device-map-{job}.json"
+    device_map = json.loads(map_path.read_text()) if map_path.exists() else {"columns": []}
+    gpus = int(row["gpu_count"])
+    problems = trace_problems(log, phases, samples, memory_samples, device_map, gpus)
+    capacity = min((column["vram_total_mib"] for column in device_map["columns"]), default=0)
     margin = capacity - MARGIN_BELOW_CAPACITY_MIB
     steps = [int(value) for value in STEP_LINE.findall(log)]
     requested = int(row["total_training_steps"])
-    completed = bool(steps) and max(steps) >= requested
+    # Completion needs the final requested step AND a successful exit.
+    completed = bool(steps) and max(steps) >= requested and meta.get("exit_code") == 0
     peak = max((max(sample) for sample in samples), default=0)
     stage_peak = defaultdict(int)
     for phase, sample in zip(phases, samples):
@@ -126,8 +141,15 @@ def trial(row: dict, run_dir: Path, job: str) -> dict:
     active = [phase for phase in phases if phase not in ("idle", "unknown")]
     last_phase = active[-1] if active else ""
     state, mode = classify_failure(log, last_phase)
-    if not state:
+    if problems:
+        # Every eligible outcome, completed or failed, needs the execution log,
+        # the device map, and non-empty per-GPU traces with one column per task
+        # GPU. Without them the run keeps its status but supplies no label.
+        state, mode = "other_failure", "invalid_evidence:" + "+".join(problems)
+    elif not state:
         state = ("within_margin" if peak <= margin else "above_margin") if completed else "other_failure"
+        if state == "other_failure" and steps and max(steps) >= requested:
+            mode = f"nonzero_exit_{meta.get('exit_code')}"
     elif completed:
         # A diagnosed allocation failure that VERL survived (e.g. a retried
         # cache allocation) is still a memory failure under the A100 rules.
@@ -150,12 +172,32 @@ def trial(row: dict, run_dir: Path, job: str) -> dict:
     return record
 
 
+def trace_problems(log: str, phases: list, samples: list, memory_samples: list,
+                   device_map: dict, gpus: int) -> list[str]:
+    problems = []
+    if not log:
+        problems.append("no_log")
+    if len(device_map.get("columns", [])) != gpus:
+        problems.append("device_map")
+    if not samples or any(len(sample) != gpus for sample in samples):
+        problems.append("phase_trace")
+    if not memory_samples or any(len(sample) != gpus for sample in memory_samples):
+        problems.append("memory_trace")
+    if samples and max(max(sample) for sample in samples) <= 0:
+        problems.append("zero_trace")
+    return problems
+
+
 def label(trials: list[dict]) -> tuple[str, int]:
+    """Repeated label under the manuscript rule: all three slots must have an
+    eligible outcome; otherwise the label is unresolved, even when an eligible
+    repetition already shows a memory failure (that evidence stays in
+    memory_failure_processes)."""
     eligible = [item for item in trials if item["state"] in ("within_margin", "above_margin", "memory_failure")]
-    if any(item["state"] == "memory_failure" for item in eligible):
-        return "memory_failure", len(eligible)
     if len(eligible) < 3:
         return "unresolved", len(eligible)
+    if any(item["state"] == "memory_failure" for item in eligible):
+        return "memory_failure", len(eligible)
     if all(item["state"] == "within_margin" for item in eligible):
         return "within_margin", len(eligible)
     return "above_margin", len(eligible)
@@ -166,7 +208,10 @@ def main() -> None:
     parser.add_argument("--matrix", type=Path, default=HERE / "matrix.csv")
     parser.add_argument("--prefix", default="evaluation")
     parser.add_argument("--output", type=Path, default=HERE / "results")
+    parser.add_argument("--root", type=Path, default=AMD_ROOT,
+                        help="run root: the LUMI scratch tree or an extracted evidence archive")
     args = parser.parse_args()
+    globals()["AMD_ROOT"] = args.root
     jobs = submitted_jobs()
     with args.matrix.open() as handle:
         rows = list(csv.DictReader(handle))

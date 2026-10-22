@@ -20,7 +20,7 @@ hardware_transfer,amd-a228d8b325a815e1,grpo,lora,cfg-352f4dbc55fbcd3c,Qwen/Qwen2
 hardware_transfer,amd-c2aa8d9dbf7bd299,grpo,lora,cfg-371ae37408089efe,microsoft/Phi-4-mini-instruct,math,c2,4,8,0.6,False,True,1,within_margin,3,3,0,0,0,,51585,51566.3
 hardware_transfer,amd-9680c83e3c59777b,grpo,lora,cfg-399f6b038d6f65f9,Qwen/Qwen2.5-3B-Instruct,gsm8k,c2,4,8,0.6,False,True,1,within_margin,3,3,0,0,0,,48636,48162.3
 hardware_transfer,amd-2ca307101ddfa774,grpo,lora,cfg-3b9787f775169f3d,ibm-granite/granite-3.3-2b-instruct,math,actor_only,2,16,0.6,False,True,1,within_margin,3,3,0,0,0,,51501,51285.7
-hardware_transfer,amd-bc36784076bf5976,grpo,lora,cfg-3c86a11fdb8455cb,microsoft/Phi-4-mini-instruct,gsm8k,c5,2,32,0.85,False,True,1,memory_failure,2,3,0,1,2,generation_wakeup_oom,,
+hardware_transfer,amd-bc36784076bf5976,grpo,lora,cfg-3c86a11fdb8455cb,microsoft/Phi-4-mini-instruct,gsm8k,c5,2,32,0.85,False,True,1,unresolved,2,3,0,1,2,generation_wakeup_oom,,
 hardware_transfer,amd-db2d88aac405ec72,grpo,lora,cfg-3ca7715d60421fe4,microsoft/Phi-4-mini-instruct,math,joint,2,16,0.7,False,True,1,memory_failure,3,3,0,0,3,generation_wakeup_oom;update_weights_oom,,
 hardware_transfer,amd-410b15e6c95b4909,grpo,lora,cfg-3f0f48a3c570a0c8,Qwen/Qwen2.5-3B-Instruct,math,c0,2,1,0.3,True,True,1,within_margin,3,3,0,0,0,,31154,30889.3
 hardware_transfer,amd-5b5cf2b323b2a85f,grpo,lora,cfg-3fb18b33cd9f8bcf,Qwen/Qwen2.5-3B-Instruct,math,near_boundary,2,16,0.65,False,True,1,above_margin,3,3,0,0,0,,64788,64753.7

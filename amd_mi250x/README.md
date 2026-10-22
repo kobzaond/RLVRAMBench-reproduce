@@ -30,7 +30,9 @@ length limits, and seeds.
 | `submit.py` | Submits each matrix row at most once, plus amendment reruns |
 | `collect.py` → `results/trials.csv`, `configurations.csv`, `summary.json` | Outcomes from raw logs and samples |
 | `analyze.py` → `results/analysis/` | Comparison with the A100 tables in `../benchmark` |
-| `runtime_amendment_0[1-3].json` | Harness defects and the slots rerun because of them |
+| `runtime_amendment_0[1-4].json` | Harness and planning defects and the slots rerun because of them |
+| `results/attempt_ledger.csv` | Every Slurm execution (sacct -D), including restarts |
+| `results/raw_reconstruction_verification.json` | Archive hash and the byte-identical raw-to-results check |
 | `venv-freeze.txt` | Exact Python packages of the project venv |
 
 ## Panels
@@ -69,10 +71,17 @@ None of these changes a memory setting.
 
 As in `BENCHMARK.md`:
 
-* A run completes only when the console shows the final requested step.
+* A run completes only when the console shows the final requested step and
+  the exit code is 0.
+* Every eligible outcome needs the training log, the device map, and
+  non-empty memory and stage traces with one column per task GPU; otherwise
+  the run is `other_failure` with an `invalid_evidence:` mode.
 * A memory failure needs log evidence.
 * `other_failure` (no completion and no memory diagnosis) is ineligible.
-* A configuration label needs three eligible runs; any memory failure makes it `memory_failure`.
+* A configuration label needs three eligible runs; with fewer it is
+  `unresolved`, and any observed memory failures stay counted in
+  `memory_failure_processes`. With three, any memory failure makes it
+  `memory_failure`.
 
 Failure modes come from the traceback around the first device-OOM message:
 
@@ -100,8 +109,13 @@ Diagnosed memory outcomes are never rerun.
    * Fix: the setting was removed and those slots ran once more.
    * Provenance: the recorded `harness_sha256` now hashes Slurm's executing copy of the batch script (`$0`), not the checkout.
 
+4. **Planning error and a Slurm restart.**
+   * Six 40-step horizon runs reached step 30 without any memory failure and were stopped by the planned 120-minute limit; they ran again with 240 minutes and unchanged settings.
+   * One 7B slot (job 23033917) lost its node; Slurm restarted it under the same job ID, and the restarted execution failed reading a partly written Triton cache. The slot ran once more in a fresh directory; the batch script now empties its runtime directory at start.
+
 One vLLM sleep-mode self-check failure ("Memory usage increased after
 sleeping") showed none of these defects and keeps its non-memory outcome.
+Its configuration (Phi-4-mini, GSM8K, c5) is therefore unresolved.
 
 ## Reproduce
 

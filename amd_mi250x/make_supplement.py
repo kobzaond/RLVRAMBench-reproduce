@@ -74,12 +74,13 @@ def main() -> None:
     names = {"hardware_transfer": "A100 replay", "larger_models": "7B models",
              "reservation_sweep": "Reservation sweep", "algorithm_adaptation": "LoRA/PPO/full",
              "horizon": "One vs.\\ 40 steps"}
-    accounting = (args.results / "allocation_accounting.txt").read_text().splitlines()
     executed = {}
-    for line in accounting:
-        if line.startswith("('evaluation'"):
-            key, count, hours = line.rsplit(" ", 2)
-            executed[key.split("'")[3]] = (int(count), float(hours))
+    with (args.results / "attempt_ledger.csv").open() as handle:
+        for entry in csv.DictReader(handle):
+            if entry["started"] == "1" and entry["run"].startswith("evaluation/"):
+                panel = entry["run"].split("/")[1].split("-amd-")[0]
+                count, hours = executed.get(panel, (0, 0.0))
+                executed[panel] = (count + 1, hours + float(entry["gcd_hours"]))
     rows = []
     for panel in panels:
         planned = sum(1 for t in trials if t["panel"] == panel)
@@ -89,10 +90,11 @@ def main() -> None:
                                   ("within_margin", "above_margin", "memory_failure", "other_failure", "missing")),
                                 f"{hours:.1f}"]))
     out.append(longtable(
-        "MI250X slots by panel. Executed attempts include amendment reruns; the latest attempt is the "
-        "slot outcome. Non-memory failures are ineligible; GCD-hours are elapsed time times allocated GCDs.",
+        "MI250X slots by panel. Executions count every started execution, including amendment reruns and "
+        "one Slurm restart after a node failure; the latest attempt gives the slot outcome. Non-memory "
+        "failures are ineligible. GCD-hours are elapsed time times allocated GCDs (attempt ledger).",
         "stab:mi250x-slots", "@{}lrrrrrrrr@{}",
-        r"Panel & Slots & Executed & Within & Above & Failure & Non-memory & Pending & GCD-h", rows))
+        r"Panel & Slots & Executions & Within & Above & Failure & Non-memory & Pending & GCD-h", rows))
 
     labels = read(analysis / "hardware_transfer_labels.csv")
     rows = []

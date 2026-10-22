@@ -285,8 +285,9 @@ The panel has 462 planned one-step and 40-step invocations in five parts:
 - GRPO-LoRA, PPO with a full-parameter critic, and full-parameter GRPO
 - one-step versus 40-step runs
 
-**Results.** Eighty of the 90 replayed configurations keep their repeated A100
-label. Two findings differ from A100:
+**Results.** Of the 90 replayed configurations, 89 obtain a complete
+three-repetition label and 79 of these keep their A100 label; one is
+unresolved (two memory failures and one non-memory failure). Two findings differ from A100:
 - **Failure stage.** Infeasible settings fail after the actor update, while
   vLLM restores its released state, instead of at vLLM startup.
 - **Whole-run peak.** The whole-run peak no longer hides actor-stage growth.
@@ -304,7 +305,24 @@ python3.11 amd_mi250x/analyze.py
 python3.11 amd_mi250x/make_supplement.py --output s21.tex
 ```
 
-`collect.py` needs the raw run directories.
+`collect.py` rebuilds `results/trials.csv`, `configurations.csv` and
+`summary.json` byte for byte from the raw evidence archive
+`releases/RLVRAMBench-mi250x-raw-20261022.tar.zst` on the Hugging Face
+dataset (SHA-256 `400f75b1…67ae`; see
+`amd_mi250x/results/raw_reconstruction_verification.json`):
+
+```bash
+mkdir mi250x-raw && tar --use-compress-program=unzstd \
+  -xf RLVRAMBench-mi250x-raw-20261022.tar.zst -C mi250x-raw
+(cd mi250x-raw && sha256sum -c --quiet release/MANIFEST.sha256)
+python3.11 amd_mi250x/collect.py --root mi250x-raw --output mi250x-raw/results
+```
+
+A completion needs the final requested step and exit code 0. Every
+eligible outcome needs the log, the device map, and non-empty memory and
+stage traces with one column per task GPU. A repeated label needs three
+eligible repetitions. `results/attempt_ledger.csv` lists every Slurm
+execution, including the one restart after a node failure.
 
 ## Estimator comparison
 
