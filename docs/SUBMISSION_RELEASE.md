@@ -1,7 +1,7 @@
 # Electronics submission release — 22 October 2026
 
 The paper, dataset, and reproduction code use the version tag
-`electronics-submission-2026-10-22-r2`. The submission dataset is published on
+`electronics-submission-2026-10-22-r3`. The submission dataset is published on
 the Hugging Face `main` branch and pinned with the same tag:
 <https://huggingface.co/datasets/kobzaond/RLVRAMBench>.
 The dataset DOI is `10.57967/hf/10780`; use the version tag to identify
@@ -14,13 +14,24 @@ No model weights or optimizer checkpoints are distributed.
 
 ## Download the submission data
 
+The direct Hub-loading interface is tested with Python 3.11,
+`datasets==5.1.0` and `huggingface_hub==2.2.0`. Install these from
+the dataset's `dataset-client-requirements.txt` in a separate reader environment. Older
+clients such as `datasets==2.12.0` ignore the card's configuration mapping
+and may try to combine unrelated audit JSON files. The frozen raw-analysis
+environment is documented separately in the reproduction guide.
+
+```sh
+python -m pip install -r dataset-client-requirements.txt
+```
+
 ```python
 from huggingface_hub import snapshot_download
 
 snapshot_download(
     "kobzaond/RLVRAMBench",
     repo_type="dataset",
-    revision="electronics-submission-2026-10-22-r2",
+    revision="electronics-submission-2026-10-22-r3",
     local_dir="RLVRAMBench-data",
 )
 ```
