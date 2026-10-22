@@ -2,7 +2,7 @@
   "archive": "RLVRAMBench-mi250x-raw-20261022.tar.zst",
   "sha256": "400f75b1c3015d9903b3e898b0ed2dc3771b07363bff7f8761aec0c798ed67ae",
   "size_bytes": 58527374,
-  "location": "https://huggingface.co/datasets/kobzaond/RLVRAMBench/blob/main/releases/RLVRAMBench-mi250x-raw-20261022.tar.zst",
+  "location": "data/mi250x/RLVRAMBench-mi250x-raw-20261022.tar.zst (this repository)",
   "manifest_files": 3065,
   "manifest_verified": true,
   "procedure": "extract into an empty directory; sha256sum -c release/MANIFEST.sha256; python3.11 amd_mi250x/collect.py --root <dir> --output <dir>/results",

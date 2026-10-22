@@ -307,13 +307,13 @@ python3.11 amd_mi250x/make_supplement.py --output s21.tex
 
 `collect.py` rebuilds `results/trials.csv`, `configurations.csv` and
 `summary.json` byte for byte from the raw evidence archive
-`releases/RLVRAMBench-mi250x-raw-20261022.tar.zst` on the Hugging Face
-dataset (SHA-256 `400f75b1…67ae`; see
+`data/mi250x/RLVRAMBench-mi250x-raw-20261022.tar.zst` in this repository
+(SHA-256 `400f75b1…67ae`; see
 `amd_mi250x/results/raw_reconstruction_verification.json`):
 
 ```bash
 mkdir mi250x-raw && tar --use-compress-program=unzstd \
-  -xf RLVRAMBench-mi250x-raw-20261022.tar.zst -C mi250x-raw
+  -xf data/mi250x/RLVRAMBench-mi250x-raw-20261022.tar.zst -C mi250x-raw
 (cd mi250x-raw && sha256sum -c --quiet release/MANIFEST.sha256)
 python3.11 amd_mi250x/collect.py --root mi250x-raw --output mi250x-raw/results
 ```
