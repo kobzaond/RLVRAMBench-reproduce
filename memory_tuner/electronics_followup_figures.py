@@ -32,7 +32,7 @@ def outcome_label(rows):
     eligible = sum(counts[s] for s in ("within_margin", "above_margin", "memory_failure"))
     label = "/".join(str(counts[s]) for s in ("within_margin", "above_margin", "memory_failure"))
     if eligible != len(rows):
-        label += f"\n? {len(rows)-eligible}"
+        label += "\n-"
     state = ("unresolved" if eligible != len(rows) else "memory_failure" if counts["memory_failure"]
              else "above_margin" if counts["above_margin"] else "within_margin")
     return label, state

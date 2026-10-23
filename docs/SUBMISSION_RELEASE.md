@@ -1,7 +1,7 @@
 # Electronics submission release — 23 October 2026
 
 The paper, dataset, and reproduction code use the version tag
-`electronics-submission-2026-10-23`. The submission dataset is published on
+`electronics-submission-2026-10-23-r2`. The submission dataset is published on
 the Hugging Face `main` branch and pinned with the same tag:
 <https://huggingface.co/datasets/kobzaond/RLVRAMBench>.
 The dataset DOI is `10.57967/hf/10780`; use the version tag to identify
@@ -31,7 +31,7 @@ from huggingface_hub import snapshot_download
 snapshot_download(
     "kobzaond/RLVRAMBench",
     repo_type="dataset",
-    revision="electronics-submission-2026-10-23",
+    revision="electronics-submission-2026-10-23-r2",
     local_dir="RLVRAMBench-data",
 )
 ```

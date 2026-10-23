@@ -1,6 +1,6 @@
 # Submission data dictionary
 
-Version: `electronics-submission-2026-10-23`.
+Version: `electronics-submission-2026-10-23-r2`.
 The original [data dictionary](DATA_DICTIONARY.md) documents the historical
 benchmark and remains unchanged where it is bound to earlier source hashes.
 This document covers the submission extensions and their relationships.

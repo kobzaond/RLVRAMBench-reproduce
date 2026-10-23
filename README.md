@@ -17,7 +17,7 @@ workspace. The benchmark evidence is hosted at
 Both repositories are public as of 2026-09-14. Downloads require neither
 authentication nor access approval. The dataset DOI is `10.57967/hf/10780`.
 
-**Electronics submission version:** tag `electronics-submission-2026-10-23`
+**Electronics submission version:** tag `electronics-submission-2026-10-23-r2`
 in this repository and on the Hugging Face dataset. Hugging Face `main`
 contains this version, including the paper, all four raw-evidence archives,
 curated results, and validation reports. See
