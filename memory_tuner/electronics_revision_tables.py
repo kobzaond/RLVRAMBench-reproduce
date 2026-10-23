@@ -31,15 +31,24 @@ METHODS = {
 
 
 def table(caption, label, columns, headings, rows):
-    header = " & ".join(headings) + r" \\"
+    header = " & ".join(r"\multicolumn{1}{c}{" + h + "}" if kind == "r" else h
+                        for kind, h in zip(columns, headings)) + r" \\"
+    count = len(headings)
     return "\n".join([
         r"\begingroup\footnotesize",
+        # Keep the three prediction scopes together on one page.
+        (r"\Needspace{32\baselineskip}"
+         if label == "stab:reservation-predictions" else ""),
         r"\setlength{\tabcolsep}{3pt}",
+        r"\setlength{\LTcapwidth}{\linewidth}",
         r"\begin{longtable}{@{}" + columns + r"@{}}",
         r"\caption{" + caption + r"}\label{" + label + r"}\\",
         r"\toprule", header, r"\midrule\endfirsthead",
+        r"\caption[]{\emph{Continued.}}\\",
         r"\toprule", header, r"\midrule\endhead",
-        r"\bottomrule\endfoot",
+        r"\midrule\multicolumn{" + str(count) + r"}{r}{\emph{Continued on next page.}}\\",
+        r"\endfoot",
+        r"\bottomrule\endlastfoot",
         *(" & ".join(map(str, row)) + r" \\" for row in rows),
         r"\end{longtable}\endgroup", "",
     ])

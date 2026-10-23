@@ -50,13 +50,31 @@ def modes(field: str) -> str:
 
 
 def longtable(caption: str, label: str, columns: str, header: str, rows: list[str]) -> str:
+    numeric = {"Slots", "Executions", "Within", "Above", "Failure", "Pending",
+               "GCD-h", "GPUs", "GCDs", "MB", "Res.", "Elig.", "Peak", "Steps",
+               "MI250X peak", r"\makecell{Non-\\memory}",
+               r"\makecell{A100\\peak}", r"\makecell{MI250X\\peak}",
+               r"\makecell{Actor\\peak}", r"\makecell{Step\\(s)}"}
+    cells = header.split(" & ")
+    count = len(cells)
+    header = " & ".join(r"\multicolumn{1}{c}{" + cell + "}"
+                        if cell in numeric else cell for cell in cells)
     return "\n".join([
-        r"\begingroup\scriptsize\setlength{\tabcolsep}{2.5pt}",
+        r"\begingroup\footnotesize\setlength{\tabcolsep}{3pt}",
+        # All twelve objective/adaptation rows fit on one portrait page.
+        (r"\Needspace{25\baselineskip}"
+         if label == "stab:mi250x-algorithm-adaptation" else ""),
+        (r"\renewcommand{\arraystretch}{1.10}"
+         if label == "stab:mi250x-transfer" else ""),
+        r"\setlength{\LTcapwidth}{\linewidth}",
         rf"\begin{{longtable}}{{{columns}}}",
         rf"\caption{{{caption}}}\label{{{label}}}\\",
         r"\toprule", header + r" \\", r"\midrule", r"\endfirsthead",
+        r"\caption[]{\emph{Continued.}}\\",
         r"\toprule", header + r" \\", r"\midrule", r"\endhead",
-        *[row + r" \\" for row in rows], r"\bottomrule", r"\end{longtable}", r"\endgroup", ""])
+        rf"\midrule\multicolumn{{{count}}}{{r}}{{\emph{{Continued on next page.}}}}\\",
+        r"\endfoot", r"\bottomrule\endlastfoot",
+        *[row + r" \\" for row in rows], r"\end{longtable}", r"\endgroup", ""])
 
 
 def main() -> None:
@@ -67,7 +85,10 @@ def main() -> None:
     analysis = args.results / "analysis"
     trials = read(args.results / "trials.csv")
     summary = json.loads((analysis / "summary.json").read_text())
-    out = [r"\section{Cross-accelerator replication on MI250X}\label{ssec:mi250x}", ""]
+    # Keep the panel inventory with the wide replay table; otherwise the
+    # landscape transition strands a short portrait table on its own page.
+    out = [r"\begin{landscape}",
+           r"\section{Cross-accelerator replication on MI250X}\label{ssec:mi250x}", ""]
 
     states = Counter((t["panel"], t["state"]) for t in trials)
     panels = ["hardware_transfer", "larger_models", "reservation_sweep", "algorithm_adaptation", "horizon"]
@@ -94,7 +115,7 @@ def main() -> None:
         "one Slurm restart after a node failure; the latest attempt gives the slot outcome. Non-memory "
         "failures are ineligible. GCD-hours are elapsed time times allocated GCDs (attempt ledger).",
         "stab:mi250x-slots", "@{}lrrrrrrrr@{}",
-        r"Panel & Slots & Executions & Within & Above & Failure & Non-memory & Pending & GCD-h", rows))
+        r"Panel & Slots & Executions & Within & Above & Failure & \makecell{Non-\\memory} & Pending & GCD-h", rows))
 
     labels = read(analysis / "hardware_transfer_labels.csv")
     rows = []
@@ -113,9 +134,10 @@ def main() -> None:
     out.append(longtable(
         "Every replayed A100 configuration. Peaks are maxima over completed repetitions (MiB); failure "
         "stages count failing processes (A100 / MI250X). Off = actor offload or state release disabled.",
-        "stab:mi250x-transfer", r"@{}lllrrrllllrrp{.15\linewidth}@{}",
-        r"Model & Work. & Level & GPUs & MB & Res. & Offl. & Rel. & A100 & MI250X & A100 pk. & MI250X pk. & Failure stages",
+        "stab:mi250x-transfer", r"@{}lllrrrllllrr>{\raggedright\arraybackslash}p{.18\linewidth}@{}",
+        r"Model & Work. & Level & GPUs & MB & Res. & Offl. & Rel. & A100 & MI250X & \makecell{A100\\peak} & \makecell{MI250X\\peak} & Failure stages",
         rows))
+    out.append(r"\end{landscape}")
 
     rows = []
     for row in sorted(read(analysis / "larger_models_labels.csv"),
@@ -127,27 +149,46 @@ def main() -> None:
                                     "generation-state restore (wake-up)": "wake-up",
                                     "weight synchronization": "weight sync"})]))
     out.append(longtable("7B configurations: A100 and MI250X repeated labels.", "stab:mi250x-7b",
-                         "@{}llllllrl@{}",
+                         "@{}lllrllrl@{}",
                          r"Model & Workload & Level & GCDs & A100 & MI250X & MI250X peak & MI250X failures", rows))
 
     for panel, caption in (
-            ("reservation_sweep", "Reservation sweep at c3 settings (GSM8K, two GCDs)."),
+            ("reservation_sweep", "Reservation sweep at c3 settings (GSM8K, two GCDs, LoRA-GRPO, one step). "
+                                  "Times are per completed step (s)."),
             ("algorithm_adaptation", "GRPO-LoRA, PPO with a full-parameter critic, and full-parameter GRPO "
                                      "(GSM8K, two GCDs, one step). Times are per completed step (s)."),
-            ("horizon", "One-step screens and 40-step runs of the A100 temporal configurations.")):
+            ("horizon", "One-step screens and 40-step runs of the A100 temporal configurations "
+                        "(LoRA-GRPO). Times are per completed step (s).")):
         rows = []
         for row in sorted(read(analysis / f"{panel}_configurations.csv"),
                           key=lambda r: (r["model"], r["level"], r["algorithm"], r["adaptation"],
                                          float(r["reservation"]), int(r["steps"]))):
-            rows.append(" & ".join([
+            fields = [
                 tex(row["model"]), tex(row["level"]), row["algorithm"].upper(), row["adaptation"],
                 row["reservation"], row["steps"], LABEL[row["observed_state"] if "observed_state" in row else row["label"]],
                 f"{row['eligible']}/{row['planned']}", mib(row["max_completed_peak_mib"]),
                 mib(row["mean_actor_stage_peak_mib"]), modes(row["failure_modes"]),
-                row["mean_step_seconds"] or "--"]))
-        out.append(longtable(caption, f"stab:mi250x-{panel.replace('_', '-')}", "@{}llllrrlrrrlr@{}",
-                             r"Model & Level & Alg. & Adapt. & Res. & Steps & Label & Elig. & Peak & Actor peak & Failures & Step s",
-                             rows))
+                row["mean_step_seconds"] or "--"]
+            # Constant settings belong in the caption, leaving room for readable
+            # outcome columns. All original fields remain in the released CSV.
+            keep = {
+                "reservation_sweep": (0, 4, 6, 7, 8, 9, 10, 11),
+                "algorithm_adaptation": (0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11),
+                "horizon": (0, 1, 4, 5, 6, 7, 8, 9, 10, 11),
+            }[panel]
+            rows.append(" & ".join(fields[i] for i in keep))
+        columns, header = {
+            "reservation_sweep": (
+                r"@{}lrlrrr>{\raggedright\arraybackslash}p{.19\linewidth}r@{}",
+                r"Model & Res. & Label & Elig. & Peak & \makecell{Actor\\peak} & Failures & \makecell{Step\\(s)}"),
+            "algorithm_adaptation": (
+                r"@{}llllrlrrr>{\raggedright\arraybackslash}p{.13\linewidth}r@{}",
+                r"Model & Level & Alg. & Adapt. & Res. & Label & Elig. & Peak & \makecell{Actor\\peak} & Failures & \makecell{Step\\(s)}"),
+            "horizon": (
+                r"@{}l>{\raggedright\arraybackslash}p{.17\linewidth}rrlrrr>{\raggedright\arraybackslash}p{.15\linewidth}r@{}",
+                r"Model & Level & Res. & Steps & Label & Elig. & Peak & \makecell{Actor\\peak} & Failures & \makecell{Step\\(s)}"),
+        }[panel]
+        out.append(longtable(caption, f"stab:mi250x-{panel.replace('_', '-')}", columns, header, rows))
 
     masking = summary["stage_masking"]
     transfer = summary["hardware_transfer"]

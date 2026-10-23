@@ -1,7 +1,7 @@
-# Electronics submission release — 22 October 2026
+# Electronics submission release — 23 October 2026
 
 The paper, dataset, and reproduction code use the version tag
-`electronics-submission-2026-10-22-r3`. The submission dataset is published on
+`electronics-submission-2026-10-23`. The submission dataset is published on
 the Hugging Face `main` branch and pinned with the same tag:
 <https://huggingface.co/datasets/kobzaond/RLVRAMBench>.
 The dataset DOI is `10.57967/hf/10780`; use the version tag to identify
@@ -31,7 +31,7 @@ from huggingface_hub import snapshot_download
 snapshot_download(
     "kobzaond/RLVRAMBench",
     repo_type="dataset",
-    revision="electronics-submission-2026-10-22-r3",
+    revision="electronics-submission-2026-10-23",
     local_dir="RLVRAMBench-data",
 )
 ```
@@ -136,6 +136,30 @@ Replaying recorded DeepSpeed calls requires no GPU or live DeepSpeed
 installation. The native LLMem validation belongs to the separate A100
 archive. Neither comparison establishes an end-to-end estimator for every
 colocated RL stack.
+
+The 23 October release changes presentation only. Figure-summary CSV files
+and all main-paper table rows match the preceding release. The updated
+renderers use readable labels within the manuscript text column; the wide
+MI250X inventory uses landscape pages with repeated headers.
+
+To render the revised historical boundary and logging plots from the
+curated files downloaded above:
+
+```sh
+mkdir -p submission-figures
+python -m memory_tuner.electronics_historical_figures \
+  --root . --data RLVRAMBench-data/tables \
+  --review-results RLVRAMBench-data/tables/review_revision --output submission-figures
+python -m memory_tuner.electronics_followup_figures \
+  --root . --figures submission-figures
+python -m memory_tuner.electronics_revision_tables \
+  --root . --output submission-tables
+```
+
+The frozen historical reconstruction command still uses its original,
+hash-verified plotting module. `verification/layout-audit.json` records
+checks of the submission PDFs, and `verification/layout-data-preservation.json`
+records the numerical comparisons for the revised figures and tables.
 
 The dataset's `paper/` directory contains the main manuscript, supplement,
 reviewer response, and editable TeX ZIP. `verification/` records the release

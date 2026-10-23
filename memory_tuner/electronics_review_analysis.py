@@ -80,7 +80,7 @@ def stage_analysis(root, output, figures, hashes):
     write(output / "stage_excluded_slots.csv", excluded)
     cases = sorted({(r["model_family"], r["dataset"]) for r in contrasts},
                    key=lambda c: (c[0], list(WORKLOADS).index(c[1])))
-    fig, axes = plt.subplots(1, 2, figsize=(10.4, 5.4), sharey=True, sharex=True)
+    fig, axes = plt.subplots(1, 2, figsize=(5.45, 4.15), sharey=True, sharex=True)
     colors = {"actor_update": "#0072B2", "whole_run": "#D55E00"}
     summary = []
     for ax, reservation in zip(axes, (.60, .70)):
@@ -90,23 +90,23 @@ def stage_analysis(root, output, figures, hashes):
                             and r["metric"] == metric and r["reservation"] == reservation]
                 values = [r["difference_mib"] / 1024 for r in selected]
                 ax.scatter(values, i + offset + np.linspace(-.05, .05, len(values)),
-                           s=18, alpha=.55, c=colors[metric], edgecolors="none")
-                ax.scatter(mean(values), i+offset, c=colors[metric], marker="D", s=28)
+                           s=10, alpha=.55, c=colors[metric], edgecolors="none")
+                ax.scatter(mean(values), i+offset, c=colors[metric], marker="D", s=17)
                 summary.append(dict(model_family=case[0], dataset=case[1], reservation=reservation,
                                     metric=metric, complete_blocks=len(values),
                                     mean_difference_mib=mean(values)*1024))
         ax.axvline(0, color=".55", lw=.8)
-        ax.set_title(f"Generation reservation {reservation:.2f}")
-        ax.set_xlabel("Batch 16 − batch 8 peak (GiB)")
+        ax.set_title(f"Reservation {reservation:.2f}", fontsize=9)
+        ax.set_xticks((0, 2, 4, 6, 8))
         ax.grid(axis="x", alpha=.18)
     axes[0].set_yticks(range(len(cases)),
                       [f"{MODELS[m]} / {WORKLOADS[d]}" for m, d in cases])
     axes[0].invert_yaxis()
     for metric, label in [("actor_update", "Actor stage"), ("whole_run", "Whole run")]:
         axes[1].scatter([], [], c=colors[metric], label=label)
-    axes[1].legend(loc="upper right", frameon=False)
-    fig.suptitle("35 complete same-device blocks; points: seeds; diamonds: case means", fontsize=11)
-    fig.tight_layout()
+    axes[1].legend(loc="upper right", frameon=False, fontsize=8, handletextpad=.3)
+    fig.supxlabel("Batch 16 − batch 8 peak (GiB)", fontsize=9)
+    fig.tight_layout(rect=(0, .04, 1, 1), w_pad=.8)
     save(fig, figures, "electronics_stage_contrasts")
     write(output / "stage_case_contrasts.csv", summary)
     return dict(planned_slots=len(rows), complete_blocks=len(contrasts)//4,
@@ -147,21 +147,28 @@ def horizon_analysis(root, output, figures, hashes):
                             source_within=sum(r["source_within_margin"] for r in values),
                             long_within=sum(r["long_within_margin"] for r in values)))
     write(output / "horizon_agreement.csv", summary)
-    fig, axes = plt.subplots(1, 3, figsize=(11.5, 3.7), sharex=True)
+    fig, axes = plt.subplots(3, 1, figsize=(5.45, 4.75), sharex=True,
+                             gridspec_kw={"height_ratios": [1, 1, 1.7]})
     for ax, protocol in zip(axes, dict.fromkeys(r["protocol"] for r in summary)):
         selected = [r for r in summary if r["protocol"] == protocol]
         for i, r in enumerate(selected):
             n, yes = r["comparisons"], r["agreements"]
             ax.barh(i, yes / n, color="#0072B2", height=.6)
             ax.barh(i, (n-yes) / n, left=yes / n, color="#D55E00", height=.6)
-            ax.text(.02, i, f"{yes}/{n} agree", va="center", color="white", fontsize=11)
+            ax.text(.02, i, f"{yes}/{n} agree", va="center", color="white", fontsize=8.5)
+            if n > yes:
+                ax.text(yes / n + .02, i, f"{n-yes}/{n} disagree",
+                        va="center", color="white", fontsize=8.5)
         ax.set_yticks(range(len(selected)),
                       [f"{MODELS[r['model_family']]} / {WORKLOADS[r['dataset']]}" for r in selected])
         ax.invert_yaxis()
-        ax.set_title(protocol.replace(" / ", "\n"), fontsize=12)
+        ax.set_title(protocol, fontsize=9, loc="left")
         ax.set_xlim(0, 1)
-        ax.set_xlabel("Fraction of eligible comparisons")
-    fig.tight_layout()
+        ax.set_xticks((0, .25, .5, .75, 1))
+        ax.grid(axis="x", alpha=.15)
+        ax.set_axisbelow(True)
+    axes[-1].set_xlabel("Fraction of eligible comparisons", fontsize=9)
+    fig.tight_layout(h_pad=1.2)
     save(fig, figures, "electronics_horizon_agreement")
     repeated = read(root, "profiles/standard_grpo/revision-temporal-cases.csv", hashes)
     return dict(comparisons=len(observations),
@@ -237,23 +244,32 @@ def failure_analysis(root, output, figures, hashes, raw_root):
                 eligible_invocations=sum(counts.values()),
                 **{kind: counts[kind] for kind in ("completed", *FAILURES)})
            for key, counts in sorted(grouped.items())])
-    fig, ax = plt.subplots(figsize=(9, 3.4))
+    failure_figure(summary, figures)
+    return summary
+
+
+def failure_figure(summary, figures):
+    """Render the diagnosed counts; raw-log classification stays upstream."""
+    fig, ax = plt.subplots(figsize=(5.45, 3.45))
     x, bottom = np.arange(len(summary)), np.zeros(len(summary))
     for kind, color in zip(FAILURES, ["#0072B2", "#009E73", "#56B4E9", "#E69F00", "#CC79A7"]):
         values = np.array([r[kind] for r in summary])
         ax.bar(x, values, bottom=bottom, color=color, label=FAILURES[kind], width=.55)
         for i, value in enumerate(values):
             if value:
-                ax.text(i, bottom[i]+value/2, str(value), ha="center", va="center", fontsize=10)
+                ax.text(i, bottom[i]+value/2, str(value), ha="center", va="center",
+                        fontsize=8, color="white" if kind == "startup_budget_rejection" else "black")
         bottom += values
-    ax.set_xticks(x, [f"{r['study']}\n{int(n)}/{r['eligible_invocations']} memory failures"
+    ax.set_xticks(x, [f"{r['study']}\n{int(n)}/{r['eligible_invocations']} failures"
                      for r, n in zip(summary, bottom)])
     ax.set_ylabel("Diagnosed memory failures")
     ax.set_ylim(0, max(bottom)*1.13)
-    ax.legend(loc="upper right", frameon=False)
+    ax.legend(loc="lower left", bbox_to_anchor=(0, 1.02), ncol=2,
+              frameon=False, fontsize=8, borderaxespad=0)
+    ax.grid(axis="y", alpha=.15)
+    ax.set_axisbelow(True)
     fig.tight_layout()
     save(fig, figures, "electronics_failure_modes")
-    return summary
 
 
 def main():
@@ -268,7 +284,8 @@ def main():
     figures = args.figures or args.root / "paper/submission/mdpi_submission/figures"
     output.mkdir(parents=True, exist_ok=True)
     figures.mkdir(parents=True, exist_ok=True)
-    plt.rcParams.update({"font.size": 11, "axes.spines.top": False, "axes.spines.right": False,
+    plt.rcParams.update({"font.size": 8, "axes.labelsize": 9,
+                         "axes.spines.top": False, "axes.spines.right": False,
                          "pdf.fonttype": 42, "ps.fonttype": 42})
     hashes = {}
     summary = dict(

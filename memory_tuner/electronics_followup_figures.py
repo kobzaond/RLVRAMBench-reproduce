@@ -41,7 +41,7 @@ def outcome_label(rows):
 def reservation_figure(rows, figures, suffix):
     keys = sorted({(r["model"], r["dataset"], r["parameter_offload"]) for r in rows})
     fractions = sorted({float(r["vllm_gpu_memory_utilization"]) for r in rows})
-    fig, ax = plt.subplots(figsize=(10, 4.8))
+    fig, ax = plt.subplots(figsize=(5.45, 3.7))
     for i, (model, dataset, offload) in enumerate(keys):
         for j, reservation in enumerate(fractions):
             group = [r for r in rows if (r["model"], r["dataset"], r["parameter_offload"]) ==
@@ -49,7 +49,7 @@ def reservation_figure(rows, figures, suffix):
             label, state = outcome_label(group)
             ax.add_patch(Rectangle((j-.5, i-.5), 1, 1, facecolor=COLORS[state],
                                    edgecolor="white", linewidth=2))
-            ax.text(j, i, label, ha="center", va="center", fontsize=10)
+            ax.text(j, i, label, ha="center", va="center", fontsize=8)
     ax.set_xlim(-.5,len(fractions)-.5)
     ax.set_ylim(len(keys)-.5,-.5)
     ax.set_xticks(range(len(fractions)), [f"{r:.2f}" for r in fractions])
@@ -57,7 +57,7 @@ def reservation_figure(rows, figures, suffix):
                   [f"{SHORT[m]} / {WORKLOAD[d]} / offload {'on' if o=='True' else 'off'}"
                    for m,d,o in keys])
     ax.set_xlabel("Generation reservation")
-    ax.set_title("Counts: within margin / above margin / memory failure (3 seeds per cell)", fontsize=10)
+    ax.set_title("Counts: within / above / memory failure", fontsize=9)
     for spine in ax.spines.values():
         spine.set_visible(False)
     fig.tight_layout()
@@ -68,7 +68,7 @@ def adaptation_figure(rows, figures, results, suffix):
     native = [r for r in rows if r["use_kl_loss"]=="True"]
     contrasts = matched_contrasts(native, "adaptation")
     keys = sorted({(r["model"], r["dataset"]) for r in native})
-    fig, axes = plt.subplots(1, 2, figsize=(11, 5.4), sharex=True, sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(5.45, 3.65), sharex=True, sharey=True)
     summaries = []
     colors = {"completed_peak_mib": "#0072B2", "actor_stage_peak_mib": "#D55E00"}
     for ax, reservation in zip(axes, (.45, .65)):
@@ -77,33 +77,34 @@ def adaptation_figure(rows, figures, results, suffix):
             group = [r for r in contrasts if (r["model"],r["dataset"],r["parameter_offload"]) ==
                      (model,dataset,offload) and float(r["reservation"])==reservation]
             completed = [r for r in group if r["both_completed"]]
-            labels.append(f"{SHORT[model]} / {WORKLOAD[dataset]} / offload {int(offload=='True')}")
+            labels.append(f"{SHORT[model]} / {WORKLOAD[dataset]} / {'on' if offload=='True' else 'off'}")
             for metric, offset in (("completed_peak_mib",-.12),("actor_stage_peak_mib",.12)):
                 values = [r[metric+"_difference"]/1024 for r in completed if metric+"_difference" in r]
                 if values:
                     ax.scatter(values, i+offset+np.linspace(-.035,.035,len(values)),
-                               c=colors[metric], s=20, alpha=.6)
-                    ax.scatter(mean(values),i+offset,c=colors[metric],s=34,marker="D")
+                               c=colors[metric], s=10, alpha=.6)
+                    ax.scatter(mean(values),i+offset,c=colors[metric],s=18,marker="D")
                 summaries.append(dict(model=model,dataset=dataset,actor_offload=offload,
                                       use_kl_loss=True,reservation=reservation,metric=metric,planned_pairs=len(group),
                                       completed_pairs=len(values),
                                       mean_difference_mib=mean(values)*1024 if values else None,
                                       min_difference_mib=min(values)*1024 if values else None,
                                       max_difference_mib=max(values)*1024 if values else None))
-            ax.text(1.02,i,f"{len(completed)}/{len(group)}",va="center",ha="left",
-                    transform=ax.get_yaxis_transform(),fontsize=10,color=".25")
+            ax.text(.98,i,f"{len(completed)}/{len(group)}",va="center",ha="right",
+                    transform=ax.get_yaxis_transform(),fontsize=7.5,color=".25")
         ax.axvline(0,color=".55",lw=.8)
         ax.set_yticks(range(len(labels)),labels)
-        ax.set_title(f"Reservation {reservation:.2f}",fontsize=10)
-        ax.set_xlabel("Native full − LoRA peak (GiB)")
+        ax.set_title(f"Reservation {reservation:.2f}",fontsize=9)
+        ax.set_xlim(-1, 25)
+        ax.set_xticks((0, 10, 20))
         ax.grid(axis="x",alpha=.16)
     axes[0].set_ylim(len(keys)*2-.5,-.5)
     for metric,label in (("completed_peak_mib","Whole run"),("actor_stage_peak_mib","Actor stage")):
         axes[1].scatter([],[],c=colors[metric],label=label)
     handles,legend_labels=axes[1].get_legend_handles_labels()
-    fig.legend(handles,legend_labels,loc="lower center",ncol=2,frameon=False)
-    fig.suptitle("Native KL: adaptation and reference layout both change; fractions: completed pairs",fontsize=10)
-    fig.tight_layout(rect=(0,.07,1,.95))
+    fig.legend(handles,legend_labels,loc="lower center",ncol=2,frameon=False,fontsize=8)
+    fig.supxlabel("Native full − LoRA peak (GiB)", y=.10, fontsize=9)
+    fig.tight_layout(rect=(0,.15,1,1), w_pad=.8)
     save(fig, figures, "electronics_full_parameter_contrasts"+suffix)
     controls = matched_contrasts([r for r in rows if r["use_kl_loss"]=="False"], "adaptation")
     for offload in ("False", "True"):
@@ -126,7 +127,7 @@ def timing_figure(rows, figures, results, suffix):
     cases = sorted({(r["model"], r["dataset"]) for r in rows})
     conditions = ("off1-r45-release1", "off0-r45-release1", "off1-r70-release1", "off1-r45-release0")
     labels = ("Anchor", "Offload off", "Reservation .70", "State resident")
-    fig, axes = plt.subplots(1, len(cases), figsize=(10.6, 3.9), squeeze=False)
+    fig, axes = plt.subplots(1, len(cases), figsize=(6.5, 3.5), squeeze=False)
     summaries = []
     for ax, case in zip(axes[0], cases):
         for index, (condition,label) in enumerate(zip(conditions,labels)):
@@ -157,7 +158,7 @@ def timing_figure(rows, figures, results, suffix):
         ax.set_ylim(low,high*1.25)
         ax.set_ylabel("Mean iteration time, updates 3–20 (s)")
         ax.grid(axis="y",alpha=.16)
-    fig.suptitle("Complete runs only; points: seeds; diamonds: means; counts: within / above / failed",fontsize=10)
+    fig.suptitle("Points: seeds; diamonds: means; counts: within / above / failed",fontsize=9)
     fig.tight_layout()
     save(fig,figures,"electronics_iteration_cost"+suffix)
     write_rows(results/("timing_condition_summary"+suffix+".csv"),summaries)
@@ -175,7 +176,7 @@ def main():
     figures=args.figures or args.root/"paper/submission/mdpi_submission/figures"
     figures.mkdir(parents=True, exist_ok=True)
     suffix="_preview" if args.allow_partial else ""
-    plt.rcParams.update({"font.size":11,"axes.spines.top":False,"axes.spines.right":False,
+    plt.rcParams.update({"font.size":8,"axes.labelsize":9,"axes.spines.top":False,"axes.spines.right":False,
                          "pdf.fonttype":42,"ps.fonttype":42})
     for panel in args.panel or ("adaptation","reservation","timing"):
         summary=json.loads((results/panel/"summary.json").read_text())

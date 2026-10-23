@@ -17,7 +17,7 @@ workspace. The benchmark evidence is hosted at
 Both repositories are public as of 2026-09-14. Downloads require neither
 authentication nor access approval. The dataset DOI is `10.57967/hf/10780`.
 
-**Electronics submission version:** tag `electronics-submission-2026-10-22-r3`
+**Electronics submission version:** tag `electronics-submission-2026-10-23`
 in this repository and on the Hugging Face dataset. Hugging Face `main`
 contains this version, including the paper, all four raw-evidence archives,
 curated results, and validation reports. See
@@ -258,10 +258,13 @@ frozen protocols, matrices, and resource accounting are in
 The native LLMem comparison has 24 prediction/measurement pairs, with an
 equal-case MAE of 236.6 MiB and a mean absolute relative error of 5.37%.
 
-**Copied from the paper workspace.** The analysis, figure and table modules
-are copied unchanged from the workspace branch `electronics-revision-20261016`
-(commit `4febe59`): `memory_tuner/electronics_*`, `collect_llmem_native.py`
-and `llmem_native*.py`. The unmodified upstream estimator is in
+**Source and layout versions.** The scientific analysis modules originate
+from workspace branch `electronics-revision-20261016` (commit `4febe59`).
+The 23 October submission updates only the figure and table renderers in
+`memory_tuner/electronics_*` and `amd_mi250x/make_supplement.py`.
+`electronics_historical_figures.py` supplies the revised boundary and logging
+plots; the hash-bound historical `make_review_figures.py` remains intact.
+`collect_llmem_native.py` and `llmem_native*.py` retain their recorded versions. The unmodified upstream estimator is in
 `third_party/llmem_estimator/` with its provenance note.
 `docs/REPRODUCING_ELECTRONICS_REVISION.md` and
 `docs/electronics_measurement_audit.md` are the authors' reconstruction guide
