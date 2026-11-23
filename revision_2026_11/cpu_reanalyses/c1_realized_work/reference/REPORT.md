@@ -4,7 +4,7 @@ CPU-only re-analysis of existing measurements; nothing was run on GPUs or cluste
 
 ## 1. Data sources
 
-Repository root R = `/home/kobzaond/Dokumenty/alquictCoder/research/ieee_access/rl`.
+Repository root R = `/path/to/tables-root`.
 
 | Content | Path |
 |---|---|
@@ -21,9 +21,9 @@ Repository root R = `/home/kobzaond/Dokumenty/alquictCoder/research/ieee_access/
 Per-process trainer metrics are not in the working tree; they exist only in the released archive. The archive was downloaded once into a fresh `mktemp -d` directory and verified before use:
 
 - URL: `https://huggingface.co/datasets/kobzaond/RLVRAMBench/resolve/00e61d8aa329cee64c1cf899f11678971b5115e0/releases/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst`
-- Local copy: `/tmp/c1_archive.4VRRkr/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst` (210,126,067 bytes)
+- Local copy: `/path/to/archive-dir/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst` (210,126,067 bytes)
 - SHA-256: `3dd90eaca2f2d9b5eceb955fe67b6a3528210a6bb9bd7684ac3eb3c36d84a5ab` (matches the expected value and `R/paper/electronics_delivery_manifest.json`)
-- Extracted members only (into `/tmp/c1_archive.4VRRkr/extract`): the 144 files `output/replication_control/attempts/<experiment_id>/trainer-metrics/step-1.json` and the 144 retained original-factorial logs `output/strengthening_factorial/<experiment_id>/training-<job_id>.log` (job ids from `R/profiles/standard_grpo/factorial-trials.csv`). Nothing from the archive was executed.
+- Extracted members only (into `/path/to/archive-dir/extract`): the 144 files `output/replication_control/attempts/<experiment_id>/trainer-metrics/step-1.json` and the 144 retained original-factorial logs `output/strengthening_factorial/<experiment_id>/training-<job_id>.log` (job ids from `R/profiles/standard_grpo/factorial-trials.csv`). Nothing from the archive was executed.
 
 Each `step-1.json` holds the trainer's step-1 console line; the script checks that its `invocation_id` equals the attempt directory and that `console_line_sha256` matches the line.
 

@@ -1,5 +1,5 @@
 {
-  "description": "Expected SHA-256 of rendered outputs. Figures: the PDF files of the manuscript source (CCPE version; the IEEE Access source uses byte-identical files). Generated tables: the generator outputs released at dataset commit 00e61d8aa329cee64c1cf899f11678971b5115e0 (the manuscript copies of these SI sections were later copy-edited by hand).",
+  "description": "Expected SHA-256 of rendered outputs. Figures: the PDF files of the manuscript source of 23 November 2026. Generated tables: the generator outputs released at dataset commit 00e61d8aa329cee64c1cf899f11678971b5115e0 (the manuscript copies of these SI sections were later copy-edited by hand).",
   "figures": {
     "fig1_reservation_sensitivity.pdf": {
       "paper": "Figure 2",

@@ -1,5 +1,5 @@
 {
-  "numbering_source": "paper/submission/ccpe_submission/RLVRAMBench_CCPE.aux (main) and supporting_information/RLVRAMBench_CCPE_supporting_information.aux (SI), compiled 2026-11-23",
+  "numbering_source": "LaTeX .aux files of the manuscript and its Supporting Information compiled on 2026-11-23",
   "items": [
     {
       "item": "Table 1",
@@ -531,7 +531,7 @@
       "outputs": [
         "paper/figures/electronics_iteration_cost.pdf"
       ],
-      "note": "The IEEE Access SI names this file followup_iteration_cost.pdf."
+      "note": "Some manuscript builds name this file followup_iteration_cost.pdf."
     },
     {
       "item": "Tables S1-S27",

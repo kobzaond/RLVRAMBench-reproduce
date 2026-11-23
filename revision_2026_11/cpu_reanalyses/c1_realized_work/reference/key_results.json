@@ -1,6 +1,6 @@
 {
   "archive": {
-    "path": "/tmp/c1_archive.4VRRkr/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst",
+    "path": "/path/to/archive-dir/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst",
     "sha256": "3dd90eaca2f2d9b5eceb955fe67b6a3528210a6bb9bd7684ac3eb3c36d84a5ab"
   },
   "reproduction": {

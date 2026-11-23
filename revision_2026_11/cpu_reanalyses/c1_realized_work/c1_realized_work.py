@@ -41,7 +41,7 @@ WORK_LABEL = {"gsm8k": "GSM8K", "math": "MATH", "code_standard": "Standard code"
               "code_heavy_tail": "Longer-prompt code"}
 CASES = [(m, w) for m in MODEL_LABEL for w in WORK_LABEL]
 THRESHOLDS = (0.05, 0.02, 0.01)
-# Manuscript Table tab:factorial (CCPE version): actor-stage and whole-run
+# Manuscript Table tab:factorial (November 2026): actor-stage and whole-run
 # batch contrasts per case, rounded MiB, and the equal-case means.
 PAPER_RC = {
     ("granite33_2b", "gsm8k"): (1374, -1), ("granite33_2b", "math"): (1932, -37),

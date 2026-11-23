@@ -4,7 +4,7 @@ CPU-only re-analyses of already released measurements, written after the
 outcomes were known. They are diagnostics, not frozen predictions; nothing
 here runs on a GPU or reruns training.
 
-| Directory | Analyses | Paper (SI numbering of the CCPE version) |
+| Directory | Analyses | Paper (numbering of the manuscript of 23 November 2026) |
 |---|---|---|
 | `c1_realized_work/` | C1: prompt/response lengths, cap reaching and token volume behind the micro-batch contrast | Section S27, Table S54; Table 10 cross-check |
 | `c2_predictors/` | C2 failure-aware hurdle predictors, C3 coverage refit, C8 margin sensitivity of the baselines | Section S30, Tables S65–S68; Table 15 |
@@ -13,7 +13,8 @@ here runs on a GPU or reruns training.
 Each directory holds the scripts and `reference/`, the outputs reported in the
 paper. `../../reproduce_all.sh` reruns all of them and compares every output
 with `reference/` (only run-specific file locations in C1's `REPORT.md` and
-`key_results.json` may differ).
+`key_results.json` may differ; in the reference copies these locations are written as
+`/path/to/...`).
 
 ## Inputs and environment
 
