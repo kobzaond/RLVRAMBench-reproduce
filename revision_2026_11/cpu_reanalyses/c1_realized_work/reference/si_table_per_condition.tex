@@ -1,0 +1,98 @@
+% Optional long table: one row per replication case and condition (140 completed processes).
+% Requires longtable and booktabs (both loaded by the Supporting Information preamble).
+{\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}rrrrrrrrrr@{}}
+\caption{Realized work per same-device replication condition (completed processes only).
+MB: actor micro-batch; Res.: generation reservation; \(n\): completed processes.
+Response lengths in tokens: mean of the per-process means with the range over seeds, and the
+longest response. Cap: processes with at least one response at the configured cap and the
+share of all responses at the cap. Tokens: prompt plus response tokens per process
+(\(\times 10^3\)), mean with the range over seeds. Peaks: means in MiB.
+Prompt lengths are identical across conditions and seeds within a case.}
+\label{tab:si-realized-work-conditions}\\
+\toprule
+MB & Res. & \(n\) & \multicolumn{2}{c}{Response length} & \multicolumn{2}{c}{Cap} & Tokens (\(\times 10^3\)) & \multicolumn{2}{c}{Peak (MiB)} \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){9-10}
+ & & & Mean (range) & Max & Proc. & \% & Mean (range) & Actor stage & Whole run \\
+\midrule
+\endfirsthead
+\toprule
+MB & Res. & \(n\) & \multicolumn{2}{c}{Response length} & \multicolumn{2}{c}{Cap} & Tokens (\(\times 10^3\)) & \multicolumn{2}{c}{Peak (MiB)} \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){9-10}
+ & & & Mean (range) & Max & Proc. & \% & Mean (range) & Actor stage & Whole run \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\multicolumn{10}{@{}l}{\rlap{\textit{Granite / GSM8K} (prompt mean 146, prompt max 198; response cap 2048; 64 responses per process)}} \\
+8 & 0.60 & 3 & 305 (271--349) & 2048 & 1 & 1.6 & 28.9 (26.7--31.7) & 12,039 & 32,218 \\
+16 & 0.60 & 3 & 297 (294--302) & 2048 & 1 & 0.5 & 28.4 (28.1--28.7) & 13,305 & 32,218 \\
+8 & 0.70 & 3 & 273 (266--285) & 2048 & 1 & 0.5 & 26.9 (26.4--27.6) & 11,787 & 36,301 \\
+16 & 0.70 & 3 & 294 (266--319) & 2048 & 2 & 1.0 & 28.2 (26.4--29.8) & 13,269 & 36,298 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Granite / MATH} (prompt mean 132, prompt max 460; response cap 512; 128 responses per process)}} \\
+8 & 0.60 & 3 & 374 (370--381) & 512 & 3 & 28.6 & 64.9 (64.3--65.7) & 12,409 & 32,619 \\
+16 & 0.60 & 3 & 374 (369--379) & 512 & 3 & 27.9 & 64.9 (64.1--65.4) & 14,287 & 32,586 \\
+8 & 0.70 & 3 & 382 (381--384) & 512 & 3 & 26.8 & 65.9 (65.6--66.1) & 12,426 & 36,706 \\
+16 & 0.70 & 3 & 374 (373--377) & 512 & 3 & 29.2 & 64.9 (64.6--65.2) & 14,413 & 36,666 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Granite / Standard code} (prompt mean 492, prompt max 588; response cap 1024; 64 responses per process)}} \\
+8 & 0.60 & 3 & 231 (221--249) & 769 & 0 & 0.0 & 46.3 (45.6--47.4) & 12,855 & 32,438 \\
+16 & 0.60 & 3 & 233 (226--244) & 812 & 0 & 0.0 & 46.4 (45.9--47.1) & 15,091 & 32,437 \\
+8 & 0.70 & 3 & 238 (233--243) & 866 & 0 & 0.0 & 46.7 (46.4--47.0) & 12,988 & 36,528 \\
+16 & 0.70 & 3 & 216 (208--232) & 765 & 0 & 0.0 & 45.3 (44.8--46.3) & 14,885 & 36,492 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Granite / Longer-prompt code} (prompt mean 806, prompt max 902; response cap 1024; 64 responses per process)}} \\
+8 & 0.60 & 3 & 282 (268--292) & 820 & 0 & 0.0 & 69.7 (68.8--70.3) & 13,792 & 32,452 \\
+16 & 0.60 & 3 & 284 (277--293) & 770 & 0 & 0.0 & 69.8 (69.3--70.3) & 17,411 & 32,464 \\
+8 & 0.70 & 3 & 298 (298--299) & 851 & 0 & 0.0 & 70.7 (70.7--70.7) & 14,016 & 36,537 \\
+16 & 0.70 & 3 & 287 (281--293) & 752 & 0 & 0.0 & 70.0 (69.6--70.3) & 17,317 & 36,539 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Phi / GSM8K} (prompt mean 78, prompt max 121; response cap 2048; 64 responses per process)}} \\
+8 & 0.60 & 3 & 222 (219--228) & 580 & 0 & 0.0 & 19.2 (19.0--19.6) & 17,935 & 35,816 \\
+16 & 0.60 & 3 & 218 (212--226) & 538 & 0 & 0.0 & 18.9 (18.6--19.4) & 20,289 & 35,846 \\
+8 & 0.70 & 3 & 232 (214--253) & 2048 & 1 & 0.5 & 19.9 (18.7--21.2) & 18,396 & 39,919 \\
+16 & 0.70 & 3 & 234 (224--246) & 2048 & 1 & 0.5 & 20.0 (19.3--20.7) & 20,890 & 39,919 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Phi / MATH} (prompt mean 76, prompt max 401; response cap 512; 128 responses per process)}} \\
+8 & 0.60 & 3 & 365 (359--376) & 512 & 3 & 20.8 & 56.4 (55.6--57.8) & 19,889 & 36,121 \\
+16 & 0.60 & 3 & 365 (358--369) & 512 & 3 & 20.8 & 56.4 (55.5--57.0) & 24,485 & 36,108 \\
+8 & 0.70 & 3 & 366 (361--373) & 512 & 3 & 21.6 & 56.6 (56.0--57.5) & 19,955 & 40,211 \\
+16 & 0.70 & 3 & 368 (358--378) & 512 & 3 & 20.3 & 56.8 (55.5--58.1) & 24,629 & 40,206 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Phi / Standard code} (prompt mean 378, prompt max 480; response cap 1024; 64 responses per process)}} \\
+8 & 0.60 & 3 & 326 (313--335) & 1024 & 3 & 3.6 & 45.1 (44.3--45.6) & 23,155 & 35,816 \\
+16 & 0.60 & 3 & 337 (319--358) & 1024 & 3 & 4.2 & 45.8 (44.6--47.1) & 29,065 & 35,833 \\
+8 & 0.70 & 3 & 354 (332--375) & 1024 & 3 & 8.3 & 46.9 (45.5--48.2) & 23,852 & 39,919 \\
+16 & 0.70 & 3 & 312 (299--321) & 1024 & 2 & 4.2 & 44.2 (43.4--44.8) & 27,773 & 39,912 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Phi / Longer-prompt code} (prompt mean 664, prompt max 746; response cap 1024; 64 responses per process)}} \\
+8 & 0.60 & 3 & 410 (387--447) & 1024 & 3 & 11.5 & 68.8 (67.3--71.1) & 26,879 & 35,816 \\
+16 & 0.60 & 3 & 400 (357--425) & 1024 & 3 & 8.9 & 68.1 (65.4--69.7) & 34,960 & 35,839 \\
+8 & 0.70 & 3 & 421 (385--451) & 1024 & 3 & 8.3 & 69.4 (67.1--71.4) & 26,891 & 39,912 \\
+16 & 0.70 & 3 & 397 (358--419) & 1024 & 3 & 8.9 & 67.9 (65.4--69.3) & 34,995 & 39,925 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Qwen2.5-3B / GSM8K} (prompt mean 108, prompt max 154; response cap 2048; 64 responses per process)}} \\
+8 & 0.60 & 3 & 296 (293--298) & 727 & 0 & 0.0 & 25.9 (25.6--26.0) & 14,210 & 33,036 \\
+16 & 0.60 & 3 & 296 (288--306) & 695 & 0 & 0.0 & 25.9 (25.3--26.5) & 16,667 & 33,036 \\
+8 & 0.70 & 3 & 296 (289--304) & 589 & 0 & 0.0 & 25.8 (25.4--26.4) & 14,039 & 37,068 \\
+16 & 0.70 & 3 & 303 (300--305) & 1103 & 0 & 0.0 & 26.3 (26.1--26.4) & 16,946 & 37,096 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Qwen2.5-3B / MATH} (prompt mean 104, prompt max 437; response cap 512; 128 responses per process)}} \\
+8 & 0.60 & 3 & 393 (390--396) & 512 & 3 & 24.7 & 63.6 (63.3--64.0) & 15,480 & 33,402 \\
+16 & 0.60 & 3 & 394 (390--397) & 512 & 3 & 25.5 & 63.8 (63.3--64.1) & 19,303 & 33,430 \\
+8 & 0.70 & 3 & 396 (390--403) & 512 & 3 & 25.3 & 64.1 (63.2--64.9) & 15,317 & 37,406 \\
+16 & 0.70 & 3 & 393 (389--395) & 512 & 3 & 23.7 & 63.6 (63.2--63.9) & 18,941 & 37,434 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Qwen2.5-3B / Standard code} (prompt mean 421, prompt max 518; response cap 1024; 64 responses per process)}} \\
+8 & 0.60 & 2 & 291 (286--296) & 990 & 0 & 0.0 & 45.6 (45.3--45.9) & 16,348 & 33,286 \\
+16 & 0.60 & 2 & 304 (300--308) & 1024 & 1 & 0.8 & 46.4 (46.1--46.7) & 21,526 & 33,314 \\
+8 & 0.70 & 2 & 292 (274--311) & 1024 & 1 & 0.8 & 45.7 (44.5--46.9) & 16,448 & 37,207 \\
+16 & 0.70 & 2 & 287 (280--294) & 1024 & 1 & 0.8 & 45.3 (44.9--45.7) & 21,154 & 37,312 \\
+\addlinespace[2pt]
+\multicolumn{10}{@{}l}{\rlap{\textit{Qwen2.5-3B / Longer-prompt code} (prompt mean 720, prompt max 772; response cap 1024; 64 responses per process)}} \\
+8 & 0.60 & 3 & 360 (316--393) & 1024 & 3 & 3.6 & 69.2 (66.3--71.3) & 19,124 & 33,315 \\
+16 & 0.60 & 3 & 362 (353--376) & 1024 & 3 & 2.1 & 69.3 (68.7--70.2) & 25,803 & 33,314 \\
+8 & 0.70 & 3 & 350 (344--361) & 1024 & 3 & 1.6 & 68.5 (68.1--69.2) & 18,820 & 37,347 \\
+16 & 0.70 & 3 & 360 (358--363) & 1024 & 1 & 0.5 & 69.1 (69.0--69.3) & 25,357 & 37,349 \\
+\end{longtable}}

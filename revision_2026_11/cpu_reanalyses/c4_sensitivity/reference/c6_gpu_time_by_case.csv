@@ -1,0 +1,6 @@
+case_id,donor_attempts,donor_gpu_hours_trial,screen_attempts,screen_gpu_hours_trial,screen_gpu_hours_runner,evaluation_attempts,evaluation_gpu_hours_trial,evaluation_gpu_hours_runner,mean_donor_elapsed_s,mean_screen_elapsed_s_trial,donor_to_all_screens_gpu_time_ratio_trial
+qwen25_3b-gsm8k-shape1024-n4-steps5,9,1.0244,3,0.5917,0.6096,9,1.6894,1.7257,204.9,355.0,1.731
+qwen25_3b-math-shape1024-n4-steps5,9,0.895,3,0.6539,0.6655,9,1.9394,1.9829,179.0,392.3,1.369
+phi4_mini-gsm8k-shape1024-n4-steps5,9,0.8306,3,0.4694,0.4801,9,1.5244,1.5643,166.1,281.7,1.769
+phi4_mini-math-shape1024-n4-steps5,9,0.9733,3,0.625,0.6433,9,1.8272,1.8687,194.7,375.0,1.557
+all,36,3.7233,12,2.34,2.3985,36,6.9806,7.1416,186.2,351.0,1.591

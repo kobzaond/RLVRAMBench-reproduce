@@ -1,0 +1,9 @@
+# CPU re-analyses C1, C2/C3/C8 and C4-C6 (retrospective); tested with CPython 3.12.
+# These are the library versions that produced the reported values in reference/.
+# The historical reconstructions use ../../publication-requirements.txt (CPython 3.11).
+numpy==2.1.2
+scipy==1.17.1
+scikit-learn==1.9.0
+threadpoolctl==3.6.0
+joblib==1.5.3
+narwhals==2.29.0

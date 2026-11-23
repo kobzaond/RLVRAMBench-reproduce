@@ -1,0 +1,11 @@
+study,configurations,3_of_3_agree,2_of_3_agree,single_run
+batch_logging_control,8,8,,
+batch_reservation,48,48,,
+boundary,72,72,,
+four_gpu,18,18,,
+horizon_followup,8,7,1,
+instrumentation,24,24,,
+sampling_calibration,12,,,12
+state_release,12,12,,
+temporal_100,4,4,,
+temporal_40,6,6,,

@@ -1,0 +1,107 @@
+{
+  "description": "Expected SHA-256 of rendered outputs. Figures: the PDF files of the manuscript source (CCPE version; the IEEE Access source uses byte-identical files). Generated tables: the generator outputs released at dataset commit 00e61d8aa329cee64c1cf899f11678971b5115e0 (the manuscript copies of these SI sections were later copy-edited by hand).",
+  "figures": {
+    "fig1_reservation_sensitivity.pdf": {
+      "paper": "Figure 2",
+      "label": "fig:reservation-sensitivity",
+      "renderer": "a100",
+      "renderer_output": "electronics_reservation_sensitivity.pdf",
+      "sha256": "af624f5c2d6ff1d7401dbdce05709ee87cab6438e1e69ec2fdfb7574565aa398"
+    },
+    "fig2_stage_contrasts.pdf": {
+      "paper": "Figure 3",
+      "label": "fig:stage-contrasts",
+      "renderer": "a100",
+      "renderer_output": "electronics_stage_contrasts.pdf",
+      "sha256": "bdfbc0308e49385ef19719f5181ee46f634482c3fed10822819261c911d8d2a3"
+    },
+    "fig3_instrumentation_batch.pdf": {
+      "paper": "Figure 4",
+      "label": "fig:logging",
+      "renderer": "historical",
+      "renderer_output": "review_instrumentation_batch.pdf",
+      "sha256": "06a49a8c36b85f016863684e2a1145948ef274275792227f29dad910c99d18cd"
+    },
+    "fig4_full_parameter_contrasts.pdf": {
+      "paper": "Figure 5",
+      "label": "fig:full-parameter",
+      "renderer": "a100",
+      "renderer_output": "electronics_full_parameter_contrasts.pdf",
+      "sha256": "e3dd7d4dad427f300c6c2570afee202650885a618cb68029c31d582344b3a7e0"
+    },
+    "fig5_boundary_labels.pdf": {
+      "paper": "Figure 6",
+      "label": "fig:boundary",
+      "renderer": "historical",
+      "renderer_output": "standard_grpo_boundary.pdf",
+      "sha256": "1b1d093f4ccedd2ce9279b1618c6016e633c7b966dbcef910e8a1a8b897f4099"
+    },
+    "fig6_failure_modes.pdf": {
+      "paper": "Figure 7",
+      "label": "fig:failure-modes",
+      "renderer": "a100",
+      "renderer_output": "electronics_failure_modes.pdf",
+      "sha256": "94a7c6009c03531c86156af68dc665fd1d7421b3f46dcbeecfaff9e19f70a9f8"
+    },
+    "fig7_horizon_agreement.pdf": {
+      "paper": "Figure 8",
+      "label": "fig:horizon-agreement",
+      "renderer": "a100",
+      "renderer_output": "electronics_horizon_agreement.pdf",
+      "sha256": "e477fa6db1fa0b94d1447f8b79a166562e40c791d88e4a0e19e47089235a81ef"
+    },
+    "standard_grpo_mechanisms.pdf": {
+      "paper": "Figure S1",
+      "label": "sfig:mechanisms",
+      "renderer": "historical",
+      "renderer_output": "standard_grpo_mechanisms.pdf",
+      "sha256": "e973077ef5ac530a1e573663aa7370d9816e8d65202f0358fc45de14295abad7"
+    },
+    "standard_grpo_temporal.pdf": {
+      "paper": "Figure S2",
+      "label": "sfig:temporal",
+      "renderer": "historical",
+      "renderer_output": "standard_grpo_temporal.pdf",
+      "sha256": "183b4bc1fc0c2dfa2b9d11b76a929202449246090f4a5a73b860de2287aaacd3"
+    },
+    "electronics_iteration_cost.pdf": {
+      "paper": "Figure S3",
+      "label": "(SI iteration-cost figure)",
+      "renderer": "a100",
+      "renderer_output": "electronics_iteration_cost.pdf",
+      "sha256": "614d45091fc5d4f9b8ea66c1ca4c6de5aee0f4477b03ebe42894dbd54ec8300f"
+    }
+  },
+  "generated_tables": {
+    "electronics_adaptation.tex": {
+      "step": "a100",
+      "sha256": "f32be85b888756474490959cee097623cf9baa5a81051aebf9ed0ca2eacb8ca4",
+      "si": "Tables S28-S38 (A100 follow-up SI tables)"
+    },
+    "electronics_release.tex": {
+      "step": "a100",
+      "sha256": "b043884e67036c1ea48d170c4a33f29f47481793b31cc165e0c76bed3aaec05e",
+      "si": "Tables S28-S38 (A100 follow-up SI tables)"
+    },
+    "electronics_reservation.tex": {
+      "step": "a100",
+      "sha256": "586438d314ef6c6889dcf60714357db0b418016090475585cf0030b1cd34fedf",
+      "si": "Tables S28-S38 (A100 follow-up SI tables)"
+    },
+    "electronics_timing.tex": {
+      "step": "a100",
+      "sha256": "8d345a5d12fb5033126d1309d32c4930547f3035a8ce7cfd182a65f9cf8d7451",
+      "si": "Tables S28-S38 (A100 follow-up SI tables)"
+    },
+    "supplement_mi250x.tex": {
+      "step": "mi250x",
+      "sha256": "b2ff19feb7906a284e744570372142e36822ddd0d334895d723f038a703b95d3",
+      "si": "Section S21, Tables S40-S45"
+    },
+    "supplement_deepspeed.tex": {
+      "step": "estimator",
+      "sha256": "f7c5a3ce45ef9496622af981618a310011bbbf09573e4f874111ed59e450b377",
+      "si": "Section S22, Table S46"
+    }
+  }
+}

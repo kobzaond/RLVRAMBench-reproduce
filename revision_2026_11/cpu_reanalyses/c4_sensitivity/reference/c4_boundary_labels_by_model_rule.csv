@@ -1,0 +1,13 @@
+rule,model,configurations,within_margin,above_margin,memory_failure,unresolved,changed_from_paper,unresolved_c0,unresolved_c1,unresolved_c2,unresolved_c3,unresolved_c4,unresolved_c5
+paper,Qwen,24,16,0,8,0,0,0,0,0,0,0,0
+paper,Phi,24,12,4,8,0,0,0,0,0,0,0,0
+paper,Granite,24,16,4,4,0,0,0,0,0,0,0,0
+paper,All,72,44,8,20,0,0,0,0,0,0,0,0
+rule_i,Qwen,24,15,0,7,2,2,0,0,0,1,1,0
+rule_i,Phi,24,12,4,8,0,0,0,0,0,0,0,0
+rule_i,Granite,24,8,2,2,12,12,2,2,2,2,2,2
+rule_i,All,72,35,6,17,14,14,2,2,2,3,3,2
+rule_ii,Qwen,24,16,0,8,0,0,0,0,0,0,0,0
+rule_ii,Phi,24,12,4,8,0,0,0,0,0,0,0,0
+rule_ii,Granite,24,16,3,4,1,1,0,0,0,0,1,0
+rule_ii,All,72,44,7,20,1,1,0,0,0,0,1,0

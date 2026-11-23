@@ -1,0 +1,36 @@
+block_id,model_family,dataset,case,training_seed,batch_contrast_actor_update_peak_mib,batch_contrast_whole_run_peak_mib,batch_contrast_total_tokens,batch_contrast_response_tokens,batch_contrast_per_gpu_tokens_balanced_max,rel_batch_contrast_total_tokens
+replication_control-granite33_2b-code_heavy_tail-s211,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,211,3460,12,-420,-420,-209.5,-0.00597291
+replication_control-granite33_2b-code_heavy_tail-s212,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,212,3560,4,620.5,620.5,310.5,0.00889957
+replication_control-granite33_2b-code_heavy_tail-s213,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,213,3361,6,-1052.5,-1052.5,-529,-0.0149265
+replication_control-granite33_2b-code_standard-s211,granite33_2b,code_standard,Granite / Standard code,211,2016,-34,-900,-900,-449,-0.019428
+replication_control-granite33_2b-code_standard-s212,granite33_2b,code_standard,Granite / Standard code,212,2165,-35,-1147,-1147,-546.5,-0.024362
+replication_control-granite33_2b-code_standard-s213,granite33_2b,code_standard,Granite / Standard code,213,2019,14,29,29,-13,0.000629074
+replication_control-granite33_2b-gsm8k-s211,granite33_2b,gsm8k,Granite / GSM8K,211,1497,0,1072.5,1072.5,751,0.0394715
+replication_control-granite33_2b-gsm8k-s212,granite33_2b,gsm8k,Granite / GSM8K,212,1851,0,1812.5,1812.5,1287,0.0660929
+replication_control-granite33_2b-gsm8k-s213,granite33_2b,gsm8k,Granite / GSM8K,213,773,-4,-1714.5,-1714.5,-1075.5,-0.0590596
+replication_control-granite33_2b-math-s211,granite33_2b,math,Granite / MATH,211,1722,-40,-528.5,-528.5,-265,-0.00804849
+replication_control-granite33_2b-math-s212,granite33_2b,math,Granite / MATH,212,2160,-40,-789,-789,-394,-0.0120946
+replication_control-granite33_2b-math-s213,granite33_2b,math,Granite / MATH,213,1915,-30,-211,-211,-106.5,-0.00323515
+replication_control-phi4_mini-code_heavy_tail-s211,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,211,7163,10,-3903.5,-3903.5,-1950,-0.0547863
+replication_control-phi4_mini-code_heavy_tail-s212,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,212,9034,10,1600,1600,803,0.0237056
+replication_control-phi4_mini-code_heavy_tail-s213,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,213,8082,35,-953,-953,-476.5,-0.0139054
+replication_control-phi4_mini-code_standard-s211,phi4_mini,code_standard,Phi / Standard code,211,4118,15,-1525,-1525,-761.5,-0.0329755
+replication_control-phi4_mini-code_standard-s212,phi4_mini,code_standard,Phi / Standard code,212,5003,0,-930,-930,-463,-0.0201421
+replication_control-phi4_mini-code_standard-s213,phi4_mini,code_standard,Phi / Standard code,213,5624,0,-547,-547,-274.5,-0.012003
+replication_control-phi4_mini-gsm8k-s211,phi4_mini,gsm8k,Phi / GSM8K,211,2571,25,39.5,39.5,-26.5,0.00204113
+replication_control-phi4_mini-gsm8k-s212,phi4_mini,gsm8k,Phi / GSM8K,212,3227,10,733.5,733.5,749,0.0387746
+replication_control-phi4_mini-gsm8k-s213,phi4_mini,gsm8k,Phi / GSM8K,213,1475,10,-1007.5,-1007.5,-798.5,-0.0494746
+replication_control-phi4_mini-math-s211,phi4_mini,math,Phi / MATH,211,4691,-20,235.5,235.5,117,0.00421469
+replication_control-phi4_mini-math-s212,phi4_mini,math,Phi / MATH,212,4827,3,417.5,417.5,209,0.00737972
+replication_control-phi4_mini-math-s213,phi4_mini,math,Phi / MATH,213,4387,-10,-319,-319,-158.5,-0.0055861
+replication_control-qwen25_3b-code_heavy_tail-s211,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,211,6256,-50,-114.5,-114.5,-57.5,-0.00164284
+replication_control-qwen25_3b-code_heavy_tail-s212,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,212,6558,41,-533.5,-533.5,-268.5,-0.00767184
+replication_control-qwen25_3b-code_heavy_tail-s213,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,213,7010,11,1740.5,1740.5,867.5,0.0258828
+replication_control-qwen25_3b-code_standard-s212,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,212,4956,0,1349,1349,689.5,0.0300703
+replication_control-qwen25_3b-code_standard-s213,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,213,4928,133,-877,-877,-424,-0.0189121
+replication_control-qwen25_3b-gsm8k-s211,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,211,2932,42,865.5,865.5,511.5,0.0339006
+replication_control-qwen25_3b-gsm8k-s212,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,212,2642,0,157,157,78.5,0.00608032
+replication_control-qwen25_3b-gsm8k-s213,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,213,2471,0,-301.5,-301.5,-151,-0.011521
+replication_control-qwen25_3b-math-s211,qwen25_3b,math,Qwen2.5-3B / MATH,211,3630,42,18.5,18.5,9,0.000290759
+replication_control-qwen25_3b-math-s212,qwen25_3b,math,Qwen2.5-3B / MATH,212,3619,0,154,154,76.5,0.00241665
+replication_control-qwen25_3b-math-s213,qwen25_3b,math,Qwen2.5-3B / MATH,213,3921,42,-567.5,-567.5,-283.5,-0.00885294

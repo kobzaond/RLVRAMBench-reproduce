@@ -1,0 +1,14 @@
+check,computed,reference,source,ok
+replication complete blocks,35,35,manuscript,True
+replication completed processes,140,140,manuscript,True
+replication equal-case actor-stage batch contrast (MiB),3904.61,3904.61,benchmark/replication_control/results/replication_control_summary.json,True
+replication equal-case whole-run batch contrast (MiB),7.45833,7.45833,benchmark/replication_control/results/replication_control_summary.json,True
+"replication actor-stage equal-case mean, rounded",3905,3905,manuscript tab:factorial,True
+"replication whole-run equal-case mean, rounded",7,7,manuscript tab:factorial,True
+"replication 12 case rows of tab:factorial (actor, whole-run)",all match,12 rows,manuscript tab:factorial,True
+replication per-block batch contrasts vs released blocks CSV,all 35 match,benchmark/replication_control/results/replication_control_blocks.csv,benchmark/replication_control/results/replication_control_blocks.csv,True
+replication 70 reservation-specific pair contrasts vs stage_paired_contrasts.csv,all 70 match,profiles/electronics_revision/stage_paired_contrasts.csv,profiles/electronics_revision/stage_paired_contrasts.csv,True
+original factorial complete blocks,36,36,manuscript,True
+original factorial per-block actor-stage contrasts vs factorial-phase-blocks.csv,all 36 match,profiles/standard_grpo/factorial-phase-blocks.csv,profiles/standard_grpo/factorial-phase-blocks.csv,True
+"original factorial equal-case actor-stage batch contrast, rounded",3980,3980,manuscript,True
+"original factorial equal-case whole-run batch contrast, rounded",-31,-31,manuscript,True

@@ -1,8 +1,151 @@
 {
-  "release": "submission-20260917-b0018d0",
-  "source_commit": "b0018d0825b9c1819cc51faec0549cae2ac3a69e",
+  "release": "rlvrambench-2026-11",
+  "release_tag": "rlvrambench-2026-11",
+  "release_date": "to be set at publication (YYYY-MM-DD)",
+  "authors": [
+    {
+      "name": "Ondrej Kobza",
+      "orcid": "0000-0002-0529-9860"
+    }
+  ],
   "huggingface_repository": "kobzaond/RLVRAMBench",
+  "huggingface_revision": "to be set after upload",
+  "doi": "10.57967/hf/TO-BE-MINTED",
+  "previous_doi": {
+    "doi": "10.57967/hf/10780",
+    "dataset_revision": "d8321f8",
+    "note": "registered for an earlier revision; not the DOI of this release"
+  },
   "code_repository": "kobzaond/RLVRAMBench-reproduce",
+  "code_revision": "the commit tagged rlvrambench-2026-11 (a commit cannot record its own hash)",
+  "supersedes_release": "electronics-submission-2026-10-23-r2",
+  "release_archives": [
+    {
+      "path": "releases/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst",
+      "sha256": "3dd90eaca2f2d9b5eceb955fe67b6a3528210a6bb9bd7684ac3eb3c36d84a5ab",
+      "size_bytes": 210126067,
+      "cohort": "historical_a100",
+      "procedure": {
+        "command": "reproduce.py --isolate-analysis",
+        "contract": "archive"
+      }
+    },
+    {
+      "path": "releases/RLVRAMBench-offload-raw-20261022.tar.zst",
+      "sha256": "ac2c69bae8d7e0af07e27de9c182e095fa77a28f5b0d0fc906fbfff302040041",
+      "size_bytes": 33356651,
+      "cohort": "independent_offload_a100",
+      "procedure": {
+        "command": "python -m memory_tuner.collect_offload_factorial",
+        "freeze_sha256": "5df43f35e0b02c23e4816b7e860c5a613176da41f5adb27e57f79ac2becf1fb9",
+        "source_commit": "3d6ecac1852e16a0422c9c72a230187be663f8b5"
+      }
+    },
+    {
+      "path": "releases/electronics-full-20261021-a53af63.tar.zst",
+      "sha256": "f70f639fc0c991e79b9e140d4c26482a9c3490000abe3c5acf6bc62fb7a599bf",
+      "size_bytes": 74609840,
+      "cohort": "electronics_followups_a100",
+      "procedure": {
+        "command": "paper/verify_electronics_reconstruction.py (in the archive), then the same analysis modules of this repository into a persistent directory",
+        "manifest_files": 112689
+      }
+    },
+    {
+      "path": "releases/RLVRAMBench-mi250x-raw-20261022.tar.zst",
+      "sha256": "400f75b1c3015d9903b3e898b0ed2dc3771b07363bff7f8761aec0c798ed67ae",
+      "size_bytes": 58527374,
+      "cohort": "mi250x",
+      "procedure": {
+        "command": "amd_mi250x/collect.py, analyze.py, make_supplement.py"
+      }
+    },
+    {
+      "path": "releases/RLVRAMBench-revision-raw-20261123.tar.zst",
+      "sha256": "87dada01f6f7d25e01210bbfc24b7faf35041e96e3731e8bce9e24766106fe5d",
+      "size_bytes": 49842735,
+      "cohort": "revision_2026_11",
+      "manifest_entries": 45738,
+      "archive_members": 45739,
+      "procedure": {
+        "command": "source/<commit>/experiments/ieee_resubmission_2026-11/ieee_resub/collect.py and analysis.py",
+        "frozen_source_commit": "9f6faf94b472f62f910858be838710aedb3cbc55",
+        "analysis_source": "cc685c09a446c62f4507432e1962c2f49b277b1d",
+        "collect": {
+          "smoke1": {
+            "protocol_sha256": "33e1d02095fa66f6e633cb08a55adb72ef4ddc7174123de57617e5d644731963",
+            "source": "9f6faf94b472f62f910858be838710aedb3cbc55",
+            "development_only": true
+          },
+          "smoke2": {
+            "protocol_sha256": "f70f5e2010238abc316572f9be4d2853d2332b1c03f433176f548b69611c8ba6",
+            "source": "9f6faf94b472f62f910858be838710aedb3cbc55",
+            "development_only": true
+          },
+          "e1": {
+            "protocol_sha256": "339c40d662d9948853d354e1ab133ceb49aae93a8c5989920e52f9d0dd514985",
+            "source": "9f6faf94b472f62f910858be838710aedb3cbc55"
+          },
+          "e2": {
+            "protocol_sha256": "6bc00eb88c35425c093c1cf057f260594d70e852066e42a8981e49ec10e2a1e5",
+            "source": "9f6faf94b472f62f910858be838710aedb3cbc55"
+          },
+          "e3": {
+            "protocol_sha256": "f6ef9c52ddae8ef97e832e85215aa79341c29f262e00d59611e088751acd53de",
+            "source": "cc685c09a446c62f4507432e1962c2f49b277b1d",
+            "amendment": "protocols/e3/amendment-01.json",
+            "amendment_sha256": "966067e46423acd8dc256b313357a21a19010218243865d672127d9e88f62ee8"
+          }
+        }
+      }
+    }
+  ],
+  "revision_experiments": {
+    "e1_controlled_length": {
+      "planned_slots": 48,
+      "within_margin": 48
+    },
+    "e2_near_boundary_repetitions": {
+      "planned_slots": 40,
+      "within_margin": 30,
+      "above_margin": 10
+    },
+    "e3_duration_and_restore": {
+      "planned_slots": 28,
+      "attempts": 30,
+      "within_margin": 28,
+      "amendments": 1
+    },
+    "container_sha256": "3dc581ca780cd19d565445b8a02e5daa98b350b3d2116d4d64476a64a2614912",
+    "hardware": "A100-SXM4-40GB (Karolina)"
+  },
+  "environments": {
+    "publication": {
+      "python": "3.11",
+      "requirements": "publication-requirements.txt",
+      "used_for": "every archive procedure and the tests"
+    },
+    "reanalysis": {
+      "python": "3.12",
+      "requirements": "revision_2026_11/cpu_reanalyses/requirements.txt",
+      "used_for": "retrospective CPU re-analyses C1, C2/C3/C8, C4-C6"
+    },
+    "dataset_client": {
+      "python": "3.11",
+      "datasets": "5.1.0",
+      "huggingface_hub": "2.2.0"
+    }
+  },
+  "operating_limit": {
+    "a100_capacity_mib": 40960,
+    "a100_limit_mib": 38912,
+    "mi250x_capacity_mib": 65520,
+    "mi250x_limit_mib": 63472,
+    "definition": "capacity minus 2,048 MiB; a declared operating convention, not a physical threshold, failure probability, or completion guarantee. 'safe' in field names means within-margin completion only."
+  },
+  "entry_point": "reproduce_all.sh",
+  "historical_archive_release": "submission-20260917-b0018d0",
+  "source_commit": "b0018d0825b9c1819cc51faec0549cae2ac3a69e",
   "archive": {
     "path": "releases/RLVRAMBench-review-artifact-submission-20260917-b0018d0.tar.zst",
     "sha256": "3dd90eaca2f2d9b5eceb955fe67b6a3528210a6bb9bd7684ac3eb3c36d84a5ab",
@@ -14,7 +157,6 @@
   "principal_processes": 588,
   "supporting_source_processes": 16,
   "model_checkpoint_payloads_included": false,
-  "doi": null,
   "visibility_at_initial_deposit": "private",
   "visibility": "public",
   "public_release_date": "2026-09-14",
@@ -144,6 +286,5 @@
         }
       }
     }
-  },
-  "huggingface_revision": null
+  }
 }

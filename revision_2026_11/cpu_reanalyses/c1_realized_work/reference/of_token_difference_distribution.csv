@@ -1,0 +1,6 @@
+study,quantity,unit,n,mean,mean_abs,min,q25,median,q75,max,n_positive,n_negative,n_zero,n_abs_below_1pct,n_abs_below_2pct,n_abs_below_5pct,n_abs_below_10pct
+original_factorial,rel_diff_total_tokens,block-reservation pair,72,0.00033033,0.0235862,-0.13373,-0.0112499,0.00197718,0.0155176,0.109595,39,33,0,27,43,62,70
+original_factorial,rel_diff_response_tokens,block-reservation pair,72,0.00206962,0.0500615,-0.181167,-0.0213634,0.00250318,0.0295447,0.251375,39,33,0,19,28,47,61
+original_factorial,rel_diff_per_gpu_tokens_balanced_max,block-reservation pair,72,-0.001512,0.0260432,-0.187767,-0.0137619,0.00196928,0.014992,0.109662,38,34,0,26,43,62,69
+original_factorial,rel_batch_contrast_total_tokens,complete block,36,-9.39526e-05,0.0163526,-0.0722169,-0.0150331,0.00266806,0.0111656,0.0401295,22,14,0,15,25,35,36
+original_factorial,reference_rel_diff_total_tokens_res070_vs_res060_same_mb,block-micro-batch pair,72,0.003037,0.0262208,-0.116966,-0.0195443,0.00170734,0.0222453,0.125407,38,34,0,23,34,63,70

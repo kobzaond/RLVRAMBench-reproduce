@@ -1,0 +1,182 @@
+{
+  "e2-g2-math-c3": {
+    "above_margin": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    },
+    "completed_peaks_mib": {
+      "max": 36706.0,
+      "mean": 36672.0,
+      "median": 36666.0,
+      "min": 36666.0,
+      "n": 10
+    },
+    "eligible": 10,
+    "history": {
+      "above": 0,
+      "failure": 0,
+      "source": "boundary 3/3 + instrumentation control 6/6 within; max 38,718 MiB",
+      "within": 9
+    },
+    "label_10": "within_margin",
+    "memory_failure": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    },
+    "minimum_headroom_mib": 2206.0,
+    "not_launched": 0,
+    "planned": 10,
+    "unresolved": 0,
+    "within_margin": {
+      "ci95_exact": [
+        0.6915028921812392,
+        1.0
+      ],
+      "k": 10,
+      "proportion": 1.0
+    }
+  },
+  "e2-p4-gsm8k-c3": {
+    "above_margin": {
+      "ci95_exact": [
+        0.6915028921812392,
+        1.0
+      ],
+      "k": 10,
+      "proportion": 1.0
+    },
+    "completed_peaks_mib": {
+      "max": 39912.0,
+      "mean": 39912.0,
+      "median": 39912.0,
+      "min": 39912.0,
+      "n": 10
+    },
+    "eligible": 10,
+    "history": {
+      "above": 9,
+      "failure": 0,
+      "source": "boundary 3/3 + instrumentation control 6/6 above; 39,550-39,570 MiB",
+      "within": 0
+    },
+    "label_10": "above_margin",
+    "memory_failure": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    },
+    "minimum_headroom_mib": -1000.0,
+    "not_launched": 0,
+    "planned": 10,
+    "unresolved": 0,
+    "within_margin": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    }
+  },
+  "e2-q3-gsm8k-rel-r65": {
+    "above_margin": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    },
+    "completed_peaks_mib": {
+      "max": 38462.0,
+      "mean": 37331.2,
+      "median": 37212.0,
+      "min": 36498.0,
+      "n": 10
+    },
+    "eligible": 10,
+    "history": {
+      "above": 1,
+      "failure": 0,
+      "source": "release experiment 3/3 within (36,544-36,750 MiB); release-sensitivity 2/3 within, 1 above (39,244 MiB)",
+      "within": 5
+    },
+    "label_10": "within_margin",
+    "memory_failure": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    },
+    "minimum_headroom_mib": 450.0,
+    "not_launched": 0,
+    "planned": 10,
+    "unresolved": 0,
+    "within_margin": {
+      "ci95_exact": [
+        0.6915028921812392,
+        1.0
+      ],
+      "k": 10,
+      "proportion": 1.0
+    }
+  },
+  "e2-q7-gsm8k-off0-r60": {
+    "above_margin": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    },
+    "completed_peaks_mib": {
+      "max": 38638.0,
+      "mean": 38567.8,
+      "median": 38560.0,
+      "min": 38560.0,
+      "n": 10
+    },
+    "eligible": 10,
+    "history": {
+      "above": 0,
+      "failure": 0,
+      "source": "reservation panel 3/3 within at 38,560 MiB",
+      "within": 3
+    },
+    "label_10": "within_margin",
+    "memory_failure": {
+      "ci95_exact": [
+        0.0,
+        0.3084971078187607
+      ],
+      "k": 0,
+      "proportion": 0.0
+    },
+    "minimum_headroom_mib": 274.0,
+    "not_launched": 0,
+    "planned": 10,
+    "unresolved": 0,
+    "within_margin": {
+      "ci95_exact": [
+        0.6915028921812392,
+        1.0
+      ],
+      "k": 10,
+      "proportion": 1.0
+    }
+  }
+}

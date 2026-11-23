@@ -1,3 +1,5 @@
+> **Historical document.** It describes an earlier release and is kept unchanged below this note. The current release is `rlvrambench-2026-11`; start with the repository `README.md` and `reproduce_all.sh`.
+
 # Electronics submission release — 23 October 2026
 
 The paper, dataset, and reproduction code use the version tag

@@ -1,0 +1,13 @@
+study,model_family,dataset,case,pairs,rel_token_diff_min,rel_token_diff_max,rel_token_diff_median,mean_abs_rel_token_diff,mean_token_diff,mean_actor_contrast_mib,min_actor_contrast_mib,max_actor_contrast_mib,pairs_with_fewer_mb16_tokens
+original_factorial,granite33_2b,gsm8k,Granite / GSM8K,6,-0.0349385,0.0796275,0.0221525,0.0351554,643.333,1498.67,1260,2020,1
+original_factorial,granite33_2b,math,Granite / MATH,6,-0.0105318,0.0324946,0.0062852,0.0112934,497.167,1892.67,1668,2146,1
+original_factorial,granite33_2b,code_standard,Granite / Standard code,6,-0.0312032,0.0259384,-0.000198058,0.0202968,-77.6667,2244.33,1996,2600,3
+original_factorial,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,6,-0.0289352,0.0383452,0.00478284,0.0166914,268.5,3675,3352,3966,3
+original_factorial,phi4_mini,gsm8k,Phi / GSM8K,6,-0.13373,0.0168687,-0.00336622,0.0354809,-618.167,2055.33,764,3234,4
+original_factorial,phi4_mini,math,Phi / MATH,6,-0.0134042,0.0441567,0.0118808,0.0170808,636.833,4629.67,3968,5234,2
+original_factorial,phi4_mini,code_standard,Phi / Standard code,6,-0.0909371,0.109595,-0.0328757,0.0575227,-1071.67,5273,4438,7350,5
+original_factorial,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,6,-0.0643887,0.0364918,0.0136499,0.033988,-314,8826.67,7208,9790,2
+original_factorial,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,6,-0.0152371,0.0175372,-0.00711294,0.0115928,-83.6667,2664.67,2398,3000,4
+original_factorial,qwen25_3b,math,Qwen2.5-3B / MATH,6,-0.0029621,0.0228954,0.00318572,0.00653872,348.167,3821.33,3242,4222,1
+original_factorial,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,6,-0.0241899,0.061855,0.00309332,0.021763,258.833,4878.33,4260,5724,3
+original_factorial,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,6,-0.0287197,0.0553139,-0.00128061,0.0156304,232,6301,5358,7384,4

@@ -1,0 +1,31 @@
+{
+  "frozen_family_holdout_scores_reproduced": true,
+  "refit_reproduces_frozen_fold_predictions": {
+    "granite33": "90/90",
+    "granite33_max_abs_regression_coefficient_diff_gib": 8.18789480661053e-15,
+    "granite33_max_abs_classifier_coefficient_diff": 0.0007852023788093021,
+    "phi4": "90/90",
+    "phi4_max_abs_regression_coefficient_diff_gib": 1.0658141036401503e-14,
+    "phi4_max_abs_classifier_coefficient_diff": 0.0019372004344425098,
+    "qwen25": "90/90",
+    "qwen25_max_abs_regression_coefficient_diff_gib": 6.217248937900877e-15,
+    "qwen25_max_abs_classifier_coefficient_diff": 0.002601608629159091
+  },
+  "refit_final_reproduces_frozen": {
+    "larger_model_predictions_equal_frozen": "108/108",
+    "independent_control_approvals_equal_frozen": "96/96"
+  },
+  "leave_one_out_logistic_decisions_changed_distribution": {
+    "0": 62,
+    "1": 25,
+    "2": 1,
+    "6": 1,
+    "9": 1
+  },
+  "leave_one_out_logistic_useful_approved_range": [
+    23,
+    34
+  ],
+  "leave_one_out_logistic_failure_approved_max": 4,
+  "leave_one_out_regression_decisions_changed_max": 0
+}

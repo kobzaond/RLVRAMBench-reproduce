@@ -1,0 +1,11 @@
+k,n,quantity,estimate,two_sided_95_low,two_sided_95_high,one_sided_95_lower,one_sided_95_upper
+3,3,per-run rate of the observed label when 3 of 3 eligible repetitions agree,1.0,0.2924,1.0,0.3684,1.0
+0,3,per-run rate of a different label when 3 of 3 agree,0.0,0.0,0.7076,0.0,0.6316
+9,9,per-run rate of the observed label when 9 of 9 eligible runs agree,1.0,0.6637,1.0,0.7169,1.0
+0,9,per-run rate of a different label when 9 of 9 agree,0.0,0.0,0.3363,0.0,0.2831
+4,4,per-process rate of the observed state when screen and 3 evaluations agree,1.0,0.3976,1.0,0.4729,1.0
+0,4,per-process rate of a different state when 4 of 4 admission processes agree,0.0,0.0,0.6024,0.0,0.5271
+2,3,within-margin rate after a 2 of 3 re-execution (release-sensitivity Qwen-3B/GSM8K 0.65),0.6667,0.0943,0.9916,0.1354,0.983
+1,3,above-margin rate after a 1 of 3 re-execution (same cell),0.3333,0.0084,0.9057,0.017,0.8646
+4,4,per-workload-case rate of an approval error when all 4 target cases err (Qwen->Phi or Granite->Phi),1.0,0.3976,1.0,0.4729,1.0
+0,4,per-workload-case rate of an approval error when no target case errs (other four directions),0.0,0.0,0.6024,0.0,0.5271

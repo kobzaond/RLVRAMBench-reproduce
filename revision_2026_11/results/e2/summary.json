@@ -1,0 +1,11 @@
+{
+  "planned": 40,
+  "protocol_sha256": "6bc00eb88c35425c093c1cf057f260594d70e852066e42a8981e49ec10e2a1e5",
+  "scope": "raw evidence reassessment; no missing-slot replacement",
+  "source_commit": "9f6faf94b472f62f910858be838710aedb3cbc55",
+  "states": {
+    "above_margin": 10,
+    "within_margin": 30
+  },
+  "study": "e2"
+}

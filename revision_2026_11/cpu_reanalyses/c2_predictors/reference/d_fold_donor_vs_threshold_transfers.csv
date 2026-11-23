@@ -1,0 +1,16 @@
+fraction,held_out,donor_family,fold_donor_boundary_approval_errors,threshold_transfer_false_safe,match
+0.9,Granite,Qwen,0,0,True
+0.9,Phi,Qwen,0,0,True
+0.9,Qwen,Granite,3,3,True
+0.925,Granite,Qwen,1,1,True
+0.925,Phi,Qwen,4,4,True
+0.925,Qwen,Granite,0,0,True
+0.95,Granite,Qwen,0,0,True
+0.95,Phi,Qwen,4,4,True
+0.95,Qwen,Granite,0,0,True
+0.975,Granite,Qwen,0,0,True
+0.975,Phi,Qwen,3,3,True
+0.975,Qwen,Granite,0,0,True
+1,Granite,Qwen,0,0,True
+1,Phi,Qwen,0,0,True
+1,Qwen,Granite,4,4,True

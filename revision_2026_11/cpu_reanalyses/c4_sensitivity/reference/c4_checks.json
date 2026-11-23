@@ -1,0 +1,38 @@
+{
+  "original_studies_excluded_attempts": 69,
+  "original_studies_attempts": 657,
+  "original_studies_slots": 588,
+  "excluded_by_cause_class_original": {
+    "clear_infrastructure_or_setup": 60,
+    "unresolved_cause": 8,
+    "memory_failure_incomplete_record": 1
+  },
+  "excluded_by_cause_class_all": {
+    "unresolved_cause": 10,
+    "clear_infrastructure_or_setup": 60,
+    "memory_failure_incomplete_record": 1
+  },
+  "paper_rule_reproduces_all_212_published_labels": true,
+  "boundary_label_counts_paper_rule": {
+    "within_margin": 44,
+    "memory_failure": 20,
+    "above_margin": 8
+  },
+  "table14_reproduced": true,
+  "gpu_count_transfer_reproduced": true,
+  "workload_transfer_reproduced_216_correct": true,
+  "factorial_paper_rule": {
+    "complete_blocks": 36,
+    "actor_main_effect_actor_nvml_mib_equal_case_mean": 3980.1,
+    "actor_main_effect_whole_run_mib_equal_case_mean": -30.6,
+    "reservation_main_effect_whole_run_mib_equal_case_mean": 3998.0,
+    "actor_main_effect_actor_allocated_mib_equal_case_mean": 3847.8
+  },
+  "release_paper_rule": {
+    "complete_blocks": 18,
+    "release_only_completion_pairs": 9,
+    "both_complete_pairs": 9,
+    "resident_minus_release_peak_pair_mean": 7060.9
+  },
+  "nine_of_nine_configurations_paper_rule": 12
+}

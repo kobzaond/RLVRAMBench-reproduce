@@ -1,0 +1,10 @@
+{
+  "planned": 3,
+  "protocol_sha256": "33e1d02095fa66f6e633cb08a55adb72ef4ddc7174123de57617e5d644731963",
+  "scope": "raw evidence reassessment; no missing-slot replacement",
+  "source_commit": "9f6faf94b472f62f910858be838710aedb3cbc55",
+  "states": {
+    "within_margin": 3
+  },
+  "study": "smoke1"
+}

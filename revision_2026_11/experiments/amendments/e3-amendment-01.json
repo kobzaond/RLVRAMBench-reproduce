@@ -1,0 +1,268 @@
+{
+  "amended_launch_blocks": {
+    "array_indices": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "block_ids": [
+      "e3-m7-code_heavy_tail-off1-r70-s633",
+      "e3-m7-code_heavy_tail-off0-r55-s632",
+      "e3-m7-code_heavy_tail-off0-r55-s631",
+      "e3-q7-gsm8k-off0-r60-s633",
+      "e3-q7-gsm8k-off1-r70-s631",
+      "e3-q7-gsm8k-off1-r70-s632",
+      "e3-m7-code_heavy_tail-off0-r55-s633"
+    ],
+    "reason": "never started and never claimed; the held tasks of 5381354 are cancelled and the same frozen blocks are submitted, in the same order and parallelism, from the amended snapshot so that they run with the private /tmp"
+  },
+  "amendment_id": "e3-amendment-01",
+  "analysis_corrections": [
+    {
+      "defect": "defect-3",
+      "file": "experiments/ieee_resubmission_2026-11/ieee_resub/analysis.py",
+      "function": "e1_rows_from_outcomes"
+    }
+  ],
+  "changed_source_files": {
+    "experiments/ieee_resubmission_2026-11/ieee_resub/amendment.py": {
+      "after": "e866711bc68218b4cb6b81fb364c95597cf389b3f92fe795ae950b9da3303943",
+      "before": null
+    },
+    "experiments/ieee_resubmission_2026-11/ieee_resub/analysis.py": {
+      "after": "7655cf2b5b052385069215300849857ff952a6bbc64c94b662bc0dcda274071f",
+      "before": "2650a7f207aa054317082cfbe49e2dae11d05b3a1f3bc4f7560ea1437d1f04ef"
+    },
+    "experiments/ieee_resubmission_2026-11/ieee_resub/assess.py": {
+      "after": "4f50436cb20b07d60012f734ec7cf41d5df448eee44e3b48735cebbc245714b3",
+      "before": "9c2f81efc079a70ef387260231ede279034547879f81f0ea88a17a91cd5473b0"
+    },
+    "experiments/ieee_resubmission_2026-11/ieee_resub/collect.py": {
+      "after": "a6506e9b662b24a43bfc58a2dce2e94693f9deb484926a99ac9c23b16e37b7a9",
+      "before": "945dafa78ae662511de40043692e82ed7d7e7446c04217a08e0a4e0c30aefa38"
+    },
+    "experiments/ieee_resubmission_2026-11/ieee_resub/render.py": {
+      "after": "b96c7f21548aa8ed6b5c9dee93f479e180ea722b5cb0196cf79904a7d33b4f70",
+      "before": "13ed312c2c7f14a4fffac4151578ca21eabbe1bcf9c88c88a2cee3e59f72e86d"
+    },
+    "experiments/ieee_resubmission_2026-11/ieee_resub/runner.py": {
+      "after": "6ceaa777b584b39463f6f56b4f59a2fe3296cce71f4baf5e3a592f1493b0c894",
+      "before": "d77b654e01b66d377fedf3d3411a43c7b871afda920abb8f0abb37cff44d5dec"
+    },
+    "experiments/ieee_resubmission_2026-11/ieee_resub/sandbox.py": {
+      "after": "d2f1be6bb1a649a80b4fc56e39361f13b763f8debc387aed5016431f846f58d3",
+      "before": "8025021306e882d855e01d491983435a8ff9976d5e5596e983b966a0091e0412"
+    },
+    "experiments/ieee_resubmission_2026-11/launcher/run_grpo_ieee_resub.slurm": {
+      "after": "b702867129b143b4b45cea279b55bb6973a425c677e1b2e490f722f9d5bc662f",
+      "before": "9c953137d738e12c27f5ace91d37fee77f0c7b2ecf0fbb8bc6d4f33790d004de"
+    },
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e1.slurm": {
+      "after": "9ef179d3b9bda02906da188b8ccd9214b313ea59364dd254ce065ea71fe9b9d5",
+      "before": "94e2abf1d2709671f0994e233e5a7c63e6365d7360a96dc9766bf974360405d9"
+    },
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e2.slurm": {
+      "after": "a62465d574747c0c2ab3e7c12fe8702aca4af8211c63b20c2065c1db6779a624",
+      "before": "b9addf8dd6ac4758366976ace44a663fbc28e2f2667403045303bc643174e529"
+    },
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3.slurm": {
+      "after": "72c1631833b4f1fe00a849cd89bf9e295e92a8772e0a526b1d582c9737d38908",
+      "before": "41efe3e2a571e74fe20a1b93b4017999c47043a0941087639f6b43df2ae9bfe2"
+    },
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3_amendment.slurm": {
+      "after": "2d412d8ba1932be8113154400d2a9ccf7d2c33bdac851fb0ba6ae6a1e447de8c",
+      "before": null
+    },
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke1.slurm": {
+      "after": "f604f07b968dd0eafd84dd6adf98cc4171b85be21a92f8d4d340d47ae90f773c",
+      "before": "27acaecd9963b89ced95a565e1c72b351697a07884b3cb5cdea8647b4405506b"
+    },
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke2.slurm": {
+      "after": "78765b99572f2dd00106d56b83fc29482deede4b5af9187dbf061973ddd9f62b",
+      "before": "6252abe1a5bb930ea1401be63930fdfdee8f4c8d65633f3c3a8335913093bcbf"
+    }
+  },
+  "copy_to": "/mnt/proj1/fta-26-70/rlvram/protocols/e3/amendment-01.json",
+  "defects": [
+    {
+      "affected_slots_rerun": [
+        "e3-m7-code_heavy_tail-off1-r70-s631-restore",
+        "e3-m7-code_heavy_tail-off1-r70-s632-long"
+      ],
+      "evidence": {
+        "bind_environment": "no APPTAINER_/SINGULARITY_ bind variable in the environments of the runner, launcher or apptainer runtime processes of 5381357 and 5382462 on acn10 (the INFO line about SINGULARITY_BINDPATH in the logs is not an inherited bind)",
+        "not_memory": "no CUDA OOM or vLLM startup-rejection diagnostic; every sample <= 30,756 MiB; the per-process timeouts (restore 12,600 s, long 21,600 s) end both hung invocations as unresolved",
+        "partner_trace": "e3-m7-code_heavy_tail-off1-r70-s632-long/attempt-5382462: dispatched 18:33:51; durable records up to step-15 (19:03:22); weight_sync of step 16 from 19:04:14, 43 s before the restore's error; no console output after 19:03:26; still weight_sync at 19:44:49 (30440/19372/30440/30420 MiB)",
+        "restore_attempt": "/mnt/proj1/fta-26-70/rlvram/output/ieee_resub_e3_long_restore_202611/e3-m7-code_heavy_tail-off1-r70-s631-restore/attempt-5381357",
+        "restore_log": "training-5381357.log lines 1317-1337 (ANSI codes stripped): vLLM worker pid 1973467 at 20:04:57 CET, receive_weights -> _init_buffer -> rebuild_ipc (bucketed_weight_transfer.py line 52) -> torch.AcceleratorError: CUDA error: invalid argument (cudaErrorInvalidValue)",
+        "restore_trace": "dispatched 18:40:39; durable records step-51..step-60 (last 19:01:47); phase marker weight_sync of step 61 from 19:02:43; no console output after 19:05:00; still weight_sync at 19:44:49 (GPU samples 30426/19350/30756/30718 MiB)",
+        "sacct": [
+          "5381356 (5381354_1) acn10 16:40:02-19:26:22 CET, 4 GPUs (block e3-q7-gsm8k-off1-r70-s633)",
+          "5381357 (5381354_2) acn10 from 16:40:02 CET, running, 4 GPUs (block e3-m7-code_heavy_tail-off1-r70-s631)",
+          "5382462 (5381354_3) acn10 from 19:26:24 CET, running, 4 GPUs (block e3-m7-code_heavy_tail-off1-r70-s632)",
+          "5381357 and 5382462 share acn10 from 18:26:24 UTC on; their GPU sets are disjoint (block.json: ...9c72b3cc/e0d49739/cb1a99cd/80004c58 vs ...2d7bf559/2e903ceb/2982d221/6afe4c96)"
+        ],
+        "shared_socket": "read-only on acn10 at 20:5x UTC: the host /tmp (tmpfs) holds one socket /tmp/rl-colocate-zmq-01000000-replica-1-rank-0.sock (mtime 19:04:56.6 UTC, 0.4 s before the restore's error), and the trainer of 5382462 sees that host tmpfs /tmp as its /tmp (/proc/<pid>/mountinfo); on both jobs the rank-1 GPU stays at about 19.4 GB while the others hold about 30.4 GB"
+      },
+      "id": "defect-1",
+      "kind": "infrastructure/runtime (not memory)",
+      "mechanism": "VERL names the socket ipc:///tmp/rl-colocate-zmq-{ray_job_id}-replica-{r}-rank-{k}.sock (receiver instrumented_python_packages/verl/workers/rollout/vllm_rollout/utils.py:415, sender vllm_rollout.py:141). Every fresh Ray cluster starts with the same first job id, and the container sees the node's shared /tmp (apptainer 'mount tmp = yes'). For every weight sync the sender removes an existing socket file and binds a new REQ socket (bucketed_weight_transfer.py:163-172), so a second job on the same node that syncs at the same time takes over the path and the first job's vLLM workers receive the second job's CUDA IPC handles. The handles refer to GPUs that the receiver cannot see, so the receiver fails (CUDA invalid argument) or both senders wait indefinitely. Same defect as MI250X runtime-amendment-01 (paper/submission/ccpe_submission/supporting_information/supplement_mi250x.tex).",
+      "remedy": "launcher_fix",
+      "summary": "Two Slurm jobs on one node exchanged CUDA IPC handles through VERL's colocated weight-transfer socket in the node-shared /tmp."
+    },
+    {
+      "action": "reassess from raw evidence; NOT rerun",
+      "evidence": {
+        "attempt": "/mnt/proj1/fta-26-70/rlvram/output/ieee_resub_e3_long_restore_202611/e3-q7-gsm8k-off1-r70-s633-long/attempt-5381356",
+        "receipt": "/mnt/proj1/fta-26-70/rlvram/output/ieee_resub_e3_long_restore_202611/blocks/e3-q7-gsm8k-off1-r70-s633/period-2.json",
+        "receipt_sha256": "2b6659eda2cd442e6060ff58459ab9c75dd465a1f1a6d9b9dcf0250faaa166c6",
+        "scan": "of the 100 training logs of E1 (48), E2 (40) and E3 (12 so far), only this one has the split start"
+      },
+      "id": "defect-2",
+      "kind": "assessment (harness parser), not execution",
+      "mechanism": "memory_tuner/electronics_experiment.py applied_actor_configuration starts at a TaskRunnerV1 record that begins with \"{'actor_rollout_ref':\". In training-5381356.log Ray emitted line 20 \"(TaskRunnerV1 pid=1360627) {\" and line 21 \"(TaskRunnerV1 pid=1360627) 'actor_rollout_ref': {'actor': {...\", so no start was found (ValueError: Missing printed actor configuration) and every later check was skipped. Slurm marked task 5381354_1 FAILED only because this slot was unresolved.",
+      "remedy": "ieee_resub/assess.py applied_actor_configuration: the frozen parser unchanged for every console it accepts; only if it finds no start, a record that is exactly '{' followed by the next record of the same process beginning \"'actor_rollout_ref':\" is joined into one record and the same frozen parser runs again. No field is inferred. Used by the runner and by collect.py.",
+      "summary": "The runner's assessment rejected a complete 100-step run because Ray split the first record of the printed Hydra configuration."
+    },
+    {
+      "action": "no execution affected; E1/E2 outcomes and their collection are unchanged",
+      "id": "defect-3",
+      "kind": "analysis only",
+      "remedy": "INSTRUMENTATION_LEVEL mapping {'external': 'ext', 'ext': 'ext', 'full': 'full'}; unit test with collector-shaped outcome records (instrumentation 'external').",
+      "summary": "ieee_resub/analysis.py e1_rows_from_outcomes used the outcome's instrumentation value ('external'/'full') while the frozen E1 estimands use the levels 'ext'/'full', so no E1 block was complete for the contrasts."
+    }
+  ],
+  "group": "ieee_resub_e3_long_restore_202611",
+  "launcher_fix": {
+    "change": "apptainer exec binds the invocation's own $SCRATCH_RUNTIME/tmp (created with the rest of the runtime and removed with it at exit) onto /tmp: --bind \"$CONTAINER_TMP:/tmp\". RESUME_FROM_PATH may also lie below $RLVRAM_SCRATCH_ROOT/preserved-checkpoints/. Nothing else changes (TMPDIR stays /r/tmp, which is the same directory). Before the trainer starts, inside the container, a per-invocation token written to $SCRATCH_RUNTIME/tmp/.rlvram-private-tmp must be visible at /tmp/.rlvram-private-tmp; otherwise the invocation stops with exit 97 (infrastructure, unresolved; never a memory outcome) and logs 'RLVRAM_PRIVATE_TMP failed'; on success it logs 'RLVRAM_PRIVATE_TMP verified'. No inherited bind targets /tmp, so the explicit bind is the only user bind of /tmp.",
+    "file": "experiments/ieee_resubmission_2026-11/launcher/run_grpo_ieee_resub.slurm",
+    "other_container_starts": "memory_tuner/capture_environment.py starts a short container that only imports torch and reads package versions and device identities; it starts no Ray, vLLM engine or ZMQ socket, so it has no shared-/tmp exchange and is unchanged."
+  },
+  "number": 1,
+  "open_observations": [
+    {
+      "observation": "tasks 3 and 4 (blocks e3-m7-code_heavy_tail-off1-r70-s632, e3-q7-gsm8k-off0-r60-s632) run under the original snapshot with the node-shared /tmp; the hung long run of task 3 is reruns[1]; any further logged instance of defect 1 is handled by a further amendment."
+    }
+  ],
+  "original_snapshot": "/mnt/proj1/fta-26-70/rlvram/src/ieee-resub-9f6faf94b472",
+  "original_source_commit": "9f6faf94b472f62f910858be838710aedb3cbc55",
+  "original_submission": {
+    "array_job": "5381354",
+    "receipt": "/mnt/proj1/fta-26-70/rlvram/protocols/e3/submission-5381354.json",
+    "state_at_amendment": "tasks 0-2 ran (task 0 completed, task 1 FAILED because of defect 2, task 2 hung in its restore because of defect 1); tasks 3 and 4 running under the original snapshot; tasks 5-11 held by the user (JobHeldUser), never started, never claimed"
+  },
+  "policy": "PLAN.md section 9: written before the rerun, hash-chained to the protocol; only a logged non-memory defect justifies a rerun; diagnosed memory outcomes and above-margin completions are never rerun; original attempts stay in the ledger; no automatic retries.",
+  "prepared_at_utc": "2026-11-10T20:03:02Z",
+  "previous_amendment_sha256": null,
+  "protocol_path": "/mnt/proj1/fta-26-70/rlvram/protocols/e3/e3_protocol.json",
+  "protocol_sha256": "f6ef9c52ddae8ef97e832e85215aa79341c29f262e00d59611e088751acd53de",
+  "reassessed_slots": [
+    {
+      "action": "collect.py takes the raw-evidence status from the fixed parser instead of the receipt status for exactly this slot and job; the receipt stays unchanged",
+      "block_id": "e3-q7-gsm8k-off1-r70-s633",
+      "defect": "defect-2",
+      "experiment_id": "e3-q7-gsm8k-off1-r70-s633-long",
+      "job_id": "5381356",
+      "period": 2,
+      "receipt_status": "unresolved",
+      "receipt_validation_error": "ValueError: Missing printed actor configuration"
+    }
+  ],
+  "reruns": [
+    {
+      "block_id": "e3-m7-code_heavy_tail-off1-r70-s631",
+      "block_index": 2,
+      "claim": "blocks/e3-m7-code_heavy_tail-off1-r70-s631-amendment-01",
+      "consequence": "the restore no longer runs in the same allocation as its source long run (5381357); restore minus uninterrupted contrasts for this configuration compare two allocations and are reported with that note",
+      "defect": "defect-1",
+      "experiment_id": "e3-m7-code_heavy_tail-off1-r70-s631-restore",
+      "original_array_task": "5381354_2",
+      "original_attempt": "/mnt/proj1/fta-26-70/rlvram/output/ieee_resub_e3_long_restore_202611/e3-m7-code_heavy_tail-off1-r70-s631-restore/attempt-5381357",
+      "original_job_id": "5381357",
+      "period": 3,
+      "required_original_status": "unresolved",
+      "restore_source": {
+        "folder": "/scratch/project/fta-26-70/rlvram/preserved-checkpoints/e3-m7-code_heavy_tail-off1-r70-s631-long-attempt-5381357/global_step_50",
+        "manifest_files": 20,
+        "manifest_record": "/mnt/proj1/fta-26-70/rlvram/output/ieee_resub_e3_long_restore_202611/e3-m7-code_heavy_tail-off1-r70-s631-restore/attempt-5381357/restore-source.json",
+        "manifest_record_sha256": "ec9b49eee0e0f119549f1e0821cacc515bd87e40b2d92b54d764390783b616f8",
+        "manifest_sha256": "2ea6bae31599728e8646e81d22a57a50f3e92f30aeedc738466264add665607b",
+        "original_folder": "/scratch/project/fta-26-70/rlvram/checkpoints/ieee_resub_e3_long_restore_202611/e3-m7-code_heavy_tail-off1-r70-s631-long/attempt-5381357/global_step_50",
+        "preserved_by": "the user, copied from the original folder while the original restore was hung, verified file by file (20/20) against the manifest record; latest_checkpointed_iteration.txt = 50 beside it",
+        "verification": "the runner requires checkpoint_manifest(folder) == the manifest record's manifest (SHA-256, size and mtime of all 20 files) before the claim, when the attempt starts (restore-source.json) and after the invocation (restore-source-post.json); collect.py re-checks both records against the original"
+      },
+      "role": "restore",
+      "settings": "the frozen matrix row, unchanged: seed 631, resume_step 50 (resume_path), steps 51-100, validation 60/80/100, checkpoints 75/100, keep 3, per-process timeout 12,600 s; one 4-GPU allocation with the frozen E3 allocation shape and wall cap"
+    },
+    {
+      "block_id": "e3-m7-code_heavy_tail-off1-r70-s632",
+      "block_index": 3,
+      "claim": "blocks/e3-m7-code_heavy_tail-off1-r70-s632-amendment-01",
+      "consequence": "the rerun long run no longer shares an allocation with its screen (period 1 of 5382462); the seed-632 screen-to-long comparison for this configuration spans two allocations and is reported with that note",
+      "defect": "defect-1",
+      "evidence": {
+        "attempt": "/mnt/proj1/fta-26-70/rlvram/output/ieee_resub_e3_long_restore_202611/e3-m7-code_heavy_tail-off1-r70-s632-long/attempt-5382462",
+        "log": "training-5382462.log: last console output 19:03:26 UTC ('Training Progress: 15/100'); no error line",
+        "partner": "e3-m7-code_heavy_tail-off1-r70-s631-restore/attempt-5381357 (reruns[0]); shared socket in defect-1 evidence",
+        "sacct": "5382462 (5381354_3) on acn10 from 19:26:24 CET (18:26:24 UTC), sharing the node with 5381357 (5381354_2, on the other four GPUs) from then on",
+        "trace": "durable records step-1..step-15 (last 19:03:22 UTC); phase marker weight_sync of step 16 from 19:04:14 UTC, 43 s before 5381357's rebuild_ipc error (19:04:57 UTC); still weight_sync at 19:44:49 UTC (GPU samples 30440/19372/30440/30420 MiB)"
+      },
+      "experiment_id": "e3-m7-code_heavy_tail-off1-r70-s632-long",
+      "original_array_task": "5381354_3",
+      "original_attempt": "/mnt/proj1/fta-26-70/rlvram/output/ieee_resub_e3_long_restore_202611/e3-m7-code_heavy_tail-off1-r70-s632-long/attempt-5382462",
+      "original_job_id": "5382462",
+      "period": 2,
+      "required_original_status": "unresolved",
+      "role": "long",
+      "settings": "the frozen matrix row, unchanged: seed 632, steps 1-100, validation 0/20/40/60/80/100, checkpoints 25/50/75/100, keep 3, per-process timeout 21,600 s; no restore source; one 4-GPU allocation with the frozen E3 allocation shape and wall cap",
+      "submit_after": "its original attempt has ended unresolved at the 21,600 s timeout (dispatched 18:33:51 UTC, so about 00:34 UTC on 11 November) and block e3-m7-code_heavy_tail-off1-r70-s632 has written summary.json"
+    }
+  ],
+  "schema": "ieee-resub-amendment-1",
+  "source_files_sha256": {
+    "experiments/ieee_resubmission_2026-11/ieee_resub/__init__.py": "6d0e98e1a7835791b3b0fac9e644720517021d473f5337efdc9a43a7c4d7020a",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/amendment.py": "e866711bc68218b4cb6b81fb364c95597cf389b3f92fe795ae950b9da3303943",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/analysis.py": "7655cf2b5b052385069215300849857ff952a6bbc64c94b662bc0dcda274071f",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/assess.py": "4f50436cb20b07d60012f734ec7cf41d5df448eee44e3b48735cebbc245714b3",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/collect.py": "a6506e9b662b24a43bfc58a2dce2e94693f9deb484926a99ac9c23b16e37b7a9",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/common.py": "0df27f9f23aa9318d8d66ddb23411c64c2f18bd0c1a163c53d06e45ff6f2a0f9",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/env.py": "5d38a450caf1151fb25c14cb1eeebb213d56b5a65fff5acc7c3c6ed41c9aa842",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/plan.py": "ec5e21d3297f7b90162d51e2a1fd800f8451f4bdfa4569b167c2da784535876a",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/render.py": "b96c7f21548aa8ed6b5c9dee93f479e180ea722b5cb0196cf79904a7d33b4f70",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/runner.py": "6ceaa777b584b39463f6f56b4f59a2fe3296cce71f4baf5e3a592f1493b0c894",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/sandbox.py": "d2f1be6bb1a649a80b4fc56e39361f13b763f8debc387aed5016431f846f58d3",
+    "experiments/ieee_resubmission_2026-11/instrumented_python_packages/ (tree)": "7bb4210dc3f7e5b8717a45968aef0bb8329c4483f18ebf2ec07eca9604961d93",
+    "experiments/ieee_resubmission_2026-11/launcher/run_grpo_ieee_resub.slurm": "b702867129b143b4b45cea279b55bb6973a425c677e1b2e490f722f9d5bc662f",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e1.slurm": "9ef179d3b9bda02906da188b8ccd9214b313ea59364dd254ce065ea71fe9b9d5",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e2.slurm": "a62465d574747c0c2ab3e7c12fe8702aca4af8211c63b20c2065c1db6779a624",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3.slurm": "72c1631833b4f1fe00a849cd89bf9e295e92a8772e0a526b1d582c9737d38908",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3_amendment.slurm": "2d412d8ba1932be8113154400d2a9ccf7d2c33bdac851fb0ba6ae6a1e447de8c",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke1.slurm": "f604f07b968dd0eafd84dd6adf98cc4171b85be21a92f8d4d340d47ae90f773c",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke2.slurm": "78765b99572f2dd00106d56b83fc29482deede4b5af9187dbf061973ddd9f62b",
+    "experiments/ieee_resubmission_2026-11/verl_patch/ieee_resub_verl.patch": "58be08197cd3efc936bd542e14ddb7e6498d0315649cd910b0a1ef5eb7baa2f4",
+    "memory_tuner/benchmark_v2_env.py": "70941accfde6adc880fa2b5c14788d83370e64200a47c705179b4bcf0263e4e3",
+    "memory_tuner/capture_environment.py": "d2a98be4ecd3aab0d1638ad91265ef9ba73413debc97801e31306b42f63e1118",
+    "memory_tuner/code_shape_reward.py": "7d6435b38fcdbcc32ca4b68e5e19c6a172f79cf59fc2b222d0fde7e8440c4b04",
+    "memory_tuner/device_contract.py": "b3f7164774e5d6ec01b8cde6dd1083823352c15ccee0cceb949cfe3022f40764",
+    "memory_tuner/durable_metrics.py": "cef0714ff9b5e5f07000bdb4d668be49d4f125b8e3eb13bdc1ee3b708e371a5a",
+    "memory_tuner/electronics_experiment.py": "eb51015d4b4fb242aed5c72246f81ff0aac7aafa410ac849904b3e1463ba7a9e",
+    "memory_tuner/electronics_failure_evidence.py": "c5a371ac79aed1745bd48ea48d077c5b48e77bec0ec45380071a3b53f543d98a",
+    "memory_tuner/gpu_monitor.py": "689b617975497b104bb90e01a8d32feed626ac26add2bbe61373cc7fe70770b4",
+    "memory_tuner/grpo_raw_evidence.py": "2430a3dcb2342693b7ada5c89bcd300fa633d2baf367b42448113abd6613d173",
+    "memory_tuner/host_memory_monitor.py": "1738c89c6497badedd94249e6d2c206414af6013670a70762842b1e4c683145a",
+    "memory_tuner/log_parser.py": "8f4e60996953f67362dcdb30de0a0d2952fba1ea12bb4b173acbbaca99259cdb",
+    "memory_tuner/resolve_hf_snapshot.py": "746c29b44ad34b4dbd129b71bf3d0d9abfd01d0993a6bb53dae1a1e47fc8b103",
+    "memory_tuner/run_matched_gpu.py": "2ea0abb78a899d8bd6c328d24574cb3e3dac48be0cb01ebd5d4eea523908637a",
+    "memory_tuner/run_offload_factorial.py": "5defe7de983c775fbd94d85c0ea426d5ec1291499908e35412ce51a651ad2734",
+    "memory_tuner/select_port_block.py": "ec72d8a1039d9365a6e86fa976c1c8b8a2b03533474b8b320bad71b245493f33",
+    "run_grpo_instrumented.slurm": "c4a53716d9c2e9c6ed835d537695f21bb86979aa90a32e7eee7709ff01fd0572"
+  },
+  "status": "recorded_before_rerun",
+  "study": "e3",
+  "times": "UTC unless marked CET (Slurm and console times on Karolina are CET = UTC+1)",
+  "unchanged": "matrix (sha256 f28ebd4ea91b18e879142de3a7b66e8a3c5067a7b225164868a39849372fda52), seeds, settings, per-process timeouts, allocation shape and wall cap, schedule, checkpoint retention, outcome definitions, estimands and PLAN.md (analysis plan sha256 8d46a333b830c03e71012b90a120f468eaf8a914f74a5fd6e7cd87f407d06c42)"
+}

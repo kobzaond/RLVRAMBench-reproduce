@@ -1,0 +1,221 @@
+{
+  "data": {
+    "data/codecontests/heavy_tail/test.parquet": {
+      "sha256": "e9d077a023de7f80aa013c5541c33b5978a43e203ce916045bc72c4fe5c62a82",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/electronics_revision_20261016/adaptation/protocol.json",
+        "benchmark/electronics_revision_20261016/reservation/protocol.json",
+        "benchmark/electronics_revision_20261016/timing/protocol.json",
+        "benchmark/estimation/protocol.json",
+        "benchmark/host_capacity/protocol.json",
+        "benchmark/offload_factorial/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "data/codecontests/heavy_tail/train.parquet": {
+      "sha256": "0bc6ec8fd7ef1618a604417faa4bb13cb9a0117dcffb75685b2c80c1da95f697",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/electronics_revision_20261016/adaptation/protocol.json",
+        "benchmark/electronics_revision_20261016/reservation/protocol.json",
+        "benchmark/electronics_revision_20261016/timing/protocol.json",
+        "benchmark/estimation/protocol.json",
+        "benchmark/host_capacity/protocol.json",
+        "benchmark/offload_factorial/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "data/codecontests/standard/test.parquet": {
+      "sha256": "07a309a6b63c4741cd20dcb542a0ef2b808fad881ede91aa84a5f0fd7304baf7",
+      "sources": [
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "data/codecontests/standard/train.parquet": {
+      "sha256": "4a9580c7fc773935866ce32f6d4b0483b0de1776325aeaba42242b919a3080af",
+      "sources": [
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "data/gsm8k/test.parquet": {
+      "sha256": "0dcd50ed32caa9d8f434d4e3ef8031bc3e49b0f823655a53be5c002e727f17dd",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/decision/protocol.json",
+        "benchmark/electronics_revision_20261016/adaptation/protocol.json",
+        "benchmark/electronics_revision_20261016/pilot/protocol.json",
+        "benchmark/electronics_revision_20261016/release/protocol.json",
+        "benchmark/electronics_revision_20261016/reservation/protocol.json",
+        "benchmark/electronics_revision_20261016/timing/protocol.json",
+        "benchmark/estimation/protocol.json",
+        "benchmark/host_capacity/protocol.json",
+        "benchmark/offload_factorial/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "data/gsm8k/train.parquet": {
+      "sha256": "8fb13a0cd8621e5fcacdee3ffe28b3a369975478ea7ab514781f3f190cba2488",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/decision/protocol.json",
+        "benchmark/electronics_revision_20261016/adaptation/protocol.json",
+        "benchmark/electronics_revision_20261016/pilot/protocol.json",
+        "benchmark/electronics_revision_20261016/release/protocol.json",
+        "benchmark/electronics_revision_20261016/reservation/protocol.json",
+        "benchmark/electronics_revision_20261016/timing/protocol.json",
+        "benchmark/estimation/protocol.json",
+        "benchmark/host_capacity/protocol.json",
+        "benchmark/offload_factorial/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "data/math/test.parquet": {
+      "sha256": "e0cb48b1e49874c71f4a02dff944eba08844067d98dc5bdc89c004644e6b597d",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/decision/protocol.json",
+        "benchmark/estimation/protocol.json",
+        "benchmark/host_capacity/protocol.json",
+        "benchmark/offload_factorial/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "data/math/train.parquet": {
+      "sha256": "4aa303577e968be6f810600730c970b14be659a9ae9072cc2afefd04d67e7cb8",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/decision/protocol.json",
+        "benchmark/estimation/protocol.json",
+        "benchmark/host_capacity/protocol.json",
+        "benchmark/offload_factorial/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    }
+  },
+  "models": {
+    "Qwen/Qwen2.5-3B-Instruct": {
+      "files_sha256": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "sources": [
+        "benchmark/electronics_revision_20261016/adaptation/protocol.json",
+        "benchmark/electronics_revision_20261016/pilot/protocol.json",
+        "benchmark/electronics_revision_20261016/release/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "files_sha256": {
+        "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+        "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+        "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+        "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+        "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+        "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/electronics_revision_20261016/reservation/protocol.json",
+        "benchmark/electronics_revision_20261016/timing/protocol.json",
+        "benchmark/offload_factorial/protocol.json"
+      ]
+    },
+    "ibm-granite/granite-3.3-2b-instruct": {
+      "files_sha256": {
+        ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+        "README.md": "dd7a9d401b703f4d6136b70b575a8070b88d173f61804dad48fccc7949afe610",
+        "added_tokens.json": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+        "config.json": "9202d328d8368958aab7dad89a8e6aa35c250b3a2eedd2d8850ee0bcceca65f6",
+        "generation_config.json": "9c95e80167f08fbeb1feba239e0749507c25d18ffab43ffa10887821eed21c38",
+        "merges.txt": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+        "model-00001-of-00002.safetensors": "12880d33c0ad4726af5cf8c07406905f9b496253c58ee46f52be8bde8ccf2254",
+        "model-00002-of-00002.safetensors": "a8757c5bf7627933e7fddbd9bab0533491b4dc0962820e0617f356ca1a379ffa",
+        "model.safetensors.index.json": "32ea3f438335d51c8e630a83898ceb23bdffd34291a0eade07474211928fa243",
+        "special_tokens_map.json": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+        "tokenizer.json": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+        "tokenizer_config.json": "f65a6a5a911424c85f157c40cfbdf06e025814c755480ba2e998d7fba1178664",
+        "vocab.json": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01"
+      },
+      "revision": "707f574c62054322f6b5b04b6d075f0a8f05e0f0",
+      "sources": [
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "microsoft/Phi-4-mini-instruct": {
+      "files_sha256": {
+        ".gitattributes": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+        "CODE_OF_CONDUCT.md": "539b1bfc810aa62738af95866bfe584d568b0dca71aebed0bd81db0bdaebade3",
+        "LICENSE": "fa8235e5b48faca34e3ca98cf4f694ef08bd216d28b58071a1f85b1d50cb814d",
+        "NOTICE.md": "a3386cc7125ec75ed34d4f0a340c47782982095e251d322e01d8ecab22d87ba4",
+        "README.md": "c4f34916182a3ee87d95d00c92847cfa687ab21dc338a577275f0c34cf0e1dfd",
+        "SECURITY.md": "7b6976eec43edfa68b79a459dd089c56b7a395916dbf1a01bd11e6d86e12128f",
+        "added_tokens.json": "d4f2aceb0f20b71dd1f4bcc7e052e4412946bf281840b8f83d39f259571af486",
+        "config.json": "ac65d86061d3d0d704ee2511fd0eb8713ef19eb6eedba17c3080a4165d5b933b",
+        "configuration_phi3.py": "ec2044b77d0b8111640ac134daa3af1f40dc552a739f8959626e7e58ea3352df",
+        "data_summary_card.md": "470514f8d8408e1254c9487401dc4d7d2edb4e08f0453f7bbfb5e01dbb976456",
+        "generation_config.json": "3e3f48753753f92d2b958679151861d4fd7bf26e4dfc41fd47056116c4914dcd",
+        "merges.txt": "856ce61180bb689282eed6b3a6838bb1f438399be23aefe9d20eb379791fb4ad",
+        "model-00001-of-00002.safetensors": "bc703090b63eda16f639fa4de7ac54635c23105ab1da2f6ec4d3403151d38ee6",
+        "model-00002-of-00002.safetensors": "7ff79b9d2d31076bac2663393451f6530f4fc8ca49b09002116c92c373dba983",
+        "model.safetensors.index.json": "613a98d5e5716ca96fa75931abedc9c5a5d95f488ce4d62df71e639fe3ac6c59",
+        "modeling_phi3.py": "d5fd551a7fe759b1d25e5b16b5012aa98b9b8bd400d26c7ee69c0090a245d6cd",
+        "sample_finetune.py": "ec9ead444318c31095e5be48ec4b17ec031134836dd7906a73186265c323348a",
+        "special_tokens_map.json": "aff38493227d813e29fcf8406e8e90062f1f031aa47d589325e9c31d89ac7cc3",
+        "tokenizer.json": "382cc235b56c725945e149cc25f191da667c836655efd0857b004320e90e91ea",
+        "tokenizer_config.json": "9c9b6bc0c94d95f69f826c41069a3e8b387ac3ced89601d201886e99240ac9db",
+        "vocab.json": "6cb65a857824fa6615bb1782d95d882617a8bbce1da0317118586b36f39e98bd"
+      },
+      "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "sources": [
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ]
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+      "files_sha256": {
+        "README.md": "3166974023134d972368b585d730fa5f70100873684f90a10a773b20e80b30ba",
+        "config.json": "affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99",
+        "generation_config.json": "b4669f1b8f4185324bd9b12a69e85a1ad2289bc48111ef739cfaaea3bba6b0a9",
+        "model-00001-of-00003.safetensors": "ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19",
+        "model-00002-of-00003.safetensors": "8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0",
+        "model-00003-of-00003.safetensors": "905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca",
+        "model.safetensors.index.json": "e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016",
+        "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+        "tokenizer.json": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49",
+        "tokenizer.model": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+        "tokenizer.model.v3": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+        "tokenizer_config.json": "0533dec9cfe319163801b6618d0f3ec9cfa126b6288e3df5deca6e32acb09cd2"
+      },
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "sources": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/electronics_revision_20261016/reservation/protocol.json",
+        "benchmark/electronics_revision_20261016/timing/protocol.json",
+        "benchmark/offload_factorial/protocol.json"
+      ]
+    }
+  }
+}

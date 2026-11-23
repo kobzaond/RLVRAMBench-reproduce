@@ -1,0 +1,6 @@
+fraction,limit_mib,Qwen,Qwen_all_workloads,Phi,Phi_all_workloads,Granite,Granite_all_workloads,paper,match
+0.9,36864,c2,c2,c2,c2,c3 (math c2),c2,c2 / c2 / c3 (math c2),True
+0.925,37888,c3,c3,c2,c2,c3 (math c2),c2,c3 / c2 / c3 (math c2),True
+0.95,38912,c3,c3,c2,c2,c3,c3,c3 / c2 / c3,True
+0.975,39936,c3,c3,c2 (gsm8k c3),c2,c3,c3,c3 / c2 (gsm8k c3) / c3,True
+1,40960,c3,c3,c3,c3,c4,c4,c3 / c3 / c4,True

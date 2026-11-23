@@ -1,0 +1,279 @@
+{
+  "folds": {
+    "granite33": {
+      "guard_errors": 1,
+      "guard_interval": [
+        699.3691406249982,
+        2077.664062499998
+      ],
+      "guard_log_overhead_mib": 1800.5074479166688,
+      "guard_overhead_mib": 1388.5166015624982,
+      "runtime_positives": 3,
+      "startup_positives": 13
+    },
+    "phi4": {
+      "guard_errors": 1,
+      "guard_interval": [
+        1096.656250000001,
+        2077.664062499998
+      ],
+      "guard_log_overhead_mib": 1717.208156250003,
+      "guard_overhead_mib": 1587.1601562499995,
+      "runtime_positives": 3,
+      "startup_positives": 9
+    },
+    "qwen25": {
+      "guard_errors": 0,
+      "guard_interval": [
+        1096.656250000001,
+        3144.656249999998
+      ],
+      "guard_log_overhead_mib": 1811.4248437500028,
+      "guard_overhead_mib": 2120.6562499999995,
+      "runtime_positives": 0,
+      "startup_positives": 12
+    }
+  },
+  "guard_fit": {
+    "errors": 1,
+    "false_alarms": 0,
+    "interval_high_mib": 2077.664062499998,
+    "interval_low_mib": 1096.656250000001,
+    "missed": 1,
+    "overhead_mib": 1587.1601562499995
+  },
+  "guard_fit_error_table": [
+    {
+      "errors": 17,
+      "false_alarms": 0,
+      "high": -1348.630859374999,
+      "low": -Infinity,
+      "missed": 17
+    },
+    {
+      "errors": 13,
+      "false_alarms": 0,
+      "high": 29.66406250000091,
+      "low": -1348.630859374999,
+      "missed": 13
+    },
+    {
+      "errors": 9,
+      "false_alarms": 0,
+      "high": 699.3691406249982,
+      "low": 29.66406250000091,
+      "missed": 9
+    },
+    {
+      "errors": 5,
+      "false_alarms": 0,
+      "high": 1096.656250000001,
+      "low": 699.3691406249982,
+      "missed": 5
+    },
+    {
+      "errors": 1,
+      "false_alarms": 0,
+      "high": 2077.664062499998,
+      "low": 1096.656250000001,
+      "missed": 1
+    },
+    {
+      "errors": 3,
+      "false_alarms": 3,
+      "high": 3144.656249999998,
+      "low": 2077.664062499998,
+      "missed": 0
+    },
+    {
+      "errors": 7,
+      "false_alarms": 7,
+      "high": 4445.684570312498,
+      "low": 3144.656249999998,
+      "missed": 0
+    },
+    {
+      "errors": 9,
+      "false_alarms": 9,
+      "high": 4795.369140625002,
+      "low": 4445.684570312498,
+      "missed": 0
+    },
+    {
+      "errors": 13,
+      "false_alarms": 13,
+      "high": 5134.832031249998,
+      "low": 4795.369140625002,
+      "missed": 0
+    },
+    {
+      "errors": 15,
+      "false_alarms": 15,
+      "high": 5668.328124999998,
+      "low": 5134.832031249998,
+      "missed": 0
+    },
+    {
+      "errors": 17,
+      "false_alarms": 17,
+      "high": 6173.664062500002,
+      "low": 5668.328124999998,
+      "missed": 0
+    },
+    {
+      "errors": 21,
+      "false_alarms": 21,
+      "high": 7240.656250000002,
+      "low": 6173.664062500002,
+      "missed": 0
+    },
+    {
+      "errors": 25,
+      "false_alarms": 25,
+      "high": 8541.684570312502,
+      "low": 7240.656250000002,
+      "missed": 0
+    },
+    {
+      "errors": 27,
+      "false_alarms": 27,
+      "high": 8891.369140625,
+      "low": 8541.684570312502,
+      "missed": 0
+    },
+    {
+      "errors": 31,
+      "false_alarms": 31,
+      "high": 9230.832031250002,
+      "low": 8891.369140625,
+      "missed": 0
+    },
+    {
+      "errors": 33,
+      "false_alarms": 33,
+      "high": 9764.328125000002,
+      "low": 9230.832031250002,
+      "missed": 0
+    },
+    {
+      "errors": 35,
+      "false_alarms": 35,
+      "high": 10269.6640625,
+      "low": 9764.328125000002,
+      "missed": 0
+    },
+    {
+      "errors": 39,
+      "false_alarms": 39,
+      "high": 11336.65625,
+      "low": 10269.6640625,
+      "missed": 0
+    },
+    {
+      "errors": 43,
+      "false_alarms": 43,
+      "high": 12637.6845703125,
+      "low": 11336.65625,
+      "missed": 0
+    },
+    {
+      "errors": 45,
+      "false_alarms": 45,
+      "high": 13326.83203125,
+      "low": 12637.6845703125,
+      "missed": 0
+    },
+    {
+      "errors": 47,
+      "false_alarms": 47,
+      "high": 13860.328125,
+      "low": 13326.83203125,
+      "missed": 0
+    },
+    {
+      "errors": 49,
+      "false_alarms": 49,
+      "high": 22528.0,
+      "low": 13860.328125,
+      "missed": 0
+    },
+    {
+      "errors": 61,
+      "false_alarms": 61,
+      "high": 28672.0,
+      "low": 22528.0,
+      "missed": 0
+    },
+    {
+      "errors": 73,
+      "false_alarms": 73,
+      "high": Infinity,
+      "low": 28672.0,
+      "missed": 0
+    }
+  ],
+  "guard_log_overhead_mib": 1783.7766484375024,
+  "pool_configurations": 90,
+  "pool_counts": {
+    "above_margin|": 10,
+    "memory_failure|runtime_generation": 2,
+    "memory_failure|runtime_weight_sync": 1,
+    "memory_failure|startup": 17,
+    "within_margin|": 60
+  },
+  "runtime_logit_exploratory": {
+    "n": 73,
+    "positives": 3,
+    "training_errors": 4
+  },
+  "stage1_startup_positive_subtypes": {
+    "startup_allocation_oom": 1,
+    "startup_budget_rejection": 16
+  },
+  "stage1_startup_positives": 17,
+  "stage2_decision": "Too few positives (3 configurations, one model, one level, two GPUs) for a classifier; primary variants use the rule predicted peak > capacity. The exploratory logistic stage 2 is reported only as a sensitivity.",
+  "stage2_runtime_positive_configurations": [
+    {
+      "configuration_id": "cfg-49d9bccfe873f5c6",
+      "failure_type": "runtime_generation",
+      "gpu_count": "2",
+      "level": "c4",
+      "model": "Qwen-3B",
+      "workload": "longer_prompt_code"
+    },
+    {
+      "configuration_id": "cfg-5839ccf95c2c1722",
+      "failure_type": "runtime_weight_sync",
+      "gpu_count": "2",
+      "level": "c4",
+      "model": "Qwen-3B",
+      "workload": "gsm8k"
+    },
+    {
+      "configuration_id": "cfg-ea5a23a40ad5ca50",
+      "failure_type": "runtime_generation",
+      "gpu_count": "2",
+      "level": "c4",
+      "model": "Qwen-3B",
+      "workload": "code_standard"
+    }
+  ],
+  "stage2_runtime_positives": 3,
+  "stage3_regression_training_configurations": 70,
+  "startup_logit": {
+    "coefficients": {
+      "actor_shards_gib": 0.8418,
+      "adapter_optimizer_gib": 0.5455,
+      "checkpoint_boundary_volume_gib": 0.8339,
+      "generation_budget_gib": 2.8808,
+      "generation_replica_gib": 0.0887,
+      "largest_unit_proxy_gib": 0.1083,
+      "resident_actor_shards_gib": 0.4991,
+      "vocabulary_output_volume_gib": -0.1248
+    },
+    "intercept": -3.0468472639002107,
+    "n": 90,
+    "positives": 17,
+    "training_errors": 7
+  }
+}

@@ -1,0 +1,73 @@
+study,restriction,model_family,dataset,case,pairs_available,pairs_kept,mean_actor_contrast_kept_mib,mean_actor_contrast_all_mib,mean_whole_run_contrast_kept_mib,min_actor_contrast_kept_mib
+original_factorial,all pairs,granite33_2b,gsm8k,Granite / GSM8K,6,6,1498.67,1498.67,-10,1260
+original_factorial,all pairs,granite33_2b,math,Granite / MATH,6,6,1892.67,1892.67,-26.6667,1668
+original_factorial,all pairs,granite33_2b,code_standard,Granite / Standard code,6,6,2244.33,2244.33,2.66667,1996
+original_factorial,all pairs,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,6,6,3675,3675,-41.6667,3352
+original_factorial,all pairs,phi4_mini,gsm8k,Phi / GSM8K,6,6,2055.33,2055.33,10,764
+original_factorial,all pairs,phi4_mini,math,Phi / MATH,6,6,4629.67,4629.67,-12.6667,3968
+original_factorial,all pairs,phi4_mini,code_standard,Phi / Standard code,6,6,5273,5273,18.6667,4438
+original_factorial,all pairs,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,6,6,8826.67,8826.67,41.6667,7208
+original_factorial,all pairs,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,6,6,2664.67,2664.67,0,2398
+original_factorial,all pairs,qwen25_3b,math,Qwen2.5-3B / MATH,6,6,3821.33,3821.33,0,3242
+original_factorial,all pairs,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,6,6,4878.33,4878.33,-63,4260
+original_factorial,all pairs,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,6,6,6301,6301,-286.333,5358
+original_factorial,|rel total-token diff| < 5%,granite33_2b,gsm8k,Granite / GSM8K,6,4,1289.5,1498.67,-10,1260
+original_factorial,|rel total-token diff| < 5%,granite33_2b,math,Granite / MATH,6,6,1892.67,1892.67,-26.6667,1668
+original_factorial,|rel total-token diff| < 5%,granite33_2b,code_standard,Granite / Standard code,6,6,2244.33,2244.33,2.66667,1996
+original_factorial,|rel total-token diff| < 5%,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,6,6,3675,3675,-41.6667,3352
+original_factorial,|rel total-token diff| < 5%,phi4_mini,gsm8k,Phi / GSM8K,6,4,2571,2055.33,10,2286
+original_factorial,|rel total-token diff| < 5%,phi4_mini,math,Phi / MATH,6,6,4629.67,4629.67,-12.6667,3968
+original_factorial,|rel total-token diff| < 5%,phi4_mini,code_standard,Phi / Standard code,6,3,4958,5273,-53.3333,4444
+original_factorial,|rel total-token diff| < 5%,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,6,5,8986,8826.67,9.2,7208
+original_factorial,|rel total-token diff| < 5%,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,6,6,2664.67,2664.67,0,2398
+original_factorial,|rel total-token diff| < 5%,qwen25_3b,math,Qwen2.5-3B / MATH,6,6,3821.33,3821.33,0,3242
+original_factorial,|rel total-token diff| < 5%,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,6,5,4970,4878.33,-20,4260
+original_factorial,|rel total-token diff| < 5%,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,6,5,6084.4,6301,-343.6,5358
+original_factorial,|rel total-token diff| < 2%,granite33_2b,gsm8k,Granite / GSM8K,6,2,1280,1498.67,-10,1260
+original_factorial,|rel total-token diff| < 2%,granite33_2b,math,Granite / MATH,6,5,1842,1892.67,-24,1668
+original_factorial,|rel total-token diff| < 2%,granite33_2b,code_standard,Granite / Standard code,6,2,2213,2244.33,-64,2200
+original_factorial,|rel total-token diff| < 2%,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,6,4,3683,3675,-63,3358
+original_factorial,|rel total-token diff| < 2%,phi4_mini,gsm8k,Phi / GSM8K,6,4,2571,2055.33,10,2286
+original_factorial,|rel total-token diff| < 2%,phi4_mini,math,Phi / MATH,6,5,4762,4629.67,-15.2,4514
+original_factorial,|rel total-token diff| < 2%,phi4_mini,code_standard,Phi / Standard code,6,1,5810,5273,26,5810
+original_factorial,|rel total-token diff| < 2%,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,6,2,9184,8826.67,54,8648
+original_factorial,|rel total-token diff| < 2%,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,6,6,2664.67,2664.67,0,2398
+original_factorial,|rel total-token diff| < 2%,qwen25_3b,math,Qwen2.5-3B / MATH,6,5,3857.2,3821.33,0,3242
+original_factorial,|rel total-token diff| < 2%,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,6,3,5141.33,4878.33,-62.6667,4780
+original_factorial,|rel total-token diff| < 2%,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,6,4,6131,6301,-424,5358
+original_factorial,|rel total-token diff| < 1%,granite33_2b,gsm8k,Granite / GSM8K,6,1,1260,1498.67,-20,1260
+original_factorial,|rel total-token diff| < 1%,granite33_2b,math,Granite / MATH,6,3,1872,1892.67,-20,1782
+original_factorial,|rel total-token diff| < 1%,granite33_2b,code_standard,Granite / Standard code,6,2,2213,2244.33,-64,2200
+original_factorial,|rel total-token diff| < 1%,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,6,2,3568,3675,-109,3358
+original_factorial,|rel total-token diff| < 1%,phi4_mini,gsm8k,Phi / GSM8K,6,3,2350,2055.33,13.3333,2286
+original_factorial,|rel total-token diff| < 1%,phi4_mini,math,Phi / MATH,6,2,4743,4629.67,-31,4684
+original_factorial,|rel total-token diff| < 1%,phi4_mini,code_standard,Phi / Standard code,6,0,,5273,,
+original_factorial,|rel total-token diff| < 1%,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,6,0,,8826.67,,
+original_factorial,|rel total-token diff| < 1%,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,6,3,2601.33,2664.67,0,2546
+original_factorial,|rel total-token diff| < 1%,qwen25_3b,math,Qwen2.5-3B / MATH,6,5,3857.2,3821.33,0,3242
+original_factorial,|rel total-token diff| < 1%,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,6,2,5322,4878.33,-94,4920
+original_factorial,|rel total-token diff| < 1%,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,6,4,6131,6301,-424,5358
+original_factorial,|rel response-token diff| < 5%,granite33_2b,gsm8k,Granite / GSM8K,6,3,1294.67,1498.67,-6.66667,1260
+original_factorial,|rel response-token diff| < 5%,granite33_2b,math,Granite / MATH,6,6,1892.67,1892.67,-26.6667,1668
+original_factorial,|rel response-token diff| < 5%,granite33_2b,code_standard,Granite / Standard code,6,2,2213,2244.33,-64,2200
+original_factorial,|rel response-token diff| < 5%,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,6,4,3683,3675,-63,3358
+original_factorial,|rel response-token diff| < 5%,phi4_mini,gsm8k,Phi / GSM8K,6,4,2571,2055.33,10,2286
+original_factorial,|rel response-token diff| < 5%,phi4_mini,math,Phi / MATH,6,5,4762,4629.67,-15.2,4514
+original_factorial,|rel response-token diff| < 5%,phi4_mini,code_standard,Phi / Standard code,6,1,5810,5273,26,5810
+original_factorial,|rel response-token diff| < 5%,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,6,2,9184,8826.67,54,8648
+original_factorial,|rel response-token diff| < 5%,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,6,6,2664.67,2664.67,0,2398
+original_factorial,|rel response-token diff| < 5%,qwen25_3b,math,Qwen2.5-3B / MATH,6,6,3821.33,3821.33,0,3242
+original_factorial,|rel response-token diff| < 5%,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,6,4,5147.5,4878.33,-25,4780
+original_factorial,|rel response-token diff| < 5%,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,6,4,6131,6301,-424,5358
+original_factorial,|rel response-token diff| < 2%,granite33_2b,gsm8k,Granite / GSM8K,6,2,1280,1498.67,-10,1260
+original_factorial,|rel response-token diff| < 2%,granite33_2b,math,Granite / MATH,6,5,1842,1892.67,-24,1668
+original_factorial,|rel response-token diff| < 2%,granite33_2b,code_standard,Granite / Standard code,6,0,,2244.33,,
+original_factorial,|rel response-token diff| < 2%,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,6,1,3778,3675,-208,3778
+original_factorial,|rel response-token diff| < 2%,phi4_mini,gsm8k,Phi / GSM8K,6,3,2350,2055.33,13.3333,2286
+original_factorial,|rel response-token diff| < 2%,phi4_mini,math,Phi / MATH,6,3,4687.33,4629.67,-94,4576
+original_factorial,|rel response-token diff| < 2%,phi4_mini,code_standard,Phi / Standard code,6,0,,5273,,
+original_factorial,|rel response-token diff| < 2%,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,6,0,,8826.67,,
+original_factorial,|rel response-token diff| < 2%,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,6,3,2601.33,2664.67,0,2546
+original_factorial,|rel response-token diff| < 2%,qwen25_3b,math,Qwen2.5-3B / MATH,6,5,3857.2,3821.33,0,3242
+original_factorial,|rel response-token diff| < 2%,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,6,2,5322,4878.33,-94,4920
+original_factorial,|rel response-token diff| < 2%,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,6,4,6131,6301,-424,5358

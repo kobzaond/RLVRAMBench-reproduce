@@ -1,0 +1,12 @@
+panel,failure_kind,diagnosis,terminal_phase,category,runs,configurations
+independent_control,rollout_init_memory,startup_budget_rejection,,startup,36,12
+pool,rollout_init_memory,startup_allocation_oom,initializing,startup,3,1
+pool,rollout_init_memory,startup_budget_rejection,initializing,startup,48,16
+pool,rollout_oom,rollout_oom,rollout,runtime_generation,6,2
+pool,weight_sync_oom,weight_sync_oom,weight_sync,runtime_weight_sync,3,1
+qwen7b_host,rollout_init_memory,,training,startup,9,3
+qwen7b_original,rollout_init_memory,,training,startup,23,9
+replication,rollout_init_memory,,,startup,54,18
+replication,weight_sync_oom,,,runtime_weight_sync,18,6
+reservation,rollout_init_memory,rollout_oom,rollout,runtime_generation,3,1
+reservation,rollout_init_memory,startup_budget_rejection,initializing,startup,18,6

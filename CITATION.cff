@@ -1,15 +1,27 @@
 cff-version: 1.2.0
-message: "Please cite the RLVRAMBench evidence release and associated memory-feasibility measurement study."
+message: "Please cite the RLVRAMBench dataset release (version rlvrambench-2026-11) and this reproduction code."
 type: software
 title: "RLVRAMBench: memory-feasibility measurement evidence and reproduction code"
-version: "2026.09.15"
-date-released: "2026-09-15"
+version: "rlvrambench-2026-11"
+# Set to the publication date (YYYY-MM-DD) when the tag is pushed.
+date-released: "2026-11-23"
 license: MIT
 authors:
   - family-names: Kobza
-    given-names: Ondřej
+    given-names: Ondrej
     orcid: "https://orcid.org/0000-0002-0529-9860"
-  - family-names: Šedivý
-    given-names: Jan
-    orcid: "https://orcid.org/0000-0003-0626-2303"
 repository-code: "https://github.com/kobzaond/RLVRAMBench-reproduce"
+url: "https://huggingface.co/datasets/kobzaond/RLVRAMBench"
+# Replace with the DOI minted for the Hugging Face revision tagged rlvrambench-2026-11.
+doi: "10.57967/hf/TO-BE-MINTED"
+references:
+  - type: dataset
+    title: "RLVRAMBench"
+    version: "rlvrambench-2026-11"
+    authors:
+      - family-names: Kobza
+        given-names: Ondrej
+        orcid: "https://orcid.org/0000-0002-0529-9860"
+    repository: "https://huggingface.co/datasets/kobzaond/RLVRAMBench"
+    # Replace with the same DOI as above.
+    doi: "10.57967/hf/TO-BE-MINTED"

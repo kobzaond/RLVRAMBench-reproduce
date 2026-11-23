@@ -1,9 +1,10 @@
-# Submission data dictionary
+# Data dictionary of the later cohorts
 
-Version: `electronics-submission-2026-10-23-r2`.
+Version: `rlvrambench-2026-11`.
 The original [data dictionary](DATA_DICTIONARY.md) documents the historical
 benchmark and remains unchanged where it is bound to earlier source hashes.
-This document covers the submission extensions and their relationships.
+This document covers the later cohorts and their relationships. The operating
+limit and the shorthand `safe` are defined in `DATA_DICTIONARY.md`.
 `verification/dataset-views.json` lists every viewer configuration, its
 source CSV, row count, and exact column names.
 
@@ -107,10 +108,42 @@ additional reservation/activation terms, and empirical references.
 Applying training-state estimators to colocated RL is outside their native
 scope; these rows are not evidence of estimator accuracy on every RL stack.
 
+## Revision experiments E1–E3: `revision_2026_11/results/`
+
+One directory per study (`e1` controlled-length experiment, `e2` near-boundary
+repetitions, `e3` 7B duration and restore test; `smoke1`/`smoke2` are
+development gates excluded from every estimate). `outcomes.csv` and
+`outcomes.json` hold one row per planned slot with the frozen matrix settings
+and the reassessed `status` (`within_margin`, `above_margin`, `memory_failure`,
+`unresolved`, or `not_launched`); nothing is replaced. JSON-valued columns of
+the CSV (for example `stage_peaks_mib`, `step_peaks_mib`, `shape_signature`) are
+serialized JSON text. `completed_peak_mib` is the whole-run per-device peak of
+a completed slot; stage, validation, checkpoint, and checkpoint-load peaks are
+separate fields. `raw_path` keeps the cluster location of the invocation
+directory inside the revision archive (`/mnt/proj1/fta-26-70/rlvram/output/...`
+corresponds to `output/...`). `e3/attempts.csv` lists every launched attempt
+(30), including the two original attempts replaced under amendment A7 by
+reruns (`slot_outcome` marks the attempt that defines the slot).
+`summary.json` gives the protocol hash, source commit, state counts, and, for
+E3, the amendment hash and receipt/raw reassessments. `analysis.json` holds the
+frozen estimands: E1 within-block batch contrasts by instrumentation level and
+the logging interaction; E2 ten-run labels with exact (Clopper–Pearson)
+intervals and minimum headroom; E3 screen/long label agreement, later growth,
+validation and checkpoint peaks, and restore-minus-uninterrupted peaks.
+
+## Retrospective CPU re-analyses: `revision_2026_11/cpu_reanalyses/`
+
+Reference outputs of the analyses C1 (realized work behind the micro-batch
+contrast), C2/C3/C8 (failure-aware hurdle predictors, coverage refit, margin
+sensitivity), and C4–C6 (eligibility-rule sensitivity, case-level
+uncertainty, GPU time in budgeted admission). They were written after the
+outcomes were known and are diagnostics, not frozen predictions. Scripts and
+their environment are in the code repository (`revision_2026_11/cpu_reanalyses/`).
+
 ## Frozen evidence and historical snapshots
 
-`release.json` and `MANIFEST.sha256` identify the submission files and the
-four raw-evidence archives. Every archive has its own evidence inventory
+`release.json` and `MANIFEST.sha256` identify the files of this version and the
+five raw-evidence archives. Every archive has its own evidence inventory
 and SHA-256 sidecar. The old `electronics_revision_2026_10/` directory and
 earlier release metadata are preserved for history and are not alternate
-submission targets. Use the root-level paths exposed by the current card.
+versions of this release. Use the root-level paths exposed by the current card.

@@ -1,0 +1,253 @@
+{
+  "account": "FTA-26-70",
+  "allocation_gpus": 4,
+  "blocks": 10,
+  "capacity_mib": 40960,
+  "caps": {
+    "allocation_gpus": 4,
+    "array_parallelism": 3,
+    "cpus": 64,
+    "mem": "384G",
+    "wall_seconds": 6000
+  },
+  "container": {
+    "name": "verl-vllm018-dev1.sif",
+    "sha256": "3dc581ca780cd19d565445b8a02e5daa98b350b3d2116d4d64476a64a2614912",
+    "torch": "2.10.0+cu129",
+    "vllm": "0.18.0"
+  },
+  "created_at_utc": "2026-11-10T20:25:36.141576+00:00",
+  "data_root": "/mnt/proj1/fta-26-70/rlvram/data",
+  "data_sha256": {
+    "data/gsm8k/test.parquet": "0dcd50ed32caa9d8f434d4e3ef8031bc3e49b0f823655a53be5c002e727f17dd",
+    "data/gsm8k/train.parquet": "8fb13a0cd8621e5fcacdee3ffe28b3a369975478ea7ab514781f3f190cba2488",
+    "data/math/test.parquet": "e0cb48b1e49874c71f4a02dff944eba08844067d98dc5bdc89c004644e6b597d",
+    "data/math/train.parquet": "4aa303577e968be6f810600730c970b14be659a9ae9072cc2afefd04d67e7cb8"
+  },
+  "design": {
+    "configuration_symbols": [
+      "q3-gsm8k-rel-r65",
+      "g2-math-c3",
+      "p4-gsm8k-c3",
+      "q7-gsm8k-off0-r60"
+    ],
+    "order_seed": 2026111002,
+    "position_counts": {
+      "g2-math-c3": [
+        3,
+        2,
+        3,
+        2
+      ],
+      "p4-gsm8k-c3": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "q3-gsm8k-rel-r65": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "q7-gsm8k-off0-r60": [
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    "randomization": "Williams 4x4 rows over (a,b,c,d); rows 0-3 used twice plus two distinct extra rows drawn with the order seed (10 blocks); block order shuffled.",
+    "row_assignments": {
+      "611": 0,
+      "612": 3,
+      "613": 1,
+      "614": 0,
+      "615": 2,
+      "616": 2,
+      "617": 1,
+      "618": 2,
+      "619": 1,
+      "620": 3
+    },
+    "williams_rows": [
+      [
+        0,
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        3
+      ],
+      [
+        2,
+        3,
+        1,
+        0
+      ],
+      [
+        3,
+        0,
+        2,
+        1
+      ]
+    ]
+  },
+  "development": false,
+  "failure_policy": "Only diagnosed GPU-memory errors (OOM or startup rejection) are memory failures; timeouts, host OOM and missing evidence stay unresolved.",
+  "group": "ieee_resub_e2_boundary_repeats_202611",
+  "margin_mib": 38912,
+  "matrix_sha256": "3e3a4722cfc571a2c4bbcb997c798488822003447012bff3a70190f96aa145ff",
+  "measurement": "Per-task-device NVML every 100 ms; host stage markers are not allocation ownership.",
+  "model_cache": {
+    "Qwen/Qwen2.5-3B-Instruct": {
+      "expected_from": [
+        "benchmark/electronics_revision_20261016/adaptation/protocol.json",
+        "benchmark/electronics_revision_20261016/pilot/protocol.json",
+        "benchmark/electronics_revision_20261016/release/protocol.json",
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ],
+      "files_sha256": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "path": "/mnt/proj1/fta-26-70/rlvram/runtime/kobzaond/cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "expected_from": [
+        "benchmark/completion_replication/protocol.json",
+        "benchmark/completion_replication_initial/protocol.json",
+        "benchmark/electronics_revision_20261016/reservation/protocol.json",
+        "benchmark/electronics_revision_20261016/timing/protocol.json",
+        "benchmark/offload_factorial/protocol.json"
+      ],
+      "files_sha256": {
+        "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+        "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+        "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+        "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+        "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+        "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "path": "/mnt/proj1/fta-26-70/rlvram/runtime/kobzaond/cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+    },
+    "ibm-granite/granite-3.3-2b-instruct": {
+      "expected_from": [
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ],
+      "files_sha256": {
+        ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+        "README.md": "dd7a9d401b703f4d6136b70b575a8070b88d173f61804dad48fccc7949afe610",
+        "added_tokens.json": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+        "config.json": "9202d328d8368958aab7dad89a8e6aa35c250b3a2eedd2d8850ee0bcceca65f6",
+        "generation_config.json": "9c95e80167f08fbeb1feba239e0749507c25d18ffab43ffa10887821eed21c38",
+        "merges.txt": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+        "model-00001-of-00002.safetensors": "12880d33c0ad4726af5cf8c07406905f9b496253c58ee46f52be8bde8ccf2254",
+        "model-00002-of-00002.safetensors": "a8757c5bf7627933e7fddbd9bab0533491b4dc0962820e0617f356ca1a379ffa",
+        "model.safetensors.index.json": "32ea3f438335d51c8e630a83898ceb23bdffd34291a0eade07474211928fa243",
+        "special_tokens_map.json": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+        "tokenizer.json": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+        "tokenizer_config.json": "f65a6a5a911424c85f157c40cfbdf06e025814c755480ba2e998d7fba1178664",
+        "vocab.json": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01"
+      },
+      "path": "/mnt/proj1/fta-26-70/rlvram/runtime/kobzaond/cache/huggingface/hub/models--ibm-granite--granite-3.3-2b-instruct/snapshots/707f574c62054322f6b5b04b6d075f0a8f05e0f0",
+      "revision": "707f574c62054322f6b5b04b6d075f0a8f05e0f0"
+    },
+    "microsoft/Phi-4-mini-instruct": {
+      "expected_from": [
+        "benchmark/replication_control/replication_control_execution_seal.json"
+      ],
+      "files_sha256": {
+        ".gitattributes": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+        "CODE_OF_CONDUCT.md": "539b1bfc810aa62738af95866bfe584d568b0dca71aebed0bd81db0bdaebade3",
+        "LICENSE": "fa8235e5b48faca34e3ca98cf4f694ef08bd216d28b58071a1f85b1d50cb814d",
+        "NOTICE.md": "a3386cc7125ec75ed34d4f0a340c47782982095e251d322e01d8ecab22d87ba4",
+        "README.md": "c4f34916182a3ee87d95d00c92847cfa687ab21dc338a577275f0c34cf0e1dfd",
+        "SECURITY.md": "7b6976eec43edfa68b79a459dd089c56b7a395916dbf1a01bd11e6d86e12128f",
+        "added_tokens.json": "d4f2aceb0f20b71dd1f4bcc7e052e4412946bf281840b8f83d39f259571af486",
+        "config.json": "ac65d86061d3d0d704ee2511fd0eb8713ef19eb6eedba17c3080a4165d5b933b",
+        "configuration_phi3.py": "ec2044b77d0b8111640ac134daa3af1f40dc552a739f8959626e7e58ea3352df",
+        "data_summary_card.md": "470514f8d8408e1254c9487401dc4d7d2edb4e08f0453f7bbfb5e01dbb976456",
+        "generation_config.json": "3e3f48753753f92d2b958679151861d4fd7bf26e4dfc41fd47056116c4914dcd",
+        "merges.txt": "856ce61180bb689282eed6b3a6838bb1f438399be23aefe9d20eb379791fb4ad",
+        "model-00001-of-00002.safetensors": "bc703090b63eda16f639fa4de7ac54635c23105ab1da2f6ec4d3403151d38ee6",
+        "model-00002-of-00002.safetensors": "7ff79b9d2d31076bac2663393451f6530f4fc8ca49b09002116c92c373dba983",
+        "model.safetensors.index.json": "613a98d5e5716ca96fa75931abedc9c5a5d95f488ce4d62df71e639fe3ac6c59",
+        "modeling_phi3.py": "d5fd551a7fe759b1d25e5b16b5012aa98b9b8bd400d26c7ee69c0090a245d6cd",
+        "sample_finetune.py": "ec9ead444318c31095e5be48ec4b17ec031134836dd7906a73186265c323348a",
+        "special_tokens_map.json": "aff38493227d813e29fcf8406e8e90062f1f031aa47d589325e9c31d89ac7cc3",
+        "tokenizer.json": "382cc235b56c725945e149cc25f191da667c836655efd0857b004320e90e91ea",
+        "tokenizer_config.json": "9c9b6bc0c94d95f69f826c41069a3e8b387ac3ced89601d201886e99240ac9db",
+        "vocab.json": "6cb65a857824fa6615bb1782d95d882617a8bbce1da0317118586b36f39e98bd"
+      },
+      "path": "/mnt/proj1/fta-26-70/rlvram/runtime/kobzaond/cache/huggingface/hub/models--microsoft--Phi-4-mini-instruct/snapshots/cfbefacb99257ffa30c83adab238a50856ac3083",
+      "revision": "cfbefacb99257ffa30c83adab238a50856ac3083"
+    }
+  },
+  "no_automatic_retries": true,
+  "partition": "qgpu",
+  "planned_invocations": 40,
+  "predictions": null,
+  "replacement_policy": "No automatic retries or replacements; any rerun needs a written amendment first.",
+  "schema_version": 1,
+  "source_files_sha256": {
+    "experiments/ieee_resubmission_2026-11/ieee_resub/__init__.py": "6d0e98e1a7835791b3b0fac9e644720517021d473f5337efdc9a43a7c4d7020a",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/amendment.py": "e866711bc68218b4cb6b81fb364c95597cf389b3f92fe795ae950b9da3303943",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/analysis.py": "7655cf2b5b052385069215300849857ff952a6bbc64c94b662bc0dcda274071f",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/assess.py": "4f50436cb20b07d60012f734ec7cf41d5df448eee44e3b48735cebbc245714b3",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/collect.py": "a6506e9b662b24a43bfc58a2dce2e94693f9deb484926a99ac9c23b16e37b7a9",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/common.py": "0df27f9f23aa9318d8d66ddb23411c64c2f18bd0c1a163c53d06e45ff6f2a0f9",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/env.py": "5d38a450caf1151fb25c14cb1eeebb213d56b5a65fff5acc7c3c6ed41c9aa842",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/plan.py": "ec5e21d3297f7b90162d51e2a1fd800f8451f4bdfa4569b167c2da784535876a",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/render.py": "b96c7f21548aa8ed6b5c9dee93f479e180ea722b5cb0196cf79904a7d33b4f70",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/runner.py": "6ceaa777b584b39463f6f56b4f59a2fe3296cce71f4baf5e3a592f1493b0c894",
+    "experiments/ieee_resubmission_2026-11/ieee_resub/sandbox.py": "d2f1be6bb1a649a80b4fc56e39361f13b763f8debc387aed5016431f846f58d3",
+    "experiments/ieee_resubmission_2026-11/instrumented_python_packages/ (tree)": "7bb4210dc3f7e5b8717a45968aef0bb8329c4483f18ebf2ec07eca9604961d93",
+    "experiments/ieee_resubmission_2026-11/launcher/run_grpo_ieee_resub.slurm": "b702867129b143b4b45cea279b55bb6973a425c677e1b2e490f722f9d5bc662f",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e1.slurm": "9ef179d3b9bda02906da188b8ccd9214b313ea59364dd254ce065ea71fe9b9d5",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e2.slurm": "a62465d574747c0c2ab3e7c12fe8702aca4af8211c63b20c2065c1db6779a624",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3.slurm": "72c1631833b4f1fe00a849cd89bf9e295e92a8772e0a526b1d582c9737d38908",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3_amendment.slurm": "2d412d8ba1932be8113154400d2a9ccf7d2c33bdac851fb0ba6ae6a1e447de8c",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke1.slurm": "f604f07b968dd0eafd84dd6adf98cc4171b85be21a92f8d4d340d47ae90f773c",
+    "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke2.slurm": "78765b99572f2dd00106d56b83fc29482deede4b5af9187dbf061973ddd9f62b",
+    "experiments/ieee_resubmission_2026-11/verl_patch/ieee_resub_verl.patch": "58be08197cd3efc936bd542e14ddb7e6498d0315649cd910b0a1ef5eb7baa2f4",
+    "memory_tuner/benchmark_v2_env.py": "70941accfde6adc880fa2b5c14788d83370e64200a47c705179b4bcf0263e4e3",
+    "memory_tuner/capture_environment.py": "d2a98be4ecd3aab0d1638ad91265ef9ba73413debc97801e31306b42f63e1118",
+    "memory_tuner/code_shape_reward.py": "7d6435b38fcdbcc32ca4b68e5e19c6a172f79cf59fc2b222d0fde7e8440c4b04",
+    "memory_tuner/device_contract.py": "b3f7164774e5d6ec01b8cde6dd1083823352c15ccee0cceb949cfe3022f40764",
+    "memory_tuner/durable_metrics.py": "cef0714ff9b5e5f07000bdb4d668be49d4f125b8e3eb13bdc1ee3b708e371a5a",
+    "memory_tuner/electronics_experiment.py": "eb51015d4b4fb242aed5c72246f81ff0aac7aafa410ac849904b3e1463ba7a9e",
+    "memory_tuner/electronics_failure_evidence.py": "c5a371ac79aed1745bd48ea48d077c5b48e77bec0ec45380071a3b53f543d98a",
+    "memory_tuner/gpu_monitor.py": "689b617975497b104bb90e01a8d32feed626ac26add2bbe61373cc7fe70770b4",
+    "memory_tuner/grpo_raw_evidence.py": "2430a3dcb2342693b7ada5c89bcd300fa633d2baf367b42448113abd6613d173",
+    "memory_tuner/host_memory_monitor.py": "1738c89c6497badedd94249e6d2c206414af6013670a70762842b1e4c683145a",
+    "memory_tuner/log_parser.py": "8f4e60996953f67362dcdb30de0a0d2952fba1ea12bb4b173acbbaca99259cdb",
+    "memory_tuner/resolve_hf_snapshot.py": "746c29b44ad34b4dbd129b71bf3d0d9abfd01d0993a6bb53dae1a1e47fc8b103",
+    "memory_tuner/run_matched_gpu.py": "2ea0abb78a899d8bd6c328d24574cb3e3dac48be0cb01ebd5d4eea523908637a",
+    "memory_tuner/run_offload_factorial.py": "5defe7de983c775fbd94d85c0ea426d5ec1291499908e35412ce51a651ad2734",
+    "memory_tuner/select_port_block.py": "ec72d8a1039d9365a6e86fa976c1c8b8a2b03533474b8b320bad71b245493f33",
+    "run_grpo_instrumented.slurm": "c4a53716d9c2e9c6ed835d537695f21bb86979aa90a32e7eee7709ff01fd0572"
+  },
+  "status": "draft-awaiting-approval",
+  "study": "e2",
+  "success_policy": "Successful trainer exit, all requested durable step records, physical-device identity, valid raw traces, parameter inventory, and every scheduled validation/checkpoint."
+}

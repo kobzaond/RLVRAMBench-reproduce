@@ -1,0 +1,306 @@
+{
+  "e3-m7-code_heavy_tail-off0-r55": {
+    "checkpoint_peak_mib": {
+      "max": 21598.0,
+      "mean": 21535.333333333332,
+      "min": 21472.0,
+      "n": 3
+    },
+    "individual_agreements": 3,
+    "later_growth_mib": {
+      "max": 532.0,
+      "mean": 474.6666666666667,
+      "min": 402.0,
+      "n": 3
+    },
+    "long_counts": {
+      "within_margin": 3
+    },
+    "long_label": "within_margin",
+    "long_whole_run_peak_mib": {
+      "max": 38876.0,
+      "mean": 38820.666666666664,
+      "min": 38788.0,
+      "n": 3
+    },
+    "pairs": [
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 630.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "631"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 432.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "632"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 544.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "633"
+      }
+    ],
+    "resolved_pairs": 3,
+    "restore": [
+      {
+        "restore_checkpoint_load_peak_mib": 19400.0,
+        "restore_minus_uninterrupted_late_mib": -82.0,
+        "restore_minus_uninterrupted_whole_mib": -82.0,
+        "restore_status": "within_margin",
+        "restore_steps_minus_uninterrupted_late_mib": -82.0,
+        "restore_steps_peak_mib": 38794.0,
+        "restore_whole_run_peak_mib": 38794.0,
+        "source_status": "within_margin",
+        "uninterrupted_late_peak_mib": 38876.0,
+        "uninterrupted_whole_run_peak_mib": 38876.0
+      }
+    ],
+    "screen_counts": {
+      "within_margin": 3
+    },
+    "screen_label": "within_margin",
+    "validation_peak_mib": {
+      "max": 38210.0,
+      "mean": 38196.666666666664,
+      "min": 38180.0,
+      "n": 3
+    }
+  },
+  "e3-m7-code_heavy_tail-off1-r70": {
+    "checkpoint_peak_mib": {
+      "max": 12368.0,
+      "mean": 12366.666666666666,
+      "min": 12364.0,
+      "n": 3
+    },
+    "individual_agreements": 3,
+    "later_growth_mib": {
+      "max": 452.0,
+      "mean": 425.3333333333333,
+      "min": 390.0,
+      "n": 3
+    },
+    "long_counts": {
+      "within_margin": 3
+    },
+    "long_label": "within_margin",
+    "long_whole_run_peak_mib": {
+      "max": 31984.0,
+      "mean": 31956.0,
+      "min": 31922.0,
+      "n": 3
+    },
+    "pairs": [
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 394.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "631"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 226.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "632"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 456.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "633"
+      }
+    ],
+    "resolved_pairs": 3,
+    "restore": [
+      {
+        "restore_checkpoint_load_peak_mib": 13998.0,
+        "restore_minus_uninterrupted_late_mib": 24.0,
+        "restore_minus_uninterrupted_whole_mib": 14.0,
+        "restore_status": "within_margin",
+        "restore_steps_minus_uninterrupted_late_mib": 24.0,
+        "restore_steps_peak_mib": 31936.0,
+        "restore_whole_run_peak_mib": 31936.0,
+        "source_status": "within_margin",
+        "uninterrupted_late_peak_mib": 31912.0,
+        "uninterrupted_whole_run_peak_mib": 31922.0
+      }
+    ],
+    "screen_counts": {
+      "within_margin": 3
+    },
+    "screen_label": "within_margin",
+    "validation_peak_mib": {
+      "max": 31354.0,
+      "mean": 31328.0,
+      "min": 31288.0,
+      "n": 3
+    }
+  },
+  "e3-q7-gsm8k-off0-r60": {
+    "checkpoint_peak_mib": {
+      "max": 26064.0,
+      "mean": 26064.0,
+      "min": 26064.0,
+      "n": 3
+    },
+    "individual_agreements": 3,
+    "later_growth_mib": {
+      "max": 182.0,
+      "mean": 152.66666666666666,
+      "min": 130.0,
+      "n": 3
+    },
+    "long_counts": {
+      "within_margin": 3
+    },
+    "long_label": "within_margin",
+    "long_whole_run_peak_mib": {
+      "max": 38820.0,
+      "mean": 38738.666666666664,
+      "min": 38690.0,
+      "n": 3
+    },
+    "pairs": [
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 12.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "631"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 214.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "632"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 144.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "633"
+      }
+    ],
+    "resolved_pairs": 3,
+    "restore": [
+      {
+        "restore_checkpoint_load_peak_mib": 25874.0,
+        "restore_minus_uninterrupted_late_mib": 8.0,
+        "restore_minus_uninterrupted_whole_mib": 8.0,
+        "restore_status": "within_margin",
+        "restore_steps_minus_uninterrupted_late_mib": 8.0,
+        "restore_steps_peak_mib": 38698.0,
+        "restore_whole_run_peak_mib": 38698.0,
+        "source_status": "within_margin",
+        "uninterrupted_late_peak_mib": 38690.0,
+        "uninterrupted_whole_run_peak_mib": 38690.0
+      }
+    ],
+    "screen_counts": {
+      "within_margin": 3
+    },
+    "screen_label": "within_margin",
+    "validation_peak_mib": {
+      "max": 38712.0,
+      "mean": 38644.0,
+      "min": 38610.0,
+      "n": 3
+    }
+  },
+  "e3-q7-gsm8k-off1-r70": {
+    "checkpoint_peak_mib": {
+      "max": 17352.0,
+      "mean": 17352.0,
+      "min": 17352.0,
+      "n": 3
+    },
+    "individual_agreements": 3,
+    "later_growth_mib": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 3
+    },
+    "long_counts": {
+      "within_margin": 3
+    },
+    "long_label": "within_margin",
+    "long_whole_run_peak_mib": {
+      "max": 32350.0,
+      "mean": 32348.666666666668,
+      "min": 32348.0,
+      "n": 3
+    },
+    "pairs": [
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": -2.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "631"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": -2.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "632"
+      },
+      {
+        "agreement": true,
+        "long": "within_margin",
+        "long_minus_screen_peak_mib": 0.0,
+        "resolved": true,
+        "screen": "within_margin",
+        "seed": "633"
+      }
+    ],
+    "resolved_pairs": 3,
+    "restore": [
+      {
+        "restore_checkpoint_load_peak_mib": 20620.0,
+        "restore_minus_uninterrupted_late_mib": -8.0,
+        "restore_minus_uninterrupted_whole_mib": -8.0,
+        "restore_status": "within_margin",
+        "restore_steps_minus_uninterrupted_late_mib": -8.0,
+        "restore_steps_peak_mib": 32340.0,
+        "restore_whole_run_peak_mib": 32340.0,
+        "source_status": "within_margin",
+        "uninterrupted_late_peak_mib": 32348.0,
+        "uninterrupted_whole_run_peak_mib": 32348.0
+      }
+    ],
+    "screen_counts": {
+      "within_margin": 3
+    },
+    "screen_label": "within_margin",
+    "validation_peak_mib": {
+      "max": 30434.0,
+      "mean": 30366.666666666668,
+      "min": 30332.0,
+      "n": 3
+    }
+  }
+}

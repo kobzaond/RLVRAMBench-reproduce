@@ -1,0 +1,37 @@
+block_id,model_family,dataset,case,training_seed,batch_contrast_actor_update_peak_mib,batch_contrast_whole_run_peak_mib,batch_contrast_total_tokens,batch_contrast_response_tokens,batch_contrast_per_gpu_tokens_balanced_max,rel_batch_contrast_total_tokens
+granite33_2b-code_heavy_tail-s94,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,94,3647,-25,158,158,80.5,0.00223524
+granite33_2b-code_heavy_tail-s95,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,95,3813,7,1743,1743,883.5,0.025162
+granite33_2b-code_heavy_tail-s96,granite33_2b,code_heavy_tail,Granite / Longer-prompt code,96,3565,-107,-1095.5,-1095.5,-550,-0.015483
+granite33_2b-code_standard-s94,granite33_2b,code_standard,Granite / Standard code,94,2150,-132,-439.5,-439.5,-219.5,-0.00956579
+granite33_2b-code_standard-s95,granite33_2b,code_standard,Granite / Standard code,95,2285,92,402,402,201,0.00870761
+granite33_2b-code_standard-s96,granite33_2b,code_standard,Granite / Standard code,96,2298,48,-195.5,-195.5,-98.5,-0.00423968
+granite33_2b-gsm8k-s94,granite33_2b,gsm8k,Granite / GSM8K,94,1299,-10,0.5,0.5,-128.5,1.77993e-05
+granite33_2b-gsm8k-s95,granite33_2b,gsm8k,Granite / GSM8K,95,1660,-10,826,826,693.5,0.0311934
+granite33_2b-gsm8k-s96,granite33_2b,gsm8k,Granite / GSM8K,96,1537,-10,1103.5,1103.5,199,0.0401295
+granite33_2b-math-s94,granite33_2b,math,Granite / MATH,94,2036,-40,687,687,344.5,0.010732
+granite33_2b-math-s95,granite33_2b,math,Granite / MATH,95,1847,-20,475.5,475.5,237,0.00732135
+granite33_2b-math-s96,granite33_2b,math,Granite / MATH,96,1795,-20,329,329,165.5,0.00504942
+phi4_mini-code_heavy_tail-s94,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,94,7928,-42,-1216.5,-1216.5,-608.5,-0.0177211
+phi4_mini-code_heavy_tail-s95,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,95,8910,173,-1073.5,-1073.5,-535.5,-0.0155029
+phi4_mini-code_heavy_tail-s96,phi4_mini,code_heavy_tail,Phi / Longer-prompt code,96,9642,-6,1348,1348,673.5,0.0192533
+phi4_mini-code_standard-s94,phi4_mini,code_standard,Phi / Standard code,94,5215,-91,-1057,-1057,-528,-0.0236682
+phi4_mini-code_standard-s95,phi4_mini,code_standard,Phi / Standard code,95,4441,-174,-2300,-2300,-1150.5,-0.0491679
+phi4_mini-code_standard-s96,phi4_mini,code_standard,Phi / Standard code,96,6163,321,142,142,72,0.00310088
+phi4_mini-gsm8k-s94,phi4_mini,gsm8k,Phi / GSM8K,94,1816,10,-575,-575,-631.5,-0.0282368
+phi4_mini-gsm8k-s95,phi4_mini,gsm8k,Phi / GSM8K,95,2825,0,196,196,104.5,0.0102304
+phi4_mini-gsm8k-s96,phi4_mini,gsm8k,Phi / GSM8K,96,1525,20,-1475.5,-1475.5,-1095,-0.0722169
+phi4_mini-math-s94,phi4_mini,math,Phi / MATH,94,4545,-59,113,113,56.5,0.00198667
+phi4_mini-math-s95,phi4_mini,math,Phi / MATH,95,4959,310,365.5,365.5,183,0.00644081
+phi4_mini-math-s96,phi4_mini,math,Phi / MATH,96,4385,-289,1432,1432,715.5,0.0256183
+qwen25_3b-code_heavy_tail-s94,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,94,6963,34,1688,1688,847,0.0247457
+qwen25_3b-code_heavy_tail-s95,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,95,5628,-11,-1022.5,-1022.5,-495.5,-0.0149747
+qwen25_3b-code_heavy_tail-s96,qwen25_3b,code_heavy_tail,Qwen2.5-3B / Longer-prompt code,96,6312,-882,30.5,30.5,14.5,0.000436825
+qwen25_3b-code_standard-s94,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,94,4600,-139,1691.5,1691.5,844.5,0.0377335
+qwen25_3b-code_standard-s95,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,95,4713,44,-1058.5,-1058.5,-491,-0.0225936
+qwen25_3b-code_standard-s96,qwen25_3b,code_standard,Qwen2.5-3B / Standard code,96,5322,-94,143.5,143.5,72,0.0031553
+qwen25_3b-gsm8k-s94,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,94,2849,0,328.5,328.5,157,0.0124663
+qwen25_3b-gsm8k-s95,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,95,2592,0,-396.5,-396.5,-195.5,-0.0152085
+qwen25_3b-gsm8k-s96,qwen25_3b,gsm8k,Qwen2.5-3B / GSM8K,96,2553,0,-183,-183,-91,-0.00710542
+qwen25_3b-math-s94,qwen25_3b,math,Qwen2.5-3B / MATH,94,3932,0,846.5,846.5,424,0.0134452
+qwen25_3b-math-s95,qwen25_3b,math,Qwen2.5-3B / MATH,95,4001,0,-22.5,-22.5,-12,-0.000353343
+qwen25_3b-math-s96,qwen25_3b,math,Qwen2.5-3B / MATH,96,3531,0,220.5,220.5,110,0.00349404

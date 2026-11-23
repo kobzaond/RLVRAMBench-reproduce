@@ -1,0 +1,283 @@
+analysis,resampled_unit,units,statistic,kind,observed,ci_low,ci_high,undefined_draws,zero_width
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,approved,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,approved_within,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,approved_above,count,4.0,4.0,4.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,approval_errors,count,4.0,4.0,4.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,rejected_within,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,within_targets,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,unsuitable_targets,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,correct,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,queries,count,24.0,24.0,24.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,approval_error_share_of_approvals,ratio approval_errors/approved,0.25,0.25,0.25,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.3333,0.3333,0.3333,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,within_margin_recall,ratio approved_within/within_targets,1.0,1.0,1.0,0,1
+table14_model_transfer:Granite->Phi,target model-workload case (4),4,three_state_accuracy,ratio correct/queries,0.6667,0.6667,0.6667,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,approved,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,approved_within,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,approved_above,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,approval_errors,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,rejected_within,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,within_targets,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,unsuitable_targets,count,8.0,8.0,8.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,correct,count,20.0,20.0,20.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,queries,count,24.0,24.0,24.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,approval_error_share_of_approvals,ratio approval_errors/approved,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.0,0.0,0.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,within_margin_recall,ratio approved_within/within_targets,1.0,1.0,1.0,0,1
+table14_model_transfer:Granite->Qwen,target model-workload case (4),4,three_state_accuracy,ratio correct/queries,0.8333,0.8333,0.8333,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,approved,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,approved_within,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,approved_above,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,approval_errors,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,rejected_within,count,4.0,4.0,4.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,within_targets,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,unsuitable_targets,count,8.0,8.0,8.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,correct,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,queries,count,24.0,24.0,24.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,approval_error_share_of_approvals,ratio approval_errors/approved,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,within_margin_recall,ratio approved_within/within_targets,0.75,0.75,0.75,0,1
+table14_model_transfer:Phi->Granite,target model-workload case (4),4,three_state_accuracy,ratio correct/queries,0.6667,0.6667,0.6667,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,approved,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,approved_within,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,approved_above,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,approval_errors,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,rejected_within,count,4.0,4.0,4.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,within_targets,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,unsuitable_targets,count,8.0,8.0,8.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,correct,count,20.0,20.0,20.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,queries,count,24.0,24.0,24.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,approval_error_share_of_approvals,ratio approval_errors/approved,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.0,0.0,0.0,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,within_margin_recall,ratio approved_within/within_targets,0.75,0.75,0.75,0,1
+table14_model_transfer:Phi->Qwen,target model-workload case (4),4,three_state_accuracy,ratio correct/queries,0.8333,0.8333,0.8333,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,approved,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,approved_within,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,approved_above,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,approval_errors,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,rejected_within,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,within_targets,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,unsuitable_targets,count,8.0,8.0,8.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,correct,count,20.0,20.0,20.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,queries,count,24.0,24.0,24.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,approval_error_share_of_approvals,ratio approval_errors/approved,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,within_margin_recall,ratio approved_within/within_targets,1.0,1.0,1.0,0,1
+table14_model_transfer:Qwen->Granite,target model-workload case (4),4,three_state_accuracy,ratio correct/queries,0.8333,0.8333,0.8333,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,approved,count,16.0,16.0,16.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,approved_within,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,approved_above,count,4.0,4.0,4.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,approval_errors,count,4.0,4.0,4.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,rejected_within,count,0.0,0.0,0.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,within_targets,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,unsuitable_targets,count,12.0,12.0,12.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,correct,count,20.0,20.0,20.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,queries,count,24.0,24.0,24.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,approval_error_share_of_approvals,ratio approval_errors/approved,0.25,0.25,0.25,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.3333,0.3333,0.3333,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,within_margin_recall,ratio approved_within/within_targets,1.0,1.0,1.0,0,1
+table14_model_transfer:Qwen->Phi,target model-workload case (4),4,three_state_accuracy,ratio correct/queries,0.8333,0.8333,0.8333,0,1
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,approved,count,88.0,85.0,91.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,approved_within,count,80.0,77.0,83.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,approved_above,count,8.0,2.0,14.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,approval_errors,count,8.0,2.0,14.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,rejected_within,count,8.0,5.0,11.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,within_targets,count,88.0,82.0,94.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,unsuitable_targets,count,56.0,50.0,62.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,correct,count,112.0,109.0,115.0,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,queries,count,144.0,144.0,144.0,0,1
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,approval_error_share_of_approvals,ratio approval_errors/approved,0.0909,0.0235,0.1538,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.1429,0.04,0.2258,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,within_margin_recall,ratio approved_within/within_targets,0.9091,0.883,0.939,0,0
+table14_model_transfer:pooled_6_directions,target model-workload case (12),12,three_state_accuracy,ratio correct/queries,0.7778,0.7569,0.7986,0,0
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,approved,count,88.0,88.0,88.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,approved_within,count,80.0,80.0,80.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,approved_failure,count,0.0,0.0,0.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,approved_above,count,8.0,8.0,8.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,approval_errors,count,8.0,8.0,8.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,rejected_within,count,8.0,8.0,8.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,within_targets,count,88.0,88.0,88.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,unsuitable_targets,count,56.0,56.0,56.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,correct,count,112.0,112.0,112.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,queries,count,144.0,144.0,144.0,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,approval_error_share_of_approvals,ratio approval_errors/approved,0.0909,0.0909,0.0909,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.1429,0.1429,0.1429,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,within_margin_recall,ratio approved_within/within_targets,0.9091,0.9091,0.9091,0,1
+table14_model_transfer:pooled_6_directions,workload cluster (4),4,three_state_accuracy,ratio correct/queries,0.7778,0.7778,0.7778,0,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,approved,count,10.0,8.0,12.0,0,0
+gpu_count_transfer:2->4GPU,model-workload case (6),6,approved_within,count,10.0,8.0,12.0,0,0
+gpu_count_transfer:2->4GPU,model-workload case (6),6,approved_failure,count,0.0,0.0,0.0,0,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,approved_above,count,0.0,0.0,0.0,0,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,approval_errors,count,0.0,0.0,0.0,0,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,rejected_within,count,6.0,6.0,6.0,0,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,within_targets,count,16.0,14.0,18.0,0,0
+gpu_count_transfer:2->4GPU,model-workload case (6),6,unsuitable_targets,count,2.0,0.0,4.0,0,0
+gpu_count_transfer:2->4GPU,model-workload case (6),6,correct,count,10.0,8.0,12.0,0,0
+gpu_count_transfer:2->4GPU,model-workload case (6),6,queries,count,18.0,18.0,18.0,0,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,approval_error_share_of_approvals,ratio approval_errors/approved,0.0,0.0,0.0,0,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.0,0.0,0.0,924,1
+gpu_count_transfer:2->4GPU,model-workload case (6),6,within_margin_recall,ratio approved_within/within_targets,0.625,0.5714,0.6667,0,0
+gpu_count_transfer:2->4GPU,model-workload case (6),6,three_state_accuracy,ratio correct/queries,0.5556,0.4444,0.6667,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,approved,count,16.0,14.0,18.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,approved_within,count,10.0,8.0,12.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,approved_failure,count,2.0,0.0,4.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,approved_above,count,4.0,2.0,6.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,approval_errors,count,6.0,6.0,6.0,0,1
+gpu_count_transfer:4->2GPU,model-workload case (6),6,rejected_within,count,0.0,0.0,0.0,0,1
+gpu_count_transfer:4->2GPU,model-workload case (6),6,within_targets,count,10.0,8.0,12.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,unsuitable_targets,count,8.0,6.0,10.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,correct,count,10.0,8.0,12.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,queries,count,18.0,18.0,18.0,0,1
+gpu_count_transfer:4->2GPU,model-workload case (6),6,approval_error_share_of_approvals,ratio approval_errors/approved,0.375,0.3333,0.4286,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.75,0.6,1.0,0,0
+gpu_count_transfer:4->2GPU,model-workload case (6),6,within_margin_recall,ratio approved_within/within_targets,1.0,1.0,1.0,0,1
+gpu_count_transfer:4->2GPU,model-workload case (6),6,three_state_accuracy,ratio correct/queries,0.5556,0.4444,0.6667,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,approved,count,26.0,22.0,30.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,approved_within,count,20.0,16.0,24.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,approved_failure,count,2.0,0.0,4.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,approved_above,count,4.0,2.0,6.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,approval_errors,count,6.0,6.0,6.0,0,1
+gpu_count_transfer:both_directions,model-workload case (6),6,rejected_within,count,6.0,6.0,6.0,0,1
+gpu_count_transfer:both_directions,model-workload case (6),6,within_targets,count,26.0,22.0,30.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,unsuitable_targets,count,10.0,6.0,14.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,correct,count,20.0,16.0,24.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,queries,count,36.0,36.0,36.0,0,1
+gpu_count_transfer:both_directions,model-workload case (6),6,approval_error_share_of_approvals,ratio approval_errors/approved,0.2308,0.2,0.2727,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.6,0.4286,1.0,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,within_margin_recall,ratio approved_within/within_targets,0.7692,0.7273,0.8,0,0
+gpu_count_transfer:both_directions,model-workload case (6),6,three_state_accuracy,ratio correct/queries,0.5556,0.4444,0.6667,0,0
+table12_independent_control:combined_rule,model-workload case (6),6,approved,count,36.0,36.0,36.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,useful_approved,count,36.0,36.0,36.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,failure_approved,count,0.0,0.0,0.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,useful_rejected,count,0.0,0.0,0.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,useful_targets,count,36.0,36.0,36.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,failure_targets,count,12.0,12.0,12.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,useful_recall,ratio useful_approved/useful_targets,1.0,1.0,1.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,failure_share_of_approvals,ratio failure_approved/approved,0.0,0.0,0.0,0,1
+table12_independent_control:combined_rule,model-workload case (6),6,failure_approval_rate_on_failure_targets,ratio failure_approved/failure_targets,0.0,0.0,0.0,0,1
+table12_independent_control:logistic_classifier,model-workload case (6),6,approved,count,29.0,25.0,33.0,0,0
+table12_independent_control:logistic_classifier,model-workload case (6),6,useful_approved,count,29.0,25.0,33.0,0,0
+table12_independent_control:logistic_classifier,model-workload case (6),6,failure_approved,count,0.0,0.0,0.0,0,1
+table12_independent_control:logistic_classifier,model-workload case (6),6,useful_rejected,count,7.0,3.0,11.0,0,0
+table12_independent_control:logistic_classifier,model-workload case (6),6,useful_targets,count,36.0,36.0,36.0,0,1
+table12_independent_control:logistic_classifier,model-workload case (6),6,failure_targets,count,12.0,12.0,12.0,0,1
+table12_independent_control:logistic_classifier,model-workload case (6),6,useful_recall,ratio useful_approved/useful_targets,0.8056,0.6944,0.9167,0,0
+table12_independent_control:logistic_classifier,model-workload case (6),6,failure_share_of_approvals,ratio failure_approved/approved,0.0,0.0,0.0,0,1
+table12_independent_control:logistic_classifier,model-workload case (6),6,failure_approval_rate_on_failure_targets,ratio failure_approved/failure_targets,0.0,0.0,0.0,0,1
+table12_independent_control:component_regression_guard,model-workload case (6),6,approved,count,42.0,38.0,46.0,0,0
+table12_independent_control:component_regression_guard,model-workload case (6),6,useful_approved,count,36.0,36.0,36.0,0,1
+table12_independent_control:component_regression_guard,model-workload case (6),6,failure_approved,count,6.0,2.0,10.0,0,0
+table12_independent_control:component_regression_guard,model-workload case (6),6,useful_rejected,count,0.0,0.0,0.0,0,1
+table12_independent_control:component_regression_guard,model-workload case (6),6,useful_targets,count,36.0,36.0,36.0,0,1
+table12_independent_control:component_regression_guard,model-workload case (6),6,failure_targets,count,12.0,12.0,12.0,0,1
+table12_independent_control:component_regression_guard,model-workload case (6),6,useful_recall,ratio useful_approved/useful_targets,1.0,1.0,1.0,0,1
+table12_independent_control:component_regression_guard,model-workload case (6),6,failure_share_of_approvals,ratio failure_approved/approved,0.1429,0.0526,0.2174,0,0
+table12_independent_control:component_regression_guard,model-workload case (6),6,failure_approval_rate_on_failure_targets,ratio failure_approved/failure_targets,0.5,0.1667,0.8333,0,0
+table12_independent_control:offload_only,model-workload case (6),6,approved,count,24.0,24.0,24.0,0,1
+table12_independent_control:offload_only,model-workload case (6),6,useful_approved,count,24.0,24.0,24.0,0,1
+table12_independent_control:offload_only,model-workload case (6),6,failure_approved,count,0.0,0.0,0.0,0,1
+table12_independent_control:offload_only,model-workload case (6),6,useful_rejected,count,12.0,12.0,12.0,0,1
+table12_independent_control:offload_only,model-workload case (6),6,useful_targets,count,36.0,36.0,36.0,0,1
+table12_independent_control:offload_only,model-workload case (6),6,failure_targets,count,12.0,12.0,12.0,0,1
+table12_independent_control:offload_only,model-workload case (6),6,useful_recall,ratio useful_approved/useful_targets,0.6667,0.6667,0.6667,0,1
+table12_independent_control:offload_only,model-workload case (6),6,failure_share_of_approvals,ratio failure_approved/approved,0.0,0.0,0.0,0,1
+table12_independent_control:offload_only,model-workload case (6),6,failure_approval_rate_on_failure_targets,ratio failure_approved/failure_targets,0.0,0.0,0.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,approved,count,24.0,24.0,24.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,useful_approved,count,24.0,24.0,24.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,failure_approved,count,0.0,0.0,0.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,useful_rejected,count,12.0,12.0,12.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,useful_targets,count,36.0,36.0,36.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,failure_targets,count,12.0,12.0,12.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,useful_recall,ratio useful_approved/useful_targets,0.6667,0.6667,0.6667,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,failure_share_of_approvals,ratio failure_approved/approved,0.0,0.0,0.0,0,1
+table12_independent_control:lower_reservation_only,model-workload case (6),6,failure_approval_rate_on_failure_targets,ratio failure_approved/failure_targets,0.0,0.0,0.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,approved,count,6.0,6.0,6.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,useful_approved,count,6.0,6.0,6.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,failure_approved,count,0.0,0.0,0.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,useful_rejected,count,30.0,30.0,30.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,useful_targets,count,36.0,36.0,36.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,failure_targets,count,12.0,12.0,12.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,useful_recall,ratio useful_approved/useful_targets,0.1667,0.1667,0.1667,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,failure_share_of_approvals,ratio failure_approved/approved,0.0,0.0,0.0,0,1
+table12_independent_control:original_c1_only,model-workload case (6),6,failure_approval_rate_on_failure_targets,ratio failure_approved/failure_targets,0.0,0.0,0.0,0,1
+table12_independent_control:paired_differences,model-workload case (6),6,useful_rejected_by_classifier_not_by_combined,count,7.0,3.0,11.0,0,0
+table12_independent_control:paired_differences,model-workload case (6),6,failure_approved_by_regression_not_by_combined,count,6.0,2.0,10.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,approved,count,66.0,62.0,70.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,approved_within,count,60.0,54.0,65.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,approved_failure,count,0.0,0.0,0.0,0,1
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,approved_above,count,6.0,2.0,10.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,approval_errors,count,6.0,2.0,10.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,rejected_within,count,0.0,0.0,0.0,0,1
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,within_targets,count,60.0,54.0,65.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,unsuitable_targets,count,30.0,21.0,38.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,correct,count,76.0,66.0,85.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,queries,count,90.0,78.0,102.0,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,approval_error_share_of_approvals,ratio approval_errors/approved,0.0909,0.0308,0.1538,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.2,0.0833,0.3333,0,0
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,within_margin_recall,ratio approved_within/within_targets,1.0,1.0,1.0,0,1
+family_holdout_frozen:donor_copy,model-workload-GPU case (18),18,three_state_accuracy,ratio correct/queries,0.8444,0.8172,0.8736,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,approved,count,71.0,62.0,81.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,approved_within,count,60.0,54.0,65.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,approved_failure,count,4.0,1.0,8.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,approved_above,count,7.0,3.0,11.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,approval_errors,count,11.0,5.0,18.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,rejected_within,count,0.0,0.0,0.0,0,1
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,within_targets,count,60.0,54.0,65.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,unsuitable_targets,count,30.0,21.0,38.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,correct,count,79.0,67.0,91.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,queries,count,90.0,78.0,102.0,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,approval_error_share_of_approvals,ratio approval_errors/approved,0.1549,0.0746,0.2289,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.3667,0.1522,0.625,0,0
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,within_margin_recall,ratio approved_within/within_targets,1.0,1.0,1.0,0,1
+family_holdout_frozen:component_regression,model-workload-GPU case (18),18,three_state_accuracy,ratio correct/queries,0.8778,0.8021,0.9479,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,approved,count,59.0,52.0,67.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,approved_within,count,54.0,48.0,60.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,approved_failure,count,0.0,0.0,0.0,0,1
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,approved_above,count,5.0,2.0,9.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,approval_errors,count,5.0,2.0,9.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,rejected_within,count,6.0,2.0,10.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,within_targets,count,60.0,54.0,65.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,unsuitable_targets,count,30.0,21.0,38.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,correct,count,71.0,61.0,81.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,queries,count,90.0,78.0,102.0,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,approval_error_share_of_approvals,ratio approval_errors/approved,0.0847,0.0333,0.1406,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,approval_error_share_of_unsuitable_targets,ratio approval_errors/unsuitable_targets,0.1667,0.05,0.3214,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,within_margin_recall,ratio approved_within/within_targets,0.9,0.8361,0.9649,0,0
+family_holdout_frozen:logistic,model-workload-GPU case (18),18,three_state_accuracy,ratio correct/queries,0.7889,0.7471,0.828,0,0
+completion:boundary,model-workload case (12),12,processes,count,216.0,216.0,216.0,0,1
+completion:boundary,model-workload case (12),12,completed,count,156.0,147.0,165.0,0,0
+completion:boundary,model-workload case (12),12,within_margin_processes,count,132.0,123.0,141.0,0,0
+completion:boundary,model-workload case (12),12,configurations,count,72.0,72.0,72.0,0,1
+completion:boundary,model-workload case (12),12,within_margin_configurations,count,44.0,41.0,47.0,0,0
+completion:boundary,model-workload case (12),12,process_completion_share,ratio completed/processes,0.7222,0.6806,0.7639,0,0
+completion:boundary,model-workload case (12),12,within_margin_configuration_share,ratio within_margin_configurations/configurations,0.6111,0.5694,0.6528,0,0
+completion:four_gpu,model-workload case (6),6,processes,count,54.0,54.0,54.0,0,1
+completion:four_gpu,model-workload case (6),6,completed,count,54.0,54.0,54.0,0,1
+completion:four_gpu,model-workload case (6),6,within_margin_processes,count,48.0,42.0,54.0,0,0
+completion:four_gpu,model-workload case (6),6,configurations,count,18.0,18.0,18.0,0,1
+completion:four_gpu,model-workload case (6),6,within_margin_configurations,count,16.0,14.0,18.0,0,0
+completion:four_gpu,model-workload case (6),6,process_completion_share,ratio completed/processes,1.0,1.0,1.0,0,1
+completion:four_gpu,model-workload case (6),6,within_margin_configuration_share,ratio within_margin_configurations/configurations,0.8889,0.7778,1.0,0,0
+completion:independent_control,model-workload case (6),6,processes,count,144.0,144.0,144.0,0,1
+completion:independent_control,model-workload case (6),6,completed,count,108.0,108.0,108.0,0,1
+completion:independent_control,model-workload case (6),6,process_completion_share,ratio completed/processes,0.75,0.75,0.75,0,1
+completion:release_experiment,base configuration (6),6,pairs,count,18.0,18.0,18.0,0,1
+completion:release_experiment,base configuration (6),6,release_only,count,9.0,3.0,15.0,0,0
+completion:release_experiment,base configuration (6),6,release_completed,count,18.0,18.0,18.0,0,1
+completion:release_experiment,base configuration (6),6,resident_completed,count,9.0,3.0,15.0,0,0
+completion:release_experiment,base configuration (6),6,release_only_share_of_pairs,ratio release_only/pairs,0.5,0.1667,0.8333,0,0
+completion:release_experiment,base configuration (6),6,release_completion_share,ratio release_completed/pairs,1.0,1.0,1.0,0,1
+completion:release_experiment,base configuration (6),6,resident_completion_share,ratio resident_completed/pairs,0.5,0.1667,0.8333,0,0
+completion:budgeted_admission,model-workload case (4),4,processes,count,48.0,48.0,48.0,0,1
+completion:budgeted_admission,model-workload case (4),4,completed,count,32.0,32.0,32.0,0,1
+completion:budgeted_admission,model-workload case (4),4,candidates,count,12.0,12.0,12.0,0,1
+completion:budgeted_admission,model-workload case (4),4,within_candidates,count,6.0,4.0,8.0,0,0
+completion:budgeted_admission,model-workload case (4),4,process_completion_share,ratio completed/processes,0.6667,0.6667,0.6667,0,1
+completion:budgeted_admission,model-workload case (4),4,within_margin_candidate_share,ratio within_candidates/candidates,0.5,0.3333,0.6667,0,0

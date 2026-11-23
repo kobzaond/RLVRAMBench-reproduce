@@ -1,0 +1,58 @@
+{
+  "first_common_budget_with_full_recall": {
+    "source_copy": {
+      "budget": 0,
+      "target_attempts": 0,
+      "cold_start_attempts": 36,
+      "historical_gpu_hours": 3.723,
+      "incremental_gpu_hours_trial": 0.0,
+      "cold_start_gpu_hours_trial": 3.723
+    },
+    "headroom_guard": {
+      "budget": 1,
+      "target_attempts": 4,
+      "cold_start_attempts": 40,
+      "historical_gpu_hours": 3.723,
+      "incremental_gpu_hours_trial": 0.838,
+      "cold_start_gpu_hours_trial": 4.561
+    },
+    "direct_screen": {
+      "budget": 3,
+      "target_attempts": 12,
+      "cold_start_attempts": 12,
+      "historical_gpu_hours": 0.0,
+      "incremental_gpu_hours_trial": 2.34,
+      "cold_start_gpu_hours_trial": 2.34
+    }
+  },
+  "attempt_ratio_source_copy_to_direct_cold_start": 3.0,
+  "gpu_time_ratio_source_copy_to_direct_cold_start_trial_measure": 1.591,
+  "gpu_time_ratio_guard_to_direct_cold_start_trial_measure": 1.949,
+  "gpu_time_ratio_mixed_donor_trial_vs_screen_runner": 1.552,
+  "gpu_time_ratio_if_donors_had_mean_target_runner_overhead": 1.621,
+  "mean_runner_minus_trial_seconds_per_target_attempt": 8.23,
+  "donor_gpu_hours_trial": 3.7233,
+  "screen_gpu_hours_trial": 2.34,
+  "screen_gpu_hours_runner": 2.3985,
+  "evaluation_gpu_hours_trial": 6.9806,
+  "evaluation_gpu_hours_runner": 7.1416,
+  "all_48_target_attempts_gpu_hours_runner": 9.5401,
+  "all_48_target_attempts_gpu_hours_trial": 9.3206,
+  "published_si_runner_gpu_hours_for_48": 9.5,
+  "mean_elapsed_s": {
+    "donor_all": 186.2,
+    "donor_completed": 207.3,
+    "donor_memory_failure": 143.9,
+    "screen_all_trial": 351.0,
+    "screen_completed_trial": 448.9,
+    "screen_memory_failure_trial": 155.2
+  },
+  "records_summed": {
+    "historical_donor": 36,
+    "target_screen": 12,
+    "target_evaluation": 36
+  },
+  "gpus_per_record": [
+    2
+  ]
+}

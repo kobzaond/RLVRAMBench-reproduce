@@ -1,0 +1,10 @@
+study,unit,comparison,n,spearman_rho,spearman_p_descriptive
+original_factorial,block-reservation pair,abs token diff vs actor-stage contrast (pooled),72,0.0523185,0.662498
+original_factorial,block-reservation pair,relative token diff vs actor-stage contrast (pooled),72,0.0572063,0.633144
+original_factorial,block-reservation pair,"token diff vs actor-stage contrast, both centered within case",72,0.595558,3.42347e-08
+original_factorial,block-reservation pair,"relative token diff vs actor-stage contrast, both centered within case",72,0.622891,5.13866e-09
+original_factorial,block-reservation pair,"per-GPU balanced-max token diff vs actor-stage contrast, centered within case",72,0.615302,8.85998e-09
+original_factorial,block-reservation pair,"response-max diff vs actor-stage contrast, centered within case",72,0.322642,0.0057074
+original_factorial,block-reservation pair,"token diff vs whole-run contrast, centered within case",72,0.0899676,0.452312
+original_factorial,complete block,block token contrast vs block actor-stage contrast (pooled),36,-0.0661519,0.70148
+original_factorial,complete block,"block token contrast vs block actor-stage contrast, centered within case",36,0.553668,0.000460199

@@ -1,0 +1,31 @@
+{
+  "amendment": {
+    "amended_source_commit": "cc685c09a446c62f4507432e1962c2f49b277b1d",
+    "id": "e3-amendment-01",
+    "reruns": {
+      "e3-m7-code_heavy_tail-off1-r70-s631-restore": "within_margin",
+      "e3-m7-code_heavy_tail-off1-r70-s632-long": "within_margin"
+    },
+    "sha256": "966067e46423acd8dc256b313357a21a19010218243865d672127d9e88f62ee8"
+  },
+  "attempts": 30,
+  "planned": 28,
+  "protocol_sha256": "f6ef9c52ddae8ef97e832e85215aa79341c29f262e00d59611e088751acd53de",
+  "receipt_status_changes": [
+    {
+      "accepted_under": "e3-amendment-01 defect-2",
+      "claim": "blocks/e3-q7-gsm8k-off1-r70-s633",
+      "experiment_id": "e3-q7-gsm8k-off1-r70-s633-long",
+      "job_id": "5381356",
+      "raw_status": "within_margin",
+      "receipt_status": "unresolved",
+      "receipt_validation_error": "ValueError: Missing printed actor configuration"
+    }
+  ],
+  "scope": "raw evidence reassessment; no missing-slot replacement",
+  "source_commit": "9f6faf94b472f62f910858be838710aedb3cbc55",
+  "states": {
+    "within_margin": 28
+  },
+  "study": "e3"
+}

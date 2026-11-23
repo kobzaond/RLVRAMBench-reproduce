@@ -1,0 +1,979 @@
+{
+  "all_complete_cases": {
+    "e1-g2-gsm8k": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    },
+    "e1-p4-math": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    },
+    "e1-q3-code_heavy_tail": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    },
+    "e1-q3-math": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    }
+  },
+  "blocks": [
+    {
+      "block_id": "e1-g2-gsm8k-s601",
+      "case_id": "e1-g2-gsm8k",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-g2-gsm8k-s602",
+      "case_id": "e1-g2-gsm8k",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-g2-gsm8k-s603",
+      "case_id": "e1-g2-gsm8k",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-p4-math-s601",
+      "case_id": "e1-p4-math",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-p4-math-s602",
+      "case_id": "e1-p4-math",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-p4-math-s603",
+      "case_id": "e1-p4-math",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-q3-code_heavy_tail-s601",
+      "case_id": "e1-q3-code_heavy_tail",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-q3-code_heavy_tail-s602",
+      "case_id": "e1-q3-code_heavy_tail",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-q3-code_heavy_tail-s603",
+      "case_id": "e1-q3-code_heavy_tail",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-q3-math-s601",
+      "case_id": "e1-q3-math",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-q3-math-s602",
+      "case_id": "e1-q3-math",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    },
+    {
+      "block_id": "e1-q3-math-s603",
+      "case_id": "e1-q3-math",
+      "complete": false,
+      "members": 4,
+      "shape_identical": false,
+      "statuses": {
+        "b16-external": "within_margin",
+        "b16-full": "within_margin",
+        "b8-external": "within_margin",
+        "b8-full": "within_margin"
+      }
+    }
+  ],
+  "decisions": {
+    "D1_actor_contrast_positive_every_identical_block": false,
+    "D2_logging_interaction_within_512_every_identical_block": false,
+    "D3_whole_run_contrast_within_512_where_actor_does_not_set_peak": true,
+    "blocks_with_actor_setting_whole_run_peak": [],
+    "shape_mismatch_blocks": []
+  },
+  "equal_case_means": {
+    "actor_batch_ext": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "actor_batch_full": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "actor_batch_mean": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "actor_interaction": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "actor_mib_per_token_ext": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "actor_mib_per_token_full": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "whole_batch_ext": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "whole_batch_full": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "whole_batch_mean": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    },
+    "whole_interaction": {
+      "contributing": [],
+      "missing": [
+        "e1-g2-gsm8k",
+        "e1-p4-math",
+        "e1-q3-code_heavy_tail",
+        "e1-q3-math"
+      ],
+      "partial_mean_of_contributing": null,
+      "value": null
+    }
+  },
+  "identical_shape_cases": {
+    "e1-g2-gsm8k": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    },
+    "e1-p4-math": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    },
+    "e1-q3-code_heavy_tail": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    },
+    "e1-q3-math": {
+      "actor_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "actor_mib_per_token_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "planned_blocks": 3,
+      "pooled_blocks": 0,
+      "whole_batch_ext": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_full": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_batch_mean": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      },
+      "whole_interaction": {
+        "max": null,
+        "mean": null,
+        "min": null,
+        "n": 0
+      }
+    }
+  },
+  "natural_reference_r060": {
+    "granite33_2b/code_heavy_tail": {
+      "actor_update": {
+        "max": 3686.0,
+        "mean": 3619.3333333333335,
+        "min": 3578.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 22.0,
+        "mean": 12.0,
+        "min": 4.0,
+        "n": 3
+      }
+    },
+    "granite33_2b/code_standard": {
+      "actor_update": {
+        "max": 2356.0,
+        "mean": 2236.6666666666665,
+        "min": 2118.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 28.0,
+        "mean": -0.6666666666666666,
+        "min": -30.0,
+        "n": 3
+      }
+    },
+    "granite33_2b/gsm8k": {
+      "actor_update": {
+        "max": 1762.0,
+        "mean": 1265.3333333333333,
+        "min": 470.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "n": 3
+      }
+    },
+    "granite33_2b/math": {
+      "actor_update": {
+        "max": 2104.0,
+        "mean": 1878.0,
+        "min": 1660.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": -20.0,
+        "mean": -33.333333333333336,
+        "min": -40.0,
+        "n": 3
+      }
+    },
+    "phi4_mini/code_heavy_tail": {
+      "actor_update": {
+        "max": 9346.0,
+        "mean": 8081.333333333333,
+        "min": 6340.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 50.0,
+        "mean": 23.333333333333332,
+        "min": 0.0,
+        "n": 3
+      }
+    },
+    "phi4_mini/code_standard": {
+      "actor_update": {
+        "max": 6100.0,
+        "mean": 5909.333333333333,
+        "min": 5654.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 50.0,
+        "mean": 16.666666666666668,
+        "min": 0.0,
+        "n": 3
+      }
+    },
+    "phi4_mini/gsm8k": {
+      "actor_update": {
+        "max": 2584.0,
+        "mean": 2354.6666666666665,
+        "min": 2184.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 50.0,
+        "mean": 30.0,
+        "min": 20.0,
+        "n": 3
+      }
+    },
+    "phi4_mini/math": {
+      "actor_update": {
+        "max": 4982.0,
+        "mean": 4596.666666666667,
+        "min": 3944.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 0.0,
+        "mean": -13.333333333333334,
+        "min": -20.0,
+        "n": 3
+      }
+    },
+    "qwen25_3b/code_heavy_tail": {
+      "actor_update": {
+        "max": 7220.0,
+        "mean": 6678.666666666667,
+        "min": 6252.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 0.0,
+        "mean": -0.6666666666666666,
+        "min": -2.0,
+        "n": 3
+      }
+    },
+    "qwen25_3b/code_standard": {
+      "actor_update": {
+        "max": 5400.0,
+        "mean": 5178.0,
+        "min": 4956.0,
+        "n": 2
+      },
+      "whole_run": {
+        "max": 56.0,
+        "mean": 28.0,
+        "min": 0.0,
+        "n": 2
+      }
+    },
+    "qwen25_3b/gsm8k": {
+      "actor_update": {
+        "max": 2542.0,
+        "mean": 2456.6666666666665,
+        "min": 2366.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "n": 3
+      }
+    },
+    "qwen25_3b/math": {
+      "actor_update": {
+        "max": 3922.0,
+        "mean": 3822.6666666666665,
+        "min": 3748.0,
+        "n": 3
+      },
+      "whole_run": {
+        "max": 84.0,
+        "mean": 28.0,
+        "min": 0.0,
+        "n": 3
+      }
+    }
+  },
+  "outcome_counts": {
+    "e1-g2-gsm8k": {
+      "within_margin": 12
+    },
+    "e1-p4-math": {
+      "within_margin": 12
+    },
+    "e1-q3-code_heavy_tail": {
+      "within_margin": 12
+    },
+    "e1-q3-math": {
+      "within_margin": 12
+    }
+  }
+}

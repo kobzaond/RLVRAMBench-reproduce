@@ -1,0 +1,15 @@
+model_family,workload_id,configuration_level,label_paper,label_rule_i,unresolved_slots_rule_i,label_rule_ii,unresolved_slots_rule_ii
+granite33_2b,code_standard,c0,within_margin,unresolved,2,within_margin,0
+granite33_2b,code_standard,c1,within_margin,unresolved,3,within_margin,0
+granite33_2b,code_standard,c2,within_margin,unresolved,3,within_margin,0
+granite33_2b,code_standard,c3,within_margin,unresolved,3,within_margin,0
+granite33_2b,code_standard,c4,above_margin,unresolved,3,above_margin,0
+granite33_2b,gsm8k,c5,memory_failure,unresolved,1,memory_failure,0
+granite33_2b,math,c0,within_margin,unresolved,3,within_margin,0
+granite33_2b,math,c1,within_margin,unresolved,3,within_margin,0
+granite33_2b,math,c2,within_margin,unresolved,3,within_margin,0
+granite33_2b,math,c3,within_margin,unresolved,3,within_margin,0
+granite33_2b,math,c4,above_margin,unresolved,3,unresolved,1
+granite33_2b,math,c5,memory_failure,unresolved,2,memory_failure,0
+qwen25_3b,code_standard,c4,memory_failure,unresolved,1,memory_failure,0
+qwen25_3b,longer_prompt_code,c3,within_margin,unresolved,1,within_margin,0

@@ -1,3 +1,5 @@
+> **Historical document.** It describes an earlier release and is kept unchanged below this note. The current release is `rlvrambench-2026-11`; start with the repository `README.md` and `reproduce_all.sh`.
+
 # Reconstructing the Electronics revision
 
 The revision has three distinct evidence sources:

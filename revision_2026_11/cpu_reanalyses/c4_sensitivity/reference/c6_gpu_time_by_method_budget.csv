@@ -1,0 +1,13 @@
+rule,budget,target_attempts,donor_attempts,cold_start_attempts,historical_gpu_hours,incremental_gpu_hours_trial,incremental_gpu_hours_runner,cold_start_gpu_hours_trial,macro_case_recall,approval_errors
+source_copy,0,0,36,36,3.723,0.0,0.0,3.723,1.0,0
+source_copy,1,4,36,40,3.723,0.838,0.858,4.561,1.0,0
+source_copy,2,8,36,44,3.723,1.847,1.883,5.571,1.0,0
+source_copy,3,12,36,48,3.723,2.34,2.398,6.063,1.0,0
+headroom_guard,0,0,36,36,3.723,0.0,0.0,3.723,0.75,0
+headroom_guard,1,4,36,40,3.723,0.838,0.858,4.561,1.0,0
+headroom_guard,2,8,36,44,3.723,1.847,1.883,5.571,1.0,0
+headroom_guard,3,12,36,48,3.723,2.34,2.398,6.063,1.0,0
+direct_screen,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0
+direct_screen,1,4,0,4,0.0,0.838,0.858,0.838,0.25,0
+direct_screen,2,8,0,8,0.0,1.847,1.883,1.847,0.75,0
+direct_screen,3,12,0,12,0.0,2.34,2.398,2.34,1.0,0

@@ -1,0 +1,388 @@
+diff -ruN a/instrumented_python_packages/verl/RLVRAMBench_MODIFICATIONS.md b/instrumented_python_packages/verl/RLVRAMBench_MODIFICATIONS.md
+--- a/instrumented_python_packages/verl/RLVRAMBench_MODIFICATIONS.md	2026-09-14 13:49:07.164930354 +0200
++++ b/instrumented_python_packages/verl/RLVRAMBench_MODIFICATIONS.md	2026-11-10 13:31:34.828724534 +0100
+@@ -15,6 +15,13 @@
+ its implementation and limits are documented in
+ `paper/scientific_revision_checkpoint_amendment_2026-09-13.md`.
+ These changes do not introduce a new GRPO objective or scheduling policy.
++
++The November 2026 resubmission copy (`experiments/ieee_resubmission_2026-11/`)
++adds three opt-in measurement controls, all disabled by default: fixed-length
++generation (`rollout.fixed_response_length`), canonical batch ordering before
++sequence balancing (`RLVRAM_CANONICAL_BATCH_ORDER`), and a host-side batch-shape
++trace (`RLVRAM_SHAPE_TRACE`). Resumed runs additionally mark checkpoint loading
++as its own phase. See `verl_patch/ieee_resub_verl.patch` there.
+ The exact source head and clean-worktree status for each experiment are in
+ the immutable environment and allocation records.
+ 
+diff -ruN a/instrumented_python_packages/verl/trainer/config/_generated_ppo_trainer.yaml b/instrumented_python_packages/verl/trainer/config/_generated_ppo_trainer.yaml
+--- a/instrumented_python_packages/verl/trainer/config/_generated_ppo_trainer.yaml	2026-09-14 13:49:07.174656726 +0200
++++ b/instrumented_python_packages/verl/trainer/config/_generated_ppo_trainer.yaml	2026-11-10 13:31:34.828614987 +0100
+@@ -300,6 +300,7 @@
+     dtype: bfloat16
+     gpu_memory_utilization: 0.5
+     ignore_eos: false
++    fixed_response_length: false
+     enforce_eager: false
+     cudagraph_capture_sizes: null
+     free_cache_engine: true
+diff -ruN a/instrumented_python_packages/verl/trainer/config/rollout/rollout.yaml b/instrumented_python_packages/verl/trainer/config/rollout/rollout.yaml
+--- a/instrumented_python_packages/verl/trainer/config/rollout/rollout.yaml	2026-09-14 13:49:07.176268290 +0200
++++ b/instrumented_python_packages/verl/trainer/config/rollout/rollout.yaml	2026-11-10 13:31:34.828522332 +0100
+@@ -48,6 +48,10 @@
+ # Whether to ignore EOS and continue generating after EOS is hit.
+ ignore_eos: False
+ 
++# RLVRAMBench opt-in: every request generates exactly max_tokens tokens
++# (ignore_eos=True and min_tokens=max_tokens in vLLM SamplingParams).
++fixed_response_length: False
++
+ # Whether to disable CUDA graph. Default False to best performance.
+ enforce_eager: False
+ 
+diff -ruN a/instrumented_python_packages/verl/trainer/constants_ppo.py b/instrumented_python_packages/verl/trainer/constants_ppo.py
+--- a/instrumented_python_packages/verl/trainer/constants_ppo.py	2026-09-17 12:39:28.750156932 +0200
++++ b/instrumented_python_packages/verl/trainer/constants_ppo.py	2026-11-10 13:31:34.828675451 +0100
+@@ -149,6 +149,8 @@
+         "NCCL_ALGO",
+         "RLVRAM_DURABLE_METRICS_DIR",
+         "RLVRAM_INVOCATION_ID",
++        "RLVRAM_SHAPE_TRACE",
++        "RLVRAM_CANONICAL_BATCH_ORDER",
+     ):
+         val = os.environ.get(key)
+         if val is not None:
+diff -ruN a/instrumented_python_packages/verl/trainer/ppo/v1/trainer_base.py b/instrumented_python_packages/verl/trainer/ppo/v1/trainer_base.py
+--- a/instrumented_python_packages/verl/trainer/ppo/v1/trainer_base.py	2026-10-23 10:36:55.167314272 +0200
++++ b/instrumented_python_packages/verl/trainer/ppo/v1/trainer_base.py	2026-11-10 13:31:05.850161489 +0100
+@@ -83,6 +83,7 @@
+ from verl.utils.import_utils import load_extern_type
+ from verl.utils.metric import reduce_metrics
+ from verl.utils.py_functional import rename_dict
++from verl.utils import rlvram_shape_trace
+ from verl.utils.seqlen_balancing import calculate_workload, get_seqlen_balanced_partitions, log_seqlen_unbalance
+ from verl.utils.skip import SkipManager
+ from verl.utils.tracking import DapoFilteredRewardTableLogger, Tracking, ValidationGenerationsLogger
+@@ -572,7 +573,14 @@
+                 batch = self._compute_reward_colocate(batch, metrics=metrics)
+ 
+         # 3. balance batch across data parallel groups
++        # RLVRAMBench opt-in: make micro-batch composition independent of the
++        # asynchronous completion order (off unless RLVRAM_CANONICAL_BATCH_ORDER=1).
++        if rlvram_shape_trace.canonical_order_enabled():
++            batch = self._rlvram_canonical_order(batch)
+         batch = self._balance_batch(batch, metrics=metrics)
++        # RLVRAMBench opt-in: host-side shape evidence (off unless RLVRAM_SHAPE_TRACE is set).
++        if rlvram_shape_trace.trace_path():
++            self._rlvram_record_shapes(batch)
+ 
+         # 4. compute old_log_prob
+         self._mark_phase("reference_logprob")
+@@ -606,6 +614,36 @@
+ 
+         return batch
+ 
++    # ------------------------------ RLVRAMBench opt-in evidence ------------------------------
++
++    def _rlvram_token_lists(self, batch: KVBatchMeta) -> tuple[list[list[int]], list[list[int]]]:
++        data = tq.kv_batch_get(keys=batch.keys, partition_id=batch.partition_id, select_fields=["prompts", "responses"])
++        return rlvram_shape_trace.token_lists(data["prompts"]), rlvram_shape_trace.token_lists(data["responses"])
++
++    def _rlvram_canonical_order(self, batch: KVBatchMeta) -> KVBatchMeta:
++        prompts, _ = self._rlvram_token_lists(batch)
++        batch.reorder(rlvram_shape_trace.canonical_permutation(batch.keys, prompts))
++        return batch
++
++    def _rlvram_record_shapes(self, batch: KVBatchMeta) -> None:
++        prompts, responses = self._rlvram_token_lists(batch)
++        dispatch_info = self.actor_rollout_wg._dispatch_info.get("actor")
++        if dispatch_info is None:
++            dispatch_info = self.actor_rollout_wg._query_dispatch_info("actor")
++        actor_config = self.config.actor_rollout_ref.actor
++        record = rlvram_shape_trace.shape_record(
++            keys=batch.keys,
++            tags=batch.tags,
++            prompts=prompts,
++            responses=responses,
++            step=self.global_steps,
++            dp_size=max(dispatch_info) + 1,
++            canonical_order=rlvram_shape_trace.canonical_order_enabled(),
++            actor_micro_batch=actor_config.get("ppo_micro_batch_size_per_gpu", None),
++            log_prob_micro_batch=self.config.actor_rollout_ref.rollout.get("log_prob_micro_batch_size_per_gpu", None),
++        )
++        rlvram_shape_trace.append_record(rlvram_shape_trace.trace_path(), record)
++
+     # ------------------------------ abstract methods ------------------------------
+ 
+     def on_init_end(self):
+@@ -835,27 +873,34 @@
+         # set global step
+         self.global_steps = int(global_step_folder.split("global_step_")[-1])
+         logger.info(f"Resuming from {global_step_folder}, setting global step to {self.global_steps}")
++        print(f"RLVRAM_RESUME global_step_folder={global_step_folder} global_steps={self.global_steps}", flush=True)
+ 
+-        # 2. load actor checkpoint
+-        self.actor_rollout_wg.load_checkpoint(
+-            local_path=os.path.join(global_step_folder, "actor"),
+-            del_local_after_load=self.config.trainer.del_local_ckpt_after_load,
+-        )
+-
+-        # 3. load critic checkpoint
+-        if self.use_critic:
+-            self.critic_wg.load_checkpoint(
+-                local_path=os.path.join(global_step_folder, str(Role.Critic)),
++        # RLVRAMBench: attribute restore-time memory to its own marked interval.
++        # Only resumed runs reach this point; fresh runs keep their markers unchanged.
++        self._mark_phase("checkpoint_load")
++        try:
++            # 2. load actor checkpoint
++            self.actor_rollout_wg.load_checkpoint(
++                local_path=os.path.join(global_step_folder, "actor"),
+                 del_local_after_load=self.config.trainer.del_local_ckpt_after_load,
+             )
+ 
+-        # 4. load dataloader checkpoint
+-        dataloader_local_path = os.path.join(global_step_folder, "data.pt")
+-        if os.path.exists(dataloader_local_path):
+-            dataloader_state_dict = torch.load(dataloader_local_path, weights_only=False)
+-            self.train_dataloader.load_state_dict(dataloader_state_dict)
+-        else:
+-            logger.warning(f"Warning: No dataloader state found at {dataloader_local_path}, will start from scratch")
++            # 3. load critic checkpoint
++            if self.use_critic:
++                self.critic_wg.load_checkpoint(
++                    local_path=os.path.join(global_step_folder, str(Role.Critic)),
++                    del_local_after_load=self.config.trainer.del_local_ckpt_after_load,
++                )
++
++            # 4. load dataloader checkpoint
++            dataloader_local_path = os.path.join(global_step_folder, "data.pt")
++            if os.path.exists(dataloader_local_path):
++                dataloader_state_dict = torch.load(dataloader_local_path, weights_only=False)
++                self.train_dataloader.load_state_dict(dataloader_state_dict)
++            else:
++                logger.warning(f"Warning: No dataloader state found at {dataloader_local_path}, will start from scratch")
++        finally:
++            self._mark_phase("initializing")
+ 
+         # 5. restore TransferQueue state (async modes). Re-issuing the restored in-flight prompts is
+         # deferred to fit() to use the agent_loop_manager.
+diff -ruN a/instrumented_python_packages/verl/utils/rlvram_shape_trace.py b/instrumented_python_packages/verl/utils/rlvram_shape_trace.py
+--- a/instrumented_python_packages/verl/utils/rlvram_shape_trace.py	1970-01-01 01:00:00.000000000 +0100
++++ b/instrumented_python_packages/verl/utils/rlvram_shape_trace.py	2026-11-10 13:30:13.714706077 +0100
+@@ -0,0 +1,185 @@
++"""RLVRAMBench opt-in batch-shape evidence and canonical batch ordering.
++
++Both features are disabled unless their environment variables are set:
++
++- ``RLVRAM_SHAPE_TRACE``: absolute JSONL path. After sequence balancing, the
++  trainer appends one record per training step with the prompt token IDs'
++  hashes, the per-sequence prompt/response length vectors in dispatch order,
++  and derived micro-batch token totals. Records are host-side metadata; no GPU
++  operation, synchronization, or allocator call is involved.
++- ``RLVRAM_CANONICAL_BATCH_ORDER=1``: before sequence balancing, the sampled
++  batch is sorted by (prompt token IDs, rollout index, output index). The
++  replay buffer otherwise returns trajectories in asynchronous completion
++  order, and the balancer keeps indices in that order within each partition,
++  so identical sequence lengths could still form different micro-batches.
++
++The functions below are pure Python so that they can be unit-tested without
++Ray, TransferQueue, or vLLM.
++"""
++from __future__ import annotations
++
++import hashlib
++import json
++import os
++from pathlib import Path
++import re
++import socket
++import time
++from typing import Any, Iterable, Sequence
++
++SHAPE_TRACE_ENV = "RLVRAM_SHAPE_TRACE"
++CANONICAL_ORDER_ENV = "RLVRAM_CANONICAL_BATCH_ORDER"
++SCHEMA_VERSION = 1
++_KEY = re.compile(r"^(?P<uid>.+)_(?P<session>\d+)_(?P<output>\d+)$")
++
++
++def trace_path() -> str | None:
++    value = os.environ.get(SHAPE_TRACE_ENV, "").strip()
++    if not value:
++        return None
++    if not os.path.isabs(value):
++        raise ValueError(f"{SHAPE_TRACE_ENV} must be an absolute path")
++    return value
++
++
++def canonical_order_enabled() -> bool:
++    value = os.environ.get(CANONICAL_ORDER_ENV, "").strip()
++    if value in ("", "0", "False", "false"):
++        return False
++    if value in ("1", "True", "true"):
++        return True
++    raise ValueError(f"{CANONICAL_ORDER_ENV} must be 0/1 or True/False")
++
++
++def token_lists(value: Any) -> list[list[int]]:
++    """Convert a TransferQueue field (jagged, dense, or list) to token lists.
++
++    TransferQueue stores each trajectory unpadded. A batch of equal-length
++    entries is returned densely stacked; unequal entries are a jagged nested
++    tensor. Padded dense tensors never occur for these fields.
++    """
++    if isinstance(value, (list, tuple)):
++        return [[int(t) for t in (row.tolist() if hasattr(row, "tolist") else row)] for row in value]
++    if getattr(value, "is_nested", False):
++        return [[int(t) for t in row.tolist()] for row in value.unbind()]
++    if hasattr(value, "dim") and value.dim() == 2:
++        return [[int(t) for t in row] for row in value.tolist()]
++    raise TypeError(f"Unsupported token container: {type(value)!r}")
++
++
++def parse_key(key: str) -> tuple[int, int]:
++    match = _KEY.fullmatch(key)
++    if match is None:
++        raise ValueError(f"Unexpected trajectory key format: {key!r}")
++    return int(match["session"]), int(match["output"])
++
++
++def canonical_permutation(keys: Sequence[str], prompts: Sequence[Sequence[int]]) -> list[int]:
++    """Indices that sort trajectories independently of their random UIDs."""
++    if len(keys) != len(prompts):
++        raise ValueError("Keys and prompts differ in length")
++    decorated = []
++    for index, (key, prompt) in enumerate(zip(keys, prompts)):
++        session, output = parse_key(key)
++        decorated.append((tuple(int(t) for t in prompt), session, output, index))
++    decorated.sort()
++    return [item[-1] for item in decorated]
++
++
++def _sha256(value: Any) -> str:
++    payload = json.dumps(value, separators=(",", ":"), sort_keys=False)
++    return hashlib.sha256(payload.encode()).hexdigest()
++
++
++def chunk_totals(lengths: Sequence[int], dp_size: int, micro_batch: int | None) -> list[list[int]]:
++    """Token totals of contiguous per-rank micro-batches (non-dynamic batching)."""
++    if dp_size < 1 or len(lengths) % dp_size:
++        raise ValueError("Batch is not evenly divisible across data-parallel ranks")
++    per_rank = len(lengths) // dp_size
++    ranks = [list(lengths[r * per_rank:(r + 1) * per_rank]) for r in range(dp_size)]
++    if not micro_batch:
++        return [[sum(rank)] for rank in ranks]
++    if per_rank % micro_batch:
++        raise ValueError("Per-rank batch is not divisible by the micro-batch size")
++    return [[sum(rank[i:i + micro_batch]) for i in range(0, per_rank, micro_batch)] for rank in ranks]
++
++
++def shape_record(*, keys: Sequence[str], tags: Sequence[dict], prompts: Sequence[Sequence[int]],
++                 responses: Sequence[Sequence[int]], step: int, dp_size: int,
++                 canonical_order: bool, actor_micro_batch: int | None,
++                 log_prob_micro_batch: int | None) -> dict:
++    if not (len(keys) == len(tags) == len(prompts) == len(responses)) or not keys:
++        raise ValueError("Shape trace inputs differ in length or are empty")
++    prompt_lengths = [len(p) for p in prompts]
++    response_lengths = [len(r) for r in responses]
++    for tag, p, r in zip(tags, prompt_lengths, response_lengths):
++        if "prompt_len" in tag and int(tag["prompt_len"]) != p:
++            raise ValueError("TransferQueue prompt length tag differs from stored tokens")
++        if "response_len" in tag and int(tag["response_len"]) != r:
++            raise ValueError("TransferQueue response length tag differs from stored tokens")
++    pairs = [[p, r] for p, r in zip(prompt_lengths, response_lengths)]
++    sequence_lengths = [p + r for p, r in pairs]
++    sessions = [parse_key(k)[0] for k in keys]
++    prompt_lists = [[int(t) for t in p] for p in prompts]
++    return {
++        "schema_version": SCHEMA_VERSION,
++        "event": "rlvram_shape_trace",
++        "position": "after sequence balancing, before log-probability scoring",
++        "invocation_id": os.environ.get("RLVRAM_INVOCATION_ID", ""),
++        "hostname": socket.gethostname(),
++        "pid": os.getpid(),
++        "timestamp_ns": time.time_ns(),
++        "step": int(step),
++        "sequences": len(keys),
++        "dp_size": int(dp_size),
++        "canonical_order": bool(canonical_order),
++        "padding_entries": sum(bool(t.get("is_padding", False)) for t in tags),
++        "dispatch_prompt_tokens_sha256": _sha256(prompt_lists),
++        "prompt_multiset_sha256": _sha256(sorted(prompt_lists)),
++        "dispatch_length_pairs_sha256": _sha256(pairs),
++        "length_multiset_sha256": _sha256(sorted(pairs)),
++        "response_lengths_sha256": _sha256(response_lengths),
++        "response_tokens_sha256": _sha256([[int(t) for t in r] for r in responses]),
++        "dispatch_prompt_lengths": prompt_lengths,
++        "dispatch_response_lengths": response_lengths,
++        "dispatch_rollout_index": sessions,
++        "actor_micro_batch": actor_micro_batch,
++        "log_prob_micro_batch": log_prob_micro_batch,
++        "actor_micro_batch_tokens": chunk_totals(sequence_lengths, dp_size, actor_micro_batch),
++        "log_prob_micro_batch_tokens": chunk_totals(sequence_lengths, dp_size, log_prob_micro_batch),
++        "total_tokens": sum(sequence_lengths),
++    }
++
++
++def append_record(path: str, record: dict) -> None:
++    target = Path(path)
++    target.parent.mkdir(parents=True, exist_ok=True)
++    line = json.dumps(record, separators=(",", ":"), sort_keys=True)
++    with target.open("a", encoding="utf-8") as handle:
++        handle.write(line + "\n")
++        handle.flush()
++        os.fsync(handle.fileno())
++
++
++def read_records(path: str | Path) -> list[dict]:
++    records = []
++    for line_number, line in enumerate(Path(path).read_text().splitlines(), start=1):
++        if not line.strip():
++            raise ValueError(f"Blank shape-trace line {line_number}")
++        record = json.loads(line)
++        if record.get("schema_version") != SCHEMA_VERSION or record.get("event") != "rlvram_shape_trace":
++            raise ValueError(f"Invalid shape-trace record at line {line_number}")
++        records.append(record)
++    return records
++
++
++def shape_signature(record: dict) -> tuple[str, str]:
++    """What must agree across conditions for identical actor tensor shapes."""
++    return record["dispatch_prompt_tokens_sha256"], record["dispatch_length_pairs_sha256"]
++
++
++__all__: Iterable[str] = (
++    "SHAPE_TRACE_ENV", "CANONICAL_ORDER_ENV", "trace_path", "canonical_order_enabled",
++    "token_lists", "parse_key", "canonical_permutation", "chunk_totals", "shape_record",
++    "append_record", "read_records", "shape_signature",
++)
+diff -ruN a/instrumented_python_packages/verl/workers/config/rollout.py b/instrumented_python_packages/verl/workers/config/rollout.py
+--- a/instrumented_python_packages/verl/workers/config/rollout.py	2026-09-14 13:49:07.187443491 +0200
++++ b/instrumented_python_packages/verl/workers/config/rollout.py	2026-11-10 13:31:34.828388429 +0100
+@@ -185,6 +185,9 @@
+     gpu_memory_utilization: float = 0.5
+     standalone_gpu_memory_utilization: Optional[float] = None
+     ignore_eos: bool = False
++    # RLVRAMBench opt-in: generate exactly the response cap for every request
++    # (vLLM ignore_eos=True and min_tokens=max_tokens). Default False.
++    fixed_response_length: bool = False
+     enforce_eager: bool = False
+     cudagraph_capture_sizes: Optional[list] = None
+     free_cache_engine: bool = True
+diff -ruN a/instrumented_python_packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py b/instrumented_python_packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py
+--- a/instrumented_python_packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py	2026-09-14 13:49:07.192211466 +0200
++++ b/instrumented_python_packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py	2026-11-10 13:31:21.200293585 +0100
+@@ -600,6 +600,13 @@
+         sampling_params["logprobs"] = 0 if sampling_params.pop("logprobs", False) else None
+         sampling_params.setdefault("repetition_penalty", self.config.get("repetition_penalty", 1.0))
+         sampling_params.setdefault("ignore_eos", self.config.get("ignore_eos", False))
++        # RLVRAMBench opt-in (rollout.fixed_response_length, default False): every
++        # request generates exactly max_tokens tokens. ignore_eos stops EOS from
++        # ending the request; min_tokens masks EOS/stop tokens until the cap, so no
++        # text follows a sampled EOS. Applies to every request of this engine.
++        if self.config.get("fixed_response_length", False):
++            sampling_params["ignore_eos"] = True
++            sampling_params["min_tokens"] = max_tokens
+         # Inject per-request seed for deterministic sampling when full_determinism is enabled.
+         if self.config.full_determinism:
+             sampling_params.setdefault("seed", self.replica_rank + self.config.seed)

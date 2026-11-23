@@ -1,0 +1,21 @@
+fraction,limit_mib,fold,ranking_by_errors_then_rejections,pareto_nondominated,donor_copy,frozen_regression_guard,logistic_refit_at_margin
+0.9,36864,Qwen,"frozen_regression_guard (0 err, 16/16) > logistic_refit_at_margin (0 err, 15/16) > donor_copy (3 err, 16/16)",frozen_regression_guard,16/16; F0 A3,16/16; F0 A0,15/16; F0 A0
+0.9,36864,Phi,"donor_copy (0 err, 16/16) = frozen_regression_guard (0 err, 16/16) > logistic_refit_at_margin (0 err, 15/16)",donor_copy;frozen_regression_guard,16/16; F0 A0,16/16; F0 A0,15/16; F0 A0
+0.9,36864,Granite,"donor_copy (0 err, 16/19) > logistic_refit_at_margin (0 err, 15/19) > frozen_regression_guard (9 err, 19/19)",donor_copy;frozen_regression_guard,16/19; F0 A0,19/19; F2 A7,15/19; F0 A0
+0.9,36864,pooled (90),"logistic_refit_at_margin (0 err, 45/51) > donor_copy (3 err, 48/51) > frozen_regression_guard (9 err, 51/51)",donor_copy;frozen_regression_guard;logistic_refit_at_margin,48/51; F0 A3,51/51; F2 A7,45/51; F0 A0
+0.925,37888,Qwen,"frozen_regression_guard (0 err, 20/20) > logistic_refit_at_margin (0 err, 15/20) > donor_copy (1 err, 19/20)",frozen_regression_guard,19/20; F0 A1,20/20; F0 A0,15/20; F0 A0
+0.925,37888,Phi,"frozen_regression_guard (0 err, 16/16) > logistic_refit_at_margin (2 err, 16/16) > donor_copy (4 err, 16/16)",frozen_regression_guard,16/16; F0 A4,16/16; F0 A0,16/16; F0 A2
+0.925,37888,Granite,"donor_copy (1 err, 19/20) = logistic_refit_at_margin (1 err, 19/20) > frozen_regression_guard (10 err, 20/20)",donor_copy;frozen_regression_guard;logistic_refit_at_margin,19/20; F0 A1,20/20; F4 A6,19/20; F0 A1
+0.925,37888,pooled (90),"logistic_refit_at_margin (3 err, 50/56) > donor_copy (6 err, 54/56) > frozen_regression_guard (10 err, 56/56)",donor_copy;frozen_regression_guard;logistic_refit_at_margin,54/56; F0 A6,56/56; F4 A6,50/56; F0 A3
+0.95,38912,Qwen,"donor_copy (0 err, 22/22) = frozen_regression_guard (0 err, 22/22) > logistic_refit_at_margin (0 err, 16/22)",donor_copy;frozen_regression_guard,22/22; F0 A0,22/22; F0 A0,16/22; F0 A0
+0.95,38912,Phi,"logistic_refit_at_margin (2 err, 16/16) > frozen_regression_guard (3 err, 16/16) > donor_copy (6 err, 16/16)",logistic_refit_at_margin,16/16; F0 A6,16/16; F0 A3,16/16; F0 A2
+0.95,38912,Granite,"donor_copy (0 err, 22/22) > logistic_refit_at_margin (3 err, 22/22) > frozen_regression_guard (8 err, 22/22)",donor_copy,22/22; F0 A0,22/22; F4 A4,22/22; F0 A3
+0.95,38912,pooled (90),"logistic_refit_at_margin (5 err, 54/60) > donor_copy (6 err, 60/60) > frozen_regression_guard (11 err, 60/60)",donor_copy;logistic_refit_at_margin,60/60; F0 A6,60/60; F4 A7,54/60; F0 A5
+0.975,39936,Qwen,"donor_copy (0 err, 22/22) = frozen_regression_guard (0 err, 22/22) > logistic_refit_at_margin (0 err, 17/22)",donor_copy;frozen_regression_guard,22/22; F0 A0,22/22; F0 A0,17/22; F0 A0
+0.975,39936,Phi,"logistic_refit_at_margin (1 err, 17/18) > donor_copy (4 err, 18/18) = frozen_regression_guard (4 err, 18/18)",donor_copy;frozen_regression_guard;logistic_refit_at_margin,18/18; F0 A4,18/18; F0 A4,17/18; F0 A1
+0.975,39936,Granite,"donor_copy (0 err, 22/22) = logistic_refit_at_margin (0 err, 22/22) > frozen_regression_guard (8 err, 22/22)",donor_copy;logistic_refit_at_margin,22/22; F0 A0,22/22; F4 A4,22/22; F0 A0
+0.975,39936,pooled (90),"logistic_refit_at_margin (1 err, 56/62) > donor_copy (4 err, 62/62) > frozen_regression_guard (12 err, 62/62)",donor_copy;logistic_refit_at_margin,62/62; F0 A4,62/62; F4 A8,56/62; F0 A1
+1,40960,Qwen,"frozen_regression_guard (0 err, 22/22) > logistic_refit_at_margin (0 err, 21/22) > donor_copy (4 err, 22/22)",frozen_regression_guard,22/22; F4 A0,22/22; F0 A0,21/22; F0 A0
+1,40960,Phi,"donor_copy (0 err, 22/22) = frozen_regression_guard (0 err, 22/22) > logistic_refit_at_margin (0 err, 16/22)",donor_copy;frozen_regression_guard,22/22; F0 A0,22/22; F0 A0,16/22; F0 A0
+1,40960,Granite,"donor_copy (0 err, 22/26) = logistic_refit_at_margin (0 err, 22/26) > frozen_regression_guard (4 err, 26/26)",donor_copy;frozen_regression_guard;logistic_refit_at_margin,22/26; F0 A0,26/26; F4 A0,22/26; F0 A0
+1,40960,pooled (90),"logistic_refit_at_margin (0 err, 59/70) > frozen_regression_guard (4 err, 70/70) > donor_copy (4 err, 66/70)",frozen_regression_guard;logistic_refit_at_margin,66/70; F4 A0,70/70; F4 A0,59/70; F0 A0

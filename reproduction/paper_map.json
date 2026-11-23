@@ -1,0 +1,765 @@
+{
+  "numbering_source": "paper/submission/ccpe_submission/RLVRAMBench_CCPE.aux (main) and supporting_information/RLVRAMBench_CCPE_supporting_information.aux (SI), compiled 2026-11-23",
+  "items": [
+    {
+      "item": "Table 1",
+      "label": "tab:prior-scope",
+      "steps": [],
+      "archives": [],
+      "command": "-",
+      "outputs": [],
+      "note": "Related-work comparison; no data."
+    },
+    {
+      "item": "Table 2",
+      "label": "tab:terms",
+      "steps": [],
+      "archives": [],
+      "command": "-",
+      "outputs": [],
+      "note": "Definitions; no data."
+    },
+    {
+      "item": "Figure 1",
+      "label": "fig:hierarchy",
+      "steps": [],
+      "archives": [],
+      "command": "-",
+      "outputs": [],
+      "note": "TikZ diagram of experimental units; no data."
+    },
+    {
+      "item": "Table 3",
+      "label": "tab:design",
+      "steps": [],
+      "archives": [],
+      "command": "-",
+      "outputs": [],
+      "note": "Research questions and comparisons; no data."
+    },
+    {
+      "item": "Table 4",
+      "label": "tab:workloads",
+      "steps": [
+        "historical"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "reproduce.py --isolate-analysis",
+      "outputs": [
+        "historical/benchmark/configurations.csv",
+        "historical/results/three-model-configurations.csv"
+      ],
+      "note": "Workload settings recorded with every configuration."
+    },
+    {
+      "item": "Table 5",
+      "label": "tab:levels",
+      "steps": [
+        "historical"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "reproduce.py --isolate-analysis",
+      "outputs": [
+        "historical/benchmark/configurations.csv",
+        "historical/results/three-model-configurations.csv"
+      ],
+      "note": "Configuration levels c0-c5."
+    },
+    {
+      "item": "Table 6",
+      "label": "tab:attempts",
+      "steps": [
+        "historical",
+        "offload",
+        "a100",
+        "mi250x",
+        "revision",
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)",
+        "independent offload",
+        "A100 follow-up (a53af63)",
+        "MI250X",
+        "revision 2026-11"
+      ],
+      "command": "all steps",
+      "outputs": [
+        "historical/verification.json",
+        "historical/benchmark/attempts.csv",
+        "historical/review-results/recorded-attempts.csv",
+        "offload/reconstructed/slots.csv",
+        "a100/results/*/summary.json",
+        "mi250x/reconstructed/summary.json",
+        "revision/results/{e1,e2,e3}/summary.json",
+        "revision/results/e3/attempts.csv",
+        "cpu_reanalyses/out/c4_sensitivity/c4_slot_outcomes_by_rule.csv"
+      ],
+      "note": "Experiment inventory: slots, attempts, outcomes per panel."
+    },
+    {
+      "item": "Table 7",
+      "label": "tab:additional-panels",
+      "steps": [
+        "a100"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "a100 reconstruction",
+      "outputs": [
+        "a100/results/adaptation/summary.json",
+        "a100/results/reservation/summary.json",
+        "a100/results/release/summary.json",
+        "a100/results/timing/summary.json"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 8",
+      "label": "tab:offload-outcomes",
+      "steps": [
+        "offload"
+      ],
+      "archives": [
+        "independent offload"
+      ],
+      "command": "collect_offload_factorial",
+      "outputs": [
+        "offload/reconstructed/configurations.csv",
+        "offload/reconstructed/slots.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Figure 2",
+      "label": "fig:reservation-sensitivity",
+      "steps": [
+        "a100",
+        "figures"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "electronics_followup_figures",
+      "outputs": [
+        "paper/figures/fig1_reservation_sensitivity.pdf",
+        "a100/results/reservation/outcomes.csv"
+      ],
+      "note": "Manuscript file figures/fig1_reservation_sensitivity.pdf."
+    },
+    {
+      "item": "Table 9",
+      "label": "tab:release",
+      "steps": [
+        "a100"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "electronics_followup_analysis --panel release",
+      "outputs": [
+        "a100/results/release/cases.csv",
+        "a100/results/release/outcomes.csv",
+        "a100/artifact/benchmark/electronics_revision_20261016/release/"
+      ],
+      "note": "Base configurations from the frozen release protocol."
+    },
+    {
+      "item": "Figure 3",
+      "label": "fig:stage-contrasts",
+      "steps": [
+        "a100",
+        "figures"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)",
+        "historical (b0018d0)"
+      ],
+      "command": "electronics_review_analysis",
+      "outputs": [
+        "paper/figures/fig2_stage_contrasts.pdf",
+        "a100/results/historical/stage_paired_contrasts.csv"
+      ],
+      "note": "Manuscript file figures/fig2_stage_contrasts.pdf."
+    },
+    {
+      "item": "Table 10",
+      "label": "tab:factorial",
+      "steps": [
+        "historical",
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "reproduce.py --isolate-analysis; C1",
+      "outputs": [
+        "historical/replication_control-results/replication_control_cases.csv",
+        "historical/replication_control-results/replication_control_blocks.csv",
+        "cpu_reanalyses/out/c1_realized_work/reproduction_check.csv"
+      ],
+      "note": "Equal-case means 3,905 / 7 / 4,060 MiB."
+    },
+    {
+      "item": "Figure 4",
+      "label": "fig:logging",
+      "steps": [
+        "historical",
+        "figures"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "electronics_historical_figures",
+      "outputs": [
+        "paper/figures/fig3_instrumentation_batch.pdf",
+        "historical/review-results/control-trials.csv"
+      ],
+      "note": "Manuscript file figures/fig3_instrumentation_batch.pdf."
+    },
+    {
+      "item": "Figure 5",
+      "label": "fig:full-parameter",
+      "steps": [
+        "a100",
+        "figures"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "electronics_followup_figures",
+      "outputs": [
+        "paper/figures/fig4_full_parameter_contrasts.pdf",
+        "a100/results/adaptation/contrasts.csv"
+      ],
+      "note": "Manuscript file figures/fig4_full_parameter_contrasts.pdf."
+    },
+    {
+      "item": "Table 11",
+      "label": "tab:iteration-cost",
+      "steps": [
+        "a100"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "electronics_followup_analysis --panel timing",
+      "outputs": [
+        "a100/results/timing/contrasts.csv",
+        "a100/results/timing_condition_summary.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 12",
+      "label": "tab:offload-prediction",
+      "steps": [
+        "offload"
+      ],
+      "archives": [
+        "independent offload"
+      ],
+      "command": "collect_offload_factorial",
+      "outputs": [
+        "offload/reconstructed/prediction_scores.csv",
+        "offload/reconstructed/configurations.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 13",
+      "label": "tab:reservation-predictions",
+      "steps": [
+        "a100"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "electronics_followup_analysis --panel reservation",
+      "outputs": [
+        "a100/results/reservation/prediction_scores.csv",
+        "a100/results/reservation/predictions.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Figure 6",
+      "label": "fig:boundary",
+      "steps": [
+        "historical",
+        "figures"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "electronics_historical_figures",
+      "outputs": [
+        "paper/figures/fig5_boundary_labels.pdf",
+        "historical/results/three-model-configurations.csv"
+      ],
+      "note": "Manuscript file figures/fig5_boundary_labels.pdf."
+    },
+    {
+      "item": "Table 14",
+      "label": "tab:model-transfer",
+      "steps": [
+        "historical"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "reproduce.py --isolate-analysis",
+      "outputs": [
+        "historical/results/three-model-transfer.csv",
+        "historical/benchmark/reference_scores.json"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 15",
+      "label": "tab:threshold",
+      "steps": [
+        "historical",
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "reproduce.py --isolate-analysis; C2 d_margins.py",
+      "outputs": [
+        "historical/results/threshold-cases.csv",
+        "historical/results/threshold-transfers.csv",
+        "cpu_reanalyses/out/c2_predictors/d_boundary_levels_by_margin.csv",
+        "cpu_reanalyses/out/c2_predictors/d_margin_scores.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 16",
+      "label": "tab:gpu-transfer",
+      "steps": [
+        "historical"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "reproduce.py --isolate-analysis",
+      "outputs": [
+        "historical/results/revision-topology-cells.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 17",
+      "label": "tab:admission",
+      "steps": [
+        "historical",
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "reproduce.py --isolate-analysis; C6",
+      "outputs": [
+        "historical/decision-results/scores.json",
+        "historical/decision-results/candidate_results.csv",
+        "cpu_reanalyses/out/c4_sensitivity/c6_gpu_time_by_method_budget.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 18",
+      "label": "tab:llmem-native",
+      "steps": [
+        "a100"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "collect_llmem_native",
+      "outputs": [
+        "a100/results/llmem_native/pairs.csv",
+        "a100/results/llmem_native/cases.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 19",
+      "label": "tab:horizon",
+      "steps": [
+        "historical",
+        "a100"
+      ],
+      "archives": [
+        "historical (b0018d0)",
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "reproduce.py --isolate-analysis; electronics_review_analysis",
+      "outputs": [
+        "historical/results/revision-temporal-cases.csv",
+        "historical/results/revision-temporal-trials.csv",
+        "a100/results/historical/horizon_observations.csv"
+      ],
+      "note": "Earlier paired duration test; the 7B duration and restore test is in Tables S52-S53."
+    },
+    {
+      "item": "Table 20",
+      "label": "tab:mi250x-transfer",
+      "steps": [
+        "mi250x"
+      ],
+      "archives": [
+        "MI250X"
+      ],
+      "command": "amd_mi250x/collect.py + analyze.py",
+      "outputs": [
+        "mi250x/reconstructed/analysis/hardware_transfer_labels.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table 21",
+      "label": "tab:mi250x-panels",
+      "steps": [
+        "mi250x"
+      ],
+      "archives": [
+        "MI250X"
+      ],
+      "command": "amd_mi250x/analyze.py",
+      "outputs": [
+        "mi250x/reconstructed/analysis/larger_models_labels.csv",
+        "mi250x/reconstructed/analysis/reservation_sweep_configurations.csv",
+        "mi250x/reconstructed/analysis/algorithm_adaptation_configurations.csv",
+        "mi250x/reconstructed/analysis/horizon_pairs.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Figure 7",
+      "label": "fig:failure-modes",
+      "steps": [
+        "a100",
+        "figures"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)",
+        "historical (b0018d0)"
+      ],
+      "command": "electronics_review_analysis",
+      "outputs": [
+        "paper/figures/fig6_failure_modes.pdf",
+        "a100/results/historical/failure_counts.csv"
+      ],
+      "note": "Manuscript file figures/fig6_failure_modes.pdf."
+    },
+    {
+      "item": "Figure 8",
+      "label": "fig:horizon-agreement",
+      "steps": [
+        "a100",
+        "figures"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)",
+        "historical (b0018d0)"
+      ],
+      "command": "electronics_review_analysis",
+      "outputs": [
+        "paper/figures/fig7_horizon_agreement.pdf",
+        "a100/results/historical/horizon_agreement.csv"
+      ],
+      "note": "Manuscript file figures/fig7_horizon_agreement.pdf."
+    },
+    {
+      "item": "Table 22",
+      "label": "tab:applicability",
+      "steps": [],
+      "archives": [],
+      "command": "-",
+      "outputs": [],
+      "note": "Applicability limits; no data."
+    },
+    {
+      "item": "Figure S1",
+      "label": "sfig:mechanisms",
+      "steps": [
+        "historical",
+        "figures"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "electronics_historical_figures",
+      "outputs": [
+        "paper/figures/standard_grpo_mechanisms.pdf"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Figure S2",
+      "label": "sfig:temporal",
+      "steps": [
+        "historical",
+        "figures"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "electronics_historical_figures",
+      "outputs": [
+        "paper/figures/standard_grpo_temporal.pdf"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Figure S3",
+      "label": "(iteration cost)",
+      "steps": [
+        "a100",
+        "figures"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "electronics_followup_figures",
+      "outputs": [
+        "paper/figures/electronics_iteration_cost.pdf"
+      ],
+      "note": "The IEEE Access SI names this file followup_iteration_cost.pdf."
+    },
+    {
+      "item": "Tables S1-S27",
+      "label": "(historical SI tables)",
+      "steps": [
+        "historical",
+        "offload",
+        "estimator"
+      ],
+      "archives": [
+        "historical (b0018d0)",
+        "independent offload"
+      ],
+      "command": "reproduce.py --isolate-analysis",
+      "outputs": [
+        "historical/results/",
+        "historical/review-results/",
+        "historical/*-results/",
+        "offload/reconstructed/",
+        "estimator/reconstructed/"
+      ],
+      "note": "Historical, admission, larger-model, replication and offload SI tables."
+    },
+    {
+      "item": "Tables S28-S39",
+      "label": "stab:adaptation-parameters ... stab:revision-costs",
+      "steps": [
+        "a100"
+      ],
+      "archives": [
+        "A100 follow-up (a53af63)"
+      ],
+      "command": "electronics_revision_tables",
+      "outputs": [
+        "paper/generated_tables/electronics_adaptation.tex",
+        "paper/generated_tables/electronics_reservation.tex",
+        "paper/generated_tables/electronics_release.tex",
+        "paper/generated_tables/electronics_timing.tex",
+        "a100/results/resource_accounting/summary.json"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S40-S45",
+      "label": "ssec:mi250x",
+      "steps": [
+        "mi250x"
+      ],
+      "archives": [
+        "MI250X"
+      ],
+      "command": "amd_mi250x/make_supplement.py",
+      "outputs": [
+        "paper/generated_tables/supplement_mi250x.tex"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table S46",
+      "label": "stab:deepspeed",
+      "steps": [
+        "estimator"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "estimator_comparison/run.py + make_supplement.py",
+      "outputs": [
+        "paper/generated_tables/supplement_deepspeed.tex",
+        "estimator/reconstructed/score_comparison_all_methods.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S47-S48",
+      "label": "stab:revision-protocols, stab:revision-amendments",
+      "steps": [
+        "revision"
+      ],
+      "archives": [
+        "revision 2026-11"
+      ],
+      "command": "revision archive MANIFEST + protocol/amendment hashes",
+      "outputs": [
+        "revision/raw/protocols/",
+        "revision/raw/RELEASE.json"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S49-S50",
+      "label": "stab:controlled-length-blocks, stab:controlled-length-cases",
+      "steps": [
+        "revision"
+      ],
+      "archives": [
+        "revision 2026-11"
+      ],
+      "command": "ieee_resub/collect.py e1 (9f6faf9) + analysis.py e1 (cc685c0)",
+      "outputs": [
+        "revision/results/e1/outcomes.csv",
+        "revision/results/e1/analysis.json"
+      ],
+      "note": "Corrected E1 analysis (amendment A7 defect 3)."
+    },
+    {
+      "item": "Table S51",
+      "label": "stab:near-boundary",
+      "steps": [
+        "revision"
+      ],
+      "archives": [
+        "revision 2026-11"
+      ],
+      "command": "ieee_resub/collect.py e2 + analysis.py e2",
+      "outputs": [
+        "revision/results/e2/outcomes.csv",
+        "revision/results/e2/analysis.json"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S52-S53",
+      "label": "stab:duration-7b-summary, stab:duration-7b-slots",
+      "steps": [
+        "revision"
+      ],
+      "archives": [
+        "revision 2026-11"
+      ],
+      "command": "ieee_resub/collect.py e3 --amendment + analysis.py e3",
+      "outputs": [
+        "revision/results/e3/outcomes.csv",
+        "revision/results/e3/attempts.csv",
+        "revision/results/e3/analysis.json"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table S54",
+      "label": "stab:realized-work",
+      "steps": [
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "C1 c1_realized_work.py",
+      "outputs": [
+        "cpu_reanalyses/out/c1_realized_work/si_table_compact.tex",
+        "cpu_reanalyses/out/c1_realized_work/rc_case_condition_summary.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S55-S60",
+      "label": "stab:exclusion-causes ... stab:eligibility-predictors",
+      "steps": [
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "C4 c4_eligibility.py, c4_predictors.py",
+      "outputs": [
+        "cpu_reanalyses/out/c4_sensitivity/"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S61-S62",
+      "label": "stab:case-bootstrap, stab:exact-bounds",
+      "steps": [
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "C5 c5_uncertainty.py",
+      "outputs": [
+        "cpu_reanalyses/out/c4_sensitivity/c5_case_bootstrap.csv",
+        "cpu_reanalyses/out/c4_sensitivity/c5_clopper_pearson.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S63-S64",
+      "label": "stab:admission-gpu-time, stab:admission-gpu-time-cases",
+      "steps": [
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "C6 c6_gpu_time.py",
+      "outputs": [
+        "cpu_reanalyses/out/c4_sensitivity/c6_gpu_time_by_method_budget.csv",
+        "cpu_reanalyses/out/c4_sensitivity/c6_gpu_time_by_case_method_budget.csv"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Tables S65-S68",
+      "label": "stab:hurdle ... stab:margin-folds",
+      "steps": [
+        "cpu_reanalyses"
+      ],
+      "archives": [
+        "historical (b0018d0)"
+      ],
+      "command": "C2 a_reproduce.py, b_hurdle.py, c_coverage.py, d_margins.py",
+      "outputs": [
+        "cpu_reanalyses/out/c2_predictors/"
+      ],
+      "note": ""
+    },
+    {
+      "item": "Table S69",
+      "label": "stab:release-identifiers",
+      "steps": [
+        "archives"
+      ],
+      "archives": [],
+      "command": "archive verification",
+      "outputs": [
+        "report.json (archives)"
+      ],
+      "note": "Release identifiers; filled from release.json after publication."
+    }
+  ]
+}

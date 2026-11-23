@@ -1,0 +1,2 @@
+usage: analysis.py e1 [-h] --outcomes OUTCOMES --out OUT
+analysis.py e1: error: the following arguments are required: --out

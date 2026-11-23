@@ -1,0 +1,71 @@
+{
+  "all_rendered_without_problems": true,
+  "all_wall_budgets_ok": true,
+  "amendments": {
+    "e3-amendment-01": {
+      "amendment_sha256": "966067e46423acd8dc256b313357a21a19010218243865d672127d9e88f62ee8",
+      "problems": [],
+      "reruns": 2,
+      "study": "e3",
+      "wall_budget_ok": true,
+      "worst_rerun_required_seconds": 22320
+    }
+  },
+  "note": "Dry run: nothing was submitted; no cluster path was touched.",
+  "slurm_scripts": {
+    "e1": "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e1.slurm",
+    "e2": "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e2.slurm",
+    "e3": "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3.slurm",
+    "e3_amendment": "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_e3_amendment.slurm",
+    "smoke1": "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke1.slurm",
+    "smoke2": "experiments/ieee_resubmission_2026-11/slurm/ieee_resub_smoke2.slurm"
+  },
+  "studies": {
+    "e1": {
+      "blocks": 12,
+      "invocations": 48,
+      "problems": [],
+      "rendered": 48,
+      "wall_budget_ok": true,
+      "wall_seconds": 7200,
+      "worst_block_required_seconds": 6780
+    },
+    "e2": {
+      "blocks": 10,
+      "invocations": 40,
+      "problems": [],
+      "rendered": 40,
+      "wall_budget_ok": true,
+      "wall_seconds": 6000,
+      "worst_block_required_seconds": 5580
+    },
+    "e3": {
+      "blocks": 12,
+      "invocations": 28,
+      "problems": [],
+      "rendered": 28,
+      "wall_budget_ok": true,
+      "wall_seconds": 41400,
+      "worst_block_required_seconds": 39060
+    },
+    "smoke1": {
+      "blocks": 1,
+      "invocations": 3,
+      "problems": [],
+      "rendered": 3,
+      "wall_budget_ok": true,
+      "wall_seconds": 5400,
+      "worst_block_required_seconds": 5160
+    },
+    "smoke2": {
+      "blocks": 1,
+      "invocations": 2,
+      "problems": [],
+      "rendered": 2,
+      "wall_budget_ok": true,
+      "wall_seconds": 7200,
+      "worst_block_required_seconds": 6840
+    }
+  },
+  "submitted_jobs": 0
+}
