@@ -20,8 +20,8 @@ and `release.json`:
 | Item | Identifier |
 |---|---|
 | Version tag (dataset and code) | `rlvrambench-2026-11` |
-| Dataset | <https://huggingface.co/datasets/kobzaond/RLVRAMBench>, commit `DATASET-COMMIT-TO-BE-SET` |
-| Dataset DOI | `10.57967/hf/TO-BE-MINTED` (the earlier DOI 10.57967/hf/10780 belongs to an older revision) |
+| Dataset | <https://huggingface.co/datasets/kobzaond/RLVRAMBench>, commit `974bf5f4932ebb12c6846e36456ae03588baf5ea` |
+| Dataset DOI | `10.57967/hf/11823` (the earlier DOI 10.57967/hf/10780 belongs to an older revision) |
 | Code | this repository, the commit tagged `rlvrambench-2026-11` |
 | Manifest | `release.json` (archives, hashes, procedures, environments) |
 | Environments | CPython 3.11 + `publication-requirements.txt`; CPython 3.12 + `revision_2026_11/cpu_reanalyses/requirements.txt` |
@@ -46,7 +46,7 @@ disk space. No GPU, Slurm, model weights, or credentials.
 git clone https://github.com/kobzaond/RLVRAMBench-reproduce.git
 cd RLVRAMBench-reproduce
 git checkout rlvrambench-2026-11
-bash reproduce_all.sh --revision DATASET-COMMIT-TO-BE-SET --work-dir reproduce-all-output
+bash reproduce_all.sh --revision 974bf5f4932ebb12c6846e36456ae03588baf5ea --work-dir reproduce-all-output
 ```
 
 `reproduce_all.sh` creates `.venv-reproduce` (3.11) and `.venv-reanalysis`

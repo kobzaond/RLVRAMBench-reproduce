@@ -1,7 +1,7 @@
 {
   "release": "rlvrambench-2026-11",
   "release_tag": "rlvrambench-2026-11",
-  "release_date": "to be set at publication (YYYY-MM-DD)",
+  "release_date": "2026-11-24",
   "authors": [
     {
       "name": "Ondrej Kobza",
@@ -9,8 +9,8 @@
     }
   ],
   "huggingface_repository": "kobzaond/RLVRAMBench",
-  "huggingface_revision": "to be set after upload",
-  "doi": "10.57967/hf/TO-BE-MINTED",
+  "huggingface_revision": "974bf5f4932ebb12c6846e36456ae03588baf5ea",
+  "doi": "10.57967/hf/11823",
   "previous_doi": {
     "doi": "10.57967/hf/10780",
     "dataset_revision": "d8321f8",

@@ -8,8 +8,8 @@ are in the git history and in the dataset's `verification/` directory.
 | Item | Identifier |
 |---|---|
 | Version tag (dataset and code) | `rlvrambench-2026-11` |
-| Dataset | `kobzaond/RLVRAMBench`, commit `DATASET-COMMIT-TO-BE-SET` |
-| Dataset DOI | `10.57967/hf/TO-BE-MINTED` |
+| Dataset | `kobzaond/RLVRAMBench`, commit `974bf5f4932ebb12c6846e36456ae03588baf5ea` |
+| Dataset DOI | `10.57967/hf/11823` |
 | Code verified | commit `3e45491b0502708516c041a9c4db43e8006416af` (branch `release-2026-11`) |
 | Later code commits | add this file and fill the dataset commit, DOI, and date into `release.json`, `CITATION.cff`, `README.md`, and this file; no code changes |
 

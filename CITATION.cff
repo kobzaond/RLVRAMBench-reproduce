@@ -3,8 +3,7 @@ message: "Please cite the RLVRAMBench dataset release (version rlvrambench-2026-
 type: software
 title: "RLVRAMBench: memory-feasibility measurement evidence and reproduction code"
 version: "rlvrambench-2026-11"
-# Set to the publication date (YYYY-MM-DD) when the tag is pushed.
-date-released: "2026-11-23"
+date-released: "2026-11-24"
 license: MIT
 authors:
   - family-names: Kobza
@@ -12,8 +11,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-0529-9860"
 repository-code: "https://github.com/kobzaond/RLVRAMBench-reproduce"
 url: "https://huggingface.co/datasets/kobzaond/RLVRAMBench"
-# Replace with the DOI minted for the Hugging Face revision tagged rlvrambench-2026-11.
-doi: "10.57967/hf/TO-BE-MINTED"
+doi: "10.57967/hf/11823"
 references:
   - type: dataset
     title: "RLVRAMBench"
@@ -23,5 +21,4 @@ references:
         given-names: Ondrej
         orcid: "https://orcid.org/0000-0002-0529-9860"
     repository: "https://huggingface.co/datasets/kobzaond/RLVRAMBench"
-    # Replace with the same DOI as above.
-    doi: "10.57967/hf/TO-BE-MINTED"
+    doi: "10.57967/hf/11823"
